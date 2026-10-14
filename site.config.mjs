@@ -2,7 +2,7 @@
 export const SITE = {
 	url: 'https://grokbotguide.ai',
 	repo: 'https://github.com/JeffShanCha/grokbotguide',
-	x: 'https://x.com/grokbotguide',
+	x: 'https://x.com/shancha103',
 	// 知识星球的加入链接
 	zsxq: 'https://t.zsxq.com/REPLACE_ME',
 	email: {
