@@ -66,8 +66,8 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
    - Deploy command：`npx wrangler deploy`
    - 之后 push 到 `main` 自动上线；如启用 Preview builds，其他分支也可以自动生成预览链接。
 2. **域名**：`grokbotguide.ai` 已在 Dynadot 注册，域名继续由 Dynadot 管理。
-3. **Cloudflare 接管 DNS**：已添加域名并选择 Free 计划。Dynadot 的 nameserver 已改为 `luciane.ns.cloudflare.com` 和 `vern.ns.cloudflare.com`，待 Cloudflare 状态变成 Active 后绑定 Worker。
-4. **绑定域名**：Worker → Settings → Domains & Routes → Add → Custom domain，填 `grokbotguide.ai`；`www` 用重定向规则 301 到主域名。
+3. **Cloudflare 接管 DNS**：已添加域名并选择 Free 计划。Dynadot 的 nameserver 已改为 `luciane.ns.cloudflare.com` 和 `vern.ns.cloudflare.com`，等待 DNS 传播、Cloudflare 状态变成 Active。
+4. **域名路由**：`wrangler.jsonc` 已配置 `grokbotguide.ai/*` 的 Workers Route，域名激活后由本 Worker 处理所有页面和 API；`workers.dev` 地址也保留。`www` 用重定向规则 301 到主域名。
 
 ### 第二步：投稿、通知与计数
 

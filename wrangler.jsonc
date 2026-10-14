@@ -1,6 +1,13 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "grokbotguide",
+	"workers_dev": true,
+	"routes": [
+		{
+			"pattern": "grokbotguide.ai/*",
+			"zone_id": "dc541d1f30089b50523ebecf7e5f29c7"
+		}
+	],
 	"main": "worker/index.ts",
 	"compatibility_date": "2026-10-01",
 	"observability": { "enabled": true },
