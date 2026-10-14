@@ -44,34 +44,38 @@ npm run dev              # http://localhost:4321/zh/ ，只有静态页面，/ap
 npm run check:content    # 检查 frontmatter、双语对照、收录重复
 ```
 
-要连 Worker 一起测（语言跳转、复制计数、投稿）：
+要连 Worker 一起测（语言跳转、投稿）：
 
 ```bash
 cp .dev.vars.example .dev.vars
-npm run db:migrate:local
 npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:8787 运行
 ```
 
 ## 上线步骤（GitHub + Cloudflare + Dynadot）
 
-1. **域名**：在 Dynadot 买 `grokbotguide.ai`。
-2. **Cloudflare 接管 DNS**：Cloudflare 添加站点（Free 计划即可），把分配的两个 nameserver 填回 Dynadot，等状态变成 Active。
-3. **GitHub**：公开仓库为 [JeffShanCha/grokbotguide](https://github.com/JeffShanCha/grokbotguide)，推送到 `main`；`site.config.mjs` 里的 `repo` 和 `wrangler.jsonc` 里的 `GITHUB_REPO` 已配置为该仓库。
-4. **D1 数据库**：
-   ```bash
-   npx wrangler login
-   npx wrangler d1 create grokbotguide     # 把返回的 database_id 填进 wrangler.jsonc
-   npm run db:migrate                       # 在线上建表
-   ```
-5. **Email Routing**：Cloudflare → Email → Email Routing 启用（自动加 MX/SPF）→ 添加目标地址 `zhuangniuthedev@gmail.com` 并在 Gmail 点验证 → 新建 `hello@` / `sponsor@` / `takedown@` 三条转发规则。
-6. **Turnstile**：Cloudflare → Turnstile 新建站点（域名 `grokbotguide.ai`），把 Site Key 填进 `site.config.mjs` 的 `turnstileSiteKey`，Secret Key 用下一步设置。
-7. **Secrets**：
-   ```bash
-   npx wrangler secret put TURNSTILE_SECRET
-   npx wrangler secret put GITHUB_TOKEN    # fine-grained token，只给本仓库 Issues: Read and write
-   ```
-8. **部署**：Cloudflare → Workers & Pages → Create → 导入 GitHub 仓库；构建命令 `npm run build`，部署命令 `npx wrangler deploy`。之后 push 到 `main` 自动上线，其他分支自动生成预览链接。
-9. **域名绑定**：Worker → Settings → Domains & Routes 添加 `grokbotguide.ai`；`www` 用重定向规则 301 到主域名。
+分两步走：第一步只要 Cloudflare 账号就能上线，先跑在 `grokbotguide.<你的子域>.workers.dev`；域名接入后再做第二步。
+数据库和邮件绑定在 `wrangler.jsonc` 里默认是注释掉的，没打开时站点照常运行：复制计数不显示，投稿只建 GitHub Issue。
+
+### 第一步：站点上线
+
+1. **连接仓库**：Cloudflare → Workers & Pages → Create → Import a repository → 选 [JeffShanCha/grokbotguide](https://github.com/JeffShanCha/grokbotguide)。
+   - Project name：`grokbotguide`（要和 `wrangler.jsonc` 的 `name` 一致）
+   - Build command：`npm run build`
+   - Deploy command：`npx wrangler deploy`
+   - 之后 push 到 `main` 自动上线，其他分支自动生成预览链接。
+2. **域名**：在 Dynadot 买 `grokbotguide.ai`。
+3. **Cloudflare 接管 DNS**：Cloudflare → Add a domain（Free 计划即可），把分配的两个 nameserver 填回 Dynadot，等状态变成 Active。
+4. **绑定域名**：Worker → Settings → Domains & Routes → Add → Custom domain，填 `grokbotguide.ai`；`www` 用重定向规则 301 到主域名。
+
+### 第二步：投稿、通知与计数
+
+5. **Email Routing**：Cloudflare → 域名 → Email → Email Routing 启用（自动加 MX/SPF）→ 添加目标地址 `zhuangniuthedev@gmail.com` 并在 Gmail 点验证 → 新建 `hello@` / `sponsor@` / `takedown@` 三条转发规则。
+6. **D1 数据库**：Cloudflare → Storage & Databases → D1 → Create，名字填 `grokbotguide`，复制 Database ID。表会在第一次使用时自动创建，不需要跑迁移。
+7. **打开绑定**：在 `wrangler.jsonc` 里去掉 `d1_databases` 和 `send_email` 两段的注释，填入 Database ID，并在 `vars` 的右花括号后加一个逗号，提交并推送。
+8. **Turnstile**：Cloudflare → Turnstile → Add widget（域名 `grokbotguide.ai`），把 Site Key 填进 `site.config.mjs` 的 `turnstileSiteKey`，提交并推送。
+9. **Secrets**：Worker → Settings → Variables and Secrets → Add，类型选 Secret：
+   - `TURNSTILE_SECRET`：Turnstile 的 Secret Key
+   - `GITHUB_TOKEN`：GitHub → Settings → Developer settings → Fine-grained tokens，只选本仓库，权限 Issues: Read and write
 10. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；在 Cloudflare Web Analytics 创建站点，把 token 填进 `astro.config.mjs` 里注释掉的统计脚本。
 
 ## 语言路由规则

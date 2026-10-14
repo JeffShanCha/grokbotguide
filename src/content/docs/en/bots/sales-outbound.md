@@ -5,7 +5,7 @@ sidebar:
   order: 1
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 role: sales
 difficulty: intermediate
 apps: [CRM, Company websites, Email, LinkedIn]

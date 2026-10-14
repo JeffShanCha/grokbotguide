@@ -10,9 +10,7 @@
     "deploy": "astro build && wrangler deploy",
     "check": "astro check",
     "check:content": "node scripts/check-content.mjs",
-    "check:worker": "tsc -p worker/tsconfig.json",
-    "db:migrate": "wrangler d1 migrations apply grokbotguide --remote",
-    "db:migrate:local": "wrangler d1 migrations apply grokbotguide --local"
+    "check:worker": "tsc -p worker/tsconfig.json"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

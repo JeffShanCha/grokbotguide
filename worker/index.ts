@@ -7,11 +7,14 @@
  *   /api/submit  投稿表单 → 校验 Turnstile → 创建 GitHub Issue → 邮件通知
  *   /api/copy    模板复制计数 +1（D1）
  *   /api/copies  批量读取模板复制次数（D1）
+ *
+ * D1 和邮件绑定都是可选的：没配置时站点照常运行，计数接口返回空、投稿只建 Issue 不发邮件。
  */
 
 export interface Env {
 	ASSETS: Fetcher;
-	DB: D1Database;
+	/** 可选：没绑定 D1 时，复制计数功能自动关闭 */
+	DB?: D1Database;
 	NOTIFY?: SendEmail;
 	/** GitHub 仓库，形如 owner/repo（wrangler.jsonc 的 vars） */
 	GITHUB_REPO: string;
@@ -203,7 +206,27 @@ async function verifyTurnstile(
 
 /* ---------------- 模板复制计数 ---------------- */
 
+// 首次使用时自动建表（和 worker/migrations/0001 相同），不需要手动跑迁移
+let schemaReady: Promise<unknown> | undefined;
+function ensureSchema(db: D1Database) {
+	schemaReady ??= db
+		.prepare(
+			`CREATE TABLE IF NOT EXISTS template_copies (
+				id TEXT PRIMARY KEY,
+				count INTEGER NOT NULL DEFAULT 0,
+				updated_at INTEGER NOT NULL DEFAULT (unixepoch())
+			)`
+		)
+		.run()
+		.catch((err) => {
+			schemaReady = undefined;
+			throw err;
+		});
+	return schemaReady;
+}
+
 async function handleCopy(req: Request, env: Env): Promise<Response> {
+	if (!env.DB) return json({ error: 'counter_disabled' }, 503);
 	let id = '';
 	try {
 		id = String(((await req.json()) as { id?: string }).id ?? '');
@@ -212,6 +235,7 @@ async function handleCopy(req: Request, env: Env): Promise<Response> {
 	}
 	if (!ID_RE.test(id)) return json({ error: 'invalid_id' }, 400);
 
+	await ensureSchema(env.DB);
 	const row = await env.DB.prepare(
 		`INSERT INTO template_copies (id, count, updated_at) VALUES (?1, 1, unixepoch())
 		 ON CONFLICT(id) DO UPDATE SET count = count + 1, updated_at = unixepoch()
@@ -224,6 +248,7 @@ async function handleCopy(req: Request, env: Env): Promise<Response> {
 }
 
 async function handleCopies(url: URL, env: Env): Promise<Response> {
+	if (!env.DB) return json({});
 	const ids = (url.searchParams.get('ids') ?? '')
 		.split(',')
 		.map((s) => s.trim())
@@ -231,6 +256,7 @@ async function handleCopies(url: URL, env: Env): Promise<Response> {
 		.slice(0, 50);
 	if (ids.length === 0) return json({});
 
+	await ensureSchema(env.DB);
 	const placeholders = ids.map((_, i) => `?${i + 1}`).join(',');
 	const { results } = await env.DB.prepare(`SELECT id, count FROM template_copies WHERE id IN (${placeholders})`)
 		.bind(...ids)

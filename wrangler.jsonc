@@ -15,19 +15,22 @@
 		"GITHUB_REPO": "JeffShanCha/grokbotguide",
 		"NOTIFY_TO": "zhuangniuthedev@gmail.com",
 		"NOTIFY_FROM": "noreply@grokbotguide.ai"
-	},
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "grokbotguide",
-			// 运行 `npx wrangler d1 create grokbotguide` 后把返回的 id 填到这里
-			"database_id": "00000000-0000-0000-0000-000000000000",
-			"migrations_dir": "worker/migrations"
-		}
-	],
-	// 需要先在 Cloudflare 开启 Email Routing 并验证 NOTIFY_TO 这个目标地址
-	"send_email": [{ "name": "NOTIFY", "destination_address": "zhuangniuthedev@gmail.com" }]
-	// Secrets（不要写在这里）：
-	//   npx wrangler secret put GITHUB_TOKEN
-	//   npx wrangler secret put TURNSTILE_SECRET
+	}
+
+	// ───────────── 第二步：上线后再打开 ─────────────
+	// 下面两个绑定都是可选的。没打开时站点照常运行：复制计数不显示，投稿只建 GitHub Issue、不发邮件。
+	// 打开方法：去掉注释，并在上面 "vars" 的右花括号后面加一个逗号。
+	//
+	// 1) 模板复制计数：Cloudflare 后台 → Storage & Databases → D1 → Create，名字填 grokbotguide，
+	//    把 Database ID 填进来。表会在第一次使用时自动创建，不需要跑迁移。
+	// "d1_databases": [
+	// 	{ "binding": "DB", "database_name": "grokbotguide", "database_id": "<填入 D1 的 ID>", "migrations_dir": "worker/migrations" }
+	// ],
+	//
+	// 2) 投稿邮件通知：要先把 grokbotguide.ai 接入 Cloudflare、开启 Email Routing，并验证下面这个收件地址。
+	// "send_email": [{ "name": "NOTIFY", "destination_address": "zhuangniuthedev@gmail.com" }]
+	//
+	// Secrets（不要写在这里，在 Worker → Settings → Variables and Secrets 里添加）：
+	//   GITHUB_TOKEN      只给本仓库 Issues: Read and write 权限的 fine-grained token
+	//   TURNSTILE_SECRET  Turnstile 的 Secret Key
 }

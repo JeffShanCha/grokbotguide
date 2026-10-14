@@ -5,7 +5,7 @@ sidebar:
   order: 2
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 role: assistant
 difficulty: beginner
 apps: [Slack, 邮箱, 日历, 会议纪要, 规划文档]

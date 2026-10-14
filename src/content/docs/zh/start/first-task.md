@@ -5,7 +5,7 @@ sidebar:
   order: 5
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 sources:
   - title: Get started（官方文档）
     url: https://docs.x.ai/grok-bot/get-started

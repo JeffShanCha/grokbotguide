@@ -5,7 +5,7 @@ sidebar:
   order: 3
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 role: engineering
 difficulty: intermediate
 apps: [Issue tracker, Staging, Browser, Network tools]

@@ -5,7 +5,7 @@ sidebar:
   order: 2
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 role: assistant
 difficulty: beginner
 apps: [Slack, Email, Calendar, Meeting notes, Planning docs]

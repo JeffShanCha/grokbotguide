@@ -5,7 +5,7 @@ sidebar:
   order: 3
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 sources:
   - title: Create and manage Bots (official docs)
     url: https://docs.x.ai/grok-bot/bots

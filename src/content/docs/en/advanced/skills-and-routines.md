@@ -5,7 +5,7 @@ sidebar:
   order: 1
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 sources:
   - title: Skills and routines (official docs)
     url: https://docs.x.ai/grok-bot/skills-routines-and-automations

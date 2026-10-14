@@ -5,7 +5,7 @@ sidebar:
   order: 2
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 sources:
   - title: Approvals, security, and privacy (official docs)
     url: https://docs.x.ai/grok-bot/approvals-security-and-privacy

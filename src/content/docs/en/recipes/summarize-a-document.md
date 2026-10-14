@@ -5,7 +5,7 @@ sidebar:
   order: 1
 grade: official
 needs_testing: true
-author: grokbotguide
+author: JeffShanCha
 difficulty: beginner
 apps: [File upload]
 sources:
