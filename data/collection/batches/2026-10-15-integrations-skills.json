@@ -1,0 +1,218 @@
+{
+  "id": "2026-10-15-integrations-skills",
+  "collected_at": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "discovery": [
+    "Chinese original tutorial: Leosplain",
+    "Chinese publisher tutorial: DataCamp",
+    "English integration guide: Composio",
+    "Official computer and app documentation",
+    "GitHub individual skill files and repository credits"
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "leosplain-grok-bot-notion-store",
+        "url": "https://leosplain.com/grok-bot-notion-store-os/",
+        "title": "Grok Bot 教學：用技能接 Notion，做出網店 OS（記帳、排班、毛利）",
+        "author": "Leo（Leosplain）",
+        "source": "blog",
+        "lang": "zh",
+        "published": "2026-09-28",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Notion"
+        ],
+        "tags": [
+          "integration",
+          "notion",
+          "skill",
+          "routine"
+        ],
+        "summary_zh": "作者用 Notion 表格组织店务，拆分订单、库存、日结与排班角色，并给出可改写的 Skill 骨架。适合作为小团队工作流参考，不应当作正式 ERP 或会计系统。",
+        "summary_en": "A Chinese walkthrough combining Notion tables with focused Bots and reusable skills for orders, inventory, daily summaries and shifts. A small-team workflow reference, not a formal ERP.",
+        "verification_note_zh": "已阅读作者教程、技能示例与限制说明；未连接 Notion 或复现作者的测试。",
+        "verification_note_en": "Read the author's walkthrough, skill examples and scope limits. We did not connect Notion or reproduce the workflow."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "datacamp-grok-bot-learning-scout",
+        "url": "https://www.datacamp.com/zh/tutorial/grok-bot-tutorial",
+        "title": "Grok Bot 教程：构建每周 AI 研究代理",
+        "author": "DataCamp",
+        "source": "blog",
+        "lang": "zh",
+        "categories": [
+          "start",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "DataCamp"
+        ],
+        "tags": [
+          "tutorial",
+          "research",
+          "skill",
+          "routine"
+        ],
+        "summary_zh": "中文版教程用 Scout Bot 制定学习计划，逐项核对课程来源、时长与先修要求，再保存 Skill 并设置每周 Routine；包含错误修正和测试记录。",
+        "summary_en": "A Chinese tutorial builds a DataCamp learning Scout, checks course details and prerequisites, then saves the process as a skill and weekly routine. Includes corrections from the author's tests.",
+        "verification_note_zh": "已阅读 DataCamp 发布的中文教程；页面未显示个人署名，按出版方署名。2026-08-30 为更新日，未作为首发日期；未复现流程。",
+        "verification_note_en": "Read DataCamp's Chinese tutorial; credited the publisher because no individual byline was visible. August 30 is an update date, not an inferred release date. Not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "composio-grok-bot-notion",
+        "url": "https://composio.dev/toolkits/notion/framework/grok-bot",
+        "title": "How to connect Notion to Grok Bot",
+        "author": "Composio",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Notion",
+          "Composio"
+        ],
+        "tags": [
+          "integration",
+          "plugin",
+          "notion",
+          "mcp"
+        ],
+        "summary_zh": "Composio 的英文接入指南介绍添加插件、完成授权并连接 Notion，用自然语言操作页面和任务数据库。适合了解连接步骤，具体权限与可用能力需在账户内确认。",
+        "summary_en": "Composio's guide walks through adding its plugin, authorizing access and connecting Notion for page and task-database work. Check available actions and permissions in your own account.",
+        "verification_note_zh": "已阅读供应商的接入步骤与工具说明，未授权或执行操作。文中订阅方案列表较旧，收录不引用其资格或速度承诺。",
+        "verification_note_en": "Read the vendor's setup and tool descriptions; no authorization or actions were performed. Its older plan list and speed claims are not adopted here."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "xai-grok-bot-computer-apps",
+        "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+        "title": "Use the computer and apps",
+        "author": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [
+          "X"
+        ],
+        "tags": [
+          "integration",
+          "plugin",
+          "browser",
+          "permissions"
+        ],
+        "summary_zh": "官方指南解释共享云电脑、浏览器登录、连接器插件和文件持久化；说明如何连接应用，以及公开 X 检索与登录后访问的区别。",
+        "summary_en": "Official guidance on the shared cloud computer, browser sessions, connector plugins and durable files, including app setup and public versus signed-in X access.",
+        "verification_note_zh": "已阅读官方文档，页面最后更新为 2026-10-12；未在账户内安装插件或检查权限。",
+        "verification_note_en": "Read the official guide, last updated October 12, 2026. No plugins were installed or account permissions inspected."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "github-grok-bot-no-ai-slop",
+        "url": "https://github.com/coolxeo/grok-bot-skills/blob/main/skills/writing/no-ai-slop/SKILL.md",
+        "title": "No AI slop",
+        "author": "Dani Acosta（coolxeo）；原作 Peter Yang",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "templates"
+        ],
+        "tags": [
+          "skill",
+          "writing",
+          "editing"
+        ],
+        "summary_zh": "Grok Bot 技能库中的具体写作 Skill，提供编辑和问题检测两种流程，强调保留作者语气、指出具体表达问题。改编自 Peter Yang 的同名项目。",
+        "summary_en": "A writing skill in the Grok Bot catalog with editing and pattern-review workflows. It aims to retain the writer's voice and credits Peter Yang's original project.",
+        "verification_note_zh": "已阅读该 SKILL.md 及仓库署名说明；引用精确技能文件，区别于技能目录。未安装，文件内的环境路径与配套依赖需使用者自行核对。",
+        "verification_note_en": "Read the skill file and repository credits. This links to a specific workflow rather than the catalog. Not installed; environment paths and companion dependencies require review."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体教程或技能正文，与现有集合目录、其他作品用途不同；中英文摘要只覆盖已核验的内容。",
+      "relevance": "直接涉及 Grok Bot 的应用集成、教程或可复用技能。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "github-grok-bot-routine-healthcheck",
+        "url": "https://github.com/coolxeo/grok-bot-skills/blob/main/skills/bots/routine-healthcheck/SKILL.md",
+        "title": "Routine healthcheck",
+        "author": "Dani Acosta（coolxeo）",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "skill",
+          "routine",
+          "audit"
+        ],
+        "summary_zh": "检查 Grok Bot 定时任务的 Skill，聚焦过密触发、重复工作、长会话和空跑噪音，输出修改建议；涉及特定环境目录，使用前需要适配。",
+        "summary_en": "A skill for reviewing Grok Bot routines for excessive frequency, duplicate work, long chats and empty-run noise. It proposes changes and requires environment-specific paths.",
+        "verification_note_zh": "已阅读完整技能文件及其对 Lauren Tan 的来源说明；未读取用户 Bot 数据或运行检查，工具与路径兼容性尚未验证。",
+        "verification_note_en": "Read the skill and its credit to Lauren Tan. No user Bot data was accessed and no audit was run; tool and path compatibility is unverified."
+      }
+    }
+  ]
+}

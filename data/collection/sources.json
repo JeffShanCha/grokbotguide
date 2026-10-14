@@ -7,14 +7,121 @@
   "max_candidates_per_run": 30,
   "max_new_entries_per_run": 20,
   "sources": [
-    {"platform":"official","queries":["site:docs.x.ai/grok-bot Grok Bot","site:x.ai/news Grok Bot"],"seeds":["https://docs.x.ai/grok-bot/overview","https://x.ai/news/grok-bot-more-plans","https://help.x.com/en/using-x/about-bot"]},
-    {"platform":"github","queries":["site:github.com Grok Bot skills routines templates"],"seeds":["https://github.com/coolxeo/grok-bot-skills","https://github.com/cobusgreyling/grok-bot-templates"]},
-    {"platform":"x","queries":["site:x.com Grok Bot tutorial routine template"],"note":"Only publish a specific readable original post; do not treat an account page as a post."},
-    {"platform":"reddit","queries":["site:reddit.com/r/GrokBot Grok Bot setup workflow"],"seeds":["https://www.reddit.com/r/GrokBot/"]},
-    {"platform":"youtube","queries":["site:youtube.com/watch Grok Bot tutorial workflow"],"note":"Disclose description-only review; do not infer unseen video steps."},
-    {"platform":"linuxdo","queries":["site:linux.do/t/topic Grok Bot 分享 教程"]},
-    {"platform":"bilibili","queries":["site:bilibili.com/video GrokBot 教程"],"note":"Prefer original creators; follow credited original sources for reposts."},
-    {"platform":"chinese-community","queries":["site:zhihu.com Grok Bot 实践","site:mp.weixin.qq.com GrokBot","site:v2ex.com Grok Bot"],"note":"Public pages only. Hold blocked or unverified sources."},
-    {"platform":"research","queries":["site:arxiv.org Grok Bot team case study"]}
-  ]
+    {
+      "platform": "official",
+      "queries": [
+        "site:docs.x.ai/grok-bot Grok Bot",
+        "site:x.ai/news Grok Bot"
+      ],
+      "seeds": [
+        "https://docs.x.ai/grok-bot/overview",
+        "https://x.ai/news/grok-bot-more-plans",
+        "https://help.x.com/en/using-x/about-bot"
+      ]
+    },
+    {
+      "platform": "github",
+      "queries": [
+        "site:github.com Grok Bot skills routines templates",
+        "site:github.com Grok Bot SKILL.md Notion Gmail Slack",
+        "site:github.com GrokBot 技能 教程"
+      ],
+      "seeds": [
+        "https://github.com/coolxeo/grok-bot-skills",
+        "https://github.com/cobusgreyling/grok-bot-templates"
+      ]
+    },
+    {
+      "platform": "x",
+      "queries": [
+        "site:x.com Grok Bot tutorial routine template"
+      ],
+      "note": "Only publish a specific readable original post; do not treat an account page as a post."
+    },
+    {
+      "platform": "reddit",
+      "queries": [
+        "site:reddit.com/r/GrokBot Grok Bot setup workflow"
+      ],
+      "seeds": [
+        "https://www.reddit.com/r/GrokBot/"
+      ]
+    },
+    {
+      "platform": "youtube",
+      "queries": [
+        "site:youtube.com/watch Grok Bot tutorial workflow",
+        "site:youtube.com/watch Grok Bot Notion Gmail skills",
+        "site:youtube.com/watch GrokBot 中文 教程"
+      ],
+      "note": "Disclose description-only review; do not infer unseen video steps."
+    },
+    {
+      "platform": "linuxdo",
+      "queries": [
+        "site:linux.do/t/topic Grok Bot 分享 教程"
+      ]
+    },
+    {
+      "platform": "bilibili",
+      "queries": [
+        "site:bilibili.com/video GrokBot 教程"
+      ],
+      "note": "Prefer original creators; follow credited original sources for reposts."
+    },
+    {
+      "platform": "chinese-community",
+      "queries": [
+        "site:zhihu.com Grok Bot 实践",
+        "site:mp.weixin.qq.com GrokBot",
+        "site:v2ex.com Grok Bot",
+        "Grok Bot Notion 教程 技能",
+        "GrokBot Gmail Slack Google Sheets 教程"
+      ],
+      "note": "Public pages only. Hold blocked or unverified sources."
+    },
+    {
+      "platform": "research",
+      "queries": [
+        "site:arxiv.org Grok Bot team case study"
+      ]
+    },
+    {
+      "platform": "author-and-vendor-guides",
+      "queries": [
+        "Grok Bot Notion Composio tutorial",
+        "Grok Bot Gmail Slack Google Sheets integration skill",
+        "GrokBot 中文 Skill Routine 教程"
+      ],
+      "seeds": [
+        "https://leosplain.com/grok-bot-notion-store-os/",
+        "https://www.datacamp.com/zh/tutorial/grok-bot-tutorial",
+        "https://composio.dev/toolkits/notion/framework/grok-bot"
+      ],
+      "note": "Prefer original author tutorials and vendor setup guides. Label commercial sources; avoid adopting unverifiable performance and outdated plan claims."
+    }
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "content_types": [
+    "tutorial",
+    "app-integration",
+    "skill",
+    "routine",
+    "plugin",
+    "bot-template",
+    "case-study",
+    "official-update"
+  ],
+  "integration_examples": [
+    "Notion",
+    "Gmail",
+    "Slack",
+    "Google Sheets",
+    "GitHub",
+    "Composio"
+  ],
+  "coverage_note": "Search both Chinese and English sources each run, including original tutorials, individual skills and cross-app workflows. Do not impose publication quotas or assume compatibility; merge translations and reposts of the same work."
 }

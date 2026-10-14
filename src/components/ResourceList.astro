@@ -25,7 +25,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
 <div class="gbg-resource-list" data-resource-list data-lang={lang}>
   {!compact && <div class="gbg-resource-controls not-content">
     <label>{lang === 'zh' ? '搜索资源' : 'Search resources'}
-      <input type="search" data-resource-search placeholder={lang === 'zh' ? '标题、作者、摘要或标签' : 'Title, author, summary or tag'} />
+      <input type="search" data-resource-search placeholder={lang === 'zh' ? '标题、应用、作者或标签' : 'Title, app, author or tag'} />
     </label>
     <label>{lang === 'zh' ? '分类' : 'Category'}
       <select data-resource-category>
@@ -39,16 +39,24 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
         {platformKeys.map((p) => <option value={p}>{platforms[p] || p}</option>)}
       </select>
     </label>
+    <label>{lang === 'zh' ? '原文语言' : 'Source language'}
+      <select data-resource-language>
+        <option value="">{t('res.all')}</option>
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+      </select>
+    </label>
   </div>}
   {!compact && <p class="gbg-result-count" role="status" aria-live="polite"><span data-resource-count>{items.length}</span> {countText}</p>}
-  <p data-resource-empty hidden={items.length > 0}>{lang === 'zh' ? '暂时没有匹配的资源，请切换分类、平台或搜索词。' : 'No matching resources. Try another category, platform or search term.'}</p>
+  <p data-resource-empty hidden={items.length > 0}>{lang === 'zh' ? '暂时没有匹配的资源，请调整分类、平台、原文语言或搜索词。' : 'No matching resources. Try another category, platform, source language or search term.'}</p>
   <ul class="gbg-res not-content">
-    {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.author, d.summary_zh, d.summary_en, ...d.tags].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
+    {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-original-lang={d.lang} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.author, d.summary_zh, d.summary_en, ...d.tags, ...(d.apps ?? [])].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
       <div class="gbg-res-head">
         <a href={d.url} rel={relOf(d)}>{d.title}</a>
         {d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
       </div>
       <p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>
+      {!!d.apps?.length && <div class="gbg-res-apps"><span>{lang === 'zh' ? '关联应用' : 'Apps'}</span>{d.apps.map((app) => <span class="gbg-badge">{app}</span>)}</div>}
       <div class="gbg-res-meta">
         <span class="gbg-badge">{platforms[d.platform || ''] || (d.source === 'official' ? platforms.official : platforms.web)}</span>
         <span>{d.author_url ? <a href={d.author_url}>{d.author}</a> : d.author}</span>
@@ -75,7 +83,8 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
       const search = root.querySelector<HTMLInputElement>('[data-resource-search]');
       const category = root.querySelector<HTMLSelectElement>('[data-resource-category]');
       const platform = root.querySelector<HTMLSelectElement>('[data-resource-platform]');
-      if (!search || !category || !platform) return;
+      const language = root.querySelector<HTMLSelectElement>('[data-resource-language]');
+      if (!search || !category || !platform || !language) return;
       const rows = [...root.querySelectorAll<HTMLElement>('[data-resource-row]')];
       const params = new URLSearchParams(location.search);
       const initial = params.get('category');
@@ -84,7 +93,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
         const query = search.value.trim().toLowerCase();
         let count = 0;
         for (const row of rows) {
-          row.hidden = !!((query && !row.dataset.search?.includes(query)) || (category.value && !row.dataset.categories?.split(' ').includes(category.value)) || (platform.value && row.dataset.platform !== platform.value));
+          row.hidden = !!((query && !row.dataset.search?.includes(query)) || (category.value && !row.dataset.categories?.split(' ').includes(category.value)) || (platform.value && row.dataset.platform !== platform.value) || (language.value && row.dataset.originalLang !== language.value));
           if (!row.hidden) count++;
         }
         root.querySelector('[data-resource-count]')!.textContent = String(count);
@@ -98,6 +107,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
         apply();
       });
       platform.addEventListener('change', apply);
+      language.addEventListener('change', apply);
       apply();
     });
   }
@@ -106,7 +116,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
 </script>
 
 <style>
-  .gbg-resource-controls { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
+  .gbg-resource-controls { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
   .gbg-resource-controls label { display: grid; gap: 0.35rem; font-size: var(--sl-text-sm); color: var(--sl-color-text); min-width: 0; }
   .gbg-resource-controls input, .gbg-resource-controls select { width: 100%; min-width: 0; min-height: 44px; border: 1px solid var(--gbg-card-border); border-radius: 0.5rem; background: var(--sl-color-bg); color: var(--sl-color-text); padding: 0.5rem 0.7rem; font: inherit; }
   .gbg-resource-controls :is(input, select):focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 2px; }
@@ -119,6 +129,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
   .gbg-res p { margin: 0.4rem 0; color: var(--sl-color-gray-2); font-size: var(--sl-text-sm); }
   .gbg-res-meta { display: flex; flex-wrap: wrap; gap: 0.45rem 0.85rem; align-items: center; font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); }
   .gbg-res-meta .warn { color: var(--sl-color-orange-high); }
+  .gbg-res-apps { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0; font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); }
   .gbg-verification { margin-top: 0.5rem; font-size: var(--sl-text-sm); }
   .gbg-verification summary { cursor: pointer; color: var(--sl-color-gray-2); }
   @media (max-width: 40rem) { .gbg-resource-controls { grid-template-columns: 1fr 1fr; } .gbg-resource-controls label:first-child { grid-column: 1 / -1; } }

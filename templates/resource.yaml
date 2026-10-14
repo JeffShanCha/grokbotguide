@@ -12,6 +12,7 @@
   summary_zh: 用一个 Routine 每天整理 Gmail，附权限设置截图。
   summary_en: A daily Gmail triage routine, with permission settings.
   tags: [routines, gmail]
+  apps: [Gmail]       # 原文实际涉及的应用；不要把承载文章的平台当成关联应用
   roles: [assistant]
   # 允许多个分类：start | advanced | recipes | bots | templates | news | resources
   categories: [advanced, recipes]

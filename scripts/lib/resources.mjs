@@ -83,10 +83,11 @@ export function validateResource(r, { strict = false, today = chinaDate() } = {}
 		try { if (platformOf(r.url) !== 'official') errors.push('official requires a recognized official host'); } catch { /* URL error above */ }
 	}
 	for (const key of ['tags', 'roles']) if (r[key] !== undefined && (!Array.isArray(r[key]) || r[key].some((v) => typeof v !== 'string'))) errors.push(`invalid ${key}`);
+	if (r.apps !== undefined && (!Array.isArray(r.apps) || r.apps.some((v) => typeof v !== 'string' || !v.trim()) || new Set(r.apps.map((v) => typeof v === 'string' ? v.trim().toLowerCase() : v)).size !== r.apps.length)) errors.push('invalid apps');
 	if (strict) {
 		for (const key of ['categories', 'evidence', 'checked_at', 'verification_note_zh', 'verification_note_en']) if (!r[key]?.length) errors.push(`missing ${key}`);
 		if (r.status !== 'alive') errors.push('new collection entries must be accessible');
-		const allowed = ['id', 'url', 'title', 'author', 'author_url', 'source', 'platform', 'lang', 'published', 'added', 'checked_at', 'summary_zh', 'summary_en', 'tags', 'roles', 'status', 'archive', 'submitted_by', 'sponsored', 'ugc', 'categories', 'evidence', 'verification_note_zh', 'verification_note_en', 'collection_batch', 'original_url'];
+		const allowed = ['id', 'url', 'title', 'author', 'author_url', 'source', 'platform', 'lang', 'published', 'added', 'checked_at', 'summary_zh', 'summary_en', 'tags', 'apps', 'roles', 'status', 'archive', 'submitted_by', 'sponsored', 'ugc', 'categories', 'evidence', 'verification_note_zh', 'verification_note_en', 'collection_batch', 'original_url'];
 		if (Object.keys(r).some((k) => !allowed.includes(k))) errors.push('unknown resource fields (raw source bodies are not stored)');
 	}
 	return errors;

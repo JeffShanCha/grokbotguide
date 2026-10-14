@@ -28,6 +28,11 @@ test('preserves case-sensitive paths and distinct content parameters', () => {
 test('unsafe schemes and local addresses fail validation', () => {
 	for (const url of ['javascript:alert(1)', 'file:///tmp/a', 'http://localhost/x', 'https://127.0.0.1', 'https://user:pass@example.com']) assert.throws(() => normalizeUrl(url));
 });
+test('app metadata survives ingestion and rejects malformed or repeated labels', () => {
+	const valid = run([], [candidate({ apps: ['Notion', 'Composio'] })]);
+	assert.deepEqual(valid.resources[0].apps, ['Notion', 'Composio']);
+	for (const apps of ['Notion', [1], [' '], ['Notion', 'notion']]) assert.equal(run([], [candidate({ apps })]).report.held.length, 1);
+});
 test('duplicate URLs and repeated runs do not grow the catalog', () => {
 	const first = run([], [candidate(), candidate({ id: 'another-id', url: resource.url + '?utm_source=test' })]);
 	assert.equal(first.report.added.length, 1);

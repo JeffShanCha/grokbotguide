@@ -50,6 +50,7 @@ const resource = z.object({
 	summary_zh: z.string(),
 	summary_en: z.string(),
 	tags: z.array(z.string()).default([]),
+	apps: z.array(z.string().trim().min(1)).default([]),
 	roles: z.array(z.string()).default([]),
 	status: z.enum(['alive', 'broken']).default('alive'),
 	archive: z.url().optional(),
