@@ -56,15 +56,17 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 分两步走：第一步只要 Cloudflare 账号就能上线，先跑在 `grokbotguide.<你的子域>.workers.dev`；域名接入后再做第二步。
 数据库和邮件绑定在 `wrangler.jsonc` 里默认是注释掉的，没打开时站点照常运行：复制计数不显示，投稿只建 GitHub Issue。
 
+当前部署地址：<https://grokbotguide.zhuangniuthedev.workers.dev>。仓库已连接 Cloudflare Workers Builds，推送到 `main` 会自动构建并部署；预览构建暂未启用。
+
 ### 第一步：站点上线
 
 1. **连接仓库**：Cloudflare → Workers & Pages → Create → Import a repository → 选 [JeffShanCha/grokbotguide](https://github.com/JeffShanCha/grokbotguide)。
    - Project name：`grokbotguide`（要和 `wrangler.jsonc` 的 `name` 一致）
    - Build command：`npm run build`
    - Deploy command：`npx wrangler deploy`
-   - 之后 push 到 `main` 自动上线，其他分支自动生成预览链接。
-2. **域名**：在 Dynadot 买 `grokbotguide.ai`。
-3. **Cloudflare 接管 DNS**：Cloudflare → Add a domain（Free 计划即可），把分配的两个 nameserver 填回 Dynadot，等状态变成 Active。
+   - 之后 push 到 `main` 自动上线；如启用 Preview builds，其他分支也可以自动生成预览链接。
+2. **域名**：`grokbotguide.ai` 已在 Dynadot 注册，域名继续由 Dynadot 管理。
+3. **Cloudflare 接管 DNS**：已添加域名并选择 Free 计划。Dynadot 的 nameserver 已改为 `luciane.ns.cloudflare.com` 和 `vern.ns.cloudflare.com`，待 Cloudflare 状态变成 Active 后绑定 Worker。
 4. **绑定域名**：Worker → Settings → Domains & Routes → Add → Custom domain，填 `grokbotguide.ai`；`www` 用重定向规则 301 到主域名。
 
 ### 第二步：投稿、通知与计数
