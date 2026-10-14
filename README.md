@@ -58,7 +58,7 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 分两步走：第一步只要 Cloudflare 账号就能上线，先跑在 `grokbotguide.<你的子域>.workers.dev`；域名接入后再做第二步。
 数据库和邮件绑定在 `wrangler.jsonc` 里默认是注释掉的，没打开时站点照常运行：复制计数不显示，投稿只建 GitHub Issue。
 
-当前部署地址：<https://grokbotguide.ai>，备用地址：<https://grokbotguide.zhuangniuthedev.workers.dev>。站点已连接 Cloudflare Workers Builds，推送到 `main` 会自动构建并部署；预览构建暂未启用。本地运行 `npm run deploy` 部署站点，运行 `npm run deploy:redirect` 部署 `www` 跳转 Worker。
+当前部署地址：<https://grokbotguide.ai>，备用地址：<https://grokbotguide.zhuangniuthedev.workers.dev>。站点和 `www` 跳转 Worker 均已连接 Cloudflare Workers Builds，推送到 `main` 会自动构建并部署；预览构建暂未启用。本地运行 `npm run deploy` 部署站点，运行 `npm run deploy:redirect` 部署 `www` 跳转 Worker。
 
 ### 第一步：站点上线
 
@@ -70,7 +70,7 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 2. **域名**：`grokbotguide.ai` 已在 Dynadot 注册，域名继续由 Dynadot 管理。
 3. **Cloudflare 接管 DNS**：已添加域名并选择 Free 计划。Dynadot 的 nameserver 已改为 `luciane.ns.cloudflare.com` 和 `vern.ns.cloudflare.com`，Cloudflare 状态已变成 Active。
 4. **域名路由**：`wrangler.jsonc` 配置 `grokbotguide.ai/*` 的 Workers Route，由站点 Worker 处理所有页面和 API；`workers.dev` 地址也保留。`wrangler.redirect.jsonc` 将 `www.grokbotguide.ai/*` 交给独立的跳转 Worker，以 301 跳转到主域名并保留路径和查询参数。
-   - 为跳转 Worker 单独连接同一 GitHub 仓库，Production branch 为 `main`，Build command 留空，Deploy command 为 `npm run deploy:redirect`。两个 Worker 使用各自的构建流程，保持 Cloudflare 对部署目标的校验。
+   - 跳转 Worker `grokbotguide-www` 已单独连接同一 GitHub 仓库，Production branch 为 `main`，Build command 留空，Deploy command 为 `npm run deploy:redirect`。两个 Worker 使用各自的构建流程，保持 Cloudflare 对部署目标的校验。
 
 ### 第二步：投稿、通知与计数
 
