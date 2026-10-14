@@ -1,0 +1,72 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { SITE } from '../../../site.config.mjs';
+import { toLang, useT } from '../../i18n/ui';
+
+const route = Astro.locals.starlightRoute;
+const data = route.entry.data;
+const lang = toLang(route.locale);
+const t = useT(lang);
+const sources = data.sources ?? [];
+---
+
+{
+	sources.length > 0 && (
+		<section class="gbg-sources">
+			<h2>{t('meta.sources')}</h2>
+			<ul>
+				{sources.map((s) => (
+					<li>
+						<a href={s.url} rel="noopener">
+							{s.title}
+						</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}
+
+<Default />
+
+<div class="gbg-footer">
+	<p>{t('footer.disclaimer')}</p>
+	<p class="gbg-footer-links">
+		<a href={`/${lang}/community/about/`}>{t('footer.about')}</a>
+		<a href={`mailto:${SITE.email.takedown}`}>{t('footer.takedown')}</a>
+		<a href={SITE.repo}>GitHub</a>
+		<span>{t('footer.license')}</span>
+	</p>
+</div>
+
+<style>
+	.gbg-sources {
+		margin-top: 3rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--sl-color-hairline);
+	}
+	.gbg-sources h2 {
+		font-size: var(--sl-text-lg);
+		margin-bottom: 0.5rem;
+	}
+	.gbg-sources ul {
+		padding-inline-start: 1.25rem;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-footer {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-footer-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.25rem;
+		margin-top: 0.5rem;
+	}
+	.gbg-footer a {
+		color: var(--sl-color-gray-2);
+	}
+</style>

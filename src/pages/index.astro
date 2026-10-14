@@ -1,0 +1,31 @@
+---
+// 线上环境中，根路径 / 由 Cloudflare Worker 按 Cookie / 地区 / 浏览器语言 302 跳转（见 worker/index.ts），
+// 这个页面不会被访问到。它只在本地 `astro dev` 或 Worker 异常时兜底：按 Cookie 和浏览器语言跳转。
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>GrokBotGuide</title>
+		<meta name="robots" content="noindex" />
+		<link rel="alternate" hreflang="zh-CN" href="https://grokbotguide.ai/zh/" />
+		<link rel="alternate" hreflang="en" href="https://grokbotguide.ai/en/" />
+		<link rel="alternate" hreflang="x-default" href="https://grokbotguide.ai/en/" />
+		<script is:inline>
+			(function () {
+				var m = document.cookie.match(/(?:^|;\s*)lang=(zh|en)/);
+				var lang = m ? m[1] : (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+				location.replace('/' + lang + '/');
+			})();
+		</script>
+		<style>
+			body { font-family: system-ui, sans-serif; background: #0b0b0b; color: #ededed; display: grid; place-items: center; min-height: 100vh; margin: 0; }
+			a { color: #ff6a2b; margin: 0 0.75rem; }
+		</style>
+	</head>
+	<body>
+		<p><a href="/zh/">简体中文</a><a href="/en/">English</a></p>
+	</body>
+</html>

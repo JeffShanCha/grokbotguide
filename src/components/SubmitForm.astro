@@ -1,0 +1,194 @@
+---
+// 站内投稿表单：提交到 Worker 的 /api/submit，Worker 校验 Turnstile 后创建 GitHub Issue 并发邮件通知。
+import { SITE } from '../../site.config.mjs';
+import { toLang } from '../i18n/ui';
+
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const c = {
+	zh: {
+		type: '投稿类型',
+		types: {
+			article: '教程 / 实战案例',
+			bot: '角色卡（Bot）',
+			template: '模板（Skill / Routine）',
+			resource: '推荐链接（外部文章、视频、X 帖子）',
+			fix: '纠错 / 内容过时',
+		},
+		title: '标题',
+		titlePh: '例如：用 Grok Bot 每天整理 Shopify 订单',
+		url: '链接（推荐链接或纠错时必填）',
+		body: '内容',
+		bodyPh: '场景是什么？用了哪些应用？具体步骤、给 Bot 的指令、审批怎么设？测试时用的是哪个订阅？',
+		name: '署名（GitHub 用户名或昵称，选填）',
+		contact: '联系方式（邮箱，选填，仅维护者可见）',
+		agree: '我确认内容为本人原创或已获授权，截图中没有密码、客户数据等敏感信息。',
+		submit: '提交',
+		sending: '提交中…',
+		ok: '已收到，谢谢！维护者会在 72 小时内处理。进度可以在这里查看：',
+		fail: '提交失败，请稍后再试，或直接在 GitHub 上提 Issue。',
+	},
+	en: {
+		type: 'Type',
+		types: {
+			article: 'Tutorial / recipe',
+			bot: 'Bot card',
+			template: 'Template (skill / routine)',
+			resource: 'Recommend a link (article, video, X post)',
+			fix: 'Correction / outdated content',
+		},
+		title: 'Title',
+		titlePh: 'e.g. Triage Shopify orders every morning with Grok Bot',
+		url: 'Link (required for recommendations and corrections)',
+		body: 'Content',
+		bodyPh: 'What is the scenario? Which apps? Steps, the prompt you gave the Bot, approval settings, which plan you tested on?',
+		name: 'Credit as (GitHub username or name, optional)',
+		contact: 'Contact email (optional, visible to maintainers only)',
+		agree: 'This is my own work or I have permission, and screenshots contain no passwords or customer data.',
+		submit: 'Submit',
+		sending: 'Sending…',
+		ok: 'Thanks, we got it! Maintainers reply within 72 hours. Track it here:',
+		fail: 'Something went wrong. Please try again later or open an issue on GitHub.',
+	},
+}[lang];
+---
+
+<form class="gbg-form not-content" data-submit-form data-sending={c.sending} data-ok={c.ok} data-fail={c.fail}>
+	<label>
+		<span>{c.type}</span>
+		<select name="type" required>
+			{Object.entries(c.types).map(([v, label]) => <option value={v}>{label}</option>)}
+		</select>
+	</label>
+	<label>
+		<span>{c.title}</span>
+		<input name="title" required maxlength="120" placeholder={c.titlePh} />
+	</label>
+	<label>
+		<span>{c.url}</span>
+		<input name="url" type="url" maxlength="500" placeholder="https://" />
+	</label>
+	<label>
+		<span>{c.body}</span>
+		<textarea name="body" rows="10" maxlength="20000" placeholder={c.bodyPh}></textarea>
+	</label>
+	<div class="row">
+		<label>
+			<span>{c.name}</span>
+			<input name="name" maxlength="60" />
+		</label>
+		<label>
+			<span>{c.contact}</span>
+			<input name="contact" type="email" maxlength="120" />
+		</label>
+	</div>
+	<label class="check">
+		<input type="checkbox" name="agree" required />
+		<span>{c.agree}</span>
+	</label>
+	<input type="hidden" name="lang" value={lang} />
+	<div class="cf-turnstile" data-sitekey={SITE.turnstileSiteKey}></div>
+	<button type="submit">{c.submit}</button>
+	<p class="status" role="status" hidden></p>
+</form>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+	const form = document.querySelector<HTMLFormElement>('[data-submit-form]');
+	if (form) {
+		const status = form.querySelector<HTMLElement>('.status')!;
+		const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const data = Object.fromEntries(new FormData(form).entries());
+			button.disabled = true;
+			status.hidden = false;
+			status.textContent = form.dataset.sending!;
+			try {
+				const res = await fetch('/api/submit', {
+					method: 'POST',
+					headers: { 'content-type': 'application/json' },
+					body: JSON.stringify(data),
+				});
+				const json = (await res.json().catch(() => ({}))) as { issueUrl?: string; error?: string };
+				if (!res.ok) throw new Error(json.error ?? String(res.status));
+				status.innerHTML = '';
+				status.append(form.dataset.ok + ' ');
+				if (json.issueUrl) {
+					const a = document.createElement('a');
+					a.href = json.issueUrl;
+					a.textContent = json.issueUrl;
+					status.append(a);
+				}
+				form.reset();
+			} catch (err) {
+				status.textContent = `${form.dataset.fail} (${(err as Error).message})`;
+			} finally {
+				button.disabled = false;
+				// @ts-expect-error turnstile 由外部脚本注入
+				window.turnstile?.reset();
+			}
+		});
+	}
+</script>
+
+<style>
+	.gbg-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-top: 1.5rem;
+		max-width: 44rem;
+	}
+	.gbg-form label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	.gbg-form .row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	.gbg-form .check {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+	.gbg-form input:not([type='checkbox']),
+	.gbg-form select,
+	.gbg-form textarea {
+		width: 100%;
+		padding: 0.6rem 0.75rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--gbg-card-border);
+		background: var(--gbg-card-bg);
+		color: var(--sl-color-white);
+		font: inherit;
+		font-size: var(--sl-text-base);
+	}
+	.gbg-form button {
+		align-self: flex-start;
+		padding: 0.65rem 1.4rem;
+		border-radius: 999px;
+		border: none;
+		background: var(--sl-color-accent);
+		color: #fff;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.gbg-form button:disabled {
+		opacity: 0.6;
+	}
+	.gbg-form .status {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-1);
+	}
+	@media (max-width: 40rem) {
+		.gbg-form .row {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

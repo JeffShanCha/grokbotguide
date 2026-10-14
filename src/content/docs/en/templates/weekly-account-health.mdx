@@ -1,0 +1,46 @@
+---
+title: Weekly account health (skill)
+description: 'A complete skill example: sources, risk definitions, output format and "customer contact always needs approval".'
+sidebar:
+  order: 3
+grade: official
+needs_testing: true
+author: grokbotguide
+kind: skill
+role: sales
+difficulty: intermediate
+apps: [CRM, Product usage, Support, Billing]
+permissions: [Read-only CRM, Approval to contact customers]
+sources:
+  - title: Skills and routines (official docs)
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+  - title: Use cases · Account Health (official docs)
+    url: https://docs.x.ai/grok-bot/use-cases
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Written to the official six parts of a good skill: when to use, inputs and access, steps, validation, output, approvals. Run the task by hand once, then send this to the Bot to save it.
+
+<CopyTemplate id="weekly-account-health">
+
+```text
+Save the following process as a skill called "Weekly account health":
+
+When to use: every Monday, or when I say "check account health".
+Inputs and access: <CRM view link>, product usage dashboard, support ticket system, billing system; all read-only.
+Steps:
+1. Read every account in the portfolio
+2. Combine the last 30 days of usage change, support escalations, renewal timing and stakeholder activity
+3. Score risk using these definitions: <e.g. usage down more than 30%, renewal within 90 days and no active stakeholder>
+4. Rank into a watch list
+Validation: every conclusion needs a source link; list accounts with missing data separately, do not guess.
+Output: a table with account / risk level / evidence / why it matters / suggested next step.
+Approvals: any action that contacts a customer needs my approval first; do not edit the CRM.
+```
+
+</CopyTemplate>
+
+## Tip
+
+The official docs suggest putting risk thresholds in the Bot's description so weekly results stay consistent and comparable.

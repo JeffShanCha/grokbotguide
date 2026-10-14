@@ -1,0 +1,117 @@
+export type Lang = 'zh' | 'en';
+
+export const toLang = (locale: string | undefined): Lang => (locale === 'en' ? 'en' : 'zh');
+
+const ui = {
+	zh: {
+		'grade.official': '整理自官方文档',
+		'grade.tested': '社区亲测',
+		'grade.opinion': '观点 / 评测',
+		'meta.verified': '最后验证',
+		'meta.author': '作者',
+		'meta.needsTesting':
+			'本文根据官方文档整理，尚未经过社区亲测。如果你按步骤操作后发现不一致，欢迎在 GitHub 上修改此页。',
+		'meta.sources': '参考来源',
+		'footer.disclaimer':
+			'GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。Grok 及相关名称是其各自所有者的商标。',
+		'footer.about': '关于本站',
+		'footer.takedown': '申请修改或下架',
+		'footer.license': '内容 CC BY-SA 4.0 · 代码 MIT',
+		'role.sales': '销售',
+		'role.marketing': '市场',
+		'role.support': '客服',
+		'role.recruiting': '招聘',
+		'role.finance': '财务',
+		'role.engineering': '研发',
+		'role.operations': '运营',
+		'role.assistant': '个人助理',
+		'difficulty.beginner': '入门',
+		'difficulty.intermediate': '进阶',
+		'difficulty.advanced': '高级',
+		'kind.skill': 'Skill',
+		'kind.routine': 'Routine',
+		'kind.prompt': '指令',
+		'kind.bot': 'Bot',
+		'cards.apps': '用到的应用',
+		'cards.empty': '这个分类还没有内容，来写第一篇吧。',
+		'tpl.copy': '复制模板',
+		'tpl.copied': '已复制',
+		'tpl.copies': '次复制',
+		'res.all': '全部',
+		'res.source.official': '官方',
+		'res.source.media': '媒体',
+		'res.source.blog': '博客',
+		'res.source.video': '视频',
+		'res.source.x': 'X',
+		'res.source.github': 'GitHub',
+		'res.source.wechat': '公众号',
+		'res.source.forum': '论坛',
+		'res.broken': '原链接已失效',
+		'res.archive': '查看快照',
+		'res.sponsored': '赞助',
+		'res.added': '收录于',
+	},
+	en: {
+		'grade.official': 'From official docs',
+		'grade.tested': 'Community tested',
+		'grade.opinion': 'Opinion / review',
+		'meta.verified': 'Last verified',
+		'meta.author': 'Author',
+		'meta.needsTesting':
+			'This page is compiled from the official docs and has not been tested by the community yet. If something differs when you try it, please edit this page on GitHub.',
+		'meta.sources': 'Sources',
+		'footer.disclaimer':
+			'GrokBotGuide is an independent community project, not affiliated with or endorsed by xAI, SpaceXAI or Cursor. Grok and related names are trademarks of their respective owners.',
+		'footer.about': 'About',
+		'footer.takedown': 'Request a correction or takedown',
+		'footer.license': 'Content CC BY-SA 4.0 · Code MIT',
+		'role.sales': 'Sales',
+		'role.marketing': 'Marketing',
+		'role.support': 'Support',
+		'role.recruiting': 'Recruiting',
+		'role.finance': 'Finance',
+		'role.engineering': 'Engineering',
+		'role.operations': 'Operations',
+		'role.assistant': 'Personal assistant',
+		'difficulty.beginner': 'Beginner',
+		'difficulty.intermediate': 'Intermediate',
+		'difficulty.advanced': 'Advanced',
+		'kind.skill': 'Skill',
+		'kind.routine': 'Routine',
+		'kind.prompt': 'Prompt',
+		'kind.bot': 'Bot',
+		'cards.apps': 'Apps',
+		'cards.empty': 'Nothing here yet. Write the first one!',
+		'tpl.copy': 'Copy template',
+		'tpl.copied': 'Copied',
+		'tpl.copies': 'copies',
+		'res.all': 'All',
+		'res.source.official': 'Official',
+		'res.source.media': 'Media',
+		'res.source.blog': 'Blog',
+		'res.source.video': 'Video',
+		'res.source.x': 'X',
+		'res.source.github': 'GitHub',
+		'res.source.wechat': 'WeChat',
+		'res.source.forum': 'Forum',
+		'res.broken': 'Original link is broken',
+		'res.archive': 'View snapshot',
+		'res.sponsored': 'Sponsored',
+		'res.added': 'Added',
+	},
+} as const;
+
+export type UIKey = keyof (typeof ui)['zh'];
+
+export function useT(lang: Lang) {
+	return (key: UIKey) => ui[lang][key] ?? ui.zh[key];
+}
+
+export function formatDate(d: Date, lang: Lang) {
+	return d.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US', {
+		year: 'numeric',
+		month: lang === 'zh' ? '2-digit' : 'short',
+		day: '2-digit',
+		timeZone: 'UTC',
+	});
+}

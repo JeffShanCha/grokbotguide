@@ -1,0 +1,29 @@
+name: 认领或提议选题 / Propose a topic
+description: 想写一篇教程、实战案例、角色卡或模板
+labels: [topic]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型 / Type
+      options: [教程 Tutorial, 实战案例 Recipe, 角色卡 Bot card, 模板 Template]
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: 标题 / Title
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: 大纲 / Outline
+      description: 场景、用到的应用、预计步骤
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: 亲测 / Tested
+      options:
+        - label: 我会亲自跑通后再提交 / I will test it before submitting
+          required: true

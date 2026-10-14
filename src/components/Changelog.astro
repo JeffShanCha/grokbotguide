@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate, toLang } from '../i18n/ui';
+
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const entries = (await getCollection('changelog')).sort((a, b) => +b.data.date - +a.data.date);
+---
+
+<table>
+	<thead>
+		<tr>
+			<th>{lang === 'zh' ? '日期' : 'Date'}</th>
+			<th>{lang === 'zh' ? '更新' : 'Change'}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			entries.map((e) => (
+				<tr>
+					<td style="white-space:nowrap">{formatDate(e.data.date, lang)}</td>
+					<td>
+						{e.data[lang]} <a href={e.data.url}>{lang === 'zh' ? '来源' : 'Source'}</a>
+					</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>

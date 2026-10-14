@@ -1,0 +1,45 @@
+---
+title: Daily customer-risk list (routine)
+description: Every weekday at 8:00, run the Daily customer-risk skill and post a watch list. If a source is down, report a failure instead of using old data.
+sidebar:
+  order: 2
+grade: official
+needs_testing: true
+author: grokbotguide
+kind: routine
+role: sales
+difficulty: intermediate
+apps: [CRM, Product usage, Support]
+permissions: [Read-only, No customer contact]
+sources:
+  - title: Skills and routines · Examples (official docs)
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Adapted from the scheduled-routine example in the official docs. It assumes you already have a skill called "Daily customer-risk" (see [Weekly account health skill](/en/templates/weekly-account-health/) for how to write one).
+
+<CopyTemplate id="daily-customer-risk">
+
+```text
+Create a routine:
+- Owning Bot: <your customer-success Bot>
+- Schedule: every weekday at 08:00, time zone <America/New_York>
+- Action: run the "Daily customer-risk" skill against the current account list
+- Output: post a linked watch list in this conversation
+- Boundary: do not contact any customer
+- If a source is unavailable: report a failure; do not use old data
+Before creating it, repeat these settings back to me for confirmation.
+```
+
+</CopyTemplate>
+
+## Checklist
+
+After creating it, do one **Test run** (it does real work) and confirm:
+
+- It used today's data
+- The output matches the format
+- It took no external action
+- It reports a failure when a source is down instead of silently skipping

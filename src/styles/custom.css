@@ -1,0 +1,136 @@
+/* GrokBotGuide 主题：黑白为主，单一强调色。不使用 xAI / Grok 的品牌元素。 */
+:root {
+	--sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	--sl-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	/* 深色（默认） */
+	--sl-color-accent-low: #3a1606;
+	--sl-color-accent: #ff6a2b;
+	--sl-color-accent-high: #ffd2bd;
+	--sl-color-text-accent: #ff8a57;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #ededed;
+	--sl-color-gray-2: #c4c4c4;
+	--sl-color-gray-3: #8f8f8f;
+	--sl-color-gray-4: #5a5a5a;
+	--sl-color-gray-5: #333333;
+	--sl-color-gray-6: #1c1c1c;
+	--sl-color-black: #0b0b0b;
+
+	--gbg-card-bg: #141414;
+	--gbg-card-border: #2a2a2a;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffe3d6;
+	--sl-color-accent: #d9480f;
+	--sl-color-accent-high: #6b1f02;
+	--sl-color-text-accent: #c2410c;
+	--sl-color-white: #0b0b0b;
+	--sl-color-gray-1: #1c1c1c;
+	--sl-color-gray-2: #333333;
+	--sl-color-gray-3: #5a5a5a;
+	--sl-color-gray-4: #8f8f8f;
+	--sl-color-gray-5: #c4c4c4;
+	--sl-color-gray-6: #ededed;
+	--sl-color-gray-7: #f6f6f6;
+	--sl-color-black: #ffffff;
+
+	--gbg-card-bg: #ffffff;
+	--gbg-card-border: #e2e2e2;
+}
+
+/* 通用徽章 */
+.gbg-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.1rem 0.55rem;
+	border-radius: 999px;
+	font-size: var(--sl-text-xs);
+	line-height: 1.6;
+	border: 1px solid var(--gbg-card-border);
+	color: var(--sl-color-gray-2);
+	background: var(--sl-color-gray-6);
+	white-space: nowrap;
+}
+.gbg-grade-official {
+	border-color: #3b82f6;
+	color: #60a5fa;
+}
+.gbg-grade-tested {
+	border-color: #16a34a;
+	color: #22c55e;
+}
+.gbg-grade-opinion {
+	border-color: #a855f7;
+	color: #c084fc;
+}
+:root[data-theme='light'] .gbg-grade-official {
+	color: #1d4ed8;
+}
+:root[data-theme='light'] .gbg-grade-tested {
+	color: #15803d;
+}
+:root[data-theme='light'] .gbg-grade-opinion {
+	color: #7e22ce;
+}
+
+/* 通用卡片网格 */
+.gbg-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	gap: 1rem;
+	margin-top: 1.25rem;
+}
+.gbg-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.1rem 1.2rem;
+	border: 1px solid var(--gbg-card-border);
+	border-radius: 0.75rem;
+	background: var(--gbg-card-bg);
+	text-decoration: none;
+	color: var(--sl-color-gray-2);
+	transition: border-color 0.15s ease, transform 0.15s ease;
+}
+a.gbg-card:hover {
+	border-color: var(--sl-color-accent);
+	transform: translateY(-2px);
+}
+.gbg-card h3 {
+	margin: 0;
+	font-size: var(--sl-text-lg);
+	color: var(--sl-color-white);
+}
+.gbg-card p {
+	margin: 0;
+	font-size: var(--sl-text-sm);
+}
+.gbg-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin-top: auto;
+	padding-top: 0.25rem;
+}
+.sl-markdown-content .gbg-grid :is(h3, p) {
+	margin-top: 0;
+}
+
+.gbg-badge[hidden] {
+	display: none;
+}
+
+/* 组件里（not-content 区域）的链接也用强调色 */
+:is(.gbg-res, .gbg-sources, .gbg-meta, .gbg-needs-testing, .gbg-form) a {
+	color: var(--sl-color-text-accent);
+}
+
+/* 首页不显示 Starlight 默认标题区（Home 组件自带 h1），隐藏留下的空面板 */
+.content-panel:has(> .sl-container:empty) {
+	display: none;
+}
+.content-panel:has(> .sl-container:empty) + .content-panel {
+	border-top: none;
+}

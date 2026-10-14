@@ -1,0 +1,61 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { formatDate, toLang, useT } from '../../i18n/ui';
+
+const route = Astro.locals.starlightRoute;
+const data = route.entry.data;
+const lang = toLang(route.locale);
+const t = useT(lang);
+const isSplash = data.template === 'splash';
+const showMeta = !isSplash && (data.grade || data.last_verified || data.author);
+---
+
+{/* 首页（splash）由 Home 组件自己渲染 h1，这里不再重复标题 */}
+{!isSplash && <Default />}
+
+{
+	showMeta && (
+		<div class="gbg-meta">
+			{data.grade && <span class={`gbg-badge gbg-grade-${data.grade}`}>{t(`grade.${data.grade}`)}</span>}
+			{data.last_verified && (
+				<span>
+					{t('meta.verified')}: <time datetime={data.last_verified.toISOString()}>{formatDate(data.last_verified, lang)}</time>
+				</span>
+			)}
+			{data.author && (
+				<span>
+					{t('meta.author')}: <a href={`https://github.com/${data.author}`}>@{data.author}</a>
+				</span>
+			)}
+		</div>
+	)
+}
+
+{
+	!isSplash && data.needs_testing && (
+		<aside class="gbg-needs-testing" role="note">
+			{t('meta.needsTesting')}
+		</aside>
+	)
+}
+
+<style>
+	.gbg-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 1rem;
+		margin-top: 0.75rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-needs-testing {
+		margin-top: 1rem;
+		padding: 0.75rem 1rem;
+		border-inline-start: 3px solid var(--sl-color-accent);
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-sm);
+		border-radius: 0.25rem;
+	}
+</style>

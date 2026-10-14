@@ -1,0 +1,18 @@
+# 复制下面这一段，加到 src/data/resources.yaml 的最上面
+- id: short-english-slug          # 唯一，英文小写和连字符
+  url: https://example.com/post   # 原文链接
+  title: 原文标题（保持原文语言）
+  author: 作者或媒体名
+  author_url: https://x.com/author   # 可选
+  source: blog        # official | media | blog | video | x | github | wechat | forum
+  lang: en            # 原文语言：zh | en
+  published: 2026-10-10   # 可选，原文发布日期
+  added: 2026-10-14       # 收录日期
+  # 摘要用自己的话写，2–3 句、220 字以内，不要复制原文
+  summary_zh: 用一个 Routine 每天整理 Gmail，附权限设置截图。
+  summary_en: A daily Gmail triage routine, with permission settings.
+  tags: [routines, gmail]
+  roles: [assistant]
+  # archive: https://web.archive.org/web/...   # 可选，原文快照
+  # submitted_by: github-username              # 社区推荐时填写
+  # ugc: true                                  # 社区提交的链接设为 true（输出 rel="ugc"）

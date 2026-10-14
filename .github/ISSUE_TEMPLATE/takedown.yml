@@ -1,0 +1,22 @@
+name: 申请修改或下架 / Correction or takedown
+description: 你是被收录内容的原作者，希望修改或下架
+labels: [takedown]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 本站页面或条目 / Page or entry on this site
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: 希望 / Request
+      options: [下架 Remove, 修改 Correct]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 说明 / Details
+      description: 也可以发邮件到 takedown@grokbotguide.ai / Or email takedown@grokbotguide.ai

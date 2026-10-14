@@ -1,0 +1,17 @@
+---
+// 包一层 Starlight 自带的语言切换器：用户手动切换时写入 lang Cookie，
+// 之后访问根路径 / 时 Worker 会优先使用这个选择，而不是按地区判断。
+import Default from '@astrojs/starlight/components/LanguageSelect.astro';
+---
+
+<Default />
+
+<script>
+	document.querySelectorAll('starlight-lang-select select').forEach((select) => {
+		select.addEventListener('change', (e) => {
+			const value = (e.currentTarget as HTMLSelectElement).value;
+			const lang = value.startsWith('/en/') ? 'en' : 'zh';
+			document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
+		});
+	});
+</script>

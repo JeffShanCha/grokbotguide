@@ -1,0 +1,92 @@
+---
+// 包住一个代码块：显示醒目的「复制模板」按钮和复制次数。
+// 用法（.mdx 中）：<CopyTemplate id="daily-customer-risk"> ```text ... ``` </CopyTemplate>
+import { toLang, useT } from '../i18n/ui';
+
+interface Props {
+	id: string;
+}
+const { id } = Astro.props;
+const t = useT(toLang(Astro.locals.starlightRoute.locale));
+---
+
+<div class="gbg-tpl" data-tpl-id={id}>
+	<div class="gbg-tpl-bar not-content">
+		<button type="button" class="gbg-tpl-btn" data-label={t('tpl.copy')} data-done={t('tpl.copied')}>
+			{t('tpl.copy')}
+		</button>
+		<span class="gbg-tpl-count" data-unit={t('tpl.copies')} hidden></span>
+	</div>
+	<slot />
+</div>
+
+<script>
+	function codeOf(root: HTMLElement) {
+		const lines = root.querySelectorAll('.ec-line');
+		if (lines.length) return [...lines].map((l) => l.textContent ?? '').join('\n');
+		return root.querySelector('pre')?.textContent ?? '';
+	}
+	const seenKey = 'gbg-copied';
+	document.querySelectorAll<HTMLElement>('.gbg-tpl').forEach((box) => {
+		const id = box.dataset.tplId!;
+		const btn = box.querySelector<HTMLButtonElement>('.gbg-tpl-btn')!;
+		const count = box.querySelector<HTMLElement>('.gbg-tpl-count')!;
+		const show = (n: number) => {
+			if (n > 0) {
+				count.textContent = `${n} ${count.dataset.unit}`;
+				count.hidden = false;
+			}
+		};
+		fetch(`/api/copies?ids=${encodeURIComponent(id)}`)
+			.then((r) => (r.ok ? r.json() : {}))
+			.then((c: Record<string, number>) => show(c[id] ?? 0))
+			.catch(() => {});
+		btn.addEventListener('click', async () => {
+			await navigator.clipboard.writeText(codeOf(box));
+			btn.textContent = btn.dataset.done!;
+			setTimeout(() => (btn.textContent = btn.dataset.label!), 1500);
+			// 同一浏览器只计一次
+			let seen: string[] = [];
+			try {
+				seen = JSON.parse(localStorage.getItem(seenKey) ?? '[]');
+			} catch {}
+			if (seen.includes(id)) return;
+			try {
+				localStorage.setItem(seenKey, JSON.stringify([...seen, id]));
+			} catch {}
+			fetch('/api/copy', {
+				method: 'POST',
+				headers: { 'content-type': 'application/json' },
+				body: JSON.stringify({ id }),
+			})
+				.then((r) => (r.ok ? r.json() : null))
+				.then((d) => d && show(d.count))
+				.catch(() => {});
+		});
+	});
+</script>
+
+<style>
+	.gbg-tpl {
+		margin-top: 1.5rem;
+	}
+	.gbg-tpl-bar {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+	.gbg-tpl-btn {
+		padding: 0.45rem 1rem;
+		border-radius: 999px;
+		border: none;
+		background: var(--sl-color-accent);
+		color: #fff;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.gbg-tpl-count {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+</style>

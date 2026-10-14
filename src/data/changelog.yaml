@@ -1,0 +1,11 @@
+# Grok Bot 更新日志。新条目加在最上面；每条都要附官方来源链接。
+- id: 2026-10-12-docs-get-started
+  date: 2026-10-12
+  zh: 官方「Get started」文档更新：桌面端支持 macOS / Windows / Linux，可关联 SuperGrok、SuperGrok Plus、SuperGrok Heavy。
+  en: The official Get started guide was updated; desktop apps for macOS, Windows and Linux; SuperGrok, SuperGrok Plus and SuperGrok Heavy can be linked.
+  url: https://docs.x.ai/grok-bot/get-started
+- id: 2026-08-11-launch
+  date: 2026-08-11
+  zh: Grok Bot 以 beta 形式发布，提供桌面端与 iOS 应用，企业版开放等待名单。
+  en: Grok Bot launched in beta with desktop and iOS apps; enterprise access via waitlist.
+  url: https://x.ai/news/introducing-grok-bot

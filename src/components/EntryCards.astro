@@ -1,0 +1,105 @@
+---
+// 角色库 / 模板库 / 实战案例的卡片列表。按 frontmatter 的 sidebar.order 排序。
+// 角色库支持 ?role=sales 这样的筛选（首页「按岗位」入口用）。
+import { getCollection } from 'astro:content';
+import { toLang, useT } from '../i18n/ui';
+
+interface Props {
+	section: 'bots' | 'templates' | 'recipes';
+}
+const { section } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const t = useT(lang);
+const entries = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/${section}/`))).sort(
+	(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
+);
+const roles = [...new Set(entries.map((e) => e.data.role).filter(Boolean))] as string[];
+---
+
+{
+	section === 'bots' && roles.length > 1 && (
+		<div class="gbg-filter not-content" data-filter>
+			<button type="button" data-role="" aria-pressed="true">
+				{t('res.all')}
+			</button>
+			{roles.map((r) => (
+				<button type="button" data-role={r} aria-pressed="false">
+					{t(`role.${r as 'sales'}`)}
+				</button>
+			))}
+		</div>
+	)
+}
+
+{
+	entries.length === 0 ? (
+		<p>{t('cards.empty')}</p>
+	) : (
+		<div class="gbg-grid not-content">
+			{entries.map((e) => (
+				<a class="gbg-card" href={`/${e.id}/`} data-role={e.data.role ?? ''}>
+					<h3>{e.data.title}</h3>
+					{e.data.description && <p>{e.data.description}</p>}
+					<div class="gbg-tags">
+						{e.data.role && <span class="gbg-badge">{t(`role.${e.data.role}`)}</span>}
+						{e.data.kind && <span class="gbg-badge">{t(`kind.${e.data.kind}`)}</span>}
+						{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}
+						{e.data.grade && <span class={`gbg-badge gbg-grade-${e.data.grade}`}>{t(`grade.${e.data.grade}`)}</span>}
+					</div>
+					{e.data.apps.length > 0 && (
+						<p class="gbg-apps">
+							{t('cards.apps')}: {e.data.apps.join(' · ')}
+						</p>
+					)}
+				</a>
+			))}
+		</div>
+	)
+}
+
+<script>
+	const bar = document.querySelector<HTMLElement>('[data-filter]');
+	if (bar) {
+		const cards = [...document.querySelectorAll<HTMLElement>('.gbg-card[data-role]')];
+		const apply = (role: string) => {
+			bar.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.role === role)));
+			cards.forEach((c) => (c.hidden = role !== '' && c.dataset.role !== role));
+		};
+		bar.addEventListener('click', (e) => {
+			const btn = (e.target as HTMLElement).closest('button');
+			if (btn) apply(btn.dataset.role ?? '');
+		});
+		const initial = new URLSearchParams(location.search).get('role');
+		if (initial && bar.querySelector(`[data-role="${CSS.escape(initial)}"]`)) apply(initial);
+	}
+</script>
+
+<style>
+	.gbg-apps {
+		font-size: var(--sl-text-xs) !important;
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-card[hidden] {
+		display: none;
+	}
+	.gbg-filter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 1rem;
+	}
+	.gbg-filter button {
+		padding: 0.3rem 0.8rem;
+		border-radius: 999px;
+		border: 1px solid var(--gbg-card-border);
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-filter button[aria-pressed='true'] {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+		background: var(--sl-color-accent-low);
+	}
+</style>

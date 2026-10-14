@@ -1,0 +1,125 @@
+---
+// 资源导航：渲染 src/data/resources.yaml，按来源类型筛选。
+// 链接属性：社区提交 rel="ugc"，赞助 rel="sponsored"，编辑精选为普通链接。
+import { getCollection } from 'astro:content';
+import { formatDate, toLang, useT } from '../i18n/ui';
+
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const t = useT(lang);
+const items = (await getCollection('resources')).sort((a, b) => +b.data.added - +a.data.added);
+const sources = [...new Set(items.map((i) => i.data.source))];
+const relOf = (d: (typeof items)[number]['data']) =>
+	['noopener', d.sponsored && 'sponsored', d.ugc && 'ugc'].filter(Boolean).join(' ');
+---
+
+<div class="gbg-filter not-content" data-res-filter>
+	<button type="button" data-source="" aria-pressed="true">{t('res.all')}</button>
+	{
+		sources.map((s) => (
+			<button type="button" data-source={s} aria-pressed="false">
+				{t(`res.source.${s}`)}
+			</button>
+		))
+	}
+</div>
+
+<ul class="gbg-res not-content">
+	{
+		items.map(({ data: d }) => (
+			<li data-source={d.source} class:list={{ broken: d.status === 'broken' }}>
+				<div class="gbg-res-head">
+					<a href={d.url} rel={relOf(d)}>
+						{d.title}
+					</a>
+					{d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
+				</div>
+				<p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>
+				<div class="gbg-res-meta">
+					<span class="gbg-badge">{t(`res.source.${d.source}`)}</span>
+					<span>{d.author_url ? <a href={d.author_url}>{d.author}</a> : d.author}</span>
+					<span>{d.lang === 'zh' ? '中文' : 'English'}</span>
+					<span>
+						{t('res.added')} {formatDate(d.added, lang)}
+					</span>
+					{d.status === 'broken' && <span class="warn">{t('res.broken')}</span>}
+					{d.archive && <a href={d.archive}>{t('res.archive')}</a>}
+				</div>
+			</li>
+		))
+	}
+</ul>
+
+<script>
+	const bar = document.querySelector<HTMLElement>('[data-res-filter]');
+	if (bar) {
+		const rows = [...document.querySelectorAll<HTMLElement>('.gbg-res li')];
+		bar.addEventListener('click', (e) => {
+			const btn = (e.target as HTMLElement).closest('button');
+			if (!btn) return;
+			const s = btn.dataset.source ?? '';
+			bar.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+			rows.forEach((r) => (r.hidden = s !== '' && r.dataset.source !== s));
+		});
+	}
+</script>
+
+<style>
+	.gbg-filter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 1rem;
+	}
+	.gbg-filter button {
+		padding: 0.3rem 0.8rem;
+		border-radius: 999px;
+		border: 1px solid var(--gbg-card-border);
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-filter button[aria-pressed='true'] {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+		background: var(--sl-color-accent-low);
+	}
+	.gbg-res {
+		list-style: none;
+		padding: 0;
+		margin-top: 1.25rem;
+	}
+	.gbg-res li {
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--sl-color-hairline);
+	}
+	.gbg-res li[hidden] {
+		display: none;
+	}
+	.gbg-res li.broken > .gbg-res-head a {
+		color: var(--sl-color-gray-3);
+		text-decoration: line-through;
+	}
+	.gbg-res-head {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		font-weight: 600;
+	}
+	.gbg-res p {
+		margin: 0.35rem 0;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-res-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 0.9rem;
+		align-items: center;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-res-meta .warn {
+		color: #f59e0b;
+	}
+</style>

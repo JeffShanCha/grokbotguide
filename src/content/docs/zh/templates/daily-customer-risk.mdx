@@ -1,0 +1,45 @@
+---
+title: 每日客户风险清单（Routine）
+description: 每个工作日早上 8 点，用「每日客户风险」Skill 生成观察清单；数据源不可用时报错，不用旧数据凑。
+sidebar:
+  order: 2
+grade: official
+needs_testing: true
+author: grokbotguide
+kind: routine
+role: sales
+difficulty: intermediate
+apps: [CRM, 产品用量数据, 客服系统]
+permissions: [只读, 不联系客户]
+sources:
+  - title: Skills and routines · Examples（官方文档）
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+改编自官方文档的定时 Routine 示例。前提：你已经有一个叫「每日客户风险」的 Skill（可以参考 [每周客户健康度 Skill](/zh/templates/weekly-account-health/) 写一个）。
+
+<CopyTemplate id="daily-customer-risk">
+
+```text
+创建一个 Routine：
+- 负责的 Bot：<客户成功 Bot 的名字>
+- 时间：每个工作日 08:00，时区 <Asia/Shanghai>
+- 动作：对当前客户列表运行「每日客户风险」Skill
+- 输出：在本对话里发一份带链接的观察清单
+- 边界：不要联系任何客户
+- 数据源不可用时：报告失败，不要使用旧数据
+创建前先把上面的设置复述给我确认。
+```
+
+</CopyTemplate>
+
+## 检查清单
+
+创建后先用 **Test run** 跑一次（会真实执行），确认：
+
+- 用的是当天的最新数据
+- 输出格式符合要求
+- 没有触碰任何对外动作
+- 数据源断开时确实报错而不是静默跳过

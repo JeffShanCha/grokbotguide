@@ -1,0 +1,17 @@
+name: 推荐外部资源 / Recommend a resource
+description: 推荐一篇文章、视频、X 帖子或 GitHub 项目
+labels: [resource]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 链接 / URL
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 推荐理由 / Why
+      description: 一两句话说明它好在哪里
+    validations:
+      required: true

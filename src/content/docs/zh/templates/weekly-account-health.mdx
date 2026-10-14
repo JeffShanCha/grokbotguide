@@ -1,0 +1,46 @@
+---
+title: 每周客户健康度（Skill）
+description: 一个完整 Skill 的写法示例：数据来源、风险定义、输出格式，以及「联系客户必须审批」。
+sidebar:
+  order: 3
+grade: official
+needs_testing: true
+author: grokbotguide
+kind: skill
+role: sales
+difficulty: intermediate
+apps: [CRM, 产品用量, 客服系统, 账单]
+permissions: [只读 CRM, 联系客户需审批]
+sources:
+  - title: Skills and routines（官方文档）
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+  - title: Use cases · Account Health（官方文档）
+    url: https://docs.x.ai/grok-bot/use-cases
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+按官方「好 Skill 的六要素」写成：什么时候用、输入与权限、步骤、校验、输出、审批。先手动跑通一次，再把下面这段发给 Bot 让它保存。
+
+<CopyTemplate id="weekly-account-health">
+
+```text
+把下面的流程保存成一个 Skill，名字叫「每周客户健康度」：
+
+什么时候用：每周一，或我说「看看客户健康度」时。
+输入与权限：<CRM 视图链接>、产品用量看板、客服工单系统、账单系统；全部只读。
+步骤：
+1. 读取客户组合里的所有客户
+2. 合并近 30 天用量变化、客服升级工单、续约时间、关键联系人活跃度
+3. 按下面的风险定义打分：<例如：用量下降超过 30%、90 天内续约且无联系人活跃>
+4. 排序生成观察清单
+校验：每条结论都要有来源链接；数据缺失的客户单独列出，不要猜。
+输出：表格，列为 客户 / 风险等级 / 证据 / 为什么重要 / 建议的下一步。
+审批：任何联系客户的动作都必须先经过我批准；不要修改 CRM。
+```
+
+</CopyTemplate>
+
+## 小贴士
+
+官方建议把风险阈值写进 Bot 的描述里，这样每周的结果才稳定、可比较。

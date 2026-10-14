@@ -1,0 +1,44 @@
+# 外部收录：只放标题 + 自己写的摘要 + 原文链接 + 署名，不搬全文、不搬图。
+# 字段说明见 templates/resource.yaml。新条目加在最上面。
+- id: venturebeat-grok-bot-launch
+  url: https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month
+  title: "SpaceXAI's Grok Bot turns agents into persistent digital coworkers"
+  author: VentureBeat
+  source: media
+  lang: en
+  published: 2026-08-11
+  added: 2026-10-14
+  summary_zh: 发布当天的报道：讲了个人与团队的获取方式和价格，并和 Claude、OpenAI 同类产品做了对比；也指出没有公开评测、模型路由不透明等争议。
+  summary_en: Launch-day coverage with pricing for individuals and teams, comparisons with Claude and OpenAI agents, and open concerns such as no public benchmarks and opaque model routing.
+  tags: [pricing, launch, comparison]
+- id: xai-docs-approvals
+  url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+  title: "Approvals, security, and privacy"
+  author: xAI
+  source: official
+  lang: en
+  added: 2026-10-14
+  summary_zh: 官方安全文档：审批卡片、Auto Review 规则、密码与验证码要用 Take over 手动输入、所有 Bot 共用一台云电脑等关键边界。
+  summary_en: Official security guide covering approval cards, Auto Review rules, Take over for passwords and codes, and the shared cloud computer across all Bots.
+  tags: [security, approvals]
+- id: xai-docs-get-started
+  url: https://docs.x.ai/grok-bot/get-started
+  title: "Get started with Grok Bot"
+  author: xAI
+  source: official
+  lang: en
+  added: 2026-10-14
+  summary_zh: 官方入门：可用的订阅、三大桌面系统的安装、登录并关联 SuperGrok、创建第一个 Bot 和第一个任务。
+  summary_en: Official quick start covering eligible plans, desktop install on macOS/Windows/Linux, linking SuperGrok, and creating your first Bot and task.
+  tags: [install, plans]
+- id: xai-introducing-grok-bot
+  url: https://x.ai/news/introducing-grok-bot
+  title: "Introducing Grok Bot"
+  author: xAI
+  source: official
+  lang: en
+  published: 2026-08-11
+  added: 2026-10-14
+  summary_zh: 官方发布公告：常驻云端的 AI 同事、跨应用操作、演示一次即可生成 Routine、多 Bot 协作。
+  summary_en: The official announcement covering always-on cloud teammates, cross-app work, routines learned from a demonstration, and multi-Bot collaboration.
+  tags: [launch]

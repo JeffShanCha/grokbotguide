@@ -1,0 +1,658 @@
+---
+import { getCollection } from 'astro:content';
+import { Icon } from '@astrojs/starlight/components';
+import { SITE } from '../../../site.config.mjs';
+import sponsors from '../../data/sponsors.json';
+import { formatDate, type Lang, useT } from '../../i18n/ui';
+
+interface Props {
+	lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const p = (path: string) => `/${lang}/${path}`;
+
+const copy = {
+	zh: {
+		eyebrow: '社区共建 · 非官方',
+		title: '给自己招一个不下班的 AI 同事',
+		lead: 'Grok Bot 实战手册：从装好第一个 Bot，到搭出能每天自动干活的角色和 Routine。教程、角色卡和模板都由社区亲测、持续更新。',
+		ctaPrimary: '5 分钟搭好第一个 Bot',
+		ctaSecondary: '浏览角色库',
+		chat: {
+			user: '每个工作日 9 点整理收件箱，把需要我回复的邮件列出来。先别回复任何人。',
+			bot: '收到。我会在云电脑上打开 Gmail，按发件人和截止时间分类，只生成清单和回复草稿。',
+			approvalTitle: '需要你审批',
+			approval: '创建 Routine「每日收件箱整理」· 工作日 09:00',
+			allow: '允许一次',
+			deny: '拒绝',
+			done: '已创建，下次运行：明天 09:00',
+		},
+		values: [
+			{ k: 'LEARN', t: '系统教程', d: '快速上手 → 进阶 → 实战，按顺序读完就能独立搭 Bot。' },
+			{ k: 'COPY', t: '拿来即用', d: '按岗位整理的角色卡与 Routine 模板，复制改两处就能跑。' },
+			{ k: 'SHARE', t: '社区共建', d: '所有内容开源在 GitHub，亲测过的经验欢迎直接提 PR。' },
+		],
+		rolesTitle: '你想让 Bot 帮你做什么？',
+		pathTitle: '学习路线',
+		path: [
+			{ t: '快速上手', d: '选套餐、装应用、创建第一个 Bot、派第一个任务', href: 'start/what-is-grok-bot/' },
+			{ t: '进阶教程', d: 'Skills 与 Routines、审批与安全、多 Bot 协作', href: 'advanced/skills-and-routines/' },
+			{ t: '实战案例', d: '真实场景从头到尾跑一遍，附可复制的模板', href: 'recipes/' },
+		],
+		templatesTitle: '热门模板',
+		templatesMore: '查看全部模板',
+		newsTitle: '最新动态',
+		newsMore: '完整更新日志',
+		contribTitle: '贡献者',
+		contribLead: '每一篇教程都署名。合并第一篇投稿即可免费加入知识星球。',
+		contribCta: '来写第一篇',
+		communityTitle: '加入知识星球',
+		communityLead: '每日 Grok Bot 动态、实战答疑、模板首发，都在知识星球的 Grok Bot 专栏。',
+		communityCta: '加入知识星球',
+		sponsorsTitle: '赞助商',
+	},
+	en: {
+		eyebrow: 'Community-built · Unofficial',
+		title: 'Hire an AI teammate that never clocks out',
+		lead: 'The hands-on playbook for Grok Bot: from your first Bot to roles and routines that do real work every day. Tutorials, Bot cards and templates are community-tested and kept up to date.',
+		ctaPrimary: 'Set up your first Bot in 5 minutes',
+		ctaSecondary: 'Browse the Bot library',
+		chat: {
+			user: 'Every weekday at 9am, triage my inbox and list the emails I need to answer. Do not reply to anyone yet.',
+			bot: 'Got it. I will open Gmail on the cloud computer, sort by sender and deadline, and only prepare a list and draft replies.',
+			approvalTitle: 'Needs your approval',
+			approval: 'Create routine "Daily inbox triage" · weekdays 09:00',
+			allow: 'Allow once',
+			deny: 'Deny',
+			done: 'Created. Next run: tomorrow 09:00',
+		},
+		values: [
+			{ k: 'LEARN', t: 'Structured tutorials', d: 'Get started → Advanced → Recipes. Read in order and you can build Bots on your own.' },
+			{ k: 'COPY', t: 'Ready to use', d: 'Bot cards and routine templates by job role. Copy, tweak two lines, run.' },
+			{ k: 'SHARE', t: 'Built together', d: 'Everything is open source on GitHub. Tested a workflow? Send a pull request.' },
+		],
+		rolesTitle: 'What do you want a Bot to do for you?',
+		pathTitle: 'Learning path',
+		path: [
+			{ t: 'Get started', d: 'Pick a plan, install the app, create your first Bot and task', href: 'start/what-is-grok-bot/' },
+			{ t: 'Advanced', d: 'Skills and routines, approvals and security, teams of Bots', href: 'advanced/skills-and-routines/' },
+			{ t: 'Recipes', d: 'Real workflows end to end, with templates you can copy', href: 'recipes/' },
+		],
+		templatesTitle: 'Popular templates',
+		templatesMore: 'All templates',
+		newsTitle: 'Latest updates',
+		newsMore: 'Full changelog',
+		contribTitle: 'Contributors',
+		contribLead: 'Every guide is credited to its author. Your profile links back to your site.',
+		contribCta: 'Write the first one',
+		communityTitle: 'Stay in the loop',
+		communityLead: 'Follow along on X for new guides and templates, and star the repo to watch changes.',
+		communityCta: 'Follow on X',
+		sponsorsTitle: 'Sponsors',
+	},
+}[lang];
+
+const roles = [
+	{ id: 'sales', icon: 'rocket' },
+	{ id: 'marketing', icon: 'analytics' },
+	{ id: 'support', icon: 'comment' },
+	{ id: 'recruiting', icon: 'star' },
+	{ id: 'finance', icon: 'document' },
+	{ id: 'engineering', icon: 'laptop' },
+	{ id: 'assistant', icon: 'approve-check' },
+] as const;
+
+const templates = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/templates/`)))
+	.sort((a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99))
+	.slice(0, 6);
+
+const news = (await getCollection('changelog')).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3);
+const contributors = await getCollection('contributors');
+---
+
+<div class="not-content gbg-home">
+	<!-- 1. Hero -->
+	<section class="hero">
+		<div class="hero-copy">
+			<p class="eyebrow">{copy.eyebrow}</p>
+			<h1>{copy.title}</h1>
+			<p class="lead">{copy.lead}</p>
+			<div class="actions">
+				<a class="btn btn-primary" href={p('start/first-bot/')}>{copy.ctaPrimary}</a>
+				<a class="btn" href={p('bots/')}>{copy.ctaSecondary}</a>
+			</div>
+		</div>
+		<div class="chat" aria-hidden="true">
+			<div class="chat-bar"><span></span><span></span><span></span></div>
+			<div class="msg user">{copy.chat.user}</div>
+			<div class="msg bot">{copy.chat.bot}</div>
+			<div class="msg approval">
+				<strong>{copy.chat.approvalTitle}</strong>
+				<span>{copy.chat.approval}</span>
+				<div class="approval-actions"><b>{copy.chat.allow}</b><i>{copy.chat.deny}</i></div>
+			</div>
+			<div class="msg done">✓ {copy.chat.done}</div>
+		</div>
+	</section>
+
+	<!-- 2. 三张价值卡 -->
+	<section class="values">
+		{
+			copy.values.map((v) => (
+				<div class="value">
+					<span class="k">{v.k}</span>
+					<h3>{v.t}</h3>
+					<p>{v.d}</p>
+				</div>
+			))
+		}
+	</section>
+
+	<!-- 3. 按岗位入口 -->
+	<section>
+		<h2>{copy.rolesTitle}</h2>
+		<div class="roles">
+			{
+				roles.map((r) => (
+					<a class="role" href={p(`bots/?role=${r.id}`)}>
+						<Icon name={r.icon} size="1.5rem" />
+						<span>{t(`role.${r.id}`)}</span>
+					</a>
+				))
+			}
+		</div>
+	</section>
+
+	<!-- 4. 学习路线 -->
+	<section>
+		<h2>{copy.pathTitle}</h2>
+		<ol class="path">
+			{
+				copy.path.map((s, i) => (
+					<li>
+						<a href={p(s.href)}>
+							<span class="step">{String(i + 1).padStart(2, '0')}</span>
+							<strong>{s.t}</strong>
+							<span>{s.d}</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<!-- 5. 热门模板 -->
+	<section>
+		<div class="section-head">
+			<h2>{copy.templatesTitle}</h2>
+			<a href={p('templates/')}>{copy.templatesMore} →</a>
+		</div>
+		<div class="gbg-grid">
+			{
+				templates.map((e) => (
+					<a class="gbg-card" href={`/${e.id}/`}>
+						<h3>{e.data.title}</h3>
+						{e.data.description && <p>{e.data.description}</p>}
+						<div class="gbg-tags">
+							{e.data.kind && <span class="gbg-badge">{t(`kind.${e.data.kind}`)}</span>}
+							{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}
+							<span class="gbg-badge" data-copy-id={e.id.split('/').pop()} hidden />
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</section>
+
+	<!-- 6. 最新动态 -->
+	<section>
+		<div class="section-head">
+			<h2>{copy.newsTitle}</h2>
+			<a href={p('news/changelog/')}>{copy.newsMore} →</a>
+		</div>
+		<ul class="news">
+			{
+				news.map((n) => (
+					<li>
+						<time datetime={n.data.date.toISOString()}>{formatDate(n.data.date, lang)}</time>
+						<a href={n.data.url} rel="noopener">
+							{n.data[lang]}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<!-- 7. 贡献者墙 -->
+	<section class="contrib">
+		<div>
+			<h2>{copy.contribTitle}</h2>
+			<p>{copy.contribLead}</p>
+		</div>
+		<div class="avatars">
+			{
+				contributors.map((c) => (
+					<a href={`https://github.com/${c.id}`} title={c.data.name}>
+						<img src={`https://github.com/${c.id}.png?size=80`} alt={c.data.name} width="40" height="40" loading="lazy" />
+					</a>
+				))
+			}
+		</div>
+		<a class="btn" href={p('community/contribute/')}>{copy.contribCta}</a>
+	</section>
+
+	<!-- 8. 社群 / 赞助 -->
+	<section class="community">
+		<div>
+			<h2>{copy.communityTitle}</h2>
+			<p>{copy.communityLead}</p>
+		</div>
+		<div class="actions">
+			{
+				lang === 'zh' ? (
+					<a class="btn btn-primary" href={SITE.zsxq}>
+						{copy.communityCta}
+					</a>
+				) : (
+					<>
+						<a class="btn btn-primary" href={SITE.x}>
+							{copy.communityCta}
+						</a>
+						<a class="btn" href={SITE.repo}>
+							Star on GitHub
+						</a>
+					</>
+				)
+			}
+		</div>
+	</section>
+
+	{
+		sponsors.length > 0 && (
+			<section>
+				<h2>{copy.sponsorsTitle}</h2>
+				<div class="sponsors">
+					{sponsors.map((s: { name: string; url: string; logo: string }) => (
+						<a href={s.url} rel="sponsored noopener">
+							<img src={s.logo} alt={s.name} height="40" />
+						</a>
+					))}
+				</div>
+			</section>
+		)
+	}
+</div>
+
+<script>
+	// 热门模板的复制次数（来自 Worker /api/copies；本地开发时接口不存在，静默忽略）
+	const badges = [...document.querySelectorAll<HTMLElement>('[data-copy-id]')];
+	if (badges.length) {
+		const ids = badges.map((b) => b.dataset.copyId).join(',');
+		const unit = document.documentElement.lang.startsWith('zh') ? '次复制' : 'copies';
+		fetch(`/api/copies?ids=${encodeURIComponent(ids)}`)
+			.then((r) => (r.ok ? r.json() : {}))
+			.then((counts: Record<string, number>) => {
+				badges.forEach((b) => {
+					const n = counts[b.dataset.copyId ?? ''];
+					if (n) {
+						b.textContent = `${n} ${unit}`;
+						b.hidden = false;
+					}
+				});
+			})
+			.catch(() => {});
+	}
+</script>
+
+<style>
+	.gbg-home {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		padding-block: 1rem 2rem;
+	}
+	.gbg-home h2 {
+		font-size: var(--sl-text-2xl);
+		color: var(--sl-color-white);
+		margin: 0 0 1rem;
+	}
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.65rem 1.1rem;
+		border-radius: 999px;
+		border: 1px solid var(--sl-color-gray-4);
+		color: var(--sl-color-white);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: var(--sl-text-sm);
+	}
+	.btn:hover {
+		border-color: var(--sl-color-white);
+	}
+	.btn-primary {
+		background: var(--sl-color-accent);
+		border-color: var(--sl-color-accent);
+		color: #fff;
+	}
+	.btn-primary:hover {
+		border-color: var(--sl-color-accent-high);
+	}
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	/* Hero */
+	.hero {
+		display: grid;
+		grid-template-columns: 1.1fr 1fr;
+		gap: 2.5rem;
+		align-items: center;
+	}
+	.eyebrow {
+		font-size: var(--sl-text-xs);
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--sl-color-accent);
+		font-weight: 700;
+		margin: 0 0 0.75rem;
+	}
+	.hero h1 {
+		font-size: clamp(2rem, 4.5vw, 3.25rem);
+		line-height: 1.1;
+		color: var(--sl-color-white);
+		margin: 0 0 1rem;
+		letter-spacing: -0.02em;
+	}
+	.lead {
+		font-size: var(--sl-text-lg);
+		color: var(--sl-color-gray-2);
+		margin: 0 0 1.5rem;
+	}
+	.chat {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 1rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 1rem;
+		background: var(--gbg-card-bg);
+		font-size: var(--sl-text-sm);
+		box-shadow: 0 20px 60px -30px rgba(0, 0, 0, 0.5);
+	}
+	.chat-bar {
+		display: flex;
+		gap: 0.35rem;
+		margin-bottom: 0.25rem;
+	}
+	.chat-bar span {
+		width: 0.6rem;
+		height: 0.6rem;
+		border-radius: 50%;
+		background: var(--sl-color-gray-5);
+	}
+	.msg {
+		padding: 0.6rem 0.8rem;
+		border-radius: 0.75rem;
+		max-width: 88%;
+		opacity: 0;
+		animation: pop 0.4s ease forwards;
+	}
+	.msg.user {
+		align-self: flex-end;
+		background: var(--sl-color-accent);
+		color: #fff;
+		animation-delay: 0.2s;
+	}
+	.msg.bot {
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-gray-1);
+		animation-delay: 1.2s;
+	}
+	.msg.approval {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		border: 1px dashed var(--sl-color-accent);
+		color: var(--sl-color-gray-1);
+		animation-delay: 2.2s;
+	}
+	.msg.approval strong {
+		color: var(--sl-color-accent);
+		font-size: var(--sl-text-xs);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	.approval-actions {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.2rem;
+	}
+	.approval-actions b,
+	.approval-actions i {
+		font-style: normal;
+		padding: 0.15rem 0.6rem;
+		border-radius: 999px;
+		border: 1px solid var(--sl-color-gray-4);
+		font-weight: 600;
+		font-size: var(--sl-text-xs);
+	}
+	.approval-actions b {
+		background: var(--sl-color-white);
+		color: var(--sl-color-black);
+		border-color: var(--sl-color-white);
+	}
+	.msg.done {
+		color: #22c55e;
+		animation-delay: 3.2s;
+	}
+	@keyframes pop {
+		from {
+			opacity: 0;
+			transform: translateY(6px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.msg {
+			animation: none;
+			opacity: 1;
+		}
+	}
+
+	/* Values */
+	.values {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+	.value {
+		padding: 1.25rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		background: var(--gbg-card-bg);
+	}
+	.value .k {
+		font-size: var(--sl-text-xs);
+		font-weight: 800;
+		letter-spacing: 0.14em;
+		color: var(--sl-color-accent);
+	}
+	.value h3 {
+		margin: 0.4rem 0;
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-lg);
+	}
+	.value p {
+		margin: 0;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+
+	/* Roles */
+	.roles {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+		gap: 0.75rem;
+	}
+	.role {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1.1rem 0.5rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		background: var(--gbg-card-bg);
+		color: var(--sl-color-gray-1);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: var(--sl-text-sm);
+	}
+	.role:hover {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+	}
+	.role :global(svg) {
+		color: var(--sl-color-accent);
+	}
+
+	/* Path */
+	.path {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		counter-reset: none;
+	}
+	.path a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		height: 100%;
+		padding: 1.25rem;
+		border-top: 3px solid var(--sl-color-accent);
+		background: var(--gbg-card-bg);
+		border-radius: 0 0 0.75rem 0.75rem;
+		text-decoration: none;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.path strong {
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-lg);
+	}
+	.step {
+		font-family: var(--sl-font-mono);
+		color: var(--sl-color-accent);
+		font-weight: 700;
+	}
+
+	.section-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+	}
+	.section-head a {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+
+	/* News */
+	.news {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.news li {
+		display: flex;
+		gap: 1.25rem;
+		padding: 0.85rem 0;
+		border-bottom: 1px solid var(--sl-color-hairline);
+		font-size: var(--sl-text-sm);
+	}
+	.news time {
+		flex: none;
+		width: 7.5rem;
+		color: var(--sl-color-gray-3);
+		font-family: var(--sl-font-mono);
+	}
+	.news a {
+		color: var(--sl-color-gray-1);
+		text-decoration: none;
+	}
+	.news a:hover {
+		color: var(--sl-color-accent);
+	}
+
+	/* Contributors & community */
+	.contrib,
+	.community {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.25rem;
+		padding: 1.75rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 1rem;
+		background: var(--gbg-card-bg);
+	}
+	.contrib p,
+	.community p {
+		margin: 0;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		max-width: 34rem;
+	}
+	.contrib h2,
+	.community h2 {
+		margin-bottom: 0.4rem;
+	}
+	.avatars {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.avatars img {
+		border-radius: 50%;
+		border: 2px solid var(--sl-color-gray-5);
+	}
+	.community {
+		border-color: var(--sl-color-accent);
+		background: linear-gradient(135deg, var(--sl-color-accent-low), var(--gbg-card-bg) 70%);
+	}
+	.sponsors {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		align-items: center;
+	}
+
+	@media (max-width: 50rem) {
+		.hero,
+		.values,
+		.path {
+			grid-template-columns: 1fr;
+		}
+		.gbg-home {
+			gap: 3rem;
+		}
+		.news li {
+			flex-direction: column;
+			gap: 0.2rem;
+		}
+	}
+</style>

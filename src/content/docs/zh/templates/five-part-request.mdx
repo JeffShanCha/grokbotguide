@@ -1,0 +1,35 @@
+---
+title: 派活五要素
+description: 结果、来源、约束、交付物、检查点。任何任务都可以先套这个格式。
+sidebar:
+  order: 1
+grade: official
+needs_testing: true
+author: grokbotguide
+kind: prompt
+difficulty: beginner
+sources:
+  - title: Get started（官方文档）
+    url: https://docs.x.ai/grok-bot/get-started
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+官方入门文档给出的「好任务」结构。把尖括号里的内容换掉即可。
+
+<CopyTemplate id="five-part-request">
+
+```text
+【结果】做完时应该是：<例如：本周所有未回复客户邮件的清单>
+【来源】使用：<应用 / 网站 / 文件 / 对话>
+【约束】不要：<例如：回复任何人、修改 CRM>；遇到 <情况> 先问我
+【交付物】交回：<格式，例如：表格，列为 客户 / 主题 / 截止日期 / 建议回复>
+【检查点】在 <哪一步> 停下来等我确认
+```
+
+</CopyTemplate>
+
+## 怎么用
+
+- 第一次跑某个任务时用它，跑通后让 Bot 保存成 Skill。
+- 「约束」和「检查点」是最容易漏的两项，也是最能避免出错的两项。
