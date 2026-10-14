@@ -6,6 +6,31 @@ import sitemap from '@astrojs/sitemap';
 import { SITE } from './site.config.mjs';
 const REPO = SITE.repo;
 
+// 欧洲经济区、英国、瑞士：默认不写 GA4 Cookie（只发无 Cookie 的匿名请求），其他地区正常统计。
+// 广告相关的存储全部关闭（本站不投放 Google 广告）。
+const CONSENT_DENIED_REGIONS = [
+	'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
+	'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
+];
+const ga4 = SITE.ga4MeasurementId;
+/** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
+const ga4Head = ga4
+	? [
+			{ tag: 'script', attrs: { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${ga4}` } },
+			{
+				tag: 'script',
+				content: [
+					'window.dataLayer = window.dataLayer || [];',
+					'function gtag(){dataLayer.push(arguments);}',
+					"gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});",
+					`gtag('consent','default',{analytics_storage:'denied',region:${JSON.stringify(CONSENT_DENIED_REGIONS)}});`,
+					"gtag('js', new Date());",
+					`gtag('config','${ga4}',{allow_google_signals:false});`,
+				].join(''),
+			},
+		]
+	: [];
+
 export default defineConfig({
 	site: SITE.url,
 	trailingSlash: 'always',
@@ -40,6 +65,8 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
 				// Cloudflare Web Analytics：在 Cloudflare 后台创建站点后，把 token 填进来再取消注释
 				// { tag: 'script', attrs: { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "YOUR_TOKEN"}' } },
+				// Google Analytics 4：在 site.config.mjs 填 ga4MeasurementId 后自动加载
+				...ga4Head,
 			],
 			sidebar: [
 				{

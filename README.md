@@ -83,6 +83,22 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
    - `GITHUB_TOKEN`：GitHub → Settings → Developer settings → Fine-grained tokens，只选本仓库，权限 Issues: Read and write
 10. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；在 Cloudflare Web Analytics 创建站点，把 token 填进 `astro.config.mjs` 里注释掉的统计脚本。
 
+## 访问统计（GA4）
+
+1. 在 [Google Analytics](https://analytics.google.com/) 新建媒体资源 → 添加「网站」数据流，网址填 `https://grokbotguide.ai`，保持「增强型衡量」开启（自动统计页面浏览、滚动、外链点击、站内搜索）。
+2. 复制数据流的衡量 ID（`G-` 开头），填进 `site.config.mjs` 的 `ga4MeasurementId`，提交并推送。留空则不加载 GA4。
+3. 在 GA4 → 管理 → 自定义定义里，把下面三个事件参数注册为「事件范围」的自定义维度，报表里才能按它们拆分：`template_id`、`submission_type`、`language`。
+
+站点额外上报的事件：
+
+| 事件 | 触发时机 | 参数 |
+| --- | --- | --- |
+| `copy_template` | 点击模板的「复制模板」按钮 | `template_id` |
+| `submit_contribution` | 投稿表单提交成功 | `submission_type`（article / bot / template / resource / fix） |
+| `switch_language` | 顶栏手动切换语言 | `language`（zh / en） |
+
+隐私设置：广告相关存储全部关闭，不开启 Google 信号；来自欧洲经济区、英国和瑞士的访问默认不写入统计 Cookie（GA4 的 Consent Mode），见 `astro.config.mjs`。
+
 ## 语言路由规则
 
 只有访问根路径 `/` 时才跳转（302），文章页永远不自动跳转：

@@ -45,6 +45,7 @@ const t = useT(toLang(Astro.locals.starlightRoute.locale));
 			await navigator.clipboard.writeText(codeOf(box));
 			btn.textContent = btn.dataset.done!;
 			setTimeout(() => (btn.textContent = btn.dataset.label!), 1500);
+			window.gtag?.('event', 'copy_template', { template_id: id });
 			// 同一浏览器只计一次
 			let seen: string[] = [];
 			try {

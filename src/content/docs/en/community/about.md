@@ -13,6 +13,10 @@ sidebar:
 - For external content we list only the title, our own summary, a link and the author's name. We do not republish text or images.
 - Every page shows its content grade and last verified date.
 
+## Analytics
+
+We use Google Analytics 4 to count anonymous usage (page views, outbound clicks, template copies and submissions) so we know which pages help. We run no ads and keep Google signals off. Visitors from the EEA, the UK and Switzerland get no analytics cookies by default.
+
 ## Corrections and takedowns
 
 If you wrote something we list and want it changed or removed, email [takedown@grokbotguide.ai](mailto:takedown@grokbotguide.ai) or open a GitHub issue. We respond within 72 hours, and author takedown requests are honored without argument.

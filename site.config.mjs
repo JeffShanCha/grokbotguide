@@ -12,4 +12,6 @@ export const SITE = {
 	},
 	// Cloudflare Turnstile 的站点公钥（公开）。默认值是官方测试 key，总是通过。
 	turnstileSiteKey: '1x00000000000000000000AA',
+	// Google Analytics 4 的衡量 ID（G- 开头，在 GA4 → 管理 → 数据流 里查看）。留空则不加载 GA4。
+	ga4MeasurementId: '',
 };

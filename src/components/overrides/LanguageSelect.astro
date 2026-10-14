@@ -7,11 +7,17 @@ import Default from '@astrojs/starlight/components/LanguageSelect.astro';
 <Default />
 
 <script>
-	document.querySelectorAll('starlight-lang-select select').forEach((select) => {
-		select.addEventListener('change', (e) => {
-			const value = (e.currentTarget as HTMLSelectElement).value;
-			const lang = value.startsWith('/en/') ? 'en' : 'zh';
-			document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
-		});
+	// 在捕获阶段注册：先于 Starlight 自带的跳转逻辑执行，保证 Cookie 和统计事件在跳转前完成
+	document.querySelectorAll('starlight-lang-select').forEach((el) => {
+		el.addEventListener(
+			'change',
+			(e) => {
+				const select = e.target as HTMLSelectElement;
+				const lang = select.value.startsWith('/en/') ? 'en' : 'zh';
+				document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
+				window.gtag?.('event', 'switch_language', { language: lang, transport_type: 'beacon' });
+			},
+			{ capture: true }
+		);
 	});
 </script>

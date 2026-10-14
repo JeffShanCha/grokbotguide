@@ -112,6 +112,7 @@ const c = {
 				});
 				const json = (await res.json().catch(() => ({}))) as { issueUrl?: string; error?: string };
 				if (!res.ok) throw new Error(json.error ?? String(res.status));
+				window.gtag?.('event', 'submit_contribution', { submission_type: String(data.type ?? '') });
 				status.innerHTML = '';
 				status.append(form.dataset.ok + ' ');
 				if (json.issueUrl) {
