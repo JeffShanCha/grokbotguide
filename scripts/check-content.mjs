@@ -13,6 +13,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parse } from 'yaml';
+import { identity, validateResource } from './lib/resources.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const DOCS = join(ROOT, 'src/content/docs');
@@ -76,21 +77,13 @@ const resFile = 'src/data/resources.yaml';
 const resources = parse(readFileSync(join(ROOT, resFile), 'utf8')) ?? [];
 const ids = new Set();
 const urls = new Set();
-const norm = (u) => {
-	try {
-		const x = new URL(u);
-		x.hash = '';
-		for (const k of [...x.searchParams.keys()]) if (/^utm_|^ref$|^s$/.test(k)) x.searchParams.delete(k);
-		return `${x.hostname.replace(/^www\./, '')}${x.pathname.replace(/\/$/, '')}${x.search}`.toLowerCase();
-	} catch {
-		return u;
-	}
-};
 for (const r of resources) {
 	const where = `${resFile} (${r.id ?? r.url})`;
+	for (const error of validateResource(r, { strict: !!r.collection_batch })) report('error', where, error);
 	if (ids.has(r.id)) report('error', where, `duplicate id "${r.id}"`);
 	ids.add(r.id);
-	const n = norm(r.url ?? '');
+	let n;
+	try { n = identity(r.original_url || r.url); } catch { continue; }
 	if (urls.has(n)) report('error', where, `duplicate url ${r.url}`);
 	urls.add(n);
 	for (const key of ['summary_zh', 'summary_en']) {

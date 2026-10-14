@@ -108,6 +108,20 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 3. 浏览器首选语言以 `zh` 开头 → 中文
 4. 其他 → 英文
 
+## 多平台资料采集
+
+2026-10-15 首轮新增 13 条资料，覆盖官方、GitHub、YouTube、Reddit、LINUX DO 和 arXiv；4 条待核验、1 条重复、1 条无关内容保留在批次报告中。站点资源导航支持关键词、平台和分类组合筛选，各栏目自动显示相关收录。
+
+检索与摘要由当前 Codex 对话执行，入库脚本负责 URL / 内容去重、分类校验、日期与出处检查。每条保存原创双语短摘要和核验范围，不将外部分享标为本站实测。
+
+```bash
+npm run collect -- data/collection/batches/<批次>.json          # 预览
+npm run collect -- data/collection/batches/<批次>.json --write  # 入库并记录报告
+npm run test:collection                                       # 去重与质量门槛测试
+```
+
+运行规范见 [docs/collection.md](./docs/collection.md)，来源见 [sources.json](./data/collection/sources.json)。按用户要求，首轮发布后在当前 Codex 对话启用每天北京时间 09:00 的定时采集；本地任务需要电脑开机、Codex 运行。Cloudflare 负责自动部署，不执行资料检索。
+
 ## 贡献
 
 见 [CONTRIBUTING.md](./CONTRIBUTING.md) 或站内的「如何投稿」页面。

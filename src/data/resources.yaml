@@ -1,8 +1,312 @@
-# 外部收录：只放标题 + 自己写的摘要 + 原文链接 + 署名，不搬全文、不搬图。
-# 字段说明见 templates/resource.yaml。新条目加在最上面。
+# 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: arxiv-bot-spectroscopist
+  url: https://arxiv.org/abs/2610.05424
+  title: "AI Agents as a Research Team: A Human-Supervised Case Study in Stellar Spectroscopy"
+  author: Marwan Gebran and Ian Bentley
+  source: paper
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - recipes
+    - advanced
+  evidence: research
+  summary_zh: 预印本记录人工监督下的 Grok Bot 团队参与恒星光谱研究，分工覆盖数据、实现、文献和审稿。作者明确未做同条件的人类团队对照，因此不能据此断言节省了多少人力。
+  summary_en: A preprint describes a supervised Grok Bot research team working on stellar spectra. No matched human-team comparison was performed, so its timeline does not establish a productivity gain.
+  verification_note_zh: 核对 arXiv 摘要、作者与提交日期；未复现研究，未认定已通过同行评审。
+  verification_note_en: Checked the arXiv abstract, authors and submission date; the study was not reproduced or treated as peer-reviewed.
+  tags:
+    - research
+    - teams
+  published: 2026-10-04
+  platform: arxiv
+  collection_batch: 2026-10-15-initial
+- id: github-cobusgreyling-grok-bot-templates
+  url: https://github.com/cobusgreyling/grok-bot-templates
+  title: Templates for Grok Bot
+  author: cobusgreyling
+  source: github
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - bots
+    - templates
+  evidence: author-reported
+  summary_zh: 社区角色模板与团队编排目录，覆盖代码审查、收件箱整理和调研等岗位，提供职责、输入、交付物与权限边界。项目评分属于作者自己的检查标准。
+  summary_en: Community role and team templates for code review, inbox triage and research, with inputs, deliverables and permission boundaries. Its readiness score is the project’s own checklist.
+  verification_note_zh: 已阅读仓库 README 和角色目录说明；没有导入模板，目录评分不代表本站实测结果。
+  verification_note_en: Read the README and role catalog overview; templates were not imported and project scores are not our test results.
+  tags:
+    - roles
+    - templates
+    - teams
+  platform: github
+  collection_batch: 2026-10-15-initial
+- id: github-coolxeo-grok-bot-skills
+  url: https://github.com/coolxeo/grok-bot-skills
+  title: Grok Bot Skills
+  author: Dani Acosta (coolxeo)
+  source: github
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - templates
+    - advanced
+  evidence: author-reported
+  summary_zh: 作者维护的写作、设计、SEO 和 Bot 工作流技能目录，含例子、工具依赖和来源说明。部分技能来自上游项目，使用时要同时核对配套文件与许可。
+  summary_en: A community catalog for writing, design, SEO and Bot workflows, with examples, tool requirements and source notes. Check companion files and upstream licenses before using a skill.
+  verification_note_zh: 已阅读 README 与目录；未执行安装脚本，也未验证每项技能在 Grok Bot 中的兼容性。
+  verification_note_en: Read the README and catalog; installers were not executed and individual Grok Bot compatibility was not tested.
+  tags:
+    - skills
+    - writing
+    - seo
+  platform: github
+  collection_batch: 2026-10-15-initial
+- id: github-tiagovilasboas-grok-bot-architecture
+  url: https://github.com/tiagovilasboas/grok-bot-architecture
+  title: Grok Bot Architecture
+  author: Tiago Montanha (tiagovilasboas)
+  source: github
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - advanced
+    - templates
+  evidence: author-reported
+  summary_zh: 多 Bot 协作的架构参考，强调结构化交接、共享电脑的边界、任务停止条件和人工审批。项目提供示例与校验器，不是可直接登录的托管产品。
+  summary_en: "Architecture patterns for Bot collaboration: structured handoffs, shared-computer boundaries, stop conditions and human review. The repository is a reference with validators, not a hosted service."
+  verification_note_zh: 已阅读项目定位、限制及示例；未运行校验器或部署该架构。
+  verification_note_en: Read the project scope, limitations and examples; validators and deployments were not run.
+  tags:
+    - architecture
+    - teams
+    - handoffs
+  platform: github
+  collection_batch: 2026-10-15-initial
+- id: linuxdo-joseph-research-bot
+  url: https://linux.do/t/topic/2991469
+  title: 分享一个自己的grok bot,大家自提
+  author: huisenandong（晦涩男董）
+  source: forum
+  lang: zh
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - bots
+    - recipes
+  evidence: author-reported
+  summary_zh: 作者分享多源调研 Bot，结合网页、X、YouTube、GitHub 等来源整理带出处的报告，并提供公开模板入口。适合作为研究岗位的配置参考。
+  summary_en: The author shares a research Bot that combines web, X, YouTube and GitHub sources into cited reports, with a public template link. Useful as a role-design reference.
+  verification_note_zh: 已阅读原帖并打开其模板预览链接；未导入、运行或验证调研结果准确率。
+  verification_note_en: Read the original post and opened its template preview; the Bot was not imported or run, and research accuracy was not tested.
+  tags:
+    - research
+    - roles
+  published: 2026-10-07
+  roles:
+    - assistant
+  platform: linuxdo
+  collection_batch: 2026-10-15-initial
+- id: linuxdo-lunet-team-coding
+  url: https://linux.do/t/topic/3008217
+  title: 关于grok bot使用方式的一些想法
+  author: lunet（白榆）
+  source: forum
+  lang: zh
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - recipes
+    - advanced
+  evidence: author-reported
+  summary_zh: 作者描述用群聊分配审核、编码、待办记录和统筹四种职责的开发体验。可参考分工方式；帖子中的模型路由猜测未作为事实收录。
+  summary_en: A first-person account of splitting review, coding, task tracking and coordination across a Bot group. We include the workflow idea, not the post’s unverified model-routing claims.
+  verification_note_zh: 已阅读作者帖文；截图未逐项验真，协作效果未经本站复现。
+  verification_note_en: Read the author’s post; screenshots were not independently authenticated and outcomes were not reproduced.
+  tags:
+    - teams
+    - coding
+  published: 2026-10-11
+  roles:
+    - engineering
+  platform: linuxdo
+  collection_batch: 2026-10-15-initial
+- id: reddit-steve228uk-personal-bot-team
+  url: https://reddit.com/r/GrokBot/comments/1vwkzf1/heres_how_grok_bot_is_doing_all_the_stuff_i_hate
+  title: Here's how Grok Bot is doing all the stuff I hate…
+  author: steve228uk
+  source: forum
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - bots
+    - recipes
+  evidence: author-reported
+  summary_zh: 用户分享由统筹、个人助理、文案、邮件分类和求职等角色组成的 Bot 队伍，以及角色间如何交接。属于个人使用报告，不能视为官方功能或成效保证。
+  summary_en: A user describes a Bot team spanning coordination, personal assistance, writing, inbox triage and job search. This is a personal account, not official guidance or a guarantee of results.
+  verification_note_zh: 已阅读原帖的角色与交接描述；未验证账号权限、账单或实际执行效果，未采用自动处理验证码等做法。
+  verification_note_en: Read the role and handoff descriptions; account permissions, bills and outcomes were not verified. Practices such as automated OTP handling were not adopted.
+  tags:
+    - roles
+    - personal-assistant
+  roles:
+    - assistant
+  platform: reddit
+  collection_batch: 2026-10-15-initial
+- id: x-help-about-bot
+  url: https://help.x.com/en/using-x/about-bot
+  title: About @bot
+  author: X Help Center
+  source: official
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - start
+    - advanced
+  evidence: official
+  summary_zh: X 官方说明如何用 @bot 把帖子里的请求转交给已连接的 Grok Bot，以及官方插件提供的搜索、时间线和提及等入口。
+  summary_en: X explains how @bot forwards a post request to a connected Grok Bot and describes search, timeline and mention tools available through its official plugin.
+  verification_note_zh: 已阅读 X 帮助中心；这是官方功能说明，不是对某条 X 帖子的采集，也未授权账号连接。
+  verification_note_en: Read the X Help Center. This is official documentation, not an indexed X post; no account was connected.
+  tags:
+    - x
+    - plugins
+  platform: official
+  collection_batch: 2026-10-15-initial
+- id: xai-grok-bot-manage-bots
+  url: https://docs.x.ai/grok-bot/bots
+  title: Create and manage Bots
+  author: xAI
+  source: official
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - start
+    - bots
+    - advanced
+  evidence: official
+  summary_zh: 官方说明如何定义岗位职责、创建与复制 Bot、分享模板和组织协作。共享模板会创建副本，账号登录和对话历史不随模板交给接收方。
+  summary_en: Official instructions for roles, Bot creation, duplication, template sharing and collaboration. Shared templates create copies without transferring account logins or chat history.
+  verification_note_zh: 已核对官方的岗位、复制与分享说明；未导入任何第三方模板。
+  verification_note_en: Checked the official role, duplication and sharing sections; no third-party template was imported.
+  tags:
+    - roles
+    - sharing
+    - teams
+  platform: official
+  collection_batch: 2026-10-15-initial
+- id: xai-grok-bot-more-plans
+  url: https://x.ai/news/grok-bot-more-plans
+  title: Grok Bot is now included with more plans
+  author: xAI
+  source: official
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - start
+    - news
+  evidence: official
+  summary_zh: 官方扩展订阅覆盖范围的公告，列出可使用 Grok Bot 的 SuperGrok 与 Cursor 方案，并说明 Bot 用量单独计算。订阅资格应再以当前官方页面为准。
+  summary_en: The official access expansion lists eligible SuperGrok and Cursor plans and explains separate Bot usage. Recheck current eligibility before subscribing.
+  verification_note_zh: 已阅读官方公告；发布日期为 2026-08-26，收录日期不是发布日。
+  verification_note_en: Read the official announcement dated August 26, 2026; the collection date is not its release date.
+  tags:
+    - plans
+    - launch
+  published: 2026-08-26
+  platform: official
+  collection_batch: 2026-10-15-initial
+- id: xai-grok-bot-skills-routines
+  url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+  title: Skills and routines
+  author: xAI
+  source: official
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - advanced
+    - templates
+  evidence: official
+  summary_zh: 官方介绍如何把已跑通的任务保存为 Skill，再安排定时或事件触发的 Routine；包含演示教学、运行记录及失败处理要求。
+  summary_en: Official guidance on turning a successful task into a skill and a scheduled or event-triggered routine, including demonstrations, run history and failure handling.
+  verification_note_zh: 已阅读官方文档，页面标注最后更新为 2026-10-12；尚未在本账户运行这些流程。
+  verification_note_en: Read the official guide, last updated October 12, 2026; workflows were not run in our account.
+  tags:
+    - skills
+    - routines
+  platform: official
+  collection_batch: 2026-10-15-initial
+- id: youtube-nate-herk-bot-lessons
+  url: https://youtube.com/watch?v=TMPUUyQC5aM
+  title: A Week of Grok Bot Lessons in 10 Mins
+  author: Nate Herk | AI Automation
+  source: video
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - advanced
+    - recipes
+  evidence: author-reported
+  summary_zh: 作者的视频说明介绍了幕僚长、共享记忆、ClickUp 记录、演示任务和 Routine 等组织方式，可按章节寻找团队管理技巧。
+  summary_en: The creator’s description covers chief-of-staff coordination, shared memory, ClickUp logs, demonstrations and routines, with chapters for navigating team-management tips.
+  verification_note_zh: 仅核对公开索引中的作者说明与章节；直接播放页限流，未观看全片或复现操作。
+  verification_note_en: Checked the publicly indexed creator description and chapters only; the watch page was throttled. The full video and workflows were not tested.
+  tags:
+    - video
+    - teams
+    - routines
+  published: 2026-08-18
+  platform: youtube
+  collection_batch: 2026-10-15-initial
+- id: youtube-peter-yang-five-use-cases
+  url: https://youtube.com/watch?v=MkVcHbviYOw
+  title: "Grok Bot: 5 Must-Try Use Cases for Work and Life (Full Tutorial)"
+  author: Peter Yang
+  source: video
+  lang: en
+  added: 2026-10-15
+  checked_at: 2026-10-15
+  status: alive
+  categories:
+    - start
+    - bots
+    - recipes
+  evidence: author-reported
+  summary_zh: 作者按章节介绍创建 Bot 的顾问、YouTube 调研员、X 信息筛选、邮件整理和旅行助手，适合挑选第一个用途。效果和费用仍需结合自己的账户验证。
+  summary_en: The creator outlines Bot setup, YouTube research, X scouting, email triage and travel assistance. Use the chapters to choose a first task; results and costs need account-specific checks.
+  verification_note_zh: 仅核对公开索引中的作者说明、章节和发布时间；播放页限流，未观看全片。
+  verification_note_en: Checked the publicly indexed creator description, chapters and publication date; the watch page was throttled and the full video was not watched.
+  tags:
+    - video
+    - use-cases
+  published: 2026-08-17
+  platform: youtube
+  collection_batch: 2026-10-15-initial
 - id: venturebeat-grok-bot-launch
   url: https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month
-  title: "SpaceXAI's Grok Bot turns agents into persistent digital coworkers"
+  title: SpaceXAI's Grok Bot turns agents into persistent digital coworkers
   author: VentureBeat
   source: media
   lang: en
@@ -10,30 +314,50 @@
   added: 2026-10-14
   summary_zh: 发布当天的报道：讲了个人与团队的获取方式和价格，并和 Claude、OpenAI 同类产品做了对比；也指出没有公开评测、模型路由不透明等争议。
   summary_en: Launch-day coverage with pricing for individuals and teams, comparisons with Claude and OpenAI agents, and open concerns such as no public benchmarks and opaque model routing.
-  tags: [pricing, launch, comparison]
+  tags:
+    - pricing
+    - launch
+    - comparison
+  categories:
+    - news
+    - start
+  platform: web
+  evidence: editorial
 - id: xai-docs-approvals
   url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
-  title: "Approvals, security, and privacy"
+  title: Approvals, security, and privacy
   author: xAI
   source: official
   lang: en
   added: 2026-10-14
   summary_zh: 官方安全文档：审批卡片、Auto Review 规则、密码与验证码要用 Take over 手动输入、所有 Bot 共用一台云电脑等关键边界。
   summary_en: Official security guide covering approval cards, Auto Review rules, Take over for passwords and codes, and the shared cloud computer across all Bots.
-  tags: [security, approvals]
+  tags:
+    - security
+    - approvals
+  categories:
+    - advanced
+  platform: official
+  evidence: official
 - id: xai-docs-get-started
   url: https://docs.x.ai/grok-bot/get-started
-  title: "Get started with Grok Bot"
+  title: Get started with Grok Bot
   author: xAI
   source: official
   lang: en
   added: 2026-10-14
   summary_zh: 官方入门：可用的订阅、三大桌面系统的安装、登录并关联 SuperGrok、创建第一个 Bot 和第一个任务。
   summary_en: Official quick start covering eligible plans, desktop install on macOS/Windows/Linux, linking SuperGrok, and creating your first Bot and task.
-  tags: [install, plans]
+  tags:
+    - install
+    - plans
+  categories:
+    - start
+  platform: official
+  evidence: official
 - id: xai-introducing-grok-bot
   url: https://x.ai/news/introducing-grok-bot
-  title: "Introducing Grok Bot"
+  title: Introducing Grok Bot
   author: xAI
   source: official
   lang: en
@@ -41,4 +365,10 @@
   added: 2026-10-14
   summary_zh: 官方发布公告：常驻云端的 AI 同事、跨应用操作、演示一次即可生成 Routine、多 Bot 协作。
   summary_en: The official announcement covering always-on cloud teammates, cross-app work, routines learned from a demonstration, and multi-Bot collaboration.
-  tags: [launch]
+  tags:
+    - launch
+  categories:
+    - news
+    - start
+  platform: official
+  evidence: official

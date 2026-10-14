@@ -1,0 +1,20 @@
+{
+  "topic": "xAI / Cursor Grok Bot persistent AI teammates",
+  "timezone": "Asia/Shanghai",
+  "schedule": "Daily at 09:00",
+  "lookback_hours": 72,
+  "weekly_backfill_days": 14,
+  "max_candidates_per_run": 30,
+  "max_new_entries_per_run": 20,
+  "sources": [
+    {"platform":"official","queries":["site:docs.x.ai/grok-bot Grok Bot","site:x.ai/news Grok Bot"],"seeds":["https://docs.x.ai/grok-bot/overview","https://x.ai/news/grok-bot-more-plans","https://help.x.com/en/using-x/about-bot"]},
+    {"platform":"github","queries":["site:github.com Grok Bot skills routines templates"],"seeds":["https://github.com/coolxeo/grok-bot-skills","https://github.com/cobusgreyling/grok-bot-templates"]},
+    {"platform":"x","queries":["site:x.com Grok Bot tutorial routine template"],"note":"Only publish a specific readable original post; do not treat an account page as a post."},
+    {"platform":"reddit","queries":["site:reddit.com/r/GrokBot Grok Bot setup workflow"],"seeds":["https://www.reddit.com/r/GrokBot/"]},
+    {"platform":"youtube","queries":["site:youtube.com/watch Grok Bot tutorial workflow"],"note":"Disclose description-only review; do not infer unseen video steps."},
+    {"platform":"linuxdo","queries":["site:linux.do/t/topic Grok Bot 分享 教程"]},
+    {"platform":"bilibili","queries":["site:bilibili.com/video GrokBot 教程"],"note":"Prefer original creators; follow credited original sources for reposts."},
+    {"platform":"chinese-community","queries":["site:zhihu.com Grok Bot 实践","site:mp.weixin.qq.com GrokBot","site:v2ex.com Grok Bot"],"note":"Public pages only. Hold blocked or unverified sources."},
+    {"platform":"research","queries":["site:arxiv.org Grok Bot team case study"]}
+  ]
+}

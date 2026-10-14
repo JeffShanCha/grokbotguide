@@ -1,4 +1,6 @@
 node_modules/
+/.collection.lock/
+/src/data/resources.yaml.tmp
 dist/
 .astro/
 .wrangler/

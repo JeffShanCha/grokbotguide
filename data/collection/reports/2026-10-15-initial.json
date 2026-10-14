@@ -1,0 +1,57 @@
+{
+  "batch_id": "2026-10-15-initial",
+  "date": "2026-10-15",
+  "added": [
+    "xai-grok-bot-more-plans",
+    "xai-grok-bot-skills-routines",
+    "xai-grok-bot-manage-bots",
+    "x-help-about-bot",
+    "github-coolxeo-grok-bot-skills",
+    "github-cobusgreyling-grok-bot-templates",
+    "github-tiagovilasboas-grok-bot-architecture",
+    "linuxdo-joseph-research-bot",
+    "linuxdo-lunet-team-coding",
+    "arxiv-bot-spectroscopist",
+    "youtube-nate-herk-bot-lessons",
+    "youtube-peter-yang-five-use-cases",
+    "reddit-steve228uk-personal-bot-team"
+  ],
+  "updated": [],
+  "duplicates": [
+    {
+      "url": "https://docs.x.ai/grok-bot/get-started",
+      "title": "Get started with Grok Bot",
+      "existing_id": "xai-docs-get-started",
+      "reason": "same source identity, original or content"
+    }
+  ],
+  "held": [
+    {
+      "url": "https://www.bilibili.com/video/BV1ASgF6KEte/",
+      "title": "Cursor 正式发布 GrokBot（太炸了）",
+      "reason": "转载注明 YouTube 原视频；优先核验原作者来源，避免重复收录。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xvuy68EhB/",
+      "title": "AI 早报 2026-08-12",
+      "reason": "直接页面返回 412，且为综合新闻，当前缺少足够的独立 Grok Bot 内容证据。"
+    },
+    {
+      "url": "https://x.com/xai",
+      "title": "X 官方帖文候选",
+      "reason": "本轮搜索未取得可核验的具体 Grok Bot 帖文，不把账号页当作新资讯发布。"
+    },
+    {
+      "url": "https://www.reddit.com/r/GrokBot/comments/1w0wr5c/goodbye_grok_bot/",
+      "title": "Goodbye Grok Bot",
+      "reason": "账单说法缺少可核查证据，且包含替代产品推广；本轮不用于费用指导。"
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://github.com/Mr-XiaoLiang/GrokBot",
+      "title": "GrokBot Compose 动画库",
+      "reason": "同名 Android 动画组件，与 xAI Grok Bot 使用场景无关。"
+    }
+  ]
+}

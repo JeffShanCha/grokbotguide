@@ -2,12 +2,15 @@
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { SITE } from '../../../site.config.mjs';
 import { toLang, useT } from '../../i18n/ui';
+import ResourceList from '../ResourceList.astro';
 
 const route = Astro.locals.starlightRoute;
 const data = route.entry.data;
 const lang = toLang(route.locale);
 const t = useT(lang);
 const sources = data.sources ?? [];
+const section = route.entry.id.split('/')[1];
+const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'news'].includes(section);
 ---
 
 {
@@ -26,6 +29,12 @@ const sources = data.sources ?? [];
 		</section>
 	)
 }
+
+{showCollected && <section class="gbg-sources">
+	<h2>{lang === 'zh' ? '本分类的外部资料' : 'External resources for this category'}</h2>
+	<p>{lang === 'zh' ? '持续收录的官方资料和作者分享。来源核验不等同于本站实测，详情见每条的核验范围。' : 'Official sources and author contributions. Checking a source does not mean we have tested its workflow; see each verification note.'}</p>
+	<ResourceList category={section} compact limit={4} />
+</section>}
 
 <Default />
 

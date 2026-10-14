@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
       - name: Check content
         run: npm run check:content
+      - name: Test collection deduplication
+        run: npm run test:collection
       - name: Typecheck worker
         run: npm run check:worker
       - name: Build

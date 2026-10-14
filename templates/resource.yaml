@@ -13,6 +13,13 @@
   summary_en: A daily Gmail triage routine, with permission settings.
   tags: [routines, gmail]
   roles: [assistant]
+  # 允许多个分类：start | advanced | recipes | bots | templates | news | resources
+  categories: [advanced, recipes]
+  # official | author-reported | research | editorial；来源核验不等于实测
+  evidence: author-reported
+  checked_at: 2026-10-15
+  verification_note_zh: 已阅读原作者说明，未复现工作流。
+  verification_note_en: Read the author's description; the workflow was not reproduced.
   # archive: https://web.archive.org/web/...   # 可选，原文快照
   # submitted_by: github-username              # 社区推荐时填写
   # ugc: true                                  # 社区提交的链接设为 true（输出 rel="ugc"）

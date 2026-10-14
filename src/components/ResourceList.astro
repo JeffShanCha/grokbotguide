@@ -1,125 +1,125 @@
 ---
-// 资源导航：渲染 src/data/resources.yaml，按来源类型筛选。
-// 链接属性：社区提交 rel="ugc"，赞助 rel="sponsored"，编辑精选为普通链接。
 import { getCollection } from 'astro:content';
 import { formatDate, toLang, useT } from '../i18n/ui';
 
+interface Props { category?: string; compact?: boolean; limit?: number }
+const { category, compact = false, limit } = Astro.props;
 const lang = toLang(Astro.locals.starlightRoute.locale);
 const t = useT(lang);
-const items = (await getCollection('resources')).sort((a, b) => +b.data.added - +a.data.added);
-const sources = [...new Set(items.map((i) => i.data.source))];
-const relOf = (d: (typeof items)[number]['data']) =>
-	['noopener', d.sponsored && 'sponsored', d.ugc && 'ugc'].filter(Boolean).join(' ');
+const labels = {
+  zh: { start: '快速上手', advanced: '进阶教程', recipes: '实战案例', bots: '角色库', templates: '模板库', news: '更新动态', resources: '资源导航' },
+  en: { start: 'Get started', advanced: 'Advanced', recipes: 'Recipes', bots: 'Bot library', templates: 'Templates', news: 'News', resources: 'Resources' },
+}[lang];
+const platforms: Record<string, string> = { official: lang === 'zh' ? '官方' : 'Official', github: 'GitHub', youtube: 'YouTube', reddit: 'Reddit', linuxdo: 'LINUX DO', bilibili: 'Bilibili', x: 'X', arxiv: 'arXiv', wechat: lang === 'zh' ? '公众号' : 'WeChat', web: lang === 'zh' ? '其他网站' : 'Web', hackernews: 'Hacker News', zhihu: '知乎', v2ex: 'V2EX' };
+const evidence = {
+  zh: { official: '官方资料', 'author-reported': '作者分享 · 未经本站实测', research: '研究案例 · 未经本站复现', editorial: '报道 / 评述' },
+  en: { official: 'Official source', 'author-reported': 'Author report · not tested here', research: 'Research · not replicated here', editorial: 'Coverage / commentary' },
+}[lang];
+const allItems = (await getCollection('resources')).filter((r) => !category || r.data.categories.includes(category as keyof typeof labels)).sort((a, b) => +b.data.added - +a.data.added || a.id.localeCompare(b.id));
+const items = limit ? allItems.slice(0, limit) : allItems;
+const platformKeys = [...new Set(items.map((i) => i.data.platform || (i.data.source === 'official' ? 'official' : 'web')))];
+const relOf = (d: (typeof items)[number]['data']) => ['noopener', d.sponsored && 'sponsored', d.ugc && 'ugc'].filter(Boolean).join(' ');
+const countText = lang === 'zh' ? '条资源' : 'resources';
 ---
 
-<div class="gbg-filter not-content" data-res-filter>
-	<button type="button" data-source="" aria-pressed="true">{t('res.all')}</button>
-	{
-		sources.map((s) => (
-			<button type="button" data-source={s} aria-pressed="false">
-				{t(`res.source.${s}`)}
-			</button>
-		))
-	}
+<div class="gbg-resource-list" data-resource-list data-lang={lang}>
+  {!compact && <div class="gbg-resource-controls not-content">
+    <label>{lang === 'zh' ? '搜索资源' : 'Search resources'}
+      <input type="search" data-resource-search placeholder={lang === 'zh' ? '标题、作者、摘要或标签' : 'Title, author, summary or tag'} />
+    </label>
+    <label>{lang === 'zh' ? '分类' : 'Category'}
+      <select data-resource-category>
+        <option value="">{t('res.all')}</option>
+        {Object.entries(labels).map(([key, title]) => <option value={key}>{title}</option>)}
+      </select>
+    </label>
+    <label>{lang === 'zh' ? '平台' : 'Platform'}
+      <select data-resource-platform>
+        <option value="">{t('res.all')}</option>
+        {platformKeys.map((p) => <option value={p}>{platforms[p] || p}</option>)}
+      </select>
+    </label>
+  </div>}
+  {!compact && <p class="gbg-result-count" role="status" aria-live="polite"><span data-resource-count>{items.length}</span> {countText}</p>}
+  <p data-resource-empty hidden={items.length > 0}>{lang === 'zh' ? '暂时没有匹配的资源，请切换分类、平台或搜索词。' : 'No matching resources. Try another category, platform or search term.'}</p>
+  <ul class="gbg-res not-content">
+    {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.author, d.summary_zh, d.summary_en, ...d.tags].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
+      <div class="gbg-res-head">
+        <a href={d.url} rel={relOf(d)}>{d.title}</a>
+        {d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
+      </div>
+      <p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>
+      <div class="gbg-res-meta">
+        <span class="gbg-badge">{platforms[d.platform || ''] || (d.source === 'official' ? platforms.official : platforms.web)}</span>
+        <span>{d.author_url ? <a href={d.author_url}>{d.author}</a> : d.author}</span>
+        {d.categories.map((c) => <a href={`/${lang}/resources/?category=${c}`}>{labels[c]}</a>)}
+        {d.evidence && <span>{evidence[d.evidence]}</span>}
+        <span>{d.lang === 'zh' ? '中文' : 'English'}</span>
+        {d.published && <span>{lang === 'zh' ? '原文发布' : 'Published'} {formatDate(d.published, lang)}</span>}
+        <span>{t('res.added')} {formatDate(d.added, lang)}</span>
+        {d.checked_at && <span>{lang === 'zh' ? '来源核验' : 'Source checked'} {formatDate(d.checked_at, lang)}</span>}
+        {d.status === 'broken' && <span class="warn">{t('res.broken')}</span>}
+        {d.archive && <a href={d.archive}>{t('res.archive')}</a>}
+      </div>
+      {(lang === 'zh' ? d.verification_note_zh : d.verification_note_en) && <details class="gbg-verification"><summary>{lang === 'zh' ? '核验范围' : 'What was checked'}</summary><p>{lang === 'zh' ? d.verification_note_zh : d.verification_note_en}</p></details>}
+    </li>)}
+  </ul>
+  {compact && allItems.length > items.length && <p><a href={`/${lang}/resources/?category=${category}`}>{lang === 'zh' ? `查看本分类全部 ${allItems.length} 条资料 →` : `View all ${allItems.length} resources in this category →`}</a></p>}
 </div>
 
-<ul class="gbg-res not-content">
-	{
-		items.map(({ data: d }) => (
-			<li data-source={d.source} class:list={{ broken: d.status === 'broken' }}>
-				<div class="gbg-res-head">
-					<a href={d.url} rel={relOf(d)}>
-						{d.title}
-					</a>
-					{d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
-				</div>
-				<p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>
-				<div class="gbg-res-meta">
-					<span class="gbg-badge">{t(`res.source.${d.source}`)}</span>
-					<span>{d.author_url ? <a href={d.author_url}>{d.author}</a> : d.author}</span>
-					<span>{d.lang === 'zh' ? '中文' : 'English'}</span>
-					<span>
-						{t('res.added')} {formatDate(d.added, lang)}
-					</span>
-					{d.status === 'broken' && <span class="warn">{t('res.broken')}</span>}
-					{d.archive && <a href={d.archive}>{t('res.archive')}</a>}
-				</div>
-			</li>
-		))
-	}
-</ul>
-
 <script>
-	const bar = document.querySelector<HTMLElement>('[data-res-filter]');
-	if (bar) {
-		const rows = [...document.querySelectorAll<HTMLElement>('.gbg-res li')];
-		bar.addEventListener('click', (e) => {
-			const btn = (e.target as HTMLElement).closest('button');
-			if (!btn) return;
-			const s = btn.dataset.source ?? '';
-			bar.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-			rows.forEach((r) => (r.hidden = s !== '' && r.dataset.source !== s));
-		});
-	}
+  function initResourceLists() {
+    document.querySelectorAll<HTMLElement>('[data-resource-list]').forEach((root) => {
+      if (root.dataset.ready) return;
+      root.dataset.ready = 'true';
+      const search = root.querySelector<HTMLInputElement>('[data-resource-search]');
+      const category = root.querySelector<HTMLSelectElement>('[data-resource-category]');
+      const platform = root.querySelector<HTMLSelectElement>('[data-resource-platform]');
+      if (!search || !category || !platform) return;
+      const rows = [...root.querySelectorAll<HTMLElement>('[data-resource-row]')];
+      const params = new URLSearchParams(location.search);
+      const initial = params.get('category');
+      if (initial && [...category.options].some((o) => o.value === initial)) category.value = initial;
+      const apply = () => {
+        const query = search.value.trim().toLowerCase();
+        let count = 0;
+        for (const row of rows) {
+          row.hidden = !!((query && !row.dataset.search?.includes(query)) || (category.value && !row.dataset.categories?.split(' ').includes(category.value)) || (platform.value && row.dataset.platform !== platform.value));
+          if (!row.hidden) count++;
+        }
+        root.querySelector('[data-resource-count]')!.textContent = String(count);
+        root.querySelector<HTMLElement>('[data-resource-empty]')!.hidden = count > 0;
+      };
+      search.addEventListener('input', apply);
+      category.addEventListener('change', () => {
+        const url = new URL(location.href);
+        if (category.value) url.searchParams.set('category', category.value); else url.searchParams.delete('category');
+        history.replaceState(null, '', url);
+        apply();
+      });
+      platform.addEventListener('change', apply);
+      apply();
+    });
+  }
+  initResourceLists();
+  document.addEventListener('astro:page-load', initResourceLists);
 </script>
 
 <style>
-	.gbg-filter {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-top: 1rem;
-	}
-	.gbg-filter button {
-		padding: 0.3rem 0.8rem;
-		border-radius: 999px;
-		border: 1px solid var(--gbg-card-border);
-		background: transparent;
-		color: var(--sl-color-gray-2);
-		cursor: pointer;
-		font-size: var(--sl-text-sm);
-	}
-	.gbg-filter button[aria-pressed='true'] {
-		border-color: var(--sl-color-accent);
-		color: var(--sl-color-white);
-		background: var(--sl-color-accent-low);
-	}
-	.gbg-res {
-		list-style: none;
-		padding: 0;
-		margin-top: 1.25rem;
-	}
-	.gbg-res li {
-		padding: 1rem 0;
-		border-bottom: 1px solid var(--sl-color-hairline);
-	}
-	.gbg-res li[hidden] {
-		display: none;
-	}
-	.gbg-res li.broken > .gbg-res-head a {
-		color: var(--sl-color-gray-3);
-		text-decoration: line-through;
-	}
-	.gbg-res-head {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		font-weight: 600;
-	}
-	.gbg-res p {
-		margin: 0.35rem 0;
-		color: var(--sl-color-gray-2);
-		font-size: var(--sl-text-sm);
-	}
-	.gbg-res-meta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.4rem 0.9rem;
-		align-items: center;
-		font-size: var(--sl-text-xs);
-		color: var(--sl-color-gray-3);
-	}
-	.gbg-res-meta .warn {
-		color: #f59e0b;
-	}
+  .gbg-resource-controls { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
+  .gbg-resource-controls label { display: grid; gap: 0.35rem; font-size: var(--sl-text-sm); color: var(--sl-color-text); min-width: 0; }
+  .gbg-resource-controls input, .gbg-resource-controls select { width: 100%; min-width: 0; min-height: 44px; border: 1px solid var(--gbg-card-border); border-radius: 0.5rem; background: var(--sl-color-bg); color: var(--sl-color-text); padding: 0.5rem 0.7rem; font: inherit; }
+  .gbg-resource-controls :is(input, select):focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 2px; }
+  .gbg-result-count { font-size: var(--sl-text-sm); color: var(--sl-color-gray-2); }
+  .gbg-res { list-style: none; padding: 0; margin-top: 1rem; }
+  .gbg-res li { padding: 1.1rem 0; border-bottom: 1px solid var(--sl-color-hairline); overflow-wrap: anywhere; }
+  .gbg-res li[hidden], [data-resource-empty][hidden] { display: none; }
+  .gbg-res li.broken > .gbg-res-head a { color: var(--sl-color-gray-3); text-decoration: line-through; }
+  .gbg-res-head { display: flex; gap: 0.5rem; align-items: center; font-weight: 600; }
+  .gbg-res p { margin: 0.4rem 0; color: var(--sl-color-gray-2); font-size: var(--sl-text-sm); }
+  .gbg-res-meta { display: flex; flex-wrap: wrap; gap: 0.45rem 0.85rem; align-items: center; font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); }
+  .gbg-res-meta .warn { color: var(--sl-color-orange-high); }
+  .gbg-verification { margin-top: 0.5rem; font-size: var(--sl-text-sm); }
+  .gbg-verification summary { cursor: pointer; color: var(--sl-color-gray-2); }
+  @media (max-width: 40rem) { .gbg-resource-controls { grid-template-columns: 1fr 1fr; } .gbg-resource-controls label:first-child { grid-column: 1 / -1; } }
 </style>
