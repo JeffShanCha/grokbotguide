@@ -20,7 +20,7 @@
 ## 目录结构
 
 ```text
-site.config.mjs              # 仓库地址、知识星球链接、邮箱、Turnstile 公钥：上线前改这里
+site.config.mjs              # 仓库地址、邮箱、Turnstile 公钥、GSC 验证码、GA4 衡量 ID
 astro.config.mjs             # Starlight 配置（侧边栏、语言、组件覆盖）
 wrangler.jsonc               # Cloudflare Worker / 静态资源 / D1 / 邮件配置
 wrangler.redirect.jsonc      # www → 主域名的 301 跳转 Worker 配置
@@ -81,12 +81,27 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 9. **Secrets**：Worker → Settings → Variables and Secrets → Add，类型选 Secret：
    - `TURNSTILE_SECRET`：Turnstile 的 Secret Key
    - `GITHUB_TOKEN`：GitHub → Settings → Developer settings → Fine-grained tokens，只选本仓库，权限 Issues: Read and write
-10. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；在 Cloudflare Web Analytics 创建站点，把 token 填进 `astro.config.mjs` 里注释掉的统计脚本。
+10. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；按下文接入 GSC 和 GA4。
+
+## 搜索收录（GSC）
+
+2026-10-15 已为 `grokbotguide.ai` 创建网域资源并通过 Cloudflare DNS TXT 验证，`sitemap-index.xml` 已提交并成功处理。[打开本站 GSC](https://search.google.com/search-console?resource_id=sc-domain%3Agrokbotguide.ai)。当前采用 DNS 验证，代码中的 `googleSiteVerification` 留空。
+
+在 [Google Search Console](https://search.google.com/search-console/) 添加站点，有两种验证方式：
+
+- **网域资源（推荐）**：填 `grokbotguide.ai`，将 Google 提供的 TXT 记录添加到 Cloudflare → 域名 → DNS。记录名称填 `@`，内容使用完整的 `google-site-verification=…`。回到 GSC 点击验证；这种方式不需要填写代码中的 `googleSiteVerification`，可覆盖所有协议与子域名。
+- **URL 前缀资源**：填 `https://grokbotguide.ai/`，选择「HTML 标记」，将 `<meta name="google-site-verification" content="…">` 中的 **content 值**填进 `site.config.mjs` 的 `googleSiteVerification`，不要粘贴整个标签。部署后中英文首页和文章页都会输出验证标签；根路径会跳转到对应语言首页，验证标签也在跳转后的页面中。回到 GSC 点击验证。HTML 标记不能验证网域资源。
+
+验证通过后，在 GSC → 站点地图提交 `https://grokbotguide.ai/sitemap-index.xml`。站点构建时自动生成中英文页面的 sitemap，`public/robots.txt` 也已声明该地址。用「网址检查」检查 `/zh/`、`/en/` 和重要文章页；可请求编入索引，但提交 sitemap 不保证立即收录。验证完成后保留 DNS 记录或 HTML 验证码，Google 会定期重新检查。
+
+官方说明：[所有权验证](https://support.google.com/webmasters/answer/9008080?hl=zh-Hans) · [站点地图报告](https://support.google.com/webmasters/answer/7451001?hl=zh-Hans)。
 
 ## 访问统计（GA4）
 
-1. 在 [Google Analytics](https://analytics.google.com/) 新建媒体资源 → 添加「网站」数据流，网址填 `https://grokbotguide.ai`，保持「增强型衡量」开启（自动统计页面浏览、滚动、外链点击、站内搜索）。
-2. 复制数据流的衡量 ID（`G-` 开头），填进 `site.config.mjs` 的 `ga4MeasurementId`，提交并推送。留空则不加载 GA4。
+本站媒体资源为 `grokbotguide.ai`（ID `559001353`），网站数据流为 `GrokBotGuide Web`（ID `16129367479`），衡量 ID 为 `G-MJ72CNWDZD`，报告时区为中国时间（UTC+8）。[打开本站 GA4](https://analytics.google.com/analytics/web/?authuser=0#/a290268825p559001353/reports/intelligenthome)。
+
+1. 在 [Google Analytics](https://analytics.google.com/) 新建媒体资源 → 添加「网站」数据流，网址填 `https://grokbotguide.ai`，保持「增强型衡量」开启（自动统计页面浏览、滚动、外链点击）。
+2. 在 GA4 → 管理 → 数据流 → 对应网站数据流，复制衡量 ID（`G-` 开头），填进 `site.config.mjs` 的 `ga4MeasurementId`，提交并推送。使用衡量 ID，不是数字形式的媒体资源 ID / 数据流 ID，也不是 `GTM-` 开头的容器 ID。留空则不加载 GA4；格式错误会阻止构建。
 3. 在 GA4 → 管理 → 自定义定义里，把下面三个事件参数注册为「事件范围」的自定义维度，报表里才能按它们拆分：`template_id`、`submission_type`、`language`。
 
 站点额外上报的事件：
@@ -98,6 +113,10 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 | `switch_language` | 顶栏手动切换语言 | `language`（zh / en） |
 
 隐私设置：广告相关存储全部关闭，不开启 Google 信号；来自欧洲经济区、英国和瑞士的访问默认不写入统计 Cookie（GA4 的 Consent Mode），见 `astro.config.mjs`。
+
+部署后访问中英文首页和文章页，通过 [Tag Assistant](https://tagassistant.google.com/) 检查 Google tag 是否加载，再到 GA4「实时」报告确认 `page_view`。复制一次模板可检查 `copy_template`；切换语言可检查 `switch_language`。普通报表处理较慢，以实时报告和 DebugView 为初次验证依据。站点根路径只负责语言跳转，不额外上报一次页面浏览。
+
+官方说明：[Google tag 安装](https://developers.google.com/tag-platform/gtagjs) · [页面浏览统计](https://developers.google.com/analytics/devguides/collection/ga4/views) · [自定义事件](https://developers.google.com/analytics/devguides/collection/ga4/events)。
 
 ## 语言路由规则
 

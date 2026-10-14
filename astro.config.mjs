@@ -12,11 +12,13 @@ const CONSENT_DENIED_REGIONS = [
 	'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
 	'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
 ];
-const ga4 = SITE.ga4MeasurementId;
+const ga4 = SITE.ga4MeasurementId.trim();
+if (ga4 && !/^G-[A-Z0-9]+$/.test(ga4)) {
+	throw new Error('site.config.mjs: ga4MeasurementId 必须是 G- 开头的 GA4 衡量 ID。');
+}
 /** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
 const ga4Head = ga4
 	? [
-			{ tag: 'script', attrs: { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${ga4}` } },
 			{
 				tag: 'script',
 				content: [
@@ -28,6 +30,7 @@ const ga4Head = ga4
 					`gtag('config','${ga4}',{allow_google_signals:false});`,
 				].join(''),
 			},
+			{ tag: 'script', attrs: { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${ga4}` } },
 		]
 	: [];
 
@@ -63,6 +66,10 @@ export default defineConfig({
 			head: [
 				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://grokbotguide.ai/og-default.png' } },
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
+				// GSC 的 HTML 验证适用于 URL 前缀资源；网域资源需在 DNS 添加 TXT 记录。
+				...(SITE.googleSiteVerification.trim()
+					? [{ tag: 'meta', attrs: { name: 'google-site-verification', content: SITE.googleSiteVerification.trim() } }]
+					: []),
 				// Cloudflare Web Analytics：在 Cloudflare 后台创建站点后，把 token 填进来再取消注释
 				// { tag: 'script', attrs: { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "YOUR_TOKEN"}' } },
 				// Google Analytics 4：在 site.config.mjs 填 ga4MeasurementId 后自动加载

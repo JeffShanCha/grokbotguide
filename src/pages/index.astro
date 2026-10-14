@@ -1,4 +1,6 @@
 ---
+import { SITE } from '../../site.config.mjs';
+
 // 线上环境中，根路径 / 由 Cloudflare Worker 按 Cookie / 地区 / 浏览器语言 302 跳转（见 worker/index.ts），
 // 这个页面不会被访问到。它只在本地 `astro dev` 或 Worker 异常时兜底：按 Cookie 和浏览器语言跳转。
 ---
@@ -8,6 +10,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{SITE.googleSiteVerification.trim() && (
+			<meta name="google-site-verification" content={SITE.googleSiteVerification.trim()} />
+		)}
 		<title>GrokBotGuide</title>
 		<meta name="robots" content="noindex" />
 		<link rel="alternate" hreflang="zh-CN" href="https://grokbotguide.ai/zh/" />
