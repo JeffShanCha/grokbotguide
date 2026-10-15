@@ -86,6 +86,11 @@ export default defineConfig({
 					items: [{ autogenerate: { directory: 'start' } }],
 				},
 				{
+					label: '常见问题',
+					translations: { en: 'How-to & FAQ' },
+					items: [{ autogenerate: { directory: 'answers' } }],
+				},
+				{
 					label: '进阶教程',
 					translations: { en: 'Advanced' },
 					items: [{ autogenerate: { directory: 'advanced' } }],

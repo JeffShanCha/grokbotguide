@@ -1,0 +1,24 @@
+---
+title: "How-to & FAQ"
+description: "The questions people search most about Grok Bot: connecting Gmail and Slack, scheduling routines, fixing problems, choosing a plan, running with your laptop closed, and safety. Each page leads with a short answer, then steps and sources."
+sidebar:
+  label: "All questions"
+  order: 0
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+This section is organised around how people search: one question per page, a short answer you can act on first, then steps, troubleshooting and sources. It is compiled from the official docs and community posts and has not yet been fully tested by this site.
+
+<CardGrid>
+	<LinkCard title="How do I connect Grok Bot to Gmail?" description="Add the Gmail plugin from Connect apps and authorize it. Includes safe permission settings, a drafts-only setup, and fixes for failed sign-ins and blocked work accounts." href="/en/answers/how-to-connect-grok-bot-to-gmail/" />
+	<LinkCard title="How do I schedule Grok Bot routines?" description="Ask the owning Bot to run a workflow on a timetable. Covers time zone settings, the five-minute minimum, Test run, event triggers, and a checklist for routines that did not run." href="/en/answers/how-to-schedule-grok-bot-routines/" />
+	<LinkCard title="Grok Bot not working? How to fix common problems" description="Sign-in stuck, cloud computer unreachable, Bot stuck, sites asking for login again, plugin auth failing, routines not running, @bot silent: fixes in the official order." href="/en/answers/grok-bot-not-working/" />
+	<LinkCard title="Best Grok Bot templates and workflows for SEO" description="Real Grok Bot SEO workflows: a weekly traffic report, a daily site check, batch updates of outdated posts and competitor page analysis, each with a copyable prompt and sources." href="/en/answers/grok-bot-templates-for-seo/" />
+	<LinkCard title="Grok Bot vs Cursor plans: which subscription should you choose?" description="Grok Bot is not sold on its own. Compare getting it through The X Subscription, SuperGrok or a Cursor plan: tier equivalents, usage rules and what to know before linking." href="/en/answers/grok-bot-vs-cursor-plans/" />
+	<LinkCard title="How do I connect Grok Bot to Slack?" description="Personal use: add the Slack plugin and the Bot posts as you. Team use: publish a Team Bot to Slack and it gets its own app identity. Steps and differences for both." href="/en/answers/how-to-connect-grok-bot-to-slack/" />
+	<LinkCard title="Does Grok Bot keep working when my laptop is closed?" description="Yes. Grok Bot runs on a cloud computer that belongs to you, so closing the app, your laptop or your phone does not stop background work or routines." href="/en/answers/does-grok-bot-work-when-laptop-is-closed/" />
+	<LinkCard title="Is it safe to give Grok Bot access to my accounts?" description="Grok Bot’s safety boundaries: approval cards, Auto Review, Take over for passwords, one shared computer for all Bots, the risk of sharing Bots, and the official least-privilege advice." href="/en/answers/is-grok-bot-safe/" />
+</CardGrid>
+
+Missing a question? Tell us on the [contribute page](/en/community/submit/) or use “Edit page” at the bottom.

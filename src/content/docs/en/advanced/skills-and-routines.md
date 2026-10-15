@@ -81,3 +81,8 @@ After a long absence Grok Bot may ask whether to keep routines running. If you d
 - Re-test after websites, connectors or source formats change.
 
 See ready-made examples in [Templates](/en/templates/).
+
+## Related questions
+
+- [How do I schedule Grok Bot routines?](/en/answers/how-to-schedule-grok-bot-routines/)
+- [Does Grok Bot keep working when my laptop is closed?](/en/answers/does-grok-bot-work-when-laptop-is-closed/)

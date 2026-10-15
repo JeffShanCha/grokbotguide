@@ -41,6 +41,8 @@ const copy = {
 			{ t: '进阶教程', d: 'Skills 与 Routines、审批与安全、多 Bot 协作', href: 'advanced/skills-and-routines/' },
 			{ t: '实战案例', d: '真实场景从头到尾跑一遍，附可复制的模板', href: 'recipes/' },
 		],
+		questionsTitle: '常见问题',
+		questionsMore: '全部问题',
 		templatesTitle: '热门模板',
 		templatesMore: '查看全部模板',
 		newsTitle: '最新动态',
@@ -81,6 +83,8 @@ const copy = {
 			{ t: 'Advanced', d: 'Skills and routines, approvals and security, teams of Bots', href: 'advanced/skills-and-routines/' },
 			{ t: 'Recipes', d: 'Real workflows end to end, with templates you can copy', href: 'recipes/' },
 		],
+		questionsTitle: 'Common questions',
+		questionsMore: 'All questions',
 		templatesTitle: 'Popular templates',
 		templatesMore: 'All templates',
 		newsTitle: 'Latest updates',
@@ -106,6 +110,10 @@ const roles = [
 ] as const;
 
 const templates = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/templates/`)))
+	.sort((a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99))
+	.slice(0, 6);
+
+const questions = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/answers/`) && !e.id.endsWith('/answers')))
 	.sort((a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99))
 	.slice(0, 6);
 
@@ -183,6 +191,23 @@ const contributors = await getCollection('contributors');
 				))
 			}
 		</ol>
+	</section>
+
+	<!-- 4b. 常见问题（按搜索意图组织的问题页） -->
+	<section>
+		<div class="section-head">
+			<h2>{copy.questionsTitle}</h2>
+			<a href={p('answers/')}>{copy.questionsMore} →</a>
+		</div>
+		<ul class="questions">
+			{
+				questions.map((e) => (
+					<li>
+						<a href={`/${e.id}/`}>{e.data.title}</a>
+					</li>
+				))
+			}
+		</ul>
 	</section>
 
 	<!-- 5. 热门模板 -->
@@ -566,6 +591,27 @@ const contributors = await getCollection('contributors');
 		font-weight: 700;
 	}
 
+	.questions {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		gap: 0.5rem 1.5rem;
+	}
+	.questions li {
+		margin: 0;
+	}
+	.questions a {
+		display: block;
+		padding: 0.7rem 0;
+		border-bottom: 1px solid var(--gbg-card-border);
+		color: var(--sl-color-white);
+		text-decoration: none;
+	}
+	.questions a:hover {
+		color: var(--sl-color-accent-high);
+	}
 	.section-head {
 		display: flex;
 		justify-content: space-between;

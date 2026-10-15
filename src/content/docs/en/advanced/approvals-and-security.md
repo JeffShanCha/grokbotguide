@@ -79,3 +79,7 @@ A public share link copies only the Bot's configuration (identity, description, 
 - Keep sending, publishing, purchasing, deleting and production changes behind approval.
 - Review connectors and active routines regularly; pause routines when a source system changes.
 - Keep source links and an action log for important decisions.
+
+## Related questions
+
+- [Is it safe to give Grok Bot access to my accounts?](/en/answers/is-grok-bot-safe/)

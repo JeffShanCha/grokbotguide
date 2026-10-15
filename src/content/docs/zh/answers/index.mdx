@@ -1,0 +1,24 @@
+---
+title: "常见问题"
+description: "Grok Bot 新手最常搜的问题：怎么连接 Gmail 和 Slack、怎么设置定时任务、用不了怎么办、订阅怎么选、关掉电脑还能不能跑、安全不安全。每页先给简短答案，再给步骤和来源。"
+sidebar:
+  label: "全部问题"
+  order: 0
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+这一栏按「你会怎么搜」来组织：每个问题一页，开头先给一段能直接用的答案，下面再展开步骤、排障和来源。内容整理自官方文档和社区分享，尚待本站逐条亲测。
+
+<CardGrid>
+	<LinkCard title="Grok Bot 怎么连接 Gmail？" description="在 Connect apps 添加 Gmail 插件并授权即可。附权限设置、只出草稿的做法，以及授权失败、公司邮箱被拦的处理方法。" href="/zh/answers/how-to-connect-grok-bot-to-gmail/" />
+	<LinkCard title="Grok Bot 怎么设置定时任务（Routine）？" description="在对话里让负责的 Bot 按时间表运行一个流程即可。包括时区设置、最小间隔、Test run、事件触发，以及 Routine 没有运行时的排查清单。" href="/zh/answers/how-to-schedule-grok-bot-routines/" />
+	<LinkCard title="Grok Bot 用不了怎么办？常见问题排查" description="登录不成功、云电脑连不上、Bot 卡住、网站反复要求登录、插件授权失败、Routine 不运行、@bot 没反应——按官方排障顺序逐个解决。" href="/zh/answers/grok-bot-not-working/" />
+	<LinkCard title="有哪些适合做 SEO 的 Grok Bot 模板和用法？" description="整理 Grok Bot 做 SEO 的实际用法：每周流量周报、每日网站巡检、批量更新过时文章、竞品页面分析，每个都附可复制的指令和来源。" href="/zh/answers/grok-bot-templates-for-seo/" />
+	<LinkCard title="Grok Bot 订阅怎么选：X 订阅、SuperGrok 还是 Cursor？" description="Grok Bot 没有单独售卖，可以通过 X 订阅、SuperGrok 或 Cursor 付费套餐获得。对比各渠道的档位对应关系、用量规则和关联前必须知道的事。" href="/zh/answers/grok-bot-vs-cursor-plans/" />
+	<LinkCard title="Grok Bot 怎么连接 Slack？" description="个人使用：添加 Slack 插件，Bot 以你的身份发言。团队使用：发布 Team Bot 并接入 Slack，Bot 有自己的应用身份。两种方式的步骤和区别。" href="/zh/answers/how-to-connect-grok-bot-to-slack/" />
+	<LinkCard title="电脑关机后 Grok Bot 还能工作吗？" description="能。Grok Bot 在属于你的云电脑上运行，关掉应用、合上电脑或手机都不会停止后台任务和 Routine。只有本地电脑权限是另一回事。" href="/zh/answers/does-grok-bot-work-when-laptop-is-closed/" />
+	<LinkCard title="给 Grok Bot 账号权限安全吗？" description="Grok Bot 的安全边界：审批卡片、Auto Review、密码用 Take over、所有 Bot 共用一台电脑、分享 Bot 的风险，以及官方推荐的最小权限做法。" href="/zh/answers/is-grok-bot-safe/" />
+</CardGrid>
+
+没找到你的问题？在[投稿页](/zh/community/submit/)告诉我们，或在页面底部点「编辑此页」补充。

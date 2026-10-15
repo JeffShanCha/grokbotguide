@@ -81,3 +81,8 @@ Test run 会真实地打开网站、改文件、调用连接器。用安全的�
 - 网站、连接器或数据格式变了以后重新测试。
 
 现成的例子见 [模板库](/zh/templates/)。
+
+## 相关问题
+
+- [Grok Bot 怎么设置定时任务（Routine）？](/zh/answers/how-to-schedule-grok-bot-routines/)
+- [电脑关机后 Grok Bot 还能工作吗？](/zh/answers/does-grok-bot-work-when-laptop-is-closed/)
