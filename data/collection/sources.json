@@ -28,7 +28,8 @@
       ],
       "seeds": [
         "https://github.com/coolxeo/grok-bot-skills",
-        "https://github.com/cobusgreyling/grok-bot-templates"
+        "https://github.com/cobusgreyling/grok-bot-templates",
+        "https://github.com/Rladmsrl/a2a-bridge"
       ]
     },
     {
@@ -96,7 +97,8 @@
       "seeds": [
         "https://leosplain.com/grok-bot-notion-store-os/",
         "https://www.datacamp.com/zh/tutorial/grok-bot-tutorial",
-        "https://composio.dev/toolkits/notion/framework/grok-bot"
+        "https://composio.dev/toolkits/notion/framework/grok-bot",
+        "https://composio.dev/content/how-to-connect-multiple-gmail-google-accounts-to-grok-bot"
       ],
       "note": "Prefer original author tutorials and vendor setup guides. Label commercial sources; avoid adopting unverifiable performance and outdated plan claims."
     }

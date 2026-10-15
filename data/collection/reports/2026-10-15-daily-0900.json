@@ -1,0 +1,54 @@
+{
+  "batch_id": "2026-10-15-daily-0900",
+  "date": "2026-10-15",
+  "added": [
+    "composio-grok-bot-multiple-gmail",
+    "composio-grok-bot-google-sheets",
+    "github-a2a-bridge-chinese-guide",
+    "xai-grok-bot-settings-notifications",
+    "xai-grok-bot-private-networks"
+  ],
+  "updated": [],
+  "duplicates": [
+    {
+      "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "title": "Skills and routines",
+      "existing_id": "xai-grok-bot-skills-routines",
+      "reason": "same source identity, original or content"
+    },
+    {
+      "url": "https://grokbot.tw/workflows/docs-skills-routines-zh/",
+      "title": "官方文件導讀：技能、例行任務與自動化",
+      "existing_id": "xai-grok-bot-skills-routines",
+      "reason": "same source identity, original or content"
+    }
+  ],
+  "held": [
+    {
+      "url": "https://www.bilibili.com/video/BV1ASgF6KEte/",
+      "title": "Cursor 正式发布 GrokBot（太炸了）",
+      "reason": "再次读取返回 HTTP 412；转载对应的 YouTube 原视频本轮也限流，继续待核验。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xvuy68EhB/",
+      "title": "AI 早报 2026-08-12",
+      "reason": "再次读取返回 HTTP 412；无足够独立 Grok Bot 教程信息，继续待核验。"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=v8Yf9IoXkROM",
+      "title": "Bilibili 转载标注的 YouTube 原视频",
+      "reason": "直接播放页限流，本轮未获得足够的作者完整说明；不根据搜索标题推断视频操作。"
+    },
+    {
+      "url": "https://www.reddit.com/r/GrokBot/comments/1x4lk32/what_do_you_use_grokbot_for/",
+      "title": "What do you use GrokBot for?",
+      "reason": "已读原帖和评论；有邮件、设计和音乐用法线索，但多数缺少可核验步骤或模板，本轮不当教程发布。"
+    },
+    {
+      "url": "https://x.com/bot",
+      "title": "X 原始帖文候选",
+      "reason": "本轮检索未取得适合发布的具体原始帖文；账号页不能替代原始帖子。"
+    }
+  ],
+  "rejected": []
+}

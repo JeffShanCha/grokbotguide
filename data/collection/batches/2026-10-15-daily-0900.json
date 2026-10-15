@@ -1,0 +1,329 @@
+{
+  "id": "2026-10-15-daily-0900",
+  "collected_at": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "lookback_hours": 72,
+  "discovery": [
+    "Official Grok Bot documentation",
+    "GitHub known repositories and a newly discovered A2A bridge",
+    "Composio original vendor guides",
+    "Chinese LINUX DO posts and attributed Chinese guide",
+    "Reddit original discussions",
+    "X / YouTube / Bilibili / WeChat / Zhihu / V2EX / arXiv searches"
+  ],
+  "source_checks": [
+    {
+      "platform": "official",
+      "result": "Read settings and private-network documentation updated October 12, and re-read the existing skills page. No new announcement date was inferred."
+    },
+    {
+      "platform": "github",
+      "result": "Checked pushed_at for three known repositories; read new a2a-bridge README, Chinese guide and companion skill. No repository scripts were executed."
+    },
+    {
+      "platform": "author-and-vendor-guides",
+      "result": "Read original multi-Gmail and Sheets guides. Historical or undated integration references are category backfills, not new announcements."
+    },
+    {
+      "platform": "chinese-community",
+      "result": "Read October 13 LINUX DO A2A introduction and followed its source; read attributed Chinese skills rewrite. Searches of Zhihu, WeChat and V2EX yielded no qualified new original tutorial for publication."
+    },
+    {
+      "platform": "reddit",
+      "result": "Read a current use-case discussion; held because it offers anecdotes without enough reproducible workflow detail."
+    },
+    {
+      "platform": "x",
+      "result": "Search did not return a readable specific original Grok Bot post suitable for publication. Do not advance a completed-source cursor."
+    },
+    {
+      "platform": "youtube",
+      "result": "Searched tutorials and retried the credited original video; the watch page was throttled and sufficient creator description was unavailable. Retry later."
+    },
+    {
+      "platform": "bilibili",
+      "result": "Retried both previously held URLs; both returned HTTP 412. Retry later; no access restriction was bypassed."
+    },
+    {
+      "platform": "research",
+      "result": "Search returned no qualified new Grok Bot team research source beyond existing coverage."
+    }
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "原作者或官方文档提供具体方法，已读取正文；与现有目录条目的工作用途不同。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "composio-grok-bot-multiple-gmail",
+        "url": "https://composio.dev/content/how-to-connect-multiple-gmail-google-accounts-to-grok-bot",
+        "title": "How to Connect Multiple Gmail Accounts to Grok Bot in 2 minutes",
+        "author": "Shrijal（Composio）",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-10-07",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Gmail",
+          "Composio",
+          "Google Calendar",
+          "Google Drive",
+          "Google Docs",
+          "Google Sheets"
+        ],
+        "tags": [
+          "integration",
+          "gmail",
+          "multi-account",
+          "oauth"
+        ],
+        "summary_zh": "作者用 Composio 为多个 Google 账号分别授权和命名，再按账号整理未读邮件或检查日历。教程包含账号选择核对、Workspace 管理限制及断开旧连接的步骤。",
+        "summary_en": "A Composio walkthrough connects and names separate Google accounts, checks account routing, and combines inbox or calendar tasks. It also covers Workspace restrictions and connection management.",
+        "verification_note_zh": "已阅读作者正文及账号核对步骤；未授权 Google 或复现操作。2026-10-07 为文章日期，补充已有应用类别资料，不作为今日新闻；不采用标题的耗时承诺或原生账号数量限制说法。",
+        "verification_note_en": "Read the author's guide and verification steps; no Google authorization or workflow test was performed. This October 7 guide is a category backfill, not today's news. Timing and native-account-limit claims are not adopted."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "原作者或官方文档提供具体方法，已读取正文；与现有目录条目的工作用途不同。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "composio-grok-bot-google-sheets",
+        "url": "https://landing.composio.dev/toolkits/googlesheets/framework/grok-bot",
+        "title": "How to connect Google Sheets to Grok Bot",
+        "author": "Composio",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Google Sheets",
+          "Composio"
+        ],
+        "tags": [
+          "integration",
+          "spreadsheet",
+          "plugin",
+          "mcp"
+        ],
+        "summary_zh": "供应商指南介绍通过 Composio 插件连接 Google Sheets，并列出创建工作表、读取范围、批量更新和按键值更新记录等用途。具体工具和权限以账户中实际可用项为准。",
+        "summary_en": "A vendor guide connects Google Sheets through Composio and outlines worksheet creation, range reads, batch updates and keyed row updates. Available tools and permissions require account-specific checks.",
+        "verification_note_zh": "已阅读接入步骤及表格工具说明；未连接账户或改动表格。页面未提供可靠首发日期，补充表格集成参考；不采用较旧的订阅列表、工具数量或速度承诺。",
+        "verification_note_en": "Read setup and spreadsheet tool descriptions; no account was connected and no sheet was changed. No reliable release date was shown. Older plan lists, tool counts and timing claims are not adopted."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "原作者或官方文档提供具体方法，已读取正文；与现有目录条目的工作用途不同。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "github-a2a-bridge-chinese-guide",
+        "url": "https://github.com/Rladmsrl/a2a-bridge/blob/main/docs/README.zh-CN.md",
+        "title": "A2A Bridge",
+        "author": "Rladmsrl",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "A2A Bridge"
+        ],
+        "tags": [
+          "integration",
+          "a2a",
+          "webhook",
+          "skill",
+          "self-hosted"
+        ],
+        "summary_zh": "通过自建桥接服务，把外部 A2A Agent 与 Grok Bot 的 webhook 和回调连接。中文文档涵盖部署、任务状态、鉴权和重试，并提供配套接入技能说明；需自行配置服务器。",
+        "summary_en": "A Chinese guide bridges external A2A agents to Grok Bot webhooks and callbacks. It documents deployment, task state, authentication and retries, with companion connection instructions for a self-hosted server.",
+        "verification_note_zh": "从 LINUX DO 原帖发现后，读取 GitHub README、中文部署文档和配套 Skill；仅收录这份中文主文档，不重复收录介绍帖。未安装、运行测试或审计其安全实现；未将仓库创建日当作文章首发日期。",
+        "verification_note_en": "Discovered via the author's LINUX DO post; read the repository README, Chinese guide and companion skill. The introduction is not listed separately. No installation, tests or security audit were performed; no release date was inferred."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "原作者或官方文档提供具体方法，已读取正文；与现有目录条目的工作用途不同。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "xai-grok-bot-settings-notifications",
+        "url": "https://docs.x.ai/grok-bot/settings-and-notifications",
+        "title": "Settings and notifications",
+        "author": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "tags": [
+          "settings",
+          "timezone",
+          "notifications",
+          "plugins"
+        ],
+        "summary_zh": "官方整理账号、界面语言、Routine 时区、插件入口、用量和通知设置，并区分全局设置、单个 Bot 设置与当前桌面的本地执行权限。选项可能因账号和开放范围不同而变化。",
+        "summary_en": "Official guidance covers accounts, interface language, routine time zones, plugins, usage and notifications, distinguishing shared settings, individual Bot preferences and desktop-local execution controls.",
+        "verification_note_zh": "已阅读官方页面，标注最后更新为 2026-10-12；未更改任何账户、通知或权限设置，更新日期未作为首发日期。",
+        "verification_note_en": "Read the official page, last updated October 12, 2026. No account, notification or permission settings were changed; the update date is not treated as a release date."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "原作者或官方文档提供具体方法，已读取正文；与现有目录条目的工作用途不同。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "xai-grok-bot-private-networks",
+        "url": "https://docs.x.ai/grok-bot/private-networks",
+        "title": "Connect to private networks",
+        "author": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Tailscale",
+          "Cloudflare Tunnel"
+        ],
+        "tags": [
+          "integration",
+          "network",
+          "enterprise",
+          "team-setup"
+        ],
+        "summary_zh": "官方对比桌面流量路由与 Enterprise Team Setup 的私网接入方式，并给出 Tailscale、Cloudflare Tunnel 参考。明确企业功能要求、网络策略边界及 Cloudflare 方案仍需试点验证。",
+        "summary_en": "Official guidance compares desktop routing with Enterprise Team Setup for private access, using Tailscale and Cloudflare Tunnel examples. It states plan requirements and the need to pilot the Cloudflare pattern.",
+        "verification_note_zh": "已阅读官方方法、前提及限制，页面最后更新为 2026-10-12；未安装网络客户端或接入私网。官方说明 Cloudflare 示例未经与 Tailscale 同等的团队电脑验证，收录不视为兼容性实测。",
+        "verification_note_en": "Read methods, prerequisites and limitations, last updated October 12, 2026. No clients or private networks were configured. The source says its Cloudflare example lacks the same team-computer testing as Tailscale."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "现有官方来源复核，未发现需要新增条目的独立作品。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "xai-skills-routines-recheck",
+        "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "title": "Skills and routines",
+        "author": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "summary_zh": "官方介绍把任务保存为技能，再配置计划或事件触发的 Routine。",
+        "summary_en": "Official instructions for saved skills and scheduled or event-triggered routines.",
+        "verification_note_zh": "本轮重读官方页面，与现有收录是同一来源，不创建新条目。",
+        "verification_note_en": "Re-read the official page; it is the same source already listed."
+      }
+    },
+    {
+      "decision": "publish",
+      "verified_via": "page",
+      "reason": "已核对原文归属；不因中文重写版本重复增加已收录的官方指南。",
+      "relevance": "直接讨论 Grok Bot 的应用组合、协作技能或使用配置。",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "editorial",
+        "id": "grokbottw-skills-routines-rewrite",
+        "url": "https://grokbot.tw/workflows/docs-skills-routines-zh/",
+        "original_url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "title": "官方文件導讀：技能、例行任務與自動化",
+        "author": "GrokBot.tw",
+        "source": "blog",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "summary_zh": "根据已收录官方技能与例行任务文档重写的中文导读。",
+        "summary_en": "A Chinese guide based on the official skills and routines documentation already listed.",
+        "verification_note_zh": "页面明确标注基于官方原文重写；按同一核心作品处理，不重复收录。",
+        "verification_note_en": "The page explicitly attributes its rewrite to the official source; treated as the same core work rather than a new listing."
+      }
+    },
+    {
+      "decision": "hold",
+      "resource": {
+        "url": "https://www.bilibili.com/video/BV1ASgF6KEte/",
+        "title": "Cursor 正式发布 GrokBot（太炸了）"
+      },
+      "reason": "再次读取返回 HTTP 412；转载对应的 YouTube 原视频本轮也限流，继续待核验。"
+    },
+    {
+      "decision": "hold",
+      "resource": {
+        "url": "https://www.bilibili.com/video/BV1xvuy68EhB/",
+        "title": "AI 早报 2026-08-12"
+      },
+      "reason": "再次读取返回 HTTP 412；无足够独立 Grok Bot 教程信息，继续待核验。"
+    },
+    {
+      "decision": "hold",
+      "resource": {
+        "url": "https://www.youtube.com/watch?v=v8Yf9IoXkROM",
+        "title": "Bilibili 转载标注的 YouTube 原视频"
+      },
+      "reason": "直接播放页限流，本轮未获得足够的作者完整说明；不根据搜索标题推断视频操作。"
+    },
+    {
+      "decision": "hold",
+      "resource": {
+        "url": "https://www.reddit.com/r/GrokBot/comments/1x4lk32/what_do_you_use_grokbot_for/",
+        "title": "What do you use GrokBot for?"
+      },
+      "reason": "已读原帖和评论；有邮件、设计和音乐用法线索，但多数缺少可核验步骤或模板，本轮不当教程发布。"
+    },
+    {
+      "decision": "hold",
+      "resource": {
+        "url": "https://x.com/bot",
+        "title": "X 原始帖文候选"
+      },
+      "reason": "本轮检索未取得适合发布的具体原始帖文；账号页不能替代原始帖子。"
+    }
+  ]
+}
