@@ -1,0 +1,2317 @@
+{
+  "id": "2026-10-16-x-history-approved-zh",
+  "collected_at": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "discovery": [
+    "用户于 2026-10-16 明确批准将 134 条补全版中已展示的 68 条中文标题与摘要导入本地项目，并要求去重、分类和本地预览，暂不发布。其余 14 条 hold 与 52 条 reject 不导入。",
+    "历史来源：2026-10-15-x-history；SHA-256 b87362cb2ed06080c104b12a6a048e74bc1083d44857a89c419d9048af399f06。保留历史批次原样作为原始标题、摘要与核验记录。",
+    "采用用户已预览的 grok-x-recommended-chinese-review.json 中 title_zh 和 summary_zh，逐字保留；审阅文件 SHA-256 8df78597dd85ae76a96f87c89a9a2634e0364c12fa539f31b04940e6732de9db。",
+    "本批仅整理并导入 2026-10-15 已采集的内容；added 为首次导入日期 2026-10-16，checked_at 和 published 保留原值，不表示本日重新访问来源或实测。",
+    "按原帖 ID、规范化 URL、original_url、标题与摘要内容指纹、近似标题对照现有资源；复核相似主题。不同作者的独立方法、不同时间的文章与工作坊笔记分别保留，同主题不直接当作同作。",
+    "分类复核：公开角色模板补充 bots/templates，技能迁移归入 advanced/recipes，创建助手字段补充 start，本机权限设置补充 advanced，完整审计提示词与技能组合补充 templates；其余保留已审阅分类。",
+    "来源与核验边界不变：作者分享仍标记 author-reported，原文语言保持 zh/en；图片、视频、模板未查看或正文未完整取得的限制按原记录保留。"
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "原 hold 帖（2109209007936176477）为该长文的导读帖；已读到长文本体，按原作收录长文帖。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-fengjhui-grok-bot-wanzi-guide",
+        "url": "https://x.com/fengjhui/status/2109208681577394599",
+        "title": "Grok Bot 万字入门：额度、生态、九类用法与三十个细节",
+        "author": "Jason Feng",
+        "author_url": "https://x.com/fengjhui",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-11",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "中文长文入门：解释助手、云电脑、定时任务，梳理各档订阅与额度、模板、插件与技能生态、9 类用法、国内时区网络与用量上限设置，并汇总 30 条官方文档细节，附来源。",
+        "summary_en": "A long Chinese primer: bots, the cloud computer and routines, plans and usage, templates/plugins/skills, nine use types, settings for users in China, and 30 rules from the official docs, with sources.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。文中订阅与价格信息以作者截至 2026-10-11 的整理为准，可能已变化。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Plan and price details are as of 2026-10-11 per the author and may have changed.",
+        "tags": [
+          "onboarding",
+          "usage",
+          "settings"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：正文为 X 长文，现已读取全文。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-joshkim-grok-bot-for-work",
+        "url": "https://x.com/joshkim/status/2095633918611636627",
+        "title": "用四个助手改善工作：收件箱、日程、信息与执行",
+        "author": "Josh Kim",
+        "author_url": "https://x.com/joshkim",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-03",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者介绍四个工作助手：只读分拣邮件、Slack 消息和私信的收件箱管家，按其习惯安排会议的日程助理，以及信息与执行类助手，并附可安装的模板链接。",
+        "summary_en": "The author's four work bots: a read-only Inbox Manager that triages email, Slack and DMs, a Calendar EA that protects focus time, plus information and execution bots, each with a template link.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。模板链接未打开。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Template links not opened.",
+        "tags": [
+          "work",
+          "template"
+        ],
+        "apps": [
+          "Gmail",
+          "Slack",
+          "Google Calendar"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：步骤在 X 长文中，现已读取。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-thatdudepaco-iphone-calendar-bridge",
+        "url": "https://x.com/thatdudepacoAI/status/2101786222771544502",
+        "title": "免费把 Grok Bot 的事件同步到苹果手机日历",
+        "author": "Paolo",
+        "author_url": "https://x.com/thatdudepacoAI",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-20",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "因 Grok Bot 无法直接写苹果日历，作者用桥接方案：助手保存事件并发一封邮件，Cloudflare Pages 小服务暂存，iPhone 快捷指令收到邮件后拉取并写入日历。",
+        "summary_en": "With no native Apple Calendar action, the author bridges it: the bot stores the event and sends an email, a small Cloudflare Pages bridge holds it, and an iPhone Shortcut pulls it into Calendar.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。文中的提示词与快捷指令代码为图片，未查看。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Prompt and Shortcut code are images and were not viewed.",
+        "tags": [
+          "calendar",
+          "workaround"
+        ],
+        "apps": [
+          "Apple Calendar",
+          "Cloudflare",
+          "AgentMail"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：后续线程已读取完整。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-hans-sdd-meetup-notes",
+        "url": "https://x.com/Hans_Sunzihan/status/2101235463248130251",
+        "title": "北京交流会笔记：用 Grok Bot 做规格驱动开发",
+        "author": "Hans LilBk",
+        "author_url": "https://x.com/Hans_Sunzihan",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-19",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "北京线下交流会笔记：协调层用规格文件固定需求与验收标准，执行层由 Grok Bot 委托 Cursor 或云代理写代码，提交代码合并请求和证据。规格驱动开发分为草案、简略、完整三档，上线决策由人保留。",
+        "summary_en": "Meetup notes: a coordination layer keeps specs and acceptance criteria in the repo; Grok Bot delegates code, PRs and evidence to Cursor or cloud agents. SDD has three tiers; humans keep production calls.",
+        "verification_note_zh": "已读取作者本人在同一会话中的完整线程；未复现作者结果。为听讲者笔记，原分享者未具名；配图未查看。",
+        "verification_note_en": "Read the author's full self-thread in the same conversation; author results not reproduced. These are attendee notes; the original speaker is not named; images not viewed.",
+        "tags": [
+          "coding",
+          "spec-driven"
+        ],
+        "apps": [
+          "Cursor",
+          "GitHub"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：线程已读取。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-hijeffrey46-telegram-shared-bot",
+        "url": "https://x.com/hijeffrey46/status/2101695688371531900",
+        "title": "在 Telegram 群中共享一个 Grok Bot",
+        "author": "Jeffrey",
+        "author_url": "https://x.com/hijeffrey46",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-20",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "团队在 Telegram 群共享一个 Grok Bot：一个只在客户端内的配置助手管桥接脚本、令牌与白名单，另一个工作助手处理订单笔记并生成 PDF 回群，拒绝群内配置指令。",
+        "summary_en": "A team shares one Grok Bot via Telegram: an in-app setup bot owns the bridge script, tokens and allowlists; a worker bot turns order notes into PDFs in the thread and refuses config commands.",
+        "verification_note_zh": "已读取作者本人在同一会话中的完整线程；未复现作者结果。作者自述为非官方接入方式，可持续性未知。",
+        "verification_note_en": "Read the author's full self-thread in the same conversation; author results not reproduced. The author describes it as an unofficial setup of unknown durability.",
+        "tags": [
+          "team",
+          "channels"
+        ],
+        "apps": [
+          "Telegram"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：线程已读取。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-zeuss-two-templates-lessons",
+        "url": "https://x.com/zeuss_000/status/2103979981093355985",
+        "title": "零代码制作两个助手模板：网站监控与安全审查",
+        "author": "zeus",
+        "author_url": "https://x.com/zeuss_000",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-26",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "templates",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者用两周制作了网站监控和人工智能安全审查两个模板：前者默认只读并隐藏日志中的敏感信息，后者从攻击者视角检查提示注入和工具滥用。心得是像招聘员工一样写清职责与边界。",
+        "summary_en": "Two no-code templates: Site Sentry, a read-only site and deploy monitor that redacts secrets, and an AI Security Advisor that reviews prompt injection and tool abuse. Lesson: write the job like a hire.",
+        "verification_note_zh": "已读取作者本人在同一会话中的完整线程；未复现作者结果。",
+        "verification_note_en": "Read the author's full self-thread in the same conversation; author results not reproduced.",
+        "tags": [
+          "template",
+          "security",
+          "monitoring"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原 hold：外链博客可公开读取。原作为博客，X 帖为作者本人转发，按原作合并并记 original_url。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-julien-coulaud-bot-email-own-domain",
+        "url": "https://x.com/JulienCoulaud/status/2108912555741598058",
+        "title": "用自有域名邮箱连接 Grok Bot",
+        "author": "Julien",
+        "author_url": "https://x.com/JulienCoulaud",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-10",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者说明 Grok Bot 自带邮箱的限制，包括不能改名、共享信誉和无法登录查看，并给出通过工具连接器接入自有域名邮箱、用网页回调触发自动化、先只读并生成草稿的做法。",
+        "summary_en": "The author's article covers limits of the built-in @mail.grokbot.com inbox (no rename, shared reputation, no inbox view) and connecting an own-domain mailbox via MCP, webhook triggers, and draft-only first.",
+        "verification_note_zh": "已读取帖子及其链接的作者博客全文；作者为 Shipmail 创始人，文中方案涉及其自家付费产品，属商业利益相关内容；未复现。",
+        "verification_note_en": "Read the post and the linked blog in full; the author founded Shipmail and the approach uses his paid product, so it is commercially interested; not reproduced.",
+        "tags": [
+          "email",
+          "custom-domain"
+        ],
+        "apps": [
+          "Shipmail"
+        ],
+        "original_url": "https://shipmail.to/blog/grok-bot-email-on-your-own-domain"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "TITISZH 杭州 meetup 帖指向的原作；按原作收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-maiyang-sweeper-quota",
+        "url": "https://x.com/MaiYangAI/status/2098961066663580030",
+        "title": "三步减少 Grok Bot 用量：排查、止损与精简",
+        "author": "Mai Yang",
+        "author_url": "https://x.com/MaiYangAI",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-13",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者以用量页为基线，停掉或降频没人看的定时任务、去掉助手间多余中转，再精简记忆、技能和过期约束，并把流程做成可安装的 Sweeper 清道夫模板。",
+        "summary_en": "Using the Usage page as a baseline, the author stops or slows routines nobody reads, removes extra bot hops, and trims memory, skills and stale rules, packaged as an installable Sweeper template.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。作者为 SpaceXAI Ambassador；模板未安装检查。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. The author is a SpaceXAI Ambassador; the template was not installed.",
+        "tags": [
+          "usage",
+          "routines",
+          "template"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者为产品团队成员，给出具体上手顺序；X 原创首发，现有库无同作。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mattyp-five-steps-start",
+        "url": "https://x.com/mattyp/status/2095626442990297310",
+        "title": "Grok Bot 五步上手教程",
+        "author": "matt palmer",
+        "author_url": "https://x.com/mattyp",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "SpaceXAI 员工 Matt Palmer 的五步上手法：先连 Slack/Gmail/Notion 做检索总结，装手机端，建表格、邮件退订等工作流，再把日常任务改成定时任务与触发器。",
+        "summary_en": "Matt Palmer's five-step start: connect Slack, Gmail and Notion for retrieval, install mobile, build workflows like sheet updates and unsubscribes, then turn daily work into routines and triggers.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。作者为 SpaceXAI 员工，属个人分享而非官方文档。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Author is a SpaceXAI employee; personal post, not official docs.",
+        "apps": [
+          "Slack",
+          "Gmail",
+          "Notion",
+          "Figma"
+        ],
+        "tags": [
+          "onboarding",
+          "routines"
+        ],
+        "published": "2026-09-03"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体可执行的避坑清单，覆盖审批和用量控制。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kacperrutk-five-beginner-mistakes",
+        "url": "https://x.com/KacperRutk/status/2107124966332207548",
+        "title": "新手常见的五个错误及改法",
+        "author": "Kacper Rutkiewicz",
+        "author_url": "https://x.com/KacperRutk",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "列出新手五个常见错误及对策：把助手当聊天框、给全部权限、第一天就建团队、未设审批与用量上限等；建议优先连接器、在聊天中点名助手、隐藏助手不会停定时任务。",
+        "summary_en": "Five beginner mistakes and fixes: treating it as a chatbot, over-broad access, building a team on day one, no brakes. Prefer connectors, @-tag bots, and note hidden bots keep running routines.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。第五条在读取文本中被截断的部分未完全核对；设置项名称以作者描述为准。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Part of the final item was cut off; setting names are as the author describes.",
+        "tags": [
+          "mistakes",
+          "approvals",
+          "usage"
+        ],
+        "published": "2026-10-05"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "把 Routine 可靠性拆成可检查步骤，与官方 Skill/Routine 文档互补而非重复。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-routine-six-step-test",
+        "url": "https://x.com/Michael_Fenech_/status/2106352565528977469",
+        "title": "把工作设成定时任务之前的六步测试",
+        "author": "Michael",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "建议先手动跑通、修流程、存为技能、换输入测试、定义失败处理（来源不可用、数据过期、部分完成、需审批），最后再信任定时任务。",
+        "summary_en": "Run a job manually, fix the process, save it as a skill, test new inputs, define failure handling (unavailable source, stale data, partial runs, approvals), then test the routine before trusting it.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "routines",
+          "skills",
+          "failure-handling"
+        ],
+        "published": "2026-10-03"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "可复用的审计提示框架。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kocer-routine-audit",
+        "url": "https://x.com/kocer_eth/status/2101669438038634827",
+        "title": "每月审查定时任务：停掉低价值流程",
+        "author": "kocer",
+        "author_url": "https://x.com/kocer_eth",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "提出每月定时任务审计：列出所有触发过的定时任务，统计被采纳的产出，标记静默失败或被忽略的，提名一个应删除的并等待人工批准。",
+        "summary_en": "A monthly routine audit: list fired routines, count approved outputs, flag silent failures or ignored ones, nominate one to remove, and wait for human approval before deleting.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "routines",
+          "audit"
+        ],
+        "published": "2026-09-20"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "简洁可复用的建 Bot 方法。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-melvindvivas-bot-setup-framework",
+        "url": "https://x.com/melvindvivas/status/2107283624773227002",
+        "title": "五步配置框架：职责、插件、输出、频率与测试",
+        "author": "Melvin Vivas",
+        "author_url": "https://x.com/melvindvivas",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "五步建助手框架：明确职责、所需插件、结果去向、运行频率，并在自动化前手动测试；示例为找领英线索存入谷歌表格每天早上跑。",
+        "summary_en": "A five-part bot setup framework: purpose, plugins, output destination, routine cadence, and a manual test before automating; example saves LinkedIn leads to Google Sheets each morning.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "LinkedIn",
+          "Google Sheets"
+        ],
+        "tags": [
+          "bot-design"
+        ],
+        "published": "2026-10-06"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "结构完整的配置检查表。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-caesar-full-setup-map",
+        "url": "https://x.com/caesar_aii/status/2107465283208151151",
+        "title": "面向实际工作的十步配置清单",
+        "author": "cesar",
+        "author_url": "https://x.com/caesar_aii",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "十步配置清单：官方安装与数据设置、单一职责、审批规则（草稿不等于发送）、最小权限与只读验证、输出格式、首个任务、核验、长期偏好及可复用技能。",
+        "summary_en": "A 10-step setup map: official install and data settings, one job, approval rules, minimum access with read-only checks, output format, first task, verification, preferences, and a reusable skill.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。仅为目录式清单，各步细节有限。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. It is an outline; detail per step is limited.",
+        "tags": [
+          "setup",
+          "approvals",
+          "checklist"
+        ],
+        "published": "2026-10-06"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "有实测体验的频率建议。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-manuaf6-routine-frequency",
+        "url": "https://x.com/ManuAF6/status/2107486041942704163",
+        "title": "定时任务多久运行一次：作者的降频经验",
+        "author": "Manu",
+        "author_url": "https://x.com/ManuAF6",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者把每十五分钟检查邮件、会议、工单的定时任务改为每天一两次，因为高频只增加噪音和用量；人在场时直接手动调用。",
+        "summary_en": "The author cut 15-minute inbox, meeting and ticket routines to one or two passes a day because frequent runs added noise and token cost; when present, call the bot manually.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。同作者另两条短帖未单独收录。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Two shorter posts by the same author were not added separately.",
+        "tags": [
+          "routines",
+          "usage"
+        ],
+        "published": "2026-10-06"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体邮件工作流，现有库邮件条目均非 X 来源。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-grokbotguide-inbox-triage",
+        "url": "https://x.com/grokbotguide/status/2104534356341789142",
+        "title": "Gmail 收件箱分拣：标签、待办与回复草稿",
+        "author": "Jonathon",
+        "author_url": "https://x.com/grokbotguide",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "连接 Gmail 后，按待处理、等待回复、财务、收据、通讯订阅和保留等类别给邮件打标签；回复只保存为草稿，由用户自己发送。",
+        "summary_en": "A Gmail triage flow: connect Gmail, label mail as Action, Waiting, Money, Receipts, Newsletters or Keep, save replies to Drafts, and the user presses send.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。配图未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Attached image not viewed.",
+        "apps": [
+          "Gmail"
+        ],
+        "tags": [
+          "email",
+          "triage"
+        ],
+        "published": "2026-09-28"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "带边界说明的公开模板。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-ryantanaka-apply-desk",
+        "url": "https://x.com/RyanTanaka/status/2104511660799189490",
+        "title": "求职助手模板：找岗位、改简历与准备面试",
+        "author": "Ryan Tanaka",
+        "author_url": "https://x.com/RyanTanaka",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "recipes",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "求职助手模板：工作日早上找 5 个匹配职位并引用原文理由，依据 Gmail 更新申请表，生成定制简历，按日历写面试准备，周日复盘；不代为申请或发信。",
+        "summary_en": "A job-hunt bot template: five matched roles each weekday with quotes, tracker updates from Gmail, tailored resumes, interview prep from Calendar, and a Sunday review; it never applies or sends.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。模板本身未安装检查。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The template itself was not installed or inspected.",
+        "apps": [
+          "Gmail",
+          "Google Calendar"
+        ],
+        "tags": [
+          "template",
+          "job-search"
+        ],
+        "published": "2026-09-28"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "真实行业案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-hwfeinstein-home-remodel-desk",
+        "url": "https://x.com/hwfeinstein/status/2099913318786085021",
+        "title": "装修公司助手：采购、收据与项目进度",
+        "author": "Howard “Howie” in Washington",
+        "author_url": "https://x.com/hwfeinstein",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "recipes",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "装修公司助手模板：采购、收据、分包追踪，金额以收据为准不编造价格，外发邮件仅草稿，Gmail 分文件夹同步，每周一三五出进度报告。每个助手只负责一类工作。",
+        "summary_en": "A remodeling bot template: purchase, receipt and subcontractor trackers, receipt-wins money rules, draft-only outbound mail, Gmail folder sync, and Mon/Wed/Fri status reports. One bot, one job.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。模板链接未打开。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Template link not opened.",
+        "apps": [
+          "Gmail"
+        ],
+        "tags": [
+          "template",
+          "small-business"
+        ],
+        "published": "2026-09-15"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "转述官方内容但给出具体用例；若后续收录官方 101 原文，应考虑合并。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mikogen-four-workflows-101",
+        "url": "https://x.com/mikogen/status/2102759432488702259",
+        "title": "官方入门指南中的四个工作流程",
+        "author": "Michael shares.",
+        "author_url": "https://x.com/mikogen",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "整理官方入门指南中的四个流程：把 X 关注整理成 Notion 私人客户关系库，建立健身教练助手，汇总 Slack、Notion、GitHub 上下文交给编码代理，以及跨应用检索内部问题。",
+        "summary_en": "Four workflows summarized from Grok Bot 101: an X-follows Notion CRM, a fitness coach bot, gathering Slack/Notion/GitHub context for a coding agent, and cross-app internal search.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为二手转述官方指南，未核对原指南。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Secondhand summary of the official guide; the guide itself was not checked here.",
+        "apps": [
+          "Notion",
+          "Slack",
+          "GitHub",
+          "Cursor"
+        ],
+        "tags": [
+          "workflows"
+        ],
+        "published": "2026-09-23"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "清晰的概念入门。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mikogen-three-ways-to-talk",
+        "url": "https://x.com/mikogen/status/2101909106315444353",
+        "title": "与助手协作的三种方式：聊天、定时触发与助手互联",
+        "author": "Michael shares.",
+        "author_url": "https://x.com/mikogen",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "说明与助手交互的三种方式：直接聊天、定时任务与触发器（定时或监听 Slack、GitHub 事件）、助手之间互相发消息和触发。",
+        "summary_en": "Three ways to interact with a bot: chat, routines and triggers (schedules or Slack and GitHub events), and other bots messaging and triggering each other.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Slack",
+          "GitHub"
+        ],
+        "tags": [
+          "routines",
+          "multi-bot"
+        ],
+        "published": "2026-09-21"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体用量技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kononovme-usage-tips-day1",
+        "url": "https://x.com/kononovme/status/2100050307715657790",
+        "title": "活动首日用量经验：减少浏览器操作、审查定时任务",
+        "author": "Conan",
+        "author_url": "https://x.com/kononovme",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "整理活动当天的省用量建议：浏览器操作最耗额度，能用连接器就用；定期审查定时任务；建团队前花一至两小时梳理分工；示例把每小时报销定时任务改为周五 8 点。",
+        "summary_en": "Usage tips from launch-event day 1: browser actions cost most, prefer connectors, audit routines, map roles for 1-2 hours first; an hourly expense routine was moved to Fridays at 8am.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为活动内容转述，未观看直播。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Secondhand from the event; livestream not watched.",
+        "tags": [
+          "usage",
+          "routines"
+        ],
+        "published": "2026-09-16"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "资源目录，与现有 coolxeo 技能集不同。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-godsboy-top-skills-github",
+        "url": "https://x.com/GodsBoy7777/status/2109262741089263731",
+        "title": "十个可供 Grok Bot 使用的 GitHub 技能仓库",
+        "author": "Dewaldt Huysamen",
+        "author_url": "https://x.com/GodsBoy7777",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "templates",
+          "resources"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "列出十个高星技能仓库，包括 Superpowers 和 Anthropic 技能库，说明可把仓库链接发给助手来添加技能；同时提醒先阅读其内容，因为技能会使用助手已有的权限运行。",
+        "summary_en": "Ten high-star SKILL.md repos (Superpowers, Anthropic skills and more), with the tip to paste a repo URL and ask the bot to add it, and a warning to read skills first since they run with bot access.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。未打开各仓库，星数为作者当日数据。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Repos not opened; star counts are the author's.",
+        "apps": [
+          "GitHub"
+        ],
+        "tags": [
+          "skills",
+          "directory"
+        ],
+        "published": "2026-10-11"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "可复用 Skill，非 Lauren 本人发布，已注明。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-unicodef1wn-lauren-tan-verify-skill",
+        "url": "https://x.com/unicodef1wn/status/2102081277683810491",
+        "title": "把 Lauren Tan 的代理核验方法整理成技能",
+        "author": "unicode",
+        "author_url": "https://x.com/unicodef1wn",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "把工程师 Lauren Tan 的分享整理为核验技能：先读代码、先复现问题、运行真实用户流程、用功能地图检查覆盖情况，再把反复出现的评审意见固化为类型检查、代码检查和持续集成规则。",
+        "summary_en": "A skill packaging Lauren Tan's talks: read code first, reproduce bugs, run real user flows, use feature maps to verify, and turn repeated review comments into types, lint or CI.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。Skill 文件未打开；内容是第三方整理。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Skill file not opened; third-party packaging.",
+        "tags": [
+          "skills",
+          "coding",
+          "verification"
+        ],
+        "published": "2026-09-21"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体技能迁移案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-wjw-pstack-to-grok-build",
+        "url": "https://x.com/wjw_writes/status/2109434851741016348",
+        "title": "把 pstack 技能迁移到 Grok Build 命令行工具",
+        "author": "W.J. Winter",
+        "author_url": "https://x.com/wjw_writes",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者让 Grok Bot 读取 pstack 全部 SKILL.md 并对照 Grok Build 技能文档，替换 Cursor 专用部分，约 25 分钟产出 46 个可安装技能。",
+        "summary_en": "The author had Grok Bot read every pstack SKILL.md, check the Grok Build skills docs, swap out Cursor-only parts, and produce 46 installable skills in about 25 minutes.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Grok Build"
+        ],
+        "tags": [
+          "skills",
+          "porting"
+        ],
+        "published": "2026-10-12"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体插件接入步骤。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-techhubgroup-linkedin-connector",
+        "url": "https://x.com/techhubgroup/status/2110465301099978977",
+        "title": "用插件连接领英：授权、测试与发送边界",
+        "author": "Techub Group",
+        "author_url": "https://x.com/techhubgroup",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "通过设置中的插件添加领英连接器（如 Composio、LinkMCP），走标准授权不交密码，先做低风险测试；提醒直接浏览器登录有封号风险，外发需人工批准。",
+        "summary_en": "Add a LinkedIn connector such as Composio or LinkMCP via plugins, authorize with OAuth rather than a password, test a low-risk action first; direct browser login risks bans and sends need approval.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。未实测；插件名称以作者为准。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Not tested; plugin names are the author's.",
+        "apps": [
+          "LinkedIn",
+          "Composio"
+        ],
+        "tags": [
+          "plugins",
+          "oauth"
+        ],
+        "published": "2026-10-14"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文实用上手建议。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-todaykan-bot-templates-start",
+        "url": "https://x.com/TodayKan/status/2105669007256772710",
+        "title": "新手从官方助手模板开始",
+        "author": "Today🦘",
+        "author_url": "https://x.com/TodayKan",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "建议新手从模板市场工程类官方模板开始：挑接近自己工作的模板，添加后先看自带的技能、定时任务和连接器，再改成自己的流程；编码可交给 Cursor。",
+        "summary_en": "Suggests beginners start with official engineering templates in the Marketplace: add one close to your work, inspect bundled skills, routines and connectors, then adapt it; coding can go to Cursor.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Cursor",
+          "GitHub"
+        ],
+        "tags": [
+          "templates",
+          "onboarding"
+        ],
+        "published": "2026-10-01"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文 Skill 入门。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kowalprato-save-as-skill",
+        "url": "https://x.com/KowalPrato4o/status/2110112146889564216",
+        "title": "把验收过的工作流程保存成技能",
+        "author": "Kowal Prator",
+        "author_url": "https://x.com/KowalPrato4o",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "说明技能的用法：验收过一次的流程让助手「存成技能」，写成通用步骤不写死链接和账号，之后直接说「跑这个技能」。",
+        "summary_en": "How to use skills: after a process works once, ask the bot to save it as a skill in generic steps without hard-coded links or accounts, then simply ask it to run that skill.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "skills"
+        ],
+        "published": "2026-10-13"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文简明上手与模板安全提示。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-wangsicong-start-checklist",
+        "url": "https://x.com/_WangSiCong/status/2104884490434675121",
+        "title": "三步上手与权限、模板检查要点",
+        "author": "SuperKOI",
+        "author_url": "https://x.com/_WangSiCong",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "上手三步：写清职责、先手动跑一次、再上定时任务；发帖、付款、删除必须人工批准；装模板前先看其技能、定时任务与插件，装后自己接账号并关掉危险定时任务。",
+        "summary_en": "Three start steps: define the job, run once manually, then add a routine; require approval for posting, paying and deleting; inspect a template's skills, routines and plugins before and after installing.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "onboarding",
+          "approvals"
+        ],
+        "published": "2026-09-29"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文用量技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-dustadd-grok-build-token-saving",
+        "url": "https://x.com/dustADD/status/2109451172180643877",
+        "title": "把重型编码任务交给 Grok Build 以节省用量",
+        "author": "dust",
+        "author_url": "https://x.com/dustADD",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者在助手里装好并登录 Grok Build，把大段改代码、仓库重构、长上下文分析交给终端 grok，助手只负责连接器、人设和对外发帖，以减少用量。",
+        "summary_en": "The author installed Grok Build inside the bot and sends heavy code edits, refactors and long-context analysis to the terminal tool, leaving connectors and posting to the bot to save tokens.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。省量效果为作者自述。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Savings are self-reported.",
+        "apps": [
+          "Grok Build"
+        ],
+        "tags": [
+          "usage",
+          "coding"
+        ],
+        "published": "2026-10-12"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体端到端案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-0xlangeai-media-manager",
+        "url": "https://x.com/0xlangeai/status/2102414250052669785",
+        "title": "视频包装助手：转写、标题、封面与上传",
+        "author": "蓝哥AI",
+        "author_url": "https://x.com/0xlangeai",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "转述 Matt Palmer 的视频包装助手：上传 YouTube 草稿后提供 Figma 链接，助手下载视频并转写，参考以往风格起草标题和时间戳说明，在 Figma 修改封面后回写 YouTube。",
+        "summary_en": "Describes Matt Palmer's Media Manager bot: after a YouTube draft and a Figma link, it transcribes via AssemblyAI, writes titles and timestamped descriptions, edits a Figma thumbnail, and writes back via the YouTube API.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为中文转述，未看原视频或模板。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Chinese secondhand write-up; original video and template not viewed.",
+        "apps": [
+          "YouTube",
+          "Figma",
+          "AssemblyAI"
+        ],
+        "tags": [
+          "content",
+          "template"
+        ],
+        "published": "2026-09-22"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "多 Bot 工作流模板。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mrbeko-root-agent-v2",
+        "url": "https://x.com/mrbeko_/status/2108154519058006250",
+        "title": "多助手团队协调模板：派工、复核与汇报",
+        "author": "Berkay",
+        "author_url": "https://x.com/mrbeko_",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "多助手团队协调模板：先核查连接器是否真正可用，负责人复述任务后再派工，对部分交付也单独复核，以文档和摘要汇报；仓库提供完整技能文本供审查。",
+        "summary_en": "A coordinator template for bot teams: probes connectors before relying on them, hands work to a Lead only after readback, reviews even partial deliveries, and reports in Markdown; full skill text is in a repo.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。模板与仓库未打开。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Template and repo not opened.",
+        "tags": [
+          "multi-bot",
+          "coordinator"
+        ],
+        "published": "2026-10-08"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体且易被忽视的运行规则。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-grokbotradar-retire-a-bot",
+        "url": "https://x.com/GrokBotRadar/status/2105513032915038493",
+        "title": "隐藏助手不会停止定时任务：如何正确停用",
+        "author": "Fan Grok Bot Radar",
+        "author_url": "https://x.com/GrokBotRadar",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "提醒：隐藏助手只是从侧栏移除，其定时任务仍按计划运行；删除助手会带走定时任务，但文件和登录留在共享电脑上，因此应按顺序退役。",
+        "summary_en": "Hiding a bot only removes it from the sidebar while its routines keep running; deleting removes routines but files and sign-ins stay on the shared computer, so retire bots in order.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。四步卡片为图片未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The four-step card image was not viewed.",
+        "tags": [
+          "routines",
+          "cleanup"
+        ],
+        "published": "2026-10-01"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "细节丰富的多 Bot 开发案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-undefinedki-lingxi-li-team",
+        "url": "https://x.com/undefinedKi/status/2109737642090701038",
+        "title": "工程团队案例：管理两百多个编码代理",
+        "author": "Yarchi",
+        "author_url": "https://x.com/undefinedKi",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "转述 Lingxi Li 的配置：5 个分领域助手把任务转成带验收证据的 Cursor 云代理，经理助手每天一对一沟通 与事故复盘，按 30 分钟/每日/5 分钟节奏巡检，低风险高置信度的代码合并请求自动合并。",
+        "summary_en": "Summarizes Lingxi Li's setup: five domain bots turn tasks into Cursor cloud agents with expected proof, a manager bot runs daily 1:1s and postmortems, timed PR checks, and low-risk PRs auto-merge.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为第三方转述工作坊内容，未看原视频。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Third-party summary of a workshop; video not watched.",
+        "apps": [
+          "Cursor",
+          "GitHub"
+        ],
+        "tags": [
+          "coding",
+          "multi-bot"
+        ],
+        "published": "2026-10-12"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "产品团队成员的方法论。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-poteto-first-last-mile",
+        "url": "https://x.com/poteto/status/2107510472601985336",
+        "title": "用助手处理工作的前期准备与后续跟进",
+        "author": "lauren",
+        "author_url": "https://x.com/poteto",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "Lauren Tan 分享如何用助手处理工作的前期准备和后续跟进：连接日历、客户关系系统、Slack 和邮件来提供上下文，并通过定时或事件触发的流程自动跟进。",
+        "summary_en": "Lauren Tan of SpaceXAI on using bots for the first and last mile: connect calendar, CRM, Slack and email to give context instead of micromanaging, and use scheduled or event routines to follow through.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。长帖后半段在接口返回中被截断。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The latter part of the long post was truncated in the API response.",
+        "apps": [
+          "Slack"
+        ],
+        "tags": [
+          "routines",
+          "context"
+        ],
+        "published": "2026-10-06"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "短但具体的端到端链路。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-anthonydo-slack-to-pr",
+        "url": "https://x.com/AnthonyDo/status/2102296892948517256",
+        "title": "从 Slack 客户反馈到 GitHub 问题与代码合并请求",
+        "author": "Anthony",
+        "author_url": "https://x.com/AnthonyDo",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者的流程：Slack 中的客户缺陷或需求转成 GitHub 问题单，交给 Cursor 云代理，代码合并请求回到 Grok Bot 等人工批准，之后计划让幕僚长助手代审。",
+        "summary_en": "The author's pipeline: Slack bug reports become GitHub issues, go to a Cursor cloud agent, and PRs return to Grok Bot for human approval, with plans to let a chief-of-staff bot approve later.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Slack",
+          "GitHub",
+          "Cursor"
+        ],
+        "tags": [
+          "coding",
+          "workflow"
+        ],
+        "published": "2026-09-22"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "开发场景实际使用。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-ai-for-success-cloud-agents",
+        "url": "https://x.com/ai_for_success/status/2109946042934534471",
+        "title": "把编码任务交给 Cursor 云代理并等待人工批准",
+        "author": "AshutoshShrivastava",
+        "author_url": "https://x.com/ai_for_success",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者让 Grok Bot 把编码交给 Cursor 云代理在 GitHub 仓库上研究、写代码并开带预览链接的代码合并请求，合并前须本人批准，无需打开电脑或 IDE。",
+        "summary_en": "The author has Grok Bot hand coding to a Cursor Cloud Agent on a GitHub repo that researches, codes and opens a PR with a preview link; nothing merges until the author approves.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Cursor",
+          "GitHub"
+        ],
+        "tags": [
+          "coding"
+        ],
+        "published": "2026-10-13"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "Bot 描述写法。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mikogen-three-fields",
+        "url": "https://x.com/mikogen/status/2101296130831138883",
+        "title": "创建助手的三个核心字段：名称、头衔与描述",
+        "author": "Michael shares.",
+        "author_url": "https://x.com/mikogen",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "助手的核心设置是名称、头衔和描述，可从语音备忘开始，把工作步骤写具体。示例为每个工作日扫描 X 书签、起草原型提示，并在获得批准后启动云代理。",
+        "summary_en": "A bot is essentially name, title and description; start from a voice note and describe the workflow concretely. Example: Tech Demos scans X bookmarks each weekday, drafts a prompt, and starts a cloud agent once approved.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "apps": [
+          "Cursor"
+        ],
+        "tags": [
+          "bot-design"
+        ],
+        "published": "2026-09-19"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "真实运营案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-austinginder-routines-offloaded",
+        "url": "https://x.com/austinginder/status/2102065336811966739",
+        "title": "托管服务创始人的定时任务：巡检、维护与整理",
+        "author": "Austin Ginder",
+        "author_url": "https://x.com/austinginder",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "托管服务创始人分享交给定时任务的工作：扩充网站列表、每日为客户做恶意软件巡检、维护网站并找问题，称定时任务像处理真实工作的计划任务。",
+        "summary_en": "A hosting founder lists routines handed to Grok Bot: growing site listings, a daily malware hunt for customers, and keeping a site fresh; he calls routines cron for real work.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "routines",
+          "ops"
+        ],
+        "published": "2026-09-21"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "事件触发用法。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-realsamhu-event-routines",
+        "url": "https://x.com/realSamHu/status/2100353286746566838",
+        "title": "让告警事件自动触发故障调查与分拣",
+        "author": "Samuel Hu",
+        "author_url": "https://x.com/realSamHu",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "建议订阅 Datadog、Sentry 和 Slack 事件，后端告警触发后让助手自动调查和分拣，而不只依赖每日定时运行。",
+        "summary_en": "Subscribe routines to Datadog, Sentry or Slack events so a backend alert spins up bots to investigate and triage, rather than relying only on daily schedules.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。同作者另一条近似转写已作重复处理。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. A near-identical second post was treated as a duplicate.",
+        "apps": [
+          "Datadog",
+          "Sentry",
+          "Slack"
+        ],
+        "tags": [
+          "routines",
+          "triggers"
+        ],
+        "published": "2026-09-16"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "销售角色模板。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-carolinadill-foundersales",
+        "url": "https://x.com/CarolinaDill/status/2109866655538970869",
+        "title": "一个销售助手承担客户调研、外联草稿与跟进",
+        "author": "Carolina Dill",
+        "author_url": "https://x.com/CarolinaDill",
+        "source": "x",
+        "lang": "en",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者把官方创始人销售指南中的多助手配置，浓缩成一个销售助手，负责潜在客户调研、外联草稿和跟进提醒；向外发送内容前须经批准。",
+        "summary_en": "After reading the official founder-led sales guide (a chief of staff plus 8 bots), the author condensed it into one FounderSales bot that researches prospects, drafts outreach and tracks follow-ups, with approval.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。模板在评论中，未打开。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Template is in replies and was not opened.",
+        "tags": [
+          "sales",
+          "template"
+        ],
+        "published": "2026-10-13"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者回看新发现的原创长文；与其 20 仓库列表为不同作品。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-maestrooth-ten-prompts",
+        "url": "https://x.com/maestrooth/status/2105288063391875450",
+        "title": "十个岗位提示词：生成草稿和清单后停止",
+        "author": "maestro",
+        "author_url": "https://x.com/maestrooth",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-30",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "templates",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "十个可复制的岗位提示词，涵盖销售开发、客服、招聘、分析、研究和幕僚长等角色，均止于草稿或清单；另列不自行发送或付款、不可逆动作先问、使用专用账号、不打印密钥、汇报执行情况等规则。",
+        "summary_en": "Ten copy-ready role prompts (SDR, support, recruiter, analyst, researcher, chief of staff) that all stop at a draft, plus five safety lines: never send or pay, ask first, dedicated accounts, no keys.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。部分提示词以代码块形式读取，个别为图片未查看。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Most prompts were read as code blocks; some content is in images not viewed.",
+        "tags": [
+          "prompts",
+          "approvals"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文圈高收藏教程，从 fengjhui 长文引用溯源到原作。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kin-wechat-guide",
+        "url": "https://x.com/KinGao476942/status/2108132811635032316",
+        "title": "Grok Bot 接入微信的三步教程",
+        "author": "Kin",
+        "author_url": "https://x.com/KinGao476942",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-08",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者分三步把 Grok Bot 接入微信：把整理好的提示词发给助手、建立微信通道并提供所需信息、微信扫码绑定，之后在微信里指挥多个助手。",
+        "summary_en": "The author connects Grok Bot to WeChat in three steps: send a prepared prompt to the bot, set up a WeChat channel with the needed values, and scan a QR code to bind, then direct bots from WeChat.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。属非官方第三方接入，账号与安全风险需自行评估；作者为 SpaceXAI 认证大使。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Unofficial third-party integration; weigh account and security risk. The author is a SpaceXAI ambassador.",
+        "tags": [
+          "channels",
+          "third-party"
+        ],
+        "apps": [
+          "WeChat"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者回看发现的原作；同作者导读帖已合并。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kin-feishu-guide",
+        "url": "https://x.com/KinGao476942/status/2110325058585698654",
+        "title": "把多个 Grok Bot 接入飞书",
+        "author": "Kin",
+        "author_url": "https://x.com/KinGao476942",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-14",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者教程：把多个 Grok Bot 接到飞书，在飞书中给助手派活并收结果，附需要发给助手的提示词与配置步骤。",
+        "summary_en": "The author's guide to connecting a set of Grok Bots to Feishu (Lark), so tasks can be assigned and results received in Feishu, with the prompt and configuration steps to give the bot.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。属非官方接入；配图未查看。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Unofficial integration; images not viewed.",
+        "tags": [
+          "channels",
+          "third-party"
+        ],
+        "apps": [
+          "Feishu"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "从 fengjhui 长文引用溯源到的高收藏原作。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-app-sail-claude-code-cloud",
+        "url": "https://x.com/app_sail/status/2108523630900748335",
+        "title": "在 Grok Bot 云电脑上全天运行 Claude Code",
+        "author": "Asa",
+        "author_url": "https://x.com/app_sail",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-09",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "长文让助手逐步执行：在 Grok Bot 云电脑装 Orca 作远程服务器，经 Tailscale 让 Mac 和手机连入，控制其中运行的 Claude Code；列出需人工确认的授权与登录步骤。",
+        "summary_en": "A step-by-step article to hand the bot: install Orca on the Grok Bot computer as a remote server, connect Mac and phone through Tailscale to drive Claude Code there, with the human sign-in steps listed.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。需另行订阅 Claude；属社区玩法，非官方支持。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Requires a separate Claude subscription; community approach, not officially supported.",
+        "tags": [
+          "cloud-computer",
+          "coding"
+        ],
+        "apps": [
+          "Claude Code",
+          "Tailscale",
+          "Orca"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者回看新发现原创长文。同作者引用式短帖未单独收。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-manager-crash-course",
+        "url": "https://x.com/Michael_Fenech_/status/2110655208078631110",
+        "title": "多助手团队管理入门：委派、检查点与复盘",
+        "author": "Michael",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-15",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "把管理学技能用于多助手：委派前先定优先级、写清结果与边界、按能力分配、设检查点、别急于相信流畅答案、复盘并改流程，引用 CCL 等管理研究。",
+        "summary_en": "Management skills for running several bots: set priorities before delegating, define outcomes and limits, match work to ability, add checkpoints, distrust fluent answers, review and fix the process.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced.",
+        "tags": [
+          "multi-bot",
+          "management"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "带完整提示词的销售案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-quiet-deals-sweep",
+        "url": "https://x.com/Michael_Fenech_/status/2110439998038200787",
+        "title": "找回沉默客户：回看九十天记录并起草跟进",
+        "author": "Michael",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-14",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "可直接粘贴的提示词：回看 90 天邮件、日历与会议纪要，找出漏跟进的客户，排除进行中或已拒绝的，按理由强弱排序并起草跟进，只交草稿不发送，可改为每月定时任务。",
+        "summary_en": "A paste-in prompt: review 90 days of email, calendar and notes, find missed customer follow-ups, exclude active or declined ones, rank them, draft messages for review without sending, then make it monthly.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。配图未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Image not viewed.",
+        "tags": [
+          "sales",
+          "prompt",
+          "routines"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-maiyang-plus-alias-routines",
+        "url": "https://x.com/MaiYangAI/status/2110606555578335572",
+        "title": "用邮箱加号别名分流不同定时任务",
+        "author": "Mai Yang",
+        "author_url": "https://x.com/MaiYangAI",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-15",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "Grok Bot 自带邮箱支持加号别名（如 +newsletters、+receipts），可建只监听某个别名的定时任务分别做摘要或整理账单；哪个别名收到垃圾邮件也能看出谁泄露了地址。",
+        "summary_en": "Grok Bot's inbox supports plus aliases (+newsletters, +receipts); routines can listen to one alias each to summarize or file bills, and a spammed alias shows who leaked the address.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。引用的他人帖子未读取。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The quoted post was not read.",
+        "tags": [
+          "email",
+          "routines"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者回看新发现的模板。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-melvindvivas-language-coach",
+        "url": "https://x.com/melvindvivas/status/2110632657814262194",
+        "title": "语言教练模板：每日练习与八周学习计划",
+        "author": "Melvin Vivas",
+        "author_url": "https://x.com/melvindvivas",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-15",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "语言学习助手模板：选语言和水平后，每天早课、午间语音发音练习、晚间测验与周日长测，附 8 周计划与进度追踪，也可随时语音练习。",
+        "summary_en": "A language-learning bot template: pick a language and level for a morning lesson, a midday voice drill, an evening quiz plus a longer Sunday one, an 8-week plan with tracking, and practice anytime.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。模板链接未打开。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Template link not opened.",
+        "tags": [
+          "template",
+          "learning",
+          "voice"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体设置步骤。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-melvindvivas-voice-settings",
+        "url": "https://x.com/melvindvivas/status/2110578219422548378",
+        "title": "设置语音助手的语速、语言、声音与个性",
+        "author": "Melvin Vivas",
+        "author_url": "https://x.com/melvindvivas",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-15",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "设置方法：点语音图标进入语音模式，在设置里调整语速（最高 2 倍）和语言，选择声音与个性，语言检测可保留自动。",
+        "summary_en": "How to customize voice: open Voice Mode from the voice icon, adjust speaking speed (up to 2x) and language in Settings, choose a voice and personality, and leave language detection on Auto.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。配图未查看；设置项名称以作者描述为准。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Image not viewed; setting names are as the author describes.",
+        "tags": [
+          "voice",
+          "settings"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "常见问题的具体解法。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-0xlangeai-local-exec-setting",
+        "url": "https://x.com/0xlangeai/status/2110577151519178919",
+        "title": "助手不能操作本机电脑时的设置办法",
+        "author": "蓝哥AI",
+        "author_url": "https://x.com/0xlangeai",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-15",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "如果 Grok Bot 不让操作自己的电脑，到设置里的电脑项，把在这台电脑上执行改成每次询问即可。",
+        "summary_en": "If Grok Bot won't operate your own computer, go to the computer section in Settings and set local execution to ask every time.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。设置路径以作者描述与截图为准，截图未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The settings path is as the author describes; screenshots not viewed.",
+        "tags": [
+          "local-execution",
+          "troubleshooting"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体界面技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-carolinadill-titles-sections",
+        "url": "https://x.com/CarolinaDill/status/2110488590669185451",
+        "title": "用头衔与侧栏分组整理多个助手",
+        "author": "Carolina Dill",
+        "author_url": "https://x.com/CarolinaDill",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-14",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "助手头衔只是名字旁的显示文字，不负责排序或任务路由，可用来标注角色；在设置或编辑资料中填写，再用侧栏分组固定位置，“未分组”也可以移动。",
+        "summary_en": "A bot's title is display text next to its name; it doesn't sort or route, but works as a role label. Set it in settings or Edit Profile, and use sidebar sections, including movable Unassigned, to group bots.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。视频未观看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Video not watched.",
+        "tags": [
+          "organization"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体可复用的省额度做法。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-carolinadill-gemini-bot",
+        "url": "https://x.com/CarolinaDill/status/2110404798860177770",
+        "title": "把简单问题转交 Gemini 的助手模板",
+        "author": "Carolina Dill",
+        "author_url": "https://x.com/CarolinaDill",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-10-14",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "bots",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者建立一个把简单问题转发给 Google Gemini、再带回并标注答案的助手。密钥通过安全卡片提交，不放入聊天；助手会自动选择可用模型。",
+        "summary_en": "The author built a bot that forwards a question to Google Gemini and returns a labeled answer, using free Gemini for simple questions; the API key goes in via a secure secret card, never the chat.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。视频与评论区模板未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Video and template in replies not viewed.",
+        "tags": [
+          "template",
+          "cost"
+        ],
+        "apps": [
+          "Gemini"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体操作技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mattyp-share-plugin-links",
+        "url": "https://x.com/mattyp/status/2101491045553070094",
+        "title": "一键分享 Grok Bot 插件安装链接",
+        "author": "matt palmer",
+        "author_url": "https://x.com/mattyp",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-09-20",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "在插件页点链接图标即可得到 grokbot:// 安装深链，发给别人一点即装；作者注明这些链接仅在 X 桌面端可点。",
+        "summary_en": "On a plugin's page, click the link icon to get a grokbot:// install deeplink anyone can tap; the author notes these links only work on X desktop clients.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。作者为 SpaceXAI 员工，属个人分享。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The author is a SpaceXAI employee; personal post.",
+        "tags": [
+          "plugins"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "zoomq 中文全文学习帖的原作，按原作收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-lingxi-grok-bot-for-engineering",
+        "url": "https://x.com/lingxi/status/2094493172516966781",
+        "title": "工程实践：用 Grok Bot 管理编码代理",
+        "author": "Lingxi Li",
+        "author_url": "https://x.com/lingxi",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-31",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "SpaceXAI 工程师介绍团队如何用 Grok Bot 做工程：让它像实习生一样管理编码代理、在人离开时推进任务、学习个人工作方式，并分享具体配置与流程。",
+        "summary_en": "A SpaceXAI engineer on how the team builds with Grok Bot: managing coding agents like a capable intern, keeping work moving while away, learning how you work, with concrete setup and flows.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。作者为 SpaceXAI 员工，个人分享非官方文档。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. The author is a SpaceXAI employee; personal post, not official docs.",
+        "tags": [
+          "coding",
+          "engineering"
+        ],
+        "apps": [
+          "Cursor",
+          "GitHub",
+          "Slack"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "shao__meng 中文归纳帖的原作，按原作收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mvanhorn-every-grok-bot-hack",
+        "url": "https://x.com/mvanhorn/status/2092629365045559547",
+        "title": "作者自用的二十一条 Grok Bot 技巧",
+        "author": "Matt Van Horn",
+        "author_url": "https://x.com/mvanhorn",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-26",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者汇总自用的二十一条技巧，包括先计划后执行、分层指令、录屏教学、独立邮箱、电话外呼、浏览器会话同步和常用服务采用命令行工具，并建议让助手逐条配置。",
+        "summary_en": "The author's 21 hacks: plan first, layered instructions, screen-recorded teaching, separate inboxes, phone calls, cookie sync, CLIs for frequent services, and pasting the article into your bot to set it up.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。文中多款工具为作者本人开源项目，有利益相关。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Several tools mentioned are the author's own projects.",
+        "tags": [
+          "hacks",
+          "setup"
+        ],
+        "apps": [
+          "AgentMail",
+          "Twilio",
+          "Tailscale"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "FinanceYF5 两条转述帖的原作，按原作收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-benln-team-pro-tips",
+        "url": "https://x.com/benln/status/2092258694352208213",
+        "title": "团队进阶技巧：分工、定时任务与审批",
+        "author": "Ben Lang",
+        "author_url": "https://x.com/benln",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-25",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "Ben Lang 汇总团队技巧：助手按角色分工、用频道组织项目、定时任务不要太频繁、重复任务交给新助手、为写入与破坏性操作设审批规则、喂历史样例、设代理主管统一规则。",
+        "summary_en": "Ben Lang's roundup of team tips: bots as roles, channels per project, routines not too frequent, give recurring work to a fresh bot, approval rules for writes, past examples, and a Chief of Agents for shared rules.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为汇总团队分享的二手整理，作者为 SpaceXAI 成员。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. A secondhand roundup of team tips; the author is on the SpaceXAI team.",
+        "tags": [
+          "tips",
+          "approvals",
+          "routines"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "同作者短帖为该长文的摘要，已合并。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-beamnxw-15-use-cases",
+        "url": "https://x.com/beamnxw/status/2091181392155570202",
+        "title": "十五个工作用例与可复制提示词",
+        "author": "beamnxw ./",
+        "author_url": "https://x.com/beamnxw",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-22",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "长文给出十五个用例及可复制提示词，包括竞品简报、发票审核、缺陷复现、代码审查和 Slack 事件处理。通用步骤是建立助手、写清职责、粘贴提示、连接插件，先运行可逆任务再设定时任务。",
+        "summary_en": "Fifteen copy-ready use cases (competitor brief, invoice review, bug repro, PR review, Slack escalation) and a five-step loop: one bot, a precise job, the prompt, one plugin, a reversible run before scheduling.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced.",
+        "tags": [
+          "use-cases",
+          "prompts"
+        ],
+        "apps": [
+          "Slack",
+          "GitHub",
+          "Notion"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期具体上手路线。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kanikabk-one-person-company",
+        "url": "https://x.com/KanikaBK/status/2090453619833496003",
+        "title": "用 Grok Bot 搭建全天候运行的一人公司",
+        "author": "Kanika",
+        "author_url": "https://x.com/KanikaBK",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-20",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "清单式路线：先写公司做什么、不许单独做什么，先连邮件与日历，建一个只出清单不发送的幕僚长，做一次真任务后存成技能，技能好用再加定时任务，之后再拆分多个助手。",
+        "summary_en": "A checklist route: write what the company does and must never do alone, connect mail and calendar, start one draft-only Chief of Staff, save a good run as a skill, add routines later, then split into bots.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。引用帖未读取。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. The quoted post was not read.",
+        "tags": [
+          "solo-founder",
+          "skills",
+          "routines"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期具体教程。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-thedogfather-local-pc-control",
+        "url": "https://x.com/thedogfather/status/2091197750582849571",
+        "title": "让 Grok Bot 操作 Windows 电脑",
+        "author": "Nick Losciuto",
+        "author_url": "https://x.com/thedogfather",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-22",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者给出在 Windows 上让助手操作本机的步骤：确认可用套餐、安装官方桌面端、在设置中开启本机访问，并提示文件访问、执行本地命令属于高风险。",
+        "summary_en": "Steps to let the bot operate a Windows PC: check an eligible plan, install the official desktop app, enable local computer access in settings, with a warning that file access and local commands are high risk.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。套餐与设置名称为作者 2026-08-22 的描述，可能已变化。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Plan and setting names are as described on 2026-08-22 and may have changed.",
+        "tags": [
+          "local-execution",
+          "security"
+        ],
+        "apps": [
+          "Windows"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "带完整提示词的进阶技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-jumperz-codex-audit-setup",
+        "url": "https://x.com/jumperz/status/2093370525644939404",
+        "title": "用 Codex 审查全部助手、定时任务与权限配置",
+        "author": "JUMPERZ",
+        "author_url": "https://x.com/jumperz",
+        "source": "x",
+        "lang": "en",
+        "published": "2026-08-28",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者用 Codex 操控 Grok Bot 窗口审查全部助手的角色、对话、定时任务、插件与交接，找出缺失角色、重复定时任务、薄弱交接和安全问题，并要求发布、花钱、删除前先问，附完整提示词。",
+        "summary_en": "The author has Codex drive the Grok Bot window to review roles, chats, routines, plugins and handoffs, finding gaps, duplicate routines and safety issues, asking before publishing or deleting; prompt included.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "audit",
+          "multi-bot"
+        ],
+        "apps": [
+          "Codex"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "同作者 4 条重复发帖已去重。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-valstry-ten-minute-team",
+        "url": "https://x.com/Valstry/status/2098069526743224668",
+        "title": "十分钟搭建 Grok Bot 团队：入门与分工",
+        "author": "Valstry",
+        "author_url": "https://x.com/Valstry",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-10",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "中文新手教程：安装与登录、三种可用订阅的选择与登录注意事项，作者的助手框架（基础设施、选型、电脑顾问、单体优化、组织优化等），附模板链接与命名分工原则。",
+        "summary_en": "A Chinese beginner guide: install and sign in, which plans work and sign-in pitfalls, the author's bot framework (infrastructure, model choice, advisor, bot and org tuning) with template links and naming rules.",
+        "verification_note_zh": "已读取 X 接口返回的可读长帖正文，长文有部分未完整取得；摘要仅覆盖已读的安装、订阅、框架与分工信息。价格为作者 2026-09-10 的描述；模板未打开，未复现。",
+        "verification_note_en": "Read the available post body; part of the long post was unavailable. Summary covers the sections read. Prices are dated 2026-09-10; templates not opened; not reproduced.",
+        "tags": [
+          "onboarding",
+          "template"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期安装与账号步骤。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-blueskylh1-trial-steps",
+        "url": "https://x.com/blueskylh1/status/2087552709146681833",
+        "title": "一周免费试用的早期开通流程",
+        "author": "蓝天bluesky",
+        "author_url": "https://x.com/blueskylh1",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-08-12",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "start"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "上线初期的试用开通流程：下载客户端、登录，在开始使用页面选择一周试用，激活并按提示绑定信用卡。这是早期教程，当前流程可能已变化。",
+        "summary_en": "Trial steps from launch week: download the client, sign in, pick One Week Trial on the Get Started page, activate, and add a card when prompted.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为 2026-08-12 时的流程，可能已变化；教程图未查看。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Flow as of 2026-08-12 and may have changed; images not viewed.",
+        "tags": [
+          "onboarding",
+          "trial"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期具体玩法；更完整的 SSH 教程另见 SpringHaoAI 条目。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-biggor888-vm-as-vps",
+        "url": "https://x.com/biggor888/status/2087706763629850747",
+        "title": "把云虚拟机改为可远程访问的服务器",
+        "author": "Samgor",
+        "author_url": "https://x.com/biggor888",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-08-13",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者步骤：下载客户端、用 Cursor 账号登录，再让助手在虚拟机里装好 SSH 服务 和 Cloudflare Tunnel 或 Tailscale，之后即可远程访问。",
+        "summary_en": "The author's steps: install the app, sign in with a Cursor account, have the bot set up an SSH server plus Cloudflare Tunnel or Tailscale on its VM, then reach it remotely.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。套餐说明为上线初期描述。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Plan details reflect launch week.",
+        "tags": [
+          "cloud-computer",
+          "ssh"
+        ],
+        "apps": [
+          "Tailscale",
+          "Cloudflare"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期具体教程。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mizorewwww-cloud-pc-server",
+        "url": "https://x.com/mizorewwww/status/2089363471314100342",
+        "title": "全天候云端私人服务器：远程终端与图形桌面",
+        "author": "小雪",
+        "author_url": "https://x.com/mizorewwww",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-08-17",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "长文教程：用几条命令加一句话，让 Grok Bot 云电脑可通过 SSH 连接并开 VNC 图形桌面，作为常在线私人服务器使用。",
+        "summary_en": "An article on turning the Grok Bot cloud computer into an always-on private server with a few commands and one prompt, reachable over SSH with a VNC desktop.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。属社区玩法；云电脑重新分配后可能需重装。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced. Community approach; may need redoing when the computer is reassigned.",
+        "tags": [
+          "cloud-computer",
+          "ssh",
+          "vnc"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "早期完整教程。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-springhao-tailscale-ssh",
+        "url": "https://x.com/SpringHaoAI/status/2095915259521585458",
+        "title": "用 Tailscale 远程连接云电脑",
+        "author": "Spring Hao",
+        "author_url": "https://x.com/SpringHaoAI",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-04",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "保姆级教程：从 macOS/Windows/Linux 终端经 Tailscale SSH 连入 Grok Bot 底层 Linux 电脑，用 scp 传文件、看日志、跑命令行工具；注明为非官方入口，系统更新后可能需补装。",
+        "summary_en": "A detailed guide to SSH from macOS, Windows or Linux into the Grok Bot Linux computer over Tailscale, using scp, logs and CLIs; noted as unofficial and possibly needing reinstall after updates.",
+        "verification_note_zh": "已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。",
+        "verification_note_en": "Read the X Article body via the X read API; images not viewed; author results not reproduced.",
+        "tags": [
+          "cloud-computer",
+          "ssh"
+        ],
+        "apps": [
+          "Tailscale"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实用安全分工建议。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-xiaomovps-three-machines",
+        "url": "https://x.com/xiaomovps/status/2095775647859945815",
+        "title": "本机、Grok 云电脑和自有服务器如何分工",
+        "author": "小墨同学",
+        "author_url": "https://x.com/xiaomovps",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-04",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者经验：密钥、编译和私有文件留在本机，Grok 云电脑负责 7×24 盯网页、跑定时和测试，自有 VPS 放站点与长期服务，分开放更稳。",
+        "summary_en": "The author's split: keys, builds and private files stay local; the Grok cloud computer handles 24/7 page watching, schedules and tests; a personal VPS keeps sites and long-running services.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced.",
+        "tags": [
+          "security",
+          "cloud-computer"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "失败处理类具体技巧。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-cgnot996-webhook-trigger-workaround",
+        "url": "https://x.com/cgnot996/status/2109141694184935790",
+        "title": "网页回调触发器详情打不开时的处理办法",
+        "author": "铁柱AGI",
+        "author_url": "https://x.com/cgnot996",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-11",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "截至 0.68.1 版，网页回调触发器有时无法点进详情取得链接地址和密钥；作者的办法是直接让 Grok Bot 在聊天里发出打开详情的链接，点开即可看到。",
+        "summary_en": "As of version 0.68.1 the webhook trigger detail sometimes won't open to show the URL and secret; the author's workaround is asking Grok Bot for a link in chat that opens the detail panel.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。为特定版本问题，后续可能已修复。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Version-specific issue that may since be fixed.",
+        "tags": [
+          "routines",
+          "webhook",
+          "troubleshooting"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体 Skill 组合建议。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（产品功能、Bot、Routine、Skill 或插件）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-jackywxsz-startup-practices-02",
+        "url": "https://x.com/Jackywxsz/status/2095476664054800655",
+        "title": "启动最佳实践：研究技能、开发规范与代理组合",
+        "author": "Jacky无限生长",
+        "author_url": "https://x.com/Jackywxsz",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-03",
+        "added": "2026-10-16",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者推荐的进阶配置：装 last30days 技能做研究、装 waza 技能规范开发与写作、给代理配专用浏览器，并在云电脑装 pi agent 接其他模型来执行任务以省额度。",
+        "summary_en": "The author's next-step setup: install the last30days skill for research and waza for dev and writing standards, give agents a dedicated browser, and run pi agent with other models to save usage.",
+        "verification_note_zh": "已通过 X 读帖接口读取原帖全文（含长帖正文）；未复现作者结果。系列第一篇未读取；均为第三方技能。",
+        "verification_note_en": "Read the full post text via the X read API; author results not reproduced. Part one was not read; all are third-party skills.",
+        "tags": [
+          "skills",
+          "usage"
+        ]
+      }
+    }
+  ]
+}

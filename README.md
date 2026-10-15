@@ -138,6 +138,8 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 
 2026-10-15 09:00 定时批次新增 5 条（多 Gmail 账号、Google Sheets、中文 A2A 桥接、官方设置与私网指南），合计 28 条；2 条重复来源、5 条待核验项已记录原因。
 
+2026-10-16 经用户审核，将 X 历史补全版中确认的 68 条按中文标题和摘要收录，合计 104 条资源；保留原帖、作者、原文语言、分类和核验限制。其余历史候选未收录。后续所有平台的定时新增都先保存候选 JSON 并展示中文预览，用户明确确认具体批次后才导入和发布。
+
 检索与摘要由当前 Codex 对话执行，入库脚本负责 URL / 内容去重、分类校验、日期与出处检查。每条保存原创双语短摘要和核验范围，不将外部分享标为本站实测。
 
 ```bash
@@ -146,7 +148,7 @@ npm run collect -- data/collection/batches/<批次>.json --write  # 入库并记
 npm run test:collection                                       # 去重与质量门槛测试
 ```
 
-运行规范见 [docs/collection.md](./docs/collection.md)，来源见 [sources.json](./data/collection/sources.json)。按用户要求，首轮发布后在当前 Codex 对话启用每天北京时间 09:00 的定时采集；本地任务需要电脑开机、Codex 运行。Cloudflare 负责自动部署，不执行资料检索。
+运行规范见 [docs/collection.md](./docs/collection.md)，来源见 [sources.json](./data/collection/sources.json)。每天北京时间 08:30 由 Grok Bot 的“铁柱”生成 X 增量，09:00 的 Codex 定时任务接收并核验，同时检索其他平台，然后交给用户审核；定时任务不自动入库、推送或发布。本地任务需要电脑开机、Codex 运行。Cloudflare 负责在获准推送后自动部署，不执行资料检索。
 
 ## 贡献
 
