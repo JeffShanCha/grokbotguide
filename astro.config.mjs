@@ -40,7 +40,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'GrokBotGuide',
-			description: 'The community playbook for Grok Bot · 社区共建的 Grok Bot 实战手册',
+			description: 'Grok Bot guides, templates and automation workflows · Grok Bot 中文教程、角色模板与自动化工作流',
 			logo: { src: './src/assets/logo.svg', alt: 'GrokBotGuide' },
 			favicon: '/favicon.svg',
 			// 默认语言设为 en：hreflang 的 x-default 指向英文版（面向海外搜索）。中英两套内容都完整维护。
@@ -65,6 +65,10 @@ export default defineConfig({
 			},
 			head: [
 				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://grokbotguide.ai/og-default.png' } },
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+				{ tag: 'meta', attrs: { property: 'og:image:alt', content: 'GrokBotGuide: Grok Bot Guides, Templates & Automation Workflows' } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://grokbotguide.ai/og-default.png' } },
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
 				// GSC 的 HTML 验证适用于 URL 前缀资源；网域资源需在 DNS 添加 TXT 记录。
 				...(SITE.googleSiteVerification.trim()

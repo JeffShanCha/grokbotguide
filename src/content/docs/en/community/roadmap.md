@@ -9,9 +9,9 @@ sidebar:
 
 | Phase | Goal | Status |
 | --- | --- | --- |
-| Week 1 | Bilingual skeleton, contribution flow, deployment | In progress |
-| Weeks 2–3 | About 20 seed pages, all tested | Not started |
-| Week 4 | Public launch, first external pull request merged | Not started |
+| Week 1 | Bilingual skeleton, deployment, contribution flow | Site is live; submission form and copy counts still to configure |
+| Weeks 2–3 | Seed content: about 40 tutorials, Bot cards, templates and recipes per language, relabeled as each is tested | In progress: published, all compiled from official docs or community reports; testing not started yet |
+| Week 4 | Public promotion, first external pull request merged | Not started |
 | Months 2–3 | Template filters and copy counts, contributor leaderboard, weekly changelog | Not started |
 
 ## Most wanted

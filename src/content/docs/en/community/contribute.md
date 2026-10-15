@@ -30,7 +30,7 @@ Prefer not to use Git? [Submit here](/en/community/submit/). The form creates a 
 
 ## Review criteria
 
-- Tested by the author (required for recipes, Bot cards and templates)
+- Honest verification status: mark what you ran yourself as Community tested with the test date and plan; mark the rest From official docs or From community reports, with sources
 - Permission settings and usage notes included
 - No emails, customer names or tokens in screenshots
 - Not a duplicate of existing content

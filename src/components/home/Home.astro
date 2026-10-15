@@ -15,9 +15,10 @@ const p = (path: string) => `/${lang}/${path}`;
 const copy = {
 	zh: {
 		eyebrow: '社区共建 · 非官方',
-		title: '给自己招一个不下班的 AI 同事',
-		lead: 'Grok Bot 实战手册：从装好第一个 Bot，到搭出能每天自动干活的角色和 Routine。教程、角色卡和模板都由社区亲测、持续更新。',
-		ctaPrimary: '5 分钟搭好第一个 Bot',
+		title: 'Grok Bot 中文教程、角色模板与自动化工作流',
+		tagline: '给自己招一个不下班的 AI 同事',
+		lead: '基于官方文档与社区实践，持续整理 Grok Bot 教程、角色模板和自动化工作流。每篇内容明确标注来源、验证状态与更新时间。',
+		ctaPrimary: '创建第一个 Bot',
 		ctaSecondary: '浏览角色库',
 		chat: {
 			user: '每个工作日 9 点整理收件箱，把需要我回复的邮件列出来。先别回复任何人。',
@@ -30,8 +31,8 @@ const copy = {
 		},
 		values: [
 			{ k: 'LEARN', t: '系统教程', d: '快速上手 → 进阶 → 实战，按顺序读完就能独立搭 Bot。' },
-			{ k: 'COPY', t: '拿来即用', d: '按岗位整理的角色卡与 Routine 模板，复制改两处就能跑。' },
-			{ k: 'SHARE', t: '社区共建', d: '所有内容开源在 GitHub，亲测过的经验欢迎直接提 PR。' },
+			{ k: 'COPY', t: '复制就能改', d: '按岗位整理的角色卡与 Routine 模板。复制后换成你自己的应用和规则，先用测试数据跑一遍。' },
+			{ k: 'SHARE', t: '社区共建', d: '所有内容开源在 GitHub。你亲自跑通的流程，欢迎提 PR 补上测试结果。' },
 		],
 		rolesTitle: '你想让 Bot 帮你做什么？',
 		pathTitle: '学习路线',
@@ -54,9 +55,10 @@ const copy = {
 	},
 	en: {
 		eyebrow: 'Community-built · Unofficial',
-		title: 'Hire an AI teammate that never clocks out',
-		lead: 'The hands-on playbook for Grok Bot: from your first Bot to roles and routines that do real work every day. Tutorials, Bot cards and templates are community-tested and kept up to date.',
-		ctaPrimary: 'Set up your first Bot in 5 minutes',
+		title: 'Grok Bot Guides, Templates & Automation Workflows',
+		tagline: 'Hire an AI teammate that never clocks out',
+		lead: 'Learn how to set up Grok Bot, build AI teammates, and automate real work with source-backed tutorials and reusable templates. Every page shows its sources, verification status and last update.',
+		ctaPrimary: 'Create your first Bot',
 		ctaSecondary: 'Browse the Bot library',
 		chat: {
 			user: 'Every weekday at 9am, triage my inbox and list the emails I need to answer. Do not reply to anyone yet.',
@@ -69,8 +71,8 @@ const copy = {
 		},
 		values: [
 			{ k: 'LEARN', t: 'Structured tutorials', d: 'Get started → Advanced → Recipes. Read in order and you can build Bots on your own.' },
-			{ k: 'COPY', t: 'Ready to use', d: 'Bot cards and routine templates by job role. Copy, tweak two lines, run.' },
-			{ k: 'SHARE', t: 'Built together', d: 'Everything is open source on GitHub. Tested a workflow? Send a pull request.' },
+			{ k: 'COPY', t: 'Ready to adapt', d: 'Bot cards and routine templates by job role. Copy one, swap in your own apps and rules, and try it on test data first.' },
+			{ k: 'SHARE', t: 'Built together', d: 'Everything is open source on GitHub. Ran a workflow yourself? Send a pull request with your results.' },
 		],
 		rolesTitle: 'What do you want a Bot to do for you?',
 		pathTitle: 'Learning path',
@@ -117,6 +119,7 @@ const contributors = await getCollection('contributors');
 		<div class="hero-copy">
 			<p class="eyebrow">{copy.eyebrow}</p>
 			<h1>{copy.title}</h1>
+			<p class="tagline">{copy.tagline}</p>
 			<p class="lead">{copy.lead}</p>
 			<div class="actions">
 				<a class="btn btn-primary" href={p('start/first-bot/')}>{copy.ctaPrimary}</a>
@@ -362,11 +365,17 @@ const contributors = await getCollection('contributors');
 		margin: 0 0 0.75rem;
 	}
 	.hero h1 {
-		font-size: clamp(2rem, 4.5vw, 3.25rem);
-		line-height: 1.1;
+		font-size: clamp(1.9rem, 4vw, 2.9rem);
+		line-height: 1.15;
 		color: var(--sl-color-white);
-		margin: 0 0 1rem;
+		margin: 0 0 0.75rem;
 		letter-spacing: -0.02em;
+	}
+	.tagline {
+		font-size: var(--sl-text-xl);
+		font-weight: 600;
+		color: var(--sl-color-accent-high);
+		margin: 0 0 1rem;
 	}
 	.lead {
 		font-size: var(--sl-text-lg);

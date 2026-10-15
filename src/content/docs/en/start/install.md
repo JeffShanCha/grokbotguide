@@ -11,7 +11,7 @@ sources:
     url: https://docs.x.ai/grok-bot/get-started
 ---
 
-**Install the desktop app from the downloads page at [x.ai/bot](https://x.ai/bot), sign in with Cursor, and link SuperGrok if that is your plan.** It takes about five minutes.
+**Install the desktop app from the downloads page at [x.ai/bot](https://x.ai/bot), sign in with Cursor, and link SuperGrok if that is your plan.**
 
 ## 1. Download and install
 

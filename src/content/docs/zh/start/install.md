@@ -11,7 +11,7 @@ sources:
     url: https://docs.x.ai/grok-bot/get-started
 ---
 
-**从 [x.ai/bot](https://x.ai/bot) 的下载页安装桌面端，用 Cursor 账号登录，SuperGrok 用户再关联订阅即可。** 全程约 5 分钟。
+**从 [x.ai/bot](https://x.ai/bot) 的下载页安装桌面端，用 Cursor 账号登录，SuperGrok 用户再关联订阅即可。**
 
 ## 1. 下载安装
 
