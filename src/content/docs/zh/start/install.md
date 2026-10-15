@@ -7,11 +7,13 @@ grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: Grok Bot sign-in（官方文档）
+    url: https://docs.x.ai/x-subscription/grok-bot-sign-in
   - title: Get started（官方文档）
     url: https://docs.x.ai/grok-bot/get-started
 ---
 
-**从 [x.ai/bot](https://x.ai/bot) 的下载页安装桌面端，用 Cursor 账号登录，SuperGrok 用户再关联订阅即可。**
+**从 [x.ai/bot](https://x.ai/bot) 的下载页安装桌面端，点「Sign in」在浏览器里用你订阅所在的账号登录即可。老的 SuperGrok 用户还需要关联订阅。**
 
 ## 1. 下载安装
 
@@ -29,9 +31,10 @@ sources:
 
 ## 2. 登录
 
-1. 欢迎页点「Sign in」，在浏览器里完成 Cursor 账号认证后回到应用。
-2. 用 SuperGrok 的话，按 [订阅怎么选](/zh/start/plans/) 里的步骤关联订阅。
-3. 公司要求单点登录的，按公司的正常流程登录。
+1. 欢迎页点「Sign in」，在浏览器里选择页面上给出的登录方式，用你订阅 Grok Bot 的那个账号完成登录后回到应用。Grok Bot 用的是 xAI 统一登录，没有单独的 Grok Bot 账号。
+2. 有多个账号的，确认选的是对的那个。登录只做身份验证，不会合并账号，也不会改动你的套餐。
+3. 用旧版 SuperGrok 订阅的，按 [订阅怎么选](/zh/start/plans/) 里的步骤关联订阅。
+4. 公司要求单点登录的，按公司的正常流程登录。
 
 ## 3. 首次引导
 

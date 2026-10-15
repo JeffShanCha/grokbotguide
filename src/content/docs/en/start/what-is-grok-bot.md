@@ -7,6 +7,8 @@ grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: Payment methods (official docs)
+    url: https://docs.x.ai/x-subscription/payment-methods
   - title: Introducing Grok Bot (xAI)
     url: https://x.ai/news/introducing-grok-bot
   - title: Grok Bot overview (official docs)
@@ -39,6 +41,14 @@ sources:
 ## Where you use it
 
 Desktop apps for macOS, Windows and Linux; mobile apps for iPhone/iPad and Android (official FAQ). Bots and conversations sync across signed-in devices.
+
+## Using it from China
+
+- **Not the same as @grok on X**: @grok answers publicly on X; Grok Bot is a separate app whose Bots operate your tools on a cloud computer and report only to you. Replying with @bot on X hands a task to your Bot.
+- **Availability**: the official docs do not list supported countries or mention mainland China, and X and grok.com are not directly reachable there.
+- **Payment**: cards, Apple Pay, Google Pay and Link on the web, or the App Store and Google Play. Alipay and WeChat Pay are not mentioned.
+
+More in [Using Grok Bot from China](/en/answers/grok-bot-in-china/).
 
 ## Next steps
 

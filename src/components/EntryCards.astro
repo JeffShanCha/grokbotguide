@@ -13,7 +13,11 @@ const t = useT(lang);
 const entries = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/${section}/`))).sort(
 	(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
 );
-const roles = [...new Set(entries.map((e) => e.data.role).filter(Boolean))] as string[];
+// 和首页岗位入口同一顺序
+const ROLE_ORDER = ['sales', 'marketing', 'support', 'recruiting', 'finance', 'engineering', 'operations', 'assistant'];
+const roles = ([...new Set(entries.map((e) => e.data.role).filter(Boolean))] as string[]).sort(
+	(a, b) => ROLE_ORDER.indexOf(a) - ROLE_ORDER.indexOf(b),
+);
 ---
 
 {

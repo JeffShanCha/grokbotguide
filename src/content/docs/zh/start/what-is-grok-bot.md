@@ -7,6 +7,8 @@ grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: Payment methods（官方文档）
+    url: https://docs.x.ai/x-subscription/payment-methods
   - title: Introducing Grok Bot（xAI）
     url: https://x.ai/news/introducing-grok-bot
   - title: Grok Bot Overview（官方文档）
@@ -39,6 +41,14 @@ sources:
 ## 在哪里用
 
 桌面端支持 macOS、Windows、Linux，移动端支持 iPhone / iPad 和 Android（官方 FAQ）。对话和 Bot 在登录的设备之间同步。
+
+## 中国用户须知
+
+- **和 X 上的 @grok 不是一回事**：@grok 在 X 上公开回复问题；Grok Bot 是独立应用，Bot 在云电脑上替你操作工具，结果只有你能看到。在 X 上回复 @bot 可以把任务交给你的 Bot。
+- **国内能不能用**：官方文档没有列出支持的国家和地区，也没有提到中国大陆；X 和 grok.com 在中国大陆无法直接访问，需要能稳定访问海外服务的网络环境，并遵守当地法律法规。
+- **怎么付款**：网页端支持银行卡、Apple Pay、Google Pay 和 Link，也可以走 App Store 或 Google Play；官方没有提到支付宝和微信支付。
+
+详细说明见[《中国用户须知》](/zh/answers/grok-bot-in-china/)。
 
 ## 下一步
 

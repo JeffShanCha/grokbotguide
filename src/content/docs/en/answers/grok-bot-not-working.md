@@ -26,7 +26,7 @@ Start with the least destructive step: **Retry → restart the app → Recover c
 
 | Symptom | Check first |
 | --- | --- |
-| Sign-in never completes | The browser shows a successful Cursor sign-in; use your company SSO if required |
+| Sign-in never completes | The browser shows a successful sign-in; use your company SSO if required |
 | Legacy Privacy Mode error | Change the Cursor account data setting or ask your admin |
 | Computer still setting up | First setup and updates take minutes; keep the app open |
 | Computer unreachable | Follow the recovery order below |

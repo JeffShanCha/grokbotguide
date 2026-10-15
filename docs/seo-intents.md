@@ -14,6 +14,7 @@
 | 6 | how to connect grok bot to slack | Grok Bot 怎么连接 Slack | how-to-connect-grok-bot-to-slack | 补充 | 待验证 |
 | 7 | does grok bot work when laptop is closed | 关掉电脑还能运行吗 | does-grok-bot-work-when-laptop-is-closed | 补充 | 待验证 |
 | 8 | is grok bot safe | Grok Bot 安全吗 | is-grok-bot-safe | 补充 | 待验证 |
+| 9 | grok bot 国内能用吗 / grok bot 付款 / grok bot 和 grok 区别 | 中国用户须知 | grok-bot-in-china | 体验报告 | 待验证（主要看百度、必应中文和 GSC 的中文查询） |
 
 ## 页面写法约定
 

@@ -7,6 +7,9 @@
  *   /api/submit  投稿表单 → 校验 Turnstile → 创建 GitHub Issue → 邮件通知
  *   /api/copy    模板复制计数 +1（D1）
  *   /api/copies  批量读取模板复制次数（D1）
+ *   /api/newsletter    GET：订阅功能是否可用（没绑定 D1 时前端隐藏订阅框）
+ *   /api/subscribe     POST：邮件订阅，存进 D1 并邮件通知维护者
+ *   /api/unsubscribe   GET：退订链接（?token=…）
  *
  * D1 和邮件绑定都是可选的：没配置时站点照常运行，计数接口返回空、投稿只建 Issue 不发邮件。
  */
@@ -40,6 +43,9 @@ export default {
 		if (url.pathname === '/api/submit' && req.method === 'POST') return handleSubmit(req, env);
 		if (url.pathname === '/api/copy' && req.method === 'POST') return handleCopy(req, env);
 		if (url.pathname === '/api/copies' && req.method === 'GET') return handleCopies(url, env);
+		if (url.pathname === '/api/newsletter' && req.method === 'GET') return json({ enabled: Boolean(env.DB) }, 200, { 'cache-control': 'public, max-age=300' });
+		if (url.pathname === '/api/subscribe' && req.method === 'POST') return handleSubscribe(req, env);
+		if (url.pathname === '/api/unsubscribe' && req.method === 'GET') return handleUnsubscribe(url, env);
 		if (url.pathname.startsWith('/api/')) return json({ error: 'not_found' }, 404);
 
 		return env.ASSETS.fetch(req);
@@ -265,6 +271,91 @@ async function handleCopies(url: URL, env: Env): Promise<Response> {
 	const counts: Record<string, number> = {};
 	for (const r of results) counts[r.id] = r.count;
 	return json(counts, 200, { 'cache-control': 'public, max-age=60' });
+}
+
+/* ---------------- 邮件订阅 ---------------- */
+
+const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i;
+let subscribersReady: Promise<unknown> | undefined;
+function ensureSubscribers(db: D1Database) {
+	// 和 worker/migrations/0002 相同
+	subscribersReady ??= db
+		.prepare(
+			`CREATE TABLE IF NOT EXISTS subscribers (
+				email TEXT PRIMARY KEY,
+				lang TEXT NOT NULL DEFAULT 'en',
+				source TEXT,
+				token TEXT NOT NULL,
+				status TEXT NOT NULL DEFAULT 'active',
+				created_at INTEGER NOT NULL DEFAULT (unixepoch()),
+				updated_at INTEGER NOT NULL DEFAULT (unixepoch())
+			)`
+		)
+		.run()
+		.catch((err) => {
+			subscribersReady = undefined;
+			throw err;
+		});
+	return subscribersReady;
+}
+
+async function handleSubscribe(req: Request, env: Env): Promise<Response> {
+	if (!env.DB) return json({ error: 'not_configured' }, 503);
+	let data: { email?: string; lang?: string; source?: string; website?: string };
+	try {
+		data = await req.json();
+	} catch {
+		return json({ error: 'invalid_json' }, 400);
+	}
+	// 蜜罐字段：真人看不到这个输入框，机器人会填
+	if (data.website) return json({ ok: true });
+	const email = clean(data.email, 254).toLowerCase();
+	if (!EMAIL_RE.test(email)) return json({ error: 'invalid_email' }, 400);
+	const lang = data.lang === 'zh' ? 'zh' : 'en';
+	const source = clean(data.source, 120);
+
+	await ensureSubscribers(env.DB);
+	const token = crypto.randomUUID();
+	const row = await env.DB.prepare(
+		`INSERT INTO subscribers (email, lang, source, token) VALUES (?1, ?2, ?3, ?4)
+		 ON CONFLICT(email) DO UPDATE SET status = 'active', updated_at = unixepoch()
+		 RETURNING created_at = updated_at AS is_new`
+	)
+		.bind(email, lang, source, token)
+		.first<{ is_new: number }>();
+
+	if (env.NOTIFY && row?.is_new) {
+		try {
+			await env.NOTIFY.send({
+				from: { name: 'GrokBotGuide', email: env.NOTIFY_FROM },
+				to: env.NOTIFY_TO,
+				subject: `[GrokBotGuide] 新订阅：${email}`,
+				text: `新的邮件订阅\n\n邮箱：${email}\n语言：${lang}\n来源页面：${source || '（未知）'}`,
+			});
+		} catch (err) {
+			console.error('notify_failed', err);
+		}
+	}
+	return json({ ok: true });
+}
+
+async function handleUnsubscribe(url: URL, env: Env): Promise<Response> {
+	const token = url.searchParams.get('token') ?? '';
+	let ok = false;
+	if (env.DB && /^[0-9a-f-]{36}$/.test(token)) {
+		await ensureSubscribers(env.DB);
+		const res = await env.DB.prepare(`UPDATE subscribers SET status = 'unsubscribed', updated_at = unixepoch() WHERE token = ?1`)
+			.bind(token)
+			.run();
+		ok = (res.meta.changes ?? 0) > 0;
+	}
+	const msg = ok
+		? 'You have been unsubscribed from GrokBotGuide emails. / 已退订 GrokBotGuide 邮件。'
+		: 'This unsubscribe link is invalid or has already been used. / 退订链接无效或已使用。';
+	return new Response(
+		`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>GrokBotGuide</title><body style="font:16px system-ui;max-width:32rem;margin:4rem auto;padding:0 1rem"><p>${msg}</p><p><a href="/">grokbotguide.ai</a></p></body>`,
+		{ status: ok ? 200 : 404, headers: { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex' } }
+	);
 }
 
 /* ---------------- 工具 ---------------- */

@@ -1,0 +1,177 @@
+---
+// 邮件订阅框：提交到 Worker 的 /api/subscribe（存进 D1）。
+// 页面加载时先问 /api/newsletter，后端没绑定 D1 时整个订阅框保持隐藏，不会出现点了却失败的情况。
+import { toLang } from '../i18n/ui';
+
+interface Props {
+	/** compact：用在首页等深色区块里，只有一行输入框 */
+	variant?: 'default' | 'compact';
+}
+const { variant = 'default' } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute?.locale);
+const c = {
+	en: {
+		title: 'Get new guides by email',
+		lead: 'New Grok Bot guides, templates and plan changes, about twice a month. No spam; unsubscribe from any email.',
+		placeholder: 'you@example.com',
+		submit: 'Subscribe',
+		sending: 'Subscribing…',
+		ok: 'Thanks! You are on the list.',
+		invalid: 'Please enter a valid email address.',
+		fail: 'Something went wrong. Please try again later.',
+		privacy: 'We only store your email address and use it for this newsletter.',
+	},
+	zh: {
+		title: '用邮件接收更新',
+		lead: '新教程、新模板和订阅变化，大约每月两封。每封邮件都可以一键退订。',
+		placeholder: 'you@example.com',
+		submit: '订阅',
+		sending: '提交中…',
+		ok: '订阅成功，谢谢！',
+		invalid: '请填写正确的邮箱地址。',
+		fail: '提交失败，请稍后再试。',
+		privacy: '我们只保存你的邮箱地址，只用于发送这份邮件。',
+	},
+}[lang];
+---
+
+<div class:list={['gbg-newsletter', 'not-content', variant]} data-newsletter hidden data-lang={lang} data-sending={c.sending} data-ok={c.ok} data-invalid={c.invalid} data-fail={c.fail}>
+	{variant === 'default' && <p class="title">{c.title}</p>}
+	{variant === 'default' && <p class="lead">{c.lead}</p>}
+	<form>
+		<label class="sr-only" for={`nl-${variant}`}>Email</label>
+		<input id={`nl-${variant}`} name="email" type="email" required maxlength="254" autocomplete="email" placeholder={c.placeholder} />
+		<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+		<button type="submit">{c.submit}</button>
+	</form>
+	<p class="status" role="status" hidden></p>
+	<p class="privacy">{c.privacy}</p>
+</div>
+
+<script>
+	const boxes = [...document.querySelectorAll<HTMLElement>('[data-newsletter]')];
+	if (boxes.length) {
+		fetch('/api/newsletter')
+			.then((r) => (r.ok ? r.json() : { enabled: false }))
+			.then((d: { enabled?: boolean }) => {
+				if (d.enabled) boxes.forEach((b) => (b.hidden = false));
+			})
+			.catch(() => {});
+		for (const box of boxes) {
+			const form = box.querySelector('form')!;
+			const status = box.querySelector<HTMLElement>('.status')!;
+			const button = form.querySelector('button')!;
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				const fd = new FormData(form);
+				button.disabled = true;
+				status.hidden = false;
+				status.textContent = box.dataset.sending!;
+				try {
+					const res = await fetch('/api/subscribe', {
+						method: 'POST',
+						headers: { 'content-type': 'application/json' },
+						body: JSON.stringify({
+							email: fd.get('email'),
+							website: fd.get('website'),
+							lang: box.dataset.lang,
+							source: location.pathname,
+						}),
+					});
+					const j = (await res.json().catch(() => ({}))) as { error?: string };
+					if (!res.ok) throw new Error(j.error ?? String(res.status));
+					window.gtag?.('event', 'sign_up', { method: 'newsletter' });
+					status.textContent = box.dataset.ok!;
+					form.reset();
+				} catch (err) {
+					status.textContent = (err as Error).message === 'invalid_email' ? box.dataset.invalid! : box.dataset.fail!;
+				} finally {
+					button.disabled = false;
+				}
+			});
+		}
+	}
+</script>
+
+<style>
+	.gbg-newsletter {
+		margin-top: 1.5rem;
+		padding: 1.25rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		background: var(--gbg-card-bg);
+		max-width: 40rem;
+	}
+	.gbg-newsletter.compact {
+		padding: 0;
+		border: none;
+		background: none;
+		margin-top: 1rem;
+	}
+	.gbg-newsletter[hidden] {
+		display: none;
+	}
+	.title {
+		font-weight: 600;
+		color: var(--sl-color-white);
+		margin: 0;
+	}
+	.lead {
+		margin: 0.35rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	form {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.85rem;
+		flex-wrap: wrap;
+	}
+	.compact form {
+		margin-top: 0;
+	}
+	input[type='email'] {
+		flex: 1 1 14rem;
+		min-width: 0;
+		padding: 0.6rem 0.8rem;
+		border-radius: 999px;
+		border: 1px solid var(--gbg-card-border);
+		background: var(--sl-color-bg);
+		color: var(--sl-color-white);
+		font: inherit;
+	}
+	button {
+		padding: 0.6rem 1.3rem;
+		border-radius: 999px;
+		border: none;
+		background: var(--sl-color-accent);
+		color: #fff;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	button:disabled {
+		opacity: 0.6;
+	}
+	.hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+	}
+	.status,
+	.privacy {
+		margin: 0.6rem 0 0;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.status {
+		color: var(--sl-color-gray-1);
+	}
+</style>

@@ -7,11 +7,13 @@ grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: Grok Bot sign-in (official docs)
+    url: https://docs.x.ai/x-subscription/grok-bot-sign-in
   - title: Get started (official docs)
     url: https://docs.x.ai/grok-bot/get-started
 ---
 
-**Install the desktop app from the downloads page at [x.ai/bot](https://x.ai/bot), sign in with Cursor, and link SuperGrok if that is your plan.**
+**Install the desktop app from the downloads page at [x.ai/bot](https://x.ai/bot), choose Sign in and use the account that holds your subscription. Legacy SuperGrok subscribers also need to link it.**
 
 ## 1. Download and install
 
@@ -29,9 +31,10 @@ The app updates automatically. You can also choose "Check for Updates" in **Sett
 
 ## 2. Sign in
 
-1. Select "Sign in" on the welcome screen and finish authentication in your browser.
-2. If you use SuperGrok, link it as described in [Which plan](/en/start/plans/).
-3. If your organization requires single sign-on, follow its normal process.
+1. Select "Sign in" on the welcome screen, pick one of the sign-in options shown in your browser, and use the account that holds your Grok Bot subscription. Grok Bot uses the shared xAI sign-in; there is no separate Grok Bot login.
+2. If you have several accounts, check you picked the right one. Signing in only authenticates you; it does not combine accounts or change your plan.
+3. On a legacy SuperGrok subscription, link it as described in [Which plan](/en/start/plans/).
+4. If your organization requires single sign-on, follow its normal process.
 
 ## 3. First-run tour
 

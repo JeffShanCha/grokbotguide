@@ -13,7 +13,7 @@
 | 文档框架 | Astro 7 + Starlight 0.42（中英双语、Pagefind 搜索、sitemap） |
 | 部署 | Cloudflare Workers 静态资源 + Workers Builds（连接 GitHub 自动部署） |
 | 动态接口 | `worker/index.ts`：根路径语言路由、投稿表单、模板复制计数 |
-| 数据库 | Cloudflare D1（模板复制次数） |
+| 数据库 | Cloudflare D1（模板复制次数、邮件订阅） |
 | 邮件 | Cloudflare Email Routing 转发 + Worker `send_email` 投稿通知 |
 | 防刷 | Cloudflare Turnstile |
 
@@ -81,7 +81,11 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 9. **Secrets**：Worker → Settings → Variables and Secrets → Add，类型选 Secret：
    - `TURNSTILE_SECRET`：Turnstile 的 Secret Key
    - `GITHUB_TOKEN`：GitHub → Settings → Developer settings → Fine-grained tokens，只选本仓库，权限 Issues: Read and write
-10. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；按下文接入 GSC 和 GA4。
+10. **邮件订阅（英文站 newsletter）**：做完第 6、7 步就自动启用，不需要额外配置。没绑定 D1 时订阅框不显示。
+    - 新订阅会存进 D1 的 `subscribers` 表，开了 `send_email` 时还会给你发一封通知邮件。
+    - 导出订阅者：`npx wrangler d1 execute grokbotguide --remote --command "SELECT email, lang, token FROM subscribers WHERE status = 'active'"`
+    - 发邮件时用你习惯的工具群发，每封邮件底部放该订阅者自己的退订链接：`https://grokbotguide.ai/api/unsubscribe?token=<token>`。
+11. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；按下文接入 GSC 和 GA4。
 
 ## 搜索收录（GSC）
 
@@ -110,6 +114,7 @@ npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:
 | --- | --- | --- |
 | `copy_template` | 点击模板的「复制模板」按钮 | `template_id` |
 | `submit_contribution` | 投稿表单提交成功 | `submission_type`（article / bot / template / resource / fix） |
+| `sign_up` | 邮件订阅成功（GA4 推荐事件，可在「事件」里直接标为关键事件） | `method`（newsletter） |
 | `switch_language` | 顶栏手动切换语言 | `language`（zh / en） |
 
 隐私设置：广告相关存储全部关闭，不开启 Google 信号；来自欧洲经济区、英国和瑞士的访问默认不写入统计 Cookie（GA4 的 Consent Mode），见 `astro.config.mjs`。

@@ -1,4 +1,9 @@
 # Grok Bot 更新日志。新条目加在最上面；每条都要附官方来源链接。
+- id: 2026-10-12-x-subscription
+  date: 2026-10-12
+  zh: 推出 The X Subscription，把 Grok、Cursor 和 X Premium 合成一个订阅；Premium（$30/月）及以上包含 Grok Bot，用量与 Grok、Cursor 共享。已有 SuperGrok 和 Cursor 套餐可继续使用。
+  en: The X Subscription launched, combining Grok, Cursor and X Premium; Premium ($30/month) and above include Grok Bot with usage shared across Grok and Cursor. Existing SuperGrok and Cursor plans keep working.
+  url: https://x.ai/news/x-subscription
 - id: 2026-10-12-docs-get-started
   date: 2026-10-12
   zh: 官方「Get started」文档更新：桌面端支持 macOS / Windows / Linux，可关联 SuperGrok、SuperGrok Plus、SuperGrok Heavy。

@@ -1,0 +1,119 @@
+---
+// 本站实测记录。用法（.mdx 中）：
+// <TestReport date="2026-10-20" plan="SuperGrok" apps="Gmail" duration="约 12 分钟" usage="每周用量约 3%" result="pass">
+//   ![收件箱整理结果](~/assets/tests/gmail-inbox-triage/result.png)
+//   任意 Markdown：真实输出（记得打码）、和文中步骤不一致的地方。
+// </TestReport>
+// 实测完成后，frontmatter 同时改成 grade: tested、needs_testing: false、last_verified: 测试日期。
+import { toLang } from '../i18n/ui';
+
+interface Props {
+	date: string;
+	plan: string;
+	apps?: string;
+	duration?: string;
+	usage?: string;
+	/** pass：按文中步骤跑通；partial：跑通但有出入；fail：没跑通 */
+	result: 'pass' | 'partial' | 'fail';
+	tester?: string;
+}
+const { date, plan, apps, duration, usage, result, tester = 'JeffShanCha' } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const c = {
+	zh: {
+		title: '本站实测记录',
+		date: '测试日期',
+		plan: '订阅档位',
+		apps: '用到的应用',
+		duration: '耗时',
+		usage: '用量消耗',
+		tester: '测试人',
+		result: { pass: '按文中步骤跑通', partial: '跑通，但和文中有出入', fail: '没有跑通' },
+	},
+	en: {
+		title: 'Our test run',
+		date: 'Tested on',
+		plan: 'Plan',
+		apps: 'Apps used',
+		duration: 'Time taken',
+		usage: 'Usage consumed',
+		tester: 'Tested by',
+		result: { pass: 'Worked as written', partial: 'Worked, with differences', fail: 'Did not work' },
+	},
+}[lang];
+const rows = [
+	[c.date, date],
+	[c.plan, plan],
+	[c.apps, apps],
+	[c.duration, duration],
+	[c.usage, usage],
+	[c.tester, tester],
+].filter(([, v]) => v);
+---
+
+<section class:list={['gbg-test', result]}>
+	<header class="not-content">
+		<strong>{c.title}</strong>
+		<span class="badge">{c.result[result]}</span>
+	</header>
+	<dl class="not-content">
+		{
+			rows.map(([k, v]) => (
+				<div>
+					<dt>{k}</dt>
+					<dd>{v}</dd>
+				</div>
+			))
+		}
+	</dl>
+	<div class="body"><slot /></div>
+</section>
+
+<style>
+	.gbg-test {
+		margin-top: 1.5rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--gbg-card-border);
+		border-left: 4px solid #16a34a;
+		border-radius: 0.5rem;
+		background: var(--gbg-card-bg);
+	}
+	.gbg-test.partial {
+		border-left-color: #d97706;
+	}
+	.gbg-test.fail {
+		border-left-color: #dc2626;
+	}
+	header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	.badge {
+		font-size: var(--sl-text-xs);
+		padding: 0.1rem 0.6rem;
+		border-radius: 999px;
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-gray-1);
+	}
+	dl {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		gap: 0.5rem 1rem;
+		margin: 0.75rem 0 0;
+	}
+	dt {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	dd {
+		margin: 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-white);
+	}
+	.body :global(img) {
+		border-radius: 0.5rem;
+		border: 1px solid var(--gbg-card-border);
+	}
+</style>

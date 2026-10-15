@@ -1,63 +1,75 @@
 ---
 title: 'Which plan: X Subscription, SuperGrok or Cursor?'
-description: Grok Bot is not sold on its own. It comes with The X Subscription, a linked SuperGrok plan, or a paid Cursor plan. Which tiers qualify, how they map, and what to know before linking.
+description: From October 2026, new users get Grok Bot with The X Subscription Premium ($30/month) and above; existing SuperGrok and paid Cursor plans keep working. Prices, usage and what to know before switching.
 sidebar:
   order: 2
 grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: Plans and usage (The X Subscription docs)
+    url: https://docs.x.ai/x-subscription/pricing
+  - title: Grok Bot on The X Subscription (official docs)
+    url: https://docs.x.ai/x-subscription/grok-bot
+  - title: Do I have to switch? (official docs)
+    url: https://docs.x.ai/x-subscription/do-i-have-to-switch
+  - title: Introducing The X Subscription (xAI announcement)
+    url: https://x.ai/news/x-subscription
   - title: Plans and billing (Cursor Help Center)
     url: https://cursor.com/help/grok-bot/plans
-  - title: Grok Bot FAQ (official docs)
-    url: https://docs.x.ai/grok-bot/faq
-  - title: Get started (official docs)
-    url: https://docs.x.ai/grok-bot/get-started
-  - title: VentureBeat launch coverage
-    url: https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month
+  - title: Introducing The X Subscription (Cursor forum, staff post)
+    url: https://forum.cursor.com/t/introducing-the-x-subscription/174450
 ---
 
-**Grok Bot is not sold separately. There are three ways to get it: The X Subscription, a linked SuperGrok plan, or a paid Cursor plan.** Prices and tiers change, so check the official pages before you buy.
+:::tip[Short answer]
+- **Never subscribed before**: get The X Subscription **Premium ($30/month)**. It is the cheapest tier with Grok Bot; Plus ($8/month) does not include it.
+- **Running routines every day and hitting limits**: move up to **Super ($100/month)**, with almost 4x the usage of Premium.
+- **Already paying for SuperGrok or Cursor**: keep using it. Switching is optional; your current plan stays in place if you do not switch.
+:::
 
-For the short version, see [Grok Bot vs Cursor plans](/en/answers/grok-bot-vs-cursor-plans/).
+Prices checked on 2026-10-15. Confirm on [x.ai/pricing](https://x.ai/pricing) and your grok.com billing page. List prices exclude tax, which may be added at checkout.
 
-## Eligible plans
+## The X Subscription tiers
 
-| Channel | Tiers that include Grok Bot | Not included | Notes |
-| --- | --- | --- | --- |
-| The X Subscription | Premium, Super, Ultra (individual and team seats) | Plus, Free | Shares one weekly pool with Cursor and the Grok apps |
-| SuperGrok | SuperGrok, SuperGrok Plus, SuperGrok Heavy; X Premium+ can also be linked | SuperGrok Lite | Individual subscription, linked to a Cursor account |
-| Cursor individual | Pro, Pro+, Ultra | | The Help Center now calls these legacy plans |
-| Cursor Teams | Self-serve Teams | | Every member gets Grok Bot; on-demand usage is on by default |
-| Enterprise | Ask your Cursor account manager | | |
+On October 12, 2026, xAI combined Grok, Cursor and X Premium into one plan, **The X Subscription**. It opened to new customers on October 13 and is rolling out globally over the following days.
 
-## Tier equivalents
+| Tier | Monthly | Annual | Usage | Grok Bot |
+| --- | --- | --- | --- | --- |
+| Free | $0 | — | Limited | No |
+| Plus | $8 | $80 | 1x | No |
+| **Premium** | **$30** | $300 | 4x | **Yes** |
+| Super | $100 | $1000 | 15x | Yes |
+| Ultra | $200 | $2000 | 50x | Yes |
 
-| Tier | Cursor plan | Linked subscription |
-| --- | --- | --- |
-| Base | Pro | SuperGrok or X Premium+ |
-| Middle | Pro+ | SuperGrok Plus |
-| Top | Ultra | SuperGrok Heavy |
+"Usage" is the shared usage multiple relative to Plus. Annual plans work out to about $7, $25, $84 and $167 a month.
 
-- A Cursor plan and a linked subscription **do not stack**. Grok Bot uses whichever grants **more weekly usage**. For example, a Pro user who links SuperGrok Plus moves to the middle tier.
-- Plans include **weekly usage** that resets each week. Eligible accounts can turn on on-demand usage to keep going after that, capped by a monthly limit.
+- **Usage is shared**: Grok Bot, the Grok apps and Grok models in Cursor draw from one weekly pool that resets every week. A busy day of Bot runs leaves less for coding in Cursor.
+- **Going over**: buy Additional Usage credits and set a spending cap. Third-party models in Cursor are outside the shared pool and use Additional Usage from the first request.
+- **Teams**: Premium, Super and Ultra seats cost $30 / $100 / $200, each with the same usage as the matching individual tier. There is no Plus team seat.
+- **Payment**: on the web, cards, Apple Pay, Google Pay and Link; some methods are only available in some countries, as shown at checkout. You can also subscribe through the App Store or Google Play.
 
-:::caution[Check current pricing]
-On launch day VentureBeat reported $200/month for individuals via Cursor Ultra, $120/seat/month for teams via Cursor Premium Teams, and $300/month for SuperGrok Heavy. These numbers may change; check grok.com/dashboard/billing and Cursor's pricing page.
+## If you already have SuperGrok or Cursor
+
+- **No need to switch yet**: the official docs say switching is optional, and your plan stays in place if you do not. The switch option is rolling out in billing settings.
+- **Legacy plans that still include Grok Bot**: SuperGrok, SuperGrok Plus and SuperGrok Heavy (linked to a Cursor account; not SuperGrok Lite), and Cursor Pro, Pro+, Ultra and self-serve Teams.
+- **Can new customers still buy them?** Cursor staff confirmed the old Ultra plan is closed to new signups. Press reports say standalone SuperGrok plans are no longer sold to new customers either; the official docs do not say so directly. New users should simply pick The X Subscription.
+- **Legacy tier equivalents**: Pro matches SuperGrok or X Premium+, Pro+ matches SuperGrok Plus, Ultra matches SuperGrok Heavy. A Cursor plan and a linked subscription do not stack; Grok Bot uses whichever grants more weekly usage.
+
+:::danger[Two things you cannot undo]
+- **Linking SuperGrok or X Premium+ is permanent**: you cannot unlink it or move it to another Cursor account.
+- **Unifying accounts when you switch to The X Subscription is permanent**: old Cursor and Grok subscriptions on the combined accounts are cancelled at checkout with a prorated refund. If you have several Cursor accounts, pick the primary one first.
+
+Make sure you are signed in to the account you plan to keep.
 :::
 
 ## What this site uses
 
-All hands-on testing on this site is done with a **SuperGrok** subscription, so screenshots and usage notes reflect that. If you already pay for Cursor, you can use that account instead.
+All hands-on testing on this site is done with a **SuperGrok** subscription, so screenshots and usage notes reflect that. On The X Subscription, the interface and usage display may differ slightly.
 
-## Linking SuperGrok
+## Linking SuperGrok (existing SuperGrok subscribers)
 
-:::danger[Links are permanent]
-Once you link SuperGrok or X Premium+, you cannot unlink it or move it to another Cursor account. Make sure you are signed in to the Cursor account you plan to keep.
-:::
-
-1. Sign in to the Grok Bot app with a Cursor account (create one if needed).
-2. On desktop, open **Settings → Usage & Billing** and select "Link SuperGrok …" (the label shows your tier).
+1. Sign in to the Grok Bot app with a Cursor account.
+2. On desktop, open **Settings → Usage & Billing** and choose the button to link SuperGrok (it shows your tier name).
 3. On mobile, tap **Link Grok Account** when prompted, then **Finished Linking? Refresh My Status**.
 4. If you upgrade SuperGrok later, you do not need to relink; weekly usage updates within 24 hours.
 

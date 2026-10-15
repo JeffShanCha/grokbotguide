@@ -1,78 +1,78 @@
 ---
 title: "Grok Bot 订阅怎么选：X 订阅、SuperGrok 还是 Cursor？"
-description: "Grok Bot 没有单独售卖，可以通过 X 订阅、SuperGrok 或 Cursor 付费套餐获得。对比各渠道的档位对应关系、用量规则和关联前必须知道的事。"
+description: "新用户买 The X Subscription Premium（$30/月）即可使用 Grok Bot，Plus 不含。已有 SuperGrok 或 Cursor 付费套餐的可以继续用。各档价格、共享用量和不能撤销的操作。"
 sidebar:
   order: 5
 grade: official
 needs_testing: true
 author: JeffShanCha
 sources:
+  - title: "Plans and usage（The X Subscription 官方文档）"
+    url: https://docs.x.ai/x-subscription/pricing
+  - title: "Grok Bot on The X Subscription（官方文档）"
+    url: https://docs.x.ai/x-subscription/grok-bot
+  - title: "Do I have to switch?（官方文档）"
+    url: https://docs.x.ai/x-subscription/do-i-have-to-switch
   - title: "Plans and billing（Cursor 帮助中心）"
     url: https://cursor.com/help/grok-bot/plans
-  - title: "Grok Bot FAQ（官方文档）"
-    url: https://docs.x.ai/grok-bot/faq
+  - title: "Introducing The X Subscription（Cursor 论坛官方帖）"
+    url: https://forum.cursor.com/t/introducing-the-x-subscription/174450
 head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\", \"url\": \"https://grokbotguide.ai/zh/answers/grok-bot-vs-cursor-plans/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Grok Bot 订阅怎么选：X 订阅、SuperGrok 还是 Cursor？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Grok Bot 不单独卖。目前有三条路：X 订阅（Premium、Super、Ultra 包含，Plus 和免费版不含）、关联 SuperGrok（SuperGrok、Plus、Heavy；Lite 不含）、Cursor 付费套餐（Pro、Pro+、Ultra 和 Teams，官方现在称为旧版套餐）。同时有多个时不叠加，按每周用量更多的那个算。\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 需要单独购买吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"不需要单独购买。X 订阅 Premium、Super、Ultra，SuperGrok、SuperGrok Plus、SuperGrok Heavy，以及 Cursor 付费套餐都包含 Grok Bot。\"}}, {\"@type\": \"Question\", \"name\": \"同时有 Cursor 和 SuperGrok，用量会叠加吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"不会叠加，Grok Bot 使用两者中每周用量更多的那个。\"}}, {\"@type\": \"Question\", \"name\": \"SuperGrok 关联到 Cursor 账号后可以解绑吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"不可以。关联是永久的，也不能转移到另一个 Cursor 账号。\"}}]}"
+    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\", \"url\": \"https://grokbotguide.ai/zh/answers/grok-bot-vs-cursor-plans/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Grok Bot 订阅怎么选：X 订阅、SuperGrok 还是 Cursor？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"新用户买 The X Subscription 的 Premium（$30/月），这是包含 Grok Bot 的最低档；用量不够再升 Super（$100/月）或 Ultra（$200/月）。Plus（$8/月）和免费版不含 Grok Bot。已经在付费用 SuperGrok 或 Cursor 的，可以继续用，切换是可选的。（价格查询于 2026-10-15）\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 需要单独购买吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"不需要。The X Subscription 的 Premium、Super、Ultra 都包含 Grok Bot，Plus 和免费版不含。已有的 SuperGrok 系列和 Cursor 付费套餐也包含。\"}}, {\"@type\": \"Question\", \"name\": \"使用 Grok Bot 最便宜要多少钱？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"按 2026-10-15 的官方价格，The X Subscription Premium 月付 $30，年付 $300，不含税。\"}}, {\"@type\": \"Question\", \"name\": \"已经买了 SuperGrok，要换成 X 订阅吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"不是必须的。官方说明切换是可选的，不切换原套餐继续有效；切换时合并账号不可撤销。\"}}]}"
 ---
 
-Grok Bot 不单独卖。目前有三条路：**X 订阅**（Premium、Super、Ultra 包含，Plus 和免费版不含）、**关联 SuperGrok**（SuperGrok、Plus、Heavy；Lite 不含）、**Cursor 付费套餐**（Pro、Pro+、Ultra 和 Teams，官方现在称为旧版套餐）。同时有多个时不叠加，按每周用量更多的那个算。
+**新用户买 The X Subscription 的 Premium（$30/月）**，这是包含 Grok Bot 的最低档；用量不够再升 Super（$100/月）或 Ultra（$200/月）。Plus（$8/月）和免费版不含 Grok Bot。**已经在付费用 SuperGrok 或 Cursor 的，可以继续用**，切换是可选的。（价格查询于 2026-10-15）
 
-## 档位对应关系
+## 各档价格与用量
 
-官方帮助中心给出的对应关系：
+| 档位 | 月付 | 共享用量（相对 Plus） | Grok Bot |
+| --- | --- | --- | --- |
+| Plus | $8 | 1 倍 | 不含 |
+| Premium | $30 | 4 倍 | 包含 |
+| Super | $100 | 15 倍 | 包含 |
+| Ultra | $200 | 50 倍 | 包含 |
 
-| 档位 | Cursor 套餐 | 关联订阅 |
-| --- | --- | --- |
-| 基础档 | Pro | SuperGrok 或 X Premium+ |
-| 中档 | Pro+ | SuperGrok Plus |
-| 高档 | Ultra | SuperGrok Heavy |
+年付分别为 $300、$1000、$2000。标价不含税。Grok Bot、Grok 应用和 Cursor 里的 Grok 模型共用同一个每周额度。
 
-关联 SuperGrok 或 X Premium+ 是「用量额度」，不是 Cursor 套餐；你原来的 Cursor 套餐保持不变。
+## 已有 SuperGrok 或 Cursor
 
-## 关联前一定要知道
+- 官方说明切换是可选的，不切换原套餐继续有效。
+- SuperGrok、SuperGrok Plus、SuperGrok Heavy 关联到 Cursor 账号后包含 Grok Bot（Lite 不含）；Cursor Pro、Pro+、Ultra 和 Teams 也包含。
+- Cursor 和关联订阅同时存在时不叠加，按每周用量更多的那个算。
+- 旧版 Cursor Ultra 已不对新用户开放；媒体报道称 SuperGrok 等独立套餐也不再卖给新用户。
 
-- **关联是永久的**：不能解绑，也不能转到另一个 Cursor 账号。关联前先确认登录的是对的 Cursor 账号。
-- 关联后升级 SuperGrok，每周用量最多要 24 小时才更新，不用重新关联。
-- 两个订阅都保持各自扣费，取消一个不会取消另一个。
+## 不能撤销的两件事
 
-## 用量怎么算
-
-- **每周用量**：订阅内含，每周重置。
-- **按量计费**：每周用量用完后继续使用，通过 Cursor 计费，计入每月上限；上限不会打断正在进行的任务，但之后会停。
-- 没开按量计费时，每周用量用完 Grok Bot 就停止。
-- X 订阅的用量和 Cursor、Grok 应用共用一个每周额度。
+- **关联 SuperGrok 或 X Premium+ 是永久的**，不能解绑，也不能转到另一个 Cursor 账号。
+- **切换到 The X Subscription 时合并账号也是永久的**，被合并账号上的旧订阅在结账时取消，按比例退款。
 
 ## 怎么选
 
-- 已经付费用 Cursor 写代码：直接用 Cursor 账号，不用再买。
-- 主要用 Grok 或 X：用已有的 X 订阅或 SuperGrok。
-- 团队：自助购买的 Cursor Teams 每个成员都包含 Grok Bot，按量计费默认开启。企业版找客户经理。
+- 第一次用、想先试试：Premium。
+- 每天跑多个 Routine，或者同时在 Cursor 里大量写代码：Super。共享额度意味着 Bot 和写代码会互相挤占。
+- 团队：Premium、Super、Ultra 按席位计价，成员可以混用不同档位。
 
-价格经常调整，以 grok.com/dashboard/billing 和 Cursor 定价页为准。
-
-## 试用
-
-免费试用是一笔用量额度，同时有 7 天期限；按 Agent 步骤和 token 消耗，不按消息数，大任务用得快。免费账号点 Cancel Trial 会立即结束并清空剩余额度。
+价格经常调整，以 x.ai/pricing 和 grok.com 账单页为准。
 
 ## 常见追问
 
 ### Grok Bot 需要单独购买吗？
 
-不需要单独购买。X 订阅 Premium、Super、Ultra，SuperGrok、SuperGrok Plus、SuperGrok Heavy，以及 Cursor 付费套餐都包含 Grok Bot。
+不需要。The X Subscription 的 Premium、Super、Ultra 都包含 Grok Bot，Plus 和免费版不含。已有的 SuperGrok 系列和 Cursor 付费套餐也包含。
 
-### 同时有 Cursor 和 SuperGrok，用量会叠加吗？
+### 使用 Grok Bot 最便宜要多少钱？
 
-不会叠加，Grok Bot 使用两者中每周用量更多的那个。
+按 2026-10-15 的官方价格，The X Subscription Premium 月付 $30，年付 $300，不含税。
 
-### SuperGrok 关联到 Cursor 账号后可以解绑吗？
+### 已经买了 SuperGrok，要换成 X 订阅吗？
 
-不可以。关联是永久的，也不能转移到另一个 Cursor 账号。
+不是必须的。官方说明切换是可选的，不切换原套餐继续有效；切换时合并账号不可撤销。
 
 ## 相关阅读
 
 - [订阅怎么选（详细版）](/zh/start/plans/)
-- [Grok Bot 是什么](/zh/start/what-is-grok-bot/)
-- [Grok Bot 用量用完怎么办](/zh/answers/grok-bot-not-working/)
+- [中国用户须知](/zh/answers/grok-bot-in-china/)
+- [Grok Bot 用不了怎么办？](/zh/answers/grok-bot-not-working/)

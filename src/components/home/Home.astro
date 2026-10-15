@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 import { SITE } from '../../../site.config.mjs';
 import sponsors from '../../data/sponsors.json';
+import Newsletter from '../Newsletter.astro';
 import { formatDate, type Lang, useT } from '../../i18n/ui';
 
 interface Props {
@@ -99,15 +100,24 @@ const copy = {
 	},
 }[lang];
 
-const roles = [
-	{ id: 'sales', icon: 'rocket' },
-	{ id: 'marketing', icon: 'analytics' },
-	{ id: 'support', icon: 'comment' },
-	{ id: 'recruiting', icon: 'star' },
-	{ id: 'finance', icon: 'document' },
-	{ id: 'engineering', icon: 'laptop' },
-	{ id: 'assistant', icon: 'approve-check' },
-] as const;
+// 首页岗位入口和实战案例页的筛选用同一套分类：只显示案例里实际出现过的岗位，点进去是筛选好的案例列表。
+const ROLE_ICONS = {
+	sales: 'rocket',
+	marketing: 'analytics',
+	support: 'comment',
+	recruiting: 'star',
+	finance: 'document',
+	engineering: 'laptop',
+	operations: 'setting',
+	assistant: 'approve-check',
+} as const;
+type Role = keyof typeof ROLE_ICONS;
+const recipeEntries = await getCollection('docs', (e) => e.id.startsWith(`${lang}/recipes/`));
+const roleCounts = new Map<Role, number>();
+for (const e of recipeEntries) if (e.data.role) roleCounts.set(e.data.role, (roleCounts.get(e.data.role) ?? 0) + 1);
+const roles = (Object.keys(ROLE_ICONS) as Role[])
+	.filter((id) => roleCounts.has(id))
+	.map((id) => ({ id, icon: ROLE_ICONS[id], count: roleCounts.get(id)! }));
 
 const templates = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/templates/`)))
 	.sort((a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99))
@@ -166,9 +176,10 @@ const contributors = await getCollection('contributors');
 		<div class="roles">
 			{
 				roles.map((r) => (
-					<a class="role" href={p(`bots/?role=${r.id}`)}>
+					<a class="role" href={p(`recipes/?role=${r.id}`)}>
 						<Icon name={r.icon} size="1.5rem" />
 						<span>{t(`role.${r.id}`)}</span>
+						<small>{r.count}</small>
 					</a>
 				))
 			}
@@ -276,6 +287,7 @@ const contributors = await getCollection('contributors');
 		<div>
 			<h2>{copy.communityTitle}</h2>
 			<p>{copy.communityLead}</p>
+			{lang === 'en' && <Newsletter variant="compact" />}
 		</div>
 		<div class="actions">
 			{
@@ -531,6 +543,11 @@ const contributors = await getCollection('contributors');
 	}
 
 	/* Roles */
+	.role small {
+		font-weight: 400;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
 	.roles {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
