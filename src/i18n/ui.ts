@@ -10,8 +10,7 @@ const ui = {
 		'grade.opinion': '观点 / 评测',
 		'meta.verified': '最后验证',
 		'meta.author': '作者',
-		'meta.needsTesting':
-			'本文根据官方文档或社区分享整理，本站尚未亲测复现。如果你按步骤操作后发现不一致，欢迎在 GitHub 上修改此页。',
+		'meta.needsTesting': '本文依据官方文档与原作者资料整理，具体操作请以当前版本界面为准。',
 		'meta.sources': '参考来源',
 		'footer.disclaimer':
 			'GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。Grok 及相关名称是其各自所有者的商标。',
