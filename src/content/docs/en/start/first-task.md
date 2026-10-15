@@ -2,6 +2,7 @@
 title: Give it a first task
 description: 'Write tasks with five parts: outcome, sources, constraints, deliverable, review point. Start with a task that needs no sign-ins.'
 sidebar:
+  label: '05 · Give it a first task'
   order: 5
 grade: official
 needs_testing: true

@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: medium
+cadence: on-demand
 apps: ["Typefully", "X", "LinkedIn", "Substack"]
 sources:
   - title: "I Built a Seven Grok Bot AI Team（The AI Maker）"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **写完一篇长文或 Newsletter，交给 Bot 拆成 X、LinkedIn、Substack Notes 的帖子，存进 Typefully 草稿，你确认后再排期发布。**
+
+## 你会得到什么
+
+<RecipeShot slug="typefully-repurpose" />
 
 ## 适合谁
 
@@ -58,6 +66,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 先存草稿，你确认后再排期，不要直接发布。官方安全文档也建议把发布内容放在审批之后。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

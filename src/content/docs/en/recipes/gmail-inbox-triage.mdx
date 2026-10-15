@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: medium
+cadence: daily
 apps: ["Gmail", "Slack"]
 sources:
   - title: "Connect plugins (Cursor Help Center)"
@@ -21,8 +23,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Have a Bot sweep your inbox twice a day: label mail, draft replies and list what needs you. Sending always stays with you.**
+
+## What you get
+
+<RecipeShot slug="gmail-inbox-triage" />
 
 ## When to use it
 
@@ -68,6 +76,11 @@ Rules: never send, reply to or forward any email; never delete mail; when unsure
 - Turning off send, reply and forward in the plugin is more reliable than writing "do not send" in a prompt.
 - Keep it to drafts for the first week until labels and tone are stable.
 - Set deleting mail, unsubscribing and clicking links in emails to Ask first in Auto Review.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

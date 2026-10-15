@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: advanced
+risk: low
+cadence: weekly
 apps: ["Google Ads", "Slack"]
 sources:
   - title: "Grok Bot for Marketing (official guide)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every week the Bot pulls Google Ads experiment data and scores each creative concept on spend, CTR, CVR, CPA and ROAS, recommending scale, cut, keep testing or investigate. It never changes ads, bids or budgets.**
+
+## What you get
+
+<RecipeShot slug="google-ads-scoreboard" />
 
 ## When to use it
 
@@ -57,6 +65,11 @@ Do not change any ad, bid, budget or delivery status.
 
 - From the official marketing guide: people approve spend and live account changes; start with low-risk permissions and widen them after delivered work.
 - A read-only account rules out accidental edits.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

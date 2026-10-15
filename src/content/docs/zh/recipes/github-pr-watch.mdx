@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: engineering
 difficulty: advanced
+risk: medium
+cadence: scheduled
 apps: ["GitHub", "Notion"]
 sources:
   - title: "Grok Bot for Engineering（官方指南）"
@@ -21,9 +23,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **用一个 Notion 看板跟踪所有 PR，Bot 定时检查评审意见、安全扫描、CI 失败和合并冲突：有问题就推回「进行中」并通知负责人，全部通过才标「待评审」。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="github-pr-watch" />
 ## 适合谁
 
 - 同时有很多 PR（尤其是 AI Agent 开的），盯不过来
@@ -59,6 +67,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 官方工程指南里，低风险且评审信心高的 PR 会自动合并。起步阶段建议不要开放这一步。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

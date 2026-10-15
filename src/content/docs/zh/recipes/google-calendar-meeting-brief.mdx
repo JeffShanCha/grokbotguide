@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: daily
 apps: ["Google Calendar", "Gmail"]
 sources:
   - title: "Connect plugins（Cursor 帮助中心）"
@@ -21,9 +23,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Bot 每晚读一遍明天的日程，给每个会议配上背景资料和要准备的问题，并标出没有议程或时间冲突的会。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="google-calendar-meeting-brief" />
 ## 适合谁
 
 - 每天会议多，经常开到一半才想起上次聊了什么
@@ -62,6 +70,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 接受或拒绝邀请、改时间、发邀请，都在 Auto Review 里设成 Ask first。
 - 简报只发给你自己。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

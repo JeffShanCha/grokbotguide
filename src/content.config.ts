@@ -24,6 +24,9 @@ const docsExtension = z.object({
 	apps: z.array(z.string()).default([]),
 	permissions: z.array(z.string()).default([]),
 	difficulty: z.enum(['beginner', 'intermediate', 'advanced']).optional(),
+	// 实战案例摘要格：风险（low 只读或只写进你自己的文档；medium 会改你账号里的数据；high 涉及钱或直接面对客户）和运行频率
+	risk: z.enum(['low', 'medium', 'high']).optional(),
+	cadence: z.enum(['once', 'daily', 'weekly', 'monthly', 'scheduled', 'event', 'on-demand']).optional(),
 	kind: z.enum(['skill', 'routine', 'prompt', 'bot']).optional(),
 	share_url: z.url().optional(),
 });

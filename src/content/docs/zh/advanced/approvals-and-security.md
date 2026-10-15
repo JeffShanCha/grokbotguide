@@ -2,6 +2,7 @@
 title: 审批、安全与隐私
 description: 哪些动作要审批、Auto Review 怎么设、密码怎么交给 Bot、为什么多个 Bot 不是安全隔离。
 sidebar:
+  label: '02 · 审批、安全与隐私'
   order: 2
 grade: official
 needs_testing: true

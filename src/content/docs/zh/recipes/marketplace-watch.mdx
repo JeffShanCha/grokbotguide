@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: scheduled
 apps: ["Facebook Marketplace", "Craigslist", "浏览器"]
 sources:
   - title: "Grok Bot 101（官方指南）"
@@ -17,9 +19,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **让 Bot 定时搜 Facebook Marketplace、Craigslist 或你已经登录的二手平台，出现符合条件的商品就通知你，并附上它对价格的判断。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="marketplace-watch" />
 ## 适合谁
 
 - 想买某件二手好货，但不想每天刷
@@ -53,6 +61,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 联系卖家、出价、付款都由你来。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

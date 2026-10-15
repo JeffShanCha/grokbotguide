@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 
 import { SITE } from './site.config.mjs';
+import { LOCALES } from './locales.config.mjs';
 const REPO = SITE.repo;
 
 // 欧洲经济区、英国、瑞士：默认不写 GA4 Cookie（只发无 Cookie 的匿名请求），其他地区正常统计。
@@ -45,10 +46,7 @@ export default defineConfig({
 			favicon: '/favicon.svg',
 			// 默认语言设为 en：hreflang 的 x-default 指向英文版（面向海外搜索）。中英两套内容都完整维护。
 			defaultLocale: 'en',
-			locales: {
-				zh: { label: '简体中文', lang: 'zh-CN' },
-				en: { label: 'English', lang: 'en' },
-			},
+			locales: Object.fromEntries(Object.entries(LOCALES).map(([code, l]) => [code, { label: l.label, lang: l.lang }])),
 			social: [
 				{ icon: 'github', label: 'GitHub', href: REPO },
 				{ icon: 'x.com', label: 'X', href: SITE.x },
@@ -57,8 +55,9 @@ export default defineConfig({
 			lastUpdated: true,
 			credits: false,
 			disable404Route: true,
-			customCss: ['./src/styles/custom.css'],
+			customCss: ['@fontsource/space-grotesk/500.css', '@fontsource/space-grotesk/700.css', './src/styles/custom.css'],
 			components: {
+				Header: './src/components/overrides/Header.astro',
 				LanguageSelect: './src/components/overrides/LanguageSelect.astro',
 				PageTitle: './src/components/overrides/PageTitle.astro',
 				Footer: './src/components/overrides/Footer.astro',
@@ -79,16 +78,12 @@ export default defineConfig({
 				// Google Analytics 4：在 site.config.mjs 填 ga4MeasurementId 后自动加载
 				...ga4Head,
 			],
+			// 3 个核心分组（快速上手、进阶教程、实战案例）+ 2 个辅助分组（参考、社区）。只改分组，不改任何 URL。
 			sidebar: [
 				{
 					label: '快速上手',
 					translations: { en: 'Get started' },
 					items: [{ autogenerate: { directory: 'start' } }],
-				},
-				{
-					label: '常见问题',
-					translations: { en: 'How-to & FAQ' },
-					items: [{ autogenerate: { directory: 'answers' } }],
 				},
 				{
 					label: '进阶教程',
@@ -98,22 +93,33 @@ export default defineConfig({
 				{
 					label: '实战案例',
 					translations: { en: 'Recipes' },
-					items: [{ autogenerate: { directory: 'recipes' } }],
-				},
-				{
-					label: '角色库',
-					translations: { en: 'Bot library' },
-					items: [{ autogenerate: { directory: 'bots' } }],
-				},
-				{
-					label: '模板库',
-					translations: { en: 'Templates' },
-					items: [{ autogenerate: { directory: 'templates' } }],
-				},
-				{
-					label: '更新与资源',
-					translations: { en: 'News & resources' },
 					items: [
+						{ autogenerate: { directory: 'recipes' } },
+						{
+							label: '角色卡',
+							translations: { en: 'Bot cards' },
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'bots' } }],
+						},
+						{
+							label: '模板',
+							translations: { en: 'Templates' },
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'templates' } }],
+						},
+					],
+				},
+				{
+					label: '参考',
+					translations: { en: 'Reference' },
+					items: [
+						{ label: '学习路线', translations: { en: 'Learning path' }, slug: 'guide' },
+						{
+							label: '常见问题',
+							translations: { en: 'How-to & FAQ' },
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'answers' } }],
+						},
 						{ label: '更新日志', translations: { en: 'Changelog' }, slug: 'news/changelog' },
 						{ label: '资源导航', translations: { en: 'Resources' }, slug: 'resources' },
 					],
@@ -121,6 +127,7 @@ export default defineConfig({
 				{
 					label: '社区',
 					translations: { en: 'Community' },
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'community' } }],
 				},
 			],
@@ -128,7 +135,7 @@ export default defineConfig({
 		// 显式配置 sitemap：排除只负责跳转的根路径 /
 		sitemap({
 			filter: (page) => page !== `${SITE.url}/`,
-			i18n: { defaultLocale: 'en', locales: { zh: 'zh-CN', en: 'en' } },
+			i18n: { defaultLocale: 'en', locales: Object.fromEntries(Object.entries(LOCALES).map(([code, l]) => [code, l.lang])) },
 		}),
 	],
 });

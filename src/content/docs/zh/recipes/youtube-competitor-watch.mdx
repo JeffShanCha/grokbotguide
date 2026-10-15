@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: low
+cadence: daily
 apps: ["YouTube", "Notion"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **每天扫一遍你关注的 YouTube 频道，把新发布的长视频记进 Notion：标题、封面、链接，以及播放量和这个频道平时水平的对比，帮你发现选题爆款。**
+
+## 你会得到什么
+
+<RecipeShot slug="youtube-competitor-watch" />
 
 ## 适合谁
 
@@ -57,6 +65,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 只读 YouTube，Notion 只往这个数据库里加内容。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

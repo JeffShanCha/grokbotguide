@@ -1,0 +1,72 @@
+---
+// 「你会得到什么」截图位：src/assets/tests/<slug>/result.(png|jpg|webp) 存在时显示真实截图，否则显示占位框。
+// 截图放进去、重新构建就会自动替换，不用改文章。
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { toLang } from '../i18n/ui';
+
+interface Props {
+	slug: string;
+}
+const { slug } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const shots = import.meta.glob<{ default: ImageMetadata }>('/src/assets/tests/*/result.{png,jpg,jpeg,webp}', { eager: true });
+const key = Object.keys(shots).find((k) => k.startsWith(`/src/assets/tests/${slug}/`));
+const img = key ? shots[key].default : undefined;
+const c = {
+	zh: {
+		alt: '本站实测时 Bot 交付的结果截图',
+		title: '实测截图整理中',
+		text: '本站实测后，Bot 交付的真实结果截图会放在这里。',
+		cta: '你跑通了？投稿你的实测',
+	},
+	en: {
+		alt: 'Screenshot of what the Bot delivered in our test',
+		title: 'Screenshot coming',
+		text: 'Once we have tested this recipe, a screenshot of what the Bot actually delivered will go here.',
+		cta: 'Got it working? Share your test',
+	},
+}[lang];
+---
+
+{
+	img ? (
+		<figure class="gbg-shot">
+			<Image src={img} alt={c.alt} />
+		</figure>
+	) : (
+		<div class="gbg-shot-empty not-content">
+			<strong>{c.title}</strong>
+			<span>{c.text}</span>
+			<a href={`/${lang}/community/submit/`}>{c.cta} →</a>
+		</div>
+	)
+}
+
+<style>
+	.gbg-shot img {
+		border-radius: 0.75rem;
+		border: 1px solid var(--gbg-card-border);
+	}
+	.gbg-shot-empty {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem;
+		min-height: 10rem;
+		margin-top: 1rem;
+		padding: 1.5rem;
+		text-align: center;
+		border: 2px dashed var(--sl-color-gray-5);
+		border-radius: 0.75rem;
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-shot-empty strong {
+		color: var(--sl-color-gray-1);
+	}
+	.gbg-shot-empty a {
+		color: var(--sl-color-text-accent);
+	}
+</style>

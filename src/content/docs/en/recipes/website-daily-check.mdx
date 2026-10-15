@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: operations
 difficulty: intermediate
+risk: low
+cadence: daily
 apps: ["Cloudflare", "GitHub", "Analytics", "Browser"]
 sources:
   - title: "A deep dive into Grok Bot (Flavio Copes)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every morning the Bot opens your analytics, deployment history, GitHub repository and live pages, confirms yesterday’s content is live and traffic looks normal, and writes a Markdown report.**
+
+## What you get
+
+<RecipeShot slug="website-daily-check" />
 
 ## When to use it
 
@@ -61,6 +69,11 @@ If any item will not open or needs verification, mark it "unverified" with the r
 
 - Read-only: no deploys, no setting changes, no merges.
 - Use the smallest possible dashboard permissions.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

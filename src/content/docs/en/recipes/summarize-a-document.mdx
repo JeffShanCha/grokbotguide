@@ -8,13 +8,22 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: once
 apps: [File upload]
 sources:
   - title: Get started (official docs)
     url: https://docs.x.ai/grok-bot/get-started
 ---
 
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
+
 **This is the first test the official docs recommend: attach a document, ask for a summary in a specific format, and tell the Bot not to modify the file.** It needs no connectors or sign-ins and takes no external action.
+
+## What you get
+
+<RecipeShot slug="summarize-a-document" />
 
 ## You need
 
@@ -43,3 +52,7 @@ Do not modify the source file.
 :::tip[Add your results]
 What kind of document did you try? Use "Edit page" at the bottom to add your test notes. Once tested, this page can move from "From official docs" to "Community tested".
 :::
+
+## Our test results
+
+<RecipeTestStatus />

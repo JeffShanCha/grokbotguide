@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: once
 apps: ["Notion", "X"]
 sources:
   - title: "Grok Bot 101 (official guide)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **The Bot reads who you follow on X and, using public profile information only, builds a Notion board with avatars, bios and profile links, ready to skim before a trip or an event.**
+
+## What you get
+
+<RecipeShot slug="notion-personal-crm" />
 
 ## When to use it
 
@@ -59,6 +67,11 @@ Do not follow, unfollow, DM or like anyone. Do not search other sites for inform
 
 - Read-only on X; in Notion, only create under the page you name.
 - Use only what people show publicly on their X profile.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

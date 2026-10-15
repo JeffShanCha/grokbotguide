@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: medium
+cadence: daily
 apps: ["Gmail", "Slack"]
 sources:
   - title: "Connect plugins（Cursor 帮助中心）"
@@ -21,9 +23,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **让 Bot 每天两次扫一遍收件箱：分类打标签、起草回复、把需要你处理的事列成简报。发送这一步始终留给你。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="gmail-inbox-triage" />
 ## 适合谁
 
 - 收件箱每天几十上百封，重要邮件经常被淹没
@@ -68,6 +76,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 - 在插件层面关掉发送、回复、转发，比在指令里写「不要发送」更可靠。
 - 头一周只出草稿，确认分类和语气都稳定后再考虑放开。
 - 删除邮件、退订、点击邮件里的链接，都在 Auto Review 里设成 Ask first。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

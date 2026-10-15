@@ -2,6 +2,7 @@
 title: 多 Bot 协作
 description: 什么时候该拆成多个 Bot、如何交接、共享电脑意味着什么。
 sidebar:
+  label: '03 · 多 Bot 协作'
   order: 3
 grade: official
 needs_testing: true

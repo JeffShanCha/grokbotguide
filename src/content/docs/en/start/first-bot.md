@@ -2,6 +2,7 @@
 title: Create your first Bot
 description: One Bot, one job. Give it a name, a responsibility and a clear list of things it must never do.
 sidebar:
+  label: '04 · Create your first Bot'
   order: 4
 grade: official
 needs_testing: true

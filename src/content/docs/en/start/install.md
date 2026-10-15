@@ -2,6 +2,7 @@
 title: Install and sign in
 description: Install the Grok Bot desktop app on macOS, Windows or Linux and sign in.
 sidebar:
+  label: '03 · Install and sign in'
   order: 3
 grade: official
 needs_testing: true

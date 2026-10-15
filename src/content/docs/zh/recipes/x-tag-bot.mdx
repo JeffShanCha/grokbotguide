@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: event
 apps: ["X"]
 sources:
   - title: "Tag @bot on X（官方文档）"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **在 X 上看到值得处理的帖子或长串讨论，直接回复「@bot 加一句要求」，你的主 Bot 就会在云电脑上接手，结果留在 Grok Bot 应用里，不会公开发在 X 上。**
+
+## 你会得到什么
+
+<RecipeShot slug="x-tag-bot" />
 
 ## 适合谁
 
@@ -56,6 +64,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - @bot 只在 X 上发一条确认，具体结果不会公开发在 X 上。
 - 被 @ 触发的请求会自动开始执行，所以要在请求里写清楚边界，比如「只总结，不要回复任何人」。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

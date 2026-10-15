@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: medium
+cadence: on-demand
 apps: ["Typefully", "X", "LinkedIn", "Substack"]
 sources:
   - title: "I Built a Seven Grok Bot AI Team (The AI Maker)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Finish an article or newsletter and the Bot turns it into posts for X, LinkedIn and Substack Notes, saved as Typefully drafts and scheduled once you approve.**
+
+## What you get
+
+<RecipeShot slug="typefully-repurpose" />
 
 ## When to use it
 
@@ -58,6 +66,11 @@ Send me all drafts for confirmation before scheduling.
 ## Approvals and permissions
 
 - Drafts first, schedule after you confirm, never publish directly. The official security docs also recommend keeping publishing behind approval.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

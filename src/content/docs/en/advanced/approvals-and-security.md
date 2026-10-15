@@ -2,6 +2,7 @@
 title: Approvals, security and privacy
 description: Which actions need approval, how to set up Auto Review, how to hand credentials to a Bot, and why separate Bots are not a security boundary.
 sidebar:
+  label: '02 · Approvals, security and privacy'
   order: 2
 grade: official
 needs_testing: true

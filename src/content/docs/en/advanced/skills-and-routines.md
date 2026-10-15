@@ -2,6 +2,7 @@
 title: Skills and routines
 description: A skill says how to do it; a routine says when. Run it by hand first, save it as a skill, then automate.
 sidebar:
+  label: '01 · Skills and routines'
   order: 1
 grade: official
 needs_testing: true

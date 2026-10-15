@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: high
+cadence: on-demand
 apps: ["Amazon", "Costco", "浏览器"]
 sources:
   - title: "Grok Bot 101（官方指南）"
@@ -17,9 +19,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **让 Bot 在两个购物网站把同一批商品加进购物车，比较总价、运费和送达时间，给你一张对比表；最后一步付款留给你。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="shopping-compare" />
 ## 适合谁
 
 - 每周固定采购一批日用品
@@ -57,6 +65,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 下单和付款永远由你来。官方安全文档写明，付款确认这类步骤要你自己接管完成。
 - 在 Auto Review 里给「下单 / 付款」加一条 Ask first 规则，作为双保险。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

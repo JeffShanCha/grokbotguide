@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: high
+cadence: on-demand
 apps: ["Amazon", "Costco", "Browser"]
 sources:
   - title: "Grok Bot 101 (official guide)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **The Bot adds the same list to carts on two stores and compares totals, delivery fees and delivery times in one table. Paying is the one step it leaves to you.**
+
+## What you get
+
+<RecipeShot slug="shopping-compare" />
 
 ## When to use it
 
@@ -57,6 +65,11 @@ Give me a comparison table and a recommendation. Do not place an order or pay; s
 
 - You always place the order and pay. The official security docs say steps such as payment confirmations need you to take over.
 - Add an Ask first rule for placing orders and payments in Auto Review as a second safeguard.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

@@ -2,6 +2,7 @@
 title: What is Grok Bot?
 description: Grok Bot in five minutes. An always-on AI teammate with its own cloud computer that signs in to your apps and finishes the work.
 sidebar:
+  label: '01 · What is Grok Bot?'
   order: 1
 grade: official
 needs_testing: true

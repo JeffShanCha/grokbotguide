@@ -8,6 +8,17 @@ const lang = toLang(route.locale);
 const t = useT(lang);
 const isSplash = data.template === 'splash';
 const showMeta = !isSplash && (data.grade || data.last_verified || data.author);
+// 实战案例文章：标题下的摘要格
+const isRecipe = /^[a-z]+\/recipes\/.+/.test(route.id);
+const summary = isRecipe
+	? [
+			{ k: t('sum.who'), v: data.role ? t(`role.${data.role}`) : '' },
+			{ k: t('sum.apps'), v: data.apps.join(' · ') },
+			{ k: t('sum.risk'), v: data.risk ? t(`risk.${data.risk}`) : '', cls: data.risk ? `risk-${data.risk}` : '' },
+			{ k: t('sum.cadence'), v: data.cadence ? t(`cadence.${data.cadence}`) : '' },
+			{ k: t('sum.difficulty'), v: data.difficulty ? t(`difficulty.${data.difficulty}`) : '' },
+		].filter((x) => x.v)
+	: [];
 ---
 
 {/* 首页（splash）由 Home 组件自己渲染 h1，这里不再重复标题 */}
@@ -32,6 +43,19 @@ const showMeta = !isSplash && (data.grade || data.last_verified || data.author);
 }
 
 {
+	summary.length > 0 && (
+		<dl class="gbg-summary">
+			{summary.map((x) => (
+				<div>
+					<dt>{x.k}</dt>
+					<dd class={x.cls}>{x.v}</dd>
+				</div>
+			))}
+		</dl>
+	)
+}
+
+{
 	!isSplash && data.needs_testing && (
 		<aside class="gbg-needs-testing" role="note">
 			{t('meta.needsTesting')}
@@ -48,6 +72,51 @@ const showMeta = !isSplash && (data.grade || data.last_verified || data.author);
 		margin-top: 0.75rem;
 		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-3);
+	}
+	.gbg-summary {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1px;
+		margin: 1.25rem 0 0;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		background: var(--gbg-card-border);
+		overflow: hidden;
+	}
+	.gbg-summary div {
+		flex: 1 1 9rem;
+		padding: 0.7rem 0.9rem;
+		background: var(--gbg-card-bg);
+	}
+	.gbg-summary dt {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-summary dd {
+		margin: 0.15rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-white);
+		line-height: 1.45;
+	}
+	.gbg-summary .risk-low::before,
+	.gbg-summary .risk-medium::before,
+	.gbg-summary .risk-high::before {
+		content: '';
+		display: inline-block;
+		width: 0.5rem;
+		height: 0.5rem;
+		margin-inline-end: 0.4rem;
+		border-radius: 50%;
+		vertical-align: 0.05rem;
+	}
+	.gbg-summary .risk-low::before {
+		background: #16a34a;
+	}
+	.gbg-summary .risk-medium::before {
+		background: #d97706;
+	}
+	.gbg-summary .risk-high::before {
+		background: #dc2626;
 	}
 	.gbg-needs-testing {
 		margin-top: 1rem;

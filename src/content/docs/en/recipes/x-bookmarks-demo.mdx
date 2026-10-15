@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: engineering
 difficulty: intermediate
+risk: medium
+cadence: daily
 apps: ["X", "Cursor", "GitHub"]
 sources:
   - title: "Grok Bot 101 (official guide)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **The Bot goes through the tech posts you bookmark, picks one worth a demo each weekday, writes a prototype spec for your approval, then has a Cursor cloud agent build it and returns screenshots and a PR.**
+
+## What you get
+
+<RecipeShot slug="x-bookmarks-demo" />
 
 ## When to use it
 
@@ -62,6 +70,11 @@ Without my confirmation, do not start any agent and do not merge any PR.
 
 - Always wait for your confirmation before starting an agent; agents use a lot of usage.
 - Open PRs only; never merge.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

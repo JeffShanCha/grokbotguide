@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: engineering
 difficulty: advanced
+risk: medium
+cadence: on-demand
 apps: ["Cursor", "GitHub", "Slack", "Notion"]
 sources:
   - title: "Grok Bot 101 (official guide)"
@@ -21,8 +23,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Grok Bot gathers context and writes the spec and acceptance criteria, then starts a Cursor cloud agent to write code and open a PR. It watches the run and follows up or interrupts if the agent drifts.**
+
+## What you get
+
+<RecipeShot slug="cursor-cloud-agent" />
 
 ## When to use it
 
@@ -64,6 +72,11 @@ Please:
 
 - You merge PRs.
 - Start with PR-only access to production repositories.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

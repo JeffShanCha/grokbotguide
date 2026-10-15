@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: sales
 difficulty: intermediate
+risk: low
+cadence: daily
 apps: ["Granola", "Notion"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every morning the Bot reads yesterday’s sales call transcripts, scores each against your framework, and lists what went well, missed opportunities and action items.**
+
+## What you get
+
+<RecipeShot slug="call-transcripts-review" />
 
 ## When to use it
 
@@ -57,6 +65,11 @@ Report only; do not send anything to customers or edit the CRM.
 ## Approvals and permissions
 
 - Report only: nothing sent externally, no CRM edits.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

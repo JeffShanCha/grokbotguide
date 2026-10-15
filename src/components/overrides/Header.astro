@@ -1,0 +1,141 @@
+---
+// 顶栏：在 Starlight 默认顶栏的基础上，在站点名和搜索框之间加四个主线入口。
+// 窄屏（手机、平板竖屏）不显示这排链接，主线入口在侧边栏里。
+import Search from '@astrojs/starlight/components/Search.astro';
+import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import LanguageSelect from './LanguageSelect.astro';
+import { toLang } from '../../i18n/ui';
+
+const route = Astro.locals.starlightRoute;
+const lang = toLang(route.locale);
+const id = route.id; // 形如 zh/recipes/gmail-inbox-triage
+const NAV = {
+	zh: [
+		{ label: '学习路线', href: 'guide/', match: ['guide'] },
+		{ label: '快速上手', href: 'start/what-is-grok-bot/', match: ['start'] },
+		{ label: '进阶教程', href: 'advanced/skills-and-routines/', match: ['advanced'] },
+		{ label: '实战案例', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
+	],
+	en: [
+		{ label: 'Learning path', href: 'guide/', match: ['guide'] },
+		{ label: 'Get started', href: 'start/what-is-grok-bot/', match: ['start'] },
+		{ label: 'Advanced', href: 'advanced/skills-and-routines/', match: ['advanced'] },
+		{ label: 'Recipes', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
+	],
+}[lang];
+const section = id.split('/')[1] ?? '';
+---
+
+<div class="header">
+	<div class="title-wrapper sl-flex">
+		<SiteTitle />
+	</div>
+	<div class="center sl-flex print:hidden">
+		<nav class="gbg-topnav" aria-label={lang === 'zh' ? '主导航' : 'Main'}>
+			{
+				NAV.map((n) => (
+					<a href={`/${lang}/${n.href}`} aria-current={n.match.includes(section) ? 'page' : undefined}>
+						{n.label}
+					</a>
+				))
+			}
+		</nav>
+		<div class="search">
+			<Search />
+		</div>
+	</div>
+	<div class="sl-hidden md:sl-flex print:hidden right-group">
+		<div class="sl-flex social-icons">
+			<SocialIcons />
+		</div>
+		<ThemeSelect />
+		<LanguageSelect />
+	</div>
+</div>
+
+<style>
+	.header {
+		display: flex;
+		gap: var(--sl-nav-gap);
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	.title-wrapper {
+		overflow: clip;
+		padding: 0.25rem;
+		margin: -0.25rem;
+		min-width: 0;
+	}
+	.center {
+		align-items: center;
+		gap: 1.5rem;
+		min-width: 0;
+	}
+	.search {
+		display: flex;
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+	.gbg-topnav {
+		display: none;
+		gap: 1.25rem;
+		flex: none;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-topnav a {
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+		padding-block: 0.35rem;
+		border-bottom: 2px solid transparent;
+		white-space: nowrap;
+	}
+	.gbg-topnav a:hover {
+		color: var(--sl-color-white);
+	}
+	.gbg-topnav a[aria-current='page'] {
+		color: var(--sl-color-white);
+		border-bottom-color: var(--sl-color-accent);
+	}
+	.right-group,
+	.social-icons {
+		gap: 1rem;
+		align-items: center;
+	}
+	.social-icons::after {
+		content: '';
+		height: 2rem;
+		border-inline-end: 1px solid var(--sl-color-gray-5);
+	}
+	@media (min-width: 72rem) {
+		.gbg-topnav {
+			display: flex;
+		}
+	}
+	@media (min-width: 50rem) {
+		:global(:root[data-has-sidebar]) {
+			--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+		}
+		:global(:root:not([data-has-toc])) {
+			--__toc-width: 0rem;
+		}
+		.header {
+			--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+			--__main-column-fr: calc(
+				(
+						100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+							(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+							var(--sl-content-width)
+					) / 2
+			);
+			display: grid;
+			grid-template-columns:
+				minmax(calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))), auto)
+				1fr
+				auto;
+			align-content: center;
+		}
+	}
+</style>

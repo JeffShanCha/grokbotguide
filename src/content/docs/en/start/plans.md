@@ -2,6 +2,7 @@
 title: 'Which plan: X Subscription, SuperGrok or Cursor?'
 description: From October 2026, new users get Grok Bot with The X Subscription Premium ($30/month) and above; existing SuperGrok and paid Cursor plans keep working. Prices, usage and what to know before switching.
 sidebar:
+  label: '02 · Which plan'
   order: 2
 grade: official
 needs_testing: true

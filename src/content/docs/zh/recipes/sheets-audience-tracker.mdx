@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: low
+cadence: weekly
 apps: ["Google Sheets", "浏览器"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
@@ -19,9 +21,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Bot 每周打开你在各个平台的主页，把粉丝数、订阅数追加到同一张 Google 表格，长期看总受众怎么增长。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="sheets-audience-tracker" />
 ## 适合谁
 
 - 在好几个平台做内容，每周手动抄数字很烦
@@ -62,6 +70,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 只追加新行、不改历史数据，写进指令里。
 - 后台登录用 Take over 自己输入密码。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: engineering
 difficulty: advanced
+risk: medium
+cadence: on-demand
 apps: ["Cursor", "GitHub", "Slack", "Notion"]
 sources:
   - title: "Grok Bot 101（官方指南）"
@@ -21,9 +23,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Grok Bot 负责收集上下文、写清楚需求和验收标准，再启动 Cursor 云端 Agent 写代码开 PR；它全程盯着进度，跑偏了就追问或打断。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="cursor-cloud-agent" />
 ## 适合谁
 
 - 需求散落在 Slack、Notion 和代码里，每次给 AI 写提示词都要先查半天
@@ -64,6 +72,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 合并 PR 由你来做。
 - 生产仓库起步只给开 PR 的权限。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

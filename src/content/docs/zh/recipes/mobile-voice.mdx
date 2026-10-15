@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: on-demand
 apps: ["iPhone", "Android"]
 sources:
   - title: "Grok Bot for Mobile（官方文档）"
@@ -17,9 +19,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **不在电脑前也能用：在 iPhone 上从相册或其他应用直接分享给 Bot，开语音聊天交代任务，收到通知后处理问题和审批。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="mobile-voice" />
 ## 适合谁
 
 - 通勤、出差路上想到一件事，想马上交出去
@@ -55,6 +63,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 在手机上点 Send Email 之前看清收件人和正文。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

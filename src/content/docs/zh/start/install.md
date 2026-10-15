@@ -2,6 +2,7 @@
 title: 安装与登录
 description: 在 macOS、Windows、Linux 上安装 Grok Bot 桌面端并完成登录。
 sidebar:
+  label: '03 · 安装与登录'
   order: 3
 grade: official
 needs_testing: true

@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: support
 difficulty: intermediate
+risk: high
+cadence: on-demand
 apps: ["Stripe", "Gmail"]
 sources:
   - title: "Grok Bot for Support (official guide)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Give the Bot your refund policy. It checks each request and the matching Stripe payment, recommends approve or deny with a reply draft, and acts only after you approve each one.**
+
+## What you get
+
+<RecipeShot slug="stripe-refunds" />
 
 ## When to use it
 
@@ -61,6 +69,11 @@ Do not issue any refund in Stripe or send any email without my approval of each 
 
 - Refunds move money and need approval one by one. The official security docs list purchases and transfers among the actions to set boundaries for.
 - Approval cards from routines expire after about 10 minutes and the action does not run; ask the Bot to retry.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

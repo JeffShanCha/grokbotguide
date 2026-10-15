@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: low
+cadence: weekly
 apps: ["Google Sheets", "Browser"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every week the Bot opens your profiles on each platform and appends follower and subscriber counts to one Google Sheet, so you can track total audience over time.**
+
+## What you get
+
+<RecipeShot slug="sheets-audience-tracker" />
 
 ## When to use it
 
@@ -62,6 +70,11 @@ If a platform cannot be read, write "not retrieved" with the reason; never reuse
 
 - Write "append only, never edit history" into the prompt.
 - Use Take over to enter dashboard passwords yourself.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

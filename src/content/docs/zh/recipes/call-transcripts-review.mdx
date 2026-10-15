@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: sales
 difficulty: intermediate
+risk: low
+cadence: daily
 apps: ["Granola", "Notion"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
@@ -17,9 +19,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **每天早上让 Bot 读昨天所有销售通话的转写，对照你的销售方法打分，列出做得好的地方、错过的机会和待办事项。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="call-transcripts-review" />
 ## 适合谁
 
 - 每天有多个销售或客户电话，没时间逐个复盘
@@ -57,6 +65,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 ## 审批与权限
 
 - 只写报告，不对外发送，不改 CRM。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

@@ -2,6 +2,8 @@
 :root {
 	--sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	--sl-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+	/* 标题字体：Space Grotesk 只覆盖拉丁字符，中文回落到系统字体。字体文件随站点一起发布，不依赖 Google Fonts。 */
+	--gbg-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 
 	/* 深色（默认） */
 	--sl-color-accent-low: #3a1606;
@@ -140,4 +142,11 @@ a.gbg-card:hover {
 }
 .content-panel:has(> .sl-container:empty) + .content-panel {
 	border-top: none;
+}
+
+/* 标题、站点名使用标题字体 */
+.site-title,
+.sl-markdown-content :is(h1, h2),
+h1#_top {
+	font-family: var(--gbg-display);
 }

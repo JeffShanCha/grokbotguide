@@ -7,27 +7,10 @@ sidebar:
 ---
 
 import EntryCards from '~/components/EntryCards.astro';
-import ResourceList from '~/components/ResourceList.astro';
+import RecipeLibraryExtras from '~/components/RecipeLibraryExtras.astro';
 
-每篇案例都写清楚：适合谁、要准备什么、具体步骤、可以直接复制的指令、哪些动作必须你审批，以及别人踩过的坑。
+Grok Bot × 你每天在用的工具。每篇写清楚适合谁、要准备什么、可复制的指令和必须你审批的动作。标着「整理自社区分享」的，是别人跑通过、本站还没复现的做法。
 
-案例来自官方文档、官方使用指南和社区作者公开分享的实测，每篇底部都列出了来源。标着「整理自社区分享」的，是别人跑通过、本站还没复现的做法。你照着做成功了，欢迎在页面底部点「编辑此页」补上你的测试结果。
+<EntryCards section="recipes" legend />
 
-<EntryCards section="recipes" />
-
-## 更多社区实战分享
-
-下面是资源导航里标为「实战案例」的外部文章、视频和帖子，按收录时间排序。我们只写摘要并链接原文，没有复现过作者的结果。
-
-<ResourceList category="recipes" compact />
-
-## 征稿中
-
-下面这些组合还没人写，欢迎 [投稿](/zh/community/submit/) 或在 GitHub 认领：
-
-- Grok Bot × Shopify：每天汇总订单和客服问题
-- Grok Bot × Google Search Console：每周 SEO 周报
-- Grok Bot × 飞书 / Lark：把群消息整理成待办
-- Grok Bot × Linear：把 Slack 里的需求整理成工单
-- Grok Bot × Figma：设计稿改动后自动写变更说明
-- Grok Bot × Discord / Telegram：社群答疑和每日摘要
+<RecipeLibraryExtras />

@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: daily
 apps: ["Google Calendar", "Gmail"]
 sources:
   - title: "Connect plugins (Cursor Help Center)"
@@ -21,8 +23,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every evening the Bot reads tomorrow’s calendar, adds context and prep questions to each meeting, and flags meetings with no agenda or a conflict.**
+
+## What you get
+
+<RecipeShot slug="google-calendar-meeting-brief" />
 
 ## When to use it
 
@@ -62,6 +70,11 @@ Do not accept, decline or change any meeting; do not message anyone.
 
 - Set accepting or declining invitations, rescheduling and sending invitations to Ask first in Auto Review.
 - Send the briefing to you only.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

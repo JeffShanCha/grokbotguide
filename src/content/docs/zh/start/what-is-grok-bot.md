@@ -2,6 +2,7 @@
 title: Grok Bot 是什么
 description: 5 分钟了解 Grok Bot：常驻云端的 AI 同事，有自己的电脑，能登录你的应用把活干完。
 sidebar:
+  label: '01 · Grok Bot 是什么'
   order: 1
 grade: official
 needs_testing: true

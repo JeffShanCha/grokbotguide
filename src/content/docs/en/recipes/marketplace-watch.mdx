@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: scheduled
 apps: ["Facebook Marketplace", "Craigslist", "Browser"]
 sources:
   - title: "Grok Bot 101 (official guide)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **The Bot searches Facebook Marketplace, Craigslist or any marketplace you are signed in to on a schedule, and tells you about matching listings with its take on the price.**
+
+## What you get
+
+<RecipeShot slug="marketplace-watch" />
 
 ## When to use it
 
@@ -53,6 +61,11 @@ Do not resend listings you already sent. Do not contact sellers, make offers or 
 ## Approvals and permissions
 
 - You contact sellers, make offers and pay.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

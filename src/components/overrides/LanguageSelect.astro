@@ -1,23 +1,178 @@
 ---
-// 包一层 Starlight 自带的语言切换器：用户手动切换时写入 lang Cookie，
-// 之后访问根路径 / 时 Worker 会优先使用这个选择，而不是按地区判断。
-import Default from '@astrojs/starlight/components/LanguageSelect.astro';
+// 语言菜单：地球图标 + 当前语言，点开是一列链接（每种语言一条）。
+// 语言列表来自 locales.config.mjs，加语言不用改这里。
+// 选择后写入 lang Cookie：之后访问根路径 / 时 Worker 优先用这个选择，而不是按地区判断。
+import { LOCALES } from '../../../locales.config.mjs';
+
+const route = Astro.locals.starlightRoute;
+const current = route.locale ?? 'en';
+const codes = Object.keys(LOCALES) as (keyof typeof LOCALES)[];
+const prefix = new RegExp(`^/(${codes.join('|')})(?=/|$)`);
+const hrefFor = (code: string) => {
+	const path = Astro.url.pathname;
+	return prefix.test(path) ? path.replace(prefix, `/${code}`) : `/${code}/`;
+};
+const cur = LOCALES[current as keyof typeof LOCALES] ?? LOCALES.en;
+const menuId = `gbg-lang-${Math.random().toString(36).slice(2, 8)}`;
+const label = current === 'zh' ? '选择语言' : 'Choose language';
 ---
 
-<Default />
+<gbg-lang-menu class="gbg-lang">
+	<button type="button" class="gbg-lang-btn" aria-expanded="false" aria-controls={menuId} aria-label={`${label}: ${cur.label}`}>
+		<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+			<circle cx="12" cy="12" r="9"></circle>
+			<path d="M3 12h18"></path>
+			<path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path>
+		</svg>
+		<span class="gbg-lang-cur" lang={cur.lang}>{cur.label}</span>
+		<svg class="gbg-lang-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+	</button>
+	<ul class="gbg-lang-list" id={menuId} hidden>
+		{
+			codes.map((code) => {
+				const l = LOCALES[code];
+				const selected = code === current;
+				return (
+					<li>
+						<a href={hrefFor(code)} hreflang={l.lang} lang={l.lang} data-lang={code} aria-current={selected ? 'true' : undefined}>
+							<span>{l.label}</span>
+							<span class="gbg-lang-code">
+								{l.short}
+								{selected && (
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>
+								)}
+							</span>
+						</a>
+					</li>
+				);
+			})
+		}
+	</ul>
+</gbg-lang-menu>
 
 <script>
-	// 在捕获阶段注册：先于 Starlight 自带的跳转逻辑执行，保证 Cookie 和统计事件在跳转前完成
-	document.querySelectorAll('starlight-lang-select').forEach((el) => {
-		el.addEventListener(
-			'change',
-			(e) => {
-				const select = e.target as HTMLSelectElement;
-				const lang = select.value.startsWith('/en/') ? 'en' : 'zh';
+	class GbgLangMenu extends HTMLElement {
+		connectedCallback() {
+			const btn = this.querySelector<HTMLButtonElement>('.gbg-lang-btn')!;
+			const list = this.querySelector<HTMLElement>('.gbg-lang-list')!;
+			const onDoc = (e: Event) => {
+				if (e instanceof KeyboardEvent) {
+					if (e.key === 'Escape') {
+						close();
+						btn.focus();
+					}
+				} else if (!this.contains(e.target as Node)) close();
+			};
+			const open = () => {
+				list.hidden = false;
+				btn.setAttribute('aria-expanded', 'true');
+				document.addEventListener('click', onDoc);
+				document.addEventListener('keydown', onDoc);
+				(list.querySelector('[aria-current]') ?? list.querySelector('a'))?.focus();
+			};
+			const close = () => {
+				list.hidden = true;
+				btn.setAttribute('aria-expanded', 'false');
+				document.removeEventListener('click', onDoc);
+				document.removeEventListener('keydown', onDoc);
+			};
+			btn.addEventListener('click', () => (list.hidden ? open() : close()));
+			list.addEventListener('click', (e) => {
+				const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-lang]');
+				if (!a) return;
+				const lang = a.dataset.lang!;
 				document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
 				window.gtag?.('event', 'switch_language', { language: lang, transport_type: 'beacon' });
-			},
-			{ capture: true }
-		);
-	});
+			});
+			// 浏览器后退恢复页面时，菜单保持收起
+			window.addEventListener('pageshow', close);
+		}
+	}
+	customElements.define('gbg-lang-menu', GbgLangMenu);
 </script>
+
+<style>
+	.gbg-lang {
+		position: relative;
+		display: inline-flex;
+	}
+	.gbg-lang-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		min-height: 2.25rem;
+		padding: 0 0.6rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.5rem;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		font: inherit;
+		font-size: var(--sl-text-sm);
+		cursor: pointer;
+	}
+	.gbg-lang-btn:hover,
+	.gbg-lang-btn[aria-expanded='true'] {
+		color: var(--sl-color-white);
+		border-color: var(--sl-color-gray-4);
+	}
+	.gbg-lang-btn[aria-expanded='true'] .gbg-lang-caret {
+		transform: rotate(180deg);
+	}
+	.gbg-lang-list {
+		position: absolute;
+		inset-inline-end: 0;
+		top: calc(100% + 0.5rem);
+		z-index: 50;
+		min-width: 13rem;
+		margin: 0;
+		padding: 0.35rem;
+		list-style: none;
+		background: var(--gbg-card-bg);
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+	}
+	.gbg-lang-list[hidden] {
+		display: none;
+	}
+	.gbg-lang-list li {
+		margin: 0;
+	}
+	.gbg-lang-list a {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		min-height: 2.5rem;
+		padding: 0 0.75rem;
+		border-radius: 0.5rem;
+		color: var(--sl-color-gray-1);
+		text-decoration: none;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-lang-list a:hover,
+	.gbg-lang-list a:focus-visible {
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-white);
+	}
+	.gbg-lang-list a[aria-current] {
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-white);
+	}
+	.gbg-lang-code {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-lang-list a[aria-current] .gbg-lang-code {
+		color: var(--sl-color-text-accent);
+	}
+	/* 手机菜单里语言菜单在屏幕底部，向上展开 */
+	:global(.mobile-preferences) .gbg-lang-list {
+		top: auto;
+		bottom: calc(100% + 0.5rem);
+	}
+</style>

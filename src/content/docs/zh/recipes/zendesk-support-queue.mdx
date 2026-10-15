@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: support
 difficulty: intermediate
+risk: high
+cadence: on-demand
 apps: ["Zendesk", "浏览器"]
 sources:
   - title: "Grok Bot 官网"
@@ -21,8 +23,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **没有现成插件的工单系统，可以让 Bot 在云电脑的浏览器里登录后台，像客服一样逐个看工单、打标签、起草回复，把 Bug 交给复现 Bot。**
+
+## 你会得到什么
+
+<RecipeShot slug="zendesk-support-queue" />
 
 ## 适合谁
 
@@ -62,6 +70,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 工单回复不提交，你审过再发。
 - 退款、取消订阅、大客户一律升级给人。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

@@ -1,34 +1,58 @@
 ---
 // 角色库 / 模板库 / 实战案例的卡片列表。按 frontmatter 的 sidebar.order 排序。
-// 角色库支持 ?role=sales 这样的筛选（首页「按岗位」入口用）。
+// 支持 ?role=sales 这样的岗位筛选；实战案例的标题拆成「Grok Bot × 工具」和一句话用途，方便扫读。
 import { getCollection } from 'astro:content';
 import { toLang, useT } from '../i18n/ui';
 
 interface Props {
 	section: 'bots' | 'templates' | 'recipes';
+	/** 显示「整理自官方文档 / 社区分享 / 本站实测」三色图例和篇数 */
+	legend?: boolean;
 }
-const { section } = Astro.props;
+const { section, legend = false } = Astro.props;
 const lang = toLang(Astro.locals.starlightRoute.locale);
 const t = useT(lang);
 const entries = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/${section}/`))).sort(
 	(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
 );
-// 和首页岗位入口同一顺序
+// 和首页、侧边栏同一顺序
 const ROLE_ORDER = ['sales', 'marketing', 'support', 'recruiting', 'finance', 'engineering', 'operations', 'assistant'];
-const roles = ([...new Set(entries.map((e) => e.data.role).filter(Boolean))] as string[]).sort(
-	(a, b) => ROLE_ORDER.indexOf(a) - ROLE_ORDER.indexOf(b),
-);
+const roleCount = new Map<string, number>();
+for (const e of entries) if (e.data.role) roleCount.set(e.data.role, (roleCount.get(e.data.role) ?? 0) + 1);
+const roles = [...roleCount.keys()].sort((a, b) => ROLE_ORDER.indexOf(a) - ROLE_ORDER.indexOf(b));
+const split = (title: string) => {
+	const m = title.match(/^Grok Bot\s*×\s*(.+?)\s*[：:]\s*(.+)$/);
+	return m ? { tool: m[1], task: m[2] } : { tool: '', task: title };
+};
+const gradeCount = (g: string) => entries.filter((e) => e.data.grade === g).length;
+const legendItems = (['official', 'community', 'tested'] as const).map((g) => ({ g, n: gradeCount(g) }));
+const unit = lang === 'zh' ? '篇' : '';
 ---
 
 {
+	legend && (
+		<p class="gbg-legend not-content">
+			{legendItems.map(({ g, n }) => (
+				<span>
+					<i class={`dot dot-${g}`} aria-hidden="true" />
+					{t(`grade.${g}`)} {n}
+					{unit}
+					{g === 'tested' && n === 0 && (lang === 'zh' ? '（实测中）' : ' (testing in progress)')}
+				</span>
+			))}
+		</p>
+	)
+}
+
+{
 	(section === 'bots' || section === 'recipes') && roles.length > 1 && (
-		<div class="gbg-filter not-content" data-filter>
+		<div class="gbg-filter not-content" data-filter role="group" aria-label={lang === 'zh' ? '按岗位筛选' : 'Filter by role'}>
 			<button type="button" data-role="" aria-pressed="true">
-				{t('res.all')}
+				{t('res.all')} <span class="n">{entries.length}</span>
 			</button>
 			{roles.map((r) => (
 				<button type="button" data-role={r} aria-pressed="false">
-					{t(`role.${r as 'sales'}`)}
+					{t(`role.${r as 'sales'}`)} <span class="n">{roleCount.get(r)}</span>
 				</button>
 			))}
 		</div>
@@ -40,23 +64,27 @@ const roles = ([...new Set(entries.map((e) => e.data.role).filter(Boolean))] as 
 		<p>{t('cards.empty')}</p>
 	) : (
 		<div class="gbg-grid not-content">
-			{entries.map((e) => (
-				<a class="gbg-card" href={`/${e.id}/`} data-role={e.data.role ?? ''}>
-					<h3>{e.data.title}</h3>
-					{e.data.description && <p>{e.data.description}</p>}
-					<div class="gbg-tags">
-						{e.data.role && <span class="gbg-badge">{t(`role.${e.data.role}`)}</span>}
-						{e.data.kind && <span class="gbg-badge">{t(`kind.${e.data.kind}`)}</span>}
-						{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}
-						{e.data.grade && <span class={`gbg-badge gbg-grade-${e.data.grade}`}>{t(`grade.${e.data.grade}`)}</span>}
-					</div>
-					{e.data.apps.length > 0 && (
-						<p class="gbg-apps">
-							{t('cards.apps')}: {e.data.apps.join(' · ')}
-						</p>
-					)}
-				</a>
-			))}
+			{entries.map((e) => {
+				const { tool, task } = split(e.data.title);
+				return (
+					<a class="gbg-card" href={`/${e.id}/`} data-role={e.data.role ?? ''}>
+						{tool && <span class="gbg-card-tool">Grok Bot × {tool}</span>}
+						<h3>{task}</h3>
+						{!tool && e.data.description && <p>{e.data.description}</p>}
+						<div class="gbg-tags">
+							{e.data.role && <span class="gbg-badge">{t(`role.${e.data.role}`)}</span>}
+							{e.data.kind && <span class="gbg-badge">{t(`kind.${e.data.kind}`)}</span>}
+							{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}
+							{e.data.grade && <span class={`gbg-badge gbg-grade-${e.data.grade}`}>{t(`grade.${e.data.grade}`)}</span>}
+						</div>
+						{e.data.apps.length > 0 && (
+							<p class="gbg-apps">
+								{t('cards.apps')}: {e.data.apps.join(' · ')}
+							</p>
+						)}
+					</a>
+				);
+			})}
 		</div>
 	)
 }
@@ -93,7 +121,8 @@ const roles = ([...new Set(entries.map((e) => e.data.role).filter(Boolean))] as 
 		margin-top: 1rem;
 	}
 	.gbg-filter button {
-		padding: 0.3rem 0.8rem;
+		min-height: 2.25rem;
+		padding: 0.3rem 0.9rem;
 		border-radius: 999px;
 		border: 1px solid var(--gbg-card-border);
 		background: transparent;
@@ -101,9 +130,49 @@ const roles = ([...new Set(entries.map((e) => e.data.role).filter(Boolean))] as 
 		cursor: pointer;
 		font-size: var(--sl-text-sm);
 	}
+	.gbg-filter button .n {
+		opacity: 0.65;
+		margin-inline-start: 0.2rem;
+	}
 	.gbg-filter button[aria-pressed='true'] {
 		border-color: var(--sl-color-accent);
 		color: var(--sl-color-white);
 		background: var(--sl-color-accent-low);
+	}
+	.gbg-card-tool {
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-text-accent);
+	}
+	.gbg-card h3 {
+		flex: 1;
+		line-height: 1.45;
+	}
+	.gbg-legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.25rem;
+		margin: 1rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-legend span {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+	.dot {
+		width: 0.6rem;
+		height: 0.6rem;
+		border-radius: 50%;
+	}
+	.dot-official {
+		background: #3b82f6;
+	}
+	.dot-community {
+		background: #d97706;
+	}
+	.dot-tested {
+		background: #16a34a;
 	}
 </style>

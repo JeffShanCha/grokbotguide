@@ -2,6 +2,7 @@
 title: Skills 与 Routines
 description: Skill 写清楚怎么做，Routine 决定什么时候做。先手动跑通，再存成 Skill，最后才自动化。
 sidebar:
+  label: '01 · Skills 与 Routines'
   order: 1
 grade: official
 needs_testing: true

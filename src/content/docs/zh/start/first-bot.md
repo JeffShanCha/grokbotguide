@@ -2,6 +2,7 @@
 title: 创建第一个 Bot
 description: 一个 Bot 只负责一件事：起名字、写职责、写清楚绝对不能做的事。
 sidebar:
+  label: '04 · 创建第一个 Bot'
   order: 4
 grade: official
 needs_testing: true

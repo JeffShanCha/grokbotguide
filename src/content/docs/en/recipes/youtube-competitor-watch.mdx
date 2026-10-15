@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: marketing
 difficulty: beginner
+risk: low
+cadence: daily
 apps: ["YouTube", "Notion"]
 sources:
   - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every day the Bot scans the YouTube channels you follow and logs new long-form videos in Notion with title, thumbnail, link and views against the channel’s baseline, so outliers stand out.**
+
+## What you get
+
+<RecipeShot slug="youtube-competitor-watch" />
 
 ## When to use it
 
@@ -57,6 +65,11 @@ If there are no new videos, add nothing and do not notify me.
 ## Approvals and permissions
 
 - Read-only on YouTube; only add rows to this one database.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

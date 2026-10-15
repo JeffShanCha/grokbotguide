@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: operations
 difficulty: beginner
+risk: medium
+cadence: daily
 apps: ["Slack"]
 sources:
   - title: "Connect plugins (Cursor Help Center)"
@@ -19,8 +21,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Every morning the Bot reads the last 24 hours in the channels you pick, writes up progress, blockers and decisions you owe, and shows you a draft before posting to the standup channel.**
+
+## What you get
+
+<RecipeShot slug="slack-daily-standup" />
 
 ## When to use it
 
@@ -59,6 +67,11 @@ Send it to me as a draft first; post it to <#standup> only after I confirm. Do n
 
 - The plugin posts as you, so always confirm before it posts. Slack drafts appear as a card with Send message or Discard.
 - Do not let it reply in other people’s threads.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

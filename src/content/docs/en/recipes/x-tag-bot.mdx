@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: assistant
 difficulty: beginner
+risk: low
+cadence: event
 apps: ["X"]
 sources:
   - title: "Tag @bot on X (official docs)"
@@ -17,8 +19,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **When a post or thread on X needs work, reply with "@bot" and a request. Your main Bot picks it up on its cloud computer, and the results stay in the Grok Bot app rather than on X.**
+
+## What you get
+
+<RecipeShot slug="x-tag-bot" />
 
 ## When to use it
 
@@ -56,6 +64,11 @@ Replace the parts in angle brackets with your own.
 
 - @bot only posts a confirmation on X; the results are not posted publicly.
 - Tagged requests start on their own, so state limits in the request, such as "summarize only, do not reply to anyone".
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

@@ -2,7 +2,7 @@
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { SITE } from '../../../site.config.mjs';
 import { toLang, useT } from '../../i18n/ui';
-import ResourceList from '../ResourceList.astro';
+import { getCollection } from 'astro:content';
 
 const route = Astro.locals.starlightRoute;
 const data = route.entry.data;
@@ -11,6 +11,10 @@ const t = useT(lang);
 const sources = data.sources ?? [];
 const section = route.entry.id.split('/')[1];
 const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'news'].includes(section);
+// 外部资料只显示一行链接，完整列表在资源导航里按分类筛选
+const collected = showCollected && route.entry.id !== `${lang}/${section}`
+	? (await getCollection('resources')).filter((r) => r.data.categories.includes(section as 'recipes')).length
+	: 0;
 ---
 
 {
@@ -30,11 +34,14 @@ const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'new
 	)
 }
 
-{showCollected && <section class="gbg-sources">
-	<h2>{lang === 'zh' ? '本分类的外部资料' : 'External resources for this category'}</h2>
-	<p>{lang === 'zh' ? '持续收录的官方资料和作者分享。来源核验不等同于本站实测，详情见每条的核验范围。' : 'Official sources and author contributions. Checking a source does not mean we have tested its workflow; see each verification note.'}</p>
-	<ResourceList category={section} compact limit={4} />
-</section>}
+{showCollected && collected > 0 && (
+	<p class="gbg-collected">
+		<a href={`/${lang}/resources/?category=${section}`}>
+			{lang === 'zh' ? `相关外部资料 ${collected} 条 →` : `${collected} related external resources →`}
+		</a>
+		<span>{lang === 'zh' ? '官方资料和作者分享，来源核验不等于本站实测。' : 'Official sources and author write-ups; a checked source is not a test by us.'}</span>
+	</p>
+)}
 
 <Default />
 
@@ -49,6 +56,18 @@ const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'new
 </div>
 
 <style>
+	.gbg-collected {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1rem;
+		margin-top: 1.5rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-collected a {
+		color: var(--sl-color-text-accent);
+		font-weight: 500;
+	}
 	.gbg-sources {
 		margin-top: 3rem;
 		padding-top: 1.5rem;

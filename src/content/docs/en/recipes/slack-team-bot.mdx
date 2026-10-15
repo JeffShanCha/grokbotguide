@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: operations
 difficulty: advanced
+risk: medium
+cadence: event
 apps: ["Slack"]
 sources:
   - title: "Team Bots (official docs)"
@@ -15,8 +17,14 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Publish a configured Bot as a Team Bot and it gets its own Slack app. Teammates DM it or @mention it in a channel, and each person’s conversation stays private.**
+
+## What you get
+
+<RecipeShot slug="slack-team-bot" />
 
 ## When to use it
 
@@ -58,6 +66,11 @@ Save facts the whole team should know (such as metric definitions) to team memor
 - Sign-in (OAuth) plugins act as the teammate asking; key or token plugins are shared, so use read-only service-account keys.
 - Slack channels, group DMs and threads share one computer for the Bot; do not share anything in a channel that not everyone there should see.
 - Before using a personal connector in a shared conversation, the Bot shows an Allow card.
+
+
+## Our test results
+
+<RecipeTestStatus />
 
 ## Notes and pitfalls
 

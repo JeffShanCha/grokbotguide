@@ -1,0 +1,377 @@
+---
+// 学习路线页：按目标分三条路。教程标题、摘要和阅读时间都从内容里读取，新增或改名页面会自动同步。
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { formatDate, toLang } from '../i18n/ui';
+
+interface Props {
+	/** 最后一次人工核对整条路线的日期 */
+	checked: string;
+}
+const { checked } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const docs = await getCollection('docs', (e) => e.id.startsWith(`${lang}/`));
+const bySection = (s: string) =>
+	docs
+		.filter((e) => e.id.startsWith(`${lang}/${s}/`) && e.id !== `${lang}/${s}`)
+		.sort((a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99));
+const start = bySection('start');
+const advanced = bySection('advanced');
+const recipes = bySection('recipes');
+const bots = bySection('bots');
+const templates = bySection('templates');
+
+// 粗略阅读时间：中文按每分钟 400 字，英文按每分钟 200 词
+function minutes(e: CollectionEntry<'docs'>) {
+	const text = (e.body ?? '').replace(/```[\s\S]*?```/g, ' ').replace(/[#>*_`|\-\[\]()!]/g, ' ');
+	const n = lang === 'zh' ? text.replace(/\s/g, '').length / 400 : text.split(/\s+/).filter(Boolean).length / 200;
+	return Math.max(2, Math.round(n));
+}
+const total = (list: CollectionEntry<'docs'>[]) => list.reduce((s, e) => s + minutes(e), 0);
+const all = [...start, ...advanced];
+const untested = all.filter((e) => e.data.needs_testing).length;
+const label = (e: CollectionEntry<'docs'>) => e.data.title.replace(/[：:].*$/, '');
+
+const c = {
+	zh: {
+		checked: '最后核对',
+		sources: '来源：docs.x.ai · Cursor 帮助中心',
+		untested: untested === all.length ? '全部页面待实测' : `${untested} / ${all.length} 篇待实测`,
+		min: (n: number) => `阅读约 ${n} 分钟`,
+		paths: [
+			{ k: '我是第一次用', t: '装好应用，派出第一个任务', d: `读 ${start.length} 篇快速上手，再做一个零风险测试。`, href: '#start', meta: `${start.length} 篇 · 阅读约 ${total(start)} 分钟` },
+			{ k: '我想让它自动跑', t: 'Skill、Routine 和审批', d: '已经跑通过任务，想让 Bot 定时干活、多个 Bot 配合。', href: '#advanced', meta: `${advanced.length} 篇进阶教程` },
+			{ k: '我有具体场景', t: '直接找现成方案', d: '按岗位筛选实战案例，复制指令改两行就能用。', href: '#recipes', meta: `${recipes.length} 个案例` },
+		],
+		startTitle: '快速上手',
+		startLead: '适合还没装过 Grok Bot，或装了但不知道让它干什么的人。读完你会有一个能用的 Bot，并且知道怎么派活、怎么检查结果。',
+		startNext: '读完先跑一遍',
+		startNextLink: '零风险案例：让 Bot 总结一份长文件',
+		startNextTail: '，不需要连接任何应用。',
+		advTitle: '进阶教程',
+		advLead: '适合已经跑通一两个任务，想让 Bot 定时干活或多个 Bot 配合的人。',
+		recTitle: '实战案例',
+		recLead: '适合心里已经有具体场景的人。角色卡和模板也收在这里。',
+		recCards: [
+			{ t: '实战案例库', d: `${recipes.length} 个案例，按岗位筛选`, href: 'recipes/' },
+			{ t: '角色卡', d: `${bots.length} 张写好的 Bot 描述和权限边界`, href: 'bots/' },
+			{ t: '模板', d: `${templates.length} 个派活指令、Skill、Routine 模板`, href: 'templates/' },
+		],
+		helpTitle: '遇到问题',
+		help: [
+			{ pre: '按问题查：', t: '常见问题', href: 'answers/', post: '（连不上 Gmail、Routine 没运行、用量用完……）' },
+			{ pre: '产品有更新：', t: '更新日志', href: 'news/changelog/', post: '' },
+			{ pre: '别人怎么用：', t: '资源导航', href: 'resources/', post: '' },
+		],
+	},
+	en: {
+		checked: 'Last checked',
+		sources: 'Sources: docs.x.ai · Cursor Help Center',
+		untested: untested === all.length ? 'No page tested here yet' : `${untested} of ${all.length} pages not yet tested`,
+		min: (n: number) => `~${n} min read`,
+		paths: [
+			{ k: 'First time', t: 'Install the app and send a first task', d: `Read the ${start.length} Get started pages, then run a zero-risk test.`, href: '#start', meta: `${start.length} pages · ~${total(start)} min read` },
+			{ k: 'Make it run on its own', t: 'Skills, routines and approvals', d: 'You have run a task or two and want scheduled work or several Bots working together.', href: '#advanced', meta: `${advanced.length} advanced guides` },
+			{ k: 'I have a use case', t: 'Start from a ready-made recipe', d: 'Filter recipes by role, copy the prompt and change a couple of lines.', href: '#recipes', meta: `${recipes.length} recipes` },
+		],
+		startTitle: 'Get started',
+		startLead: 'For anyone who has not installed Grok Bot yet, or has it but is not sure what to ask. You will finish with a working Bot and know how to brief it and check its work.',
+		startNext: 'Then try the',
+		startNextLink: 'zero-risk recipe: summarize a long document',
+		startNextTail: '. No apps to connect.',
+		advTitle: 'Advanced',
+		advLead: 'For people who have run a task or two and want Bots on a schedule or working together.',
+		recTitle: 'Recipes',
+		recLead: 'For people with a specific use case in mind. Bot cards and templates live here too.',
+		recCards: [
+			{ t: 'Recipe library', d: `${recipes.length} recipes, filter by role`, href: 'recipes/' },
+			{ t: 'Bot cards', d: `${bots.length} ready-made Bot descriptions with boundaries`, href: 'bots/' },
+			{ t: 'Templates', d: `${templates.length} briefing, skill and routine templates`, href: 'templates/' },
+		],
+		helpTitle: 'Stuck?',
+		help: [
+			{ pre: 'Look up a problem: ', t: 'How-to & FAQ', href: 'answers/', post: ' (Gmail will not connect, a routine did not run, out of usage…)' },
+			{ pre: 'Product changes: ', t: 'Changelog', href: 'news/changelog/', post: '' },
+			{ pre: 'How others use it: ', t: 'Resources', href: 'resources/', post: '' },
+		],
+	},
+}[lang];
+const u = (p: string) => `/${lang}/${p}`;
+---
+
+<div class="gbg-guide not-content">
+	<p class="gbg-guide-check">
+		<span>{c.checked}: <time datetime={checked}>{formatDate(new Date(checked), lang)}</time></span>
+		<span>{c.sources}</span>
+		<span class="warn">{c.untested}</span>
+	</p>
+
+	<div class="gbg-paths">
+		{
+			c.paths.map((p) => (
+				<a class="gbg-path" href={p.href}>
+					<span class="k">{p.k}</span>
+					<strong>{p.t}</strong>
+					<span class="d">{p.d}</span>
+					<span class="m">{p.meta}</span>
+				</a>
+			))
+		}
+	</div>
+
+	<section id="start" class="gbg-route">
+		<div class="gbg-route-head">
+			<span class="n">01</span>
+			<h2>{c.startTitle}</h2>
+			<span class="m">{c.min(total(start))}</span>
+		</div>
+		<p class="lead">{c.startLead}</p>
+		<ol class="gbg-lessons">
+			{
+				start.map((e, i) => (
+					<li>
+						<a href={`/${e.id}/`}>
+							<span class="i">{String(i + 1).padStart(2, '0')}</span>
+							<strong>{label(e)}</strong>
+							<span class="d">{e.data.description}</span>
+							<span class="m">{c.min(minutes(e))}</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+		<p class="gbg-next">
+			{c.startNext} <a href={u('recipes/summarize-a-document/')}>{c.startNextLink}</a>
+			{c.startNextTail}
+		</p>
+	</section>
+
+	<section id="advanced" class="gbg-route">
+		<div class="gbg-route-head">
+			<span class="n">02</span>
+			<h2>{c.advTitle}</h2>
+			<span class="m">{c.min(total(advanced))}</span>
+		</div>
+		<p class="lead">{c.advLead}</p>
+		<ol class="gbg-lessons">
+			{
+				advanced.map((e, i) => (
+					<li>
+						<a href={`/${e.id}/`}>
+							<span class="i">{String(i + 1).padStart(2, '0')}</span>
+							<strong>{label(e)}</strong>
+							<span class="d">{e.data.description}</span>
+							<span class="m">{c.min(minutes(e))}</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<section id="recipes" class="gbg-route">
+		<div class="gbg-route-head">
+			<span class="n">03</span>
+			<h2>{c.recTitle}</h2>
+		</div>
+		<p class="lead">{c.recLead}</p>
+		<div class="gbg-rec-cards">
+			{
+				c.recCards.map((r) => (
+					<a href={u(r.href)}>
+						<strong>{r.t}</strong>
+						<span>{r.d}</span>
+					</a>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="gbg-help">
+		<h2>{c.helpTitle}</h2>
+		<ul>
+			{
+				c.help.map((h) => (
+					<li>
+						{h.pre}
+						<a href={u(h.href)}>{h.t}</a>
+						{h.post}
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</div>
+
+<style>
+	.gbg-guide {
+		--gbg-display: 'Space Grotesk', var(--sl-font);
+	}
+	.gbg-guide h2 {
+		font-family: var(--gbg-display);
+		color: var(--sl-color-white);
+		margin: 0;
+	}
+	.gbg-guide-check {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 1rem;
+		margin: 0 0 1.75rem;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.5rem;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-guide-check .warn {
+		color: #b45309;
+	}
+	:root:not([data-theme='light']) .gbg-guide-check .warn {
+		color: #facc15;
+	}
+	.gbg-paths {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+		gap: 1rem;
+		margin-bottom: 3rem;
+	}
+	.gbg-path,
+	.gbg-rec-cards a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		padding: 1.25rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.9rem;
+		background: var(--gbg-card-bg);
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+		transition: border-color 0.15s ease;
+	}
+	.gbg-path:hover,
+	.gbg-rec-cards a:hover,
+	.gbg-lessons a:hover {
+		border-color: var(--sl-color-accent);
+	}
+	.gbg-path .k {
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-text-accent);
+	}
+	.gbg-path strong,
+	.gbg-rec-cards strong {
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-lg);
+		line-height: 1.35;
+	}
+	.gbg-path .d {
+		flex: 1;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-path .m,
+	.gbg-route-head .m,
+	.gbg-lessons .m {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-route {
+		margin-bottom: 3rem;
+		scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
+	}
+	.gbg-route-head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 0.85rem;
+	}
+	.gbg-route-head .n {
+		font-family: var(--sl-font-mono);
+		color: var(--sl-color-text-accent);
+		font-size: var(--sl-text-lg);
+	}
+	.gbg-route-head h2 {
+		font-size: var(--sl-text-2xl);
+	}
+	.gbg-route .lead {
+		margin: 0.5rem 0 1rem;
+		color: var(--sl-color-gray-2);
+	}
+	.gbg-lessons {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+	.gbg-lessons li {
+		margin: 0;
+	}
+	.gbg-lessons a {
+		display: grid;
+		grid-template-columns: 2rem minmax(0, 1fr) auto;
+		gap: 0.15rem 0.75rem;
+		align-items: baseline;
+		padding: 0.85rem 1rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.75rem;
+		background: var(--gbg-card-bg);
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	.gbg-lessons .i {
+		font-family: var(--sl-font-mono);
+		color: var(--sl-color-gray-3);
+		grid-row: span 2;
+	}
+	.gbg-lessons strong {
+		color: var(--sl-color-white);
+	}
+	.gbg-lessons .d {
+		grid-column: 2 / 4;
+		font-size: var(--sl-text-sm);
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.gbg-lessons .m {
+		grid-column: 3;
+		grid-row: 1;
+		white-space: nowrap;
+	}
+	.gbg-next {
+		margin: 1rem 0 0;
+		padding: 0.85rem 1rem;
+		border-radius: 0.75rem;
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-white);
+	}
+	.gbg-next a,
+	.gbg-help a {
+		color: var(--sl-color-text-accent);
+	}
+	.gbg-rec-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		gap: 0.85rem;
+	}
+	.gbg-rec-cards span {
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-help {
+		border-top: 1px solid var(--sl-color-hairline);
+		padding-top: 1.5rem;
+	}
+	.gbg-help h2 {
+		font-size: var(--sl-text-xl);
+		margin-bottom: 0.75rem;
+	}
+	.gbg-help ul {
+		margin: 0;
+		padding-inline-start: 1.25rem;
+		color: var(--sl-color-gray-2);
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+</style>

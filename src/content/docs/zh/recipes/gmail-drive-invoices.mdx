@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: finance
 difficulty: beginner
+risk: low
+cadence: monthly
 apps: ["Gmail", "Google Sheets", "Google Drive"]
 sources:
   - title: "I Built a Seven Grok Bot AI Team（The AI Maker）"
@@ -19,9 +21,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **每月 1 号让 Bot 从邮箱里找出上个月的发票和收据，保存附件，再把金额、供应商、日期汇总成一张表，报税和记账时直接用。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="gmail-drive-invoices" />
 ## 适合谁
 
 - 订阅了一堆 SaaS，发票散落在邮箱里
@@ -60,6 +68,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 付款和回复供应商一律禁止。
 - 表格只追加，不改历史。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

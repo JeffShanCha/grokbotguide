@@ -2,6 +2,7 @@
 title: 派第一个任务
 description: 用「结果、来源、约束、交付物、检查点」五要素写任务，先从不需要登录任何应用的小任务开始。
 sidebar:
+  label: '05 · 派第一个任务'
   order: 5
 grade: official
 needs_testing: true

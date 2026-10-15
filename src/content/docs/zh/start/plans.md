@@ -2,6 +2,7 @@
 title: 订阅怎么选：X 订阅、SuperGrok 还是 Cursor
 description: 2026 年 10 月起，新用户通过 The X Subscription 的 Premium（$30/月）及以上档位获得 Grok Bot；已有 SuperGrok 或 Cursor 付费套餐的可以继续用。各档价格、用量和切换前要知道的事。
 sidebar:
+  label: '02 · 订阅怎么选'
   order: 2
 grade: official
 needs_testing: true

@@ -1,0 +1,151 @@
+---
+// 实战案例库底部：角色卡、模板两个小区块，以及「征稿 + 外部资料」一行。
+import { getCollection } from 'astro:content';
+import { toLang, useT } from '../i18n/ui';
+
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const t = useT(lang);
+const list = async (s: string) =>
+	(await getCollection('docs', (e) => e.id.startsWith(`${lang}/${s}/`))).sort(
+		(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
+	);
+const bots = await list('bots');
+const templates = await list('templates');
+const resources = (await getCollection('resources')).filter((r) => r.data.categories.includes('recipes')).length;
+const c = {
+	zh: {
+		bots: '角色卡',
+		botsLead: '写好的 Bot 描述、权限边界和起始指令，粘贴就能建 Bot。',
+		tpl: '模板',
+		tplLead: '派活指令、Skill 和 Routine 模板，复制后改两行就能用。',
+		all: (n: number, u: string) => `全部 ${n} ${u} →`,
+		botsUnit: '张',
+		tplUnit: '个',
+		wanted: '还没人写',
+		topics: ['Shopify 订单汇总', 'Search Console 周报', '飞书群消息转待办', 'Linear 工单', 'Figma 变更说明', 'Discord 社群答疑'],
+		claim: '认领一篇 →',
+		res: `相关外部资料 ${resources} 条 →`,
+	},
+	en: {
+		bots: 'Bot cards',
+		botsLead: 'Ready-made Bot descriptions, boundaries and starter prompts. Paste one to create a Bot.',
+		tpl: 'Templates',
+		tplLead: 'Briefing, skill and routine templates. Copy one and change a couple of lines.',
+		all: (n: number) => `All ${n} →`,
+		botsUnit: '',
+		tplUnit: '',
+		wanted: 'Not written yet',
+		topics: ['Shopify order digest', 'Search Console weekly report', 'Linear tickets from Slack', 'Figma change notes', 'Discord community Q&A'],
+		claim: 'Claim one →',
+		res: `${resources} external resources →`,
+	},
+}[lang];
+const meta = (e: (typeof bots)[number]) =>
+	[e.data.kind && t(`kind.${e.data.kind}`), e.data.role && t(`role.${e.data.role}`), e.data.difficulty && t(`difficulty.${e.data.difficulty}`)]
+		.filter(Boolean)
+		.join(' · ');
+const blocks = [
+	{ title: c.bots, lead: c.botsLead, items: bots, href: 'bots/', all: c.all(bots.length, c.botsUnit) },
+	{ title: c.tpl, lead: c.tplLead, items: templates, href: 'templates/', all: c.all(templates.length, c.tplUnit) },
+];
+---
+
+<div class="gbg-extras not-content">
+	{
+		blocks.map((b) => (
+			<section>
+				<div class="head">
+					<h2>{b.title}</h2>
+					<a href={`/${lang}/${b.href}`}>{b.all}</a>
+				</div>
+				<p>{b.lead}</p>
+				<ul>
+					{b.items.map((e) => (
+						<li>
+							<a href={`/${e.id}/`}>{e.data.title}</a>
+							<span>· {meta(e)}</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
+</div>
+
+<p class="gbg-wanted not-content">
+	<span class="topics"><strong>{c.wanted}：</strong>{c.topics.join(' · ')}</span>
+	<span class="links">
+		<a href={`/${lang}/community/submit/`}>{c.claim}</a>
+		<a href={`/${lang}/resources/?category=recipes`}>{c.res}</a>
+	</span>
+</p>
+
+<style>
+	.gbg-extras {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+		gap: 1.25rem;
+		margin-top: 3rem;
+	}
+	.gbg-extras section {
+		padding: 1.4rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 1rem;
+		background: var(--gbg-card-bg);
+	}
+	.head {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+	}
+	.head h2 {
+		margin: 0;
+		font-size: var(--sl-text-xl);
+		color: var(--sl-color-white);
+	}
+	.gbg-extras p {
+		margin: 0.35rem 0 0.9rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-extras ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-extras li {
+		margin: 0;
+	}
+	.gbg-extras li span {
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-extras a,
+	.gbg-wanted a {
+		color: var(--sl-color-text-accent);
+	}
+	.gbg-wanted {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 2rem;
+		margin-top: 2rem;
+		padding: 1rem 1.25rem;
+		border: 1px dashed var(--sl-color-gray-5);
+		border-radius: 0.75rem;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	.gbg-wanted .topics {
+		flex: 1 1 24rem;
+	}
+	.gbg-wanted .links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+	}
+</style>

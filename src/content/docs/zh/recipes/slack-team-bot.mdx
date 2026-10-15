@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: operations
 difficulty: advanced
+risk: medium
+cadence: event
 apps: ["Slack"]
 sources:
   - title: "Team Bots（官方文档）"
@@ -15,9 +17,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **把一个配置好的 Bot 发布成团队 Bot，它在 Slack 里有自己的应用身份；同事私信它或在频道里 @ 它就能用，每个人的对话互相看不到。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="slack-team-bot" />
 ## 适合谁
 
 - 团队总有人问同样的问题：指标口径、文档在哪、流程怎么走
@@ -58,6 +66,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 - 登录类插件（OAuth）用的是提问同事自己的账号；密钥类插件是共享的，一定要用只读的服务账号密钥。
 - 在 Slack 频道、群聊、线程里的对话共用一台电脑，不要在频道里发不该所有人看到的东西。
 - 在共享对话里用个人连接器之前，Bot 会弹出 Allow 卡片让你选。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

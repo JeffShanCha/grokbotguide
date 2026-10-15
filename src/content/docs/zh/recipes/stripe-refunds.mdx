@@ -8,6 +8,8 @@ needs_testing: true
 author: JeffShanCha
 role: support
 difficulty: intermediate
+risk: high
+cadence: on-demand
 apps: ["Stripe", "Gmail"]
 sources:
   - title: "Grok Bot for Support（官方指南）"
@@ -19,9 +21,15 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import RecipeShot from '~/components/RecipeShot.astro';
+import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **把退款政策交给 Bot，它逐条核对退款申请、在 Stripe 里查订单，给出同意或拒绝的建议和回复草稿；你逐条批准后才执行。**
 
+
+## 你会得到什么
+
+<RecipeShot slug="stripe-refunds" />
 ## 适合谁
 
 - 卖订阅或数字产品，每周都有退款申请
@@ -61,6 +69,11 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 - 退款是资金操作，必须逐条审批。官方安全文档把购买和转账列为必须在请求里写清边界的动作。
 - 来自 Routine 的审批卡片约 10 分钟后过期，过期后动作不会执行，需要让 Bot 重试。
+
+
+## 实测结果
+
+<RecipeTestStatus />
 
 ## 注意事项
 

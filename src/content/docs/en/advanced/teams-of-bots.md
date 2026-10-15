@@ -2,6 +2,7 @@
 title: Teams of Bots
 description: When to split work across Bots, how handoffs work, and what the shared computer means.
 sidebar:
+  label: '03 · Teams of Bots'
   order: 3
 grade: official
 needs_testing: true
