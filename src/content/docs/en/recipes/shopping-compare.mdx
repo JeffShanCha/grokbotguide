@@ -1,0 +1,64 @@
+---
+title: "Grok Bot × online shopping: fill two carts and compare, you click pay"
+description: "The Bot adds the same items to carts on two stores and compares totals, delivery fees and times; payment stays with you."
+sidebar:
+  order: 23
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Amazon", "Costco", "Browser"]
+sources:
+  - title: "Grok Bot 101 (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Approvals, security, and privacy (official docs)"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**The Bot adds the same list to carts on two stores and compares totals, delivery fees and delivery times in one table. Paying is the one step it leaves to you.**
+
+## When to use it
+
+- A regular weekly shop
+- You are not sure which store is cheaper for the same basket
+
+## Before you start
+
+- Both stores signed in on the Bot’s browser (enter passwords yourself with Take over).
+- A shopping list.
+
+## Steps
+
+1. Empty both carts first, or say in the prompt to count only items on the list.
+2. Send the Bot the list and the prompt below.
+3. Read the table and check out yourself.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="shopping-compare">
+
+```text
+Here is my shopping list: <list>
+Add these items to carts on both Costco and Amazon (if an exact match is missing, pick the closest and note the difference), then compare:
+- Unit price of each item
+- Total, delivery fee and tax
+- Expected delivery time
+Give me a comparison table and a recommendation. Do not place an order or pay; stop at the checkout page.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- You always place the order and pay. The official security docs say steps such as payment confirmations need you to take over.
+- Add an Ask first rule for placing orders and payments in Auto Review as a second safeguard.
+
+## Notes and pitfalls
+
+- This is a real workflow from the author of the official Grok Bot 101 guide: filling carts on Costco and Amazon to compare price, delivery fees and delivery times.
+- Items already in a cart get counted too; empty the carts or say to count only listed items.

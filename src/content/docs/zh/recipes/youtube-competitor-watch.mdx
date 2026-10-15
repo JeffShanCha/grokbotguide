@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × YouTube：每天盯竞品频道的新视频"
+description: "每天扫一遍关注的频道，把新视频记进 Notion：标题、封面、链接，以及和频道平时水平的对比。"
+sidebar:
+  order: 11
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["YouTube", "Notion"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "I Built a Seven Grok Bot AI Team（The AI Maker）"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**每天扫一遍你关注的 YouTube 频道，把新发布的长视频记进 Notion：标题、封面、链接，以及播放量和这个频道平时水平的对比，帮你发现选题爆款。**
+
+## 适合谁
+
+- 做 YouTube 或视频内容，想知道同行最近什么选题跑得好
+- 想积累一个「爆款标题和封面」素材库
+
+## 准备
+
+- 一份要盯的频道清单。
+- Notion 插件和一个数据库。
+- 可选：The AI Maker 的例子里用 Supadata 插件获取 YouTube 数据，比直接读网页更稳。
+
+## 步骤
+
+1. 把频道清单和下面的指令发给 Bot，手动跑一次。
+2. 检查播放量和平均值的计算是否合理。
+3. 建 Routine：每天 10:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="youtube-competitor-watch">
+
+```text
+每天上午 10 点，检查下面这些 YouTube 频道过去 24 小时发布的新视频（只看长视频，不看 Shorts）：
+<频道 1 链接>
+<频道 2 链接>
+每个新视频在 Notion 数据库「<竞品视频>」里加一条：频道、标题、封面图链接、视频链接、发布时间、当前播放量、该频道最近 10 个视频的平均播放量、是否明显高于平均。
+明显高于平均的，额外写两句：标题和封面哪里做对了。
+没有新视频就什么都不加，也不用通知我。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 只读 YouTube，Notion 只往这个数据库里加内容。
+
+## 注意事项
+
+- 这是 Prompt Warrior 作者每天跑的 Routine。
+- 刚发布的视频播放量还在涨，「是否高于平均」最好隔一天再比一次（这是本站的建议）。
+- 直接读网页可能被限流，有数据插件时优先用插件。

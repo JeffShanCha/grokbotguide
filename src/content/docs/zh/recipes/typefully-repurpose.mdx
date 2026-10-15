@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × Typefully：一篇文章拆成多平台帖子并排期"
+description: "写完一篇长文，交给 Bot 拆成 X、LinkedIn、Substack Notes 的帖子，存进 Typefully 草稿并排好时间。"
+sidebar:
+  order: 12
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["Typefully", "X", "LinkedIn", "Substack"]
+sources:
+  - title: "I Built a Seven Grok Bot AI Team（The AI Maker）"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**写完一篇长文或 Newsletter，交给 Bot 拆成 X、LinkedIn、Substack Notes 的帖子，存进 Typefully 草稿，你确认后再排期发布。**
+
+## 适合谁
+
+- 写完长文就没力气再改成社交媒体帖子
+- 想让一篇内容在多个平台多发几次
+
+## 准备
+
+- Typefully 账号，并在 Grok Bot 里连接。The AI Maker 的例子就是通过 Typefully 发 Substack Notes、排期 LinkedIn。
+- 3 篇你以前写得好的帖子，作为语气参考。
+
+## 步骤
+
+1. 把文章和参考帖子发给 Bot。
+2. 审草稿，改完让它排期。
+3. 常用的话存成 Skill，以后一句话调用。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="typefully-repurpose">
+
+```text
+这是我刚写完的文章：<链接或粘贴全文>
+请拆成：
+- X：1 个 5～7 条的推文串，第一条要有钩子
+- LinkedIn：1 篇 150～250 词的帖子
+- Substack Notes：2 条短 Note
+保持我的语气（参考附件里的 3 篇旧帖子），不要编造文章里没有的数据。
+全部存成 Typefully 草稿，计划：X 明天 9:00，LinkedIn 后天 9:00，Notes 分两天发（时区 <America/New_York>）。
+排期前先把所有草稿发给我确认。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 先存草稿，你确认后再排期，不要直接发布。官方安全文档也建议把发布内容放在审批之后。
+
+## 注意事项
+
+- The AI Maker 的直播里，Substack Note 成功发出，LinkedIn 草稿排到了第二天。
+- 公众号、小红书这类平台 Typefully 不支持，要用别的办法。

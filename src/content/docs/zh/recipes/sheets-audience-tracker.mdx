@@ -1,0 +1,70 @@
+---
+title: "Grok Bot × Google Sheets：每周自动记录全平台粉丝数"
+description: "每周打开各个平台主页，把粉丝数、订阅数写进同一张表，长期看总受众的增长。"
+sidebar:
+  order: 6
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["Google Sheets", "浏览器"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "A deep dive into Grok Bot（Flavio Copes）"
+    url: https://flaviocopes.com/grok-bot/
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Bot 每周打开你在各个平台的主页，把粉丝数、订阅数追加到同一张 Google 表格，长期看总受众怎么增长。**
+
+## 适合谁
+
+- 在好几个平台做内容，每周手动抄数字很烦
+- 想看哪个平台增长最快
+- 要给赞助商报受众数据
+
+## 准备
+
+- Google Sheets 插件。官方帮助中心写明只能改你有编辑权限的表。
+- 建一张表，列：日期、平台、粉丝数、和上周相比。
+- 需要登录才能看数据的后台，先在 Bot 的浏览器里用 Take over 登录一次。
+
+## 步骤
+
+1. 把平台清单和主页链接发给 Bot，手动跑一次。
+2. 核对每个数字是否正确。
+3. 建 Routine：每周一 9:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="sheets-audience-tracker">
+
+```text
+每周一上午 9 点，打开下面这些主页，读取当前的粉丝数或订阅数：
+- YouTube：<链接>
+- X：<链接>
+- Newsletter：<后台链接>（需要登录时停下来让我接管）
+- <其他平台>：<链接>
+把结果追加到 Google 表格「<表名>」的「粉丝数」工作表，每个平台一行：日期、平台、数字、和上周相比的变化。
+读不到的平台写「未获取」并说明原因，不要用上周的数字代替。不要修改已有的行。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 只追加新行、不改历史数据，写进指令里。
+- 后台登录用 Take over 自己输入密码。
+
+## 注意事项
+
+- 这是 Prompt Warrior 作者的日常 Routine，他统计的是 YouTube、Instagram、TikTok、X、Newsletter 和 Skool。
+- 很多平台会拦截云端 IP 或要求重新验证，Flavio Copes 也提到浏览器自动化在云 IP 下容易被拦。读不到时宁可空着。
+- 国内平台的后台在海外云电脑上可能频繁要求验证，不一定适合全自动，建议先试几周。

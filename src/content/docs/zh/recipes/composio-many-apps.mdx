@@ -1,0 +1,62 @@
+---
+title: "Grok Bot × Composio：一个插件接上千个应用"
+description: "插件市场里没有的应用，可以通过 Composio 统一接入；它负责授权和工具路由，按需加载工具。"
+sidebar:
+  order: 24
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: intermediate
+apps: ["Composio", "Airtable", "Slack"]
+sources:
+  - title: "10 Best Grok Bot Plugins & Integrations（Composio）"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "Grok Bot setup guide（Wright Mode）"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**插件市场里没有的应用，比如 Airtable、Trello，可以通过 Composio 插件统一接入；它负责授权和工具路由，用到哪个应用才加载对应的工具。**
+
+## 适合谁
+
+- 你用的工具没有官方插件
+- 一个流程要跨好几个业务应用
+
+## 准备
+
+- 从插件市场安装 Composio 插件。
+- 在 Composio 里授权你要用的应用。
+
+## 步骤
+
+1. 先用一个只读任务试一下，比如读一张表。
+2. 确认能读之后，再逐步给写权限。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="composio-many-apps">
+
+```text
+用 Composio 连接 <Airtable>，读取「<内容排期>」表里本周状态为「待发布」的记录，
+在 Slack <#content> 发一条清单草稿给我确认，确认后再发。
+不要修改 Airtable 里的任何记录。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 多了一层第三方授权，每个应用的权限都要单独收紧。
+- 官方帮助中心写明，插件只能做授权账号本来能做的事，不能修改共享设置或提升权限。
+
+## 注意事项
+
+- 这篇插件盘点是 Composio 自己发布的，属于自家推荐。文中建议 GitHub、Sentry 这类专业工具直接用各自的插件，跨多个业务应用的流程再用 Composio。
+- 不一定非要聚合插件：Wright Mode 的作者用的邮件营销工具 Kit 没有官方插件，Bot 自己想出了连接方法。可以先问 Bot 能不能接。

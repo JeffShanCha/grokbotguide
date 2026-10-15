@@ -1,0 +1,70 @@
+---
+title: "Grok Bot × X bookmarks + Cursor: turn one new technology into a demo every weekday"
+description: "Each weekday the Bot picks a technology worth demoing from your X bookmarks, writes a prototype spec and, once you approve, hands it to a Cursor cloud agent."
+sidebar:
+  order: 9
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+apps: ["X", "Cursor", "GitHub"]
+sources:
+  - title: "Grok Bot 101 (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Grok Bot for Engineering (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "Files and results (official docs)"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**The Bot goes through the tech posts you bookmark, picks one worth a demo each weekday, writes a prototype spec for your approval, then has a Cursor cloud agent build it and returns screenshots and a PR.**
+
+## When to use it
+
+- Your bookmarks keep piling up and you never try anything
+- You make developer content or do DevRel and need a steady flow of demos
+- You want fewer steps between seeing something and building it
+
+## Before you start
+
+- The X for Grok Bot plugin, to read bookmarks.
+- A Cursor account, to start cloud agents.
+- A GitHub repository just for demos, not a production repo.
+
+## Steps
+
+1. Put the text below in the Bot’s Description so it follows these rules every time.
+2. Each weekday it picks one technology from your bookmarks and sends you a prototype spec.
+3. Once you reply "go", it starts a Cursor cloud agent.
+4. When the agent finishes, the Bot attaches the screenshots and videos cited in the agent’s report, along with the PR link.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="x-bookmarks-demo">
+
+```text
+You are my tech scout. Every weekday at 9 am:
+1. Look at my X bookmarks, pick the one new technology most worth a demo (a new library, API or model capability) and say why
+2. Write a prototype spec: what to build, with what, what counts as done, and what screenshots or recording prove it
+3. Send me the spec; only after I reply "go", start a Cursor cloud agent to build it in <demo repo>
+4. When it is done, send me the screenshots or recording and the PR link
+Without my confirmation, do not start any agent and do not merge any PR.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Always wait for your confirmation before starting an agent; agents use a lot of usage.
+- Open PRs only; never merge.
+
+## Notes and pitfalls
+
+- This is a real workflow from the official Grok Bot 101 guide (the DevRel scout).
+- For video posts in your bookmarks, the Bot may only read the text.
+- From the official engineering guide: state the proof of completion in the spec, such as before-and-after screenshots.

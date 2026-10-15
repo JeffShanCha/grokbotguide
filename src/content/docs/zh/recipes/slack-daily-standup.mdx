@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Slack：把频道讨论整理成每日站会摘要"
+description: "每天早上读指定频道昨天的讨论，整理进展、阻塞和待拍板事项，你确认后再发到频道。"
+sidebar:
+  order: 4
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: beginner
+apps: ["Slack"]
+sources:
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Message and collaborate（官方文档）"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+  - title: "10 Best Grok Bot Plugins & Integrations（Composio）"
+    url: https://composio.dev/content/best-grok-bot-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**每天早上读一遍指定频道过去 24 小时的讨论，整理出进展、阻塞和需要拍板的事，先给你看草稿，确认后再贴到站会频道。**
+
+## 适合谁
+
+- 小团队不想每天开站会
+- 讨论分散在好几个频道，容易漏
+- 你想每天花 2 分钟就知道团队在干什么
+
+## 准备
+
+- 添加 Slack 插件。官方帮助中心写明它以你本人的身份发言，只能在你能发言的频道发；用另一个工作区要再连一次。
+
+## 步骤
+
+1. 告诉 Bot 要读哪些频道、发到哪个频道。
+2. 手动跑一次，检查摘要有没有漏掉重要讨论、链接对不对。
+3. 存成 Skill，建 Routine：工作日 9:30。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="slack-daily-standup">
+
+```text
+每个工作日 9:30，读取 <#product> <#dev> 两个频道过去 24 小时的消息，整理一份站会摘要：
+- 昨天完成了什么（附消息链接）
+- 正在进行的，预计什么时候完成
+- 阻塞，以及需要谁帮忙
+- 需要我拍板的事
+先把摘要作为草稿发给我，我确认后再发到 <#standup>。不要私信任何人，不要在其他频道发言。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 插件以你的身份发言，发到频道前一定要你确认。Slack 草稿会以卡片出现，可以选 Send message 或 Discard。
+- 不要让它回复别人的讨论。
+
+## 注意事项
+
+- 它只能读你本人能看到的频道。
+- 官方文档写明群聊里不会出现 Slack 草稿，要在一对一对话里审。
+- 想让全团队共用同一个 Bot，看「Grok Bot × Slack 团队版」那篇。

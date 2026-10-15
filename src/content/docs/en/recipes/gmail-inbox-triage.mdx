@@ -1,0 +1,77 @@
+---
+title: "Grok Bot × Gmail: triage your inbox daily, drafts only"
+description: "Connect the Gmail plugin to label mail, draft replies and post a daily brief to Slack. Drafts only for the first week."
+sidebar:
+  order: 2
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Gmail", "Slack"]
+sources:
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Grok Bot Tutorial: AI Email Management (Charlie Automates)"
+    url: https://charlieautomates.com/blog/grok-bot-tutorial-ai-email-management/
+  - title: "Grok Bot setup guide (Wright Mode)"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "Skills and routines (official docs)"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Have a Bot sweep your inbox twice a day: label mail, draft replies and list what needs you. Sending always stays with you.**
+
+## When to use it
+
+- Dozens or hundreds of emails a day bury the important ones
+- Your mail falls into a few repeating types: customers, billing, partnerships, community
+- You want a quick look at what needs you before you sit down
+
+## Before you start
+
+- Add the Gmail plugin from Connect apps and authorize it. The Cursor Help Center says one plugin connects one mailbox at a time.
+- In the plugin tool toggles, turn off send, reply and forward; keep read, drafts and labels. This is how Wright Mode set it up.
+- Prepare a short note on your writing voice, or a few of your best emails.
+- To get the brief in Slack, add the Slack plugin and create a private channel with only you in it.
+
+## Steps
+
+1. Create a Bot, for example "Inbox Manager", and send it your voice notes and the description below.
+2. Describe the labels you want in plain language with real examples, such as "anything about my community goes into Community".
+3. Run it once by hand and check the labels and drafts.
+4. If the plugin cannot create Gmail filters, have the Bot sign in to Gmail in its own cloud browser and build the filters there (the Charlie Automates approach). Use Take over to enter your password yourself.
+5. Once it is stable, save it as a skill and create a routine for weekdays at 08:00 and 14:00.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="gmail-inbox-triage">
+
+```text
+You are my inbox manager for Gmail.
+On every run:
+1. Read new mail since the last run
+2. Label it: <Customers> <Billing> <Partnerships> <Community> <Notifications>; put anything unclear in "To review"
+3. For mail that needs my reply, draft one in my voice and save it as a draft
+4. Post a brief to Slack <#my-inbox>: what needs me today, anything about money, drafts waiting for review, how many were filed
+Rules: never send, reply to or forward any email; never delete mail; when unsure, use "To review" and say why in the brief.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Turning off send, reply and forward in the plugin is more reliable than writing "do not send" in a prompt.
+- Keep it to drafts for the first week until labels and tone are stable.
+- Set deleting mail, unsubscribing and clicking links in emails to Ask first in Auto Review.
+
+## Notes and pitfalls
+
+- A large backlog takes several passes. In the Charlie Automates example, unread mail went from 289 to 178 partway through the cleanup.
+- The Bot repeats mistakes; check it daily for the first week and turn corrections into standing rules.
+- A company Google Workspace admin may need to approve the app named Grok first; switching browsers or relinking will not get around it.
+- Every routine run uses usage, so do not schedule it too often.

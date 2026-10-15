@@ -1,11 +1,12 @@
 ---
-title: 'Zero-risk start: summarize a document'
-description: No connectors and no sign-ins. The best way to try Grok Bot for the first time.
+title: 'Grok Bot × documents: a zero-risk first task'
+description: 'No connectors and no sign-ins. The best way to try Grok Bot for the first time.'
 sidebar:
   order: 1
 grade: official
 needs_testing: true
 author: JeffShanCha
+role: assistant
 difficulty: beginner
 apps: [File upload]
 sources:

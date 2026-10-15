@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × Typefully: turn one article into scheduled posts for every platform"
+description: "Hand the Bot a finished article to turn into X, LinkedIn and Substack Notes posts, saved as Typefully drafts and scheduled."
+sidebar:
+  order: 12
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["Typefully", "X", "LinkedIn", "Substack"]
+sources:
+  - title: "I Built a Seven Grok Bot AI Team (The AI Maker)"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+  - title: "Approvals, security, and privacy (official docs)"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Finish an article or newsletter and the Bot turns it into posts for X, LinkedIn and Substack Notes, saved as Typefully drafts and scheduled once you approve.**
+
+## When to use it
+
+- You have no energy left to rewrite a long piece for social
+- You want one piece of content to go out several times across platforms
+
+## Before you start
+
+- A Typefully account connected to Grok Bot. In The AI Maker’s example, Typefully posted Substack Notes and scheduled LinkedIn.
+- Three of your best past posts as a voice reference.
+
+## Steps
+
+1. Send the Bot the article and the reference posts.
+2. Review the drafts, edit, then let it schedule.
+3. Save it as a skill if you use it often.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="typefully-repurpose">
+
+```text
+Here is the article I just finished: <link or full text>
+Turn it into:
+- X: one thread of 5 to 7 posts with a hook up front
+- LinkedIn: one post of 150 to 250 words
+- Substack Notes: 2 short notes
+Keep my voice (see the 3 attached posts) and do not invent numbers that are not in the article.
+Save everything as Typefully drafts with this plan: X tomorrow 9:00, LinkedIn the day after at 9:00, the Notes over two days (time zone <America/New_York>).
+Send me all drafts for confirmation before scheduling.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Drafts first, schedule after you confirm, never publish directly. The official security docs also recommend keeping publishing behind approval.
+
+## Notes and pitfalls
+
+- In The AI Maker’s live session, a Substack Note went out and a LinkedIn draft was scheduled for the next day.
+- Typefully does not cover every platform; check yours before relying on it.

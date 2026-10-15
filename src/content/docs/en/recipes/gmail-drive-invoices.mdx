@@ -1,0 +1,69 @@
+---
+title: "Grok Bot × Gmail + Google Sheets: a monthly invoice spreadsheet"
+description: "On the 1st of each month, find last month’s invoices and receipts in email, save the attachments and log amount, vendor and date in a sheet."
+sidebar:
+  order: 7
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: finance
+difficulty: beginner
+apps: ["Gmail", "Google Sheets", "Google Drive"]
+sources:
+  - title: "I Built a Seven Grok Bot AI Team (The AI Maker)"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Use the computer and apps (official docs)"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**On the 1st of every month the Bot finds last month’s invoices and receipts in your inbox, saves the attachments and logs amount, vendor and date in one sheet, ready for bookkeeping.**
+
+## When to use it
+
+- Invoices from a pile of SaaS subscriptions are scattered across your inbox
+- You hand monthly numbers to an accountant
+- You want to know what you spend on tools
+
+## Before you start
+
+- The Gmail and Google Sheets plugins, plus an "Invoices" sheet.
+- The Help Center describes the Google Drive plugin as search and read only. Uploading attachments to Drive may need the Bot to use the browser, or you can download files from the conversation.
+
+## Steps
+
+1. Run it once for last month and check the amounts.
+2. Tell the Bot about invoice formats it misreads and turn them into rules.
+3. Create a routine for the 1st of each month at 10:00.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="gmail-drive-invoices">
+
+```text
+On the 1st of each month at 10 am:
+1. Search Gmail for invoices, receipts and bills received last month (keywords: invoice, receipt, bill)
+2. Save PDF attachments to /workspace/invoices/<year-month>/ named date_vendor_amount.pdf
+3. Append one row per invoice to the Google Sheet "<Invoices>": date, vendor, amount, currency, email link, file name
+4. Mark anything with an unclear amount or currency as "check"
+Then tell me the monthly total and how many need checking. Do not reply to, forward or delete any email, and do not pay anything.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- No payments and no replies to vendors.
+- Append only; never edit history.
+
+## Notes and pitfalls
+
+- The AI Maker’s "Invoice Hunter" Bot does this job, though the article gives no results.
+- The official docs warn that files outside /workspace may be lost when the computer resets; keep anything you need in /workspace.
+- Scans and image invoices can be misread, which is what the "check" column is for.
+- Invoices are financial data, and every Bot on your account can see files in /workspace.

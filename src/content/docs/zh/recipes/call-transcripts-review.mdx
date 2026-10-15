@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × 会议转写：每天早上复盘昨天的销售通话"
+description: "每天读昨天的销售通话转写，对照销售方法打分，列出做得好的、错过的机会和待办。"
+sidebar:
+  order: 19
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: sales
+difficulty: intermediate
+apps: ["Granola", "Notion"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Grok Bot for Recruiting（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-recruiting
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**每天早上让 Bot 读昨天所有销售通话的转写，对照你的销售方法打分，列出做得好的地方、错过的机会和待办事项。**
+
+## 适合谁
+
+- 每天有多个销售或客户电话，没时间逐个复盘
+- 想知道最常遇到的异议是什么
+
+## 准备
+
+- 会议转写工具，官方招聘指南里用的是 Granola。
+- 一份你的销售方法或评分表文档。
+
+## 步骤
+
+1. 先拿一通你熟悉的电话测试，看打分是否合理。
+2. 把评分标准调到和你的判断一致。
+3. 建 Routine：工作日 8:30。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="call-transcripts-review">
+
+```text
+每个工作日 8:30，读取 <转写所在位置> 里昨天的所有销售通话转写：
+对照附件「销售评分表」，给每通电话打分，并列出：
+- 做得好的地方（引用原话，标注时间点）
+- 错过的机会：客户提到了但我们没跟进的需求、异议、预算或时间线信号
+- 待办事项：谁、做什么、什么时候
+最后汇总：本周最常见的异议是什么，下周练习什么。
+只写报告，不要给客户发任何东西，不要改 CRM。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 只写报告，不对外发送，不改 CRM。
+
+## 注意事项
+
+- 这是 Prompt Warrior 作者每天早上的 Routine。
+- 招聘也能这样用：官方招聘指南里的 Pulse Bot 在面试后对照岗位评分表起草反馈，先问招聘人员的评分和观察，再提交到 ATS（Ashby）。
+- 通话转写包含客户信息，共享电脑上所有 Bot 都能看到，注意分开存放。

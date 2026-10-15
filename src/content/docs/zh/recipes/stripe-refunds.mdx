@@ -1,0 +1,68 @@
+---
+title: "Grok Bot × Stripe：按退款政策审核退款申请"
+description: "Bot 对照退款政策逐条审核申请、查 Stripe 订单，给出同意或拒绝建议和回复草稿，你批准后才执行。"
+sidebar:
+  order: 16
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: support
+difficulty: intermediate
+apps: ["Stripe", "Gmail"]
+sources:
+  - title: "Grok Bot for Support（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-support
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+  - title: "Grok Bot Use Cases: 7 Real Examples（explainx）"
+    url: https://explainx.ai/blog/grok-bot-real-world-use-cases-august-2026
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**把退款政策交给 Bot，它逐条核对退款申请、在 Stripe 里查订单，给出同意或拒绝的建议和回复草稿；你逐条批准后才执行。**
+
+## 适合谁
+
+- 卖订阅或数字产品，每周都有退款申请
+- 处理退款要在邮箱和 Stripe 后台之间来回切
+
+## 准备
+
+- Stripe 访问：插件，或者在 Bot 浏览器里登录 Stripe 后台，建议用权限受限的成员账号。
+- 退款政策文档。
+- 支持邮箱的 Gmail 插件。
+
+## 步骤
+
+1. 把退款政策和下面的指令发给 Bot，先处理一批历史申请对比你自己的判断。
+2. 在 Auto Review 加一条 Ask first 规则：Stripe 里的任何退款操作。
+3. 建 Routine：每天 11:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="stripe-refunds">
+
+```text
+这是我们的退款政策：<粘贴或附件>
+每天 11:00 检查支持邮箱里新的退款申请：
+1. 在 Stripe 里找到对应的付款，核对购买时间、金额、是否已经退过款
+2. 按政策给出建议：同意 / 拒绝 / 需要我判断，并写清依据（政策第几条）
+3. 起草给客户的回复；对符合条件的老用户，可以在草稿里提供 <挽留优惠>
+4. 把所有建议列成一张表发给我
+未经我逐条批准，不要在 Stripe 里执行任何退款，不要发送任何邮件。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 退款是资金操作，必须逐条审批。官方安全文档把购买和转账列为必须在请求里写清边界的动作。
+- 来自 Routine 的审批卡片约 10 分钟后过期，过期后动作不会执行，需要让 Bot 重试。
+
+## 注意事项
+
+- 官方客服指南里的做法：Bot 按政策审核退款申请，决定经你批准后再回复客户，还可以给部分客户提供挽留优惠。
+- 社区里有开发者用支持邮箱加 Stripe API 让 Bot 处理日常退款（explainx 汇总的早期用户案例，未经独立验证）。

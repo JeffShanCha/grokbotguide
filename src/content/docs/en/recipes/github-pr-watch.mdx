@@ -1,0 +1,66 @@
+---
+title: "Grok Bot × GitHub + Notion: check every PR on a schedule"
+description: "Track PRs on a Notion board; the Bot checks review comments, CI failures and merge conflicts on a schedule and moves problem PRs back to Working."
+sidebar:
+  order: 14
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: advanced
+apps: ["GitHub", "Notion"]
+sources:
+  - title: "Grok Bot for Engineering (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "10 Best Grok Bot Plugins & Integrations (Composio)"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "A deep dive into Grok Bot (Flavio Copes)"
+    url: https://flaviocopes.com/grok-bot/
+  - title: "Skills and routines (official docs)"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Track every PR on a Notion board. On a schedule the Bot checks review comments, security findings, CI failures and merge conflicts; problems go back to Working with a note, and clean PRs move to Ready for Review.**
+
+## When to use it
+
+- Too many PRs to watch, especially ones opened by AI agents
+- Failing CI goes unnoticed for too long
+
+## Before you start
+
+- The GitHub plugin. Composio’s roundup describes it as covering repositories, issues, PRs, code search and GitHub Actions.
+- A Notion database with PR link, status (Working / Ready for Review / Merged) and owner or owning agent.
+
+## Steps
+
+1. Add your open PRs to the board.
+2. Run the check once by hand.
+3. Create a routine, for example every 30 minutes (the cadence in the official engineering guide).
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="github-pr-watch">
+
+```text
+Every 30 minutes, check each row in the Notion database "<PR board>" with status Working or Ready for Review:
+- Open the GitHub PR and look for new review comments, security findings, failing CI and merge conflicts
+- If there is a problem: note it with links in the row, set status back to Working, and notify the owning agent or me
+- If everything passes: set status to Ready for Review and send me a short review summary
+Do not merge any PR, push code or close PRs.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- In the official engineering guide, low-risk PRs with high-confidence reviews merge automatically. Leave that off while you start out.
+
+## Notes and pitfalls
+
+- Do the math: every 30 minutes is 48 runs a day, each using usage whether or not anything changed. Flavio Copes points out that every 15 minutes is 96 runs a day.
+- Routines must be at least five minutes apart, and each keeps only its 20 most recent runs.

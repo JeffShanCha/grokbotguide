@@ -1,0 +1,71 @@
+---
+title: "Grok Bot × Zendesk: sign in once and let the Bot work the support queue"
+description: "For ticketing tools without a plugin, the Bot signs in through its cloud browser, labels tickets, drafts replies and passes bugs to a repro Bot."
+sidebar:
+  order: 17
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: support
+difficulty: intermediate
+apps: ["Zendesk", "Browser"]
+sources:
+  - title: "Grok Bot website"
+    url: https://x.ai/bot
+  - title: "Grok Bot for Support (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-support
+  - title: "Use the computer and apps (official docs)"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+  - title: "Approvals, security, and privacy (official docs)"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**For a ticketing tool without a plugin, the Bot signs in to the agent dashboard in its cloud browser and works tickets like an agent would: labels them, drafts replies and hands bugs to a repro Bot.**
+
+## When to use it
+
+- Tickets keep growing and most answers are already in your help center
+- You want the Bot to sort and draft so people handle the hard ones
+
+## Before you start
+
+- An agent account for Zendesk or your ticketing tool, ideally a separate restricted one.
+- Links to your help center docs.
+- Optional: the Bug Reproduction card from the Bot library.
+
+## Steps
+
+1. Ask the Bot to open Zendesk. When it asks for a login, choose Take over, sign in yourself and choose I’m done.
+2. The session stays on the cloud computer, so you do not sign in every time.
+3. Start with 10 tickets and compare with your own calls before giving it more.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="zendesk-support-queue">
+
+```text
+Open the Zendesk agent dashboard (stop and let me take over if it needs a login) and work the Unassigned queue:
+1. Label each ticket: <Billing> <Bug> <Feature request> <Account> <Other>
+2. Where the help center answers it, draft a reply with links to the docs you used; do not submit
+3. For bugs, collect reproduction clues and hand them to "Bug Reproduction"
+4. For refunds, cancellations and key accounts, do not draft; list them for me
+Finish with a table: ticket number, label, suggested action, whether a draft is ready.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Do not submit replies; you review and send.
+- Refunds, cancellations and key accounts always go to a person.
+
+## Notes and pitfalls
+
+- The Grok Bot website uses signing in to Zendesk to work the support queue as its example.
+- The session lives on the shared computer, so every Bot on your account can use it; use a restricted account or keep other Bots away from support.
+- Some sites expire sessions or ask for verification again; the Bot should stop and tell you rather than try to get around it.
+- Where a plugin exists, use it; the official docs say plugins are usually more reliable.

@@ -6,13 +6,13 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 
 /**
  * 文章额外的 frontmatter 字段。
- * - grade：内容分级。official = 整理自官方文档；tested = 社区亲测；opinion = 个人观点/评测
+ * - grade：内容分级。official = 整理自官方文档；community = 整理自社区分享（他人实测，本站未复现）；tested = 本站或投稿者亲测；opinion = 个人观点/评测
  * - needs_testing：true 时页面顶部提示「根据官方文档整理，尚待亲测」
  * - last_verified：最后一次有人按文中步骤验证的日期
  * - 角色卡 / 模板专用：role、apps、permissions、difficulty、share_url
  */
 const docsExtension = z.object({
-	grade: z.enum(['official', 'tested', 'opinion']).optional(),
+	grade: z.enum(['official', 'community', 'tested', 'opinion']).optional(),
 	needs_testing: z.boolean().default(false),
 	last_verified: z.coerce.date().optional(),
 	author: z.string().optional(),

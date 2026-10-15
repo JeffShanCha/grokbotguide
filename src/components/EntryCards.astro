@@ -17,7 +17,7 @@ const roles = [...new Set(entries.map((e) => e.data.role).filter(Boolean))] as s
 ---
 
 {
-	section === 'bots' && roles.length > 1 && (
+	(section === 'bots' || section === 'recipes') && roles.length > 1 && (
 		<div class="gbg-filter not-content" data-filter>
 			<button type="button" data-role="" aria-pressed="true">
 				{t('res.all')}

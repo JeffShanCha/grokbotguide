@@ -1,0 +1,70 @@
+---
+title: "Grok Bot × Google Sheets: log follower counts across platforms every week"
+description: "Each week, open each platform profile and append follower and subscriber counts to one sheet to track total audience."
+sidebar:
+  order: 6
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["Google Sheets", "Browser"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "A deep dive into Grok Bot (Flavio Copes)"
+    url: https://flaviocopes.com/grok-bot/
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every week the Bot opens your profiles on each platform and appends follower and subscriber counts to one Google Sheet, so you can track total audience over time.**
+
+## When to use it
+
+- You publish on several platforms and copy numbers by hand
+- You want to see which platform grows fastest
+- Sponsors ask for audience numbers
+
+## Before you start
+
+- The Google Sheets plugin. The Help Center says it can only edit sheets you can edit.
+- A sheet with columns: date, platform, followers, change from last week.
+- For dashboards that need a login, sign in once in the Bot’s browser using Take over.
+
+## Steps
+
+1. Send the Bot your platform list and profile links, and run it once.
+2. Check every number.
+3. Create a routine for Mondays at 09:00.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="sheets-audience-tracker">
+
+```text
+Every Monday at 9 am, open these profiles and read the current follower or subscriber count:
+- YouTube: <link>
+- X: <link>
+- Newsletter: <dashboard link> (stop and let me take over if it needs a login)
+- <Other platform>: <link>
+Append the results to the "Followers" tab of the Google Sheet "<name>", one row per platform: date, platform, count, change from last week.
+If a platform cannot be read, write "not retrieved" with the reason; never reuse last week’s number. Do not edit existing rows.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Write "append only, never edit history" into the prompt.
+- Use Take over to enter dashboard passwords yourself.
+
+## Notes and pitfalls
+
+- This is one of Prompt Warrior’s daily routines; he tracks YouTube, Instagram, TikTok, X, a newsletter and Skool.
+- Many platforms block cloud IPs or ask for verification again; Flavio Copes notes browser automation is fragile from cloud IPs. Leave a gap rather than guess.
+- Some regional platforms ask for verification often from an overseas cloud computer; try it for a few weeks before relying on it.

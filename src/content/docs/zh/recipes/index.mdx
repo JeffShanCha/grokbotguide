@@ -1,23 +1,33 @@
 ---
 title: 实战案例
-description: 真实场景从头到尾跑一遍：用了哪些应用、给 Bot 的完整指令、审批怎么设、踩了哪些坑。
+description: Grok Bot × 各种工具的真实用法：Gmail、Slack、X、Notion、GitHub、Stripe、Google Ads……每篇都有可复制的指令和审批边界。
 sidebar:
-  label: 全部案例
+  label: 实战案例库
   order: 0
 ---
 
 import EntryCards from '~/components/EntryCards.astro';
+import ResourceList from '~/components/ResourceList.astro';
 
-每篇实战案例都要求**亲测**，并写明测试日期、使用的订阅、用到的应用和权限设置。
+每篇案例都写清楚：适合谁、要准备什么、具体步骤、可以直接复制的指令、哪些动作必须你审批，以及别人踩过的坑。
+
+案例来自官方文档、官方使用指南和社区作者公开分享的实测，每篇底部都列出了来源。标着「整理自社区分享」的，是别人跑通过、本站还没复现的做法。你照着做成功了，欢迎在页面底部点「编辑此页」补上你的测试结果。
 
 <EntryCards section="recipes" />
 
+## 更多社区实战分享
+
+下面是资源导航里标为「实战案例」的外部文章、视频和帖子，按收录时间排序。我们只写摘要并链接原文，没有复现过作者的结果。
+
+<ResourceList category="recipes" compact />
+
 ## 征稿中
 
-下面这些选题还没人写，欢迎 [投稿](/zh/community/submit/) 或直接在 GitHub 认领：
+下面这些组合还没人写，欢迎 [投稿](/zh/community/submit/) 或在 GitHub 认领：
 
-- Gmail 收件箱每日整理
-- 竞品网站每周监控日报
-- 独立站（Shopify）客服回复草稿
-- 每周 SEO 数据周报（Google Search Console）
-- X 账号运营：选题收集与草稿
+- Grok Bot × Shopify：每天汇总订单和客服问题
+- Grok Bot × Google Search Console：每周 SEO 周报
+- Grok Bot × 飞书 / Lark：把群消息整理成待办
+- Grok Bot × Linear：把 Slack 里的需求整理成工单
+- Grok Bot × Figma：设计稿改动后自动写变更说明
+- Grok Bot × Discord / Telegram：社群答疑和每日摘要

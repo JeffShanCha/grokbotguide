@@ -1,0 +1,62 @@
+---
+title: "Grok Bot × Composio: one plugin for a thousand apps"
+description: "Connect apps missing from the plugin marketplace through Composio, which handles authorization and tool routing and loads tools on demand."
+sidebar:
+  order: 24
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: intermediate
+apps: ["Composio", "Airtable", "Slack"]
+sources:
+  - title: "10 Best Grok Bot Plugins & Integrations (Composio)"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "Grok Bot setup guide (Wright Mode)"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Apps missing from the plugin marketplace, such as Airtable or Trello, can come in through the Composio plugin, which handles authorization and tool routing and loads each app’s tools only when needed.**
+
+## When to use it
+
+- A tool you rely on has no official plugin
+- A workflow spans several business apps
+
+## Before you start
+
+- Install the Composio plugin from the marketplace.
+- Authorize the apps you need inside Composio.
+
+## Steps
+
+1. Start with a read-only task, such as reading one table.
+2. Grant write access gradually once reads work.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="composio-many-apps">
+
+```text
+Use Composio to connect <Airtable>, read this week’s records with status "Ready to publish" in the "<Content calendar>" table,
+and send me a checklist draft to confirm before posting it to Slack <#content>.
+Do not change any Airtable record.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- It adds a third-party authorization layer, so tighten permissions app by app.
+- The Help Center says a plugin can only do what the authorized account can already do; it cannot change sharing or raise access.
+
+## Notes and pitfalls
+
+- The plugin roundup is published by Composio itself. It suggests direct plugins for specialist tools such as GitHub and Sentry, and Composio for workflows spanning many business apps.
+- You may not need an aggregator: Wright Mode’s author used Kit, an email marketing tool with no official plugin, and the Bot worked out how to connect it. Ask the Bot first.

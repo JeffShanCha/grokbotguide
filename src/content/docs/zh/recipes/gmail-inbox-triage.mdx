@@ -1,0 +1,77 @@
+---
+title: "Grok Bot × Gmail：每天自动整理收件箱，只写草稿不发送"
+description: "连接 Gmail 插件，按标签分拣邮件、起草回复，每天把简报发到 Slack。第一周只出草稿。"
+sidebar:
+  order: 2
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Gmail", "Slack"]
+sources:
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Grok Bot Tutorial: AI Email Management（Charlie Automates）"
+    url: https://charlieautomates.com/blog/grok-bot-tutorial-ai-email-management/
+  - title: "Grok Bot setup guide（Wright Mode）"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "Skills and routines（官方文档）"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**让 Bot 每天两次扫一遍收件箱：分类打标签、起草回复、把需要你处理的事列成简报。发送这一步始终留给你。**
+
+## 适合谁
+
+- 收件箱每天几十上百封，重要邮件经常被淹没
+- 邮件有固定的几类：客户、账单、合作邀约、社区通知
+- 想在通勤路上先看一眼「今天要处理什么」
+
+## 准备
+
+- 侧边栏 Connect apps 里添加 Gmail 插件并完成授权。官方帮助中心写明一个插件一次只连一个邮箱。
+- 在插件的工具开关里关掉发送、回复、转发，只保留读取、草稿和打标签。这是 Wright Mode 作者的做法。
+- 准备一份「我的写信风格」：几封你写得最好的邮件，或一段语气描述。
+- 想把简报发到 Slack，再加一个 Slack 插件，建一个只有你在的私有频道。
+
+## 步骤
+
+1. 新建一个 Bot，名字比如「邮件管家」，把写信风格和下面的职责描述发给它。
+2. 用自然语言告诉它要哪些标签，并给真实例子，比如「和社区有关的邮件都进 Community 标签」。
+3. 先手动跑一次，检查标签和草稿对不对。
+4. 如果插件建不了 Gmail 过滤器，让 Bot 在它自己的云电脑浏览器里登录 Gmail，用网页操作建过滤器（Charlie Automates 的做法）。登录时用 Take over 自己输入密码。
+5. 跑稳后让它存成 Skill，再建 Routine：工作日 8:00 和 14:00 各跑一次。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="gmail-inbox-triage">
+
+```text
+你是我的邮件管家，负责 Gmail 收件箱。
+每次运行：
+1. 读取上次运行之后的新邮件
+2. 按这些标签分类：<客户> <账单> <合作邀约> <社区> <通知>，拿不准的放进「待确认」
+3. 需要我回复的，按我的写信风格起草回复，存为草稿
+4. 把简报发到 Slack 的 <#my-inbox>：今天需要我处理的事、涉及钱的邮件、等我审阅的草稿、已归档数量
+规则：绝不发送、回复或转发任何邮件；不删除邮件；拿不准就放「待确认」并在简报里说明。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 在插件层面关掉发送、回复、转发，比在指令里写「不要发送」更可靠。
+- 头一周只出草稿，确认分类和语气都稳定后再考虑放开。
+- 删除邮件、退订、点击邮件里的链接，都在 Auto Review 里设成 Ask first。
+
+## 注意事项
+
+- 积压多的邮箱第一次清理很慢。Charlie Automates 的例子里，清理过程中未读从 289 封降到 178 封，要分几轮。
+- Bot 会重复同样的错误，头一周每天看一眼，把纠正写成长期规则。
+- 公司 Google Workspace 可能要管理员先批准名为 Grok 的应用，换浏览器或重新授权都绕不过去。
+- 每次 Routine 运行都消耗用量，频率别设太高。

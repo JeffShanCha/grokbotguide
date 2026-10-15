@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × YouTube: watch competitor channels for new videos every day"
+description: "Scan the channels you follow each day and log new videos in Notion: title, thumbnail, link and how they compare with the channel’s usual numbers."
+sidebar:
+  order: 11
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: beginner
+apps: ["YouTube", "Notion"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "I Built a Seven Grok Bot AI Team (The AI Maker)"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every day the Bot scans the YouTube channels you follow and logs new long-form videos in Notion with title, thumbnail, link and views against the channel’s baseline, so outliers stand out.**
+
+## When to use it
+
+- You make video content and want to know which topics work for peers
+- You want a swipe file of standout titles and thumbnails
+
+## Before you start
+
+- A list of channels to watch.
+- The Notion plugin and a database.
+- Optional: The AI Maker used the Supadata plugin for YouTube data, which is steadier than reading pages.
+
+## Steps
+
+1. Send the Bot the channel list and the prompt below; run it once.
+2. Check the view counts and the baseline math.
+3. Create a routine for 10:00 daily.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="youtube-competitor-watch">
+
+```text
+Every day at 10 am, check these YouTube channels for long-form videos (not Shorts) published in the last 24 hours:
+<channel 1 link>
+<channel 2 link>
+For each new video, add a row to the Notion database "<Competitor videos>": channel, title, thumbnail link, video link, published time, current views, the channel’s average views over its last 10 videos, and whether it is clearly above average.
+For clear outliers, add two sentences on what the title and thumbnail got right.
+If there are no new videos, add nothing and do not notify me.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Read-only on YouTube; only add rows to this one database.
+
+## Notes and pitfalls
+
+- This is one of Prompt Warrior’s daily routines.
+- Views on new videos are still climbing; compare against the average again a day later (our suggestion).
+- Reading pages directly can get rate limited; use a data plugin when you have one.

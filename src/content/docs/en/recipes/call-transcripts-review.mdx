@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × call transcripts: review yesterday’s sales calls every morning"
+description: "Each morning, read yesterday’s sales call transcripts, score them against your framework and list wins, missed opportunities and action items."
+sidebar:
+  order: 19
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: sales
+difficulty: intermediate
+apps: ["Granola", "Notion"]
+sources:
+  - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Grok Bot for Recruiting (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-recruiting
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every morning the Bot reads yesterday’s sales call transcripts, scores each against your framework, and lists what went well, missed opportunities and action items.**
+
+## When to use it
+
+- Several sales or customer calls a day and no time to review them
+- You want to know which objections come up most
+
+## Before you start
+
+- A meeting transcription tool; the official recruiting guide uses Granola.
+- Your sales framework or scorecard as a doc.
+
+## Steps
+
+1. Test it on a call you know well and check the scoring.
+2. Tune the scorecard until it matches your judgment.
+3. Create a routine for weekdays at 08:30.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="call-transcripts-review">
+
+```text
+Every weekday at 8:30, read all of yesterday’s sales call transcripts in <where transcripts live>:
+Score each call against the attached "Sales scorecard" and list:
+- What went well (quote the call, with timestamps)
+- Missed opportunities: needs, objections, budget or timeline signals we did not follow up on
+- Action items: who, what, by when
+Then summarize the most common objection this week and what to practice next week.
+Report only; do not send anything to customers or edit the CRM.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Report only: nothing sent externally, no CRM edits.
+
+## Notes and pitfalls
+
+- This is one of Prompt Warrior’s morning routines.
+- It works for recruiting too: in the official recruiting guide, the Pulse Bot drafts interview feedback against the role scorecard and asks for the recruiter’s rating before submitting to the ATS (Ashby).
+- Transcripts contain customer information and every Bot on your account can see shared files; keep them organized and separate.

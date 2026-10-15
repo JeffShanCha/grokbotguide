@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Slack: turn channel chatter into a daily standup"
+description: "Each morning, read yesterday’s discussion in chosen channels and summarize progress, blockers and decisions; post after you approve."
+sidebar:
+  order: 4
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: beginner
+apps: ["Slack"]
+sources:
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Message and collaborate (official docs)"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+  - title: "10 Best Grok Bot Plugins & Integrations (Composio)"
+    url: https://composio.dev/content/best-grok-bot-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every morning the Bot reads the last 24 hours in the channels you pick, writes up progress, blockers and decisions you owe, and shows you a draft before posting to the standup channel.**
+
+## When to use it
+
+- A small team that would rather skip a daily standup meeting
+- Discussion spread over several channels
+- You want to know what the team is doing in two minutes a day
+
+## Before you start
+
+- Add the Slack plugin. The Cursor Help Center says it posts as you and only in channels you can post in; another workspace needs its own connection.
+
+## Steps
+
+1. Tell the Bot which channels to read and where to post.
+2. Run it once by hand and check for missed threads and correct links.
+3. Save it as a skill and create a routine for weekdays at 09:30.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="slack-daily-standup">
+
+```text
+Every weekday at 9:30, read the last 24 hours in <#product> and <#dev> and write a standup summary:
+- What was finished yesterday (with message links)
+- What is in progress and when it should land
+- Blockers and who can help
+- Decisions I need to make
+Send it to me as a draft first; post it to <#standup> only after I confirm. Do not DM anyone or post in other channels.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- The plugin posts as you, so always confirm before it posts. Slack drafts appear as a card with Send message or Discard.
+- Do not let it reply in other people’s threads.
+
+## Notes and pitfalls
+
+- It can only read channels you can see.
+- The official docs say Slack drafts do not appear in group chats; review them in a one-to-one conversation.
+- For one Bot the whole team shares, see "Grok Bot × Slack for teams".

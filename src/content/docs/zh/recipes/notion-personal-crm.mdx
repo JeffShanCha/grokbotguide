@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Notion：把 X 上关注的人整理成私人人脉库"
+description: "只用公开资料，把你在 X 上关注的人整理成 Notion 看板：头像、简介、主页链接、领域标签。"
+sidebar:
+  order: 10
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Notion", "X"]
+sources:
+  - title: "Grok Bot 101（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "10 Best Grok Bot Plugins & Integrations（Composio）"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**让 Bot 读取你在 X 上关注的人，只用公开的个人资料，在 Notion 里建一个带头像、简介和主页链接的人脉看板，出差或参加活动前翻一翻。**
+
+## 适合谁
+
+- 关注了几百个人，想不起谁是做什么的
+- 去某个城市出差，想约当地认识的人见面
+- 想按领域找到可以合作的人
+
+## 准备
+
+- Notion 插件，能查数据库、建页面。Notion 里先建好一个空页面。
+- X for Grok Bot 插件，用来读你的关注列表。
+
+## 步骤
+
+1. 把下面的指令发给 Bot，先做前 50 个。
+2. 检查字段和标签是否合适，调整后再做剩下的。
+3. 可选：建一个每月一次的 Routine，更新简介和新关注的人。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="notion-personal-crm">
+
+```text
+把我在 X 上关注的人整理成 Notion 里的私人人脉库，只用公开的个人资料：
+- 在 Notion 页面「<人脉>」下建一个数据库，字段：名字、X 账号、头像、一句话简介、城市（公开写了才填）、主要领域、个人网站
+- 按领域打标签：<AI 编程> <出海> <独立开发> <投资> <其他>
+- 先做前 50 个，做完给我看，我确认格式后再做剩下的
+不要关注、取关、私信或点赞任何人。不要去其他网站搜索这些人的信息。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- X 只读，Notion 只在指定页面下创建内容。
+- 只用对方在 X 主页上公开的信息。
+
+## 注意事项
+
+- 这是官方 Grok Bot 101 指南作者的真实用法，他用来在出差时重新联系熟人。
+- 不要让它去别的网站挖个人信息，这既不礼貌，也可能违反平台规则。
+- 人数多时分批做，避免一次把每周用量耗光。

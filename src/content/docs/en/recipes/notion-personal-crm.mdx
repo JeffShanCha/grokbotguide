@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Notion: turn the people you follow on X into a personal CRM"
+description: "Using public profile info only, build a Notion board of the people you follow on X: avatar, bio, profile links and topic tags."
+sidebar:
+  order: 10
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Notion", "X"]
+sources:
+  - title: "Grok Bot 101 (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "10 Best Grok Bot Plugins & Integrations (Composio)"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "Use the computer and apps (official docs)"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**The Bot reads who you follow on X and, using public profile information only, builds a Notion board with avatars, bios and profile links, ready to skim before a trip or an event.**
+
+## When to use it
+
+- You follow hundreds of people and cannot remember who does what
+- You are visiting a city and want to meet people you know there
+- You want to find collaborators by topic
+
+## Before you start
+
+- The Notion plugin, which can query databases and create pages. Create an empty page first.
+- The X for Grok Bot plugin, to read your following list.
+
+## Steps
+
+1. Send the Bot the prompt below and start with the first 50.
+2. Check the fields and tags, adjust, then do the rest.
+3. Optional: a monthly routine to refresh bios and add new follows.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="notion-personal-crm">
+
+```text
+Turn the people I follow on X into a private personal CRM in Notion, using only public profile information:
+- Under the Notion page "<People>", create a database with: name, X handle, avatar, one-line bio, city (only if public), main field, personal website
+- Tag by field: <AI coding> <Global SaaS> <Indie hacking> <Investing> <Other>
+- Do the first 50, show me, and do the rest after I confirm the format
+Do not follow, unfollow, DM or like anyone. Do not search other sites for information about these people.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Read-only on X; in Notion, only create under the page you name.
+- Use only what people show publicly on their X profile.
+
+## Notes and pitfalls
+
+- This is a real workflow from the author of the official Grok Bot 101 guide, who uses it to reconnect with people while traveling.
+- Do not let it dig for personal information on other sites; it is impolite and may break platform rules.
+- Work in batches so one run does not use up a week of usage.

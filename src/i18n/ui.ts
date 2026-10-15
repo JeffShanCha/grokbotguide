@@ -5,12 +5,13 @@ export const toLang = (locale: string | undefined): Lang => (locale === 'en' ? '
 const ui = {
 	zh: {
 		'grade.official': '整理自官方文档',
+		'grade.community': '整理自社区分享',
 		'grade.tested': '社区亲测',
 		'grade.opinion': '观点 / 评测',
 		'meta.verified': '最后验证',
 		'meta.author': '作者',
 		'meta.needsTesting':
-			'本文根据官方文档整理，尚未经过社区亲测。如果你按步骤操作后发现不一致，欢迎在 GitHub 上修改此页。',
+			'本文根据官方文档或社区分享整理，本站尚未亲测复现。如果你按步骤操作后发现不一致，欢迎在 GitHub 上修改此页。',
 		'meta.sources': '参考来源',
 		'footer.disclaimer':
 			'GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。Grok 及相关名称是其各自所有者的商标。',
@@ -53,12 +54,13 @@ const ui = {
 	},
 	en: {
 		'grade.official': 'From official docs',
+		'grade.community': 'From community reports',
 		'grade.tested': 'Community tested',
 		'grade.opinion': 'Opinion / review',
 		'meta.verified': 'Last verified',
 		'meta.author': 'Author',
 		'meta.needsTesting':
-			'This page is compiled from the official docs and has not been tested by the community yet. If something differs when you try it, please edit this page on GitHub.',
+			'This page is compiled from the official docs or community reports and has not been reproduced by us yet. If something differs when you try it, please edit this page on GitHub.',
 		'meta.sources': 'Sources',
 		'footer.disclaimer':
 			'GrokBotGuide is an independent community project, not affiliated with or endorsed by xAI, SpaceXAI or Cursor. Grok and related names are trademarks of their respective owners.',

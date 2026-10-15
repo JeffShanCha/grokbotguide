@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × X：在帖子下 @bot，一键把讨论交给 Bot"
+description: "在 X 上回复「@bot + 要求」，你的主 Bot 就在云电脑上接手，结果留在 Grok Bot 应用里。"
+sidebar:
+  order: 8
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["X"]
+sources:
+  - title: "Tag @bot on X（官方文档）"
+    url: https://docs.x.ai/grok-bot/tag-on-x
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**在 X 上看到值得处理的帖子或长串讨论，直接回复「@bot 加一句要求」，你的主 Bot 就会在云电脑上接手，结果留在 Grok Bot 应用里，不会公开发在 X 上。**
+
+## 适合谁
+
+- 刷 X 时看到长串讨论，想要一份要点
+- 看到新工具，想让 Bot 去查定价和评价
+- 不想切到应用里再复制链接
+
+## 准备
+
+- 在 grok.com 的 Settings → Account 里，点 X Account 旁的 Connect，把 X 账号和 Grok 账号连起来。
+- 同一个 Grok 账号开通 Grok Bot，并且至少有一个你自己创建的 Bot。别人分享给你的 Bot 接不了 @bot 的请求。
+- 可选：添加 X for Grok Bot 插件，让 Bot 能搜帖子、读时间线、看提及、趋势和书签。不装也能用 @bot。
+
+## 步骤
+
+1. 在帖子下回复，@bot 并写上要求。
+2. @bot 会在 X 上回一条确认，表示你的主 Bot 已经收到。
+3. 打开 Grok Bot 应用查看进度和结果。第一次使用时，X 会提示被 @ 的请求会自动开始执行并消耗你的用量。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="x-tag-bot">
+
+```text
+@bot 把这串讨论总结成 5 条要点，发到我的 Slack <#reading>
+@bot 这个工具值得试吗？查一下官网定价和用户评价，整理成对比表给我
+@bot 把这条帖子里提到的所有链接打开，每个写一句话摘要
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- @bot 只在 X 上发一条确认，具体结果不会公开发在 X 上。
+- 被 @ 触发的请求会自动开始执行，所以要在请求里写清楚边界，比如「只总结，不要回复任何人」。
+
+## 注意事项
+
+- 地区限制：X 账号登记的国家在欧盟、英国、澳大利亚、冰岛、列支敦士登、挪威时暂不可用。判断依据是 X 记录的账号国家，当前位置和 VPN 都没用；只登记了「南亚」这类大区或没有国家的，也暂不可用。
+- 帖子本身、被回复的帖子或被引用的帖子里有视频或 GIF 时不会转交；同时 @grok 的帖子也不会。
+- 在已经有人 @bot 的讨论串里回复，自己没有 @bot 不算。
+- 每周用量用完后 @bot 不会响应。

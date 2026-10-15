@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Slack for teams: one Bot for the whole team"
+description: "Publish a configured Bot as a Team Bot with its own Slack app; teammates DM it or @mention it in channels."
+sidebar:
+  order: 20
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: advanced
+apps: ["Slack"]
+sources:
+  - title: "Team Bots (official docs)"
+    url: https://docs.x.ai/grok-bot/team-bots
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Publish a configured Bot as a Team Bot and it gets its own Slack app. Teammates DM it or @mention it in a channel, and each person’s conversation stays private.**
+
+## When to use it
+
+- People keep asking the same questions: metric definitions, where docs live, how a process works
+- You want to share one good Bot instead of everyone configuring their own
+
+## Before you start
+
+- A team plan; Team Bots are available to team members.
+- Permission to install apps in your Slack workspace, or an admin who can approve.
+
+## Steps
+
+1. Choose New chat (Cmd/Ctrl+N) → Create new Team Bot, or use Publish to Team from an existing Bot’s Share menu.
+2. Configure Plugins, Secrets, Skills and Files under Setup.
+3. Publish with Publish to team.
+4. In the Bot’s details, choose Bring to your team’s Slack → Connect Slack workspace, pick the workspace and choose Connect.
+5. Invite it to channels with /invite @BotName.
+6. Each teammate links their Slack account once under Settings → General → Team Bots.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="slack-team-bot">
+
+```text
+You are <team name>’s "Metrics Assistant".
+Teammates will ask business metric questions in Slack, such as "how many new paying users last week" or "which channel converts best".
+When answering: give the number, the definition used and a link to the source; ask if the definition is unclear; say so when you do not know.
+Read data only; never change dashboards, sheets or settings.
+Save facts the whole team should know (such as metric definitions) to team memory, and tell the person who asked that you saved it.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Sign-in (OAuth) plugins act as the teammate asking; key or token plugins are shared, so use read-only service-account keys.
+- Slack channels, group DMs and threads share one computer for the Bot; do not share anything in a channel that not everyone there should see.
+- Before using a personal connector in a shared conversation, the Bot shows an Allow card.
+
+## Notes and pitfalls
+
+- Up to 25 secrets per Team Bot; shared files must be txt, md, csv, json or yaml, up to 256,000 characters each.
+- Routines are personal and count against the person who set them up; Slack messages from unlinked senders (such as workflow posts) count against the owner.
+- If the workspace requires admin approval, setup shows Awaiting admin approval; use Send request in Slack.
+- Ordinary channel messages are ignored unless the Bot is mentioned.

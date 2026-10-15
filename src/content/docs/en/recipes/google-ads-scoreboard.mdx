@@ -1,0 +1,64 @@
+---
+title: "Grok Bot × Google Ads: a weekly campaign scoreboard that never touches budgets"
+description: "Pull Google Ads experiment data weekly and score each concept with a recommendation; no changes to ads, bids or budgets."
+sidebar:
+  order: 18
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: advanced
+apps: ["Google Ads", "Slack"]
+sources:
+  - title: "Grok Bot for Marketing (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-marketing
+  - title: "Approvals, security, and privacy (official docs)"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every week the Bot pulls Google Ads experiment data and scores each creative concept on spend, CTR, CVR, CPA and ROAS, recommending scale, cut, keep testing or investigate. It never changes ads, bids or budgets.**
+
+## When to use it
+
+- You test several ad concepts and build the weekly table by hand
+- You want a fixed-format review the team reads every week
+
+## Before you start
+
+- Google Ads access, ideally a read-only or analyst account.
+- Optional: the Slack plugin to post the scoreboard to your ads channel.
+
+## Steps
+
+1. Run it once and check the numbers against the dashboard.
+2. Agree on the "too few conversions" threshold.
+3. Create a routine for Mondays at 10:00.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="google-ads-scoreboard">
+
+```text
+Every Monday at 10:00, pull the last 7 days of Google Ads data grouped by concept or experiment:
+- For each: spend, impressions, CTR, CVR, CPA, ROAS, versus last week
+- For each, recommend scale / cut / keep testing / investigate, with the reason
+- Mark groups with too little data (for example fewer than <10> conversions) as "not enough data" with no conclusion
+Show me the table first; post it to Slack <#ads> after I confirm.
+Do not change any ad, bid, budget or delivery status.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- From the official marketing guide: people approve spend and live account changes; start with low-risk permissions and widen them after delivered work.
+- A read-only account rules out accidental edits.
+
+## Notes and pitfalls
+
+- This is the Marketing Analyst routine from the official marketing guide: a scoreboard by concept covering spend, CTR, CVR, CPA and ROAS with a recommendation.
+- ROAS is only as good as conversion tracking; when numbers look off, check tracking first.

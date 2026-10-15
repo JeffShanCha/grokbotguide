@@ -1,0 +1,63 @@
+---
+title: "Grok Bot × your phone: brief your Bot by voice and send it photos on the go"
+description: "Away from your desk: share photos from your gallery, start a voice chat to assign work, and handle approvals from notifications."
+sidebar:
+  order: 21
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["iPhone", "Android"]
+sources:
+  - title: "Grok Bot for Mobile (official docs)"
+    url: https://docs.x.ai/grok-bot/mobile
+  - title: "Message and collaborate (official docs)"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Away from your desk, share from your iPhone gallery or any app straight to a Bot, start a voice chat to hand off work, and answer questions and approvals from notifications.**
+
+## When to use it
+
+- An idea strikes on your commute and you want to hand it off now
+- You snapped an invoice, a whiteboard or a screenshot for the Bot to handle
+
+## Before you start
+
+- An iPhone on iOS 18 or later, or Android 9 or later.
+- Notifications on, so you hear about results, questions and approvals.
+
+## Steps
+
+1. Share: in the iPhone share sheet choose Grok Bot, pick a chat, choose Attach, add a note and send.
+2. Voice: with an empty composer, choose Start voice chat and talk it through.
+3. Drafts: emails or Slack messages the Bot prepares appear as cards with Send Email or Discard.
+4. Take over: for a two-factor code, open the computer view, take over and choose I’m done.
+5. Routines: check run history on the Bot’s profile and use Active to pause or resume.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="mobile-voice">
+
+```text
+(voice) Add the invoice photo I just took to the "Invoices" sheet; mark it "check" if the amount is unclear.
+(voice) Tomorrow morning’s meeting moved to the afternoon; rerun my meeting briefing.
+(voice) List every email from today that needs my reply and read them to me.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Check recipients and body before tapping Send Email on your phone.
+
+## Notes and pitfalls
+
+- You cannot edit a routine’s schedule or instruction, or test a routine, on mobile; use the desktop app.
+- On Android, the share sheet accepts text only for now.
+- Teach a task and some advanced desktop controls are not available on mobile.

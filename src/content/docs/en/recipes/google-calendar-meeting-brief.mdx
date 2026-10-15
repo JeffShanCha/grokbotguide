@@ -1,0 +1,71 @@
+---
+title: "Grok Bot × Google Calendar: a briefing for tomorrow’s meetings, every night"
+description: "Each night, read tomorrow’s calendar, add context and prep questions to every meeting, and flag meetings with no agenda or conflicts."
+sidebar:
+  order: 3
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Google Calendar", "Gmail"]
+sources:
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Grok Bot setup guide (Wright Mode)"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "8 Grok Bot routines I use to automate my business (Prompt Warrior)"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Skills and routines (official docs)"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Every evening the Bot reads tomorrow’s calendar, adds context and prep questions to each meeting, and flags meetings with no agenda or a conflict.**
+
+## When to use it
+
+- Back-to-back meetings where you forget what was said last time
+- External customer calls you want to prepare for
+- Invitations you keep forgetting to answer
+
+## Before you start
+
+- Add the Google Calendar plugin. The Cursor Help Center says it can read calendars, create and update events, check free time and respond to invitations; it cannot change Google Meet settings or add a Zoom link.
+- Optional: the Gmail plugin, to find email threads related to each meeting.
+
+## Steps
+
+1. Create a Bot such as "Meeting Secretary", send it the prompt below and run it once for tomorrow.
+2. Check that the context is accurate and that external news comes with links.
+3. Save it as a skill and create a routine for weekdays at 21:00 in your time zone.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="google-calendar-meeting-brief">
+
+```text
+Every weekday at 9 pm, prepare my briefing for tomorrow’s meetings:
+1. List every meeting on tomorrow’s calendar (times in America/New_York)
+2. For each: who attends, what the last related email or meeting said, what I need to prepare
+3. Flag separately: meetings with no agenda, conflicts, invitations I have not answered
+4. For external customer meetings, search for recent public news about their company, with links
+Do not accept, decline or change any meeting; do not message anyone.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Set accepting or declining invitations, rescheduling and sending invitations to Ask first in Auto Review.
+- Send the briefing to you only.
+
+## Notes and pitfalls
+
+- The plugin only sees calendars the authorized account can see.
+- Paste Zoom links into the location or description yourself. The Help Center also notes that authorizing the Zoom plugin from the desktop app fails with error 4700, with no workaround yet.
+- Requiring links for external news keeps the Bot from making things up.
+- In sales, borrow Prompt Warrior’s routine: before each sales call, the Bot researches the prospect and returns a fit assessment and suggested questions.

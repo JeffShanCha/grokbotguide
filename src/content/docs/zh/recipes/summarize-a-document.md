@@ -1,11 +1,12 @@
 ---
-title: 零风险上手：让 Bot 总结一份文档
-description: 不需要连接任何应用，也不需要登录。最适合第一次用 Grok Bot 时验证效果。
+title: 'Grok Bot × 文档：零风险上手，让 Bot 总结一份长文件'
+description: '不需要连接任何应用，也不需要登录。最适合第一次用 Grok Bot 时验证效果。'
 sidebar:
   order: 1
 grade: official
 needs_testing: true
 author: JeffShanCha
+role: assistant
 difficulty: beginner
 apps: [文件上传]
 sources:

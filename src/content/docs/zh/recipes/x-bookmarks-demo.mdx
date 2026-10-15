@@ -1,0 +1,70 @@
+---
+title: "Grok Bot × X 书签 + Cursor：每个工作日挑一个新技术做成 Demo"
+description: "Bot 每天从你的 X 书签里挑一个值得做 Demo 的技术，写好原型需求，你点头后交给 Cursor 云端 Agent 实现。"
+sidebar:
+  order: 9
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+apps: ["X", "Cursor", "GitHub"]
+sources:
+  - title: "Grok Bot 101（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Grok Bot for Engineering（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "Files and results（官方文档）"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**你随手收藏的技术帖，交给 Bot 每个工作日挑一个最值得做 Demo 的，写好原型需求等你点头，再交给 Cursor 云端 Agent 写代码，最后给你截图和 PR。**
+
+## 适合谁
+
+- 书签越存越多，从来没时间试
+- 做技术内容或开发者关系，需要稳定产出 Demo
+- 想让「看到」到「做出来」之间少一步
+
+## 准备
+
+- X for Grok Bot 插件，用来读书签。
+- Cursor 账号，用来启动云端 Agent。
+- 一个专门放 Demo 的 GitHub 仓库，不要用生产仓库。
+
+## 步骤
+
+1. 把下面这段写进 Bot 的描述（Description），这样它每次都按这个规则做。
+2. 每个工作日它从书签里挑一个技术，写好原型需求发给你。
+3. 你回复「做」之后，它启动 Cursor 云端 Agent。
+4. 完成后，Bot 会把 Agent 报告里的截图、视频等文件附在回复里，连同 PR 链接一起给你。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="x-bookmarks-demo">
+
+```text
+你是我的技术侦察兵。每个工作日早上 9 点：
+1. 看我 X 上的书签，挑一个最值得做 Demo 的新技术（新库、新 API、新模型能力），说明理由
+2. 写一份原型需求：做什么、用什么技术、做到什么程度算完成、需要什么截图或录屏作为证明
+3. 把需求发给我，等我回复「做」之后，再启动一个 Cursor 云端 Agent 在 <demo 仓库> 里实现
+4. 完成后把截图或录屏和 PR 链接发给我
+没有我的确认，不要启动任何 Agent，不要合并 PR。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 启动 Agent 前必须等你确认，因为它会消耗不少用量。
+- PR 只开不合并。
+
+## 注意事项
+
+- 这是官方 Grok Bot 101 指南里的真实用法（DevRel 侦察兵）。
+- 书签里的视频帖，Bot 可能只能读到文字部分。
+- 官方工程指南的经验：给 Agent 的需求里要写清「拿什么证明做完了」，比如修改前后的截图。

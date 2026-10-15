@@ -1,0 +1,61 @@
+---
+title: "Grok Bot × 二手平台：帮你盯想买的二手好货"
+description: "定时搜 Facebook Marketplace、Craigslist 等平台，出现符合条件的商品就通知你，不联系卖家、不付款。"
+sidebar:
+  order: 22
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Facebook Marketplace", "Craigslist", "浏览器"]
+sources:
+  - title: "Grok Bot 101（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**让 Bot 定时搜 Facebook Marketplace、Craigslist 或你已经登录的二手平台，出现符合条件的商品就通知你，并附上它对价格的判断。**
+
+## 适合谁
+
+- 想买某件二手好货，但不想每天刷
+- 在海外生活，常用这些二手平台
+
+## 准备
+
+- 需要登录的平台（比如 Facebook），先在 Bot 的浏览器里用 Take over 登录一次。
+
+## 步骤
+
+1. 把条件发给 Bot，先手动搜一次看结果是否靠谱。
+2. 调整条件后建 Routine：每天两次。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="marketplace-watch">
+
+```text
+帮我盯二手 <意式咖啡机>：
+- 平台：Facebook Marketplace、Craigslist（<城市>）
+- 条件：品牌 <A / B>，价格不超过 <$300>，描述写明成色 good 以上，<30> 英里以内
+每天 9:00 和 18:00 各搜一次，新出现的符合条件的商品发给我：标题、价格、距离、链接、你的判断（划不划算、要问卖家什么问题）。
+已经发过的不要重复发。不要联系卖家，不要出价，不要付款。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 联系卖家、出价、付款都由你来。
+
+## 注意事项
+
+- 这是官方 Grok Bot 101 指南作者的真实用法：盯二手咖啡机，拿不准时问一下他的「幕僚长」Bot；还在已登录的 Facebook 上找一种稀有绿植。
+- 有些平台在海外云电脑上可能打不开或频繁要求验证，先试几天再定。
+- 频率不要太高，每次运行都消耗用量。

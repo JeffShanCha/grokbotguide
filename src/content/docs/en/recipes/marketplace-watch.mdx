@@ -1,0 +1,61 @@
+---
+title: "Grok Bot × secondhand marketplaces: watch for the deal you want"
+description: "Search Facebook Marketplace, Craigslist and similar sites on a schedule and notify you of matches; never contact sellers or pay."
+sidebar:
+  order: 22
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Facebook Marketplace", "Craigslist", "Browser"]
+sources:
+  - title: "Grok Bot 101 (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Use the computer and apps (official docs)"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**The Bot searches Facebook Marketplace, Craigslist or any marketplace you are signed in to on a schedule, and tells you about matching listings with its take on the price.**
+
+## When to use it
+
+- You want a particular secondhand item but do not want to check every day
+- You use these marketplaces regularly
+
+## Before you start
+
+- For sites that need a login (such as Facebook), sign in once in the Bot’s browser using Take over.
+
+## Steps
+
+1. Send the Bot your criteria and run one search by hand to check the results.
+2. Adjust, then create a routine that runs twice a day.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="marketplace-watch">
+
+```text
+Watch for a used <espresso machine>:
+- Sites: Facebook Marketplace, Craigslist (<city>)
+- Criteria: brand <A / B>, at most <$300>, condition described as good or better, within <30> miles
+Search at 9:00 and 18:00 every day and send me new matches: title, price, distance, link and your take (good deal or not, what to ask the seller).
+Do not resend listings you already sent. Do not contact sellers, make offers or pay.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- You contact sellers, make offers and pay.
+
+## Notes and pitfalls
+
+- This is a real workflow from the author of the official Grok Bot 101 guide: watching for an espresso machine, checking with a Chief of Staff Bot for a judgment call, and hunting for a rare plant on an already signed-in Facebook.
+- Some sites may not load or may keep asking for verification from a cloud computer; try it for a few days first.
+- Do not run it too often; every run uses usage.

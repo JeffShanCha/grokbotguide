@@ -1,0 +1,69 @@
+---
+title: "Grok Bot × Gmail + Google Sheets：每月自动把发票整理成表"
+description: "每月初从邮箱找出上个月的发票和收据，保存附件，把金额、供应商、日期汇总进表格。"
+sidebar:
+  order: 7
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: finance
+difficulty: beginner
+apps: ["Gmail", "Google Sheets", "Google Drive"]
+sources:
+  - title: "I Built a Seven Grok Bot AI Team（The AI Maker）"
+    url: https://aimaker.substack.com/p/grok-bot-ai-agent-team
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**每月 1 号让 Bot 从邮箱里找出上个月的发票和收据，保存附件，再把金额、供应商、日期汇总成一张表，报税和记账时直接用。**
+
+## 适合谁
+
+- 订阅了一堆 SaaS，发票散落在邮箱里
+- 每月要给会计或自己记账
+- 想知道每个月在工具上花了多少钱
+
+## 准备
+
+- Gmail、Google Sheets 插件，以及一张「发票汇总」表。
+- 官方帮助中心写的 Google Drive 插件只能搜索和读取文件，如果要把附件上传到 Drive，可能需要 Bot 用浏览器操作，或者你从对话里下载文件。
+
+## 步骤
+
+1. 先针对上个月手动跑一次，核对金额。
+2. 把识别不准的发票格式告诉 Bot，写成规则。
+3. 建 Routine：每月 1 号 10:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="gmail-drive-invoices">
+
+```text
+每月 1 号上午 10 点：
+1. 在 Gmail 里搜索上个月收到的发票、收据、账单邮件（关键词：invoice、receipt、发票、账单）
+2. 把 PDF 附件保存到 /workspace/invoices/<年-月>/，文件名格式：日期_供应商_金额.pdf
+3. 在 Google 表格「<发票汇总>」里每张发票追加一行：日期、供应商、金额、币种、邮件链接、文件名
+4. 金额或币种看不清的，标「需核对」
+最后告诉我本月合计和需核对的条数。不要回复、转发或删除任何邮件，不要付款。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 付款和回复供应商一律禁止。
+- 表格只追加，不改历史。
+
+## 注意事项
+
+- The AI Maker 的「Invoice Hunter」Bot 就是做这件事，但文章没有给出实际效果数据。
+- 官方文档提醒，/workspace 以外的文件在重置电脑时可能丢失，要保存的东西放在 /workspace 里。
+- 扫描件、图片发票可能识别出错，所以要有「需核对」这一栏。
+- 发票属于财务数据，共享电脑上你所有的 Bot 都能看到 /workspace 里的文件。

@@ -1,0 +1,73 @@
+---
+title: "Grok Bot × Cursor 云端 Agent：调研交给 Bot，写代码交给 Agent"
+description: "Grok Bot 收集上下文、写清需求和验收标准，再启动 Cursor 云端 Agent 写代码开 PR，并盯着进度。"
+sidebar:
+  order: 13
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: advanced
+apps: ["Cursor", "GitHub", "Slack", "Notion"]
+sources:
+  - title: "Grok Bot 101（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Grok Bot for Engineering（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "A deep dive into Grok Bot（Flavio Copes）"
+    url: https://flaviocopes.com/grok-bot/
+  - title: "Files and results（官方文档）"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Grok Bot 负责收集上下文、写清楚需求和验收标准，再启动 Cursor 云端 Agent 写代码开 PR；它全程盯着进度，跑偏了就追问或打断。**
+
+## 适合谁
+
+- 需求散落在 Slack、Notion 和代码里，每次给 AI 写提示词都要先查半天
+- 想让写代码的 Agent 上下文更干净
+- 有一批重复的小改动，比如更新过时的文档
+
+## 准备
+
+- Cursor 账号，仓库已连接 Cursor。
+- 可选：Slack、Notion、GitHub 插件，让 Bot 能查上下文。
+
+## 步骤
+
+1. 把任务用一句话告诉 Bot。
+2. Bot 先查上下文并汇总给你。
+3. Bot 写好给 Agent 的提示词，你确认后启动。
+4. Bot 看 Agent 的进展记录，必要时追问或打断。
+5. 完成后，Bot 把 Agent 报告里的截图和 PR 链接附在回复里。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="cursor-cloud-agent">
+
+```text
+任务：<一句话描述，例如：把定价页的年付折扣从 15% 改成 20%，并在 FAQ 里加一条说明>
+请你：
+1. 先查清上下文：相关代码在哪、Notion 里的需求文档、Slack 里最近的相关讨论，汇总给我
+2. 写一份给 Cursor 云端 Agent 的提示词：改什么、不改什么、验收标准，要求附上修改前后的截图
+3. 我确认后再启动 Agent，过程中看它的进展，跑偏了就追问或打断
+4. 完成后把 PR 链接和截图发我，PR 不要合并
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 合并 PR 由你来做。
+- 生产仓库起步只给开 PR 的权限。
+
+## 注意事项
+
+- 官方 101 指南的作者就是这样用：一个 Bot 收集上下文、写干净的提示词，交给云端 Agent 构建，研究过程不进入写代码的上下文。
+- Flavio Copes 用每日 Routine 挑出 10 篇版本信息过时的文章交给云端 Agent 开 PR，两天合并了 3 个。
+- 官方工程指南提醒，每 5 分钟检查一次进展这类高频监控 Routine 很费用量。
+- 要给 Agent 完整的验证手段，比如能启动开发环境、能截图。

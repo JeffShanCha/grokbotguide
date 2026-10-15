@@ -1,0 +1,311 @@
+{
+  "id": "2026-10-15-recipes-sources",
+  "collected_at": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "discovery": [
+    "Official Grok Bot guides index and Cursor Help Center plugin page",
+    "Independent hands-on write-ups cited by the new recipe pages (Flavio Copes, Prompt Warrior, The AI Maker, Charlie Automates, Wright Mode)",
+    "Vendor roundup: Composio"
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "xai-guides-index",
+        "url": "https://x.ai/bot/guides",
+        "title": "Grok Bot Guides",
+        "author": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced",
+          "recipes"
+        ],
+        "apps": [],
+        "tags": [
+          "guides",
+          "use-cases"
+        ],
+        "summary_zh": "官方使用指南合集：营销、销售、客服、招聘、工程、法务、产品经理等岗位怎么用一组 Bot 干活，附真实流程和放权经验。",
+        "summary_en": "The official guide collection on how marketing, sales, support, recruiting, engineering, legal and PM teams run groups of Bots, with real workflows.",
+        "verification_note_zh": "已阅读官方页面原文。",
+        "verification_note_en": "Read the official page."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "official",
+        "id": "cursor-help-connect-plugins",
+        "url": "https://cursor.com/help/grok-bot/connect-plugins",
+        "title": "Connect plugins",
+        "author": "Cursor",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Google Sheets",
+          "Google Drive",
+          "Slack",
+          "Notion",
+          "Zoom"
+        ],
+        "tags": [
+          "plugins",
+          "connectors"
+        ],
+        "summary_zh": "官方帮助中心的插件说明：Gmail、Google Calendar、Sheets、Drive、Slack 等插件能做什么、不能做什么，以及授权失败时怎么处理。",
+        "summary_en": "The Help Center page on plugins such as Gmail, Google Calendar, Sheets, Drive and Slack, what each can and cannot do, and how to fix sign-in problems.",
+        "verification_note_zh": "已阅读官方页面原文。",
+        "verification_note_en": "Read the official page."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "flavio-copes-deep-dive",
+        "url": "https://flaviocopes.com/grok-bot/",
+        "title": "A deep dive into Grok Bot",
+        "author": "Flavio Copes",
+        "author_url": "https://flaviocopes.com",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-08-22",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Cursor",
+          "GitHub",
+          "Cloudflare",
+          "Plausible"
+        ],
+        "tags": [
+          "routines",
+          "cursor",
+          "review"
+        ],
+        "summary_zh": "独立开发者的长篇实测：每天巡检博客的 Routine、交给 Cursor 云端 Agent 批量更新旧文章，以及用量消耗和浏览器自动化的坑。",
+        "summary_en": "A long hands-on review from an indie developer, covering a daily blog check routine, batch updates through Cursor cloud agents, and lessons on usage and browser automation.",
+        "verification_note_zh": "已阅读原作者的文章和流程说明，未复现工作流。",
+        "verification_note_en": "Read the author's article and workflow description; the workflow was not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "prompt-warrior-8-routines",
+        "url": "https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business",
+        "title": "8 Grok Bot routines I use to automate my business",
+        "author": "Prompt Warrior",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-08-28",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "YouTube",
+          "Notion",
+          "Google Sheets"
+        ],
+        "tags": [
+          "routines",
+          "creators"
+        ],
+        "summary_zh": "内容创作者的 8 个日常 Routine：盯竞品 YouTube、统计全平台粉丝、复盘销售电话、通话前研究客户、Bot 团队站会等。",
+        "summary_en": "Eight daily routines from a creator, including competitor YouTube tracking, cross-platform follower counts, sales call reviews, prospect research and a Bot team standup.",
+        "verification_note_zh": "已阅读原作者的文章和流程说明，未复现工作流。",
+        "verification_note_en": "Read the author's article and workflow description; the workflow was not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "aimaker-seven-bot-team",
+        "url": "https://aimaker.substack.com/p/grok-bot-ai-agent-team",
+        "title": "I Built a Seven Grok Bot AI Team I Can Run From My Phone",
+        "author": "The AI Maker",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-09-06",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Todoist",
+          "Notion",
+          "Typefully",
+          "Google Drive"
+        ],
+        "tags": [
+          "bot-team",
+          "creators"
+        ],
+        "summary_zh": "七个 Bot 组成的内容团队：社媒改写、幕僚长、发票整理、选题研究、SEO 周报等，并说明各自接了哪些工具。",
+        "summary_en": "A seven-Bot content team covering social repurposing, a chief of staff, invoice hunting, topic research and weekly SEO reports, with the tools each one uses.",
+        "verification_note_zh": "已阅读原作者的文章和流程说明，未复现工作流。",
+        "verification_note_en": "Read the author's article and workflow description; the workflow was not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "charlie-automates-email",
+        "url": "https://charlieautomates.com/blog/grok-bot-tutorial-ai-email-management/",
+        "title": "Grok Bot Tutorial: AI Email Management That Runs When Your Laptop Is Off",
+        "author": "Charlie Automates",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-09-10",
+        "categories": [
+          "recipes"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Slack"
+        ],
+        "tags": [
+          "gmail",
+          "routines"
+        ],
+        "summary_zh": "用 Gmail 插件和浏览器操作搭邮件管家：按标签分拣、建过滤器、早上 7 点把简报发到 Slack，以及头一周只出草稿的经验。",
+        "summary_en": "Building an inbox manager with the Gmail plugin and browser automation: labels, filters, a 7 am brief in Slack, and why to stay drafts-only for the first week.",
+        "verification_note_zh": "已阅读原作者的文章和流程说明，未复现工作流。",
+        "verification_note_en": "Read the author's article and workflow description; the workflow was not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "wright-mode-setup",
+        "url": "https://www.wrightmode.com/blog/grok-bot-setup-guide",
+        "title": "Grok Bot setup guide: connectors, bot teams and routines",
+        "author": "Wright Mode",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-09-17",
+        "categories": [
+          "start",
+          "bots"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Slack",
+          "Kit"
+        ],
+        "tags": [
+          "setup",
+          "bot-team"
+        ],
+        "summary_zh": "社群运营者的 Bot 团队搭法：用连接器开关关掉发送权限、中层 Bot 汇报结构、邮件和日历 Routine，以及记忆不可查看等局限。",
+        "summary_en": "How a community operator set up a Bot team: turning off send permissions in connector toggles, a middle-manager structure, email and calendar routines, and limits such as uninspectable memory.",
+        "verification_note_zh": "已阅读原作者的文章和流程说明，未复现工作流。",
+        "verification_note_en": "Read the author's article and workflow description; the workflow was not reproduced."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "实战案例页引用的来源；已打开原文核对，摘要只覆盖原文内容。",
+      "relevance": "直接涉及 Grok Bot 的插件、Routine 或具体工作流。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-15",
+        "checked_at": "2026-10-15",
+        "status": "alive",
+        "evidence": "editorial",
+        "id": "composio-best-plugins",
+        "url": "https://composio.dev/content/best-grok-bot-plugins",
+        "title": "10 Best Grok Bot Plugins & Integrations to Use in 2026",
+        "author": "Composio",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-08-31",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Composio",
+          "Gmail",
+          "Slack",
+          "Notion",
+          "GitHub",
+          "Google Calendar",
+          "Firecrawl",
+          "HubSpot",
+          "Canva",
+          "Sentry"
+        ],
+        "tags": [
+          "plugins"
+        ],
+        "summary_zh": "十个常用插件盘点：Gmail、Slack、Notion、GitHub、Google Calendar、Firecrawl、HubSpot、Canva、Sentry 和 Composio 自家插件。由 Composio 发布。",
+        "summary_en": "A roundup of ten plugins: Gmail, Slack, Notion, GitHub, Google Calendar, Firecrawl, HubSpot, Canva, Sentry and Composio’s own. Published by Composio.",
+        "verification_note_zh": "插件厂商发布的推荐文章，已阅读原文，未安装或测试文中插件。",
+        "verification_note_en": "A roundup published by a plugin vendor; read in full, plugins not installed or tested."
+      }
+    }
+  ]
+}

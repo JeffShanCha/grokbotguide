@@ -1,0 +1,66 @@
+---
+title: "Grok Bot × GitHub + Notion：定时盯一遍所有 PR 的状态"
+description: "用 Notion 看板跟踪 PR，Bot 定时检查评审意见、CI 失败和合并冲突，有问题推回「进行中」。"
+sidebar:
+  order: 14
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: advanced
+apps: ["GitHub", "Notion"]
+sources:
+  - title: "Grok Bot for Engineering（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "10 Best Grok Bot Plugins & Integrations（Composio）"
+    url: https://composio.dev/content/best-grok-bot-plugins
+  - title: "A deep dive into Grok Bot（Flavio Copes）"
+    url: https://flaviocopes.com/grok-bot/
+  - title: "Skills and routines（官方文档）"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**用一个 Notion 看板跟踪所有 PR，Bot 定时检查评审意见、安全扫描、CI 失败和合并冲突：有问题就推回「进行中」并通知负责人，全部通过才标「待评审」。**
+
+## 适合谁
+
+- 同时有很多 PR（尤其是 AI Agent 开的），盯不过来
+- CI 挂了经常过很久才发现
+
+## 准备
+
+- GitHub 插件。Composio 的插件盘点里写到它覆盖仓库、Issue、PR、代码搜索和 GitHub Actions。
+- Notion 数据库，字段：PR 链接、状态（进行中 / 待评审 / 已合并）、负责人或负责的 Agent。
+
+## 步骤
+
+1. 把现有 PR 录进看板。
+2. 手动跑一次检查。
+3. 建 Routine，比如每 30 分钟一次（官方工程指南的频率）。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="github-pr-watch">
+
+```text
+每 30 分钟检查一次 Notion 数据库「<PR 看板>」里状态为「进行中」或「待评审」的每一行：
+- 打开对应的 GitHub PR，看有没有新的评审意见、安全扫描结果、CI 失败、合并冲突
+- 有问题：在这一行写明问题和链接，状态改回「进行中」，并通知负责的 Agent 或我
+- 全部通过：状态改为「待评审」，写一段评审摘要发给我
+不要合并任何 PR，不要推送代码，不要关闭 PR。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 官方工程指南里，低风险且评审信心高的 PR 会自动合并。起步阶段建议不要开放这一步。
+
+## 注意事项
+
+- 频率换算成次数：30 分钟一次就是每天 48 次，有没有变化都消耗用量。Flavio Copes 提醒过，15 分钟一次就是每天 96 次。
+- Routine 定时的最小间隔是 5 分钟，每个 Routine 只保留最近 20 次运行记录。

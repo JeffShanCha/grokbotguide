@@ -1,0 +1,69 @@
+---
+title: "Grok Bot × 独立站：每天早上 8 点自动巡检网站"
+description: "每天打开统计后台、部署记录、GitHub 和线上页面，确认内容已上线、流量是否异常，写成日报。"
+sidebar:
+  order: 15
+grade: community
+needs_testing: true
+author: JeffShanCha
+role: operations
+difficulty: intermediate
+apps: ["Cloudflare", "GitHub", "统计后台", "浏览器"]
+sources:
+  - title: "A deep dive into Grok Bot（Flavio Copes）"
+    url: https://flaviocopes.com/grok-bot/
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**每天早上让 Bot 打开统计后台、部署记录、GitHub 仓库和线上页面，确认昨天的内容已上线、流量有没有异常，写成一份 Markdown 日报。**
+
+## 适合谁
+
+- 手上有好几个独立站，每天挨个看后台很费时间
+- 担心部署失败或页面挂了没人发现
+
+## 准备
+
+- 统计后台（Plausible、GA4 等）能在 Bot 的浏览器里登录，建议用只读成员账号。
+- 部署平台（如 Cloudflare）的登录，同样建议只读。
+- GitHub 插件。
+
+## 步骤
+
+1. 把站点地址和各个后台入口告诉 Bot，手动跑一次。
+2. 确认日报格式，特别是「未验证」的写法。
+3. 建 Routine：每天 8:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="website-daily-check">
+
+```text
+每天 8:00（Asia/Shanghai）巡检 <https://你的站点>：
+1. 部署：打开部署平台的部署记录，确认最近一次部署成功，记下时间
+2. 内容：确认昨天发布的文章能打开，并且出现在 sitemap 和 RSS 里
+3. 流量：打开统计后台，对比昨天和上周同一天的访问量，变化超过 30% 就标出来
+4. 仓库：列出 GitHub 上未合并的 PR 和失败的 Actions
+把结果写成 Markdown 日报保存到 /workspace/reports/<日期>.md，并在对话里发我摘要。
+任何一项打不开或需要验证，就在那一项写「未验证」和原因，不要用旧数据补。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 只读：不触发部署、不改设置、不合并 PR。
+- 后台账号权限越小越好。
+
+## 注意事项
+
+- 这是 Flavio Copes 的「Blog Pulse」Routine。他的统计后台被锁时，Bot 把这一项标成未验证，而不是用旧数据凑，这条规则一定要写进指令。
+- 云端 IP 可能被统计后台或部署平台的风控拦截，需要你 Take over 完成验证。
+- 日报要放在 /workspace 里，其他位置的文件在电脑重置时可能丢失。

@@ -1,0 +1,63 @@
+---
+title: "Grok Bot × 手机：出门在外语音派活、拍照交任务"
+description: "不在电脑前也能用：从相册分享给 Bot、开语音聊天交代任务、收到审批通知再处理。"
+sidebar:
+  order: 21
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["iPhone", "Android"]
+sources:
+  - title: "Grok Bot for Mobile（官方文档）"
+    url: https://docs.x.ai/grok-bot/mobile
+  - title: "Message and collaborate（官方文档）"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**不在电脑前也能用：在 iPhone 上从相册或其他应用直接分享给 Bot，开语音聊天交代任务，收到通知后处理问题和审批。**
+
+## 适合谁
+
+- 通勤、出差路上想到一件事，想马上交出去
+- 拍了发票、白板、截图，想直接让 Bot 处理
+
+## 准备
+
+- iPhone（iOS 18 或以上）或 Android（9 或以上）。
+- 打开通知，Bot 有结果、有问题、要审批时会提醒你。
+
+## 步骤
+
+1. 分享：在 iPhone 的系统分享菜单里选 Grok Bot，选一个对话，点 Attach，加一句说明再发送。
+2. 语音：输入框为空时点 Start voice chat，像打电话一样交代任务。
+3. 审草稿：Bot 准备好的邮件或 Slack 消息会以卡片出现，可以选 Send Email 或 Discard。
+4. 接管：需要两步验证码时，打开电脑视图接管，输完点 I’m done。
+5. Routine：在 Bot 资料页查看运行记录，用 Active 开关暂停或恢复。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="mobile-voice">
+
+```text
+（语音）帮我把刚才拍的这张发票照片记进「发票汇总」表，金额看不清就标需核对。
+（语音）明天上午的会改到下午了，帮我把会前简报重新跑一遍。
+（语音）把今天邮件里所有需要我回复的列出来，读给我听。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 在手机上点 Send Email 之前看清收件人和正文。
+
+## 注意事项
+
+- 手机上不能编辑 Routine 的时间表和指令，也不能测试 Routine，要回到桌面端。
+- Android 的分享菜单目前只支持文字。
+- 演示教学（Teach a task）等高级功能手机上没有。

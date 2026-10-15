@@ -24,6 +24,7 @@ Prefer not to use Git? [Submit here](/en/community/submit/). The form creates a 
 | Label | Meaning | Requirement |
 | --- | --- | --- |
 | From official docs | Based on docs.x.ai and other official sources | Every fact links to the official source |
+| From community reports | Someone else's published hands-on report (blog, video, X post) | Link and credit the original; upgraded to Community tested once reproduced |
 | Community tested | The author ran it | State the test date, plan tier and apps used |
 | Opinion / review | Personal judgment | Clearly marked as opinion |
 

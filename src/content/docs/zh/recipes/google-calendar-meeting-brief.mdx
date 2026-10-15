@@ -1,0 +1,71 @@
+---
+title: "Grok Bot × Google Calendar：每晚生成明天的会议简报"
+description: "每晚读一遍明天的日程，给每个会议配背景和要准备的问题，并标出没议程、有冲突的会。"
+sidebar:
+  order: 3
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Google Calendar", "Gmail"]
+sources:
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Grok Bot setup guide（Wright Mode）"
+    url: https://www.wrightmode.com/blog/grok-bot-setup-guide
+  - title: "8 Grok Bot routines I use to automate my business（Prompt Warrior）"
+    url: https://www.thepromptwarrior.com/p/8-grok-bot-routines-i-use-to-automate-my-business
+  - title: "Skills and routines（官方文档）"
+    url: https://docs.x.ai/grok-bot/skills-routines-and-automations
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Bot 每晚读一遍明天的日程，给每个会议配上背景资料和要准备的问题，并标出没有议程或时间冲突的会。**
+
+## 适合谁
+
+- 每天会议多，经常开到一半才想起上次聊了什么
+- 有外部客户会议，想提前了解对方
+- 经常漏回会议邀请
+
+## 准备
+
+- 添加 Google Calendar 插件。官方帮助中心写明它能读日历、建和改事件、查空闲、回复邀请；不能改 Google Meet 设置，也不能加 Zoom 链接。
+- 可选：Gmail 插件，用来找和会议相关的往来邮件。
+
+## 步骤
+
+1. 新建一个 Bot，比如「会议秘书」，把下面的指令发给它，先针对明天手动跑一次。
+2. 检查简报里的背景是否准确、外部新闻是否附了链接。
+3. 满意后存成 Skill，建 Routine：每个工作日 21:00，时区选你所在的时区。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="google-calendar-meeting-brief">
+
+```text
+每个工作日晚上 9 点，帮我准备明天的会议简报：
+1. 列出明天日历上的所有会议（时间按 Asia/Shanghai）
+2. 每个会议写：参会人是谁、上次相关的邮件或会议说了什么、我需要准备什么
+3. 单独标出：没有议程的会、时间冲突的会、我还没回复的邀请
+4. 外部客户的会，搜一下对方公司最近的公开新闻，附链接
+不要接受、拒绝或修改任何会议；不要给任何人发消息。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 接受或拒绝邀请、改时间、发邀请，都在 Auto Review 里设成 Ask first。
+- 简报只发给你自己。
+
+## 注意事项
+
+- 插件只能看到授权账号能看到的日历。
+- Zoom 链接要自己贴到地点或描述里。官方帮助中心还提到 Zoom 插件从桌面端授权会报错 4700，暂无解决办法。
+- 外部新闻要求附链接，避免 Bot 凭记忆编内容。
+- 做销售的可以照搬 Prompt Warrior 的做法：每通销售电话前，让 Bot 先研究对方公司，给出匹配度判断和建议提问。

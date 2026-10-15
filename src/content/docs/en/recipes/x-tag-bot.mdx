@@ -1,0 +1,65 @@
+---
+title: "Grok Bot × X: reply @bot to hand a thread to your Bot"
+description: "Reply \"@bot + a request\" on X and your main Bot picks it up on its cloud computer; results stay in the Grok Bot app."
+sidebar:
+  order: 8
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["X"]
+sources:
+  - title: "Tag @bot on X (official docs)"
+    url: https://docs.x.ai/grok-bot/tag-on-x
+  - title: "Use the computer and apps (official docs)"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**When a post or thread on X needs work, reply with "@bot" and a request. Your main Bot picks it up on its cloud computer, and the results stay in the Grok Bot app rather than on X.**
+
+## When to use it
+
+- A long thread you want boiled down
+- A new tool you want priced and reviewed
+- You do not want to switch apps and paste links
+
+## Before you start
+
+- On grok.com, go to Settings → Account and choose Connect next to X Account.
+- Get Grok Bot access on the same Grok account and create at least one Bot of your own. Bots shared with you cannot take tagged requests.
+- Optional: add the X for Grok Bot plugin so your Bot can search posts and read timelines, mentions, trends and bookmarks. @bot works without it.
+
+## Steps
+
+1. Reply to the post, tag @bot and write the request.
+2. @bot replies on X to confirm your main Bot has it.
+3. Open the Grok Bot app to follow the work. The first time, X tells you tagged requests start automatically and use your Grok Bot usage.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="x-tag-bot">
+
+```text
+@bot summarize this thread in 5 key points and send them to my Slack <#reading>
+@bot is this tool worth trying? Check its pricing page and user reviews and give me a comparison table
+@bot open every link in this post and write a one-line summary of each
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- @bot only posts a confirmation on X; the results are not posted publicly.
+- Tagged requests start on their own, so state limits in the request, such as "summarize only, do not reply to anyone".
+
+## Notes and pitfalls
+
+- Regions: tagging is not yet available for X accounts based in the EU, the UK, Australia, Iceland, Liechtenstein or Norway. It uses the country X has on record; your location and VPN make no difference. Accounts listed only under a broad region or with no country are not supported yet.
+- Posts with a video or GIF in the post, the post it replies to or a quoted post do not go through, and neither do posts that also tag @grok.
+- Replying in a thread that already tags @bot does not count unless you tag @bot yourself.
+- @bot does not respond once your weekly usage is used up.

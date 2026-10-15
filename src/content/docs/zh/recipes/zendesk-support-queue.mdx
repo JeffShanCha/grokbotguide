@@ -1,0 +1,71 @@
+---
+title: "Grok Bot × Zendesk：登录一次，让 Bot 帮你处理客服队列"
+description: "没有插件的工单系统，让 Bot 在云电脑浏览器里登录后台，逐个打标签、起草回复、把 Bug 转给复现 Bot。"
+sidebar:
+  order: 17
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: support
+difficulty: intermediate
+apps: ["Zendesk", "浏览器"]
+sources:
+  - title: "Grok Bot 官网"
+    url: https://x.ai/bot
+  - title: "Grok Bot for Support（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-support
+  - title: "Use the computer and apps（官方文档）"
+    url: https://docs.x.ai/grok-bot/computer-and-apps
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**没有现成插件的工单系统，可以让 Bot 在云电脑的浏览器里登录后台，像客服一样逐个看工单、打标签、起草回复，把 Bug 交给复现 Bot。**
+
+## 适合谁
+
+- 客服工单越来越多，大部分问题帮助中心里都有答案
+- 想先让 Bot 做分拣和起草，人只处理难的
+
+## 准备
+
+- Zendesk 或其他工单系统的客服账号，建议单独开一个权限受限的账号。
+- 帮助中心文档链接。
+- 可选：角色库里的「Bug 复现员」。
+
+## 步骤
+
+1. 让 Bot 打开 Zendesk 后台，它要求登录时选 Take over，自己输入账号密码，完成后点 I’m done。
+2. 登录状态会保存在云电脑上，之后不用每次登录。
+3. 先让它处理 10 张工单，对照你的判断，再放开数量。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="zendesk-support-queue">
+
+```text
+打开 Zendesk 后台（需要登录时停下来让我接管），处理「未分配」队列里的工单：
+1. 每张工单按主题打标签：<账单> <Bug> <功能建议> <账号问题> <其他>
+2. 能用帮助中心文档回答的，起草回复并附上引用的文档链接，不要提交
+3. 标为 Bug 的，整理复现线索，交给「Bug 复现员」
+4. 涉及退款、取消订阅、大客户的，不要起草回复，直接列给我
+最后给我一张表：工单号、标签、处理建议、草稿是否已写好。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 工单回复不提交，你审过再发。
+- 退款、取消订阅、大客户一律升级给人。
+
+## 注意事项
+
+- Grok Bot 官网就用「登录 Zendesk 处理客服队列」做示例。
+- 登录状态存在共享电脑里，你所有的 Bot 都能用这个会话，所以要么用受限账号，要么别让别的 Bot 碰客服。
+- 有些站点会话会过期或要求重新验证，Bot 应该停下来通知你，而不是想办法绕过。
+- 有插件的系统优先用插件，官方文档说插件通常更稳定。

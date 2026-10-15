@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Google Docs: refine positioning through doc comments"
+description: "A research Bot reads competitor sites for gaps, a marketing Bot writes a positioning brief in Google Docs, and it revises from your comments."
+sidebar:
+  order: 5
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+apps: ["Google Docs", "Browser"]
+sources:
+  - title: "Grok Bot for Marketing (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-marketing
+  - title: "Files and results (official docs)"
+    url: https://docs.x.ai/grok-bot/files-and-results
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**One Bot reads your site and competitors’ sites for gaps; another turns the findings into a positioning brief in Google Docs. You comment in the doc and the Bot revises.**
+
+## When to use it
+
+- Writing positioning and site copy before a launch
+- Finding a selling point competitors do not own
+- You prefer editing in a doc to pasting back and forth in chat
+
+## Before you start
+
+- A Google account plugin. Google Docs is in the Help Center’s sign-in list.
+- Two Bots: a Market Researcher that reads sites and a Product Marketer that writes the brief, the split used in the official marketing guide.
+
+## Steps
+
+1. Have the Market Researcher read your site and competitor product pages in its own browser and list the gaps.
+2. The Product Marketer takes that context and drafts a positioning brief in Google Docs: one-liner, value points, messaging per channel.
+3. Comment in the doc and ask the Bot to revise the same doc.
+4. Once positioning is settled, have it outline the landing page and draft search ad variants for testing.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="google-docs-positioning-brief">
+
+```text
+Read our site <https://...> and these three competitors’ product pages: <A> <B> <C>.
+Find what they all emphasize that we have not claimed yet, and list 3 differences we could own.
+Then create a Google Doc "<Product> positioning brief": a one-liner, 3 value points, and how to say it on the site, X and LinkedIn.
+Send me the link when done. I will comment in the doc; revise the same doc from my comments instead of creating new ones.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Start with doc editing only. Grant ads write access or production site access after it has delivered a few times, as the official guide suggests.
+- People approve spend and live account changes.
+
+## Notes and pitfalls
+
+- Give each Bot a narrow job; generalist chats get bloated, per the official marketing guide.
+- Connect only the tools each job needs.
+- Ask it to revise the existing doc rather than creating copies, as the official Files docs recommend.

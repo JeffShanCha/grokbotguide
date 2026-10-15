@@ -1,0 +1,73 @@
+---
+title: "Grok Bot × Cursor cloud agents: the Bot researches, the agent codes"
+description: "Grok Bot gathers context and writes the spec and acceptance criteria, starts a Cursor cloud agent to code and open a PR, and watches the run."
+sidebar:
+  order: 13
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: engineering
+difficulty: advanced
+apps: ["Cursor", "GitHub", "Slack", "Notion"]
+sources:
+  - title: "Grok Bot 101 (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Grok Bot for Engineering (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-engineering
+  - title: "A deep dive into Grok Bot (Flavio Copes)"
+    url: https://flaviocopes.com/grok-bot/
+  - title: "Files and results (official docs)"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Grok Bot gathers context and writes the spec and acceptance criteria, then starts a Cursor cloud agent to write code and open a PR. It watches the run and follows up or interrupts if the agent drifts.**
+
+## When to use it
+
+- Requirements live across Slack, Notion and code, and writing each prompt takes digging
+- You want the coding agent’s context kept clean
+- You have a batch of repetitive small changes, such as refreshing outdated docs
+
+## Before you start
+
+- A Cursor account with the repository connected.
+- Optional: Slack, Notion and GitHub plugins so the Bot can look up context.
+
+## Steps
+
+1. Describe the task to the Bot in one sentence.
+2. The Bot gathers context and summarizes it for you.
+3. The Bot writes the agent prompt; you confirm and it starts the agent.
+4. The Bot reads the agent’s transcript and follows up or interrupts when needed.
+5. When done, the Bot attaches the agent’s screenshots and the PR link.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="cursor-cloud-agent">
+
+```text
+Task: <one sentence, for example: change the annual discount on the pricing page from 15% to 20% and add an FAQ entry about it>
+Please:
+1. Gather context first: where the code lives, the spec in Notion, recent related Slack discussion; summarize it for me
+2. Write a prompt for a Cursor cloud agent: what to change, what not to change, acceptance criteria, and before-and-after screenshots
+3. Start the agent only after I confirm; watch its progress and follow up or interrupt if it drifts
+4. When done, send me the PR link and screenshots; do not merge
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- You merge PRs.
+- Start with PR-only access to production repositories.
+
+## Notes and pitfalls
+
+- The author of the official 101 guide works this way: one Bot gathers context and writes a clean prompt for a cloud agent, so research stays out of the coding context.
+- Flavio Copes runs a daily routine that picks ten posts with outdated version claims and hands them to a cloud agent; three PRs merged in two days.
+- The official engineering guide warns that high-frequency monitoring routines, such as checking every five minutes, burn usage quickly.
+- Give agents a full feedback loop, such as a way to start a dev environment and take screenshots.

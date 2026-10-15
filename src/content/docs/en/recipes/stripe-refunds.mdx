@@ -1,0 +1,68 @@
+---
+title: "Grok Bot × Stripe: review refund requests against your policy"
+description: "The Bot checks each request against your refund policy and the Stripe payment, recommends approve or deny with a reply draft, and acts only after you approve."
+sidebar:
+  order: 16
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: support
+difficulty: intermediate
+apps: ["Stripe", "Gmail"]
+sources:
+  - title: "Grok Bot for Support (official guide)"
+    url: https://x.ai/bot/guides/grok-bot-for-support
+  - title: "Approvals, security, and privacy (official docs)"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+  - title: "Grok Bot Use Cases: 7 Real Examples (explainx)"
+    url: https://explainx.ai/blog/grok-bot-real-world-use-cases-august-2026
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Give the Bot your refund policy. It checks each request and the matching Stripe payment, recommends approve or deny with a reply draft, and acts only after you approve each one.**
+
+## When to use it
+
+- You sell subscriptions or digital products and get refund requests every week
+- Handling refunds means switching between email and the Stripe dashboard
+
+## Before you start
+
+- Stripe access, through a plugin or by signing in to the dashboard in the Bot’s browser, ideally with a restricted member account.
+- Your refund policy.
+- The Gmail plugin for your support inbox.
+
+## Steps
+
+1. Send the Bot the policy and prompt, and run it on past requests to compare with your own calls.
+2. Add an Ask first rule in Auto Review for any refund action in Stripe.
+3. Create a routine for 11:00 daily.
+
+## Prompt
+
+Replace the parts in angle brackets with your own.
+
+<CopyTemplate id="stripe-refunds">
+
+```text
+Here is our refund policy: <paste or attach>
+Every day at 11:00, check the support inbox for new refund requests:
+1. Find the payment in Stripe and check purchase date, amount and whether it was already refunded
+2. Recommend approve / deny / needs my judgment under the policy, citing the clause
+3. Draft the reply to the customer; for eligible long-time customers you may offer <retention offer> in the draft
+4. Send me all recommendations as one table
+Do not issue any refund in Stripe or send any email without my approval of each one.
+```
+
+</CopyTemplate>
+
+## Approvals and permissions
+
+- Refunds move money and need approval one by one. The official security docs list purchases and transfers among the actions to set boundaries for.
+- Approval cards from routines expire after about 10 minutes and the action does not run; ask the Bot to retry.
+
+## Notes and pitfalls
+
+- In the official support guide, the Bot reviews refund requests against policy and replies after your approval, and can offer retention deals to some customers.
+- One developer reported using a support inbox plus the Stripe API for routine refunds (an early-access example collected by explainx, not independently verified).

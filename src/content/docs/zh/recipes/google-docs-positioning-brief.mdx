@@ -1,0 +1,67 @@
+---
+title: "Grok Bot × Google Docs：在文档评论里来回改定位文案"
+description: "研究 Bot 读竞品官网找差异，营销 Bot 在 Google Docs 里写定位简报，你写评论，它按评论改。"
+sidebar:
+  order: 5
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+apps: ["Google Docs", "浏览器"]
+sources:
+  - title: "Grok Bot for Marketing（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-marketing
+  - title: "Files and results（官方文档）"
+    url: https://docs.x.ai/grok-bot/files-and-results
+  - title: "Connect plugins（Cursor 帮助中心）"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**一个 Bot 读你和竞品的官网找差异，另一个 Bot 把结论写成 Google Docs 里的定位简报；你直接在文档里留评论，Bot 按评论修改。**
+
+## 适合谁
+
+- 新产品上线前要写定位和官网文案
+- 出海产品想找到和竞品不一样的卖点
+- 习惯在文档里改稿，而不是在聊天框里来回贴
+
+## 准备
+
+- Google 账号插件。官方帮助中心的登录清单里包含 Google Docs。
+- 两个 Bot：「市场研究员」负责读网站找差异，「产品营销」负责写简报。官方营销指南就是这样分工的。
+
+## 步骤
+
+1. 让市场研究员用自己的浏览器读你的官网和竞品产品页，列出差异点。
+2. 产品营销从研究员那里拿上下文，在 Google Docs 里写定位简报：一句话定位、价值主张、各渠道的说法。
+3. 你在文档里写评论，让 Bot 按评论修改原文档。
+4. 定位定下来后，再让它写落地页大纲和搜索广告的文案变体用于测试。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="google-docs-positioning-brief">
+
+```text
+读一下我们的官网 <https://...> 和这三个竞品的产品页：<A> <B> <C>。
+找出他们都在强调、而我们还没占住的点，列出 3 个可以主打的差异。
+然后在 Google Docs 新建「<产品名> 定位简报」：一句话定位、3 条价值主张、官网 / X / LinkedIn 各自的说法。
+写完把文档链接发我。之后我会在文档里留评论，你按评论修改，不要另起新文档。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 起步只给文档编辑权限。广告账户写权限、上线网页这类权限，等它交付过几次再开，官方指南建议逐步放权。
+- 花钱和改线上账户的事由人批准。
+
+## 注意事项
+
+- 每个 Bot 的职责要窄，什么都做的通才对话会越来越乱，这是官方营销指南的经验。
+- 只连这个岗位需要的工具。
+- 让它改原文档，不要每次新建副本，官方 Files 文档也这样建议。

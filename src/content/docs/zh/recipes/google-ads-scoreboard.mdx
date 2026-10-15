@@ -1,0 +1,64 @@
+---
+title: "Grok Bot × Google Ads：每周出一份投放成绩单，不碰预算"
+description: "每周拉一次 Google Ads 实验数据，按创意概念出成绩单并给出建议；不改广告、出价和预算。"
+sidebar:
+  order: 18
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: marketing
+difficulty: advanced
+apps: ["Google Ads", "Slack"]
+sources:
+  - title: "Grok Bot for Marketing（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-for-marketing
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Bot 每周拉一次 Google Ads 实验数据，按创意概念出成绩单（花费、CTR、CVR、CPA、ROAS），给出放量、砍掉、继续测还是再查的建议；它不改广告、出价和预算。**
+
+## 适合谁
+
+- 同时测好几组广告创意，每周手动拉数据做表
+- 想要一个固定格式的复盘，团队每周一起看
+
+## 准备
+
+- Google Ads 访问，最好用只读或分析师权限的账号。
+- 可选：Slack 插件，把成绩单发到投放频道。
+
+## 步骤
+
+1. 手动跑一次，核对数字和后台一致。
+2. 确认「样本不足」的门槛。
+3. 建 Routine：每周一 10:00。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="google-ads-scoreboard">
+
+```text
+每周一 10:00，拉取 Google Ads 过去 7 天的数据，按广告概念 / 实验分组：
+- 每组：花费、展示、CTR、CVR、CPA、ROAS，和上周对比
+- 每组给一个建议：放量 / 砍掉 / 继续测 / 需要再查，写清依据
+- 样本太小（比如转化少于 <10>）的，标「样本不足」，不给结论
+输出成一张表，先发给我看，我确认后再发到 Slack <#ads>。
+不要修改任何广告、出价、预算或投放状态。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 官方营销指南的原则：花钱和改线上账户的事由人批准，先给低风险权限，交付过几次再放权。
+- 用只读账号登录，从根上避免误改。
+
+## 注意事项
+
+- 这是官方营销指南里「营销分析师」Bot 的 Routine，按概念出 spend、CTR、CVR、CPA、ROAS 成绩单并给出建议。
+- ROAS 依赖转化跟踪准确，数据异常时先查跟踪设置。

@@ -1,0 +1,64 @@
+---
+title: "Grok Bot × 电商比价：两家同时加购物车对比，付款你来点"
+description: "让 Bot 在两个购物网站把同一批商品加进购物车，比较总价、运费和送达时间，付款留给你。"
+sidebar:
+  order: 23
+grade: official
+needs_testing: true
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+apps: ["Amazon", "Costco", "浏览器"]
+sources:
+  - title: "Grok Bot 101（官方指南）"
+    url: https://x.ai/bot/guides/grok-bot-101
+  - title: "Approvals, security, and privacy（官方文档）"
+    url: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**让 Bot 在两个购物网站把同一批商品加进购物车，比较总价、运费和送达时间，给你一张对比表；最后一步付款留给你。**
+
+## 适合谁
+
+- 每周固定采购一批日用品
+- 同一批东西不知道在哪家买更划算
+
+## 准备
+
+- 两个购物网站在 Bot 浏览器里都登录好（用 Take over 自己输入密码）。
+- 一份购物清单。
+
+## 步骤
+
+1. 先清空两边的购物车，或者在指令里写清只统计清单里的商品。
+2. 把清单和下面的指令发给 Bot。
+3. 看对比表，自己去结账。
+
+## 给 Bot 的指令
+
+尖括号里的内容换成你自己的。
+
+<CopyTemplate id="shopping-compare">
+
+```text
+这是我的购物清单：<清单>
+请在 Costco 和 Amazon 上分别把这些商品加进购物车（找不到同款就选最接近的，并说明差别），然后对比：
+- 每件商品的单价
+- 总价、运费、税费
+- 预计送达时间
+给我一张对比表和推荐。不要下单，不要付款，到结账页面就停下来。
+```
+
+</CopyTemplate>
+
+## 审批与权限
+
+- 下单和付款永远由你来。官方安全文档写明，付款确认这类步骤要你自己接管完成。
+- 在 Auto Review 里给「下单 / 付款」加一条 Ask first 规则，作为双保险。
+
+## 注意事项
+
+- 这是官方 Grok Bot 101 指南作者的真实用法：在 Costco 和 Amazon 同时加购物车，比较价格、运费和送达时间。
+- 购物车里原有的商品会被算进总价，先清空或写清只统计清单内的商品。
