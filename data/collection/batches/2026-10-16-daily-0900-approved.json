@@ -1,0 +1,193 @@
+{
+  "id": "2026-10-16-daily-0900-approved",
+  "collected_at": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "review_only": false,
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-16",
+    "user_message": "导入并发布",
+    "review_batch_id": "2026-10-16-daily-0900-review",
+    "review_batch_sha256": "c3e67ab00961423ef7505103a696ff7b776ddfba19d9452e8addbb73332bc15d",
+    "approved_ids": [
+      "github-jockeys97-grok-bot-codex-skill",
+      "github-mergisi-awesome-grokbot",
+      "composio-grok-bot-custom-mcp-guide",
+      "reddit-willsamadi-google-docs-bot-index"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "scope_zh": "仅适用于已展示并建议收录的这4条资料；不包括本轮重复、hold、reject及历史未批准条目，也不适用于未来新增内容。"
+  },
+  "baseline": {
+    "head": "6c515cc8fa0a66751115cdfebb0e1af9d2c12bb0",
+    "catalog_count": 104,
+    "resources_sha256": "a6707abdf81c591861a4866d118548d6ae7370471c3bec4db9b3be8032ee0656",
+    "changelog_sha256": "c68890ce219ffec15f5235c5160a5336463cab24ecc2e57007424f3bd91d9a8c",
+    "unapproved_history_file": "data/collection/batches/2026-10-15-x-history.json",
+    "unapproved_history_sha256": "b87362cb2ed06080c104b12a6a048e74bc1083d44857a89c419d9048af399f06"
+  },
+  "editorial_note_zh": "逐字保留已送审的中文标题、双语摘要、分类、原文归属与核验说明；仅导入本批明确获准的4条，不将来源核验等同于实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "approval_status": "approved",
+      "source_title": "Grok Bot for Codex",
+      "review_title_zh": "用 Codex 操作 Grok Bot 的桌面协作 Skill",
+      "review_summary_zh": "作者提供通过 Codex 的电脑操作能力选择 Grok Bot、查看对话与状态、继续已有任务的 Skill，并区分读取、发送、附件和定时任务的授权边界。需要同机安装并登录 Grok Bot。",
+      "relevance": "直接涉及 Grok Bot 的应用组合、可复用 Skill、角色模板或多 Bot 协作。",
+      "reason": "独立的桌面操作 Skill 文件，与已收录的 Codex 审计提示词为不同作品；读取完整但尚未安装验证。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-16",
+        "checked_at": "2026-10-16",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "github-jockeys97-grok-bot-codex-skill",
+        "url": "https://github.com/Jockeys97/grok-bot-codex-skill/blob/main/SKILL.md",
+        "title": "用 Codex 操作 Grok Bot 的桌面协作 Skill",
+        "author": "Jockeys97",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Codex"
+        ],
+        "tags": [
+          "skill",
+          "desktop",
+          "integration"
+        ],
+        "summary_zh": "作者提供通过 Codex 的电脑操作能力选择 Grok Bot、查看对话与状态、继续已有任务的 Skill，并区分读取、发送、附件和定时任务的授权边界。需要同机安装并登录 Grok Bot。",
+        "summary_en": "A community skill uses Codex computer control to select Bots, inspect conversations and continue tasks, with separate rules for messages, files and routines. It requires a signed-in Grok Bot app on the same Mac.",
+        "verification_note_zh": "已阅读仓库 README 和完整 SKILL.md，核对所需环境与操作边界；未安装、运行或验证兼容性。仓库创建及推送时间不作为文件首发日期，本条属于历史资料补充。",
+        "verification_note_en": "Read the README and full skill, including prerequisites and action boundaries. Not installed or tested. Repository timestamps are not treated as the document's publication date; this is historical backfill."
+      }
+    },
+    {
+      "decision": "publish",
+      "approval_status": "approved",
+      "source_title": "Awesome Grok Bot",
+      "review_title_zh": "Grok Bot 多岗位模板集：邮件、销售与开发协作",
+      "review_summary_zh": "作者按生产力、营销、销售、运营、个人和开发整理角色配置，提供工程与客户支持小队示例；另有 OpenClaw、Hermes 角色文件转换入口，并说明记忆与本地文件不随之迁移。",
+      "relevance": "直接涉及 Grok Bot 的应用组合、可复用 Skill、角色模板或多 Bot 协作。",
+      "reason": "不同作者维护的角色配置集合，与已收录 cobusgreyling 仓库不是同一作品；只收录目录，不把各角色拆条凑数。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-16",
+        "checked_at": "2026-10-16",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "github-mergisi-awesome-grokbot",
+        "url": "https://github.com/mergisi/awesome-grokbot",
+        "title": "Grok Bot 多岗位模板集：邮件、销售与开发协作",
+        "author": "mergisi",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "templates"
+        ],
+        "apps": [
+          "Gmail",
+          "Slack",
+          "GitHub",
+          "OpenClaw",
+          "Hermes"
+        ],
+        "tags": [
+          "roles",
+          "templates",
+          "teams"
+        ],
+        "summary_zh": "作者按生产力、营销、销售、运营、个人和开发整理角色配置，提供工程与客户支持小队示例；另有 OpenClaw、Hermes 角色文件转换入口，并说明记忆与本地文件不随之迁移。",
+        "summary_en": "A role-profile collection covers productivity, marketing, sales, operations, personal tasks and development, with starter teams and OpenClaw/Hermes conversion links that exclude memory and local files.",
+        "verification_note_zh": "已阅读完整 README 并抽查 Inbox Triage 角色文件；未导入团队或执行转换。目录不是实测排名，旧版 Settings → Plugins 路径需按当前官方 Connect apps 入口核对；属于历史资料补充。",
+        "verification_note_en": "Read the README and sampled the Inbox Triage profile. No team import or conversion was run. This is not a tested ranking; older plugin-menu paths need checking against current official guidance. Historical backfill."
+      }
+    },
+    {
+      "decision": "publish",
+      "approval_status": "approved",
+      "source_title": "How to Add MCP Servers to Grok Bot: Plugins, Remote Servers, and Stdio Setup",
+      "review_title_zh": "为 Grok Bot 接入 MCP：插件、远程服务与 stdio",
+      "review_summary_zh": "作者对比市集插件、自定义远程 MCP 和 stdio 服务的接入流程，以 Composio 与 sequential-thinking 为例，并区分 Grok Bot、Grok 聊天和 Grok Build 的配置位置。旧版入口需再核对。",
+      "relevance": "直接涉及 Grok Bot 的应用组合、可复用 Skill、角色模板或多 Bot 协作。",
+      "reason": "比现有基础插件目录多出远程与 stdio 配置参考；不重复增加 Gmail 基础连接指南，旧版路径与密钥示例单独披露。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-16",
+        "checked_at": "2026-10-16",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "composio-grok-bot-custom-mcp-guide",
+        "url": "https://composio.dev/content/how-to-add-mcp-servers-to-grok-bot",
+        "title": "为 Grok Bot 接入 MCP：插件、远程服务与 stdio",
+        "author": "Prathit Joshi（Composio）",
+        "source": "blog",
+        "lang": "en",
+        "published": "2026-09-03",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Composio",
+          "Gmail",
+          "sequential-thinking"
+        ],
+        "tags": [
+          "mcp",
+          "plugins",
+          "integration"
+        ],
+        "summary_zh": "作者对比市集插件、自定义远程 MCP 和 stdio 服务的接入流程，以 Composio 与 sequential-thinking 为例，并区分 Grok Bot、Grok 聊天和 Grok Build 的配置位置。旧版入口需再核对。",
+        "summary_en": "An author walkthrough contrasts packaged plugins, remote MCP and stdio servers using Composio and sequential-thinking, distinguishing Grok Bot from chat and Build. Older UI paths need rechecking.",
+        "verification_note_zh": "已阅读供应商教程正文，原文日期为 2026-09-03；属于历史资料补充。未添加服务或授权账号，未实测当前兼容性。旧版菜单路径与密钥处理例子不作为本站操作建议；凭据应走当前官方安全交接流程。",
+        "verification_note_en": "Read the vendor's September 3, 2026 guide as historical backfill. No servers or accounts were connected. Current compatibility is untested; older menu paths and credential-handling examples are not adopted as our instructions."
+      }
+    },
+    {
+      "decision": "publish",
+      "approval_status": "approved",
+      "source_title": "Your thoughts on my setup and advice to make it better?",
+      "review_title_zh": "用 Google Docs 索引协调多 Bot：一位用户的配置与困惑",
+      "review_summary_zh": "作者为各项目组维护 Google Docs 状态与任务文档，再用索引汇总，让管理 Bot 负责协调；同时报告层层转达难管理、用量偏高的问题，适合参考协作结构的取舍。",
+      "relevance": "直接涉及 Grok Bot 的应用组合、可复用 Skill、角色模板或多 Bot 协作。",
+      "reason": "原作者提供 Google Docs 索引、项目状态文档和管理 Bot 的具体结构，且明确提出困难；不把个人体验当效果保证。",
+      "verified_via": "page",
+      "resource": {
+        "added": "2026-10-16",
+        "checked_at": "2026-10-16",
+        "status": "alive",
+        "evidence": "author-reported",
+        "id": "reddit-willsamadi-google-docs-bot-index",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1x64avh/your_thoughts_on_my_setup_and_advice_to_make_it/",
+        "title": "用 Google Docs 索引协调多 Bot：一位用户的配置与困惑",
+        "author": "willsamadi",
+        "source": "forum",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "bots",
+          "recipes"
+        ],
+        "apps": [
+          "Google Docs"
+        ],
+        "tags": [
+          "teams",
+          "handoffs",
+          "documents"
+        ],
+        "summary_zh": "作者为各项目组维护 Google Docs 状态与任务文档，再用索引汇总，让管理 Bot 负责协调；同时报告层层转达难管理、用量偏高的问题，适合参考协作结构的取舍。",
+        "summary_en": "A user keeps project-group status and tasks in Google Docs with a central index and manager Bot, while reporting coordination difficulties and high usage. A concrete setup to compare, not a proven efficiency gain.",
+        "verification_note_zh": "已阅读原帖及可见讨论，角色配置和问题均为作者自述，未复现效果或核对账单；页面仅提供相对时间，未推算首发日期，不把不同 Bot 当作账号权限隔离。",
+        "verification_note_en": "Read the original post and visible discussion. Setup and difficulties are user reports; outcomes and bills were not verified. No release date was inferred from relative time, and separate Bots are not treated as permission isolation."
+      }
+    }
+  ]
+}
