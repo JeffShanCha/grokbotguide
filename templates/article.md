@@ -4,10 +4,11 @@ title: 文章标题（说清楚做成什么）
 description: 一句话说明读完能做到什么（会显示在搜索结果里）
 sidebar:
   order: 10
-# official = 整理自官方文档；tested = 亲测；opinion = 观点/评测
+# official = 依据官方文档；community = 来自他人公开实测；tested = 亲自按步骤跑通；opinion = 观点/评测
 grade: tested
-# 亲测时填写你按步骤跑通的日期
+# 亲测时填写你按步骤跑通的日期和订阅档位（没跑通就不要填 tested）
 last_verified: 2026-10-14
+tested_plan: SuperGrok
 # 你的 GitHub 用户名
 author: your-github-username
 # 实战案例必填

@@ -9,6 +9,9 @@
  * 警告（不阻塞）：
  *   - 只有一种语言的页面（维护者会补翻译）
  *   - last_verified 超过 60 天（需要复验）
+ * 内部提示（只打印，不算警告、不报错）：
+ *   - needs_testing: true 的页面清单（页面上不显示，用来安排实测）
+ *   - 同时标了 tested 和 needs_testing 的页面（应二选一）
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -52,6 +55,7 @@ for (const lang of LANGS) {
 
 // 2. frontmatter 规则
 const now = Date.now();
+const toTest = [];
 for (const lang of LANGS) {
 	for (const p of pages[lang]) {
 		const file = `src/content/docs/${lang}/${p}`;
@@ -65,6 +69,7 @@ for (const lang of LANGS) {
 			}
 		}
 		if (fm.grade === 'tested' && !fm.last_verified) report('error', file, 'grade "tested" requires last_verified');
+		if (fm.needs_testing === true && !isIndex) toTest.push({ file, grade: fm.grade ?? '-', conflict: fm.grade === 'tested' });
 		if (fm.last_verified) {
 			const days = (now - new Date(fm.last_verified).getTime()) / 86400000;
 			if (days > STALE_DAYS) report('warning', file, `last verified ${Math.floor(days)} days ago, needs re-verification`);
@@ -90,6 +95,13 @@ for (const r of resources) {
 		if (!r[key]) report('error', where, `missing ${key}`);
 		else if (r[key].length > 220) report('error', where, `${key} is too long (${r[key].length} > 220); write a short summary, do not copy the original`);
 	}
+}
+
+// 4. 内部提示：待实测清单（只打印）
+if (toTest.length) {
+	const byLang = Object.fromEntries(LANGS.map((l) => [l, toTest.filter((t) => t.file.startsWith(`src/content/docs/${l}/`)).length]));
+	console.log(`\n[内部] 待实测页面 ${toTest.length} 个（${LANGS.map((l) => `${l} ${byLang[l]}`).join('，')}），页面上不显示：`);
+	for (const t of toTest) console.log(`  · ${t.file}  grade=${t.grade}${t.conflict ? '  ← 同时标了 tested，请二选一' : ''}`);
 }
 
 console.log(`\ncheck-content: ${errors.length} error(s), ${warnings.length} warning(s)`);

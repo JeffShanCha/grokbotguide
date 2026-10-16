@@ -47,11 +47,11 @@ const copy = {
 		stats: `${n.recipes} 个实战案例 · ${n.answers} 个常见问题 · ${n.bots} 张角色卡 · 开源在 GitHub`,
 		featuredBadge: '本周精选',
 		featuredLead: '每天两次扫一遍收件箱：分类打标签、起草回复，把需要你处理的事列成简报。发送这一步始终留给你。',
-		featuredStatus: featuredTested ? '本站实测' : '待实测',
+		featuredStatus: '✓ 本站实测',
 		featuredCta: '看完整步骤 →',
-		shotTitle: '实测截图整理中',
-		shotText: '本站正在实测这个案例，Bot 发到 Slack 的真实简报会放在这里。',
-		shotCta: '你跑通了？投稿你的实测 →',
+		shotTitle: 'Bot 每天发给你的简报包含',
+		shotItems: ['今天需要你处理的事', '涉及钱的邮件', '等你审阅的回复草稿', '已归档的邮件数量'],
+		shotCta: '看给 Bot 的完整指令 →',
 		newsTitle: '最新动态',
 		newsMore: '全部 →',
 		faqTitle: '常见问题',
@@ -80,11 +80,11 @@ const copy = {
 		stats: `${n.recipes} recipes · ${n.answers} how-to answers · ${n.bots} Bot cards · open source on GitHub`,
 		featuredBadge: 'Featured this week',
 		featuredLead: 'Twice a day the Bot sweeps your inbox: labels mail, drafts replies and sends you a briefing of what needs you. Sending always stays with you.',
-		featuredStatus: featuredTested ? 'Tested here' : 'Not tested yet',
+		featuredStatus: '✓ Tested here',
 		featuredCta: 'See all the steps →',
-		shotTitle: 'Screenshots coming',
-		shotText: 'We are testing this recipe. The real Slack briefing from the Bot will go here.',
-		shotCta: 'Got it working? Share your test →',
+		shotTitle: 'The daily briefing from your Bot covers',
+		shotItems: ['What needs you today', 'Emails involving money', 'Reply drafts waiting for review', 'How many emails were archived'],
+		shotCta: 'See the full prompt →',
 		newsTitle: 'Latest updates',
 		newsMore: 'All →',
 		faqTitle: 'Common questions',
@@ -136,7 +136,7 @@ const copy = {
 						{featured.data.apps.map((app) => (
 							<span class="gbg-badge">{app}</span>
 						))}
-						<span class:list={['gbg-badge', featuredTested ? 'gbg-grade-tested' : 'gbg-pending']}>{copy.featuredStatus}</span>
+						{featuredTested && <span class="gbg-badge gbg-grade-tested">{copy.featuredStatus}</span>}
 					</div>
 					<a class="btn btn-outline" href={`/${featured.id}/`}>
 						{copy.featuredCta}
@@ -145,8 +145,12 @@ const copy = {
 				<figure class="shot">
 					<div class="shot-box">
 						<strong>{copy.shotTitle}</strong>
-						<span>{copy.shotText}</span>
-						<a href={p('community/submit/')}>{copy.shotCta}</a>
+						<ul>
+							{copy.shotItems.map((x) => (
+								<li>{x}</li>
+							))}
+						</ul>
+						<a href={`/${featured.id}/${lang === 'zh' ? '#给-bot-的指令' : '#prompt'}`}>{copy.shotCta}</a>
 					</div>
 				</figure>
 			</section>
@@ -429,16 +433,39 @@ const copy = {
 		min-height: 15rem;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		gap: 0.5rem;
-		padding: 1.5rem;
-		text-align: center;
-		border: 2px dashed var(--sl-color-gray-5);
+		gap: 0.75rem;
+		padding: 1.75rem;
+		border: 1px solid var(--sl-color-hairline);
 		border-radius: 0.9rem;
 		background: var(--sl-color-black);
-		color: var(--sl-color-gray-3);
+		color: var(--sl-color-gray-2);
 		font-size: var(--sl-text-sm);
+	}
+	.shot-box ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.shot-box li {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		margin: 0;
+		padding: 0.55rem 0.75rem;
+		border-radius: 0.5rem;
+		background: var(--gbg-soft-bg);
+		color: var(--sl-color-gray-1);
+	}
+	.shot-box li::before {
+		content: '';
+		width: 0.4rem;
+		height: 0.4rem;
+		border-radius: 50%;
+		background: var(--sl-color-accent);
 	}
 	.shot-box strong {
 		color: var(--sl-color-gray-1);

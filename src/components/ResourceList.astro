@@ -12,8 +12,8 @@ const labels = {
 }[lang];
 const platforms: Record<string, string> = { official: lang === 'zh' ? '官方' : 'Official', github: 'GitHub', youtube: 'YouTube', reddit: 'Reddit', linuxdo: 'LINUX DO', bilibili: 'Bilibili', x: 'X', arxiv: 'arXiv', wechat: lang === 'zh' ? '公众号' : 'WeChat', web: lang === 'zh' ? '其他网站' : 'Web', hackernews: 'Hacker News', zhihu: '知乎', v2ex: 'V2EX' };
 const evidence = {
-  zh: { official: '官方资料', 'author-reported': '作者分享 · 未经本站实测', research: '研究案例 · 未经本站复现', editorial: '报道 / 评述' },
-  en: { official: 'Official source', 'author-reported': 'Author report · not tested here', research: 'Research · not replicated here', editorial: 'Coverage / commentary' },
+  zh: { official: '官方资料', 'author-reported': '作者分享', research: '研究案例', editorial: '报道 / 评述' },
+  en: { official: 'Official source', 'author-reported': 'Author report', research: 'Research', editorial: 'Coverage / commentary' },
 }[lang];
 const allItems = (await getCollection('resources')).filter((r) => !category || r.data.categories.includes(category as keyof typeof labels)).sort((a, b) => +b.data.added - +a.data.added || a.id.localeCompare(b.id));
 const items = limit ? allItems.slice(0, limit) : allItems;

@@ -23,14 +23,14 @@ Prefer not to use Git? [Submit here](/en/community/submit/). The form creates a 
 
 | Label | Meaning | Requirement |
 | --- | --- | --- |
-| From official docs | Based on docs.x.ai and other official sources | Every fact links to the official source |
-| From community reports | Someone else's published hands-on report (blog, video, X post) | Link and credit the original; upgraded to Community tested once reproduced |
-| Community tested | The author ran it | State the test date, plan tier and apps used |
+| Based on official docs | docs.x.ai and other official sources | Every fact links to the official source; set the check date `last_checked` |
+| From community tests | The original author's published hands-on run (blog, video, X post) | Link and credit the original author |
+| Tested here | Run step by step by us or the contributor | State the test date, plan tier and apps used; the page shows "✓ Tested here" |
 | Opinion / review | Personal judgment | Clearly marked as opinion |
 
 ## Review criteria
 
-- Honest verification status: mark what you ran yourself as Community tested with the test date and plan; mark the rest From official docs or From community reports, with sources
+- Honest grade: only mark `tested` what you actually ran step by step, with the test date and plan; grade the rest by source, Based on official docs or From community tests, with sources
 - Permission settings and usage notes included
 - No emails, customer names or tokens in screenshots
 - Not a duplicate of existing content

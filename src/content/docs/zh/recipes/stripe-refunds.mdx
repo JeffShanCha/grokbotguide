@@ -22,7 +22,6 @@ sources:
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
 import RecipeShot from '~/components/RecipeShot.astro';
-import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **把退款政策交给 Bot，它逐条核对退款申请、在 Stripe 里查订单，给出同意或拒绝的建议和回复草稿；你逐条批准后才执行。**
 
@@ -71,11 +70,8 @@ import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 - 来自 Routine 的审批卡片约 10 分钟后过期，过期后动作不会执行，需要让 Bot 重试。
 
 
-## 实测结果
-
-<RecipeTestStatus />
 
 ## 注意事项
 
 - 官方客服指南里的做法：Bot 按政策审核退款申请，决定经你批准后再回复客户，还可以给部分客户提供挽留优惠。
-- 社区里有开发者用支持邮箱加 Stripe API 让 Bot 处理日常退款（explainx 汇总的早期用户案例，未经独立验证）。
+- 社区里有开发者用支持邮箱加 Stripe API 让 Bot 处理日常退款（来源：explainx 汇总的早期用户案例）。

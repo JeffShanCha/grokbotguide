@@ -6,7 +6,7 @@ import { toLang, useT } from '../i18n/ui';
 
 interface Props {
 	section: 'bots' | 'templates' | 'recipes';
-	/** 显示「整理自官方文档 / 社区分享 / 本站实测」三色图例和篇数 */
+	/** 显示「依据官方文档 / 来自社区实测」图例和篇数；有本站实测的页面时才显示「本站实测」 */
 	legend?: boolean;
 }
 const { section, legend = false } = Astro.props;
@@ -32,14 +32,15 @@ const unit = lang === 'zh' ? '篇' : '';
 {
 	legend && (
 		<p class="gbg-legend not-content">
-			{legendItems.map(({ g, n }) => (
-				<span>
-					<i class={`dot dot-${g}`} aria-hidden="true" />
-					{t(`grade.${g}`)} {n}
-					{unit}
-					{g === 'tested' && n === 0 && (lang === 'zh' ? '（实测中）' : ' (testing in progress)')}
-				</span>
-			))}
+			{legendItems
+				.filter(({ g, n }) => g !== 'tested' || n > 0)
+				.map(({ g, n }) => (
+					<span>
+						<i class={`dot dot-${g}`} aria-hidden="true" />
+						{t(`grade.${g}`)} {n}
+						{unit}
+					</span>
+				))}
 		</p>
 	)
 }

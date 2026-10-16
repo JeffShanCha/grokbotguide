@@ -4,13 +4,18 @@ export const toLang = (locale: string | undefined): Lang => (locale === 'en' ? '
 
 const ui = {
 	zh: {
-		'grade.official': '整理自官方文档',
-		'grade.community': '整理自社区分享',
-		'grade.tested': '社区亲测',
+		'grade.official': '依据官方文档',
+		'grade.community': '来自社区实测',
+		'grade.tested': '本站实测',
 		'grade.opinion': '观点 / 评测',
 		'meta.verified': '最后验证',
 		'meta.author': '作者',
-		'meta.needsTesting': '本文依据官方文档与原作者资料整理，具体操作请以当前版本界面为准。',
+		'meta.checkedOn': '核对于',
+		'meta.origAuthor': '原作者',
+		'meta.basis': '本页依据以下资料整理，最后核对于 {date}；界面如有不一致，欢迎反馈或修改。',
+		'meta.basisNoDate': '本页依据以下资料整理；界面如有不一致，欢迎反馈或修改。',
+		'meta.feedback': '反馈',
+		'meta.editPage': '修改这一页',
 		'meta.sources': '参考来源',
 		'footer.disclaimer':
 			'GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。Grok 及相关名称是其各自所有者的商标。',
@@ -67,14 +72,18 @@ const ui = {
 		'res.added': '收录于',
 	},
 	en: {
-		'grade.official': 'From official docs',
-		'grade.community': 'From community reports',
-		'grade.tested': 'Community tested',
+		'grade.official': 'Based on official docs',
+		'grade.community': 'From community tests',
+		'grade.tested': 'Tested here',
 		'grade.opinion': 'Opinion / review',
 		'meta.verified': 'Last verified',
 		'meta.author': 'Author',
-		'meta.needsTesting':
-			'This page is compiled from the official docs or community reports and has not been reproduced by us yet. If something differs when you try it, please edit this page on GitHub.',
+		'meta.checkedOn': 'checked',
+		'meta.origAuthor': 'by',
+		'meta.basis': 'This page is based on the sources below, last checked on {date}. If the interface looks different, send feedback or edit the page.',
+		'meta.basisNoDate': 'This page is based on the sources below. If the interface looks different, send feedback or edit the page.',
+		'meta.feedback': 'Send feedback',
+		'meta.editPage': 'Edit this page',
 		'meta.sources': 'Sources',
 		'footer.disclaimer':
 			'GrokBotGuide is an independent community project, not affiliated with or endorsed by xAI, SpaceXAI or Cursor. Grok and related names are trademarks of their respective owners.',

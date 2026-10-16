@@ -22,7 +22,6 @@ sources:
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
 import RecipeShot from '~/components/RecipeShot.astro';
-import RecipeTestStatus from '~/components/RecipeTestStatus.astro';
 
 **Give the Bot your refund policy. It checks each request and the matching Stripe payment, recommends approve or deny with a reply draft, and acts only after you approve each one.**
 
@@ -71,11 +70,8 @@ Do not issue any refund in Stripe or send any email without my approval of each 
 - Approval cards from routines expire after about 10 minutes and the action does not run; ask the Bot to retry.
 
 
-## Our test results
-
-<RecipeTestStatus />
 
 ## Notes and pitfalls
 
 - In the official support guide, the Bot reviews refund requests against policy and replies after your approval, and can offer retention deals to some customers.
-- One developer reported using a support inbox plus the Stripe API for routine refunds (an early-access example collected by explainx, not independently verified).
+- One developer reported using a support inbox plus the Stripe API for routine refunds (source: an early-access example collected by explainx).

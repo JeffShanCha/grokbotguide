@@ -6,15 +6,20 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 
 /**
  * 文章额外的 frontmatter 字段。
- * - grade：内容分级。official = 整理自官方文档；community = 整理自社区分享（他人实测，本站未复现）；tested = 本站或投稿者亲测；opinion = 个人观点/评测
- * - needs_testing：true 时页面顶部提示「根据官方文档整理，尚待亲测」
- * - last_verified：最后一次有人按文中步骤验证的日期
+ * - grade：内容分级。official = 依据官方文档；community = 来自原作者公开分享的实测；tested = 本站或投稿者亲自按步骤跑通；opinion = 个人观点/评测
+ *   只有真正跑通的页面才能标 tested，页面上会显示绿色「✓ 本站实测」。
+ * - last_checked：最后一次对照官方资料核对的日期（official 页面显示「核对于 …」；缺省用页面最后更新日期）
+ * - needs_testing：内部跟踪字段，页面上不显示；npm run check:content 会打印还没实测的页面清单
+ * - last_verified：tested 页面按文中步骤跑通的日期
+ * - tested_plan：tested 页面测试时用的订阅档位，例如 SuperGrok
  * - 角色卡 / 模板专用：role、apps、permissions、difficulty、share_url
  */
 const docsExtension = z.object({
 	grade: z.enum(['official', 'community', 'tested', 'opinion']).optional(),
 	needs_testing: z.boolean().default(false),
+	last_checked: z.coerce.date().optional(),
 	last_verified: z.coerce.date().optional(),
+	tested_plan: z.string().optional(),
 	author: z.string().optional(),
 	sources: z.array(z.object({ title: z.string(), url: z.url() })).default([]),
 	// 角色卡与模板

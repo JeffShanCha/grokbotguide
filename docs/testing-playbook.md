@@ -27,7 +27,7 @@
 
 ## 跑完怎么改页面
 
-1. 在文章开头的 import 区加一行 `import TestReport from '~/components/TestReport.astro';`，再把「实测结果」小节里的 `<RecipeTestStatus />` 换成实测记录：
+1. 在文章开头的 import 区加一行 `import TestReport from '~/components/TestReport.astro';`，再在「注意事项」之前加一个 `## 实测结果` 小节，放实测记录：
 
    ```mdx
    <TestReport date="2026-10-20" plan="SuperGrok" apps="Gmail" duration="约 12 分钟" usage="每周用量约 3%" result="pass">
@@ -41,6 +41,6 @@
 
    `result` 填 `pass`（照着做就跑通）、`partial`（跑通但有出入）或 `fail`（没跑通）。没跑通也照样发出来，同时把正文改正。
 
-2. frontmatter 改三处：`grade: tested`、`needs_testing: false`、`last_verified: 2026-10-20`。页面顶部的「尚未亲测」提示会自动消失，标签变成「社区亲测」。
+2. frontmatter 改四处：`grade: tested`、`needs_testing: false`、`last_verified: 2026-10-20`、`tested_plan: SuperGrok`。标题下的徽章会变成绿色「✓ 本站实测 · 日期 · 档位」。只有真正按步骤跑通的页面才能这样改。
 3. 英文版同步改，截图可以共用同一份。
 4. 首页「精选案例」右侧的占位框，换成第 2 篇的真实截图（`src/components/home/Home.astro` 里的 `shot-box`）。

@@ -11,7 +11,7 @@ sidebar:
 
 - Official facts always link to the official source. We write tutorials in our own words and do not translate official docs wholesale.
 - For external content we list only the title, our own summary, a link and the author's name. We do not republish text or images.
-- Every page shows its content grade (from official docs, from community reports, community tested, opinion) and its sources; tested pages show the verification date, and every page shows when it was last updated.
+- Every page shows its content grade (based on official docs, from community tests, tested here, opinion), its sources and when it was last checked; pages we tested show the test date and plan.
 
 ## Analytics
 

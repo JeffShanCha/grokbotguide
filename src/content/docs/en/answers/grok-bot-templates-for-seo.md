@@ -17,10 +17,10 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"en\", \"url\": \"https://grokbotguide.ai/en/answers/grok-bot-templates-for-seo/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Best Grok Bot templates and workflows for SEO\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The published SEO workflows fall into four groups: a weekly traffic comparison report, a daily site check, batch updates of outdated content and competitor page analysis. They come from official guides or authors’ own reports and have not been tested by us; copy the prompts and adapt them to your site.\"}}, {\"@type\": \"Question\", \"name\": \"Can Grok Bot create an SEO report?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A published example has a Bot compare Google Analytics and Search Console data every Monday and produce a report; we have not tested it ourselves.\"}}, {\"@type\": \"Question\", \"name\": \"Can Grok Bot update outdated blog posts?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"It can find outdated posts and hand them to a Cursor cloud agent to open PRs; review them before merging.\"}}]}"
+    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"en\", \"url\": \"https://grokbotguide.ai/en/answers/grok-bot-templates-for-seo/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Best Grok Bot templates and workflows for SEO\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The published SEO workflows fall into four groups: a weekly traffic comparison report, a daily site check, batch updates of outdated content and competitor page analysis. They come from official guides or authors’ own reports; copy the prompts and adapt them to your site.\"}}, {\"@type\": \"Question\", \"name\": \"Can Grok Bot create an SEO report?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A published example has a Bot compare Google Analytics and Search Console data every Monday and produce a report; see the sources below.\"}}, {\"@type\": \"Question\", \"name\": \"Can Grok Bot update outdated blog posts?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"It can find outdated posts and hand them to a Cursor cloud agent to open PRs; review them before merging.\"}}]}"
 ---
 
-The published SEO workflows fall into four groups: **a weekly traffic comparison report**, **a daily site check**, **batch updates of outdated content** and **competitor page analysis**. They come from official guides or authors’ own reports and have not been tested by us; copy the prompts and adapt them to your site.
+The published SEO workflows fall into four groups: **a weekly traffic comparison report**, **a daily site check**, **batch updates of outdated content** and **competitor page analysis**. They come from official guides or authors’ own reports; copy the prompts and adapt them to your site.
 
 ## 1. Weekly SEO report
 
@@ -62,7 +62,7 @@ In the official marketing guide, a "Market Researcher" Bot reads competitor prod
 
 ### Can Grok Bot create an SEO report?
 
-Yes. A published example has a Bot compare Google Analytics and Search Console data every Monday and produce a report; we have not tested it ourselves.
+Yes. A published example has a Bot compare Google Analytics and Search Console data every Monday and produce a report; see the sources below.
 
 ### Can Grok Bot update outdated blog posts?
 

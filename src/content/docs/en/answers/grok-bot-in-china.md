@@ -47,7 +47,7 @@ The bridge between them is **@bot**: reply on X with "@bot + request" and your m
 - Officially supported on the web: **cards, Apple Pay, Google Pay and Link**. Some methods are only available in some countries; checkout shows what you can use.
 - You can also subscribe through the **App Store** or **Google Play**, if the Grok app is available in your store region.
 - The docs do not mention Alipay, WeChat Pay or PayPal.
-- Whether a China-issued Visa or Mastercard goes through depends on the issuer; **we have not tested this yet**. Start with a monthly plan before paying for a year.
+- Whether a China-issued Visa or Mastercard goes through depends on the issuer. Start with a monthly plan before paying for a year.
 - List prices exclude tax, which may be added at checkout.
 
 ## Suggested order

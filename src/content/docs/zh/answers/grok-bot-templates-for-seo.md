@@ -17,10 +17,10 @@ head:
   - tag: script
     attrs:
       type: application/ld+json
-    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\", \"url\": \"https://grokbotguide.ai/zh/answers/grok-bot-templates-for-seo/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"有哪些适合做 SEO 的 Grok Bot 模板和用法？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"目前公开的 SEO 用法主要有四类：每周流量对比周报、每日网站巡检、批量更新过时内容和竞品页面分析。它们都来自官方指南或作者的公开实测，本站还没有亲测，下面的指令可以直接复制后改成你的站点。\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 能做 SEO 周报吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可以。公开案例里有人让 Bot 每周一对比 Google Analytics 和 Search Console 的数据并生成报告，本站尚未亲测。\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 能自动更新网站文章吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可以让 Bot 找出过时文章，再交给 Cursor 云端 Agent 开 PR 修改；建议合并前由你审核。\"}}]}"
+    content: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\", \"url\": \"https://grokbotguide.ai/zh/answers/grok-bot-templates-for-seo/\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"有哪些适合做 SEO 的 Grok Bot 模板和用法？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"目前公开的 SEO 用法主要有四类：每周流量对比周报、每日网站巡检、批量更新过时内容和竞品页面分析。它们都来自官方指南或作者的公开实测，下面的指令可以直接复制后改成你的站点。\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 能做 SEO 周报吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可以。公开案例里有人让 Bot 每周一对比 Google Analytics 和 Search Console 的数据并生成报告，详见下方参考来源。\"}}, {\"@type\": \"Question\", \"name\": \"Grok Bot 能自动更新网站文章吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可以让 Bot 找出过时文章，再交给 Cursor 云端 Agent 开 PR 修改；建议合并前由你审核。\"}}]}"
 ---
 
-目前公开的 SEO 用法主要有四类：**每周流量对比周报**、**每日网站巡检**、**批量更新过时内容**和**竞品页面分析**。它们都来自官方指南或作者的公开实测，本站还没有亲测，下面的指令可以直接复制后改成你的站点。
+目前公开的 SEO 用法主要有四类：**每周流量对比周报**、**每日网站巡检**、**批量更新过时内容**和**竞品页面分析**。它们都来自官方指南或作者的公开实测，下面的指令可以直接复制后改成你的站点。
 
 ## 1. 每周 SEO 周报
 
@@ -62,7 +62,7 @@ Flavio Copes 用每日 Routine 挑出 10 篇版本信息过时的文章，交给
 
 ### Grok Bot 能做 SEO 周报吗？
 
-可以。公开案例里有人让 Bot 每周一对比 Google Analytics 和 Search Console 的数据并生成报告，本站尚未亲测。
+可以。公开案例里有人让 Bot 每周一对比 Google Analytics 和 Search Console 的数据并生成报告，详见下方参考来源。
 
 ### Grok Bot 能自动更新网站文章吗？
 

@@ -6,6 +6,7 @@ sidebar:
   order: 10
 grade: tested
 last_verified: 2026-10-14
+tested_plan: SuperGrok
 author: your-github-username
 # sales | marketing | support | recruiting | finance | engineering | operations | assistant
 role: recruiting

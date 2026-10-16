@@ -1,5 +1,6 @@
 ---
-// 文章标题区：面包屑和阅读进度 → 标题 → 来源与实测状态、作者、核对日期、阅读时间 → 实战案例摘要格 → 轻量提示。
+// 文章标题区：面包屑和阅读进度 → 标题 → 来源徽章、作者、阅读时间 → 实战案例摘要格。
+// 只有 grade: tested 的页面显示「✓ 本站实测」；needs_testing 只做内部跟踪，这里不渲染。
 import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import { formatDate, toLang, useT } from '../../i18n/ui';
@@ -37,12 +38,32 @@ if (crumb && (section === 'start' || section === 'advanced')) {
 const text = (route.entry.body ?? '').replace(/```[\s\S]*?```/g, ' ').replace(/^import .*$/gm, '').replace(/<[^>]+>/g, ' ');
 const minutes = Math.max(1, Math.round(lang === 'zh' ? text.replace(/\s/g, '').length / 400 : text.split(/\s+/).filter(Boolean).length / 200));
 const c = {
-	zh: { step: (i: number, n: number) => `第 ${i} 篇，共 ${n} 篇`, pending: '待实测', read: `阅读约 ${minutes} 分钟`, checked: '最后核对', updated: '更新于', edit: '发现不一致？在 GitHub 上修改这一页' },
-	en: { step: (i: number, n: number) => `Page ${i} of ${n}`, pending: 'Not tested yet', read: `${minutes} min read`, checked: 'Last checked', updated: 'Updated', edit: 'Something differs? Edit this page on GitHub' },
+	zh: { step: (i: number, n: number) => `第 ${i} 篇，共 ${n} 篇`, read: `阅读约 ${minutes} 分钟`, updated: '更新于' },
+	en: { step: (i: number, n: number) => `Page ${i} of ${n}`, read: `${minutes} min read`, updated: 'Updated' },
 }[lang];
 const showMeta = !isSplash && !isIndex && (data.grade || data.author);
-const dateLabel = data.last_verified ? c.checked : c.updated;
-const date = data.last_verified ?? route.lastUpdated;
+const fmt = (d?: Date) => (d ? formatDate(d, lang) : '');
+
+// 来源徽章的文字
+// official：依据官方文档 · 核对于 {last_checked，缺省用最后更新日期}
+// community：来自社区实测 · 原作者 {第一条非官方来源括号里的作者名}
+// tested：✓ 本站实测 · {last_verified} · {tested_plan}
+const checked = data.last_checked ?? route.lastUpdated;
+const communityAuthor = (() => {
+	for (const src of data.sources) {
+		if (/x\.ai|cursor\.com/.test(src.url)) continue;
+		const m = src.title.match(/[（(]([^（）()]+)[）)]\s*$/);
+		if (m && !/官方|official/i.test(m[1])) return m[1];
+	}
+	return '';
+})();
+let gradeText = '';
+if (data.grade === 'official') gradeText = [t('grade.official'), checked && `${t('meta.checkedOn')} ${fmt(checked)}`].filter(Boolean).join(' · ');
+else if (data.grade === 'community') gradeText = [t('grade.community'), communityAuthor && `${t('meta.origAuthor')} ${communityAuthor}`].filter(Boolean).join(' · ');
+else if (data.grade === 'tested') gradeText = ['✓ ' + t('grade.tested'), fmt(data.last_verified), data.tested_plan].filter(Boolean).join(' · ');
+else if (data.grade) gradeText = t(`grade.${data.grade}`);
+// official 的日期已经在徽章里，其余分级单独显示更新日期
+const showUpdated = data.grade !== 'official' && data.grade !== 'tested' && route.lastUpdated;
 
 // 实战案例文章：标题下的摘要格
 const isRecipe = /^[a-z]+\/recipes\/.+/.test(route.id);
@@ -82,18 +103,17 @@ const summary = isRecipe
 {
 	showMeta && (
 		<div class="gbg-meta">
-			{data.grade && <span class={`gbg-badge gbg-grade-${data.grade}`}>{t(`grade.${data.grade}`)}</span>}
-			{data.needs_testing && <span class="gbg-badge gbg-pending">{c.pending}</span>}
+			{gradeText && <span class={`gbg-badge gbg-grade-${data.grade}`}>{gradeText}</span>}
 			{data.author && (
 				<span>
 					{t('meta.author')} <a href={`https://github.com/${data.author}`}>@{data.author}</a>
 				</span>
 			)}
-			{date && (
+			{showUpdated && (
 				<>
 					<span class="sep" aria-hidden="true">|</span>
 					<span>
-						{dateLabel} <time datetime={date.toISOString()}>{formatDate(date, lang)}</time>
+						{c.updated} <time datetime={route.lastUpdated!.toISOString()}>{fmt(route.lastUpdated)}</time>
 					</span>
 				</>
 			)}
@@ -113,20 +133,6 @@ const summary = isRecipe
 				</div>
 			))}
 		</dl>
-	)
-}
-
-{
-	!isSplash && !isIndex && data.needs_testing && (
-		<p class="gbg-needs-testing" role="note">
-			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-				<circle cx="12" cy="12" r="9" />
-				<path d="M12 11v5M12 8h.01" />
-			</svg>
-			<span>
-				{t('meta.needsTesting')} {route.editUrl && <a href={route.editUrl.href}>{c.edit}</a>}
-			</span>
-		</p>
 	)
 }
 
@@ -216,25 +222,5 @@ const summary = isRecipe
 	}
 	.gbg-meta .sep {
 		color: var(--sl-color-gray-5);
-	}
-	.gbg-needs-testing {
-		display: flex;
-		gap: 0.6rem;
-		align-items: flex-start;
-		margin: 1.25rem 0 0;
-		padding: 0.75rem 0.9rem;
-		border-radius: 0.65rem;
-		background: var(--gbg-soft-bg);
-		color: var(--sl-color-gray-2);
-		font-size: var(--sl-text-sm);
-		line-height: 1.6;
-	}
-	.gbg-needs-testing svg {
-		flex: none;
-		margin-top: 0.1rem;
-		color: var(--sl-color-gray-3);
-	}
-	.gbg-needs-testing a {
-		color: var(--sl-color-text-accent);
 	}
 </style>

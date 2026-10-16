@@ -28,14 +28,15 @@ function minutes(e: CollectionEntry<'docs'>) {
 }
 const total = (list: CollectionEntry<'docs'>[]) => list.reduce((s, e) => s + minutes(e), 0);
 const all = [...start, ...advanced];
-const untested = all.filter((e) => e.data.needs_testing).length;
+// 只在有页面真正实测过时显示「已实测 N 篇」
+const tested = all.filter((e) => e.data.grade === 'tested').length;
 const label = (e: CollectionEntry<'docs'>) => e.data.title.replace(/[：:].*$/, '');
 
 const c = {
 	zh: {
 		checked: '最后核对',
 		sources: '来源：docs.x.ai · Cursor 帮助中心',
-		untested: untested === all.length ? '全部页面待实测' : `${untested} / ${all.length} 篇待实测`,
+		tested: `已实测 ${tested} 篇`,
 		min: (n: number) => `阅读约 ${n} 分钟`,
 		paths: [
 			{ k: '我是第一次用', t: '装好应用，派出第一个任务', d: `读 ${start.length} 篇快速上手，再做一个零风险测试。`, href: '#start', meta: `${start.length} 篇 · 阅读约 ${total(start)} 分钟` },
@@ -66,7 +67,7 @@ const c = {
 	en: {
 		checked: 'Last checked',
 		sources: 'Sources: docs.x.ai · Cursor Help Center',
-		untested: untested === all.length ? 'No page tested here yet' : `${untested} of ${all.length} pages not yet tested`,
+		tested: `${tested} tested here`,
 		min: (n: number) => `~${n} min read`,
 		paths: [
 			{ k: 'First time', t: 'Install the app and send a first task', d: `Read the ${start.length} Get started pages, then run a zero-risk test.`, href: '#start', meta: `${start.length} pages · ~${total(start)} min read` },
@@ -102,7 +103,7 @@ const u = (p: string) => `/${lang}/${p}`;
 	<p class="gbg-guide-check">
 		<span>{c.checked}: <time datetime={checked}>{formatDate(new Date(checked), lang)}</time></span>
 		<span>{c.sources}</span>
-		<span class="warn">{c.untested}</span>
+		{tested > 0 && <span class="ok">✓ {c.tested}</span>}
 	</p>
 
 	<div class="gbg-paths">
@@ -222,11 +223,11 @@ const u = (p: string) => `/${lang}/${p}`;
 		font-size: var(--sl-text-xs);
 		color: var(--sl-color-gray-3);
 	}
-	.gbg-guide-check .warn {
-		color: #b45309;
+	.gbg-guide-check .ok {
+		color: #15803d;
 	}
-	:root:not([data-theme='light']) .gbg-guide-check .warn {
-		color: #facc15;
+	:root:not([data-theme='light']) .gbg-guide-check .ok {
+		color: #4ade80;
 	}
 	.gbg-paths {
 		display: grid;

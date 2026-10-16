@@ -68,7 +68,6 @@ const c = {
 		submit: '投稿一个案例',
 		allRecipes: `查看全部 ${recipes.length} 个案例 →`,
 		featuredBadge: '精选',
-		shot: '实测截图整理中',
 		res: '资源',
 		community: '社区',
 		news: '最新动态',
@@ -117,7 +116,6 @@ const c = {
 		submit: 'Submit a recipe',
 		allRecipes: `See all ${recipes.length} recipes →`,
 		featuredBadge: 'Featured',
-		shot: 'Screenshots coming',
 		res: 'Resources',
 		community: 'Community',
 		news: 'Latest updates',
@@ -354,7 +352,6 @@ const needBurger = !route.hasSidebar;
 					{
 						featured && (
 							<a class="card feat" href={`/${featured.id}/`}>
-								<span class="shot">{c.shot}</span>
 								<span class="pill">{c.featuredBadge}</span>
 								<strong>{split(featured.data.title).tool}：{split(featured.data.title).task}</strong>
 								<span class="d">{featured.data.apps.join(' · ')}</span>

@@ -1,7 +1,7 @@
 ---
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { SITE } from '../../../site.config.mjs';
-import { toLang, useT } from '../../i18n/ui';
+import { formatDate, toLang, useT } from '../../i18n/ui';
 import { getCollection } from 'astro:content';
 
 const route = Astro.locals.starlightRoute;
@@ -9,6 +9,9 @@ const data = route.entry.data;
 const lang = toLang(route.locale);
 const t = useT(lang);
 const sources = data.sources ?? [];
+// 参考来源上方的中性说明：日期优先用 last_checked，其次 last_verified，最后用页面最后更新日期
+const basisDate = data.last_checked ?? data.last_verified ?? route.lastUpdated;
+const [basisBefore, basisAfter] = basisDate ? t('meta.basis').split('{date}') : [t('meta.basisNoDate'), ''];
 const section = route.entry.id.split('/')[1];
 const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'news'].includes(section);
 // 外部资料只显示一行链接，完整列表在资源导航里按分类筛选
@@ -19,7 +22,15 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 
 {
 	sources.length > 0 && (
-		<details class="gbg-sources">
+		<section class="gbg-sources">
+		<p class="gbg-basis">
+			{basisBefore}
+			{basisDate ? <time datetime={basisDate.toISOString()}>{formatDate(basisDate, lang)}</time> : null}
+			{basisAfter}
+			<a href={`/${lang}/community/submit/`}>{t('meta.feedback')}</a>
+			{route.editUrl && <a href={route.editUrl.href}>{t('meta.editPage')}</a>}
+		</p>
+		<details>
 			<summary>
 				{t('meta.sources')}（{sources.length}）
 			</summary>
@@ -33,6 +44,7 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 				))}
 			</ul>
 		</details>
+		</section>
 	)
 }
 
@@ -41,7 +53,7 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 		<a href={`/${lang}/resources/?category=${section}`}>
 			{lang === 'zh' ? `相关外部资料 ${collected} 条 →` : `${collected} related external resources →`}
 		</a>
-		<span>{lang === 'zh' ? '官方资料和作者分享，来源核验不等于本站实测。' : 'Official sources and author write-ups; a checked source is not a test by us.'}</span>
+		<span>{lang === 'zh' ? '官方资料和原作者分享，每条附核验范围说明。' : 'Official sources and original authors’ posts, each with a note on what was checked.'}</span>
 	</p>
 )}
 
@@ -74,6 +86,15 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 		margin-top: 3rem;
 		padding-top: 1.5rem;
 		border-top: 1px solid var(--sl-color-hairline);
+	}
+	.gbg-basis {
+		margin: 0 0 0.6rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-basis a {
+		margin-inline-start: 0.6rem;
+		color: var(--sl-color-text-accent);
 	}
 	.gbg-sources summary {
 		cursor: pointer;
