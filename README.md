@@ -1,160 +1,238 @@
-# GrokBotGuide
+<p align="center">
+  <a href="https://grokbotguide.ai/zh/"><img src="./assets/readme/banner.svg" alt="GrokBotGuide：Grok Bot 中文教程、角色模板与自动化工作流" width="920" /></a>
+</p>
 
-社区共建的 Grok Bot 实战手册 · The community playbook for Grok Bot
+<h3 align="center">面向中文用户的 xAI Grok Bot 实战手册：教程、角色卡、模板和「Grok Bot × 工具」实战案例</h3>
 
-线上地址：<https://grokbotguide.ai>（中文 `/zh/`，英文 `/en/`，根路径按访问者地区自动跳转）
+<p align="center">
+  <a href="https://grokbotguide.ai/zh/"><img src="https://img.shields.io/badge/Docs-grokbotguide.ai-c2410c?style=flat-square" alt="Docs"></a>
+  <a href="https://github.com/JeffShanCha/grokbotguide/stargazers"><img src="https://img.shields.io/github/stars/JeffShanCha/grokbotguide?style=flat-square&color=18181b" alt="Stars"></a>
+  <a href="https://github.com/JeffShanCha/grokbotguide/network/members"><img src="https://img.shields.io/github/forks/JeffShanCha/grokbotguide?style=flat-square&color=52525b" alt="Forks"></a>
+  <a href="https://github.com/JeffShanCha/grokbotguide/issues"><img src="https://img.shields.io/github/issues/JeffShanCha/grokbotguide?style=flat-square&color=2563eb" alt="Issues"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/code-MIT-f59e0b?style=flat-square" alt="Code License"></a>
+  <a href="./CONTENT_LICENSE.md"><img src="https://img.shields.io/badge/content-CC%20BY--SA%204.0-16a34a?style=flat-square" alt="Content License"></a>
+  <a href="./CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-14b8a6?style=flat-square" alt="PRs Welcome"></a>
+</p>
 
-> GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。
+<p align="center">
+  简体中文
+  ·
+  <a href="./README_en.md">English</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/">在线阅读</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/guide/">学习路线</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/start/what-is-grok-bot/">快速上手</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/advanced/skills-and-routines/">进阶教程</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/recipes/">实战案例</a>
+  ·
+  <a href="https://grokbotguide.ai/zh/answers/">常见问题</a>
+</p>
 
-## 技术栈
+> 从装好第一个 Bot，到让它每天替你整理收件箱、巡检网站、盯竞品、写周报。
+> 每篇都标注来源、核对日期和内容分级。如果这个项目帮你省下了摸索时间，欢迎点亮 Star，让更多人看到它。
 
-| 模块 | 选型 |
+## 在线网站
+
+**GrokBotGuide 的在线阅读地址是 [grokbotguide.ai](https://grokbotguide.ai/zh/)。** 中文在 `/zh/`，英文在 `/en/`，打开根域名会按你的地区自动跳转，也可以在右上角随时切换。
+
+<p align="center">
+  <a href="https://grokbotguide.ai/zh/">
+    <img src="./assets/readme/zh-home.png" alt="GrokBotGuide 中文首页：居中搜索框、常搜问题和两个入口按钮" width="920" />
+  </a>
+</p>
+
+README 适合快速了解项目，真正学习时更推荐打开网站：网站有站内搜索、顶部下拉导航、侧边栏目录、阅读进度、可一键复制的指令模板和中英文切换。
+
+第一次接触 Grok Bot，直接从 [学习路线](https://grokbotguide.ai/zh/guide/) 开始；已经有具体场景，就去 [实战案例](https://grokbotguide.ai/zh/recipes/) 按岗位挑一个。
+
+## 项目愿景
+
+Grok Bot 不是又一个聊天框。它是 xAI 推出的「AI 同事」：每个 Bot 有自己的名字、职责和长期记忆，在一台属于你的云端电脑上登录网站和应用，把一件事从头做到尾，只在需要审批时回来找你。
+
+这类产品最难的不是「会不会用」，而是「敢不敢交给它」。GrokBotGuide 想回答三个问题：
+
+- **怎么开始**：选哪个订阅、怎么装、第一个 Bot 该负责什么、第一个任务怎么派。
+- **怎么交给它**：怎样写清楚要求，哪些动作必须设成审批，怎么把跑通的流程存成 Skill 和定时 Routine。
+- **怎么用到真实工作里**：Gmail、Slack、X、Notion、GitHub、Stripe、Google Ads……每个组合都给出步骤、可复制的指令和权限边界。
+
+## 适合谁
+
+- **第一次用 Grok Bot 的新手**：跟着 5 篇快速上手，约 30 分钟跑通从订阅到第一个任务的完整闭环。
+- **想让 Bot 每天自动干活的人**：学会 Skills、Routines 和审批设置，把手动流程变成定时任务。
+- **运营、市场、客服、销售、财务**：按岗位找现成方案，复制指令改两行就能用。
+- **开发者和独立站站长**：GitHub PR 巡检、Cursor 云端 Agent 协作、每日网站巡检。
+- **中国用户**：订阅、付款、网络环境和 X 上的 @grok 有什么区别，有一页专门讲清楚。
+
+## 你会在这里看到什么
+
+| 内容 | 说明 |
 | --- | --- |
-| 文档框架 | Astro 7 + Starlight 0.42（中英双语、Pagefind 搜索、sitemap） |
-| 部署 | Cloudflare Workers 静态资源 + Workers Builds（连接 GitHub 自动部署） |
-| 动态接口 | `worker/index.ts`：根路径语言路由、投稿表单、模板复制计数 |
-| 数据库 | Cloudflare D1（模板复制次数、邮件订阅） |
-| 邮件 | Cloudflare Email Routing 转发 + Worker `send_email` 投稿通知 |
-| 防刷 | Cloudflare Turnstile |
+| [学习路线](https://grokbotguide.ai/zh/guide/) | 按「第一次用 / 想让它自动跑 / 有具体场景」分三条路，每条列出要读的页面和阅读时间 |
+| [快速上手](https://grokbotguide.ai/zh/start/what-is-grok-bot/) | Grok Bot 是什么、订阅怎么选、安装登录、创建第一个 Bot、派第一个任务 |
+| [进阶教程](https://grokbotguide.ai/zh/advanced/skills-and-routines/) | Skills 与 Routines、审批与安全、多 Bot 协作 |
+| [实战案例](https://grokbotguide.ai/zh/recipes/) | 24 个「Grok Bot × 工具」案例，按岗位筛选，标注风险等级和运行频率 |
+| [角色卡与模板](https://grokbotguide.ai/zh/bots/) | 写好的 Bot 职责描述、权限边界，以及派活指令、Skill、Routine 模板 |
+| [常见问题](https://grokbotguide.ai/zh/answers/) | 怎么连接 Gmail、怎么设置定时任务、用不了怎么办、国内能不能用等 9 个高频问题 |
+| [资源导航](https://grokbotguide.ai/zh/resources/) | 100 多条官方文档、作者博客、视频和 X 帖子，只写摘要并链接原文 |
+| [更新日志](https://grokbotguide.ai/zh/news/changelog/) | Grok Bot 产品与订阅变化，每条附官方来源 |
 
-## 目录结构
+## 网站一览
+
+### 顶部导航：所有教程一步直达
+
+五个下拉菜单把学习路线、快速上手、进阶教程、实战案例、资源与社区都收在顶部，热门案例和按岗位的篇数也在里面。
+
+<p align="center">
+  <img src="./assets/readme/zh-menu.png" alt="顶部「实战案例」下拉菜单：按岗位、热门案例、角色卡和模板" width="920" />
+</p>
+
+### 实战案例库：按岗位挑现成方案
+
+每张卡片拆成「Grok Bot × 工具」和一句话用途，标出岗位、难度和来源分级，点岗位标签就能筛选。
+
+<p align="center">
+  <img src="./assets/readme/zh-recipes.png" alt="实战案例库：岗位筛选和案例卡片" width="920" />
+</p>
+
+### 案例文章：一眼看清风险和频率
+
+标题下的摘要格写明适合谁、用到的应用、风险等级、运行频率和难度；正文固定为准备、步骤、可复制指令、审批与权限、注意事项。
+
+<p align="center">
+  <img src="./assets/readme/zh-article.png" alt="案例文章页：Grok Bot × Gmail，标题下有适合谁、应用、风险、频率、难度的摘要格" width="920" />
+</p>
+
+### 学习路线：先选目标，再按顺序读
+
+<p align="center">
+  <img src="./assets/readme/zh-guide.png" alt="学习路线页：三条路线、每篇的阅读时间" width="920" />
+</p>
+
+### 浅色、深色和手机端
+
+<p align="center">
+  <img src="./assets/readme/zh-theme.png" alt="同一篇教程的浅色和深色模式对比" width="920" />
+</p>
+
+<p align="center">
+  <img src="./assets/readme/zh-mobile.png" alt="手机端：首页、案例文章和侧边菜单" width="920" />
+</p>
+
+## 推荐阅读路径
+
+### 1. 第一次上手
+
+先读 [Grok Bot 是什么](https://grokbotguide.ai/zh/start/what-is-grok-bot/)，再看 [订阅怎么选](https://grokbotguide.ai/zh/start/plans/)、[安装与登录](https://grokbotguide.ai/zh/start/install/)、[创建第一个 Bot](https://grokbotguide.ai/zh/start/first-bot/) 和 [派第一个任务](https://grokbotguide.ai/zh/start/first-task/)。读完先跑一遍 [零风险案例：让 Bot 总结一份长文件](https://grokbotguide.ai/zh/recipes/summarize-a-document/)，不需要连接任何应用。
+
+### 2. 想让它每天自动跑
+
+从 [Skills 与 Routines](https://grokbotguide.ai/zh/advanced/skills-and-routines/) 开始，设定时任务之前一定先读 [审批、安全与隐私](https://grokbotguide.ai/zh/advanced/approvals-and-security/)，需要多个 Bot 配合时再看 [多 Bot 协作](https://grokbotguide.ai/zh/advanced/teams-of-bots/)。
+
+### 3. 有具体场景
+
+打开 [实战案例库](https://grokbotguide.ai/zh/recipes/) 按岗位筛选，或者直接从这几篇开始：[Gmail 每天整理收件箱](https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/)、[Slack 每日站会摘要](https://grokbotguide.ai/zh/recipes/slack-daily-standup/)、[每天早上巡检网站](https://grokbotguide.ai/zh/recipes/website-daily-check/)、[在 X 帖子下 @bot](https://grokbotguide.ai/zh/recipes/x-tag-bot/)。
+
+## 快速入口
+
+| 页面 | 适合解决什么问题 |
+| --- | --- |
+| [订阅怎么选](https://grokbotguide.ai/zh/start/plans/) | X 订阅、SuperGrok 还是 Cursor；各档价格和关联前必须知道的事 |
+| [中国用户须知](https://grokbotguide.ai/zh/answers/grok-bot-in-china/) | 国内能不能用、怎么付款、和 X 上的 @grok 有什么区别 |
+| [怎么连接 Gmail](https://grokbotguide.ai/zh/answers/how-to-connect-grok-bot-to-gmail/) | 授权步骤、只出草稿的权限设置、公司邮箱被拦怎么办 |
+| [怎么设置定时任务](https://grokbotguide.ai/zh/answers/how-to-schedule-grok-bot-routines/) | 时区、最小间隔、Test run，以及 Routine 没运行的排查清单 |
+| [用不了怎么办](https://grokbotguide.ai/zh/answers/grok-bot-not-working/) | 登录、云电脑、插件授权、@bot 没反应等常见问题的处理顺序 |
+| [关掉电脑还能运行吗](https://grokbotguide.ai/zh/answers/does-grok-bot-work-when-laptop-is-closed/) | 云端电脑和本地电脑的区别 |
+| [Grok Bot 安全吗](https://grokbotguide.ai/zh/answers/is-grok-bot-safe/) | 共享云电脑意味着什么，哪些动作一定要审批 |
+| [派活五要素](https://grokbotguide.ai/zh/templates/five-part-request/) | 任何任务都能套用的指令模板 |
+
+## 内容框架
 
 ```text
-site.config.mjs              # 仓库地址、邮箱、Turnstile 公钥、GSC 验证码、GA4 衡量 ID
-astro.config.mjs             # Starlight 配置（侧边栏、语言、组件覆盖）
-wrangler.jsonc               # Cloudflare Worker / 静态资源 / D1 / 邮件配置
-wrangler.redirect.jsonc      # www → 主域名的 301 跳转 Worker 配置
-worker/index.ts              # 语言路由 + /api/submit + /api/copy + /api/copies
-worker/redirect.ts           # www 跳转，保留路径和查询参数
-worker/migrations/           # D1 表结构
-src/content/docs/zh|en/      # 中英文内容（两边文件名一一对应）
-src/data/resources.yaml      # 外部收录（只存标题、摘要、链接、署名）
-src/data/changelog.yaml      # Grok Bot 更新日志
-src/data/contributors.yaml   # 贡献者名单
-src/data/sponsors.json       # 赞助商（为空时首页不显示赞助区）
-src/components/              # 首页、卡片列表、模板复制、资源导航、投稿表单
-src/components/overrides/    # 覆盖 Starlight 的标题、页脚、语言切换器
-templates/                   # 投稿用的文章 / 角色卡 / 模板 / 收录条目模板
-scripts/check-content.mjs    # 内容检查（CI 会跑）
+GrokBotGuide
+├─ guide        # 学习路线
+├─ start        # 快速上手（5 篇）
+├─ advanced     # 进阶教程（3 篇）
+├─ recipes      # 实战案例（24 个「Grok Bot × 工具」）
+├─ bots         # 角色卡
+├─ templates    # 派活指令、Skill、Routine 模板
+├─ answers      # 常见问题（按搜索意图组织）
+├─ resources    # 资源导航（外部资料只写摘要并链接原文）
+├─ news         # 更新日志
+└─ community    # 投稿、路线图、关于
 ```
 
-## 本地开发
+中英文内容分别在 `src/content/docs/zh/` 和 `src/content/docs/en/`，两边文件名一一对应。
+
+## 本地预览
+
+环境要求：
+
+- Node.js 22.12 及以上（版本见 [`.node-version`](./.node-version)）
+- npm
 
 ```bash
+git clone https://github.com/JeffShanCha/grokbotguide.git
+cd grokbotguide
 npm install
-npm run dev              # http://localhost:4321/zh/ ，只有静态页面，/api 不可用
-npm run check:content    # 检查 frontmatter、双语对照、收录重复
+npm run dev
 ```
 
-要连 Worker 一起测（语言跳转、投稿）：
+打开 <http://localhost:4321/zh/> 就能看到中文站，<http://localhost:4321/en/> 是英文站。改动 `src/content/docs/` 下的文章会实时刷新。
+
+构建静态站点并本地预览：
 
 ```bash
-cp .dev.vars.example .dev.vars
-npm run preview          # 先构建，再用 wrangler dev 在 http://localhost:8787 运行
+npm run build
+npx astro preview
 ```
 
-## 上线步骤（GitHub + Cloudflare + Dynadot）
-
-分两步走：第一步只要 Cloudflare 账号就能上线，先跑在 `grokbotguide.<你的子域>.workers.dev`；域名接入后再做第二步。
-数据库和邮件绑定在 `wrangler.jsonc` 里默认是注释掉的，没打开时站点照常运行：复制计数不显示，投稿只建 GitHub Issue。
-
-当前部署地址：<https://grokbotguide.ai>，备用地址：<https://grokbotguide.zhuangniuthedev.workers.dev>。站点和 `www` 跳转 Worker 均已连接 Cloudflare Workers Builds，推送到 `main` 会自动构建并部署；预览构建暂未启用。本地运行 `npm run deploy` 部署站点，运行 `npm run deploy:redirect` 部署 `www` 跳转 Worker。
-
-### 第一步：站点上线
-
-1. **连接仓库**：Cloudflare → Workers & Pages → Create → Import a repository → 选 [JeffShanCha/grokbotguide](https://github.com/JeffShanCha/grokbotguide)。
-   - Project name：`grokbotguide`（要和 `wrangler.jsonc` 的 `name` 一致）
-   - Build command：`npm run build`
-   - Deploy command：`npx wrangler deploy`
-   - 之后 push 到 `main` 自动上线；如启用 Preview builds，其他分支也可以自动生成预览链接。
-2. **域名**：`grokbotguide.ai` 已在 Dynadot 注册，域名继续由 Dynadot 管理。
-3. **Cloudflare 接管 DNS**：已添加域名并选择 Free 计划。Dynadot 的 nameserver 已改为 `luciane.ns.cloudflare.com` 和 `vern.ns.cloudflare.com`，Cloudflare 状态已变成 Active。
-4. **域名路由**：`wrangler.jsonc` 配置 `grokbotguide.ai/*` 的 Workers Route，由站点 Worker 处理所有页面和 API；`workers.dev` 地址也保留。`wrangler.redirect.jsonc` 将 `www.grokbotguide.ai/*` 交给独立的跳转 Worker，以 301 跳转到主域名并保留路径和查询参数。
-   - 跳转 Worker `grokbotguide-www` 已单独连接同一 GitHub 仓库，Production branch 为 `main`，Build command 留空，Deploy command 为 `npm run deploy:redirect`。两个 Worker 使用各自的构建流程，保持 Cloudflare 对部署目标的校验。
-
-### 第二步：投稿、通知与计数
-
-5. **Email Routing**：Cloudflare → 域名 → Email → Email Routing 启用（自动加 MX/SPF）→ 添加目标地址 `zhuangniuthedev@gmail.com` 并在 Gmail 点验证 → 新建 `hello@` / `sponsor@` / `takedown@` 三条转发规则。
-6. **D1 数据库**：Cloudflare → Storage & Databases → D1 → Create，名字填 `grokbotguide`，复制 Database ID。表会在第一次使用时自动创建，不需要跑迁移。
-7. **打开绑定**：在 `wrangler.jsonc` 里去掉 `d1_databases` 和 `send_email` 两段的注释，填入 Database ID，并在 `vars` 的右花括号后加一个逗号，提交并推送。
-8. **Turnstile**：Cloudflare → Turnstile → Add widget（域名 `grokbotguide.ai`），把 Site Key 填进 `site.config.mjs` 的 `turnstileSiteKey`，提交并推送。
-9. **Secrets**：Worker → Settings → Variables and Secrets → Add，类型选 Secret：
-   - `TURNSTILE_SECRET`：Turnstile 的 Secret Key
-   - `GITHUB_TOKEN`：GitHub → Settings → Developer settings → Fine-grained tokens，只选本仓库，权限 Issues: Read and write
-10. **邮件订阅（英文站 newsletter）**：做完第 6、7 步就自动启用，不需要额外配置。没绑定 D1 时订阅框不显示。
-    - 新订阅会存进 D1 的 `subscribers` 表，开了 `send_email` 时还会给你发一封通知邮件。
-    - 导出订阅者：`npx wrangler d1 execute grokbotguide --remote --command "SELECT email, lang, token FROM subscribers WHERE status = 'active'"`
-    - 发邮件时用你习惯的工具群发，每封邮件底部放该订阅者自己的退订链接：`https://grokbotguide.ai/api/unsubscribe?token=<token>`。
-11. **收尾**：在 GitHub 仓库建 `submission`、`article`、`bot`、`template`、`resource`、`fix`、`good first article`、`topic`、`takedown`、`broken-links` 标签；按下文接入 GSC 和 GA4。
-
-## 搜索收录（GSC）
-
-2026-10-15 已为 `grokbotguide.ai` 创建网域资源并通过 Cloudflare DNS TXT 验证，`sitemap-index.xml` 已提交并成功处理。[打开本站 GSC](https://search.google.com/search-console?resource_id=sc-domain%3Agrokbotguide.ai)。当前采用 DNS 验证，代码中的 `googleSiteVerification` 留空。
-
-在 [Google Search Console](https://search.google.com/search-console/) 添加站点，有两种验证方式：
-
-- **网域资源（推荐）**：填 `grokbotguide.ai`，将 Google 提供的 TXT 记录添加到 Cloudflare → 域名 → DNS。记录名称填 `@`，内容使用完整的 `google-site-verification=…`。回到 GSC 点击验证；这种方式不需要填写代码中的 `googleSiteVerification`，可覆盖所有协议与子域名。
-- **URL 前缀资源**：填 `https://grokbotguide.ai/`，选择「HTML 标记」，将 `<meta name="google-site-verification" content="…">` 中的 **content 值**填进 `site.config.mjs` 的 `googleSiteVerification`，不要粘贴整个标签。部署后中英文首页和文章页都会输出验证标签；根路径会跳转到对应语言首页，验证标签也在跳转后的页面中。回到 GSC 点击验证。HTML 标记不能验证网域资源。
-
-验证通过后，在 GSC → 站点地图提交 `https://grokbotguide.ai/sitemap-index.xml`。站点构建时自动生成中英文页面的 sitemap，`public/robots.txt` 也已声明该地址。用「网址检查」检查 `/zh/`、`/en/` 和重要文章页；可请求编入索引，但提交 sitemap 不保证立即收录。验证完成后保留 DNS 记录或 HTML 验证码，Google 会定期重新检查。
-
-官方说明：[所有权验证](https://support.google.com/webmasters/answer/9008080?hl=zh-Hans) · [站点地图报告](https://support.google.com/webmasters/answer/7451001?hl=zh-Hans)。
-
-## 访问统计（GA4）
-
-本站媒体资源为 `grokbotguide.ai`（ID `559001353`），网站数据流为 `GrokBotGuide Web`（ID `16129367479`），衡量 ID 为 `G-MJ72CNWDZD`，报告时区为中国时间（UTC+8）。[打开本站 GA4](https://analytics.google.com/analytics/web/?authuser=0#/a290268825p559001353/reports/intelligenthome)。
-
-1. 在 [Google Analytics](https://analytics.google.com/) 新建媒体资源 → 添加「网站」数据流，网址填 `https://grokbotguide.ai`，保持「增强型衡量」开启（自动统计页面浏览、滚动、外链点击）。
-2. 在 GA4 → 管理 → 数据流 → 对应网站数据流，复制衡量 ID（`G-` 开头），填进 `site.config.mjs` 的 `ga4MeasurementId`，提交并推送。使用衡量 ID，不是数字形式的媒体资源 ID / 数据流 ID，也不是 `GTM-` 开头的容器 ID。留空则不加载 GA4；格式错误会阻止构建。
-3. 在 GA4 → 管理 → 自定义定义里，把下面三个事件参数注册为「事件范围」的自定义维度，报表里才能按它们拆分：`template_id`、`submission_type`、`language`。
-
-站点额外上报的事件：
-
-| 事件 | 触发时机 | 参数 |
-| --- | --- | --- |
-| `copy_template` | 点击模板的「复制模板」按钮 | `template_id` |
-| `submit_contribution` | 投稿表单提交成功 | `submission_type`（article / bot / template / resource / fix） |
-| `sign_up` | 邮件订阅成功（GA4 推荐事件，可在「事件」里直接标为关键事件） | `method`（newsletter） |
-| `switch_language` | 顶栏手动切换语言 | `language`（zh / en） |
-
-隐私设置：广告相关存储全部关闭，不开启 Google 信号；来自欧洲经济区、英国和瑞士的访问默认不写入统计 Cookie（GA4 的 Consent Mode），见 `astro.config.mjs`。
-
-部署后访问中英文首页和文章页，通过 [Tag Assistant](https://tagassistant.google.com/) 检查 Google tag 是否加载，再到 GA4「实时」报告确认 `page_view`。复制一次模板可检查 `copy_template`；切换语言可检查 `switch_language`。普通报表处理较慢，以实时报告和 DebugView 为初次验证依据。站点根路径只负责语言跳转，不额外上报一次页面浏览。
-
-官方说明：[Google tag 安装](https://developers.google.com/tag-platform/gtagjs) · [页面浏览统计](https://developers.google.com/analytics/devguides/collection/ga4/views) · [自定义事件](https://developers.google.com/analytics/devguides/collection/ga4/events)。
-
-## 语言路由规则
-
-只有访问根路径 `/` 时才跳转（302），文章页永远不自动跳转：
-
-1. Cookie `lang`（用户在顶栏手动切换过）
-2. 访问者地区为 CN / HK / MO / TW → 中文
-3. 浏览器首选语言以 `zh` 开头 → 中文
-4. 其他 → 英文
-
-## 多平台资料采集
-
-2026-10-15 首轮及应用 / Skill 补充批次共新增 19 条资料，资源总数 23 条；覆盖官方、GitHub、YouTube、Reddit、LINUX DO、arXiv、作者博客与供应商教程。4 条待核验、1 条重复、1 条无关内容保留在批次报告中。新增中文 / 英文教程、Notion / DataCamp 集成、写作与 Routine 检查 Skill；支持关键词、平台、分类和原文语言组合筛选，显示关联应用，各栏目自动引用相关收录。
-
-2026-10-15 09:00 定时批次新增 5 条（多 Gmail 账号、Google Sheets、中文 A2A 桥接、官方设置与私网指南），合计 28 条；2 条重复来源、5 条待核验项已记录原因。
-
-2026-10-16 经用户审核，将 X 历史补全版中确认的 68 条按中文标题和摘要收录，合计 104 条资源；保留原帖、作者、原文语言、分类和核验限制。其余历史候选未收录。后续所有平台的定时新增都先保存候选 JSON 并展示中文预览，用户明确确认具体批次后才导入和发布。
-
-检索与摘要由当前 Codex 对话执行，入库脚本负责 URL / 内容去重、分类校验、日期与出处检查。每条保存原创双语短摘要和核验范围，不将外部分享标为本站实测。
+提交前可以跑一遍内容检查，它会检查 frontmatter、中英文对照和外部资料是否重复：
 
 ```bash
-npm run collect -- data/collection/batches/<批次>.json          # 预览
-npm run collect -- data/collection/batches/<批次>.json --write  # 入库并记录报告
-npm run test:collection                                       # 去重与质量门槛测试
+npm run check:content
 ```
 
-运行规范见 [docs/collection.md](./docs/collection.md)，来源见 [sources.json](./data/collection/sources.json)。每天北京时间 08:30 由 Grok Bot 的“铁柱”生成 X 增量，09:00 的 Codex 定时任务接收并核验，同时检索其他平台，然后交给用户审核；定时任务不自动入库、推送或发布。本地任务需要电脑开机、Codex 运行。Cloudflare 负责在获准推送后自动部署，不执行资料检索。
+本站使用 [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) 构建，内置 Pagefind 全文搜索。线上版本发布在 [grokbotguide.ai](https://grokbotguide.ai/zh/)。
 
-## 贡献
+## 设计原则
 
-见 [CONTRIBUTING.md](./CONTRIBUTING.md) 或站内的「如何投稿」页面。
+- **官方优先**：功能、价格、可用性、安全策略以 xAI 和 Cursor 官方资料为准，关键页面标注最后核对日期。
+- **如实分级**：每篇标明「依据官方文档」「来自社区实测」或「本站实测」，只有真正按步骤跑通的页面才标本站实测。
+- **新手友好**：先给能直接照做的答案，再展开步骤和原因。
+- **真实任务导向**：少讲概念，多给可复制的指令、输入、输出和检查方式。
+- **安全边界清晰**：涉及发送、付款、删除、登录和共享云电脑时，明确写出哪些动作必须设成审批。
+- **尊重原作者**：外部资料只写标题、自己写的摘要、原文链接和署名，不搬运原文和图片。
 
-## 许可
+## 事实来源
+
+本站优先引用官方资料，并在页面底部列出每篇的参考来源：
+
+- [Grok Bot 官方文档](https://docs.x.ai/grok-bot/get-started)
+- [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)
+- [The X Subscription 套餐与用量](https://docs.x.ai/x-subscription/pricing)
+- [Cursor 帮助中心：Grok Bot](https://cursor.com/help/grok-bot/plans)
+- [Grok Bot 官方使用指南](https://x.ai/bot/guides/getting-started)
+
+## 参与贡献
+
+欢迎提交：
+
+- 你亲自跑通的实战案例（写明测试日期和订阅档位）。
+- 新的「Grok Bot × 工具」组合，比如 Shopify、Search Console、飞书、Linear。
+- 常见错误和解决方法。
+- 官方文档变更后的内容更新和纠错。
+
+会用 GitHub 就提 PR，先读 [贡献指南](./CONTRIBUTING.md)；不想碰 Git，用站内的 [投稿表单](https://grokbotguide.ai/zh/community/submit/)。
+
+## 开源协议
 
 - 站点代码：[MIT](./LICENSE)
-- 文章内容：[CC BY-SA 4.0](./CONTENT_LICENSE.md)
+- 文章内容：[CC BY-SA 4.0](./CONTENT_LICENSE.md)，转载请署名并以相同协议分享。
+
+## 声明
+
+GrokBotGuide 是社区维护的独立项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。Grok 及相关名称是其各自所有者的商标。涉及功能、套餐、价格和可用性等时间敏感信息时，请以官方资料为准。
