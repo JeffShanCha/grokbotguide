@@ -1,0 +1,39 @@
+---
+// 顶栏社交图标：36×36 的图标按钮，图标 18px，和主题切换按钮同一套样式。
+import config from 'virtual:starlight/user-config';
+import { Icon } from '@astrojs/starlight/components';
+
+const links = config.social || [];
+---
+
+{
+	links.map(({ label, href, icon }) => (
+		<a {href} rel="me" class="gbg-icon-btn" aria-label={label} title={label}>
+			<Icon name={icon} size="18px" />
+		</a>
+	))
+}
+
+<style>
+	.gbg-icon-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 8px;
+		color: #52525b;
+		text-decoration: none;
+	}
+	.gbg-icon-btn:hover {
+		background: #f4f4f5;
+		color: #52525b;
+	}
+	:global(:root[data-theme='dark']) .gbg-icon-btn {
+		color: #a1a1aa;
+	}
+	:global(:root[data-theme='dark']) .gbg-icon-btn:hover {
+		background: #27272a;
+		color: #e4e4e7;
+	}
+</style>

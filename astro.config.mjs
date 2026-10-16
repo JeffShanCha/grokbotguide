@@ -66,6 +66,7 @@ export default defineConfig({
 				Header: './src/components/overrides/Header.astro',
 				LanguageSelect: './src/components/overrides/LanguageSelect.astro',
 				ThemeSelect: './src/components/overrides/ThemeSelect.astro',
+				SocialIcons: './src/components/overrides/SocialIcons.astro',
 				Sidebar: './src/components/overrides/Sidebar.astro',
 				TableOfContents: './src/components/overrides/TableOfContents.astro',
 				PageTitle: './src/components/overrides/PageTitle.astro',

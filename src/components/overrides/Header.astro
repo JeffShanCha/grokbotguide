@@ -4,7 +4,7 @@
 import { getCollection } from 'astro:content';
 import Search from '@astrojs/starlight/components/Search.astro';
 import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
-import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import SocialIcons from './SocialIcons.astro';
 import ThemeSelect from './ThemeSelect.astro';
 import LanguageSelect from './LanguageSelect.astro';
 import { formatDate, toLang, useT } from '../../i18n/ui';
@@ -191,10 +191,11 @@ const needBurger = !route.hasSidebar;
 		)
 	}
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
-		<div class="sl-flex social-icons">
+		<div class="icon-group">
 			<SocialIcons />
+			<ThemeSelect />
 		</div>
-		<ThemeSelect />
+		<span class="divider" aria-hidden="true"></span>
 		<LanguageSelect />
 	</div>
 
@@ -202,10 +203,10 @@ const needBurger = !route.hasSidebar;
 		<div class="gbg-mega-panel">
 			{needBurger && (
 				<div class="gbg-mega-mobile-extra">
-					<div class="sl-flex social-icons">
+					<div class="icon-group">
 						<SocialIcons />
+						<ThemeSelect />
 					</div>
-					<ThemeSelect />
 					<LanguageSelect />
 				</div>
 			)}
@@ -482,10 +483,23 @@ const needBurger = !route.hasSidebar;
 		justify-content: flex-end;
 		min-width: 0;
 	}
-	.right-group,
-	.social-icons {
-		gap: 0.25rem;
+	/* 右侧：图标组（GitHub、X、主题）间距 8px → 1×20px 竖线（左右各 12px）→ 语言按钮 */
+	.right-group {
 		align-items: center;
+	}
+	.icon-group {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.divider {
+		width: 1px;
+		height: 20px;
+		margin: 0 12px;
+		background: #e4e4e7;
+	}
+	:global(:root[data-theme='dark']) .divider {
+		background: #3f3f46;
 	}
 	.gbg-mega-nav {
 		display: none;

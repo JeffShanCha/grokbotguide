@@ -53,17 +53,24 @@ const label = lang === 'zh' ? '切换深色或浅色' : 'Toggle dark or light mo
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 2.375rem;
-		height: 2.375rem;
+		width: 36px;
+		height: 36px;
+		padding: 0;
 		border: 0;
-		border-radius: 0.5rem;
+		border-radius: 8px;
 		background: transparent;
-		color: var(--sl-color-gray-2);
+		color: #52525b;
 		cursor: pointer;
 	}
 	.gbg-theme-btn:hover {
-		background: var(--sl-color-gray-6);
-		color: var(--sl-color-white);
+		background: #f4f4f5;
+	}
+	:global(:root[data-theme='dark']) .gbg-theme-btn {
+		color: #a1a1aa;
+	}
+	:global(:root[data-theme='dark']) .gbg-theme-btn:hover {
+		background: #27272a;
+		color: #e4e4e7;
 	}
 	.sun {
 		display: none;
