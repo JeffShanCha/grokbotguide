@@ -2,9 +2,61 @@
 
 社区共建的 Grok Bot 实战手册 · The community playbook for Grok Bot
 
-线上地址：<https://grokbotguide.ai>（中文 `/zh/`，英文 `/en/`，根路径按访问者地区自动跳转）
+整理 Grok Bot 的入门教程、实战案例、角色卡、Skill / Routine 模板和外部资料，帮助你从第一个任务走到日常自动化。
+
+**[中文站](https://grokbotguide.ai/zh/) · [English](https://grokbotguide.ai/en/) · [学习路线](https://grokbotguide.ai/zh/guide/) · [实战案例](https://grokbotguide.ai/zh/recipes/) · [资源导航](https://grokbotguide.ai/zh/resources/)**
 
 > GrokBotGuide 是独立的社区项目，与 xAI、SpaceXAI、Cursor 无隶属或授权关系。
+
+## 网站怎么用
+
+直接打开网站即可阅读教程、查资料和复制模板。复制后的指令在你自己的 Grok Bot 中使用；本地开发和部署方法在下文。
+
+### 从你的目标开始
+
+| 你现在想做什么 | 从这里进入 | 使用方法 |
+| --- | --- | --- |
+| 第一次用 Grok Bot | [学习路线](https://grokbotguide.ai/zh/guide/#start) | 依次了解产品、选择订阅、安装登录、创建 Bot、派第一个任务，再试着[总结一份长文件](https://grokbotguide.ai/zh/recipes/summarize-a-document/) |
+| 让任务定时运行 | [进阶路线](https://grokbotguide.ai/zh/guide/#advanced) | 按顺序阅读 Skills 与 Routines、审批与安全、多 Bot 协作 |
+| 找一个具体场景 | [实战案例库](https://grokbotguide.ai/zh/recipes/) | 按岗位筛选，查看案例需要的应用、难度、运行频率和风险级别，再按步骤操作 |
+| 配置一个专职 Bot | [角色卡](https://grokbotguide.ai/zh/bots/) | 选择角色，参考职责描述、权限边界和开场指令配置自己的 Bot |
+| 直接套用指令 | [模板库](https://grokbotguide.ai/zh/templates/) | 选择指令、Skill 或 Routine 模板，点击「复制模板」，替换自己的数据来源、交付格式和审批检查点 |
+| 看别人怎么用 | [资源导航](https://grokbotguide.ai/zh/resources/) | 搜索应用或主题，组合筛选分类、平台、原文语言，阅读摘要后打开原文 |
+| 解决问题、跟进变化 | [常见问题](https://grokbotguide.ai/zh/answers/) · [更新日志](https://grokbotguide.ai/zh/news/changelog/) | 按问题查连接、定时任务、订阅和使用限制，或从更新日志查看官方公告 |
+
+### 搜索与导航
+
+- 点击首页的大搜索框或顶栏搜索，输入「Gmail」「定时任务」「网站巡检」等关键词，查找站内教程和案例。
+- 桌面端从顶栏的「学习路线 / 快速上手 / 进阶教程 / 实战案例 / 资源与社区」菜单进入各栏目；窄屏通过「菜单」展开侧边栏。
+- 顶栏可切换中英文和明暗主题。语言切换会打开当前页面的对应版本；访问根地址 [grokbotguide.ai](https://grokbotguide.ai/) 时，会优先使用你上次选择的语言，再根据地区和浏览器语言跳转。
+
+### 复制一个模板试试
+
+以[派活五要素](https://grokbotguide.ai/zh/templates/five-part-request/)为例：
+
+1. 打开模板页，点击代码块上方的「复制模板」。
+2. 将尖括号占位内容替换为你的结果、来源、约束、交付物和检查点。
+3. 粘贴到 Grok Bot，先运行一次并检查结果；需要复用或定时执行时，再参考 [Skills 与 Routines](https://grokbotguide.ai/zh/advanced/skills-and-routines/)。
+
+角色卡提供 Bot 职责与权限的写法，实战案例提供场景步骤和指令，模板库提供可复用的文本；可以围绕同一个任务搭配使用。
+
+### 筛选外部资源
+
+资源导航的搜索与站内全文搜索分开：这里可以按标题、应用、作者、标签和摘要查外部收录，再叠加「分类」「平台」「原文语言」筛选。例如，搜索 `Gmail` 后选择「实战案例」和 `X`，可以缩小到相关分享。
+
+每条资源保留作者署名、原文链接、关联应用、日期和「核验范围」。点击标题打开原文，展开「核验范围」查看实际核对了什么。原文语言指来源页面的语言；切换本站语言会切换摘要语言。也可以直接打开[实战类资源](https://grokbotguide.ai/zh/resources/?category=recipes)或[模板类资源](https://grokbotguide.ai/zh/resources/?category=templates)。
+
+### 查看来源与反馈
+
+教程和案例会标注「依据官方文档」「来自社区实测」「本站实测」等来源分级，并提供参考来源及相应的核对、更新或测试信息。外部资源的「来源核验」记录核对原文的范围。具体分级规则见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+推荐链接、分享案例或反馈过时内容，可以使用[投稿表单](https://grokbotguide.ai/zh/community/submit/)，选择相应类型；推荐链接和纠错需填写对应网址。提交成功后可通过返回的 GitHub Issue 跟踪处理进度，联系方式为选填且不包含在公开 Issue 中。直接改文档请按[贡献说明](./CONTRIBUTING.md)提交 PR。新内容与资料收录经过审核后发布。
+
+持续关注：[更新日志](https://grokbotguide.ai/zh/news/changelog/) · [作者的 X](https://x.com/shancha103) · [GitHub](https://github.com/JeffShanCha/grokbotguide)（可 Watch 仓库）。
+
+### English quick start
+
+Open the [English site](https://grokbotguide.ai/en/) and choose a [learning path](https://grokbotguide.ai/en/guide/), browse [recipes by role](https://grokbotguide.ai/en/recipes/), or copy a [template](https://grokbotguide.ai/en/templates/) into your own Grok Bot. Use the site search for guides, and the [resource directory](https://grokbotguide.ai/en/resources/) to filter external links by category, platform and source language. Each resource includes attribution and what was checked. Share a link or correction through the [submission form](https://grokbotguide.ai/en/community/submit/).
 
 ## 技术栈
 
