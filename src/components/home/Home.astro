@@ -100,9 +100,16 @@ const copy = {
 
 <div class="not-content gbg-home">
 	<!-- 1. 首屏：搜索 -->
-	<section class="hero">
+	<section class:list={['hero', lang]}>
 		<p class="eyebrow">{copy.eyebrow}</p>
-		<h1>{copy.title}</h1>
+		{
+			lang === 'zh' ? (
+				/* 中文标题文字不变，只拆成两行排版；「、」放进视觉隐藏的 span，保证标题文本完整 */
+				<h1 class="zh-title"><span class="l1">Grok Bot 中文教程</span><span class="sr-only">、</span><span class="l2">角色模板<span class="em">与</span>自动化工作流</span></h1>
+			) : (
+				<h1>{copy.title}</h1>
+			)
+		}
 		<p class="tagline">{copy.tagline}</p>
 		<p class="lead">{copy.lead}</p>
 		<button type="button" class="big-search" data-open-search>
@@ -319,6 +326,59 @@ const copy = {
 		max-width: 40rem;
 		font-size: var(--sl-text-lg);
 		color: var(--sl-color-gray-2);
+	}
+	/* 中文首屏排版（英文版不受影响） */
+	.hero.zh .eyebrow {
+		letter-spacing: 0;
+	}
+	.hero.zh h1.zh-title {
+		max-width: none;
+		margin: 0;
+		font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 1.22;
+		letter-spacing: 0;
+	}
+	.zh-title .l1,
+	.zh-title .l2 {
+		display: block;
+		white-space: nowrap;
+	}
+	.zh-title .em {
+		color: #c2410c;
+	}
+	:root:not([data-theme='light']) .zh-title .em {
+		color: var(--sl-color-text-accent);
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+	.hero.zh .tagline {
+		margin: 22px 0 0;
+		font-size: 22px;
+		font-weight: 500;
+		color: #3f3f46;
+	}
+	:root:not([data-theme='light']) .hero.zh .tagline {
+		color: var(--sl-color-gray-2);
+	}
+	.hero.zh .lead {
+		max-width: 32em;
+		font-size: 17px;
+		color: #71717a;
+		text-wrap: pretty;
+	}
+	:root:not([data-theme='light']) .hero.zh .lead {
+		color: var(--sl-color-gray-3);
 	}
 	.big-search {
 		display: flex;
@@ -609,6 +669,12 @@ const copy = {
 		}
 		.hero {
 			padding-top: 2rem;
+		}
+		.hero.zh h1.zh-title {
+			font-size: 30px;
+		}
+		.hero.zh .tagline {
+			font-size: 18px;
 		}
 		.two-col {
 			grid-template-columns: minmax(0, 1fr);
