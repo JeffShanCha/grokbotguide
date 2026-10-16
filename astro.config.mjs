@@ -5,6 +5,12 @@ import sitemap from '@astrojs/sitemap';
 
 import { SITE } from './site.config.mjs';
 import { LOCALES } from './locales.config.mjs';
+import { readdirSync } from 'node:fs';
+
+// 侧边栏分组旁显示的篇数（按中文目录统计，中英文内容保持同步）
+const countDocs = (dir) =>
+	readdirSync(new URL(`./src/content/docs/zh/${dir}/`, import.meta.url)).filter((f) => /\.mdx?$/.test(f) && !f.startsWith('index.')).length;
+const N = { recipes: countDocs('recipes'), bots: countDocs('bots'), templates: countDocs('templates'), answers: countDocs('answers') };
 const REPO = SITE.repo;
 
 // 欧洲经济区、英国、瑞士：默认不写 GA4 Cookie（只发无 Cookie 的匿名请求），其他地区正常统计。
@@ -59,6 +65,9 @@ export default defineConfig({
 			components: {
 				Header: './src/components/overrides/Header.astro',
 				LanguageSelect: './src/components/overrides/LanguageSelect.astro',
+				ThemeSelect: './src/components/overrides/ThemeSelect.astro',
+				Sidebar: './src/components/overrides/Sidebar.astro',
+				TableOfContents: './src/components/overrides/TableOfContents.astro',
 				PageTitle: './src/components/overrides/PageTitle.astro',
 				Footer: './src/components/overrides/Footer.astro',
 			},
@@ -83,6 +92,7 @@ export default defineConfig({
 				{
 					label: '快速上手',
 					translations: { en: 'Get started' },
+					badge: { text: { 'zh-CN': '约 30 分钟', en: '~30 min' } },
 					items: [{ autogenerate: { directory: 'start' } }],
 				},
 				{
@@ -93,17 +103,31 @@ export default defineConfig({
 				{
 					label: '实战案例',
 					translations: { en: 'Recipes' },
+					badge: String(N.recipes),
 					items: [
-						{ autogenerate: { directory: 'recipes' } },
+						// 只放几篇热门案例，完整列表折叠起来，侧边栏不再拉得很长
+						{ slug: 'recipes/summarize-a-document', label: '文档 · 总结一份长文件', translations: { en: 'Documents · summarize a long file' } },
+						{ slug: 'recipes/gmail-inbox-triage', label: 'Gmail · 每天整理收件箱', translations: { en: 'Gmail · daily inbox triage' } },
+						{ slug: 'recipes/google-calendar-meeting-brief', label: 'Calendar · 明天的会议简报', translations: { en: 'Calendar · tomorrow’s meeting brief' } },
+						{ slug: 'recipes/slack-daily-standup', label: 'Slack · 每日站会摘要', translations: { en: 'Slack · daily standup' } },
+						{ slug: 'recipes/website-daily-check', label: '独立站 · 每天早上巡检', translations: { en: 'Website · daily morning check' } },
+						{
+							label: `全部 ${N.recipes} 个案例`,
+							translations: { en: `All ${N.recipes} recipes` },
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'recipes' } }],
+						},
 						{
 							label: '角色卡',
 							translations: { en: 'Bot cards' },
+							badge: String(N.bots),
 							collapsed: true,
 							items: [{ autogenerate: { directory: 'bots' } }],
 						},
 						{
 							label: '模板',
 							translations: { en: 'Templates' },
+							badge: String(N.templates),
 							collapsed: true,
 							items: [{ autogenerate: { directory: 'templates' } }],
 						},
@@ -112,11 +136,13 @@ export default defineConfig({
 				{
 					label: '参考',
 					translations: { en: 'Reference' },
+					collapsed: true,
 					items: [
 						{ label: '学习路线', translations: { en: 'Learning path' }, slug: 'guide' },
 						{
 							label: '常见问题',
 							translations: { en: 'How-to & FAQ' },
+							badge: String(N.answers),
 							collapsed: true,
 							items: [{ autogenerate: { directory: 'answers' } }],
 						},

@@ -19,8 +19,10 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 
 {
 	sources.length > 0 && (
-		<section class="gbg-sources">
-			<h2>{t('meta.sources')}</h2>
+		<details class="gbg-sources">
+			<summary>
+				{t('meta.sources')}（{sources.length}）
+			</summary>
 			<ul>
 				{sources.map((s) => (
 					<li>
@@ -30,7 +32,7 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 					</li>
 				))}
 			</ul>
-		</section>
+		</details>
 	)
 }
 
@@ -73,9 +75,16 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 		padding-top: 1.5rem;
 		border-top: 1px solid var(--sl-color-hairline);
 	}
-	.gbg-sources h2 {
-		font-size: var(--sl-text-lg);
-		margin-bottom: 0.5rem;
+	.gbg-sources summary {
+		cursor: pointer;
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+	}
+	.gbg-sources ul {
+		margin: 0.6rem 0 0;
+		font-size: var(--sl-text-sm);
+		line-height: 1.9;
 	}
 	.gbg-sources ul {
 		padding-inline-start: 1.25rem;

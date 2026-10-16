@@ -1,4 +1,6 @@
 ---
+// 文章标题区：面包屑和阅读进度 → 标题 → 来源与实测状态、作者、核对日期、阅读时间 → 实战案例摘要格 → 轻量提示。
+import { getCollection } from 'astro:content';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import { formatDate, toLang, useT } from '../../i18n/ui';
 
@@ -7,7 +9,41 @@ const data = route.entry.data;
 const lang = toLang(route.locale);
 const t = useT(lang);
 const isSplash = data.template === 'splash';
-const showMeta = !isSplash && (data.grade || data.last_verified || data.author);
+const section = route.id.split('/')[1] ?? '';
+const isIndex = route.id === `${lang}/${section}`;
+
+// 面包屑：所在栏目；快速上手、进阶教程额外显示「第 N 篇，共 M 篇」和进度条
+const SECTIONS: Record<string, { zh: string; en: string; href: string }> = {
+	start: { zh: '快速上手', en: 'Get started', href: 'guide/#start' },
+	advanced: { zh: '进阶教程', en: 'Advanced', href: 'guide/#advanced' },
+	recipes: { zh: '实战案例', en: 'Recipes', href: 'recipes/' },
+	bots: { zh: '角色卡', en: 'Bot cards', href: 'bots/' },
+	templates: { zh: '模板', en: 'Templates', href: 'templates/' },
+	answers: { zh: '常见问题', en: 'How-to & FAQ', href: 'answers/' },
+	community: { zh: '社区', en: 'Community', href: 'community/about/' },
+	news: { zh: '更新', en: 'News', href: 'news/changelog/' },
+};
+const crumb = !isSplash && !isIndex ? SECTIONS[section] : undefined;
+let progress: { i: number; n: number } | undefined;
+if (crumb && (section === 'start' || section === 'advanced')) {
+	const list = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/${section}/`))).sort(
+		(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
+	);
+	const i = list.findIndex((e) => e.id === route.id);
+	if (i >= 0) progress = { i: i + 1, n: list.length };
+}
+
+// 阅读时间：中文每分钟约 400 字，英文约 200 词
+const text = (route.entry.body ?? '').replace(/```[\s\S]*?```/g, ' ').replace(/^import .*$/gm, '').replace(/<[^>]+>/g, ' ');
+const minutes = Math.max(1, Math.round(lang === 'zh' ? text.replace(/\s/g, '').length / 400 : text.split(/\s+/).filter(Boolean).length / 200));
+const c = {
+	zh: { step: (i: number, n: number) => `第 ${i} 篇，共 ${n} 篇`, pending: '待实测', read: `阅读约 ${minutes} 分钟`, checked: '最后核对', updated: '更新于', edit: '发现不一致？在 GitHub 上修改这一页' },
+	en: { step: (i: number, n: number) => `Page ${i} of ${n}`, pending: 'Not tested yet', read: `${minutes} min read`, checked: 'Last checked', updated: 'Updated', edit: 'Something differs? Edit this page on GitHub' },
+}[lang];
+const showMeta = !isSplash && !isIndex && (data.grade || data.author);
+const dateLabel = data.last_verified ? c.checked : c.updated;
+const date = data.last_verified ?? route.lastUpdated;
+
 // 实战案例文章：标题下的摘要格
 const isRecipe = /^[a-z]+\/recipes\/.+/.test(route.id);
 const summary = isRecipe
@@ -21,6 +57,25 @@ const summary = isRecipe
 	: [];
 ---
 
+{
+	crumb && (
+		<div class="gbg-crumb">
+			<a href={`/${lang}/${crumb.href}`}>{crumb[lang]}</a>
+			{progress && (
+				<>
+					<span aria-hidden="true">/</span>
+					<span>{c.step(progress.i, progress.n)}</span>
+					<span class="bar" aria-hidden="true">
+						{Array.from({ length: progress.n }, (_, k) => (
+							<i class:list={{ on: k < progress!.i }} />
+						))}
+					</span>
+				</>
+			)}
+		</div>
+	)
+}
+
 {/* 首页（splash）由 Home 组件自己渲染 h1，这里不再重复标题 */}
 {!isSplash && <Default />}
 
@@ -28,16 +83,22 @@ const summary = isRecipe
 	showMeta && (
 		<div class="gbg-meta">
 			{data.grade && <span class={`gbg-badge gbg-grade-${data.grade}`}>{t(`grade.${data.grade}`)}</span>}
-			{data.last_verified && (
-				<span>
-					{t('meta.verified')}: <time datetime={data.last_verified.toISOString()}>{formatDate(data.last_verified, lang)}</time>
-				</span>
-			)}
+			{data.needs_testing && <span class="gbg-badge gbg-pending">{c.pending}</span>}
 			{data.author && (
 				<span>
-					{t('meta.author')}: <a href={`https://github.com/${data.author}`}>@{data.author}</a>
+					{t('meta.author')} <a href={`https://github.com/${data.author}`}>@{data.author}</a>
 				</span>
 			)}
+			{date && (
+				<>
+					<span class="sep" aria-hidden="true">|</span>
+					<span>
+						{dateLabel} <time datetime={date.toISOString()}>{formatDate(date, lang)}</time>
+					</span>
+				</>
+			)}
+			<span class="sep" aria-hidden="true">|</span>
+			<span>{c.read}</span>
 		</div>
 	)
 }
@@ -56,10 +117,16 @@ const summary = isRecipe
 }
 
 {
-	!isSplash && data.needs_testing && (
-		<aside class="gbg-needs-testing" role="note">
-			{t('meta.needsTesting')}
-		</aside>
+	!isSplash && !isIndex && data.needs_testing && (
+		<p class="gbg-needs-testing" role="note">
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+				<circle cx="12" cy="12" r="9" />
+				<path d="M12 11v5M12 8h.01" />
+			</svg>
+			<span>
+				{t('meta.needsTesting')} {route.editUrl && <a href={route.editUrl.href}>{c.edit}</a>}
+			</span>
+		</p>
 	)
 }
 
@@ -118,13 +185,56 @@ const summary = isRecipe
 	.gbg-summary .risk-high::before {
 		background: #dc2626;
 	}
-	.gbg-needs-testing {
-		margin-top: 1rem;
-		padding: 0.75rem 1rem;
-		border-inline-start: 3px solid var(--sl-color-accent);
-		background: var(--sl-color-accent-low);
-		color: var(--sl-color-white);
+	.gbg-crumb {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.35rem 0.75rem;
+		margin-bottom: 0.75rem;
 		font-size: var(--sl-text-sm);
-		border-radius: 0.25rem;
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-crumb a {
+		color: var(--sl-color-gray-3);
+		text-decoration: none;
+	}
+	.gbg-crumb a:hover {
+		color: var(--sl-color-white);
+	}
+	.gbg-crumb .bar {
+		display: inline-flex;
+		gap: 3px;
+	}
+	.gbg-crumb .bar i {
+		width: 1.35rem;
+		height: 4px;
+		border-radius: 2px;
+		background: var(--sl-color-gray-5);
+	}
+	.gbg-crumb .bar i.on {
+		background: var(--sl-color-accent);
+	}
+	.gbg-meta .sep {
+		color: var(--sl-color-gray-5);
+	}
+	.gbg-needs-testing {
+		display: flex;
+		gap: 0.6rem;
+		align-items: flex-start;
+		margin: 1.25rem 0 0;
+		padding: 0.75rem 0.9rem;
+		border-radius: 0.65rem;
+		background: var(--gbg-soft-bg);
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		line-height: 1.6;
+	}
+	.gbg-needs-testing svg {
+		flex: none;
+		margin-top: 0.1rem;
+		color: var(--sl-color-gray-3);
+	}
+	.gbg-needs-testing a {
+		color: var(--sl-color-text-accent);
 	}
 </style>

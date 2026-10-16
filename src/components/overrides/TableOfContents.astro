@@ -1,0 +1,39 @@
+---
+// 右侧「本页内容」：默认目录 + 编辑、报错、回到顶部三个链接。
+import Default from '@astrojs/starlight/components/TableOfContents.astro';
+import { toLang } from '../../i18n/ui';
+
+const route = Astro.locals.starlightRoute;
+const lang = toLang(route.locale);
+const c = lang === 'zh' ? { edit: '在 GitHub 编辑', report: '报告内容错误', top: '↑ 回到顶部' } : { edit: 'Edit on GitHub', report: 'Report an error', top: '↑ Back to top' };
+---
+
+<Default />
+{
+	route.toc && (
+		<div class="gbg-toc-extra">
+			{route.editUrl && <a href={route.editUrl.href}>{c.edit}</a>}
+			<a href={`/${lang}/community/submit/`}>{c.report}</a>
+			<a href="#_top">{c.top}</a>
+		</div>
+	)
+}
+
+<style>
+	.gbg-toc-extra {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		margin-top: 1rem;
+		padding-top: 0.85rem;
+		border-top: 1px solid var(--sl-color-hairline-light);
+		font-size: var(--sl-text-xs);
+	}
+	.gbg-toc-extra a {
+		color: var(--sl-color-gray-3);
+		text-decoration: none;
+	}
+	.gbg-toc-extra a:hover {
+		color: var(--sl-color-white);
+	}
+</style>

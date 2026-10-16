@@ -1,51 +1,195 @@
 ---
-// 顶栏：在 Starlight 默认顶栏的基础上，在站点名和搜索框之间加四个主线入口。
-// 窄屏（手机、平板竖屏）不显示这排链接，主线入口在侧边栏里。
+// 顶栏：站点名 + 五个下拉菜单（学习路线 / 快速上手 / 进阶教程 / 实战案例 / 资源与社区）+ 搜索 + 图标按钮。
+// 下拉面板的内容都从内容集合里读取，新增页面会自动出现。窄屏不显示下拉菜单，改用侧边栏菜单。
+import { getCollection } from 'astro:content';
 import Search from '@astrojs/starlight/components/Search.astro';
 import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
-import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import ThemeSelect from './ThemeSelect.astro';
 import LanguageSelect from './LanguageSelect.astro';
-import { toLang } from '../../i18n/ui';
+import { formatDate, toLang, useT } from '../../i18n/ui';
 
 const route = Astro.locals.starlightRoute;
 const lang = toLang(route.locale);
-const id = route.id; // 形如 zh/recipes/gmail-inbox-triage
-const NAV = {
-	zh: [
-		{ label: '学习路线', href: 'guide/', match: ['guide'] },
-		{ label: '快速上手', href: 'start/what-is-grok-bot/', match: ['start'] },
-		{ label: '进阶教程', href: 'advanced/skills-and-routines/', match: ['advanced'] },
-		{ label: '实战案例', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
-	],
-	en: [
-		{ label: 'Learning path', href: 'guide/', match: ['guide'] },
-		{ label: 'Get started', href: 'start/what-is-grok-bot/', match: ['start'] },
-		{ label: 'Advanced', href: 'advanced/skills-and-routines/', match: ['advanced'] },
-		{ label: 'Recipes', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
-	],
+const t = useT(lang);
+const u = (p: string) => `/${lang}/${p}`;
+const section = route.id.split('/')[1] ?? '';
+
+const docs = await getCollection('docs', (e) => e.id.startsWith(`${lang}/`));
+const order = (a: (typeof docs)[number], b: (typeof docs)[number]) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99);
+const list = (s: string) => docs.filter((e) => e.id.startsWith(`${lang}/${s}/`)).sort(order);
+const start = list('start');
+const advanced = list('advanced');
+const recipes = list('recipes');
+const bots = list('bots');
+const templates = list('templates');
+const answers = list('answers');
+const short = (title: string) => title.replace(/[：:？?].*$/, '');
+const split = (title: string) => {
+	const m = title.match(/^Grok Bot\s*×\s*(.+?)\s*[：:]\s*(.+)$/);
+	return m ? { tool: m[1], task: m[2] } : { tool: '', task: title };
+};
+const POPULAR = ['summarize-a-document', 'gmail-inbox-triage', 'google-calendar-meeting-brief', 'website-daily-check', 'x-tag-bot', 'youtube-competitor-watch'];
+const popular = POPULAR.map((s) => recipes.find((e) => e.id === `${lang}/recipes/${s}`)).filter((e) => !!e);
+const ROLE_ORDER = ['assistant', 'marketing', 'operations', 'engineering', 'support', 'sales', 'finance', 'recruiting'];
+const roleCount = new Map<string, number>();
+for (const e of recipes) if (e.data.role) roleCount.set(e.data.role, (roleCount.get(e.data.role) ?? 0) + 1);
+const roles = ROLE_ORDER.filter((r) => roleCount.has(r));
+const featured = recipes.find((e) => e.id === `${lang}/recipes/gmail-inbox-triage`);
+const news = (await getCollection('changelog')).sort((a, b) => +b.data.date - +a.data.date).slice(0, 2);
+const zeroRisk = recipes.find((e) => e.id === `${lang}/recipes/summarize-a-document`);
+
+const c = {
+	zh: {
+		menus: { path: '学习路线', start: '快速上手', advanced: '进阶教程', recipes: '实战案例', more: '资源与社区' },
+		paths: [
+			{ k: '我是第一次用', t: '装好应用，派出第一个任务', d: `${start.length} 篇快速上手`, href: 'guide/#start' },
+			{ k: '我想让它自动跑', t: 'Skill、Routine 和审批', d: `${advanced.length} 篇进阶教程`, href: 'guide/#advanced' },
+			{ k: '我有具体场景', t: '直接找现成方案', d: `${recipes.length} 个实战案例，按岗位筛选`, href: 'recipes/' },
+		],
+		pathHelpT: '不知道选哪条？',
+		pathHelpD: '看完整学习路线，每一步要读哪些页面、大概多久。',
+		pathHelpCta: '查看学习路线 →',
+		startAll: `全部 ${start.length} 篇 →`,
+		zeroBadge: '读完先做这个',
+		zeroT: '零风险测试：让 Bot 总结一份长文件',
+		zeroD: '不连接任何应用，不对外产生动作，最适合第一次验证效果。',
+		go: '开始 →',
+		faq: '常见问题',
+		faqAll: `全部 ${answers.length} 个问题 →`,
+		safeT: '设 Routine 之前必读',
+		safeD: '所有 Bot 共用一台云电脑，登录状态彼此可见。先把发送、付款、删除放在审批之后。',
+		safeCta: '审批与安全 →',
+		byRole: '按岗位',
+		hot: '热门案例',
+		ready: '拿来就用',
+		bots: '角色卡',
+		tpl: '模板',
+		submit: '投稿一个案例',
+		allRecipes: `查看全部 ${recipes.length} 个案例 →`,
+		featuredBadge: '精选',
+		shot: '实测截图整理中',
+		res: '资源',
+		community: '社区',
+		news: '最新动态',
+		newsAll: '完整更新日志 →',
+		resLinks: [
+			['更新日志', 'news/changelog/'],
+			['资源导航', 'resources/'],
+			[`常见问题 · ${answers.length}`, 'answers/'],
+			['中国用户须知', 'answers/grok-bot-in-china/'],
+		],
+		comLinks: [
+			['加入知识星球', 'community/join/'],
+			['投稿', 'community/submit/'],
+			['共建路线图', 'community/roadmap/'],
+			['赞助合作', 'community/sponsor/'],
+			['关于本站', 'community/about/'],
+		],
+		close: '关闭菜单',
+		mainNav: '主导航',
+	},
+	en: {
+		menus: { path: 'Learning path', start: 'Get started', advanced: 'Advanced', recipes: 'Recipes', more: 'Resources' },
+		paths: [
+			{ k: 'First time', t: 'Install the app and send a first task', d: `${start.length} Get started pages`, href: 'guide/#start' },
+			{ k: 'Run on its own', t: 'Skills, routines and approvals', d: `${advanced.length} advanced guides`, href: 'guide/#advanced' },
+			{ k: 'I have a use case', t: 'Start from a ready-made recipe', d: `${recipes.length} recipes, filter by role`, href: 'recipes/' },
+		],
+		pathHelpT: 'Not sure which?',
+		pathHelpD: 'See the full learning path: which pages to read at each step and roughly how long.',
+		pathHelpCta: 'Open the learning path →',
+		startAll: `All ${start.length} pages →`,
+		zeroBadge: 'Do this first',
+		zeroT: 'Zero-risk test: summarize a long document',
+		zeroD: 'No apps to connect and nothing sent anywhere. The best way to see it work the first time.',
+		go: 'Start →',
+		faq: 'How-to & FAQ',
+		faqAll: `All ${answers.length} questions →`,
+		safeT: 'Read before setting up routines',
+		safeD: 'All your Bots share one cloud computer and can see each other’s sign-ins. Put sending, paying and deleting behind approval first.',
+		safeCta: 'Approvals and security →',
+		byRole: 'By role',
+		hot: 'Popular recipes',
+		ready: 'Ready to use',
+		bots: 'Bot cards',
+		tpl: 'Templates',
+		submit: 'Submit a recipe',
+		allRecipes: `See all ${recipes.length} recipes →`,
+		featuredBadge: 'Featured',
+		shot: 'Screenshots coming',
+		res: 'Resources',
+		community: 'Community',
+		news: 'Latest updates',
+		newsAll: 'Full changelog →',
+		resLinks: [
+			['Changelog', 'news/changelog/'],
+			['Resources', 'resources/'],
+			[`How-to & FAQ · ${answers.length}`, 'answers/'],
+			['Using Grok Bot from China', 'answers/grok-bot-in-china/'],
+		],
+		comLinks: [
+			['Stay in the loop', 'community/join/'],
+			['Submit', 'community/submit/'],
+			['Roadmap', 'community/roadmap/'],
+			['Sponsor', 'community/sponsor/'],
+			['About', 'community/about/'],
+		],
+		close: 'Close menu',
+		mainNav: 'Main',
+	},
 }[lang];
-const section = id.split('/')[1] ?? '';
+
+const MENUS = [
+	{ id: 'path', match: ['guide'] },
+	{ id: 'start', match: ['start'] },
+	{ id: 'advanced', match: ['advanced', 'answers'] },
+	{ id: 'recipes', match: ['recipes', 'bots', 'templates'] },
+	{ id: 'more', match: ['news', 'resources', 'community'] },
+] as const;
+const num = (i: number) => String(i + 1).padStart(2, '0');
+// 没有侧边栏的页面（首页）在窄屏上没有 Starlight 自带的菜单按钮，这里补一个，打开后把所有下拉内容竖着排开
+const needBurger = !route.hasSidebar;
 ---
 
-<div class="header">
+<gbg-mega class="header">
 	<div class="title-wrapper sl-flex">
 		<SiteTitle />
 	</div>
-	<div class="center sl-flex print:hidden">
-		<nav class="gbg-topnav" aria-label={lang === 'zh' ? '主导航' : 'Main'}>
-			{
-				NAV.map((n) => (
-					<a href={`/${lang}/${n.href}`} aria-current={n.match.includes(section) ? 'page' : undefined}>
-						{n.label}
-					</a>
-				))
-			}
-		</nav>
-		<div class="search">
-			<Search />
-		</div>
+	<nav class="gbg-mega-nav" aria-label={c.mainNav}>
+		{
+			MENUS.map((m) => (
+				<button
+					type="button"
+					class="gbg-mega-btn"
+					data-menu={m.id}
+					aria-expanded="false"
+					aria-controls={`gbg-panel-${m.id}`}
+					data-current={(m.match as readonly string[]).includes(section) ? 'true' : undefined}
+				>
+					{c.menus[m.id]}
+					<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="m6 9 6 6 6-6" />
+					</svg>
+				</button>
+			))
+		}
+	</nav>
+	<div class="search sl-flex print:hidden">
+		<Search />
 	</div>
+	{
+		needBurger && (
+			<button type="button" class="gbg-mega-burger" data-menu="all" aria-expanded="false" aria-label={lang === 'zh' ? '打开菜单' : 'Open menu'}>
+				<svg class="open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<path d="M4 7h16M4 12h16M4 17h16" />
+				</svg>
+				<svg class="close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<path d="M6 6l12 12M18 6 6 18" />
+				</svg>
+			</button>
+		)
+	}
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
 		<div class="sl-flex social-icons">
 			<SocialIcons />
@@ -53,7 +197,271 @@ const section = id.split('/')[1] ?? '';
 		<ThemeSelect />
 		<LanguageSelect />
 	</div>
-</div>
+
+	<div class="gbg-mega-layer" hidden>
+		<div class="gbg-mega-panel">
+			{needBurger && (
+				<div class="gbg-mega-mobile-extra">
+					<div class="sl-flex social-icons">
+						<SocialIcons />
+					</div>
+					<ThemeSelect />
+					<LanguageSelect />
+				</div>
+			)}
+			<!-- 学习路线 -->
+			<section id="gbg-panel-path" data-panel="path" hidden>
+				<h2 class="ph">{c.menus.path}</h2>
+				<div class="grid g-path">
+					{
+						c.paths.map((p) => (
+							<a class="card" href={u(p.href)}>
+								<span class="k">{p.k}</span>
+								<strong>{p.t}</strong>
+								<span class="d">{p.d}</span>
+							</a>
+						))
+					}
+					<div class="soft">
+						<strong>{c.pathHelpT}</strong>
+						<p>{c.pathHelpD}</p>
+						<a class="more" href={u('guide/')}>{c.pathHelpCta}</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- 快速上手 -->
+			<section id="gbg-panel-start" data-panel="start" hidden>
+				<h2 class="ph">{c.menus.start}</h2>
+				<div class="grid g-start">
+					<div class="items two">
+						{
+							start.map((e, i) => (
+								<a class="mi" href={`/${e.id}/`} aria-current={route.id === e.id ? 'page' : undefined}>
+									<span class="n">{num(i)}</span>
+									<span>
+										<strong>{short(e.data.title)}</strong>
+										<span class="d">{e.data.description}</span>
+									</span>
+								</a>
+							))
+						}
+						<a class="mi more" href={u('guide/#start')}>{c.startAll}</a>
+					</div>
+					{
+						zeroRisk && (
+							<div class="soft warm">
+								<span class="pill">{c.zeroBadge}</span>
+								<strong>{c.zeroT}</strong>
+								<p>{c.zeroD}</p>
+								<a class="more" href={`/${zeroRisk.id}/`}>
+									{c.go}
+								</a>
+							</div>
+						)
+					}
+				</div>
+			</section>
+
+			<!-- 进阶教程 -->
+			<section id="gbg-panel-advanced" data-panel="advanced" hidden>
+				<h2 class="ph">{c.menus.advanced}</h2>
+				<div class="grid g-adv">
+					<div class="items">
+						<div class="h">{c.menus.advanced}</div>
+						{
+							advanced.map((e, i) => (
+								<a class="mi" href={`/${e.id}/`} aria-current={route.id === e.id ? 'page' : undefined}>
+									<span class="n">{num(i)}</span>
+									<span>
+										<strong>{short(e.data.title)}</strong>
+										<span class="d">{e.data.description}</span>
+									</span>
+								</a>
+							))
+						}
+					</div>
+					<div class="items">
+						<div class="h">{c.faq}</div>
+						{
+							answers.slice(0, 4).map((e) => (
+								<a class="ml" href={`/${e.id}/`}>
+									{e.data.title}
+								</a>
+							))
+						}
+						<a class="ml more" href={u('answers/')}>{c.faqAll}</a>
+					</div>
+					<div class="soft amber">
+						<strong>{c.safeT}</strong>
+						<p>{c.safeD}</p>
+						<a class="more" href={u('advanced/approvals-and-security/')}>{c.safeCta}</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- 实战案例 -->
+			<section id="gbg-panel-recipes" data-panel="recipes" hidden>
+				<h2 class="ph">{c.menus.recipes}</h2>
+				<div class="grid g-rec">
+					<div class="items">
+						<div class="h">{c.byRole}</div>
+						{
+							roles.map((r) => (
+								<a class="ml" href={u(`recipes/?role=${r}`)}>
+									{t(`role.${r as 'sales'}`)}
+									<span class="c">{roleCount.get(r)}</span>
+								</a>
+							))
+						}
+					</div>
+					<div class="items">
+						<div class="h">{c.hot}</div>
+						{
+							popular.map((e) => {
+								const { tool, task } = split(e.data.title);
+								return (
+									<a class="mi row" href={`/${e.id}/`}>
+										<span class="tool">{tool}</span>
+										<span class="task">{task}</span>
+									</a>
+								);
+							})
+						}
+						<a class="mi more" href={u('recipes/')}>{c.allRecipes}</a>
+					</div>
+					<div class="items">
+						<div class="h">{c.ready}</div>
+						<a class="ml" href={u('bots/')}>
+							{c.bots}
+							<span class="c">{bots.length}</span>
+						</a>
+						<a class="ml" href={u('templates/')}>
+							{c.tpl}
+							<span class="c">{templates.length}</span>
+						</a>
+						{
+							templates.slice(0, 2).map((e) => (
+								<a class="ml" href={`/${e.id}/`}>
+									{short(e.data.title).replace(/（.*）$/, '')}
+								</a>
+							))
+						}
+						<span class="sep" />
+						<a class="ml" href={u('community/submit/')}>{c.submit}</a>
+					</div>
+					{
+						featured && (
+							<a class="card feat" href={`/${featured.id}/`}>
+								<span class="shot">{c.shot}</span>
+								<span class="pill">{c.featuredBadge}</span>
+								<strong>{split(featured.data.title).tool}：{split(featured.data.title).task}</strong>
+								<span class="d">{featured.data.apps.join(' · ')}</span>
+							</a>
+						)
+					}
+				</div>
+			</section>
+
+			<!-- 资源与社区 -->
+			<section id="gbg-panel-more" data-panel="more" hidden>
+				<h2 class="ph">{c.menus.more}</h2>
+				<div class="grid g-more">
+					<div class="items">
+						<div class="h">{c.res}</div>
+						{
+							c.resLinks.map(([label, href]) => (
+								<a class="ml" href={u(href)}>
+									{label}
+								</a>
+							))
+						}
+					</div>
+					<div class="items">
+						<div class="h">{c.community}</div>
+						{
+							c.comLinks.map(([label, href]) => (
+								<a class="ml" href={u(href)}>
+									{label}
+								</a>
+							))
+						}
+					</div>
+					<div class="soft">
+						<div class="h">{c.news}</div>
+						<ul class="news">
+							{
+								news.map((n) => (
+									<li>
+										<time datetime={n.data.date.toISOString()}>{formatDate(n.data.date, lang)}</time>
+										<a href={n.data.url} rel="noopener">
+											{lang === 'zh' ? n.data.zh : n.data.en}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+						<a class="more" href={u('news/changelog/')}>{c.newsAll}</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<button type="button" class="gbg-mega-backdrop" aria-label={c.close} tabindex="-1" hidden></button>
+</gbg-mega>
+
+<script>
+	class GbgMega extends HTMLElement {
+		connectedCallback() {
+			const layer = this.querySelector<HTMLElement>('.gbg-mega-layer')!;
+			const backdrop = this.querySelector<HTMLButtonElement>('.gbg-mega-backdrop')!;
+			const buttons = [...this.querySelectorAll<HTMLButtonElement>('.gbg-mega-btn, .gbg-mega-burger')];
+			const panels = [...this.querySelectorAll<HTMLElement>('[data-panel]')];
+			const hover = matchMedia('(hover: hover) and (pointer: fine)');
+			let current = '';
+			let timer: number | undefined;
+
+			const set = (id: string) => {
+				current = id;
+				buttons.forEach((b) => b.setAttribute('aria-expanded', String(b.dataset.menu === id)));
+				panels.forEach((p) => (p.hidden = id !== 'all' && p.dataset.panel !== id));
+				layer.hidden = backdrop.hidden = !id;
+				layer.classList.toggle('all', id === 'all');
+				document.documentElement.classList.toggle('gbg-menu-open', id === 'all');
+			};
+			const later = (fn: () => void, ms: number) => {
+				clearTimeout(timer);
+				timer = window.setTimeout(fn, ms);
+			};
+
+			buttons.forEach((b) => {
+				b.addEventListener('click', () => set(current === b.dataset.menu ? '' : b.dataset.menu!));
+				if (b.dataset.menu === 'all') return;
+				b.addEventListener('mouseenter', () => {
+					if (hover.matches) later(() => set(b.dataset.menu!), current ? 0 : 120);
+				});
+				b.addEventListener('mouseleave', () => hover.matches && later(() => set(''), 200));
+			});
+			layer.addEventListener('mouseenter', () => clearTimeout(timer));
+			layer.addEventListener('mouseleave', () => hover.matches && current !== 'all' && later(() => set(''), 200));
+			backdrop.addEventListener('click', () => set(''));
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && current) {
+					const btn = buttons.find((b) => b.dataset.menu === current);
+					set('');
+					btn?.focus();
+				}
+			});
+			// 焦点移出整个菜单时收起
+			this.addEventListener('focusout', (e) => {
+				const next = e.relatedTarget as Node | null;
+				if (current && next && !this.contains(next)) set('');
+			});
+			window.addEventListener('pageshow', () => set(''));
+		}
+	}
+	customElements.define('gbg-mega', GbgMega);
+</script>
 
 <style>
 	.header {
@@ -69,73 +477,377 @@ const section = id.split('/')[1] ?? '';
 		margin: -0.25rem;
 		min-width: 0;
 	}
-	.center {
-		align-items: center;
-		gap: 1.5rem;
-		min-width: 0;
-	}
 	.search {
-		display: flex;
 		flex: 1 1 auto;
+		justify-content: flex-end;
 		min-width: 0;
-	}
-	.gbg-topnav {
-		display: none;
-		gap: 1.25rem;
-		flex: none;
-		font-size: var(--sl-text-sm);
-	}
-	.gbg-topnav a {
-		color: var(--sl-color-gray-2);
-		text-decoration: none;
-		padding-block: 0.35rem;
-		border-bottom: 2px solid transparent;
-		white-space: nowrap;
-	}
-	.gbg-topnav a:hover {
-		color: var(--sl-color-white);
-	}
-	.gbg-topnav a[aria-current='page'] {
-		color: var(--sl-color-white);
-		border-bottom-color: var(--sl-color-accent);
 	}
 	.right-group,
 	.social-icons {
-		gap: 1rem;
+		gap: 0.25rem;
 		align-items: center;
 	}
-	.social-icons::after {
-		content: '';
-		height: 2rem;
-		border-inline-end: 1px solid var(--sl-color-gray-5);
+	.gbg-mega-nav {
+		display: none;
+		align-items: center;
+		gap: 0 1.25rem;
+		height: 100%;
+	}
+	.gbg-mega-btn {
+		all: unset;
+		box-sizing: border-box;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		height: 100%;
+		padding: 0 0.15rem;
+		font-size: 0.9375rem;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.gbg-mega-btn svg {
+		transition: transform 0.15s ease;
+	}
+	.gbg-mega-btn:hover,
+	.gbg-mega-btn[aria-expanded='true'],
+	.gbg-mega-btn[data-current] {
+		color: var(--sl-color-white);
+	}
+	.gbg-mega-btn[data-current],
+	.gbg-mega-btn[aria-expanded='true'] {
+		box-shadow: inset 0 -2px 0 var(--sl-color-accent);
+		font-weight: 600;
+	}
+	.gbg-mega-btn[aria-expanded='true'] svg {
+		transform: rotate(180deg);
+	}
+	.gbg-mega-btn:focus-visible {
+		outline: 2px solid var(--sl-color-accent);
+		outline-offset: -4px;
+		border-radius: 4px;
+	}
+
+	/* 下拉面板 */
+	.gbg-mega-layer {
+		position: fixed;
+		inset-inline: 0;
+		top: var(--sl-nav-height);
+		z-index: 30;
+		background: var(--sl-color-bg-nav);
+		border-bottom: 1px solid var(--sl-color-hairline);
+		box-shadow: 0 18px 40px rgba(24, 24, 27, 0.1);
+	}
+	.gbg-mega-layer[hidden],
+	.gbg-mega-backdrop[hidden],
+	[data-panel][hidden] {
+		display: none;
+	}
+	.gbg-mega-backdrop {
+		position: fixed;
+		inset: var(--sl-nav-height) 0 0 0;
+		z-index: 29;
+		border: 0;
+		padding: 0;
+		background: rgba(24, 24, 27, 0.18);
+		cursor: default;
+	}
+	.gbg-mega-panel {
+		max-width: 85rem;
+		margin: 0 auto;
+		padding: 1.75rem 2rem 1.5rem;
+		font-size: var(--sl-text-sm);
+		line-height: 1.55;
+		color: var(--sl-color-gray-2);
+	}
+	.grid {
+		display: grid;
+		gap: 1rem 1.75rem;
+		align-items: start;
+	}
+	.g-path {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) 16rem;
+		align-items: stretch;
+	}
+	.g-start {
+		grid-template-columns: minmax(0, 1fr) 19rem;
+	}
+	.g-adv {
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 19rem;
+	}
+	.g-rec {
+		grid-template-columns: 11rem minmax(0, 1fr) 12rem 18rem;
+	}
+	.g-more {
+		grid-template-columns: 13rem 13rem minmax(0, 1fr);
+	}
+	.items {
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+	}
+	.items.two {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.25rem 1rem;
+	}
+	.h {
+		padding: 0 0.75rem 0.4rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-3);
+	}
+	.mi,
+	.ml {
+		display: flex;
+		gap: 0.75rem;
+		padding: 0.6rem 0.75rem;
+		border-radius: 0.6rem;
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	.ml {
+		justify-content: space-between;
+		padding-block: 0.45rem;
+	}
+	.mi:hover,
+	.ml:hover {
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-white);
+	}
+	.mi[aria-current] {
+		background: var(--sl-color-accent-low);
+	}
+	.mi strong {
+		display: block;
+		color: var(--sl-color-white);
+		font-weight: 600;
+	}
+	.mi .d,
+	.card .d {
+		font-size: 0.8125rem;
+		color: var(--sl-color-gray-3);
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.n {
+		flex: none;
+		font-family: var(--sl-font-mono);
+		font-size: 0.75rem;
+		color: var(--sl-color-text-accent);
+		padding-top: 0.2rem;
+	}
+	.mi.row {
+		padding-block: 0.45rem;
+	}
+	.tool {
+		flex: 0 0 5.5rem;
+		font-weight: 600;
+		color: var(--sl-color-white);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.task {
+		min-width: 0;
+	}
+	.more,
+	.mi.more,
+	.ml.more {
+		color: var(--sl-color-text-accent);
+		font-weight: 500;
+		text-decoration: none;
+	}
+	.c {
+		color: var(--sl-color-gray-4);
+	}
+	.sep {
+		height: 1px;
+		margin: 0.5rem 0.75rem;
+		background: var(--sl-color-hairline-light);
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		padding: 1.15rem;
+		border: 1px solid var(--gbg-card-border);
+		border-radius: 0.9rem;
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	.card:hover {
+		border-color: color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
+		background: color-mix(in srgb, var(--sl-color-accent-low) 45%, transparent);
+	}
+	.card .k {
+		font-family: var(--sl-font-mono);
+		font-size: 0.75rem;
+		color: var(--sl-color-text-accent);
+	}
+	.card strong {
+		color: var(--sl-color-white);
+		font-weight: 600;
+	}
+	.soft {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		padding: 1.15rem;
+		border-radius: 0.9rem;
+		background: var(--gbg-soft-bg);
+	}
+	.soft strong {
+		color: var(--sl-color-white);
+		font-weight: 600;
+		font-size: 0.9375rem;
+	}
+	.soft p {
+		margin: 0;
+		flex: 1;
+	}
+	.soft .h {
+		padding: 0;
+	}
+	.warm {
+		background: var(--sl-color-accent-low);
+		border: 1px solid color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
+	}
+	.amber {
+		border: 1px solid color-mix(in srgb, #d97706 35%, transparent);
+	}
+	.pill {
+		align-self: flex-start;
+		font-size: 0.75rem;
+		padding: 0.05rem 0.55rem;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--sl-color-accent) 15%, transparent);
+		color: var(--sl-color-accent-high);
+		font-weight: 500;
+	}
+	.feat .shot {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 6.5rem;
+		margin-bottom: 0.25rem;
+		border: 1px dashed var(--sl-color-gray-5);
+		border-radius: 0.6rem;
+		background: var(--sl-color-gray-6);
+		font-size: 0.8125rem;
+		color: var(--sl-color-gray-3);
+	}
+	.news {
+		list-style: none;
+		margin: 0.35rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+	.news li {
+		display: flex;
+		gap: 0.9rem;
+		margin: 0;
+	}
+	.news time {
+		flex: 0 0 5.5rem;
+		font-family: var(--sl-font-mono);
+		font-size: 0.8125rem;
+		color: var(--sl-color-gray-3);
+	}
+	.news a {
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	.news a:hover {
+		color: var(--sl-color-white);
+	}
+
+	.ph {
+		display: none;
+	}
+	.gbg-mega-burger {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		margin-inline-end: -0.5rem;
+		border: 0;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+	}
+	.gbg-mega-burger .close,
+	.gbg-mega-burger[aria-expanded='true'] .open {
+		display: none;
+	}
+	.gbg-mega-burger[aria-expanded='true'] .close {
+		display: block;
+	}
+	.gbg-mega-mobile-extra {
+		display: none;
+	}
+	/* 「全部」模式（窄屏菜单）：所有面板竖着排，单列 */
+	.gbg-mega-layer.all {
+		max-height: calc(100dvh - var(--sl-nav-height));
+		overflow-y: auto;
+	}
+	.all .gbg-mega-panel {
+		padding: 0.5rem 1rem 2rem;
+	}
+	.all [data-panel] {
+		padding: 1rem 0 1.25rem;
+		border-bottom: 1px solid var(--sl-color-hairline-light);
+	}
+	.all .ph {
+		display: block;
+		margin: 0 0 0.75rem;
+		font-size: 1.05rem;
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+	.all .grid,
+	.all .items.two {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.all .card.feat,
+	.all .soft.amber {
+		display: none;
+	}
+	.all .gbg-mega-mobile-extra {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid var(--sl-color-hairline-light);
+	}
+	:global(html.gbg-menu-open) {
+		overflow: hidden;
 	}
 	@media (min-width: 72rem) {
-		.gbg-topnav {
+		.gbg-mega-nav {
 			display: flex;
+		}
+		.gbg-mega-burger {
+			display: none;
 		}
 	}
 	@media (min-width: 50rem) {
-		:global(:root[data-has-sidebar]) {
-			--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
-		}
-		:global(:root:not([data-has-toc])) {
-			--__toc-width: 0rem;
+		.search :global(button[data-open-modal]) {
+			width: 17rem;
+			max-width: 100%;
+			border-radius: 0.6rem;
+			background: var(--gbg-soft-bg);
+			border-color: var(--sl-color-hairline-shade);
 		}
 		.header {
-			--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
-			--__main-column-fr: calc(
-				(
-						100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
-							(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
-							var(--sl-content-width)
-					) / 2
-			);
-			display: grid;
-			grid-template-columns:
-				minmax(calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))), auto)
-				1fr
-				auto;
-			align-content: center;
+			display: flex;
+			gap: 1.75rem;
 		}
 	}
 </style>

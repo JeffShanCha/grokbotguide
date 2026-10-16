@@ -1,17 +1,17 @@
 ---
-// 首页：5 个区块。Hero → 从哪开始 → 精选案例 → 最新动态 + 常见问题 → 社区。
+// 首页：居中搜索式首屏 → 精选案例 → 最新动态 + 常见问题 → 社区。
+// 教程、案例和模板的入口都在顶栏下拉菜单里（手机上在侧边菜单里），首页只放最常用的几条路。
 // 数量（案例数、问题数等）都从内容里统计，新增页面后自动更新。
 import { getCollection, getEntry } from 'astro:content';
 import { SITE } from '../../../site.config.mjs';
 import sponsors from '../../data/sponsors.json';
 import Newsletter from '../Newsletter.astro';
-import { formatDate, type Lang, useT } from '../../i18n/ui';
+import { formatDate, type Lang } from '../../i18n/ui';
 
 interface Props {
 	lang: Lang;
 }
 const { lang } = Astro.props;
-const t = useT(lang);
 const p = (path: string) => `/${lang}/${path}`;
 
 const docs = await getCollection('docs', (e) => e.id.startsWith(`${lang}/`));
@@ -19,17 +19,13 @@ const inSection = (s: string) => docs.filter((e) => e.id.startsWith(`${lang}/${s
 const byOrder = <T extends { data: { sidebar: { order?: number } } }>(a: T, b: T) =>
 	(a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99);
 const n = {
-	start: inSection('start').length,
-	advanced: inSection('advanced').length,
 	recipes: inSection('recipes').length,
 	bots: inSection('bots').length,
-	templates: inSection('templates').length,
 	answers: inSection('answers').length,
 };
 const questions = inSection('answers').sort(byOrder).slice(0, 4);
 const news = (await getCollection('changelog')).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3);
 const featured = await getEntry('docs', `${lang}/recipes/gmail-inbox-triage`);
-const featuredTitle = featured?.data.title ?? '';
 const featuredTested = featured?.data.grade === 'tested';
 
 const copy = {
@@ -37,84 +33,64 @@ const copy = {
 		eyebrow: '社区共建 · 非官方 · 中英双语',
 		title: 'Grok Bot 中文教程、角色模板与自动化工作流',
 		tagline: '给自己招一个不下班的 AI 同事',
-		lead: '30 分钟装好第一个 Bot，再挑一个现成方案，让它每天替你干活。每篇内容都标注来源、验证状态与更新时间。',
+		lead: 'Grok Bot 中文实战手册。教程、案例和模板都收在上面的菜单里，也可以直接搜。每篇都标注来源、验证状态与更新时间。',
+		search: '想让 Bot 帮你做什么？比如：整理 Gmail、每天巡检网站',
+		hotLabel: '常搜：',
+		hot: [
+			['订阅怎么选', 'answers/grok-bot-vs-cursor-plans/'],
+			['连接 Gmail', 'answers/how-to-connect-grok-bot-to-gmail/'],
+			['定时任务', 'answers/how-to-schedule-grok-bot-routines/'],
+			['国内能用吗', 'answers/grok-bot-in-china/'],
+		],
 		ctaPrimary: '30 分钟上手 →',
 		ctaSecondary: `看 ${n.recipes} 个实战案例`,
 		stats: `${n.recipes} 个实战案例 · ${n.answers} 个常见问题 · ${n.bots} 张角色卡 · 开源在 GitHub`,
-		chat: {
-			user: '每个工作日 9 点整理收件箱，把需要我回复的邮件列出来。先别回复任何人。',
-			bot: '收到。我会在云电脑上打开 Gmail，按发件人和截止时间分类，只生成清单和回复草稿。',
-			approvalTitle: '需要你审批',
-			approval: '创建 Routine「每日收件箱整理」· 工作日 09:00',
-			allow: '允许一次',
-			deny: '拒绝',
-			done: '已创建，下次运行：明天 09:00',
-		},
-		startTitle: '从哪开始？',
-		startLead: '按你现在的情况选一条路，读完那几页就够了。',
-		paths: [
-			{ k: '01 · 第一次用', t: '装好应用，派出第一个任务', d: '选订阅、安装登录、建第一个 Bot，再用一份文档做零风险测试。', meta: `${n.start} 篇教程 · 动手约 30 分钟`, cta: '从这里开始 →', href: 'guide/#start' },
-			{ k: '02 · 让它自动跑', t: '把流程变成每天的 Routine', d: '把跑通的做法存成 Skill，设定时间表，配好哪些动作必须你点头。', meta: `${n.advanced} 篇进阶教程`, cta: '进阶教程 →', href: 'guide/#advanced' },
-			{ k: '03 · 找现成方案', t: '按岗位挑一个直接用', d: 'Gmail、Slack、X、Notion、GitHub……每个案例都有可复制的指令。', meta: `${n.recipes} 个案例 · ${n.bots} 张角色卡 · ${n.templates} 个模板`, cta: '打开案例库 →', href: 'recipes/' },
-		],
-		featuredBadge: '精选案例',
-		featuredLead: '每天两次扫一遍收件箱：分类打标签、起草回复，把需要你处理的事列成简报发到 Slack。发送这一步始终留给你。',
-		featuredSteps: ['连接 Gmail，只开读取、草稿、打标签', '告诉 Bot 你的标签和写信风格', '手动跑一次，检查分类和草稿', '存成 Routine：工作日 8:00 和 14:00'],
-		featuredTags: ['Gmail', 'Slack', '入门'],
+		featuredBadge: '本周精选',
+		featuredLead: '每天两次扫一遍收件箱：分类打标签、起草回复，把需要你处理的事列成简报。发送这一步始终留给你。',
 		featuredStatus: featuredTested ? '本站实测' : '待实测',
 		featuredCta: '看完整步骤 →',
 		shotTitle: '实测截图整理中',
-		shotText: '本站正在用 SuperGrok 实测这个案例，Bot 发到 Slack 的真实简报会放在这里。',
-		shotCta: '你跑通了？投稿你的实测',
+		shotText: '本站正在实测这个案例，Bot 发到 Slack 的真实简报会放在这里。',
+		shotCta: '你跑通了？投稿你的实测 →',
 		newsTitle: '最新动态',
-		newsMore: '完整更新日志 →',
+		newsMore: '全部 →',
 		faqTitle: '常见问题',
 		faqMore: '全部问题 →',
 		communityTitle: '一起把 Grok Bot 用明白',
-		communityLead: '每日动态、实战答疑、模板首发在知识星球。跑通一个流程？投稿一篇实测，署名并链接到你的主页。',
+		communityLead: '每日动态、实战答疑、模板首发在知识星球。投稿一篇实测，署名并链接到你的主页。',
 		communityCta: '加入知识星球',
-		communityCta2: '投稿一篇实测',
+		communityCta2: '投稿',
 		sponsorsTitle: '赞助商',
 	},
 	en: {
 		eyebrow: 'Community-built · Unofficial · English & 中文',
 		title: 'Grok Bot Guides, Templates & Automation Workflows',
 		tagline: 'Hire an AI teammate that never clocks out',
-		lead: 'Set up your first Bot in 30 minutes, then pick a ready-made recipe and let it work for you every day. Every page shows its sources, verification status and last update.',
+		lead: 'A hands-on Grok Bot handbook. Guides, recipes and templates are in the menu above, or just search. Every page shows its sources, verification status and last update.',
+		search: 'What should your Bot do? e.g. triage Gmail, check my website daily',
+		hotLabel: 'Popular:',
+		hot: [
+			['Which plan', 'answers/grok-bot-vs-cursor-plans/'],
+			['Connect Gmail', 'answers/how-to-connect-grok-bot-to-gmail/'],
+			['Schedule routines', 'answers/how-to-schedule-grok-bot-routines/'],
+			['Is it safe?', 'answers/is-grok-bot-safe/'],
+		],
 		ctaPrimary: 'Start in 30 minutes →',
 		ctaSecondary: `Browse ${n.recipes} recipes`,
 		stats: `${n.recipes} recipes · ${n.answers} how-to answers · ${n.bots} Bot cards · open source on GitHub`,
-		chat: {
-			user: 'Every weekday at 9am, triage my inbox and list the emails I need to answer. Do not reply to anyone yet.',
-			bot: 'Got it. I will open Gmail on the cloud computer, sort by sender and deadline, and only prepare a list and draft replies.',
-			approvalTitle: 'Needs your approval',
-			approval: 'Create routine "Daily inbox triage" · weekdays 09:00',
-			allow: 'Allow once',
-			deny: 'Deny',
-			done: 'Created. Next run: tomorrow 09:00',
-		},
-		startTitle: 'Where to start?',
-		startLead: 'Pick the path that matches where you are. Read those pages and you are set.',
-		paths: [
-			{ k: '01 · First time', t: 'Install the app and send a first task', d: 'Choose a plan, install and sign in, create a Bot, then run a zero-risk test on a document.', meta: `${n.start} guides · about 30 minutes hands-on`, cta: 'Start here →', href: 'guide/#start' },
-			{ k: '02 · Run on its own', t: 'Turn a workflow into a daily routine', d: 'Save what works as a skill, put it on a schedule and decide which actions need your approval.', meta: `${n.advanced} advanced guides`, cta: 'Advanced guides →', href: 'guide/#advanced' },
-			{ k: '03 · Ready-made', t: 'Pick a recipe for your role', d: 'Gmail, Slack, X, Notion, GitHub… every recipe has a prompt you can copy.', meta: `${n.recipes} recipes · ${n.bots} Bot cards · ${n.templates} templates`, cta: 'Open the library →', href: 'recipes/' },
-		],
-		featuredBadge: 'Featured recipe',
-		featuredLead: 'Twice a day the Bot sweeps your inbox: labels mail, drafts replies and sends you a Slack briefing of what needs you. Sending always stays with you.',
-		featuredSteps: ['Connect Gmail with read, drafts and labels only', 'Tell the Bot your labels and writing style', 'Run it once by hand and check labels and drafts', 'Save it as a routine: weekdays 8:00 and 14:00'],
-		featuredTags: ['Gmail', 'Slack', 'Beginner'],
+		featuredBadge: 'Featured this week',
+		featuredLead: 'Twice a day the Bot sweeps your inbox: labels mail, drafts replies and sends you a briefing of what needs you. Sending always stays with you.',
 		featuredStatus: featuredTested ? 'Tested here' : 'Not tested yet',
 		featuredCta: 'See all the steps →',
 		shotTitle: 'Screenshots coming',
-		shotText: 'We are testing this recipe on SuperGrok. The real Slack briefing from the Bot will go here.',
-		shotCta: 'Got it working? Share your test',
+		shotText: 'We are testing this recipe. The real Slack briefing from the Bot will go here.',
+		shotCta: 'Got it working? Share your test →',
 		newsTitle: 'Latest updates',
-		newsMore: 'Full changelog →',
+		newsMore: 'All →',
 		faqTitle: 'Common questions',
 		faqMore: 'All questions →',
 		communityTitle: 'Stay in the loop',
-		communityLead: 'New guides and templates by email, on X, or by watching the repo. Ran a workflow yourself? Share your test and get credited.',
+		communityLead: 'New guides and templates by email, on X, or by watching the repo. Share a test run and get credited.',
 		communityCta: 'Follow on X',
 		communityCta2: 'Share a test run',
 		sponsorsTitle: 'Sponsors',
@@ -123,70 +99,42 @@ const copy = {
 ---
 
 <div class="not-content gbg-home">
-	<!-- 1. Hero -->
+	<!-- 1. 首屏：搜索 -->
 	<section class="hero">
-		<div class="hero-copy">
-			<p class="eyebrow">{copy.eyebrow}</p>
-			<h1>{copy.title}</h1>
-			<p class="tagline">{copy.tagline}</p>
-			<p class="lead">{copy.lead}</p>
-			<div class="actions">
-				<a class="btn btn-primary" href={p('guide/')}>{copy.ctaPrimary}</a>
-				<a class="btn" href={p('recipes/')}>{copy.ctaSecondary}</a>
-			</div>
-			<p class="stats">{copy.stats}</p>
+		<p class="eyebrow">{copy.eyebrow}</p>
+		<h1>{copy.title}</h1>
+		<p class="tagline">{copy.tagline}</p>
+		<p class="lead">{copy.lead}</p>
+		<button type="button" class="big-search" data-open-search>
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+				<circle cx="11" cy="11" r="7"></circle>
+				<path d="m20 20-3.5-3.5"></path>
+			</svg>
+			<span>{copy.search}</span>
+			<kbd>Ctrl K</kbd>
+		</button>
+		<p class="hot">
+			<span>{copy.hotLabel}</span>
+			{copy.hot.map(([label, href]) => <a href={p(href)}>{label}</a>)}
+		</p>
+		<div class="actions">
+			<a class="btn btn-primary" href={p('guide/')}>{copy.ctaPrimary}</a>
+			<a class="btn" href={p('recipes/')}>{copy.ctaSecondary}</a>
 		</div>
-		<div class="chat" aria-hidden="true">
-			<div class="chat-bar"><span></span><span></span><span></span></div>
-			<div class="msg user">{copy.chat.user}</div>
-			<div class="msg bot">{copy.chat.bot}</div>
-			<div class="msg approval">
-				<strong>{copy.chat.approvalTitle}</strong>
-				<span>{copy.chat.approval}</span>
-				<div class="approval-actions"><b>{copy.chat.allow}</b><i>{copy.chat.deny}</i></div>
-			</div>
-			<div class="msg done">✓ {copy.chat.done}</div>
-		</div>
+		<p class="stats">{copy.stats}</p>
 	</section>
 
-	<!-- 2. 从哪开始 -->
-	<section>
-		<h2>{copy.startTitle}</h2>
-		<p class="section-lead">{copy.startLead}</p>
-		<div class="paths">
-			{
-				copy.paths.map((s) => (
-					<a class="path" href={p(s.href)}>
-						<span class="k">{s.k}</span>
-						<h3>{s.t}</h3>
-						<p>{s.d}</p>
-						<span class="meta">{s.meta}</span>
-						<span class="cta">{s.cta}</span>
-					</a>
-				))
-			}
-		</div>
-	</section>
-
-	<!-- 3. 精选案例 -->
+	<!-- 2. 精选案例 -->
 	{
 		featured && (
 			<section class="featured">
 				<div class="featured-copy">
 					<span class="badge-soft">{copy.featuredBadge}</span>
-					<h2>{featuredTitle}</h2>
-					<p class="section-lead">{copy.featuredLead}</p>
-					<ol class="steps">
-						{copy.featuredSteps.map((s, i) => (
-							<li>
-								<span>{i + 1}</span>
-								{s}
-							</li>
-						))}
-					</ol>
+					<h2>{featured.data.title}</h2>
+					<p>{copy.featuredLead}</p>
 					<div class="gbg-tags">
-						{copy.featuredTags.map((tag) => (
-							<span class="gbg-badge">{tag}</span>
+						{featured.data.apps.map((app) => (
+							<span class="gbg-badge">{app}</span>
 						))}
 						<span class:list={['gbg-badge', featuredTested ? 'gbg-grade-tested' : 'gbg-pending']}>{copy.featuredStatus}</span>
 					</div>
@@ -198,14 +146,14 @@ const copy = {
 					<div class="shot-box">
 						<strong>{copy.shotTitle}</strong>
 						<span>{copy.shotText}</span>
-						<a href={p('community/submit/')}>{copy.shotCta} →</a>
+						<a href={p('community/submit/')}>{copy.shotCta}</a>
 					</div>
 				</figure>
 			</section>
 		)
 	}
 
-	<!-- 4. 最新动态 + 常见问题 -->
+	<!-- 3. 最新动态 + 常见问题 -->
 	<section class="two-col">
 		<div class="news">
 			<div class="section-head">
@@ -242,18 +190,18 @@ const copy = {
 		</div>
 	</section>
 
-	<!-- 5. 社区 -->
+	<!-- 4. 社区 -->
 	<section class="community">
-		<div>
+		<div class="community-copy">
 			<h2>{copy.communityTitle}</h2>
 			<p>{copy.communityLead}</p>
 			{lang === 'en' && <Newsletter variant="compact" />}
 		</div>
 		<div class="actions">
-			<a class="btn btn-primary" href={lang === 'zh' ? SITE.zsxq : SITE.x}>
+			<a class="btn btn-accent" href={lang === 'zh' ? SITE.zsxq : SITE.x}>
 				{copy.communityCta}
 			</a>
-			<a class="btn" href={p('community/submit/')}>
+			<a class="btn btn-ghost" href={p('community/submit/')}>
 				{copy.communityCta2}
 			</a>
 		</div>
@@ -275,58 +223,59 @@ const copy = {
 	}
 </div>
 
+<script>
+	// 首屏的大搜索框：打开 Starlight 自带的搜索弹窗
+	document.querySelectorAll<HTMLButtonElement>('[data-open-search]').forEach((b) =>
+		b.addEventListener('click', (e) => {
+			// 先让这次点击结束，再打开弹窗，避免被弹窗的「点外面就关闭」逻辑立刻关掉
+			e.stopPropagation();
+			requestAnimationFrame(() => document.querySelector<HTMLButtonElement>('site-search button[data-open-modal]')?.click());
+		})
+	);
+</script>
+
 <style>
 	.gbg-home {
 		display: flex;
 		flex-direction: column;
-		gap: 4.5rem;
-		padding-block: 1rem 2rem;
+		gap: 4rem;
+		padding-block: 0 2rem;
 	}
-	.gbg-home :is(h1, h2, h3) {
+	.gbg-home :is(h1, h2) {
 		font-family: var(--gbg-display);
-	}
-	.gbg-home h2 {
-		font-size: var(--sl-text-3xl);
-		line-height: 1.25;
 		color: var(--sl-color-white);
 		margin: 0;
-	}
-	.section-lead {
-		margin: 0.5rem 0 0;
-		color: var(--sl-color-gray-2);
 	}
 	.btn {
 		display: inline-flex;
 		align-items: center;
 		min-height: 3rem;
-		padding: 0 1.4rem;
-		border-radius: 0.65rem;
-		border: 1px solid var(--sl-color-gray-5);
+		padding: 0 1.5rem;
+		border-radius: 0.75rem;
+		border: 1px solid var(--sl-color-hairline-shade);
 		color: var(--sl-color-white);
 		text-decoration: none;
-		font-weight: 600;
+		font-weight: 500;
 	}
 	.btn:hover {
-		border-color: var(--sl-color-gray-3);
+		border-color: var(--sl-color-gray-4);
 	}
 	.btn-primary {
-		background: var(--sl-color-accent);
-		border-color: var(--sl-color-accent);
-		color: #0b0b0b;
-		font-weight: 700;
-	}
-	:root[data-theme='light'] .btn-primary {
-		color: #fff;
+		background: var(--sl-color-white);
+		border-color: var(--sl-color-white);
+		color: var(--sl-color-black);
+		font-weight: 600;
 	}
 	.btn-primary:hover {
-		border-color: var(--sl-color-accent-high);
+		border-color: var(--sl-color-white);
+		opacity: 0.9;
 	}
 	.btn-outline {
 		align-self: flex-start;
 		min-height: 2.75rem;
-		border-color: var(--sl-color-accent);
+		padding: 0 1.1rem;
+		border-color: color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
 		color: var(--sl-color-text-accent);
-		font-weight: 500;
 	}
 	.actions {
 		display: flex;
@@ -334,245 +283,141 @@ const copy = {
 		gap: 0.75rem;
 	}
 
-	/* 1. Hero */
+	/* 1. 首屏 */
 	.hero {
-		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-		gap: 3rem;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-		padding-top: 2rem;
+		text-align: center;
+		padding: 4.5rem 0 1rem;
 	}
 	.eyebrow {
+		margin: 0 0 1rem;
 		font-family: var(--sl-font-mono);
 		font-size: var(--sl-text-xs);
-		letter-spacing: 0.08em;
+		letter-spacing: 0.06em;
 		color: var(--sl-color-text-accent);
-		margin: 0 0 1rem;
 	}
 	.hero h1 {
-		font-size: clamp(2rem, 4.2vw, 3.1rem);
-		line-height: 1.12;
-		color: var(--sl-color-white);
-		margin: 0 0 0.85rem;
+		max-width: 60rem;
+		font-size: clamp(2rem, 4.6vw, 3.25rem);
+		line-height: 1.15;
 		letter-spacing: -0.01em;
 	}
 	.tagline {
+		margin: 0.85rem 0 0;
 		font-size: var(--sl-text-xl);
 		font-weight: 600;
-		color: var(--sl-color-accent-high);
-		margin: 0 0 1rem;
+		color: var(--sl-color-text-accent);
 	}
 	.lead {
+		margin: 1rem 0 0;
+		max-width: 40rem;
 		font-size: var(--sl-text-lg);
 		color: var(--sl-color-gray-2);
-		margin: 0 0 1.75rem;
-		max-width: 36rem;
 	}
-	.stats {
-		margin: 1.5rem 0 0;
+	.big-search {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		width: 100%;
+		max-width: 37.5rem;
+		min-height: 3.5rem;
+		margin-top: 2rem;
+		padding: 0 1rem;
+		border: 1px solid var(--sl-color-hairline-shade);
+		border-radius: 0.9rem;
+		background: var(--sl-color-black);
+		box-shadow: 0 4px 16px rgba(24, 24, 27, 0.06);
+		color: var(--sl-color-gray-3);
+		font: inherit;
+		text-align: start;
+		cursor: text;
+	}
+	.big-search:hover {
+		border-color: var(--sl-color-gray-4);
+	}
+	.big-search span {
+		flex: 1;
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.big-search kbd {
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-xs);
+		padding: 0 0.35rem;
+		border: 1px solid var(--sl-color-hairline-shade);
+		border-radius: 0.3rem;
+	}
+	.hot {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 1rem 0 0;
 		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-3);
 	}
-	.chat {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7rem;
-		padding: 1.25rem;
-		border: 1px solid var(--gbg-card-border);
-		border-radius: 1rem;
-		background: var(--gbg-card-bg);
-		font-size: var(--sl-text-sm);
-		box-shadow: 0 20px 60px -30px rgba(0, 0, 0, 0.5);
-	}
-	.chat-bar {
-		display: flex;
-		gap: 0.35rem;
-		margin-bottom: 0.25rem;
-	}
-	.chat-bar span {
-		width: 0.6rem;
-		height: 0.6rem;
-		border-radius: 50%;
-		background: var(--sl-color-gray-5);
-	}
-	.msg {
-		padding: 0.7rem 0.85rem;
-		border-radius: 0.75rem;
-		max-width: 88%;
-		opacity: 0;
-		animation: pop 0.4s ease forwards;
-	}
-	.msg.user {
-		align-self: flex-end;
-		background: var(--sl-color-accent-low);
-		border: 1px solid color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
-		color: var(--sl-color-white);
-		border-radius: 0.75rem 0.75rem 0.25rem 0.75rem;
-		animation-delay: 0.2s;
-	}
-	.msg.bot {
+	.hot a {
+		padding: 0.15rem 0.75rem;
+		border-radius: 999px;
 		background: var(--sl-color-gray-6);
-		color: var(--sl-color-gray-1);
-		border-radius: 0.75rem 0.75rem 0.75rem 0.25rem;
-		animation-delay: 1.2s;
-	}
-	.msg.approval {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
-		max-width: 100%;
-		border: 1px solid var(--sl-color-accent);
-		color: var(--sl-color-gray-1);
-		animation-delay: 2.2s;
-	}
-	.msg.approval strong {
-		color: var(--sl-color-text-accent);
-	}
-	.approval-actions {
-		display: flex;
-		gap: 0.5rem;
-		margin-top: 0.25rem;
-	}
-	.approval-actions b,
-	.approval-actions i {
-		font-style: normal;
-		padding: 0.2rem 0.75rem;
-		border-radius: 0.5rem;
-		border: 1px solid var(--sl-color-gray-5);
-		font-weight: 600;
-		font-size: var(--sl-text-xs);
-	}
-	.approval-actions b {
-		background: var(--sl-color-accent);
-		border-color: var(--sl-color-accent);
-		color: #0b0b0b;
-	}
-	.msg.done {
-		color: #16a34a;
-		animation-delay: 3.2s;
-	}
-	:root:not([data-theme='light']) .msg.done {
-		color: #6ee7a8;
-	}
-	@keyframes pop {
-		from {
-			opacity: 0;
-			transform: translateY(6px);
-		}
-		to {
-			opacity: 1;
-			transform: none;
-		}
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.msg {
-			animation: none;
-			opacity: 1;
-		}
-	}
-
-	/* 2. 从哪开始 */
-	.paths {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-		gap: 1.25rem;
-		margin-top: 1.75rem;
-	}
-	.path {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-		padding: 1.75rem;
-		border: 1px solid var(--gbg-card-border);
-		border-radius: 1rem;
-		background: var(--gbg-card-bg);
 		color: var(--sl-color-gray-2);
 		text-decoration: none;
-		transition: border-color 0.15s ease;
 	}
-	.path:hover {
-		border-color: var(--sl-color-accent);
-	}
-	.path .k {
-		font-family: var(--sl-font-mono);
-		font-size: var(--sl-text-sm);
-		color: var(--sl-color-text-accent);
-	}
-	.path h3 {
-		margin: 0;
-		font-size: var(--sl-text-xl);
-		line-height: 1.35;
+	.hot a:hover {
 		color: var(--sl-color-white);
 	}
-	.path p {
-		margin: 0;
-		flex: 1;
+	.hero .actions {
+		justify-content: center;
+		margin-top: 2rem;
 	}
-	.path .meta {
+	.stats {
+		margin: 1.25rem 0 0;
 		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-3);
 	}
-	.path .cta {
-		color: var(--sl-color-text-accent);
-		font-weight: 500;
-	}
 
-	/* 3. 精选案例 */
+	/* 2. 精选案例 */
 	.featured {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
-		gap: 2.5rem;
-		padding: 2.5rem;
-		border: 1px solid var(--gbg-card-border);
+		gap: 2rem;
+		padding: 2.25rem;
+		border: 1px solid var(--sl-color-hairline);
 		border-radius: 1.25rem;
-		background: var(--gbg-card-bg);
+		background: var(--gbg-soft-bg);
 	}
 	.featured-copy {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 0.85rem;
 		min-width: 0;
 	}
 	.featured h2 {
 		font-size: var(--sl-text-2xl);
+		font-weight: 600;
+		line-height: 1.35;
 	}
-	.badge-soft {
-		align-self: flex-start;
-		font-size: var(--sl-text-xs);
-		padding: 0.15rem 0.65rem;
-		border-radius: 999px;
-		background: var(--sl-color-accent-low);
-		color: var(--sl-color-accent-high);
-	}
-	.steps {
-		list-style: none;
+	.featured p {
 		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.6rem;
-		color: var(--sl-color-gray-1);
-	}
-	.steps li {
-		display: flex;
-		gap: 0.9rem;
-		align-items: baseline;
-		margin: 0;
-	}
-	.steps span {
-		font-family: var(--sl-font-mono);
-		color: var(--sl-color-text-accent);
+		color: var(--sl-color-gray-2);
 	}
 	.featured .gbg-tags {
 		margin: 0;
 		padding: 0;
 	}
-	.gbg-pending {
-		border-color: #a16207;
-		color: #a16207;
-	}
-	:root:not([data-theme='light']) .gbg-pending {
-		color: #facc15;
+	.badge-soft {
+		align-self: flex-start;
+		font-size: var(--sl-text-xs);
+		padding: 0.1rem 0.65rem;
+		border-radius: 999px;
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-accent-high);
+		font-weight: 500;
 	}
 	.shot {
 		margin: 0;
@@ -581,16 +426,17 @@ const copy = {
 	}
 	.shot-box {
 		flex: 1;
-		min-height: 18rem;
+		min-height: 15rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 0.6rem;
-		padding: 2rem;
+		gap: 0.5rem;
+		padding: 1.5rem;
 		text-align: center;
 		border: 2px dashed var(--sl-color-gray-5);
 		border-radius: 0.9rem;
+		background: var(--sl-color-black);
 		color: var(--sl-color-gray-3);
 		font-size: var(--sl-text-sm);
 	}
@@ -601,9 +447,10 @@ const copy = {
 	.shot-box a,
 	.section-head a {
 		color: var(--sl-color-text-accent);
+		text-decoration: none;
 	}
 
-	/* 4. 动态 + 问题 */
+	/* 3. 动态 + 问题 */
 	.two-col {
 		display: grid;
 		grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -614,10 +461,11 @@ const copy = {
 		align-items: baseline;
 		justify-content: space-between;
 		gap: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.75rem;
 	}
 	.section-head h2 {
-		font-size: var(--sl-text-2xl);
+		font-size: var(--sl-text-xl);
+		font-weight: 600;
 	}
 	.section-head a {
 		font-size: var(--sl-text-sm);
@@ -635,14 +483,14 @@ const copy = {
 	.news li {
 		display: flex;
 		gap: 1.25rem;
-		padding: 1rem 0;
 		margin: 0;
+		padding: 0.85rem 0;
 		border-bottom: 1px solid var(--sl-color-hairline);
+		font-size: var(--sl-text-sm);
 	}
 	.news time {
-		flex: 0 0 6.5rem;
+		flex: 0 0 6rem;
 		font-family: var(--sl-font-mono);
-		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-3);
 	}
 	.news a {
@@ -656,47 +504,69 @@ const copy = {
 	.faq ul {
 		display: flex;
 		flex-direction: column;
-		gap: 0.6rem;
+		gap: 0.5rem;
 	}
 	.faq li {
 		margin: 0;
 	}
 	.faq ul a {
 		display: block;
-		padding: 0.85rem 1rem;
-		border: 1px solid var(--gbg-card-border);
+		padding: 0.75rem 1rem;
+		border: 1px solid var(--sl-color-hairline);
 		border-radius: 0.65rem;
 		color: var(--sl-color-gray-1);
 		text-decoration: none;
+		font-size: var(--sl-text-sm);
 	}
 	.faq ul a:hover {
-		border-color: var(--sl-color-accent);
+		border-color: color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
 		color: var(--sl-color-white);
 	}
 
-	/* 5. 社区 */
+	/* 4. 社区：深色卡片 */
 	.community {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		gap: 1.5rem 2.5rem;
-		padding: 2.5rem;
-		border: 1px solid color-mix(in srgb, var(--sl-color-accent) 40%, transparent);
+		padding: 2rem 2.25rem;
 		border-radius: 1.25rem;
-		background: var(--sl-color-accent-low);
+		background: #18181b;
+		border: 1px solid #27272a;
+		color: #d4d4d8;
 	}
-	.community > div:first-child {
+	.community-copy {
 		flex: 1 1 26rem;
 		min-width: 0;
 	}
 	.community h2 {
-		font-size: var(--sl-text-2xl);
-		margin-bottom: 0.5rem;
+		color: #ffffff;
+		font-size: var(--sl-text-xl);
+		font-weight: 600;
+		margin-bottom: 0.4rem;
 	}
 	.community p {
 		margin: 0;
-		color: var(--sl-color-gray-2);
+		color: #d4d4d8;
+	}
+	.btn-accent {
+		background: #ff6a2b;
+		border-color: #ff6a2b;
+		color: #18181b;
+		font-weight: 600;
+	}
+	.btn-ghost {
+		border-color: #52525b;
+		color: #ffffff;
+	}
+	.btn-ghost:hover {
+		border-color: #a1a1aa;
+	}
+	.community :global(.gbg-newsletter input[type='email']) {
+		background: #27272a;
+		border-color: #3f3f46;
+		color: #ffffff;
 	}
 	.sponsors {
 		display: flex;
@@ -710,12 +580,11 @@ const copy = {
 		.gbg-home {
 			gap: 3rem;
 		}
-		.hero,
+		.hero {
+			padding-top: 2rem;
+		}
 		.two-col {
 			grid-template-columns: minmax(0, 1fr);
-		}
-		.hero {
-			padding-top: 0.5rem;
 		}
 		.featured,
 		.community {

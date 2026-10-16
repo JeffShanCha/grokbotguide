@@ -1,0 +1,64 @@
+---
+// 侧边栏：手机菜单顶部加四个主线入口（桌面端由顶栏下拉菜单承担）。
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import { toLang } from '../../i18n/ui';
+
+const route = Astro.locals.starlightRoute;
+const lang = toLang(route.locale);
+const section = route.id.split('/')[1] ?? '';
+const quick = {
+	zh: [
+		{ label: '学习路线', href: 'guide/', match: ['guide'] },
+		{ label: '快速上手', href: 'start/what-is-grok-bot/', match: ['start'] },
+		{ label: '进阶教程', href: 'advanced/skills-and-routines/', match: ['advanced'] },
+		{ label: '实战案例', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
+	],
+	en: [
+		{ label: 'Learning path', href: 'guide/', match: ['guide'] },
+		{ label: 'Get started', href: 'start/what-is-grok-bot/', match: ['start'] },
+		{ label: 'Advanced', href: 'advanced/skills-and-routines/', match: ['advanced'] },
+		{ label: 'Recipes', href: 'recipes/', match: ['recipes', 'bots', 'templates'] },
+	],
+}[lang];
+---
+
+<nav class="gbg-quick md:sl-hidden" aria-label={lang === 'zh' ? '主线入口' : 'Main sections'}>
+	{
+		quick.map((q) => (
+			<a href={`/${lang}/${q.href}`} aria-current={q.match.includes(section) ? 'true' : undefined}>
+				{q.label}
+			</a>
+		))
+	}
+</nav>
+<Default />
+
+<style>
+	.gbg-quick {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.5rem;
+		margin-bottom: 1.25rem;
+	}
+	.gbg-quick a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.75rem;
+		border-radius: 0.65rem;
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-gray-1);
+		text-decoration: none;
+		font-size: 0.9375rem;
+	}
+	@media (min-width: 50rem) {
+		.gbg-quick {
+			display: none;
+		}
+	}
+	.gbg-quick a[aria-current] {
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-text-accent);
+		font-weight: 600;
+	}
+</style>
