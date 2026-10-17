@@ -37,7 +37,7 @@
 
 ## 在线网站
 
-**GrokBotGuide 的在线阅读地址是 [grokbotguide.ai](https://grokbotguide.ai/zh/)。** 中文在 `/zh/`，英文在 `/en/`，打开根域名会按你的地区自动跳转，也可以在右上角随时切换。
+**GrokBotGuide 的在线阅读地址是 [grokbotguide.ai](https://grokbotguide.ai/zh/)。** 中文在 `/zh/`，英文在 `/en/`，打开根域名会优先使用你上次选择的语言，再根据地区和浏览器语言跳转，也可以在右上角随时切换。
 
 <p align="center">
   <a href="https://grokbotguide.ai/zh/">
@@ -51,7 +51,6 @@ README 适合快速了解项目，真正学习时更推荐打开网站：网站�
 
 ## 网站怎么用
 
-
 直接打开网站即可阅读教程、查资料和复制模板。复制后的指令在你自己的 Grok Bot 中使用；本地开发和部署方法在下文。
 
 ### 从你的目标开始
@@ -60,17 +59,54 @@ README 适合快速了解项目，真正学习时更推荐打开网站：网站�
 | --- | --- | --- |
 | 第一次用 Grok Bot | [学习路线](https://grokbotguide.ai/zh/guide/#start) | 依次了解产品、选择订阅、安装登录、创建 Bot、派第一个任务，再试着[总结一份长文件](https://grokbotguide.ai/zh/recipes/summarize-a-document/) |
 | 让任务定时运行 | [进阶路线](https://grokbotguide.ai/zh/guide/#advanced) | 按顺序阅读 Skills 与 Routines、审批与安全、多 Bot 协作 |
-| 找一个具体场景 | [实战案例库](https://grokbotguide.ai/zh/recipes/) | 按岗位筛选，查看案例需要的应用、难度、运行频率和风险级别，再按步骤操作 |
+| 找一个具体场景 | [完整版教程总览](https://grokbotguide.ai/zh/recipes/topics/) | 按工具、任务或五个专题筛选，下载材料，按阶段练习并验收 |
 | 配置一个专职 Bot | [角色卡](https://grokbotguide.ai/zh/bots/) | 选择角色，参考职责描述、权限边界和开场指令配置自己的 Bot |
 | 直接套用指令 | [模板库](https://grokbotguide.ai/zh/templates/) | 选择指令、Skill 或 Routine 模板，点击「复制模板」，替换自己的数据来源、交付格式和审批检查点 |
 | 看别人怎么用 | [资源导航](https://grokbotguide.ai/zh/resources/) | 搜索应用或主题，组合筛选分类、平台、原文语言，阅读摘要后打开原文 |
+| 复盘额度与任务安排 | [用量审计](https://grokbotguide.ai/zh/recipes/usage-audit/) | 留下基线，排查重复或空跑任务，一次提出一项调整再比较结果 |
 | 解决问题、跟进变化 | [常见问题](https://grokbotguide.ai/zh/answers/) · [更新日志](https://grokbotguide.ai/zh/news/changelog/) | 按问题查连接、定时任务、订阅和使用限制，或从更新日志查看官方公告 |
 
-### 搜索与导航
+### 完整版教程：从材料练习到真实任务
 
-- 点击首页的大搜索框或顶栏搜索，输入「Gmail」「定时任务」「网站巡检」等关键词，查找站内教程和案例。
-- 桌面端从顶栏的「学习路线 / 快速上手 / 进阶教程 / 实战案例 / 资源与社区」菜单进入各栏目；窄屏通过「菜单」展开侧边栏。
-- 顶栏可切换中英文和明暗主题。语言切换会打开当前页面的对应版本；访问根地址 [grokbotguide.ai](https://grokbotguide.ai/) 时，会优先使用你上次选择的语言，再根据地区和浏览器语言跳转。
+[中文总览](https://grokbotguide.ai/zh/recipes/topics/)和[英文总览](https://grokbotguide.ai/en/recipes/topics/)各有 **25 篇完整版教程、151 段提示词、134 份下载材料**，共 50 篇、302 段提示词和 268 份文件。另有一篇双语[用量审计补充指南](https://grokbotguide.ai/zh/recipes/usage-audit/)。原案例地址继续可用，学习路线、FAQ 和资源页也已接到对应教程。
+
+| 专题 | 适合的任务 |
+| --- | --- |
+| [办公与信息整理](https://grokbotguide.ai/zh/recipes/topics/office/) | Gmail 分类、日历简报、文档总结、Slack 信息整理 |
+| [内容创作与增长](https://grokbotguide.ai/zh/recipes/topics/content-growth/) | 内容改写、粉丝记录、竞品视频、个人画像网站 |
+| [开发与网站维护](https://grokbotguide.ai/zh/recipes/topics/engineering/) | 网站巡检、GitHub PR 跟踪、云端编码协作 |
+| [客户经营与客服](https://grokbotguide.ai/zh/recipes/topics/customer-support/) | 客服队列、人脉整理、销售通话复盘 |
+| [生活采购与票据](https://grokbotguide.ai/zh/recipes/topics/purchasing/) | 发票整理、比价、二手商品观察、退款审核 |
+
+以 [Gmail 完整版](https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/)为例：
+
+1. 先下载 `source-mails.json` 和 `label-rules.md`，把输入与规则交给 Bot，独立完成练习。
+2. 按页面阶段复制提示词，检查每一步的交付物和验收点。
+3. 完成后，用练习台切换输入、参考结果和报告进行对照，也可下载 `practice-prompts.txt` 留作复用。其他教程使用各自列出的材料文件。
+4. 练习通过后，再按页面的连接与权限说明尝试自己的小批量任务，确认结果后再保存 Skill 或设置 Routine。
+
+每篇会区分合成练习、历史实测和真实账号操作的验证范围；页面练习台用于查看示例，实际任务在你自己的 Grok Bot 中执行。
+
+### 搜索、章节跳转与关键词高亮
+
+1. 点击首页或顶栏搜索，也可按 `⌘K` / `Ctrl+K`。输入应用名、正文词组、提示词字段或文件名，例如 `Gmail`、`message_id`、`classification.csv`。
+2. 点击结果中的教程或章节链接，进入对应语言的页面；关键词会在正文和提示词中高亮。
+3. 用高亮栏的「上一处 / 下一处」逐个查看，或点击「清除高亮」。刷新和分享链接会保留关键词及章节位置；复制提示词仍得到完整原文。
+
+[打开 Gmail 章节高亮示例](https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/?highlight=message_id#read-only-heading)。总览页的筛选用于缩小教程列表；顶栏全文搜索可以查正文和提示词，资源导航则单独搜索外部收录。
+
+桌面端可通过顶栏菜单进入各栏目，窄屏可展开「菜单」；顶栏可切换主题和语言，语言切换会打开当前页面的对应版本。
+
+### 用量审计：先复盘，一次只调整一项
+
+打开[用量审计指南](https://grokbotguide.ai/zh/recipes/usage-audit/)：
+
+1. 识别自己的账号类型，记录检查时间、可见用量和近期工作，留下可比较的基线。
+2. 按指南列出 Bot 和 Routine 的负责人、触发频率、启用状态、最近有效结果及失败记录。
+3. 点击「复制模板」，使用复盘提示词先列清单并提出一项调整建议；确认后再暂停、降频或缩小任务范围。
+4. 用另一段相近工作量比较质量、遗漏、耗时和用量，再决定保留调整、恢复设置或保存为 Skill。
+
+指南另附小样本验证与重试停点提示词。每次 Routine 运行都会使用额度，安静结束不代表检查免费；文中保留来源核验范围，不承诺节省比例。
 
 ### 复制一个模板试试
 
@@ -121,7 +157,7 @@ Grok Bot 不是又一个聊天框。它是 xAI 推出的「AI 同事」：每个
 | [学习路线](https://grokbotguide.ai/zh/guide/) | 按「第一次用 / 想让它自动跑 / 有具体场景」分三条路，每条列出要读的页面和阅读时间 |
 | [快速上手](https://grokbotguide.ai/zh/start/what-is-grok-bot/) | Grok Bot 是什么、订阅怎么选、安装登录、创建第一个 Bot、派第一个任务 |
 | [进阶教程](https://grokbotguide.ai/zh/advanced/skills-and-routines/) | Skills 与 Routines、审批与安全、多 Bot 协作 |
-| [实战案例](https://grokbotguide.ai/zh/recipes/) | 26 个「Grok Bot × 工具」案例，按岗位筛选，标注风险等级和运行频率 |
+| [完整版教程](https://grokbotguide.ai/zh/recipes/topics/) | 五个专题、25 篇完整教程，附阶段提示词、练习台、验收和下载；另有[用量审计](https://grokbotguide.ai/zh/recipes/usage-audit/)补充指南 |
 | [角色卡与模板](https://grokbotguide.ai/zh/bots/) | 写好的 Bot 职责描述、权限边界，以及派活指令、Skill、Routine 模板 |
 | [常见问题](https://grokbotguide.ai/zh/answers/) | 怎么连接 Gmail、怎么设置定时任务、用不了怎么办、国内能不能用等 9 个高频问题 |
 | [资源导航](https://grokbotguide.ai/zh/resources/) | 100 多条官方文档、作者博客、视频和 X 帖子，只写摘要并链接原文 |
@@ -137,21 +173,11 @@ Grok Bot 不是又一个聊天框。它是 xAI 推出的「AI 同事」：每个
   <img src="./assets/readme/zh-menu.png" alt="顶部「实战案例」下拉菜单：按岗位、热门案例、角色卡和模板" width="920" />
 </p>
 
-### 实战案例库：按岗位挑现成方案
+### 完整版教程：按专题挑选，按阶段验收
 
-每张卡片拆成「Grok Bot × 工具」和一句话用途，标出岗位、难度和来源分级，点岗位标签就能筛选。
+[教程总览](https://grokbotguide.ai/zh/recipes/topics/#all-cases)可以按工具或任务搜索，也可以按五个专题筛选。每张卡片列出阶段、提示词和下载文件数。
 
-<p align="center">
-  <img src="./assets/readme/zh-recipes.png" alt="实战案例库：岗位筛选和案例卡片" width="920" />
-</p>
-
-### 案例文章：一眼看清风险和频率
-
-标题下的摘要格写明适合谁、用到的应用、风险等级、运行频率和难度；正文固定为准备、步骤、可复制指令、审批与权限、注意事项。
-
-<p align="center">
-  <img src="./assets/readme/zh-article.png" alt="案例文章页：Grok Bot × Gmail，标题下有适合谁、应用、风险、频率、难度的摘要格" width="920" />
-</p>
+打开 [Gmail 教程](https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/)后，可以查看完整输入、切换练习台的参考结果、按目录跳转，并复制每个阶段的指令。[搜索高亮示例](https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/?highlight=message_id#read-only-heading)演示如何在正文与提示词之间定位同一关键词。
 
 ### 学习路线：先选目标，再按顺序读
 
@@ -195,6 +221,7 @@ Grok Bot 不是又一个聊天框。它是 xAI 推出的「AI 同事」：每个
 | [关掉电脑还能运行吗](https://grokbotguide.ai/zh/answers/does-grok-bot-work-when-laptop-is-closed/) | 云端电脑和本地电脑的区别 |
 | [Grok Bot 安全吗](https://grokbotguide.ai/zh/answers/is-grok-bot-safe/) | 共享云电脑意味着什么，哪些动作一定要审批 |
 | [派活五要素](https://grokbotguide.ai/zh/templates/five-part-request/) | 任何任务都能套用的指令模板 |
+| [用量审计](https://grokbotguide.ai/zh/recipes/usage-audit/) | 记录基线、复盘 Bot 与 Routine、检查一次调整是否值得保留 |
 
 ## 内容框架
 
@@ -203,7 +230,8 @@ GrokBotGuide
 ├─ guide        # 学习路线
 ├─ start        # 快速上手（5 篇）
 ├─ advanced     # 进阶教程（3 篇）
-├─ recipes      # 实战案例（26 个「Grok Bot × 工具」）
+├─ recipes      # 25 篇完整版教程 + 用量审计补充指南
+│  └─ topics    # 五个专题与完整版总览
 ├─ bots         # 角色卡
 ├─ templates    # 派活指令、Skill、Routine 模板
 ├─ answers      # 常见问题（按搜索意图组织）
@@ -212,7 +240,7 @@ GrokBotGuide
 └─ community    # 投稿、路线图、关于
 ```
 
-中英文内容分别在 `src/content/docs/zh/` 和 `src/content/docs/en/`，两边文件名一一对应。
+常规文档和元数据在 `src/content/docs/zh/` 与 `src/content/docs/en/`，两边文件名一一对应。完整版教程的数据主要在 `src/data/workflow-topics/`、`src/data/office-preview.ts` 和 `src/data/workflow-en/`，页面及下载入口在 `src/pages/zh/recipes/` 与 `src/pages/en/recipes/`。部署配置见 [开发与部署说明](./docs/DEVELOPMENT.md)。
 
 ## 本地预览
 
@@ -234,7 +262,7 @@ npm run dev
 
 从搜索结果进入页面后，正文与提示词会高亮命中的关键词，可用“上一处 / 下一处”切换或清除高亮。刷新和分享链接会保留关键词与章节位置；高亮不会改变复制出的提示词。
 
-构建后可运行 `node --experimental-strip-types scripts/check-search.mjs`，检查中英文共 50 篇教程、全部正文段落、302 段提示词和搜索结果。
+构建后可运行 `npm run check:search`，检查中英文共 50 篇教程、全部正文段落、302 段提示词和搜索结果；`npm run check:english` 检查英文入口、站内链接和中文残留，`npm run test:search` 检查高亮与跳转逻辑。
 
 构建静态站点并本地预览：
 
@@ -254,7 +282,7 @@ npm run check:content
 ## 设计原则
 
 - **官方优先**：功能、价格、可用性、安全策略以 xAI 和 Cursor 官方资料为准，关键页面标注最后核对日期。
-- **如实分级**：每篇标明「依据官方文档」「来自社区实测」或「本站实测」，只有真正按步骤跑通的页面才标本站实测。
+- **如实分级**：内容区分官方依据、社区作者分享、本站原创教程和本站实测；练习材料与真实账号操作分别说明验证范围，只有真正按步骤跑通的内容才标本站实测。
 - **新手友好**：先给能直接照做的答案，再展开步骤和原因。
 - **真实任务导向**：少讲概念，多给可复制的指令、输入、输出和检查方式。
 - **安全边界清晰**：涉及发送、付款、删除、登录和共享云电脑时，明确写出哪些动作必须设成审批。

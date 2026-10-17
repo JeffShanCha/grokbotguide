@@ -37,7 +37,7 @@
 
 ## Read it online
 
-**GrokBotGuide lives at [grokbotguide.ai](https://grokbotguide.ai/en/).** English is under `/en/` and Chinese under `/zh/`. The root domain picks a language by region, and you can switch any time from the top bar.
+**GrokBotGuide lives at [grokbotguide.ai](https://grokbotguide.ai/en/).** English is under `/en/` and Chinese under `/zh/`. The root domain first uses your saved language choice, then region and browser language. You can switch any time from the top bar.
 
 <p align="center">
   <a href="https://grokbotguide.ai/en/">
@@ -48,6 +48,50 @@
 This README gives you the overview. For learning, the website is better: full-text search, dropdown navigation, a sidebar, reading progress, one-click copyable prompts and a language switcher.
 
 New to Grok Bot? Start with the [learning path](https://grokbotguide.ai/en/guide/). Have a use case already? Pick one from the [recipes](https://grokbotguide.ai/en/recipes/) by role.
+
+## Using the current release
+
+### Complete tutorials: practice before connecting real accounts
+
+The [English overview](https://grokbotguide.ai/en/recipes/topics/) and [Chinese overview](https://grokbotguide.ai/zh/recipes/topics/) each contain **25 complete tutorials, 151 prompts and 134 downloadable files**: 50 tutorials, 302 prompts and 268 files across both languages. A separate bilingual [usage audit guide](https://grokbotguide.ai/en/recipes/usage-audit/) supplements the library. Existing recipe URLs still work, and the learning path, FAQ and resources link to the complete versions.
+
+| Topic | Example tasks |
+| --- | --- |
+| [Office & information](https://grokbotguide.ai/en/recipes/topics/office/) | Gmail triage, meeting briefs, document summaries and Slack updates |
+| [Content & growth](https://grokbotguide.ai/en/recipes/topics/content-growth/) | Repurposing content, audience tracking, competitor videos and portrait sites |
+| [Engineering & site maintenance](https://grokbotguide.ai/en/recipes/topics/engineering/) | Website checks, GitHub PR monitoring and cloud coding handoffs |
+| [Customer operations & support](https://grokbotguide.ai/en/recipes/topics/customer-support/) | Support queues, relationship tracking and sales call reviews |
+| [Shopping & receipts](https://grokbotguide.ai/en/recipes/topics/purchasing/) | Invoice filing, price comparisons, marketplace watches and refund reviews |
+
+Try the [complete Gmail tutorial](https://grokbotguide.ai/en/recipes/gmail-inbox-triage/):
+
+1. Download `source-mails.json` and `label-rules.md`. Give the input and rules to your Bot for an independent attempt.
+2. Copy each stage's prompt and inspect its deliverable and acceptance check.
+3. After your attempt, use the practice tabs to compare the inputs, reference results and report. Download `practice-prompts.txt` to keep the full prompt set; other tutorials list their own files.
+4. After the practice, follow the page's connection and permission instructions for a small real-account trial. Review the results before saving a Skill or scheduling a Routine.
+
+Each page identifies synthetic practice, historical real tests and the scope of live-account validation. Practice panels display examples; you run the actual task in your own Grok Bot.
+
+### Search, chapter links and keyword highlights
+
+1. Open search from the homepage or top bar, or press `⌘K` / `Ctrl+K`. Search for an app, body text, a prompt field or a filename, such as `Gmail`, `message_id` or `classification.csv`.
+2. Select a tutorial or chapter result. It opens in the current site language with matching words highlighted in the text and prompts.
+3. Use **Previous / Next** to move between matches or **Clear highlights** to remove them. Refreshing or sharing the link keeps the query and chapter; copying a prompt still returns its complete text.
+
+[Try the Gmail chapter highlight example](https://grokbotguide.ai/en/recipes/gmail-inbox-triage/?highlight=message_id#read-only-heading). The overview filters the tutorial list, the top-bar search covers full tutorial text and prompts, and the resource directory searches external entries separately.
+
+Desktop dropdowns and the narrow-screen menu provide navigation. Theme and language controls are in the top bar; switching language opens the corresponding page.
+
+### Usage audit: review first, change one thing at a time
+
+Open the [usage audit guide](https://grokbotguide.ai/en/recipes/usage-audit/):
+
+1. Identify your account type and record the time, visible usage and recent work as a baseline.
+2. Inventory Bots and Routines: owner, trigger frequency, enabled state, latest useful output and failures.
+3. Click **Copy template** for the review prompt. Ask for the inventory and one proposed change first; confirm before pausing, slowing down or narrowing a task.
+4. Compare a similar amount of work afterward, including quality, omissions, latency and usage. Then keep the change, restore the setting or save the method as a Skill.
+
+The guide also includes a small-sample checkpoint prompt and a retry boundary. Every Routine run uses allowance, including a quiet check. Source-checking limits are stated on the page; no savings percentage is promised.
 
 ## Why this exists
 
@@ -73,7 +117,7 @@ The hard part with a product like this is not learning the buttons. It is decidi
 | [Learning path](https://grokbotguide.ai/en/guide/) | Three routes (first time / run on its own / have a use case) with pages to read and reading time |
 | [Get started](https://grokbotguide.ai/en/start/what-is-grok-bot/) | What Grok Bot is, which plan, install and sign in, create your first Bot, give it a first task |
 | [Advanced](https://grokbotguide.ai/en/advanced/skills-and-routines/) | Skills and routines, approvals and security, teams of Bots |
-| [Recipes](https://grokbotguide.ai/en/recipes/) | 24 "Grok Bot × tool" recipes, filterable by role, with risk level and run cadence |
+| [Complete tutorials](https://grokbotguide.ai/en/recipes/topics/) | Five topics and 25 complete tutorials with staged prompts, practice panels, acceptance checks and downloads, plus a [usage audit](https://grokbotguide.ai/en/recipes/usage-audit/) supplement |
 | [Bot cards and templates](https://grokbotguide.ai/en/bots/) | Ready-made Bot descriptions and boundaries, plus briefing, skill and routine templates |
 | [How-to & FAQ](https://grokbotguide.ai/en/answers/) | Nine common questions: connecting Gmail, scheduling routines, fixing problems and more |
 | [Resources](https://grokbotguide.ai/en/resources/) | 100+ official docs, blog posts, videos and X posts, summarized and linked to the original |
@@ -89,21 +133,11 @@ Five dropdown menus cover the learning path, Get started, Advanced, Recipes and 
   <img src="./assets/readme/en-menu.png" alt="The Recipes dropdown: by role, popular recipes, Bot cards and templates" width="920" />
 </p>
 
-### Recipe library: start from your role
+### Complete tutorials: choose a topic and check every stage
 
-Each card shows "Grok Bot × tool" and a one-line job, plus role, level and source grade. Click a role to filter.
+Use the [tutorial overview](https://grokbotguide.ai/en/recipes/topics/#all-cases) to search by tool or task and filter by topic. Each card lists its stages, prompts and downloadable files.
 
-<p align="center">
-  <img src="./assets/readme/en-recipes.png" alt="The recipe library with role filters and recipe cards" width="920" />
-</p>
-
-### Recipe pages: risk and cadence at a glance
-
-A summary grid under the title shows who it is for, apps, risk level, cadence and level. The body follows the same order every time: before you start, steps, a copyable prompt, approvals and pitfalls.
-
-<p align="center">
-  <img src="./assets/readme/en-article.png" alt="Recipe page for Grok Bot × Gmail with a summary grid under the title" width="920" />
-</p>
+The [Gmail tutorial](https://grokbotguide.ai/en/recipes/gmail-inbox-triage/) includes complete inputs, practice tabs, reference outputs, chapter navigation and prompts for each stage. The [highlight example](https://grokbotguide.ai/en/recipes/gmail-inbox-triage/?highlight=message_id#read-only-heading) shows how to find the same keyword in prose and prompts.
 
 ### Learning path: pick a goal, then read in order
 
@@ -146,6 +180,7 @@ Open the [recipe library](https://grokbotguide.ai/en/recipes/) and filter by rol
 | [Laptop closed?](https://grokbotguide.ai/en/answers/does-grok-bot-work-when-laptop-is-closed/) | The cloud computer versus your own machine |
 | [Is Grok Bot safe?](https://grokbotguide.ai/en/answers/is-grok-bot-safe/) | What a shared cloud computer means and which actions need approval |
 | [Five-part request](https://grokbotguide.ai/en/templates/five-part-request/) | A briefing template for any task |
+| [Usage audit](https://grokbotguide.ai/en/recipes/usage-audit/) | Record a baseline, review Bots and Routines, and evaluate one proposed change |
 
 ## Structure
 
@@ -154,7 +189,8 @@ GrokBotGuide
 ├─ guide        # Learning path
 ├─ start        # Get started (5 pages)
 ├─ advanced     # Advanced (3 pages)
-├─ recipes      # 24 "Grok Bot × tool" recipes
+├─ recipes      # 25 complete tutorials + a usage audit supplement
+│  └─ topics    # Five topics and the complete tutorial overview
 ├─ bots         # Bot cards
 ├─ templates    # Briefing, skill and routine templates
 ├─ answers      # How-to & FAQ, organised by search intent
@@ -163,7 +199,7 @@ GrokBotGuide
 └─ community    # Contribute, roadmap, about
 ```
 
-English and Chinese content live in `src/content/docs/en/` and `src/content/docs/zh/`, with matching file names.
+Regular documents and metadata live in `src/content/docs/en/` and `src/content/docs/zh/`, with matching file names. Complete tutorial data mainly lives in `src/data/workflow-en/`, `src/data/workflow-topics/` and `src/data/office-preview.ts`; page and download routes are in `src/pages/en/recipes/` and `src/pages/zh/recipes/`. See the [development and deployment guide](./docs/DEVELOPMENT.md) for hosting configuration.
 
 ## Run it locally
 
@@ -179,7 +215,9 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:4321/en/> for English or <http://localhost:4321/zh/> for Chinese. Edits under `src/content/docs/` reload live.
+Open <http://localhost:4321/en/> for English or <http://localhost:4321/zh/> for Chinese. Edits under `src/content/docs/` reload live. Development search builds its index from rendered pages on first use and refreshes it after source changes. The production build also indexes the full tutorial text and prompts.
+
+After building, `npm run check:search` verifies 50 complete tutorials, their body text, 302 prompts and search results. `npm run check:english` checks English entry points, internal links and untranslated text; `npm run test:search` verifies highlighting and result links.
 
 Build the static site and preview it:
 
@@ -199,7 +237,7 @@ Built with [Astro](https://astro.build/) and [Starlight](https://starlight.astro
 ## Principles
 
 - **Official sources first**: features, prices, availability and security follow xAI and Cursor's official docs, with a last-checked date on key pages.
-- **Honest grades**: every page says "Based on official docs", "From community tests" or "Tested here", and only pages we actually ran step by step are marked tested.
+- **Honest grades**: content distinguishes official sources, community reports, original tutorials and site tests. Practice materials and live-account operations have separate verification scopes; only work actually run step by step is marked tested.
 - **Beginner-friendly**: an answer you can act on first, then the steps and the why.
 - **Real tasks**: fewer concepts, more copyable prompts, inputs, outputs and checks.
 - **Clear safety boundaries**: wherever sending, paying, deleting, signing in or the shared cloud computer is involved, we spell out what must require approval.
