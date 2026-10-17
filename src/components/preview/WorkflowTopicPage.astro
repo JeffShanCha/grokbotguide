@@ -1,0 +1,22 @@
+---
+import type { WorkflowTopic } from '../../data/workflow-topics/types';
+import { guideHref } from '../../data/workflow-topics/types';
+import CaseDirectory from './CaseDirectory.astro';
+import { caseCatalog } from '../../data/workflow-topics/catalog';
+interface Props { topic: WorkflowTopic }
+const { topic } = Astro.props;
+const guide = guideHref(topic);
+const choices = caseCatalog.filter(item => item.group === topic.id);
+---
+<div id="main" class="wf-shell">
+	<div class="wf-kicker">WORKFLOWS / 专题 {topic.number}</div>
+	<section class="wf-topic-hero" aria-labelledby="topic-title">
+		<div><p class="wf-eyebrow">{topic.eyebrow}</p><h1 id="topic-title">{topic.title}</h1><p class="wf-lead">{topic.summary}</p><div class="wf-actions"><a class="wf-button" href={guide}>开始完整教程 <span aria-hidden="true">↗</span></a><a class="wf-text-link" href="#choose">选择我的场景 ↓</a></div><div class="wf-byline">shancha 整理 <span>·</span> {choices.length} 篇完整教程 <span>·</span> 每篇独立材料与验收</div></div>
+		<figure class="wf-desk"><div class="wf-desk-top"><span class="wf-dot" aria-hidden="true"></span>交付结果预览<span class="wf-desk-sample">合成练习</span></div><div class="wf-desk-date">WORKFLOW <span>{topic.number} / 05</span></div><h2>{topic.deskTitle}</h2><ol>{topic.deskRows.map((row, i) => <li><span class="wf-desk-marker">{String(i + 1).padStart(2, '0')}</span><div><strong>{row.title}</strong><p>{row.detail}</p></div><span class="wf-tag">{row.tag}</span></li>)}</ol><figcaption>{topic.flow.map((text, i) => <>{i > 0 && <span aria-hidden="true">→</span>}<span>{text}</span></>)}</figcaption></figure>
+	</section>
+	<nav id="choose" class:list={['wf-choices', 'wt-choices', { 'wt-choices-many': choices.length > 4 }]} aria-label="按问题选择练习">{choices.map((item, i) => <a href={item.href}><span>{String(i + 1).padStart(2, '0')}</span><strong>{item.title.split('：')[0]}</strong><small>{item.stages} 个阶段 · {item.files} 份文件</small><b aria-hidden="true">↗</b></a>)}</nav>
+	<section id="featured" class="wf-feature" aria-labelledby="feature-title"><div class="wf-feature-main"><div class="wf-kicker">重点案例 / 完整教程</div><h2 id="feature-title">{topic.guideTitle}</h2><p>{topic.guideLead}</p><ul class="wf-feature-list"><li>原始输入、完整结果与参考报告放在同一页</li><li>{topic.steps.length} 个阶段，每步有指令、交付物与检查点</li><li>{topic.files.length} 份练习文件，可下载后独立试跑</li></ul><a class="wf-button" href={guide}>打开完整教程 <span aria-hidden="true">→</span></a><p class="wf-small">{topic.scope}</p></div><div class="wf-feature-result"><div class="wf-result-bar"><strong>这次会留下的成果</strong><span>合成练习</span></div>{topic.deliverables.map((item, i) => <div class="wf-deliverable"><span>{String(i + 1).padStart(2, '0')}</span><div><h3>{item.title}</h3><p>{item.description}</p></div><b>{item.format}</b></div>)}<p class="wf-result-note">以上为本站原创交付物示意，完整输入和结果可在教程里查看。</p></div></section>
+	<CaseDirectory group={topic.id} />
+	<div class="wf-reading-note"><strong>关于本专题</strong><p>教程、练习和提示词由 shancha 整理。每篇附独立的输入、参考结果和验证范围；合成练习与真实实测分别说明。</p><a href={`${guide}#sources`}>查看官方来源与验证范围 →</a></div>
+	<div class="wt-next"><a class="wf-text-link" href="/zh/recipes/topics/">← 返回五个专题总览</a><a class="wf-text-link" href={guide}>开始重点教程 →</a></div>
+</div>

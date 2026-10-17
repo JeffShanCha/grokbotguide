@@ -1,0 +1,45 @@
+/* Starlight owns the site header, footer, theme, search and mobile navigation. */
+body:has(.wf-content) .content-panel:has(.wf-content) {
+	padding: 0;
+}
+body:has(.wf-content) .sl-container:has(.wf-content) {
+	max-width: 75rem;
+}
+body:has(.wf-content) .sl-container:has(.wf-content) > :not(.sl-markdown-content) {
+	margin-inline: 24px;
+}
+body:has(.wf-content) .sl-container:has(.wf-content) > .gbg-footer {
+	margin-bottom: 32px;
+}
+.wf-content {
+	font-family: var(--sl-font);
+	font-size: 16px;
+	line-height: 1.8;
+	color: var(--wf-ink);
+}
+/* Both the desktop contents and linked sections clear the fixed main-site header. */
+.wf-content .wf-toc {
+	top: calc(var(--sl-nav-height) + 24px);
+	max-height: calc(100vh - var(--sl-nav-height) - 48px);
+}
+.wf-content :is(section[id], nav[id], #main) {
+	/* Starlight already sets scroll-padding on html; avoid counting it twice. */
+	scroll-margin-top: 0;
+}
+/* These pages use the header's own menu button rather than a documentation sidebar. */
+@media (min-width: 50rem) and (max-width: 71.999rem) {
+	body:has(.wf-content) gbg-mega.header {
+		gap: 1rem;
+	}
+	body:has(.wf-content) .search button[data-open-modal] {
+		width: clamp(11rem, 22vw, 17rem);
+	}
+	body:has(.wf-content) .gbg-lang-cur {
+		white-space: nowrap;
+	}
+}
+@media (max-width: 600px) {
+	body:has(.wf-content) .sl-container:has(.wf-content) > :not(.sl-markdown-content) {
+		margin-inline: 18px;
+	}
+}

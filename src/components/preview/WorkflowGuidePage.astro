@@ -1,0 +1,35 @@
+---
+import type { WorkflowGuide } from '../../data/workflow-topics/types';
+import { topicHref, fileHref } from '../../data/workflow-topics/types';
+import WorkflowPrompt from './WorkflowPrompt.astro';
+import WorkflowPractice from './WorkflowPractice.astro';
+import PortraitCaseEvidence from './PortraitCaseEvidence.astro';
+interface Props { topic: WorkflowGuide }
+const { topic } = Astro.props;
+const toc = [['result', '先看输入与交付结果'], ['prepare', '准备与能力检查'], ...topic.steps.map((step, i) => [`step-${step.id}`, `${String(i + 1).padStart(2, '0')} ${step.title}`]), ['troubleshoot', '排错与验收清单'], ['downloads', '下载练习材料'], ['sources', '来源与验证范围']];
+---
+<div id="main" class="wf-shell">
+	<nav class="wf-breadcrumb" data-pagefind-ignore aria-label="面包屑"><a href="/zh/recipes/topics/">全部专题</a><span aria-hidden="true">/</span><a href={topicHref(topic)}>{topic.title}</a><span aria-hidden="true">/</span><span>完整教程</span></nav>
+	<header class="wf-guide-hero"><div class="wf-kicker">深度教程 / {topic.number}</div><h1>{topic.guideTitle}</h1><p class="wf-lead">{topic.guideLead}</p><div class="wf-guide-meta"><span>shancha 整理</span><span>{topic.steps.length} 个阶段 · 完整提示词</span><span>{topic.files.length} 份练习材料</span></div><div class="wf-actions"><a class="wf-button" href="#result">先看完整样例 ↓</a><a class="wf-text-link" href="#downloads">下载练习材料 ↗</a></div></header>
+	<details class="wf-mobile-toc" data-pagefind-ignore><summary>本篇目录</summary><ol>{toc.map(([id, title]) => <li><a href={`#${id}`}>{title}</a></li>)}</ol></details>
+	<div class="wf-guide-grid"><article class="wf-prose">
+		<section id="result"><div class="wf-section-title"><span>先看结果</span><h2 id="result-heading">先确认输入，再对照完整交付物</h2></div><p>下面保留了原始材料、逐项结果和完整报告。先独立处理输入，再用参考结果检查遗漏与分歧。</p><div class="wf-scope"><strong>本页演示范围</strong><p>{topic.scope}</p></div><WorkflowPractice topic={topic} />{topic.caseId === 'x-personal-portrait-site' && <PortraitCaseEvidence />}</section>
+		<section id="prepare"><div class="wf-section-title"><span>开始前</span><h2 id="prepare-heading">把材料与工具准备清楚</h2></div><div class="wf-two-cards">{topic.prepare.map(group => <div><h3>{group.title}</h3><ul>{group.items.map(text => <li>{text}</li>)}</ul></div>)}</div><p>先用下面的材料和指令完成一次文件练习。接入自己的服务时，核对实际账号、可用工具与操作范围，再按每步的检查点继续。</p><a class="wf-text-link" href="#downloads">先下载原始材料与规则 ↓</a></section>
+		{topic.steps.map((step, i) => <section id={`step-${step.id}`} class="wf-stage"><div class="wf-section-title"><span>STEP {String(i + 1).padStart(2, '0')}</span><h2 id={`step-${step.id}-heading`}>{step.title}</h2></div>{step.paragraphs.map(text => <p>{text}</p>)}<WorkflowPrompt id={`${topic.id}-${step.id}`} text={step.prompt} title={`阶段 ${String(i + 1).padStart(2, '0')} · ${step.title}`} /><div class="wf-check"><b>应拿到什么</b><p>{step.expected}</p></div><div class="wf-note"><strong>检查点</strong><p>{step.check}</p></div>{step.note && <p>{step.note}</p>}</section>)}
+		<section id="troubleshoot"><div class="wf-section-title"><span>排错与验收</span><h2 id="troubleshoot-heading">卡住时先看证据，再决定下一步</h2></div><div class="wf-faq">{topic.problems.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}</div><h3>完成前，逐项核对</h3><p class="wf-small">勾选用于本次自查，刷新后重置；不代表真实服务已经通过验证。</p><div class="wf-checklist" data-wt-checklist>{topic.checks.map((text, i) => <label><input type="checkbox" /><span><b aria-hidden="true">{String(i + 1).padStart(2, '0')}</b>{text}</span></label>)}</div><p class="wf-check-progress" role="status" aria-live="polite" data-wt-check-progress>已核对 0 / {topic.checks.length} 项</p></section>
+		<section id="downloads"><div class="wf-section-title"><span>练习材料</span><h2 id="downloads-heading">原始输入与参考答案分开下载</h2></div><p>第一次先交原始材料和规则，不提前提供参考答案。验收后，再下载报告与全部提示词保存。</p><div class="wf-downloads">{topic.files.map(file => <a href={fileHref(topic, file.name)} download={!file.inline ? file.name : undefined} target={file.inline ? '_blank' : undefined} rel={file.inline ? 'noopener noreferrer' : undefined}><span><strong>{file.title}</strong><small>{file.description}<br /><code>{file.name}</code></small></span><b aria-hidden="true">{file.inline ? '↗' : '↓'}</b></a>)}</div></section>
+		<section id="sources"><div class="wf-section-title"><span>来源与验证范围</span><h2 id="sources-heading">把官方能力与练习结果分别核对</h2></div><div class="wf-evidence"><p><strong>已核对：</strong>页面中的合成材料、参考结果、下载文件与本站交互。{topic.guideSlug === 'website-daily-check' && '另外核对本机训练站的响应与锚点。'}</p><p><strong>尚未验证：</strong>{topic.verificationNote || '你的账号连接、真实资料读取、服务端写入、定时任务与长期运行效果。练习通过不能当作这些部分已经成功。'}</p><p>教程与提示词为 shancha 原创整理，工具行为参考下列官方文档，核对日期为 2026 年 10 月 17 日。{topic.scope}</p></div><ol class="wf-sources">{topic.sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><p>{source.note}</p></li>)}</ol></section>
+		<div class="wf-guide-end"><div class="wf-kicker">下一步</div><h2>用自己的小批材料，再验收一次</h2><p>保留原始输入和操作记录，先确认每项结果能回查，再增加连接与重复运行。</p><div class="wt-next"><a class="wf-text-link" href={topicHref(topic)}>返回{topic.title}专题 →</a></div></div>
+	</article><aside class="wf-toc" data-pagefind-ignore aria-label="本篇目录"><strong>本篇目录</strong><ol>{toc.map(([id, title]) => <li><a href={`#${id}`}>{title}</a></li>)}</ol><a class="wf-toc-back" href={topicHref(topic)}>← 返回专题</a></aside></div>
+</div>
+<script>
+	document.querySelectorAll<HTMLElement>('[data-wt-checklist]').forEach(list => {
+		const update = () => {
+			const total = list.querySelectorAll('input').length;
+			const checked = list.querySelectorAll('input:checked').length;
+			const progress = list.nextElementSibling;
+			if (progress?.hasAttribute('data-wt-check-progress')) progress.textContent = `已核对 ${checked} / ${total} 项`;
+		};
+		list.addEventListener('change', update); update();
+	});
+</script>

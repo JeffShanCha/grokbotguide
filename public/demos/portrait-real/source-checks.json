@@ -1,0 +1,27 @@
+{
+  "checker": "Codex",
+  "date": "2026-10-16",
+  "method": "Read the public X post pages in a browser; verified author, summary meaning and DOM time datetime. Images and linked content were not reviewed.",
+  "account": "0xlangeai",
+  "checked": [
+    {
+      "source_id": "p01",
+      "url": "https://x.com/0xlangeai/status/2110966386474512573",
+      "published_utc": "2026-10-16T05:29:41Z",
+      "summary_matches": true
+    },
+    {
+      "source_id": "p02",
+      "url": "https://x.com/0xlangeai/status/2110914366183006625",
+      "published_utc": "2026-10-16T02:02:58Z",
+      "summary_matches": true
+    },
+    {
+      "source_id": "p03",
+      "url": "https://x.com/0xlangeai/status/2110615655196324285",
+      "published_utc": "2026-10-15T06:16:00Z",
+      "summary_matches": true
+    }
+  ],
+  "scope": "3 selected posts, not all 10; X web fetch returned 403, interactive browser pages loaded."
+}

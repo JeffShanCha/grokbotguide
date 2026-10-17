@@ -1,0 +1,168 @@
+---
+import { toLang, type Lang } from '../i18n/ui';
+
+interface Props {
+	url: string;
+	lang?: Lang;
+}
+
+const { url, lang: explicitLang } = Astro.props;
+const source = new URL(url);
+const post = source.pathname.match(/^\/([a-zA-Z0-9_]+)\/status\/(\d+)\/?$/);
+if (!['x.com', 'www.x.com', 'twitter.com', 'www.twitter.com'].includes(source.hostname) || !post || source.protocol !== 'https:') {
+	throw new Error('XEmbed requires a public HTTPS X post URL.');
+}
+const href = `https://x.com/${post[1]}/status/${post[2]}`;
+const lang = explicitLang ?? toLang(Astro.locals.starlightRoute?.locale);
+const c = {
+	zh: {
+		title: 'X 原帖',
+		open: '到 X 阅读原文 ↗',
+		note: '原帖由 X 提供，可能包含图片和视频。点击加载后会连接 X，X 可能接收页面和浏览器信息。',
+		load: '加载 X 原帖',
+		loading: '正在加载原帖…',
+		loaded: '原帖已加载。长文的展开范围由 X 决定，可通过上方链接阅读原文。',
+		failed: '暂时无法加载原帖。可以重试，或通过上方链接到 X 阅读。',
+		retry: '重新加载原帖',
+	},
+	en: {
+		title: 'Original X post',
+		open: 'Read the original on X ↗',
+		note: 'X provides this post and its media. Loading it connects to X, which may receive page and browser information.',
+		load: 'Load X post',
+		loading: 'Loading the original post…',
+		loaded: 'Post loaded. X controls how much of an article is shown. Use the link above to read the original.',
+		failed: 'The post could not be loaded. Try again or use the link above to read it on X.',
+		retry: 'Try loading again',
+	},
+}[lang];
+---
+
+<section
+	class="gbg-x-embed not-content"
+	aria-label={c.title}
+	data-x-embed
+	data-post-id={post[2]}
+	data-lang={lang}
+	data-loading={c.loading}
+	data-loaded={c.loaded}
+	data-failed={c.failed}
+	data-retry={c.retry}
+>
+	<div class="gbg-x-header"><strong>{c.title}</strong><a href={href} target="_blank" rel="noopener noreferrer">{c.open}</a></div>
+	<p class="gbg-x-note">{c.note}</p>
+	<button type="button" data-x-load hidden>{c.load}</button>
+	<p class="gbg-x-status" data-x-status role="status" aria-live="polite" hidden></p>
+	<div class="gbg-x-host" data-x-host></div>
+	<noscript><p>{lang === 'zh' ? '请通过上方链接阅读原文，或启用 JavaScript 后加载原帖。' : 'Use the source link above, or enable JavaScript to load the post.'}</p></noscript>
+</section>
+
+<script>
+	type XWidgets = {
+		createTweet: (id: string, target: HTMLElement, options: Record<string, string | number | boolean>) => Promise<HTMLElement | undefined>;
+	};
+	type XApi = { widgets?: XWidgets; ready: (callback: () => void) => void; _e?: Array<() => void> };
+	const xWindow = window as Window & { twttr?: XApi };
+	let widgetsPromise: Promise<XWidgets> | undefined;
+
+	function withTimeout<T>(work: Promise<T>, milliseconds: number): Promise<T> {
+		let timer: ReturnType<typeof setTimeout>;
+		const timeout = new Promise<never>((_, reject) => {
+			timer = setTimeout(() => reject(new Error('X embed timed out')), milliseconds);
+		});
+		return Promise.race([work, timeout]).finally(() => clearTimeout(timer));
+	}
+
+	function loadWidgets(): Promise<XWidgets> {
+		if (xWindow.twttr?.widgets) return Promise.resolve(xWindow.twttr.widgets);
+		if (widgetsPromise) return widgetsPromise;
+		const ready = new Promise<XWidgets>((resolve, reject) => {
+			const api = xWindow.twttr ??= {
+				_e: [],
+				ready(callback) { this._e!.push(callback); },
+			};
+			api.ready(() => {
+				if (xWindow.twttr?.widgets) resolve(xWindow.twttr.widgets);
+				else reject(new Error('X widgets unavailable'));
+			});
+			if (!document.getElementById('twitter-wjs')) {
+				const script = document.createElement('script');
+				script.id = 'twitter-wjs';
+				script.src = 'https://platform.x.com/widgets.js';
+				script.async = true;
+				script.dataset.gbgX = 'true';
+				script.addEventListener('error', () => reject(new Error('X script could not load')), { once: true });
+				document.head.append(script);
+			}
+		});
+		widgetsPromise = withTimeout(ready, 15000).catch((error) => {
+			widgetsPromise = undefined;
+			document.querySelector('script[data-gbg-x]')?.remove();
+			throw error;
+		});
+		return widgetsPromise;
+	}
+
+	function initXEmbeds() {
+		document.querySelectorAll<HTMLElement>('[data-x-embed]').forEach((root) => {
+			if (root.dataset.ready) return;
+			root.dataset.ready = 'true';
+			const button = root.querySelector<HTMLButtonElement>('[data-x-load]')!;
+			const status = root.querySelector<HTMLElement>('[data-x-status]')!;
+			const host = root.querySelector<HTMLElement>('[data-x-host]')!;
+			button.hidden = false;
+			button.addEventListener('click', async () => {
+				if (root.dataset.state === 'loading') return;
+				root.dataset.state = 'loading';
+				button.disabled = true;
+				status.hidden = false;
+				status.textContent = root.dataset.loading!;
+				host.setAttribute('aria-busy', 'true');
+				const attempt = document.createElement('div');
+				host.replaceChildren(attempt);
+				try {
+					const widgets = await loadWidgets();
+					const rendered = await withTimeout(widgets.createTweet(root.dataset.postId!, attempt, {
+						lang: root.dataset.lang === 'zh' ? 'zh-cn' : 'en',
+						theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light',
+						conversation: 'none',
+						dnt: true,
+						width: 550,
+					}), 20000);
+					if (!rendered) throw new Error('X post unavailable');
+					root.dataset.state = 'loaded';
+					status.textContent = root.dataset.loaded!;
+					button.hidden = true;
+				} catch {
+					root.dataset.state = 'error';
+					host.replaceChildren();
+					status.textContent = root.dataset.failed!;
+					button.textContent = root.dataset.retry!;
+				} finally {
+					host.removeAttribute('aria-busy');
+					button.disabled = false;
+				}
+			});
+		});
+	}
+	initXEmbeds();
+	document.addEventListener('astro:page-load', initXEmbeds);
+</script>
+
+<style>
+	.gbg-x-embed { margin-block: 1.5rem; padding: 1.25rem; border: 1px solid var(--gbg-card-border); border-radius: 0.75rem; background: var(--gbg-card-bg); min-width: 0; }
+	.gbg-x-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem 1rem; }
+	.gbg-x-header a { color: var(--sl-color-text-accent); font-size: var(--sl-text-sm); }
+	.gbg-x-note, .gbg-x-status { margin-block: 0.75rem; font-size: var(--sl-text-sm); line-height: 1.7; color: var(--sl-color-gray-2); }
+	.gbg-x-embed button { min-height: 44px; padding: 0.6rem 1rem; border: 1px solid var(--sl-color-text-accent); border-radius: 0.5rem; background: var(--sl-color-accent-low); color: var(--sl-color-text-accent); font: inherit; font-weight: 600; cursor: pointer; transition: background-color 150ms; }
+	.gbg-x-embed button:hover { background: var(--gbg-soft-bg); }
+	.gbg-x-embed button:disabled { cursor: wait; }
+	.gbg-x-embed :is(button, a):focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
+	.gbg-x-embed [hidden] { display: none; }
+	.gbg-x-host { width: 100%; min-width: 0; }
+	.gbg-x-host > :global(div) { display: flex; justify-content: center; }
+	.gbg-x-host :global(iframe) { max-width: 100%; }
+	.gbg-x-embed[data-state='loading'] .gbg-x-host { min-height: 12rem; }
+	@media (max-width: 30rem) { .gbg-x-embed { padding: 1rem; } }
+	@media (prefers-reduced-motion: reduce) { .gbg-x-embed button { transition: none; } }
+</style>

@@ -1,0 +1,48 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import '../../styles/office-preview.css';
+import '~/styles/workflow-topics.css';
+import '~/styles/workflow-site-shell.css';
+
+interface Props {
+	title: string; page: 'topic' | 'gmail' | 'hub'; description: string;
+	topicTitle?: string; topicUrl?: string; guideTitle?: string; guideUrl?: string;
+	updated?: string; scope?: string;
+}
+const { title, description, page, updated = '2026.10.17' } = Astro.props;
+const lastUpdated = new Date(`${updated.replaceAll('.', '-')}T12:00:00Z`);
+---
+<StarlightPage hasSidebar={false} frontmatter={{
+	title, description, template: 'splash', tableOfContents: false,
+	editUrl: false, lastUpdated, prev: false, next: false,
+	head: [{ tag: 'meta', attrs: { property: 'og:type', content: page === 'gmail' ? 'article' : 'website' } }],
+}}>
+	<div id="_top" class="wf-content not-content">
+		<slot />
+		<p class="wf-toast" data-wf-feedback role="status" aria-live="polite"></p>
+	</div>
+</StarlightPage>
+
+<script>
+	const english = document.documentElement.lang.startsWith('en');
+	let feedbackTimer: ReturnType<typeof setTimeout>;
+	document.querySelectorAll<HTMLButtonElement>('[data-wf-copy]').forEach(button => {
+		button.addEventListener('click', async () => {
+			const target = document.getElementById(button.dataset.wfCopy || '');
+			if (!target?.textContent) return;
+			try {
+				await navigator.clipboard.writeText(target.textContent);
+				button.textContent = english ? 'Copied' : '已复制';
+				const feedback = document.querySelector('[data-wf-feedback]');
+				if (feedback) feedback.textContent = english ? 'Prompt copied. Fill in your own scope and parameters before use.' : '提示词已复制。使用前请填写自己的范围与参数。';
+				clearTimeout(feedbackTimer);
+				feedbackTimer = setTimeout(() => { if (feedback) feedback.textContent = ''; }, 3500);
+				setTimeout(() => { button.textContent = english ? 'Copy prompt' : '复制提示词'; }, 2200);
+			} catch {
+				const feedback = document.querySelector('[data-wf-feedback]');
+				if (feedback) feedback.textContent = english ? 'Copy failed. Select the prompt and copy it manually.' : '复制未成功，请选中提示词后手动复制。';
+			}
+		});
+		button.disabled = false;
+	});
+</script>

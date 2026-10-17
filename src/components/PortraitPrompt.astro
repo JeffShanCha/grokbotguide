@@ -1,0 +1,21 @@
+---
+import CopyTemplate from './CopyTemplate.astro';
+import { toLang } from '../i18n/ui';
+import { portraitPrompts, type PortraitStage } from '../data/portrait-prompts';
+interface Props { stage: PortraitStage }
+const { stage } = Astro.props;
+const lang = toLang(Astro.locals.starlightRoute.locale);
+---
+
+<div class="portrait-prompt">
+	<CopyTemplate id={`portrait-${stage}-${lang}`}>
+		<pre tabindex="0" aria-label={lang === 'zh' ? '可复制提示词' : 'Copyable prompt'}><code>{portraitPrompts[lang][stage]}</code></pre>
+	</CopyTemplate>
+</div>
+
+<style>
+	pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1.1rem 1.25rem; background: var(--gbg-soft-bg); border: 1px solid var(--gbg-card-border); border-radius: 0.75rem; color: var(--sl-color-gray-1); font-size: var(--sl-text-sm); line-height: 1.8; }
+	code { font: inherit; }
+	pre:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
+	.portrait-prompt :global(.gbg-tpl-btn) { min-height: 44px; }
+</style>

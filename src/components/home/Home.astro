@@ -7,11 +7,13 @@ import { SITE } from '../../../site.config.mjs';
 import sponsors from '../../data/sponsors.json';
 import Newsletter from '../Newsletter.astro';
 import { formatDate, type Lang } from '../../i18n/ui';
+import { localRecipeNavigation } from '../../lib/local-recipe-navigation';
 
 interface Props {
 	lang: Lang;
 }
 const { lang } = Astro.props;
+const previewNavigation = await localRecipeNavigation(lang);
 const p = (path: string) => `/${lang}/${path}`;
 
 const docs = await getCollection('docs', (e) => e.id.startsWith(`${lang}/`));
@@ -26,6 +28,7 @@ const n = {
 const questions = inSection('answers').sort(byOrder).slice(0, 4);
 const news = (await getCollection('changelog')).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3);
 const featured = await getEntry('docs', `${lang}/recipes/gmail-inbox-triage`);
+const featuredPreview = featured ? previewNavigation.entryForId(featured.id) : undefined;
 const featuredTested = featured?.data.grade === 'tested';
 
 const copy = {
@@ -63,7 +66,7 @@ const copy = {
 		sponsorsTitle: '赞助商',
 	},
 	en: {
-		eyebrow: 'Community-built · Unofficial · English & 中文',
+		eyebrow: 'Community-built · Unofficial · English & Chinese',
 		title: 'Grok Bot Guides, Templates & Automation Workflows',
 		tagline: 'Hire an AI teammate that never clocks out',
 		lead: 'A hands-on Grok Bot handbook. Guides, recipes and templates are in the menu above, or just search. Every page shows its sources, verification status and last update.',
@@ -96,9 +99,22 @@ const copy = {
 		sponsorsTitle: 'Sponsors',
 	},
 }[lang];
+if (previewNavigation.enabled) {
+ Object.assign(copy, lang === 'zh' ? {
+  ctaSecondary: `看 ${previewNavigation.total} 篇完整版教程`,
+  featuredLead: '从 8 封合成邮件练起：逐项对照分类、回复草稿和每日简报，再按步骤核对自己的 Gmail。每个阶段都有提示词、材料与验收方法。',
+  shotTitle: '完整教程里可以直接查看',
+  shotItems: ['邮件分类与判断依据', '两份待审阅回复草稿', '每日简报和待确认事项', '完整提示词与练习文件'],
+ } : {
+  ctaSecondary: `Explore ${previewNavigation.total} complete tutorials`,
+  featuredLead: 'Start with eight synthetic emails. Compare classifications, reply drafts and a daily brief, then validate a small batch in your own Gmail. Every stage includes prompts, materials and acceptance checks.',
+  shotTitle: 'Explore the complete tutorial',
+  shotItems: ['Email classifications and evidence', 'Two reply drafts for review', 'A daily brief with exceptions', 'Complete prompts and practice files'],
+ });
+}
 ---
 
-<div class="not-content gbg-home">
+<div id="_top" class="not-content gbg-home">
 	<!-- 1. 首屏：搜索 -->
 	<section class:list={['hero', lang]}>
 		<p class="eyebrow">{copy.eyebrow}</p>
@@ -129,6 +145,7 @@ const copy = {
 			<a class="btn" href={p('recipes/')}>{copy.ctaSecondary}</a>
 		</div>
 		<p class="stats">{copy.stats}</p>
+		{previewNavigation.enabled && <p class="stats" data-recipe-preview-entry><a style="color:var(--sl-color-text-accent)" href={previewNavigation.overviewHref}>{lang === 'zh' ? '按五个专题浏览全部完整版教程 →' : 'Browse all complete tutorials across five topics →'}</a></p>}
 	</section>
 
 	<!-- 2. 精选案例 -->
@@ -137,15 +154,15 @@ const copy = {
 			<section class="featured">
 				<div class="featured-copy">
 					<span class="badge-soft">{copy.featuredBadge}</span>
-					<h2>{featured.data.title}</h2>
+					<h2>{featuredPreview?.title || featured.data.title}</h2>
 					<p>{copy.featuredLead}</p>
 					<div class="gbg-tags">
-						{featured.data.apps.map((app) => (
+						{(featuredPreview ? ['Gmail'] : featured.data.apps).map((app) => (
 							<span class="gbg-badge">{app}</span>
 						))}
 						{featuredTested && <span class="gbg-badge gbg-grade-tested">{copy.featuredStatus}</span>}
 					</div>
-					<a class="btn btn-outline" href={`/${featured.id}/`}>
+					<a class="btn btn-outline" href={previewNavigation.href(`/${featured.id}/`)}>
 						{copy.featuredCta}
 					</a>
 				</div>
@@ -157,7 +174,7 @@ const copy = {
 								<li>{x}</li>
 							))}
 						</ul>
-						<a href={`/${featured.id}/${lang === 'zh' ? '#给-bot-的指令' : '#prompt'}`}>{copy.shotCta}</a>
+						<a href={previewNavigation.enabled ? `${previewNavigation.href(`/${featured.id}/`)}#practice` : `/${featured.id}/${lang === 'zh' ? '#给-bot-的指令' : '#prompt'}`}>{copy.shotCta}</a>
 					</div>
 				</figure>
 			</section>

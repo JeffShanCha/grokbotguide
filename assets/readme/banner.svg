@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="GrokBotGuide · Grok Bot 中文教程、角色模板与自动化工作流">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#27272a" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#18181b" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#18181b" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#18181b" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="400" rx="24" fill="#18181b"/>
+  <rect width="1280" height="400" rx="24" fill="url(#grid)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#fade)"/>
+
+  <!-- logo -->
+  <g transform="translate(88 92)">
+    <rect width="88" height="88" rx="20" fill="#0b0b0b" stroke="#3f3f46"/>
+    <rect x="19" y="25" width="50" height="38" rx="11" fill="none" stroke="#ff6a2b" stroke-width="5.5"/>
+    <circle cx="36" cy="44" r="5" fill="#fff"/>
+    <circle cx="52" cy="44" r="5" fill="#fff"/>
+    <path d="M44 13v11" stroke="#ff6a2b" stroke-width="5.5" stroke-linecap="round"/>
+  </g>
+
+  <text x="200" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="64" font-weight="700" fill="#ffffff">GrokBot<tspan fill="#ff6a2b">Guide</tspan></text>
+  <text x="90" y="246" font-family="'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#f4f4f5">Grok Bot 中文教程、角色模板<tspan fill="#ff8a57">与</tspan>自动化工作流</text>
+  <text x="90" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" fill="#a1a1aa">Guides, Bot cards &amp; automation recipes for xAI Grok Bot · 中文 / English</text>
+
+  <!-- chips -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="17" fill="#e4e4e7">
+    <rect x="90" y="322" width="118" height="36" rx="18" fill="#27272a"/><text x="149" y="346" text-anchor="middle">学习路线</text>
+    <rect x="218" y="322" width="118" height="36" rx="18" fill="#27272a"/><text x="277" y="346" text-anchor="middle">快速上手</text>
+    <rect x="346" y="322" width="140" height="36" rx="18" fill="#27272a"/><text x="416" y="346" text-anchor="middle">24 个实战案例</text>
+    <rect x="496" y="322" width="118" height="36" rx="18" fill="#27272a"/><text x="555" y="346" text-anchor="middle">常见问题</text>
+  </g>
+
+  <!-- chat card -->
+  <g transform="translate(900 72)" font-family="'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif" font-size="15">
+    <rect width="320" height="258" rx="18" fill="#0f0f10" stroke="#3f3f46"/>
+    <circle cx="24" cy="24" r="5" fill="#3f3f46"/><circle cx="40" cy="24" r="5" fill="#3f3f46"/><circle cx="56" cy="24" r="5" fill="#3f3f46"/>
+    <rect x="50" y="46" width="250" height="56" rx="12" fill="#3a1606" stroke="#7c2d12"/>
+    <text x="66" y="70" fill="#ffd2bd">每个工作日 9 点整理收件箱，</text>
+    <text x="66" y="91" fill="#ffd2bd">先别回复任何人。</text>
+    <rect x="20" y="114" width="250" height="56" rx="12" fill="#27272a"/>
+    <text x="36" y="138" fill="#e4e4e7">收到。我只生成清单和回复草稿，</text>
+    <text x="36" y="159" fill="#e4e4e7">发送留给你。</text>
+    <rect x="20" y="182" width="280" height="56" rx="12" fill="none" stroke="#ff6a2b"/>
+    <text x="36" y="205" fill="#ff8a57" font-weight="600">需要你审批</text>
+    <text x="36" y="226" fill="#d4d4d8">创建 Routine · 工作日 09:00</text>
+  </g>
+</svg>

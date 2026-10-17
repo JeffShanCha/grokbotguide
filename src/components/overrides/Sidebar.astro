@@ -2,9 +2,21 @@
 // 侧边栏：手机菜单顶部加四个主线入口（桌面端由顶栏下拉菜单承担）。
 import Default from '@astrojs/starlight/components/Sidebar.astro';
 import { toLang } from '../../i18n/ui';
+import { localRecipeNavigation } from '../../lib/local-recipe-navigation';
 
 const route = Astro.locals.starlightRoute;
 const lang = toLang(route.locale);
+const previewNavigation = await localRecipeNavigation(lang);
+if (previewNavigation.enabled) {
+	const mapLinks = (entries: typeof route.sidebar): typeof route.sidebar => entries.map(entry => entry.type === 'link'
+		? { ...entry, href: previewNavigation.href(entry.href), label: previewNavigation.entryForId(entry.href)?.title || entry.label }
+		: { ...entry, entries: mapLinks(entry.entries) });
+	route.sidebar = mapLinks(route.sidebar);
+	route.pagination = {
+		prev: route.pagination.prev ? { ...route.pagination.prev, href: previewNavigation.href(route.pagination.prev.href) } : undefined,
+		next: route.pagination.next ? { ...route.pagination.next, href: previewNavigation.href(route.pagination.next.href) } : undefined,
+	};
+}
 const section = route.id.split('/')[1] ?? '';
 const quick = {
 	zh: [

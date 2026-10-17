@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-16",
+  "account": "@0xlangeai",
+  "sample": {
+    "count": 10,
+    "utc_date_range": [
+      "2026-10-14",
+      "2026-10-16"
+    ],
+    "text_kind": "AI-authored Chinese summaries, not verbatim post text",
+    "selected_from": 73,
+    "timeline_pages": 3,
+    "timeline_span": [
+      "2026-10-13",
+      "2026-10-16"
+    ],
+    "full_30_day_coverage": false
+  },
+  "execution": {
+    "group": "GBG 画像页验证 20261016",
+    "group_id": "64a54b04-2b00-4c58-99a1-4aa426ad20be",
+    "collector": "二丫头 coordinated through an internal execution subagent; not direct execution",
+    "evidence_editor": "铁柱",
+    "content_designer": "驴姐",
+    "web_builder": "二蛋",
+    "eight_stages": "setup, live collection, intake, evidence, brief, build, review, revise",
+    "observed_by_Codex": "Actual group handoff messages and before/after artifact files",
+    "instruction_scope": "Adapted real-data instructions, not a verbatim replay of the eight synthetic exercise templates",
+    "strictly_sequential_revision": false,
+    "final_files_consistent": true,
+    "message_record_scope": "actual-inputs.json/txt contain 33 selected original task/handoff records from the Bot export; handoffs-summary.txt is a superseded paraphrased summary",
+    "remote_reviewer": "二丫头 via internal execution subagent",
+    "no_subagent_requirement_satisfied": false,
+    "audit": "audit.json",
+    "stage1_3_and7_trace_scope": "Outgoing task instructions and reported results; internal executor transcript was not supplied"
+  },
+  "revision": {
+    "theme": "t2",
+    "before": "试用并对比多款 AI 工具与 Agent 产品",
+    "after": "提到其他 AI 工具与 Agent 产品",
+    "reason": "Distinguish plans to try, an actual comparison and an account signup",
+    "evidence_unchanged": true,
+    "additional_fix": "Brief evidence count corrected from 13 to 11; introduction no longer says recurring",
+    "timing_caveat": "HTML was updated before the final brief write; the final content was reconciled. See revision.txt and the group messages."
+  },
+  "local_verification": {
+    "checks": "checks.json",
+    "source_spot_checks": "source-checks.json",
+    "desktop_width": 1280,
+    "mobile_width": 375,
+    "source_rows": 10,
+    "evidence_links": 11,
+    "independent_source_pages_read": 3,
+    "all_10_status_ids_and_utc_dates_checked": true,
+    "no_external_active_resources": true
+  },
+  "limitations": [
+    "Not full 30-day or whole-account coverage",
+    "Some selected posts are brief comments, not full workflows",
+    "Post images/videos were not reviewed",
+    "Product and billing statements inside the posts were not independently fact-checked",
+    "The original Bot delivery has a 500px mobile screenshot and a 375px iframe check; Codex independently rendered and captured the final HTML at375px",
+    "Source summaries and themes can contain interpretation errors; use the original-post links",
+    "Synthetic exercise prompts were not all replayed verbatim",
+    "No online deployment was performed",
+    "The no-subagent constraint was violated by 二丫头; stages1-3,7 and final recheck used an internal execution subagent",
+    "The stage8 packaging instruction was already source-truncated; source timestamps have minute precision",
+    "Full raw transcripts were not supplied, so the exported text could not all be independently compared to its underlying source"
+  ],
+  "publication": {
+    "committed_by_this_task": false,
+    "pushed_by_this_task": false,
+    "deployed": false
+  },
+  "artifacts": {
+    "source.csv": "c2f3414392212887ef2c08e862735245bb916e93fdcb27ec26d07c8d77f53130",
+    "audit.json": "7fff8c61a8dc8f7c3d74376de3b21e965d4a39ed4d004ca095b28bf77f96a455",
+    "bot-run.json": "574337d7922cda2d3b17a95e285b08852ad3c3840459a8bf28ac7d8570b58cf8",
+    "handoffs-summary.txt": "aff8558a71b86cd18d27b32b6a5e0454c010861b44d3bd05fae948f9fa8f8937",
+    "actual-inputs.json": "48b5d3c669d2f686d598e716da8ea5bd3b9e9c3c83af2e5beb34a7868cac147e",
+    "revision.txt": "69d52d9dcfa667cd6a9faaba2cb3915fbbb2410bf15655e054503f9b29ff3027",
+    "id-map.json": "d91e4150cb0ddc6e4168018dc251767317d372ca73adc97f32a46752f47088ff",
+    "site-brief.txt": "004b815bd88fba8d7a249ec5f14f2db49552a4f37beb3233c88f71ca2b306580",
+    "bot-checks.json": "089b6b19ef91e36614d351cef84471f8bf718e74c346a49d5a7b527b4f0e9044",
+    "bot-intake.json": "91927d2954107774b4373a2ad2e22e4470c193adbac703bad5cb56c305441b29",
+    "bot-delivery-20261016.zip": "771ccca9385ef1d36ae020ce6f8e43bcbe844209ca14dccedb3e60b2004445f4",
+    "checks.json": "5ecba289431c4977adbd4fb3a62d54b21e9c87f834b96fbf53690a6c34992587",
+    "source-checks.json": "fd704d773c986efd38ffaa10cc6d61a08af179a1081a93bda59ff38d4d9ee002",
+    "result.html": "2442a0fd46bee44fb8051ee289e8ab212b45a07c5f2a268029a9356babe30c1f",
+    "claims.json": "d5d4a3c78e2d32b213b5ce3b12eb65f1799f46efa992ba8e8a2e32cf46f19c9f",
+    "actual-inputs.txt": "7d84262f506bcb8c1cc7da420f6cef9cf155bba065e565f83e3822ba8380d385"
+  }
+}

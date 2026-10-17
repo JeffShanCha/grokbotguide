@@ -1,0 +1,21 @@
+---
+import { gmailGuideUrl } from '../../data/office-preview';
+import CaseDirectory from './CaseDirectory.astro';
+import { caseCatalog } from '../../data/workflow-topics/catalog';
+const choices = caseCatalog.filter(item => item.group === 'office').map((item,i) => ({ n:String(i+1).padStart(2,'0'),title:item.title.split('：')[0],text:`${item.stages} 个阶段 · ${item.files} 份文件`,href:item.href }));
+---
+<div id="main" class="wf-shell">
+	<div class="wf-kicker">WORKFLOWS / 办公专题 01</div>
+	<section class="wf-topic-hero" aria-labelledby="office-title">
+		<div><p class="wf-eyebrow">把零散的信息，变成能处理的事情</p><h1 id="office-title">办公与信息整理</h1><p class="wf-lead">从邮件、日程、文档和群聊里，找出需要你处理的事。先看交付样例，再按场景完成一次完整练习。</p><div class="wf-actions"><a class="wf-button" href={gmailGuideUrl}>从 Gmail 完整教程开始 <span aria-hidden="true">↗</span></a><a class="wf-text-link" href="#choose">选择我的场景 ↓</a></div><div class="wf-byline">shancha 整理 <span>·</span> 6 篇完整教程 <span>·</span> 每篇独立材料与验收</div></div>
+		<figure class="wf-desk"><div class="wf-desk-top"><span class="wf-dot" aria-hidden="true"></span>今日信息台<span class="wf-desk-sample">输出示例</span></div><div class="wf-desk-date">FRIDAY <span>10 / 16</span></div><h2>先处理这几件事。</h2><ol><li><span class="wf-desk-marker">01</span><div><strong>确认改版需求</strong><p>5 个页面的资料，待你核对</p></div><span class="wf-tag wf-tag-accent">待回复</span></li><li><span class="wf-desk-marker">02</span><div><strong>选定会议时间</strong><p>先核对日历，再确认时段</p></div><span class="wf-tag wf-tag-accent">待回复</span></li><li><span class="wf-desk-marker">03</span><div><strong>核对本月账单</strong><p>金额和截止日，留给你判断</p></div><span class="wf-tag">待核对</span></li></ol><figcaption><span>8 封样例邮件</span><span aria-hidden="true">→</span><span>2 份回复草稿</span><span aria-hidden="true">→</span><span>1 页简报</span></figcaption></figure>
+	</section>
+	<nav id="choose" class="wf-choices wt-choices wt-choices-many" aria-label="按问题选择练习">{choices.map(choice => <a href={choice.href}><span>{choice.n}</span><strong>{choice.title}</strong><small>{choice.text}</small><b aria-hidden="true">↗</b></a>)}</nav>
+	<section id="gmail" class="wf-feature" aria-labelledby="gmail-feature-title">
+		<div class="wf-feature-main"><div class="wf-kicker">01 / 推荐先做 · 完整教程</div><h2 id="gmail-feature-title">把收件箱整理成<br />一页行动清单</h2><p>从 8 封合成邮件开始，练习标签规则、回复草稿与每日简报。再按实际工具能力，逐步接入自己的 Gmail。</p><ul class="wf-feature-list"><li>下载原始样例，与分类参考答案对照</li><li>每个阶段都有提示词、预期结果和检查点</li><li>从手动试跑走到 Skill 与 Routine</li></ul><a class="wf-button" href={gmailGuideUrl}>打开 Gmail 完整教程 <span aria-hidden="true">→</span></a><p class="wf-small">练习台、提示词与文件均可在本站查看。</p></div>
+		<div class="wf-feature-result"><div class="wf-result-bar"><strong>你会留下的 4 份成果</strong><span>合成练习</span></div><div class="wf-deliverable"><span>01</span><div><h3>分类表</h3><p>8 封邮件逐项给出标签、依据和下一步。</p></div><b>CSV</b></div><div class="wf-deliverable"><span>02</span><div><h3>回复草稿</h3><p>2 份待你审阅的文本，不替你确认未知事项。</p></div><b>DRAFT</b></div><div class="wf-deliverable"><span>03</span><div><h3>每日简报</h3><p>待办、款项、等待与例外，一页看清。</p></div><b>TXT</b></div><div class="wf-deliverable"><span>04</span><div><h3>可复用流程</h3><p>明确输入、检查点和失败处理的 Skill 草案。</p></div><b>SKILL</b></div><p class="wf-result-note">图中为本站编写的示意；真实 Gmail 标签与草稿流程尚未实测。</p></div>
+	</section>
+	<CaseDirectory group="office" />
+	<section class="wf-principles"><div><div class="wf-kicker">把练习变成日常</div><h2>先做对一次，<br />再让它重复。</h2></div><ol><li><span>01</span><div><h3>用少量材料试一遍</h3><p>先粘贴或上传样例，明确怎样才算做对。</p></div></li><li><span>02</span><div><h3>只连接必要的来源</h3><p>核对实际可读范围、可写动作和账号，再处理自己的资料。</p></div></li><li><span>03</span><div><h3>验收后再保存和定时</h3><p>把已验证的方法存成 Skill，写清失败处理，再考虑 Routine。</p></div></li></ol></section>
+	<div class="wf-reading-note"><strong>关于本专题</strong><p>练习与提示词由 shancha 整理，结果示例均为合成材料。每篇完整教程附有官方来源、材料和验证范围；接入真实服务的配置仍需在自己的账号中验证。</p><a href={`${gmailGuideUrl}#sources`}>查看来源与验证范围 →</a></div>
+</div>

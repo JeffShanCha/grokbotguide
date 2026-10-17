@@ -2,6 +2,7 @@
 // 学习路线页：按目标分三条路。教程标题、摘要和阅读时间都从内容里读取，新增或改名页面会自动同步。
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { formatDate, toLang } from '../i18n/ui';
+import CompleteTutorialLinks from './workflow-en/CompleteTutorialLinks.astro';
 
 interface Props {
 	/** 最后一次人工核对整条路线的日期 */
@@ -72,19 +73,19 @@ const c = {
 		paths: [
 			{ k: 'First time', t: 'Install the app and send a first task', d: `Read the ${start.length} Get started pages, then run a zero-risk test.`, href: '#start', meta: `${start.length} pages · ~${total(start)} min read` },
 			{ k: 'Make it run on its own', t: 'Skills, routines and approvals', d: 'You have run a task or two and want scheduled work or several Bots working together.', href: '#advanced', meta: `${advanced.length} advanced guides` },
-			{ k: 'I have a use case', t: 'Start from a ready-made recipe', d: 'Filter recipes by role, copy the prompt and change a couple of lines.', href: '#recipes', meta: `${recipes.length} recipes` },
+			{ k: 'I have a use case', t: 'Choose a complete tutorial', d: 'Choose from five topics and practice with original inputs, staged prompts and acceptance checks.', href: '#recipes', meta: `${recipes.length} complete tutorials` },
 		],
 		startTitle: 'Get started',
 		startLead: 'For anyone who has not installed Grok Bot yet, or has it but is not sure what to ask. You will finish with a working Bot and know how to brief it and check its work.',
 		startNext: 'Then try the',
-		startNextLink: 'zero-risk recipe: summarize a long document',
+		startNextLink: 'complete document summary tutorial',
 		startNextTail: '. No apps to connect.',
 		advTitle: 'Advanced',
 		advLead: 'For people who have run a task or two and want Bots on a schedule or working together.',
-		recTitle: 'Recipes',
-		recLead: 'For people with a specific use case in mind. Bot cards and templates live here too.',
+		recTitle: 'Complete tutorials',
+		recLead: 'Choose a topic, inspect a complete example, then try the original practice files. Bot cards and reusable templates are linked below.',
 		recCards: [
-			{ t: 'Recipe library', d: `${recipes.length} recipes, filter by role`, href: 'recipes/' },
+			{ t: 'Complete tutorial library', d: `${recipes.length} complete tutorials with prompts, files and reference results`, href: 'recipes/topics/#all-cases' },
 			{ t: 'Bot cards', d: `${bots.length} ready-made Bot descriptions with boundaries`, href: 'bots/' },
 			{ t: 'Templates', d: `${templates.length} briefing, skill and routine templates`, href: 'templates/' },
 		],
@@ -175,6 +176,7 @@ const u = (p: string) => `/${lang}/${p}`;
 			<h2>{c.recTitle}</h2>
 		</div>
 		<p class="lead">{c.recLead}</p>
+		{lang === 'en' && <CompleteTutorialLinks showTopics title="Five topics, 25 complete tutorials" />}
 		<div class="gbg-rec-cards">
 			{
 				c.recCards.map((r) => (

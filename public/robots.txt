@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# LLM documentation: https://grokbotguide.ai/llms.txt
+# Full documentation: https://grokbotguide.ai/llms-full.txt
+# 中文索引: https://grokbotguide.ai/zh/llms.txt
+
 Sitemap: https://grokbotguide.ai/sitemap-index.xml

@@ -140,6 +140,10 @@
 	border-color: #d97706;
 	color: #f59e0b;
 }
+.gbg-grade-original {
+	border-color: var(--sl-color-text-accent);
+	color: var(--sl-color-text-accent);
+}
 :root[data-theme='light'] .gbg-grade-community {
 	color: #b45309;
 }

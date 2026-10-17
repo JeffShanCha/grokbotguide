@@ -1,0 +1,50 @@
+---
+import { sampleMails, sampleCounts, sampleDrafts, sampleDigest } from '../../data/workflow-en/gmail';
+---
+<figure class="wf-lab">
+	<div class="wf-lab-head"><div><span class="wf-dot" aria-hidden="true"></span><strong>Inbox practice</strong></div><span>Synthetic sample · 8 emails</span></div>
+	<div class="wf-tabs" role="tablist" aria-label="Explore email practice examples" data-wf-tabs>
+		<button type="button" role="tab" id="tab-mails" aria-controls="panel-mails" aria-selected="true" tabindex="0">01 Sample emails</button>
+		<button type="button" role="tab" id="tab-labels" aria-controls="panel-labels" aria-selected="false" tabindex="-1">02 Labels and drafts</button>
+		<button type="button" role="tab" id="tab-digest" aria-controls="panel-digest" aria-selected="false" tabindex="-1">03 Daily brief</button>
+	</div>
+	<div class="wf-lab-panel" id="panel-mails" role="tabpanel" aria-labelledby="tab-mails" tabindex="0">
+		<p class="wf-lab-hint">Expand a message to inspect its input. Names, addresses, amounts and content are fictional; M ids are practice identifiers.</p>
+		<div class="wf-mail-grid">{sampleMails.map((mail, i) => <details class="wf-mail" open={i === 0}><summary><span class="wf-mail-id">{mail.id}</span><span><strong>{mail.subject}</strong><small>{mail.from}</small></span><span class="wf-chevron" aria-hidden="true">＋</span></summary><div class="wf-mail-body"><div>{mail.address} · {mail.time}</div><p>{mail.body}</p></div></details>)}</div>
+	</div>
+	<div class="wf-lab-panel" id="panel-labels" role="tabpanel" aria-labelledby="tab-labels" tabindex="0" hidden>
+		<p class="wf-lab-hint">Reference answers follow this page’s rules. No labels or drafts have been written to Gmail.</p>
+		<div class="wf-count-tags">{sampleCounts.map(label => <span><b>{label.name}</b> {label.count}</span>)}</div>
+		<div class="wf-table-scroll" tabindex="0" role="region" aria-label="Classification reference for eight emails"><table><thead><tr><th>Email</th><th>Primary label</th><th>Evidence</th><th>Next step</th></tr></thead><tbody>{sampleMails.map(mail => <tr><th scope="row">{mail.id}</th><td><span class:list={['wf-tag', { 'wf-tag-accent': mail.label === 'Action', 'wf-tag-warn': mail.label === 'Review' }]}>{mail.label}</span></td><td>{mail.reason}</td><td>{mail.next}</td></tr>)}</tbody></table></div>
+		<div class="wf-draft-grid">{sampleDrafts.map(mail => <div class="wf-draft"><div><span>Reply draft · {mail.id}</span><span class="wf-tag">Not sent</span></div><h4>Re: {mail.subject}</h4><p>{mail.draft}</p></div>)}</div>
+	</div>
+	<div class="wf-lab-panel" id="panel-digest" role="tabpanel" aria-labelledby="tab-digest" tabindex="0" hidden><pre class="wf-digest-text">{sampleDigest}</pre></div>
+	<figcaption>An interactive illustration of complete inputs and expected outputs, authored for this site. It is not a screenshot of real inbox operations.</figcaption>
+</figure>
+
+<script>
+	document.querySelectorAll<HTMLElement>('[data-wf-tabs]').forEach(bar => {
+		const tabs = [...bar.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+		const activate = (tab: HTMLButtonElement) => {
+			for (const item of tabs) {
+				const selected = item === tab;
+				item.setAttribute('aria-selected', String(selected));
+				item.tabIndex = selected ? 0 : -1;
+				const panel = document.getElementById(item.getAttribute('aria-controls') || '');
+				if (panel) panel.hidden = !selected;
+			}
+		};
+		tabs.forEach((tab, i) => {
+			tab.addEventListener('click', () => activate(tab));
+			tab.addEventListener('keydown', event => {
+				let next: number;
+				if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+				else if (event.key === 'ArrowLeft') next = (i + tabs.length - 1) % tabs.length;
+				else if (event.key === 'Home') next = 0;
+				else if (event.key === 'End') next = tabs.length - 1;
+				else return;
+				event.preventDefault(); activate(tabs[next]); tabs[next].focus();
+			});
+		});
+	});
+</script>

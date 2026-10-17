@@ -1,0 +1,246 @@
+---
+title: "Grok Bot × X：从短文到个人网站，完整原创教程"
+description: "8 段原创提示词与完整样例，加测真实公开 X 采集、四 Bot 群聊交接和修订；附数据、实测记录与桌面和手机截图。"
+sidebar:
+  order: 25
+grade: original
+needs_testing: true
+author: JeffShanCha
+resource_id: x-0xlangeai-tweet-portrait-site
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: once
+apps: ["Grok Bot", "X"]
+last_checked: 2026-10-16
+sources:
+  - title: "个人画像网站的灵感来源（蓝哥 AI）"
+    url: https://x.com/0xlangeai/status/2109115005069341175
+  - title: "Create and manage Bots（官方文档）"
+    url: https://docs.x.ai/grok-bot/bots
+  - title: "Message and collaborate（官方文档）"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+  - title: "Files and results（官方文档）"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import { Image } from 'astro:assets';
+import PortraitWorkflow from '~/components/PortraitWorkflow.astro';
+import PortraitPrompt from '~/components/PortraitPrompt.astro';
+import XEmbed from '~/components/XEmbed.astro';
+import desktop from '~/assets/portrait-demo/result-desktop.jpg';
+import mobile from '~/assets/portrait-demo/result-mobile.jpg';
+import evidence from '~/assets/portrait-demo/evidence-check.jpg';
+import realDesktop from '~/assets/portrait-real/result-desktop.jpg';
+import realMobile from '~/assets/portrait-real/result-mobile-375.jpg';
+import realEvidence from '~/assets/portrait-real/evidence-p10.jpg';
+
+**把零散短文整理成一个有依据、能分享的个人介绍页。可以先用 8 条合成样例练习，再看本页新增的真实 X 加测：四 Bot 群聊交接、主题修订和网页交付，实际执行方式及局限逐项留档。**
+
+本页的教程、提示词和样例由本站独立编写，配图来自这次演示的真实页面。灵感来自[蓝哥 AI 的个人画像网站分享](https://x.com/0xlangeai/status/2109115005069341175)。这里提供的是一套可在站内读完的原创做法。
+
+<PortraitWorkflow />
+
+[看真实 X 加测网页](/demos/portrait-real/result.html) · [打开合成练习网页](/demos/portrait/result.html) · [下载练习素材 CSV](/demos/portrait/source.csv) · [下载练习证据 JSON](/demos/portrait/claims.json)
+
+:::note[这次验证到了哪里]
+已核对合成样例和真实 X 样本的交付、四 Bot 群聊交接及主题修订。本站独立检查了最终 HTML 的桌面 1280px、手机 375px 和证据跳转，并抽查了 3 条 X 原帖。
+
+这次真实运行使用了适配公开摘要的八阶段指令，未逐字重跑下方全部合成模板，也没有覆盖完整 30 天。原始记录补件还发现了违反禁开子代理要求的内部委派，详见下方更正；不能据此宣称全流程严格按约束完成。线上部署没有执行，本页保留「本站原创教程」标识。
+:::
+
+## 真实 X 加测：四 Bot 协作与执行记录
+
+2026 年 10 月 16 日，二丫头创建了项目群「GBG 画像页验证 20261016」，复用铁柱、驴姐和二蛋。本站回查了实际交接消息，并收到了输出文件和修订前后备份。
+
+本轮从蓝哥 AI 的公开账号 `@0xlangeai` 读取 3 页时间线后选取 10 条，样本 UTC 日期为 **2026-10-14 至 2026-10-16**。交付给本站的 `text` 是 AI 独立撰写的短摘要，保留真实原帖链接；页面是第三方样本观察，不是作者本人的主页。
+
+:::caution[原始记录补件更正]
+后收到的记录显示，第 1—3 阶段、第 7 阶段和最后复查由二丫头委派给内部执行子代理，未遵守本轮“禁开 subagent”的要求；二丫头已确认这一点并结束本轮执行。四 Bot 群聊交接确实发生，但不能写成四个 Bot 全部亲自完成。
+
+补件收录 33 条实际指令及交接消息，保留发送者、轮次时间和记录位置。摘录由二丫头导出，本站回查了部分群消息，未收到完整底层会话逐条比对；子代理内部过程未提供，一段打包指令在来源中已截断，时间仅精确到分钟。本站独立完成的本地页面检查仍有效。可查看[实际指令与交接摘录](/demos/portrait-real/actual-inputs.txt)、[结构化记录](/demos/portrait-real/actual-inputs.json)及[更正说明](/demos/portrait-real/audit.json)。
+:::
+
+[打开真实 X 网页](/demos/portrait-real/result.html) · [下载摘要 CSV](/demos/portrait-real/source.csv) · [下载主题与证据](/demos/portrait-real/claims.json) · [查看本地检查](/demos/portrait-real/checks.json)
+
+<figure>
+  <Image src={realDesktop} alt="真实 X 样本网页在本地1280像素桌面宽度的首屏，显示样本范围、三个主题和证据入口" format="webp" loading="lazy" />
+  <figcaption>本站拍摄的最终网页桌面首屏。三个主题共引用 11 个证据链接，来源区保留全部 10 条摘要及原帖入口。</figcaption>
+</figure>
+
+<details>
+  <summary>查看本站补拍的真实 375px 手机截图</summary>
+  <figure>
+    <Image src={realMobile} alt="真实 X 样本最终网页在375像素视口下的手机首屏，顶部样本说明和单列主题卡片清晰可见" format="webp" loading="lazy" />
+    <figcaption>本站用实际 375px 视口补拍，页面宽度同为 375px，单列卡片，证据按钮至少 44px。二丫头原先交付的是 500px 截图与 375px iframe 检查，本图补上了直接渲染验证。</figcaption>
+  </figure>
+</details>
+
+| 阶段 | 实际执行与结果 |
+| --- | --- |
+| 1—3：范围、采集、校验 | 二丫头委派内部执行子代理；交付 10 条摘要、真实 status id 映射和校验报告，未提供子代理内部过程 |
+| 4：证据 | 铁柱写出 3 个主题，共 11 个证据引用；只有一条的短视频话题未单独成主题 |
+| 5：设计 | 驴姐交付设计说明；检查发现证据总数误写为 13，后修正为 11 |
+| 6：网页 | 二蛋交付独立 HTML/CSS，10 条来源齐全，不加载外部资源 |
+| 7：检查 | 二丫头委派远端检查；本站另行检查 1280px、375px、证据目标及文件与网页的一致性 |
+| 8：修订 | 铁柱收窄 `t2`，驴姐与二蛋同步最终文件；存在并行修改，远端末次复查也用了执行子代理 |
+
+修订前的标题「试用并对比多款 AI 工具」容易把计划当成结果。修订后改为「提到其他 AI 工具与 Agent 产品」，明确 `p03`、`p06` 只是打算试用，`p10` 做过一次对比，`p09` 只说开通账号。证据未增加，也没有补造使用经历。
+
+<details>
+  <summary>查看实际证据跳转截图与交付记录</summary>
+  <figure>
+    <Image src={realEvidence} alt="实际点击p10后，最终网页高亮对应摘要，并显示查看原帖按钮" format="webp" loading="lazy" />
+    <figcaption>本站实际点击 `p10` 后的来源区。全部 11 个证据引用均有对应目标。</figcaption>
+  </figure>
+
+  [本次运行索引](/demos/portrait-real/run.json) · [实际指令摘录](/demos/portrait-real/actual-inputs.txt) · [修订前后与时序更正](/demos/portrait-real/revision.txt) · [早期交接摘要（已补更正）](/demos/portrait-real/handoffs-summary.txt) · [设计说明](/demos/portrait-real/site-brief.txt) · [二丫头原始交付包](/demos/portrait-real/bot-delivery-20261016.zip)
+</details>
+
+**阅读范围：** 时间线读取了 73 条、跨度为 10 月 13—16 日；入选的 10 条只覆盖 14—16 日，不能代表完整 30 天或作者的全部内容。部分是简短评论，图片和视频未核验，帖中工具及计费说法也未逐项作产品事实核验。本站独立抽查了 `p01`—`p03` 的作者、摘要含义与 UTC 日期；[抽查记录在这里](/demos/portrait-real/source-checks.json)。
+
+## 先看结果：每个主题都能找到依据
+
+演示页归纳出四个表达主题，每张卡片都带 `demo-01` 这样的证据链接。读者可以点回同页的短文，而不是只看到一个没有出处的“人格标签”。
+
+<figure>
+  <Image src={desktop} alt="本站合成样例网页的真实桌面首屏，展示样例提示、主题和证据链接" format="webp" loading="lazy" />
+  <figcaption>本站拍摄：二丫头生成的 HTML 在本地浏览器中的桌面首屏。截图以外还有其他主题和完整来源区，可打开上方样例网页查看。</figcaption>
+</figure>
+
+<details>
+  <summary>查看真实手机首屏截图（375px）</summary>
+  <figure>
+    <Image src={mobile} alt="合成样例在375像素手机宽度下的真实首屏，主题卡片按单列排列" format="webp" loading="lazy" />
+    <figcaption>同一份 HTML 的手机首屏；检查时页面宽度为 375px，没有页面级横向溢出。</figcaption>
+  </figure>
+</details>
+
+## 准备：先用一份你能核对的素材
+
+需要一个可用的 Grok Bot，以及能阅读附件、创建文件的现有 Bot。练习样例不需要连接 X，也不需要托管账号或新的 API Key。
+
+1. 下载本页的 `source.csv`，通过聊天输入框的附件入口上传给 Bot。
+2. 核对文件里是 8 条合成短文，列名为 `id,date,text,url`。演示数据的 `url` 留空，不伪装成真实帖子。
+3. 后续所有文件放在同一个项目目录。Bot 返回的绝对路径以实际结果为准，不要把自己 Mac 的路径当成云电脑路径。
+
+先发送这段开场指令。它会让 Bot 只确认素材和工作范围，避免一口气开始后面的所有步骤。
+
+<PortraitPrompt stage="setup" />
+
+### 想用四个 Bot 时，怎样分工
+
+可以先让同一个 Bot 按顺序切换岗位。需要长期分工时，再在桌面侧栏选择 **New → Create new Bot**，在 **Edit Profile** 中配置名称和职责。按下表分别配置即可。
+
+| 岗位 | 可写进描述的职责 | 本轮应交付 |
+| --- | --- | --- |
+| 素材编辑 | 校验输入、保留出处，报告缺失和重复；不做个人推断 | `source.csv` |
+| 证据编辑 | 只提出能回到素材核对的观察，保留不确定性 | `claims.json` |
+| 内容设计 | 把确认过的观察组织成读者能理解的一页内容 | `site-brief.md` |
+| 网页制作 | 根据已确认文件实现网页，并报告实际检查结果 | `site/index.html` |
+
+把四个 Bot 放进群聊时，在 **New chat** 选择它们。每一步先用 `@` 菜单选中负责的 Bot，再粘贴下方指令；输入一串普通的 `@名字` 不一定完成真正的指派。同账号的 Bot 可以使用共用文件，但不同岗位并不代表账号权限隔离。
+
+**交接时一次只 `@` 下一位。** 本次真实群聊修订中，同时提到内容设计和网页制作后，网页先于设计说明完成更新。最终文件核对一致，但顺序没有严格串行。需要固定顺序时，先等设计说明交付并核对，再用一条新消息单独指派网页制作，不要只在同一条消息里要求“两位按顺序来”。
+
+## 第一步：校验素材，而不是急着评价你
+
+发送给素材编辑。完成后检查数量、日期、正文和缺失说明；样例应当仍然是 8 条。
+
+<PortraitPrompt stage="intake" />
+
+**通过标准：** `source.csv` 能打开，每条有稳定的 id，正文与输入一致，没有凭空补出的原文链接。下一步引用 id，比让 Bot 反复转述原文更容易核对。
+
+<details>
+  <summary>换成自己的 X 内容：可选采集指令</summary>
+
+建议先完成样例，再使用这段。把账号和日期占位符换成自己的信息。读取能力取决于当前账号、连接方式和实际可访问范围；读取失败时，自己整理 CSV 也能继续后续步骤。
+
+<PortraitPrompt stage="live" />
+
+</details>
+
+## 第二步：建立主题与证据的对应关系
+
+发送给证据编辑。这里寻找的是这些文字里出现的主题和表达习惯，不是给人打人格分数。
+
+<PortraitPrompt stage="evidence" />
+
+打开 `claims.json`，抽查一个主题，再核对它引用的两三条素材。问自己：这些文字真的支持这句话吗？一句玩笑是否被放大成长期观点？没有足够依据时，删掉观察比加一个好听的标签更有用。
+
+本次样例中的一个结果是「自动化先手动、再放权」，依据来自 `demo-02`、`demo-04` 和 `demo-05`。它描述的是样本里的表达，不代表真实用户的完整人格。
+
+## 第三步：先确认内容，再做视觉
+
+发送给内容设计。先回答网站给谁看、要让读者记住什么，再决定卡片顺序和排版。
+
+<PortraitPrompt stage="brief" />
+
+**通过标准：** 读者能从导语理解这页是什么；每个主题有证据入口；没有未经你提供的履历、头衔、联系方式或成绩。可以参考[这次生成的设计说明](/demos/portrait/site-brief.txt)，但你自己的介绍应由自己的素材决定。
+
+## 第四步：生成一个能独立打开的网页
+
+发送给网页制作。本练习使用单文件 HTML，目的是先拿到能检查的结果，不必一开始就配置框架和部署服务。
+
+<PortraitPrompt stage="build" />
+
+拿到 `index.html` 附件后，可以下载并在自己的浏览器打开。Bot 给出的云端 `localhost` 地址不能直接当成你 Mac 上的本地地址；如果预览链接打不开，先让它提供 HTML 附件，不要把一个无法访问的路径当成交付完成。
+
+演示里，二丫头交回了 HTML 和其他中间文件。本站检查后把它放到本地样例入口，并重新拍摄了本页截图。
+
+## 第五步：核对证据、手机布局与真实交付
+
+把检查指令发给当前负责页面的 Bot。
+
+<PortraitPrompt stage="review" />
+
+自己也做三件事：点一个证据 id；切到手机宽度；读一遍所有描述，删掉你不认可的推断。截图只能说明某个视口，完整内容仍要在可打开的网页里核对。
+
+<figure>
+  <Image src={evidence} alt="点击demo-08证据链接后的真实浏览器截图，显示对应的样例原文和其他来源" format="webp" loading="lazy" />
+  <figcaption>本站拍摄：点击主题卡片中的 `demo-08` 后，浏览器跳到同页来源区。此次检查中所有证据链接都有对应目标，来源区共 8 条。</figcaption>
+</figure>
+
+### 不准确时，把修改落回文件
+
+补充自己的真实意思后，用下面的指令更正。只让工程 Bot 改页面文字，容易让网页和证据文件互相矛盾，因此先修观察，再同步页面。
+
+<PortraitPrompt stage="revise" />
+
+### 想发布时，再单独确认
+
+本教程做到可打开的网页和检查结果。决定公开前，再核对内容、托管账号、仓库、构建方式和公开范围，并明确授权发布。Vercel 或 Cloudflare Pages 是可选托管方式；本次演示没有连接它们，也没有验证部署。
+
+## 常见问题
+
+**没有 X 插件，能做吗？** 可以，先用本页 CSV 或自己有权使用的短文。缺少采集能力只影响拿素材，不影响后面的证据、内容和网页制作。
+
+**只有一个 Bot，能做吗？** 可以，合成练习就是二丫头串行处理四个岗位。真实 X 加测又复用了四个现有 Bot 验证群聊交接；两种方式都能交付文件，不必为了练习新建四个 Bot。
+
+**为什么合成样例里没有头像和真实姓名？** 样例没有真人身份信息，Bot 不应补造。真实 X 加测也没有使用作者头像，避免把第三方观察做成本人主页。制作自己的页面时，可以另外提供你决定公开的姓名和有权使用的头像。
+
+**可以直接使用蓝哥 AI 的原图和原提示词吗？** 本页没有采用这些素材。参考作品保留在文末；本站提供的是独立编写的提示词和自己演示产生的页面截图。
+
+## 本次演示记录与来源
+
+| 检查项 | 实际情况 |
+| --- | --- |
+| 执行方式 | 合成练习为单 Bot 分岗演练；真实加测有四 Bot 群聊交接，也有违反禁开要求的内部子代理委派及并行修订 |
+| 输入 | 8 条本站合成短文；另有 10 条公开 X 帖子的 AI 摘要与真实链接 |
+| 产物 | 两套素材 CSV、证据 JSON、设计说明、独立 HTML；真实加测另附交接与修订记录 |
+| 本站浏览器检查 | 两份最终 HTML 均检查 1280px、375px；真实加测 10 条来源、11 个有效证据锚点，手机无页面级横向溢出 |
+| 实测边界 | 未覆盖完整 30 天或核验帖子媒体；补件有 33 条实际指令/消息，缺子代理内部过程且一条源指令截断；合成模板未全部逐字重跑；没有部署 |
+| 日期 | 2026 年 10 月 16 日 |
+
+[真实加测记录](/demos/portrait-real/run.json) · [合成演练记录](/demos/portrait/run.json) · [练习素材](/demos/portrait/source.csv) · [完整样例网页](/demos/portrait/result.html)
+
+### 灵感来源与可选原帖
+
+感谢蓝哥 AI 的个人画像网站分享提供灵感。以下原帖作为参考阅读；完成本页练习所需的说明、提示词、样例和配图均已在本站提供。
+
+<details>
+  <summary>查看蓝哥 AI 的原帖嵌入</summary>
+  <XEmbed url="https://x.com/0xlangeai/status/2109115005069341175" />
+</details>
+
+继续了解：[多 Bot 协作](/zh/advanced/teams-of-bots/) · [全部实战案例](/zh/recipes/)

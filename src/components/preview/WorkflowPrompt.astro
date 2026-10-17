@@ -1,0 +1,9 @@
+---
+interface Props { id: string; text: string; title?: string }
+const english = Astro.url.pathname.startsWith('/en/');
+const { id, text, title = english ? 'Original prompt by shancha' : 'shancha 原创提示词' } = Astro.props;
+---
+<div class="wf-prompt">
+	<div class="wf-prompt-bar"><span>{title}</span><button type="button" data-pagefind-ignore data-wf-copy={`wf-${id}`} aria-label={english ? `Copy prompt: ${title}` : `复制提示词：${title}`} disabled>{english ? 'Copy prompt' : '复制提示词'}</button></div>
+	<pre id={`wf-${id}`} tabindex="0"><code>{text}</code></pre>
+</div>

@@ -1,0 +1,11 @@
+id,date,text,url,source_kind,collected_at
+p01,2026-10-16,用 Opus 5.5 生成科普短视频，询问拿来起号的效果,https://x.com/0xlangeai/status/2110966386474512573,x-public-post,2026-10-16
+p02,2026-10-16,登录 Grok Bot 见红字提示，原以为封号，实为需重新登录,https://x.com/0xlangeai/status/2110914366183006625,x-public-post,2026-10-16
+p03,2026-10-15,提到腾讯推出个人 Agent 产品 LightVela，准备去试用,https://x.com/0xlangeai/status/2110615655196324285,x-public-post,2026-10-16
+p04,2026-10-15,解答 Grok Bot 无法操作本机：在电脑设置把执行改为每次询问,https://x.com/0xlangeai/status/2110577151519178919,x-public-post,2026-10-16
+p05,2026-10-15,吐槽 Gemini Pro 账号不能直接用 Gemini CLI，需单独计费,https://x.com/0xlangeai/status/2110536133453160851,x-public-post,2026-10-16
+p06,2026-10-14,打算试用 magpie，并与 CliProxyAPI 做对比后分享,https://x.com/0xlangeai/status/2110378009714929747,x-public-post,2026-10-16
+p07,2026-10-14,分享冷知识：ChatGPT 的 GPT Pro 会员不显示广告,https://x.com/0xlangeai/status/2110363563277856823,x-public-post,2026-10-16
+p08,2026-10-14,发现 Grok Bot 思考时有支笔来回书写的动画细节,https://x.com/0xlangeai/status/2110310257042018353,x-public-post,2026-10-16
+p09,2026-10-14,自己已开通两个 Gemini 4 Argon 账号，原为注册 Muse 准备,https://x.com/0xlangeai/status/2110295043101647105,x-public-post,2026-10-16
+p10,2026-10-14,对比 Muse 全局任务列表，指出 Grok Bot 多 Bot 时易漏消息,https://x.com/0xlangeai/status/2110221269899895024,x-public-post,2026-10-16

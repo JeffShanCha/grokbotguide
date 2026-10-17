@@ -1,0 +1,69 @@
+本站补件更正（2026-10-16）：以 actual-inputs.json/txt 和 audit.json 为准。原交接摘要遗漏了内部执行子代理与后续时序确认；子代理使用未遵守禁开要求。二蛋确认 HTML 先改，驴姐随后认可。下方保留二丫头最初交付报告，供对照，不代表本站认可其全部执行者或时序表述。
+
+# revision.md — 第 8 阶段修订
+
+## t2 修改前后
+- 修改前标题：试用并对比多款 AI 工具与 Agent 产品
+- 修改前观察：这批帖子多次提到准备试用或对比不同的 AI 工具与 Agent 产品，如 LightVela、magpie 与 CliProxyAPI、Muse。
+- 修改后标题：提到其他 AI 工具与 Agent 产品
+- 修改后观察：这批 10 条帖子里有 4 条提到其他 AI 工具或 Agent 产品：p03 和 p06 说打算试用（LightVela；magpie，并计划与 CliProxyAPI 对比），p10 拿 Muse 的全局任务列表和 Grok Bot 做了对比，p09 说开通了两个 Gemini 4 Argon 账号、原本是为注册 Muse 准备的。p09 没有提到实际试用。
+- 证据不变：p03, p06, p09, p10
+
+## 原因
+过度概括：p03、p06 只是打算试用；p10 是一次对比；p09 只是开通账号，没有实际试用。原文的「多次」「试用并对比」说重了。
+
+## 导语
+「归纳出 3 个反复出现的话题」改为「归纳出 3 个话题」。由 二蛋 提出，二丫头 批准。
+
+## 修改顺序
+- 文件修改时间（stat，北京时间 2026-10-16）：
+  - claims.before.json: 20:24:47.894
+  - claims.json: 20:24:47.914
+  - site-brief.before.md: 20:25:02.322
+  - site/index.before.html: 20:25:04.174
+  - site/index.html: 20:25:04.198
+  - site-brief.md: 20:25:07.618
+- 按修改时间：claims 改于 20:24:47.914；site-brief.before.md 备份 20:25:02.322；index.before.html 备份和 index.html 修改 20:25:04.198；site-brief.md 最终写入 20:25:07.618，比 index.html 晚约 3 秒。即 brief 的备份比 HTML 早，但 brief 最后一次写入比 HTML 晚。
+- 群消息顺序：二蛋 的「HTML 已经更新好了」先于 驴姐 的「brief 改好了」。
+- 驴姐 说她的 brief 修改在 二蛋 发消息之前就完成了。修改时间只能说明最后一次写入在 HTML 之后，无法证实她说的是哪一次修改；这里只记录，不做判断。
+- 之后 二蛋 复核页面与 brief 一致。
+
+## 备份
+claims.before.json、site-brief.before.md、site/index.before.html
+
+## diff
+### claims.json
+```diff
+--- claims.before.json
++++ claims.json
+@@ -17,2 +17,2 @@
+-      "title": "试用并对比多款 AI 工具与 Agent 产品",
+-      "observation": "这批帖子多次提到准备试用或对比不同的 AI 工具与 Agent 产品，如 LightVela、magpie 与 CliProxyAPI、Muse。",
++      "title": "提到其他 AI 工具与 Agent 产品",
++      "observation": "这批 10 条帖子里有 4 条提到其他 AI 工具或 Agent 产品：p03 和 p06 说打算试用（LightVela；magpie，并计划与 CliProxyAPI 对比），p10 拿 Muse 的全局任务列表和 Grok Bot 做了对比，p09 说开通了两个 Gemini 4 Argon 账号、原本是为注册 Muse 准备的。p09 没有提到实际试用。",
+```
+### site-brief.md
+```diff
+--- site-brief.before.md
++++ site-brief.md
+@@ -10 +10 @@
+-- 导语（照用）：「这一页根据蓝哥AI 在 2026 年 10 月 14 日至 16 日发布的 10 条公开 X 帖子，归纳出 3 个反复出现的话题。所有摘要都是我们整理的，不是原文；想看原话，请点每条来源的原帖链接。」
++- 导语（照用）：「这一页根据蓝哥AI 在 2026 年 10 月 14 日至 16 日发布的 10 条公开 X 帖子，归纳出 3 个话题。所有摘要都是我们整理的，不是原文；想看原话，请点每条来源的原帖链接。」
+@@ -20 +20,2 @@
+-- t2 试用并对比多款 AI 工具与 Agent 产品：p03 p06 p09 p10
++- t2 提到其他 AI 工具与 Agent 产品：p03 p06 p09 p10
++  - t2 的观察文字必须照搬 claims.json，保留「4 条」和逐条区分（打算试用、做过对比、只是开通账号），不能写成「试用了」或「多次」。
+```
+### site/index.html
+```diff
+--- site/index.before.html
++++ site/index.html
+@@ -26 +26 @@
+-<p>这一页根据蓝哥AI 在 2026 年 10 月 14 日至 16 日发布的 10 条公开 X 帖子，归纳出 3 个反复出现的话题。所有摘要都是我们整理的，不是原文；想看原话，请点每条来源的原帖链接。</p>
++<p>这一页根据蓝哥AI 在 2026 年 10 月 14 日至 16 日发布的 10 条公开 X 帖子，归纳出 3 个话题。所有摘要都是我们整理的，不是原文；想看原话，请点每条来源的原帖链接。</p>
+@@ -43,2 +43,2 @@
+-<h3>试用并对比多款 AI 工具与 Agent 产品</h3>
+-<p>这批帖子多次提到准备试用或对比不同的 AI 工具与 Agent 产品，如 LightVela、magpie 与 CliProxyAPI、Muse。</p>
++<h3>提到其他 AI 工具与 Agent 产品</h3>
++<p>这批 10 条帖子里有 4 条提到其他 AI 工具或 Agent 产品：p03 和 p06 说打算试用（LightVela；magpie，并计划与 CliProxyAPI 对比），p10 拿 Muse 的全局任务列表和 Grok Bot 做了对比，p09 说开通了两个 Gemini 4 Argon 账号、原本是为注册 Muse 准备的。p09 没有提到实际试用。</p>
+```

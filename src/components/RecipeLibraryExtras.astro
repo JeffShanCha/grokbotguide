@@ -73,7 +73,7 @@ const blocks = [
 </div>
 
 <p class="gbg-wanted not-content">
-	<span class="topics"><strong>{c.wanted}：</strong>{c.topics.join(' · ')}</span>
+	<span class="topics"><strong>{c.wanted}{lang === 'zh' ? '：' : ':'}</strong>{c.topics.join(' · ')}</span>
 	<span class="links">
 		<a href={`/${lang}/community/submit/`}>{c.claim}</a>
 		<a href={`/${lang}/resources/?category=recipes`}>{c.res}</a>

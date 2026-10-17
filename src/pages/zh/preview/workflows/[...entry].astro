@@ -1,0 +1,14 @@
+---
+import { workflowTopics, workflowGuides, topicHref, guideHref, workflowsBase } from '~/data/workflow-topics';
+
+// Compatibility with links shared during local review.
+export function getStaticPaths() {
+	if (!import.meta.env.DEV) return [];
+	return [
+		{ params: { entry: undefined }, props: { href: workflowsBase } },
+		...workflowTopics.map(topic => ({ params: { entry: topic.id }, props: { href: topicHref(topic) } })),
+		...workflowGuides.map(topic => ({ params: { entry: `${topic.id}/${topic.guideSlug}` }, props: { href: guideHref(topic) } })),
+	];
+}
+return Astro.redirect(Astro.props.href + Astro.url.search, 302);
+---

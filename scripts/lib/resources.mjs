@@ -66,6 +66,7 @@ export function validateResource(r, { strict = false, today = chinaDate() } = {}
 	for (const key of ['id', 'url', 'title', 'author', 'summary_zh', 'summary_en', 'added']) {
 		if (typeof r[key] !== 'string' || !r[key].trim()) errors.push(`missing ${key}`);
 	}
+	for (const key of ['title_en', 'author_en']) if (r[key] !== undefined && (typeof r[key] !== 'string' || !r[key].trim())) errors.push(`invalid ${key}`);
 	if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(r.id || '')) errors.push('invalid id');
 	for (const key of ['url', 'author_url', 'archive', 'original_url']) if (r[key]) {
 		try { normalizeUrl(r[key]); } catch { errors.push(`invalid ${key}`); }
@@ -87,7 +88,7 @@ export function validateResource(r, { strict = false, today = chinaDate() } = {}
 	if (strict) {
 		for (const key of ['categories', 'evidence', 'checked_at', 'verification_note_zh', 'verification_note_en']) if (!r[key]?.length) errors.push(`missing ${key}`);
 		if (r.status !== 'alive') errors.push('new collection entries must be accessible');
-		const allowed = ['id', 'url', 'title', 'author', 'author_url', 'source', 'platform', 'lang', 'published', 'added', 'checked_at', 'summary_zh', 'summary_en', 'tags', 'apps', 'roles', 'status', 'archive', 'submitted_by', 'sponsored', 'ugc', 'categories', 'evidence', 'verification_note_zh', 'verification_note_en', 'collection_batch', 'original_url'];
+		const allowed = ['id', 'url', 'title', 'title_en', 'author', 'author_en', 'author_url', 'source', 'platform', 'lang', 'published', 'added', 'checked_at', 'summary_zh', 'summary_en', 'tags', 'apps', 'roles', 'status', 'archive', 'submitted_by', 'sponsored', 'ugc', 'categories', 'evidence', 'verification_note_zh', 'verification_note_en', 'collection_batch', 'original_url'];
 		if (Object.keys(r).some((k) => !allowed.includes(k))) errors.push('unknown resource fields (raw source bodies are not stored)');
 	}
 	return errors;

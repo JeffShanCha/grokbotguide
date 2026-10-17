@@ -1,0 +1,50 @@
+---
+import { sampleMails, sampleCounts, sampleDrafts, sampleDigest } from '../../data/office-preview';
+---
+<figure class="wf-lab">
+	<div class="wf-lab-head"><div><span class="wf-dot" aria-hidden="true"></span><strong>邮件整理练习台</strong></div><span>合成样例 · 8 封邮件</span></div>
+	<div class="wf-tabs" role="tablist" aria-label="查看邮件练习样例" data-wf-tabs>
+		<button type="button" role="tab" id="tab-mails" aria-controls="panel-mails" aria-selected="true" tabindex="0">01 样例邮件</button>
+		<button type="button" role="tab" id="tab-labels" aria-controls="panel-labels" aria-selected="false" tabindex="-1">02 分类与草稿</button>
+		<button type="button" role="tab" id="tab-digest" aria-controls="panel-digest" aria-selected="false" tabindex="-1">03 每日简报</button>
+	</div>
+	<div class="wf-lab-panel" id="panel-mails" role="tabpanel" aria-labelledby="tab-mails" tabindex="0">
+		<p class="wf-lab-hint">展开一封看看输入。姓名、地址、金额和内容均为虚构；M01 等为练习编号。</p>
+		<div class="wf-mail-grid">{sampleMails.map((mail, i) => <details class="wf-mail" open={i === 0}><summary><span class="wf-mail-id">{mail.id}</span><span><strong>{mail.subject}</strong><small>{mail.from}</small></span><span class="wf-chevron" aria-hidden="true">＋</span></summary><div class="wf-mail-body"><div>{mail.address} · {mail.time}</div><p>{mail.body}</p></div></details>)}</div>
+	</div>
+	<div class="wf-lab-panel" id="panel-labels" role="tabpanel" aria-labelledby="tab-labels" tabindex="0" hidden>
+		<p class="wf-lab-hint">这是按本页规则编写的参考答案。分类和草稿均未写入 Gmail。</p>
+		<div class="wf-count-tags">{sampleCounts.map(label => <span><b>{label.name}</b> {label.count}</span>)}</div>
+		<div class="wf-table-scroll" tabindex="0" role="region" aria-label="8 封邮件的分类对照表"><table><thead><tr><th>邮件</th><th>主标签</th><th>判断依据</th><th>下一步</th></tr></thead><tbody>{sampleMails.map(mail => <tr><th scope="row">{mail.id}</th><td><span class:list={['wf-tag', { 'wf-tag-accent': mail.label === 'Action', 'wf-tag-warn': mail.label === 'Review' }]}>{mail.label}</span></td><td>{mail.reason}</td><td>{mail.next}</td></tr>)}</tbody></table></div>
+		<div class="wf-draft-grid">{sampleDrafts.map(mail => <div class="wf-draft"><div><span>回复草稿 · {mail.id}</span><span class="wf-tag">未发送</span></div><h4>Re: {mail.subject}</h4><p>{mail.draft}</p></div>)}</div>
+	</div>
+	<div class="wf-lab-panel" id="panel-digest" role="tabpanel" aria-labelledby="tab-digest" tabindex="0" hidden><pre class="wf-digest-text">{sampleDigest}</pre></div>
+	<figcaption>本站绘制的交付物示意，可切换查看完整内容。它展示输入与预期输出，不是真实邮箱操作截图。</figcaption>
+</figure>
+
+<script>
+	document.querySelectorAll<HTMLElement>('[data-wf-tabs]').forEach(bar => {
+		const tabs = [...bar.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+		const activate = (tab: HTMLButtonElement) => {
+			for (const item of tabs) {
+				const selected = item === tab;
+				item.setAttribute('aria-selected', String(selected));
+				item.tabIndex = selected ? 0 : -1;
+				const panel = document.getElementById(item.getAttribute('aria-controls') || '');
+				if (panel) panel.hidden = !selected;
+			}
+		};
+		tabs.forEach((tab, i) => {
+			tab.addEventListener('click', () => activate(tab));
+			tab.addEventListener('keydown', event => {
+				let next: number;
+				if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+				else if (event.key === 'ArrowLeft') next = (i + tabs.length - 1) % tabs.length;
+				else if (event.key === 'Home') next = 0;
+				else if (event.key === 'End') next = tabs.length - 1;
+				else return;
+				event.preventDefault(); activate(tabs[next]); tabs[next].focus();
+			});
+		});
+	});
+</script>

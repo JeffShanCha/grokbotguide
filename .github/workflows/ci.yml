@@ -23,5 +23,11 @@ jobs:
         run: npm run test:collection
       - name: Typecheck worker
         run: npm run check:worker
+      - name: Test search highlighting
+        run: npm run test:search
       - name: Build
         run: npm run build
+      - name: Check tutorial search index
+        run: npm run check:search
+      - name: Check English navigation and content
+        run: npm run check:english

@@ -1,0 +1,16 @@
+---
+interface Props { total: number; href: string }
+const { total, href } = Astro.props;
+const english = Astro.url.pathname.startsWith('/en/');
+---
+<aside class="recipe-preview-notice not-content" aria-label={english ? 'Complete tutorials' : '完整版教程'}>
+	<div><strong>{english ? `${total} complete tutorials` : `${total} 篇完整版教程`}</strong><p>{english ? 'Every case card opens a complete tutorial with practice materials, staged prompts, reference results and acceptance checks. Each page states its verification scope.' : '下方每张案例卡片都直达完整版，包含练习材料、分步提示词、参考结果和验收清单。验证范围在各篇中说明。'}</p></div>
+	<a href={href}>{english ? 'Browse five topics →' : '按五个专题浏览 →'}</a>
+</aside>
+<style is:inline>
+	.recipe-preview-notice { display: flex; align-items: center; gap: 1rem 1.5rem; padding: 1rem 1.2rem; margin: 1.5rem 0; border: 1px solid var(--sl-color-accent); border-radius: .75rem; background: var(--sl-color-accent-low); }
+	.recipe-preview-notice strong { color: var(--sl-color-white); font-size: var(--sl-text-base); }
+	.recipe-preview-notice p { margin: .35rem 0 0; font-size: var(--sl-text-sm); color: var(--sl-color-gray-2); line-height: 1.8; }
+	.recipe-preview-notice a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 44px; color: var(--sl-color-text-accent); font-size: var(--sl-text-sm); font-weight: 600; }
+	@media (max-width: 40rem) { .recipe-preview-notice { flex-direction: column; align-items: flex-start; padding: 1rem; gap: .5rem; } }
+</style>

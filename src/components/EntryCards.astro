@@ -3,14 +3,18 @@
 // 支持 ?role=sales 这样的岗位筛选；实战案例的标题拆成「Grok Bot × 工具」和一句话用途，方便扫读。
 import { getCollection } from 'astro:content';
 import { toLang, useT } from '../i18n/ui';
+import { localRecipeNavigation } from '../lib/local-recipe-navigation';
+import RecipePreviewNotice from './preview/RecipePreviewNotice.astro';
 
 interface Props {
 	section: 'bots' | 'templates' | 'recipes';
-	/** 显示「依据官方文档 / 来自社区实测」图例和篇数；有本站实测的页面时才显示「本站实测」 */
+	/** 显示来源图例和篇数；原创教程和本站实测仅在有对应页面时显示。 */
 	legend?: boolean;
 }
 const { section, legend = false } = Astro.props;
 const lang = toLang(Astro.locals.starlightRoute.locale);
+const previewNavigation = await localRecipeNavigation(lang);
+const localRecipes = section === 'recipes' && previewNavigation.enabled;
 const t = useT(lang);
 const entries = (await getCollection('docs', (e) => e.id.startsWith(`${lang}/${section}/`))).sort(
 	(a, b) => (a.data.sidebar.order ?? 99) - (b.data.sidebar.order ?? 99)
@@ -25,15 +29,17 @@ const split = (title: string) => {
 	return m ? { tool: m[1], task: m[2] } : { tool: '', task: title };
 };
 const gradeCount = (g: string) => entries.filter((e) => e.data.grade === g).length;
-const legendItems = (['official', 'community', 'tested'] as const).map((g) => ({ g, n: gradeCount(g) }));
+const legendItems = (['official', 'community', 'original', 'tested'] as const).map((g) => ({ g, n: gradeCount(g) }));
 const unit = lang === 'zh' ? '篇' : '';
 ---
 
+{localRecipes && <RecipePreviewNotice total={previewNavigation.total} href={previewNavigation.overviewHref} />}
+
 {
-	legend && (
+	legend && !localRecipes && (
 		<p class="gbg-legend not-content">
 			{legendItems
-				.filter(({ g, n }) => g !== 'tested' || n > 0)
+				.filter(({ g, n }) => !['original', 'tested'].includes(g) || n > 0)
 				.map(({ g, n }) => (
 					<span>
 						<i class={`dot dot-${g}`} aria-hidden="true" />
@@ -67,16 +73,16 @@ const unit = lang === 'zh' ? '篇' : '';
 		<div class="gbg-grid not-content">
 			{entries.map((e) => {
 				const { tool, task } = split(e.data.title);
+				const complete = localRecipes ? previewNavigation.entryForId(e.id) : undefined;
 				return (
-					<a class="gbg-card" href={`/${e.id}/`} data-role={e.data.role ?? ''}>
+					<a class="gbg-card" href={localRecipes ? previewNavigation.href(`/${e.id}/`) : `/${e.id}/`} data-role={e.data.role ?? ''}>
 						{tool && <span class="gbg-card-tool">Grok Bot × {tool}</span>}
-						<h3>{task}</h3>
-						{!tool && e.data.description && <p>{e.data.description}</p>}
+						<h3>{complete?.title || task}</h3>
+						{complete ? <p>{complete.lead}</p> : !tool && e.data.description && <p>{e.data.description}</p>}
 						<div class="gbg-tags">
 							{e.data.role && <span class="gbg-badge">{t(`role.${e.data.role}`)}</span>}
 							{e.data.kind && <span class="gbg-badge">{t(`kind.${e.data.kind}`)}</span>}
-							{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}
-							{e.data.grade && <span class={`gbg-badge gbg-grade-${e.data.grade}`}>{t(`grade.${e.data.grade}`)}</span>}
+							{complete ? <><span class="gbg-badge">{lang === 'zh' ? `完整教程 · ${complete.stages} 阶段` : `Complete tutorial · ${complete.stages} stages`}</span><span class="gbg-badge">{lang === 'zh' ? `${complete.files} 份文件` : `${complete.files} files`}</span></> : <>{e.data.difficulty && <span class="gbg-badge">{t(`difficulty.${e.data.difficulty}`)}</span>}{e.data.grade && <span class={`gbg-badge gbg-grade-${e.data.grade}`}>{t(`grade.${e.data.grade}`)}</span>}</>}
 						</div>
 						{e.data.apps.length > 0 && (
 							<p class="gbg-apps">
@@ -172,6 +178,9 @@ const unit = lang === 'zh' ? '篇' : '';
 	}
 	.dot-community {
 		background: #d97706;
+	}
+	.dot-original {
+		background: var(--sl-color-text-accent);
 	}
 	.dot-tested {
 		background: #16a34a;

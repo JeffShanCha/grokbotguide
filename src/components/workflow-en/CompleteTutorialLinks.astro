@@ -1,0 +1,31 @@
+---
+import {caseCatalog,caseBySlug} from '../../data/workflow-en/catalog';
+import {groups} from '../../data/workflow-en';
+import {featuredTutorials} from '../../data/workflow-en/entry-points';
+interface Props {slugs?:string[];showTopics?:boolean;id?:string;title?:string}
+const {slugs=featuredTutorials,showTopics=false,id='complete-tutorials',title='Continue with a complete tutorial'}=Astro.props;
+const entries=[...new Set(slugs)].map(slug=>{const entry=caseBySlug.get(slug);if(!entry)throw new Error(`Unknown complete tutorial: ${slug}`);return entry;});
+---
+<section id={id} class="complete-tutorial-links not-content" aria-labelledby={`${id}-heading`} data-complete-tutorial-links>
+ <div class="complete-tutorial-head"><h2 id={`${id}-heading`}>{title}</h2><a href="/en/recipes/topics/#all-cases">Browse all {caseCatalog.length} complete tutorials →</a></div>
+ <p>Start with original practice inputs, follow the staged prompts, then compare the complete reference results and acceptance checks. Each tutorial states what was tested and what still needs validation.</p>
+ {showTopics&&<nav class="complete-topic-links" aria-label="Complete tutorial topics">{Object.entries(groups).map(([id,meta])=><a href={`/en/recipes/topics/${id}/`}>{meta.title}<span>{caseCatalog.filter(entry=>entry.group===id).length} tutorials</span></a>)}</nav>}
+ {entries.length>0&&<ul class="complete-case-links">{entries.map(entry=><li><a href={entry.href} data-complete-tutorial={entry.slug}><strong>{entry.title}</strong><span>{entry.lead}</span><small>{entry.stages} stages · {entry.prompts} prompts · {entry.files} files</small></a></li>)}</ul>}
+</section>
+<style>
+ .complete-tutorial-links{margin-block:2rem;padding:1.4rem;border:1px solid var(--gbg-card-border);border-radius:.9rem;background:var(--gbg-card-bg);scroll-margin-top:calc(var(--sl-nav-height) + 1rem)}
+ .complete-tutorial-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.5rem}
+ .complete-tutorial-head h2{margin:0;font-size:var(--sl-text-xl);color:var(--sl-color-white);line-height:1.4}
+ .complete-tutorial-head a{display:inline-flex;align-items:center;min-height:44px;color:var(--sl-color-text-accent);font-size:var(--sl-text-sm)}
+ .complete-tutorial-links>p{margin:.6rem 0 1rem;font-size:var(--sl-text-sm);line-height:1.7;color:var(--sl-color-gray-2)}
+ .complete-topic-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.6rem}
+ .complete-topic-links a{display:flex;flex-direction:column;justify-content:center;min-height:60px;padding:.6rem .85rem;border:1px solid var(--gbg-card-border);border-radius:.55rem;text-decoration:none;color:var(--sl-color-text-accent);font-size:var(--sl-text-sm);overflow-wrap:anywhere}
+ .complete-topic-links span{color:var(--sl-color-gray-3);font-size:var(--sl-text-xs)}
+ .complete-case-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));list-style:none;margin:1rem 0 0;padding:0;gap:.7rem}
+ .complete-case-links li{margin:0}
+ .complete-case-links a{display:flex;flex-direction:column;height:100%;gap:.45rem;padding:1rem;border:1px solid var(--gbg-card-border);border-radius:.65rem;text-decoration:none;font-size:var(--sl-text-sm);color:var(--sl-color-gray-2);overflow-wrap:anywhere}
+ .complete-case-links strong{color:var(--sl-color-white);line-height:1.5}.complete-case-links small{margin-top:auto;color:var(--sl-color-gray-3)}
+ .complete-case-links a:hover,.complete-topic-links a:hover{border-color:var(--sl-color-accent)}
+ .complete-tutorial-links a:focus-visible{outline:2px solid var(--sl-color-text-accent);outline-offset:3px}
+ @media(max-width:40rem){.complete-tutorial-links{padding:1rem}.complete-case-links{grid-template-columns:1fr}}
+</style>

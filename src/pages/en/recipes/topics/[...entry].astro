@@ -1,0 +1,10 @@
+---
+import WorkflowPreviewLayout from '~/components/preview/WorkflowPreviewLayout.astro';
+import Topics from '~/components/workflow-en/Topics.astro';
+import {groups} from '~/data/workflow-en';
+export function getStaticPaths(){return[{params:{entry:undefined},props:{}},...Object.keys(groups).map(group=>({params:{entry:group},props:{group}}))];}
+const {group}=Astro.props;
+const title=group?groups[group].title:'Complete case tutorials · Five topics';
+const description=group?groups[group].summary:'25 complete tutorials with original inputs,staged prompts,reference outputs,troubleshooting,acceptance and downloads.';
+---
+<WorkflowPreviewLayout title={title} description={description} page={group?'topic':'hub'} updated="2026.10.18"><Topics group={group}/></WorkflowPreviewLayout>

@@ -64,6 +64,6 @@ Your Google Workspace admin has to approve the app named Grok first. Switching b
 
 ## Read next
 
-- [Grok Bot × Gmail: triage your inbox daily](/en/recipes/gmail-inbox-triage/)
+- [Complete tutorial: Gmail inbox organization: labels, drafts and a daily brief](/en/recipes/gmail-inbox-triage/)
 - [Approvals, security and privacy](/en/advanced/approvals-and-security/)
 - [Grok Bot not working?](/en/answers/grok-bot-not-working/)

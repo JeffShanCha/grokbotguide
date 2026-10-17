@@ -6,7 +6,7 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 
 /**
  * 文章额外的 frontmatter 字段。
- * - grade：内容分级。official = 依据官方文档；community = 来自原作者公开分享的实测；tested = 本站或投稿者亲自按步骤跑通；opinion = 个人观点/评测
+ * - grade：official = 官方依据；community = 社区作者分享；original = 本站原创教程（不代表全流程实测）；tested = 本站按步骤跑通；opinion = 观点/评测
  *   只有真正跑通的页面才能标 tested，页面上会显示绿色「✓ 本站实测」。
  * - last_checked：最后一次对照官方资料核对的日期（official 页面显示「核对于 …」；缺省用页面最后更新日期）
  * - needs_testing：内部跟踪字段，页面上不显示；npm run check:content 会打印还没实测的页面清单
@@ -15,12 +15,14 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
  * - 角色卡 / 模板专用：role、apps、permissions、difficulty、share_url
  */
 const docsExtension = z.object({
-	grade: z.enum(['official', 'community', 'tested', 'opinion']).optional(),
+	grade: z.enum(['official', 'community', 'original', 'tested', 'opinion']).optional(),
 	needs_testing: z.boolean().default(false),
 	last_checked: z.coerce.date().optional(),
 	last_verified: z.coerce.date().optional(),
 	tested_plan: z.string().optional(),
 	author: z.string().optional(),
+	// 将外部资源卡片关联到本站导读，原文链接继续保留。
+	resource_id: z.string().optional(),
 	sources: z.array(z.object({ title: z.string(), url: z.url() })).default([]),
 	// 角色卡与模板
 	role: z
@@ -41,7 +43,9 @@ const resource = z.object({
 	id: z.string(),
 	url: z.url(),
 	title: z.string(),
+	title_en: z.string().trim().min(1).optional(),
 	author: z.string(),
+	author_en: z.string().trim().min(1).optional(),
 	author_url: z.url().optional(),
 	source: z.enum(['official', 'media', 'blog', 'video', 'x', 'github', 'wechat', 'forum', 'paper']),
 	platform: z.string().optional(),

@@ -1,0 +1,22 @@
+---
+import { toLang } from '../i18n/ui';
+const lang = toLang(Astro.locals.starlightRoute.locale);
+const labels = lang === 'zh' ? ['整理素材', '核对证据', '组织内容', '制作网页'] : ['Prepare sources', 'Check evidence', 'Design content', 'Build the page'];
+const files = ['source.csv', 'claims.json', 'site-brief.md', 'site/index.html'];
+---
+<figure class="portrait-flow not-content">
+	<ol>
+		{labels.map((label, index) => <li><span class="step">0{index + 1}</span><strong>{label}</strong><code>{files[index]}</code></li>)}
+	</ol>
+	<figcaption>{lang === 'zh' ? '本站绘制：四个岗位、四份交接文件。每一段结束后先检查，再交给下一位。' : 'Our workflow diagram: four roles and four handoff files. Review each stage before moving on.'}</figcaption>
+</figure>
+<style>
+	.portrait-flow { margin-block: 1.5rem; }
+	ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.65rem; list-style: none; margin: 0; padding: 0; }
+	li { display: grid; gap: 0.45rem; margin: 0; padding: 1rem; border: 1px solid var(--gbg-card-border); border-radius: 0.75rem; background: var(--gbg-card-bg); }
+	.step { color: var(--sl-color-text-accent); font: 500 1.4rem var(--gbg-display); }
+	strong { color: var(--sl-color-white); font-size: var(--sl-text-sm); }
+	code { font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); overflow-wrap: anywhere; }
+	figcaption { margin-top: 0.75rem; color: var(--sl-color-gray-2); font-size: var(--sl-text-sm); line-height: 1.6; }
+	@media (max-width: 48rem) { ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>

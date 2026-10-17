@@ -1,0 +1,10 @@
+import {workflowGuides,groups,caseSlug,guideHref} from './index.ts';
+import {gmailGuideUrl} from './gmail.ts';
+const tools:Record<string,string>={
+ 'gmail-inbox-triage':'Gmail · Email','google-calendar-meeting-brief':'Google Calendar · Calendar','summarize-a-document':'Documents · Files','slack-daily-standup':'Slack · Conversations','mobile-voice':'Mobile · Voice · Photos','slack-team-bot':'Slack · Team Bot · Metrics',
+ 'typefully-repurpose':'Typefully · X · LinkedIn','sheets-audience-tracker':'Google Sheets · Followers · Subscribers','youtube-competitor-watch':'YouTube · Competitor research','google-ads-scoreboard':'Google Ads · Advertising','google-docs-positioning-brief':'Google Docs · Positioning','x-tag-bot':'X · Mentions · Reading','x-personal-portrait-site':'X · Portrait · Website',
+ 'website-daily-check':'Website · Inspection','cursor-cloud-agent':'Cursor · Coding agents','github-pr-watch':'GitHub · Notion · PR','x-bookmarks-demo':'X · Bookmarks · Prototype','composio-many-apps':'Composio · Airtable · Slack',
+ 'zendesk-support-queue':'Zendesk · Support','notion-personal-crm':'Notion · Public profiles','call-transcripts-review':'Calls · Transcripts · Review','stripe-refunds':'Stripe · Refund review','gmail-drive-invoices':'Gmail · Drive · Receipts','shopping-compare':'Shopping · Price comparison','marketplace-watch':'Secondhand · Listing monitoring',
+};
+export const caseCatalog=[{slug:'gmail-inbox-triage',group:'office',groupTitle:groups.office.title,title:'Gmail inbox organization: labels, drafts and a daily brief',lead:"8 synthetic emails, 6 labels plus Review, a classification table, reply drafts and a daily brief with staged acceptance.",href:gmailGuideUrl,stages:5,prompts:7,files:5},...workflowGuides.map(g=>({slug:caseSlug(g),group:g.id,groupTitle:g.title,title:g.guideTitle,lead:g.guideLead,href:guideHref(g),stages:g.steps.length,prompts:g.steps.length,files:g.files.length}))].map(e=>({...e,tools:tools[e.slug]})).sort((a,b)=>Number(groups[a.group].number)-Number(groups[b.group].number));
+export const caseBySlug=new Map(caseCatalog.map(e=>[e.slug,e]));
