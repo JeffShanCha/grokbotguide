@@ -2,10 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
+import starlightLlmsTxt from 'starlight-llms-txt';
 
 import { SITE } from './site.config.mjs';
 import { LOCALES } from './locales.config.mjs';
+import { LLMS, LLMS_SECTIONS, LLMS_EXCLUDED, LLMS_PAGE_SEPARATOR } from './llms.config.mjs';
 import { readdirSync } from 'node:fs';
+import localSearch from './scripts/local-search.mjs';
 
 // 侧边栏分组旁显示的篇数（按中文目录统计，中英文内容保持同步）
 const countDocs = (dir) =>
@@ -48,6 +51,29 @@ export default defineConfig({
 		starlight({
 			title: 'GrokBotGuide',
 			description: 'Grok Bot guides, templates and automation workflows · Grok Bot 中文教程、角色模板与自动化工作流',
+			plugins: [
+				starlightLlmsTxt({
+					projectName: 'GrokBotGuide',
+					description: LLMS.description.en,
+					details: LLMS.details.en,
+					// MDX 中的组件依赖页面上下文，使用插件支持的原始 Markdown 模式。
+					rawContent: true,
+					// 0.12 的 exclude 仅影响 small；middleware 同步从 full 移除这两篇。
+					exclude: LLMS_EXCLUDED.map((path) => `*/${path}`),
+					promote: LLMS_SECTIONS.flatMap(({ paths }) => paths.map((path) => `en/${path}{,/**}`)),
+					demote: ['en/community{,/**}', 'en/news{,/**}', 'en/resources'],
+					customSets: LLMS_SECTIONS.map(({ paths, en }) => ({
+						label: en,
+						paths: paths.map((path) => `en/${path}{,/**}`),
+					})),
+					optionalLinks: [
+						{ label: 'Community', url: `${SITE.url}/en/community/about/` },
+						{ label: 'Changelog', url: `${SITE.url}/en/news/changelog/` },
+						{ label: 'Resources', url: `${SITE.url}/en/resources/` },
+					],
+					pageSeparator: LLMS_PAGE_SEPARATOR,
+				}),
+			],
 			logo: { src: './src/assets/logo.svg', alt: 'GrokBotGuide' },
 			favicon: '/favicon.svg',
 			// 默认语言设为 en：hreflang 的 x-default 指向英文版（面向海外搜索）。中英两套内容都完整维护。
@@ -64,6 +90,7 @@ export default defineConfig({
 			customCss: ['@fontsource/space-grotesk/500.css', '@fontsource/space-grotesk/700.css', './src/styles/custom.css'],
 			components: {
 				Header: './src/components/overrides/Header.astro',
+				Search: './src/components/overrides/Search.astro',
 				LanguageSelect: './src/components/overrides/LanguageSelect.astro',
 				ThemeSelect: './src/components/overrides/ThemeSelect.astro',
 				SocialIcons: './src/components/overrides/SocialIcons.astro',
@@ -159,6 +186,7 @@ export default defineConfig({
 				},
 			],
 		}),
+		localSearch(),
 		// 显式配置 sitemap：排除只负责跳转的根路径 /
 		sitemap({
 			filter: (page) => page !== `${SITE.url}/`,

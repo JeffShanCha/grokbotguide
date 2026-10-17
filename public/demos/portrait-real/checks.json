@@ -1,0 +1,41 @@
+{
+  "checker": "Codex",
+  "date": "2026-10-16",
+  "source_rows": 10,
+  "utc_date_range": [
+    "2026-10-14",
+    "2026-10-16"
+  ],
+  "status_ids_match_urls": true,
+  "utc_dates_match_status_timestamps": true,
+  "themes": 3,
+  "evidence_links": 11,
+  "claims_and_source_summaries_match_html": true,
+  "changed_theme_ids": [
+    "t2"
+  ],
+  "t2_evidence_unchanged": true,
+  "external_active_resources": 0,
+  "original_content_scope": "AI-authored summaries and original links; no post media or verbatim archive in public assets",
+  "browser_checks": {
+    "desktop": {
+      "viewport_width": 1280,
+      "page_scroll_width": 1280,
+      "page_client_width": 1280,
+      "source_count": 10,
+      "evidence_links": 11,
+      "broken_evidence_targets": 0
+    },
+    "mobile": {
+      "viewport_width": 375,
+      "viewport_height": 900,
+      "page_scroll_width": 375,
+      "page_client_width": 375,
+      "grid_columns": "343px (single column)",
+      "minimum_evidence_target_px": 44
+    },
+    "clicked_evidence": "#t1 -> #p10, matching source visible and highlighted",
+    "screenshots": "Actual local browser captures, not the remote 500px screenshot",
+    "passed": true
+  }
+}

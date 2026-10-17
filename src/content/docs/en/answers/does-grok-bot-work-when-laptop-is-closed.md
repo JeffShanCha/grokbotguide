@@ -48,4 +48,4 @@ Only if you enable and approve local execution. The default asks every time; the
 
 - [What is Grok Bot?](/en/start/what-is-grok-bot/)
 - [How do I schedule Grok Bot routines?](/en/answers/how-to-schedule-grok-bot-routines/)
-- [Grok Bot × your phone](/en/recipes/mobile-voice/)
+- [Complete tutorial: Mobile and voice: turn spoken requests into confirmed tasks](/en/recipes/mobile-voice/)

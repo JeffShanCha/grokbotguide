@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-16",
+  "input": "8 synthetic short posts written for GrokBotGuide; no real X data",
+  "executor": "Existing Grok Bot 二丫头, four roles executed sequentially",
+  "completed": [
+    "source preparation",
+    "evidence mapping",
+    "site brief",
+    "HTML/CSS page"
+  ],
+  "not_tested": [
+    "live X collection",
+    "four-Bot group handoffs",
+    "hosting deployment"
+  ],
+  "source_normalization": "The downloadable source.csv uses a standard CSV header; the Bot export added a notice before its header. Row text and ids are unchanged.",
+  "artifacts": {
+    "source.csv": "51ac2f11aa76e68b1b1d68512b9e764c0063b0e191508b90027303b52ce8a0fa",
+    "claims.json": "e8a09cbf47f19c86a0a7ad17c50e5c26402b7bd89e60f148eef76d20d6e70267",
+    "site-brief.txt": "f6ab502f8c407c8af33049b58b8f284c64660cf76b3941ae57e031d8dddc1e40",
+    "result.html": "935294eab3ddc90789ff3285bc91e9ccebf5719681a2c3776c4a50a75796ad7e"
+  }
+}

@@ -1,0 +1,40 @@
+---
+import { caseCatalog } from '../../data/workflow-en/catalog';
+import { groups } from '../../data/workflow-en/factory';
+interface Props { group?: string }
+const { group } = Astro.props;
+const entries = caseCatalog.filter(item => !group || item.group === group);
+const key = group || 'all';
+---
+<section id="all-cases" class="wc-directory" data-case-directory aria-labelledby={`directory-${key}`}>
+	<div class="wf-section-heading"><div><div class="wf-kicker">COMPLETE TUTORIALS / READ AND PRACTICE INDEPENDENTLY</div><h2 id={`directory-${key}`}>{group ? 'All tutorials in this topic' : 'All 25 complete tutorials'}</h2></div><p>Each page includes original input, staged prompts, reference results,<br />troubleshooting, acceptance checks and downloads.</p></div>
+	<form class="wc-filters" role="search" aria-label="Filter case tutorials"><div><label for={`query-${key}`}>Search tutorials</label><input id={`query-${key}`} type="search" name="query" placeholder="Search tools, tasks or tutorials" autocomplete="off" disabled /></div>{!group && <div><label for="case-group">Choose a topic</label><select id="case-group" name="group" disabled><option value="">All topics</option>{Object.entries(groups).map(([id,meta]) => <option value={id}>{meta.title}</option>)}</select></div>}<button type="reset">Reset</button></form>
+	<p class="wc-count" role="status" aria-live="polite" data-case-count>Showing {entries.length} / {entries.length} tutorials</p>
+	<div class="wc-grid">{entries.map((entry,i) => <article class="wc-card" data-case-card data-group={entry.group} data-search={`${entry.title} ${entry.lead} ${entry.groupTitle} ${entry.slug} ${entry.tools}`.toLocaleLowerCase()}><div class="wc-card-top"><span>{String(i+1).padStart(2,'0')}</span><small>{entry.groupTitle}</small></div><h3><a href={entry.href}>{entry.title}<span aria-hidden="true">↗</span></a></h3><p class="wc-card-tools">{entry.tools}</p><p>{entry.lead}</p><div class="wc-card-meta"><span>{entry.stages} stages</span><span>{entry.prompts} prompts</span><span>{entry.files} files</span></div><a class="wc-open" href={entry.href} aria-label={`Open complete tutorial: ${entry.title}`}>Open tutorial <span aria-hidden="true">→</span></a></article>)}</div>
+	<p class="wc-empty" data-case-empty hidden>No matching tutorials. Try another keyword or reset to view all.</p>
+</section>
+<script>
+	document.querySelectorAll<HTMLElement>('[data-case-directory]').forEach(directory => {
+		const form = directory.querySelector<HTMLFormElement>('form')!;
+		const query = form.querySelector<HTMLInputElement>('[name="query"]')!;
+		const group = form.querySelector<HTMLSelectElement>('[name="group"]');
+		const cards = [...directory.querySelectorAll<HTMLElement>('[data-case-card]')];
+		const update = () => {
+			const terms = query.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+			let visible = 0;
+			for (const card of cards) {
+				const matches = (!group?.value || card.dataset.group === group.value) && terms.every(term => card.dataset.search?.includes(term));
+				card.hidden = !matches; if (matches) visible++;
+			}
+			const count = directory.querySelector('[data-case-count]');
+			if (count) count.textContent = `Showing ${visible} / ${cards.length} tutorials`;
+			const empty = directory.querySelector<HTMLElement>('[data-case-empty]');
+			if (empty) empty.hidden = visible > 0;
+		};
+		form.addEventListener('submit', event => event.preventDefault());
+		form.addEventListener('input', update); form.addEventListener('change', update);
+		form.addEventListener('reset', () => requestAnimationFrame(update));
+		query.disabled = false; if (group) group.disabled = false;
+		update();
+	});
+</script>

@@ -36,11 +36,11 @@ Send me a one-page report. Mark anything you cannot read as "not retrieved"; nev
 
 ## 2. Daily site check
 
-Flavio Copes’s "Blog Pulse" checks analytics, deployments, GitHub and the live pages at 8 am to confirm new posts are live and appear in the sitemap and RSS feed. Full setup: [Grok Bot × your website: an automatic site check](/en/recipes/website-daily-check/).
+Flavio Copes’s "Blog Pulse" checks analytics, deployments, GitHub and the live pages at 8 am to confirm new posts are live and appear in the sitemap and RSS feed. Practice a bounded inspection in [Complete tutorial: Website checks: three fixture faults and a reproducible report](/en/recipes/website-daily-check/).
 
 ## 3. Batch updates of outdated content
 
-Flavio Copes runs a daily routine that picks ten posts with outdated version claims and hands them to a Cursor cloud agent, which opens PRs; three merged in two days. Good for technical blogs and tutorial sites. See [Grok Bot × Cursor cloud agents](/en/recipes/cursor-cloud-agent/).
+Flavio Copes runs a daily routine that picks ten posts with outdated version claims and hands them to a Cursor cloud agent, which opens PRs; three merged in two days. The linked practice uses a synthetic pricing change to teach task scope and local acceptance; it does not reproduce that cloud run: [Complete tutorial: Coding handoffs: executable requirements and acceptance checks](/en/recipes/cursor-cloud-agent/).
 
 ```text
 Every day at 10:00, find 10 posts on the site that mention specific version numbers or prices and have not been updated in 6 months.
@@ -50,7 +50,7 @@ After I confirm, hand them to a Cursor cloud agent to open one PR per post; do n
 
 ## 4. Competitor page analysis
 
-In the official marketing guide, a "Market Researcher" Bot reads competitor product pages in its own browser to find what they all emphasize that you have not claimed. See [Grok Bot × Google Docs: refine positioning](/en/recipes/google-docs-positioning-brief/).
+In the official marketing guide, a "Market Researcher" Bot reads competitor product pages in its own browser to find what they all emphasize that you have not claimed. Practice source-based claims and review comments in [Complete tutorial: Positioning briefs: evidence, concrete value and review comments](/en/recipes/google-docs-positioning-brief/).
 
 ## Notes
 
@@ -70,6 +70,6 @@ It can find outdated posts and hand them to a Cursor cloud agent to open PRs; re
 
 ## Read next
 
-- [Grok Bot × your website: daily site check](/en/recipes/website-daily-check/)
-- [Grok Bot × Cursor cloud agents](/en/recipes/cursor-cloud-agent/)
-- [Grok Bot × YouTube: watch competitor channels](/en/recipes/youtube-competitor-watch/)
+- [Complete tutorial: Website checks: three fixture faults and a reproducible report](/en/recipes/website-daily-check/)
+- [Complete tutorial: Coding handoffs: executable requirements and acceptance checks](/en/recipes/cursor-cloud-agent/)
+- [Complete tutorial: YouTube monitoring: new videos and comparable observations](/en/recipes/youtube-competitor-watch/)

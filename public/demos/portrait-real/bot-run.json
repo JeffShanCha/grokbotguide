@@ -1,0 +1,72 @@
+{
+ "account": {
+  "handle": "@0xlangeai",
+  "name": "蓝哥AI",
+  "user_id": "1759530111534243840"
+ },
+ "scope": "2026-10-16 前 30 天的原创公开帖，主题为 AI 工具/工作流，取 8–12 条",
+ "method": {
+  "tool": "内置公开 X 读取 get_users_posts",
+  "pages": 3,
+  "exclude": [
+   "retweets",
+   "replies"
+  ],
+  "posts_read": 73,
+  "timeline_read_span": "2026-10-13..2026-10-16",
+  "sample_date_range": "2026-10-14..2026-10-16（取 source.csv 日期最小/最大值）",
+  "sample_count": 10,
+  "window_fully_covered": false
+ },
+ "limitations": [
+  "p01/p07/p08/p09 四条与主题关系较松",
+  "图片和视频未查看",
+  "摘要由 AI 撰写",
+  "手机截图实际是 500px 视口，375 只用 iframe 检查过；真实 375 由用户本地自己截",
+  "没有覆盖完整的 30 天窗口"
+ ],
+ "participants": [
+  {
+   "stage": "1-3",
+   "bot": "二丫头",
+   "id": "10c52acc-195c-4e0f-bd1c-4e1bc9869bca",
+   "status": "passed"
+  },
+  {
+   "stage": "4",
+   "bot": "铁柱",
+   "id": "791cffbd-863f-445b-a828-c73ffeb6ca29",
+   "status": "passed"
+  },
+  {
+   "stage": "5",
+   "bot": "驴姐",
+   "id": "a8508bc1-24d2-4011-8319-e4db8b9e0b22",
+   "status": "passed",
+   "note": "验收清单数量 13->11 已修正"
+  },
+  {
+   "stage": "6",
+   "bot": "二蛋",
+   "id": "b08f7cc4-197e-456b-bb76-feb19d8fd275",
+   "status": "passed"
+  },
+  {
+   "stage": "7",
+   "bot": "二丫头",
+   "status": "review passed"
+  },
+  {
+   "stage": "8",
+   "bots": "铁柱->驴姐/二蛋",
+   "status": "复核后通过"
+  }
+ ],
+ "group_chat": {
+  "name": "GBG 画像页验证 20261016",
+  "id": "64a54b04-2b00-4c58-99a1-4aa426ad20be",
+  "created": "2026-10-16 ~20:19 CST"
+ },
+ "published": false,
+ "git": false
+}

@@ -1,4 +1,39 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: x-cgnot996-usage-endurance-guide
+  title: Grok Bot 省额度指南：任务降频、上下文整理与工具分流
+  summary_zh: 作者汇总12条省额度建议，涉及定时降频、上下文交接、CLI分流、重试上限和用量封顶。已补读10张图；充值结论需按账号类型纠正，免费接口和云电脑运行保证仍有未核实部分。
+  summary_en: Twelve author-reported usage tips on routines, context, CLI handoffs and retries. All ten images read; billing needs account-specific updates. External API and cloud-runtime claims remain untested.
+  categories:
+    - advanced
+    - recipes
+  url: https://x.com/cgnot996/status/2108504325609984233
+  author: 铁柱AGI
+  published: 2026-10-09
+  author_url: https://x.com/cgnot996
+  source: x
+  lang: zh
+  added: 2026-10-18
+  checked_at: 2026-10-18
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 铁柱读取原帖长文和10张图；Codex 补读官方用量、模型、设置与Routine说明并纠正历史计费入口。第三方技能只读开头，部分外链失败；未运行流程或复现节省比例。
+  verification_note_en: The collection Bot read the article and all ten images. Codex checked current official billing, models, settings and routines. Third-party skills were partly read and some links failed. No savings or workflow reproduced.
+  apps:
+    - Grok Build
+    - Cursor
+    - X
+    - OpenRouter
+    - ModelScope
+  tags:
+    - usage
+    - routines
+    - context
+    - cli
+    - webhook
+  title_en: "Grok Bot usage guide: routine cadence, context handoffs and tool offloading"
+  author_en: Tiezhu AGI (@cgnot996)
+  platform: x
+  collection_batch: 2026-10-18-platform-release-approved
 - added: 2026-10-16
   checked_at: 2026-10-16
   status: alive
@@ -6,6 +41,7 @@
   id: composio-grok-bot-custom-mcp-guide
   url: https://composio.dev/content/how-to-add-mcp-servers-to-grok-bot
   title: 为 Grok Bot 接入 MCP：插件、远程服务与 stdio
+  title_en: "Connect MCP servers to Grok Bot: plugins, remote services and stdio"
   author: Prathit Joshi（Composio）
   source: blog
   lang: en
@@ -34,6 +70,7 @@
   id: github-jockeys97-grok-bot-codex-skill
   url: https://github.com/jockeys97/grok-bot-codex-skill/blob/main/SKILL.md
   title: 用 Codex 操作 Grok Bot 的桌面协作 Skill
+  title_en: A desktop collaboration Skill for controlling Grok Bot with Codex
   author: Jockeys97
   source: github
   lang: en
@@ -59,6 +96,7 @@
   id: github-mergisi-awesome-grokbot
   url: https://github.com/mergisi/awesome-grokbot
   title: Grok Bot 多岗位模板集：邮件、销售与开发协作
+  title_en: Grok Bot role templates for email, sales and development
   author: mergisi
   source: github
   lang: en
@@ -88,6 +126,7 @@
   id: reddit-willsamadi-google-docs-bot-index
   url: https://reddit.com/r/GrokBot/comments/1x64avh/your_thoughts_on_my_setup_and_advice_to_make_it
   title: 用 Google Docs 索引协调多 Bot：一位用户的配置与困惑
+  title_en: "Coordinating Bots with a Google Docs index: one user's setup and difficulties"
   author: willsamadi
   source: forum
   lang: en
@@ -110,7 +149,9 @@
 - id: x-0xlangeai-local-exec-setting
   url: https://x.com/0xlangeai/status/2110577151519178919
   title: 助手不能操作本机电脑时的设置办法
+  title_en: A setting to check when Grok Bot cannot use your local computer
   author: 蓝哥AI
+  author_en: LanGe AI (@0xlangeai)
   author_url: https://x.com/0xlangeai
   source: x
   lang: zh
@@ -134,7 +175,9 @@
 - id: x-0xlangeai-media-manager
   url: https://x.com/0xlangeai/status/2102414250052669785
   title: 视频包装助手：转写、标题、封面与上传
+  title_en: "A video packaging assistant: transcripts, titles, thumbnails and uploads"
   author: 蓝哥AI
+  author_en: LanGe AI (@0xlangeai)
   author_url: https://x.com/0xlangeai
   source: x
   lang: zh
@@ -159,9 +202,43 @@
   published: 2026-09-22
   platform: x
   collection_batch: 2026-10-16-x-history-approved-zh
+- id: x-0xlangeai-tweet-portrait-site
+  url: https://x.com/0xlangeai/status/2109115005069341175
+  title: 把自己的推文做成个人画像网站，用 Grok Bot 从分析特点到上线分享保姆级教程
+  title_en: "Turn your posts into a personal portrait website: analysis, design and delivery"
+  author: 蓝哥AI
+  author_en: LanGe AI (@0xlangeai)
+  author_url: https://x.com/0xlangeai
+  source: x
+  platform: x
+  lang: zh
+  published: 2026-10-11
+  added: 2026-10-16
+  checked_at: 2026-10-16
+  status: alive
+  categories:
+    - recipes
+    - bots
+  evidence: author-reported
+  summary_zh: 五步教程：建四位 Bot（推文整理员、画像分析师、网站设计师、网站工程师），在群聊中用共用项目目录按 tweets.md→profile.md→design.md 交接，读取自己近 90 天推文提炼特点并做成个人画像网站，先预览检查再部署到 Vercel/Cloudflare Pages。附各步提示词。
+  summary_en: "Five-step guide: four Grok Bots (tweet collector, profile analyst, designer, engineer) share a project folder in a group chat to turn your recent tweets into a personal profile site, previewed before deploy."
+  verification_note_zh: 由 Grok Bot 读取 X 长文正文及提示词；约 13 张截图/录屏和文中链接未查看。部署步骤仅为作者流程说明，未演示。本站未复现结果，仅收录摘要、署名与原文链接。
+  verification_note_en: Grok Bot read the article text and prompts; ~13 screenshots/recordings and linked posts were not viewed. Deployment is described, not demonstrated. Results not reproduced; summary, attribution and source link only.
+  tags:
+    - multi-bot
+    - group-chat
+    - x
+    - website
+    - prompts
+  apps:
+    - X
+    - Vercel
+    - Cloudflare Pages
+  collection_batch: 2026-10-16-x-incremental-b
 - id: x-ai-for-success-cloud-agents
   url: https://x.com/ai_for_success/status/2109946042934534471
   title: 把编码任务交给 Cursor 云代理并等待人工批准
+  title_en: Hand coding to Cursor cloud agents and wait for human approval
   author: AshutoshShrivastava
   author_url: https://x.com/ai_for_success
   source: x
@@ -187,6 +264,7 @@
 - id: x-anthonydo-slack-to-pr
   url: https://x.com/AnthonyDo/status/2102296892948517256
   title: 从 Slack 客户反馈到 GitHub 问题与代码合并请求
+  title_en: From Slack customer feedback to GitHub issues and pull requests
   author: Anthony
   author_url: https://x.com/AnthonyDo
   source: x
@@ -214,6 +292,7 @@
 - id: x-app-sail-claude-code-cloud
   url: https://x.com/app_sail/status/2108523630900748335
   title: 在 Grok Bot 云电脑上全天运行 Claude Code
+  title_en: Run Claude Code on the Grok Bot cloud computer
   author: Asa
   author_url: https://x.com/app_sail
   source: x
@@ -241,6 +320,7 @@
 - id: x-austinginder-routines-offloaded
   url: https://x.com/austinginder/status/2102065336811966739
   title: 托管服务创始人的定时任务：巡检、维护与整理
+  title_en: A hosting founder's routines for inspection, maintenance and organization
   author: Austin Ginder
   author_url: https://x.com/austinginder
   source: x
@@ -264,6 +344,7 @@
 - id: x-beamnxw-15-use-cases
   url: https://x.com/beamnxw/status/2091181392155570202
   title: 十五个工作用例与可复制提示词
+  title_en: Fifteen work use cases with copyable prompts
   author: beamnxw ./
   author_url: https://x.com/beamnxw
   source: x
@@ -292,6 +373,7 @@
 - id: x-benln-team-pro-tips
   url: https://x.com/benln/status/2092258694352208213
   title: 团队进阶技巧：分工、定时任务与审批
+  title_en: "Team tips: roles, routines and approvals"
   author: Ben Lang
   author_url: https://x.com/benln
   source: x
@@ -316,6 +398,7 @@
 - id: x-biggor888-vm-as-vps
   url: https://x.com/biggor888/status/2087706763629850747
   title: 把云虚拟机改为可远程访问的服务器
+  title_en: Turn the cloud virtual machine into a remotely accessible server
   author: Samgor
   author_url: https://x.com/biggor888
   source: x
@@ -342,7 +425,9 @@
 - id: x-blueskylh1-trial-steps
   url: https://x.com/blueskylh1/status/2087552709146681833
   title: 一周免费试用的早期开通流程
+  title_en: An early one-week trial setup walkthrough
   author: 蓝天bluesky
+  author_en: "@blueskylh1"
   author_url: https://x.com/blueskylh1
   source: x
   lang: zh
@@ -365,6 +450,7 @@
 - id: x-caesar-full-setup-map
   url: https://x.com/caesar_aii/status/2107465283208151151
   title: 面向实际工作的十步配置清单
+  title_en: A ten-step setup checklist for practical work
   author: cesar
   author_url: https://x.com/caesar_aii
   source: x
@@ -390,6 +476,7 @@
 - id: x-carolinadill-foundersales
   url: https://x.com/CarolinaDill/status/2109866655538970869
   title: 一个销售助手承担客户调研、外联草稿与跟进
+  title_en: One sales assistant for customer research, outreach drafts and follow-up
   author: Carolina Dill
   author_url: https://x.com/CarolinaDill
   source: x
@@ -414,6 +501,7 @@
 - id: x-carolinadill-gemini-bot
   url: https://x.com/CarolinaDill/status/2110404798860177770
   title: 把简单问题转交 Gemini 的助手模板
+  title_en: An assistant template that routes simple questions to Gemini
   author: Carolina Dill
   author_url: https://x.com/CarolinaDill
   source: x
@@ -440,6 +528,7 @@
 - id: x-carolinadill-titles-sections
   url: https://x.com/CarolinaDill/status/2110488590669185451
   title: 用头衔与侧栏分组整理多个助手
+  title_en: Organize assistants with titles and sidebar sections
   author: Carolina Dill
   author_url: https://x.com/CarolinaDill
   source: x
@@ -462,7 +551,9 @@
 - id: x-cgnot996-webhook-trigger-workaround
   url: https://x.com/cgnot996/status/2109141694184935790
   title: 网页回调触发器详情打不开时的处理办法
+  title_en: What to check when webhook trigger details will not open
   author: 铁柱AGI
+  author_en: "@cgnot996"
   author_url: https://x.com/cgnot996
   source: x
   lang: zh
@@ -486,6 +577,7 @@
 - id: x-dustadd-grok-build-token-saving
   url: https://x.com/dustADD/status/2109451172180643877
   title: 把重型编码任务交给 Grok Build 以节省用量
+  title_en: Hand heavy coding work to Grok Build to reduce usage
   author: dust
   author_url: https://x.com/dustADD
   source: x
@@ -511,6 +603,7 @@
 - id: x-fengjhui-grok-bot-wanzi-guide
   url: https://x.com/fengjhui/status/2109208681577394599
   title: Grok Bot 万字入门：额度、生态、九类用法与三十个细节
+  title_en: "An extensive Grok Bot introduction: usage, ecosystem and nine kinds of work"
   author: Jason Feng
   author_url: https://x.com/fengjhui
   source: x
@@ -536,6 +629,7 @@
 - id: x-godsboy-top-skills-github
   url: https://x.com/GodsBoy7777/status/2109262741089263731
   title: 十个可供 Grok Bot 使用的 GitHub 技能仓库
+  title_en: Ten GitHub Skill repositories to explore for Grok Bot
   author: Dewaldt Huysamen
   author_url: https://x.com/GodsBoy7777
   source: x
@@ -562,6 +656,7 @@
 - id: x-grokbotguide-inbox-triage
   url: https://x.com/grokbotguide/status/2104534356341789142
   title: Gmail 收件箱分拣：标签、待办与回复草稿
+  title_en: "Gmail inbox triage: labels, actions and reply drafts"
   author: Jonathon
   author_url: https://x.com/grokbotguide
   source: x
@@ -587,6 +682,7 @@
 - id: x-grokbotradar-retire-a-bot
   url: https://x.com/GrokBotRadar/status/2105513032915038493
   title: 隐藏助手不会停止定时任务：如何正确停用
+  title_en: "Hiding a Bot does not stop its routines: retirement steps"
   author: Fan Grok Bot Radar
   author_url: https://x.com/GrokBotRadar
   source: x
@@ -610,6 +706,7 @@
 - id: x-hans-sdd-meetup-notes
   url: https://x.com/Hans_Sunzihan/status/2101235463248130251
   title: 北京交流会笔记：用 Grok Bot 做规格驱动开发
+  title_en: "Beijing meetup notes: specification-driven development with Grok Bot"
   author: Hans LilBk
   author_url: https://x.com/Hans_Sunzihan
   source: x
@@ -637,6 +734,7 @@
 - id: x-hijeffrey46-telegram-shared-bot
   url: https://x.com/hijeffrey46/status/2101695688371531900
   title: 在 Telegram 群中共享一个 Grok Bot
+  title_en: Share a Grok Bot in a Telegram group
   author: Jeffrey
   author_url: https://x.com/hijeffrey46
   source: x
@@ -663,6 +761,7 @@
 - id: x-hwfeinstein-home-remodel-desk
   url: https://x.com/hwfeinstein/status/2099913318786085021
   title: 装修公司助手：采购、收据与项目进度
+  title_en: A remodeling assistant for purchases, receipts and project status
   author: Howard “Howie” in Washington
   author_url: https://x.com/hwfeinstein
   source: x
@@ -690,7 +789,9 @@
 - id: x-jackywxsz-startup-practices-02
   url: https://x.com/Jackywxsz/status/2095476664054800655
   title: 启动最佳实践：研究技能、开发规范与代理组合
+  title_en: "Startup practices: research Skills, development rules and agent combinations"
   author: Jacky无限生长
+  author_en: Jacky (@Jackywxsz)
   author_url: https://x.com/Jackywxsz
   source: x
   lang: zh
@@ -714,6 +815,7 @@
 - id: x-joshkim-grok-bot-for-work
   url: https://x.com/joshkim/status/2095633918611636627
   title: 用四个助手改善工作：收件箱、日程、信息与执行
+  title_en: Four assistants for inbox, calendar, information and execution
   author: Josh Kim
   author_url: https://x.com/joshkim
   source: x
@@ -742,6 +844,7 @@
 - id: x-julien-coulaud-bot-email-own-domain
   url: https://x.com/JulienCoulaud/status/2108912555741598058
   title: 用自有域名邮箱连接 Grok Bot
+  title_en: Connect a custom-domain email address to Grok Bot
   author: Julien
   author_url: https://x.com/JulienCoulaud
   source: x
@@ -768,6 +871,7 @@
 - id: x-jumperz-codex-audit-setup
   url: https://x.com/jumperz/status/2093370525644939404
   title: 用 Codex 审查全部助手、定时任务与权限配置
+  title_en: Use Codex to audit Bots, routines and permissions
   author: JUMPERZ
   author_url: https://x.com/jumperz
   source: x
@@ -794,6 +898,7 @@
 - id: x-kacperrutk-five-beginner-mistakes
   url: https://x.com/KacperRutk/status/2107124966332207548
   title: 新手常见的五个错误及改法
+  title_en: Five common beginner mistakes and how to address them
   author: Kacper Rutkiewicz
   author_url: https://x.com/KacperRutk
   source: x
@@ -819,6 +924,7 @@
 - id: x-kanikabk-one-person-company
   url: https://x.com/KanikaBK/status/2090453619833496003
   title: 用 Grok Bot 搭建全天候运行的一人公司
+  title_en: A round-the-clock one-person company setup with Grok Bot
   author: Kanika
   author_url: https://x.com/KanikaBK
   source: x
@@ -847,6 +953,7 @@
 - id: x-kin-feishu-guide
   url: https://x.com/KinGao476942/status/2110325058585698654
   title: 把多个 Grok Bot 接入飞书
+  title_en: Connect several Grok Bots to Feishu
   author: Kin
   author_url: https://x.com/KinGao476942
   source: x
@@ -873,6 +980,7 @@
 - id: x-kin-wechat-guide
   url: https://x.com/KinGao476942/status/2108132811635032316
   title: Grok Bot 接入微信的三步教程
+  title_en: Connect Grok Bot to WeChat in three steps
   author: Kin
   author_url: https://x.com/KinGao476942
   source: x
@@ -899,6 +1007,7 @@
 - id: x-kocer-routine-audit
   url: https://x.com/kocer_eth/status/2101669438038634827
   title: 每月审查定时任务：停掉低价值流程
+  title_en: "A monthly routine audit: stop low-value workflows"
   author: kocer
   author_url: https://x.com/kocer_eth
   source: x
@@ -923,6 +1032,7 @@
 - id: x-kononovme-usage-tips-day1
   url: https://x.com/kononovme/status/2100050307715657790
   title: 活动首日用量经验：减少浏览器操作、审查定时任务
+  title_en: "Day-one usage notes: fewer browser actions and a routine audit"
   author: Conan
   author_url: https://x.com/kononovme
   source: x
@@ -946,6 +1056,7 @@
 - id: x-kowalprato-save-as-skill
   url: https://x.com/KowalPrato4o/status/2110112146889564216
   title: 把验收过的工作流程保存成技能
+  title_en: Save an accepted workflow as a Skill
   author: Kowal Prator
   author_url: https://x.com/KowalPrato4o
   source: x
@@ -968,6 +1079,7 @@
 - id: x-lingxi-grok-bot-for-engineering
   url: https://x.com/lingxi/status/2094493172516966781
   title: 工程实践：用 Grok Bot 管理编码代理
+  title_en: "Engineering practice: manage coding agents with Grok Bot"
   author: Lingxi Li
   author_url: https://x.com/lingxi
   source: x
@@ -996,6 +1108,7 @@
 - id: x-maestrooth-ten-prompts
   url: https://x.com/maestrooth/status/2105288063391875450
   title: 十个岗位提示词：生成草稿和清单后停止
+  title_en: Ten role prompts that stop after producing drafts and checklists
   author: maestro
   author_url: https://x.com/maestrooth
   source: x
@@ -1020,6 +1133,7 @@
 - id: x-maiyang-plus-alias-routines
   url: https://x.com/MaiYangAI/status/2110606555578335572
   title: 用邮箱加号别名分流不同定时任务
+  title_en: Separate routine outputs with email plus-addresses
   author: Mai Yang
   author_url: https://x.com/MaiYangAI
   source: x
@@ -1043,6 +1157,7 @@
 - id: x-maiyang-sweeper-quota
   url: https://x.com/MaiYangAI/status/2098961066663580030
   title: 三步减少 Grok Bot 用量：排查、止损与精简
+  title_en: "Three steps to reduce usage: inspect, stop waste and simplify"
   author: Mai Yang
   author_url: https://x.com/MaiYangAI
   source: x
@@ -1068,6 +1183,7 @@
 - id: x-manuaf6-routine-frequency
   url: https://x.com/ManuAF6/status/2107486041942704163
   title: 定时任务多久运行一次：作者的降频经验
+  title_en: "How often to run routines: an author's frequency adjustments"
   author: Manu
   author_url: https://x.com/ManuAF6
   source: x
@@ -1091,6 +1207,7 @@
 - id: x-mattyp-five-steps-start
   url: https://x.com/mattyp/status/2095626442990297310
   title: Grok Bot 五步上手教程
+  title_en: Get started with Grok Bot in five steps
   author: matt palmer
   author_url: https://x.com/mattyp
   source: x
@@ -1120,6 +1237,7 @@
 - id: x-mattyp-share-plugin-links
   url: https://x.com/mattyp/status/2101491045553070094
   title: 一键分享 Grok Bot 插件安装链接
+  title_en: Share Grok Bot plugin installation links
   author: matt palmer
   author_url: https://x.com/mattyp
   source: x
@@ -1142,6 +1260,7 @@
 - id: x-melvindvivas-bot-setup-framework
   url: https://x.com/melvindvivas/status/2107283624773227002
   title: 五步配置框架：职责、插件、输出、频率与测试
+  title_en: "A five-step setup framework: role, plugins, output, frequency and testing"
   author: Melvin Vivas
   author_url: https://x.com/melvindvivas
   source: x
@@ -1168,6 +1287,7 @@
 - id: x-melvindvivas-language-coach
   url: https://x.com/melvindvivas/status/2110632657814262194
   title: 语言教练模板：每日练习与八周学习计划
+  title_en: A language coach template with daily practice and an eight-week plan
   author: Melvin Vivas
   author_url: https://x.com/melvindvivas
   source: x
@@ -1193,6 +1313,7 @@
 - id: x-melvindvivas-voice-settings
   url: https://x.com/melvindvivas/status/2110578219422548378
   title: 设置语音助手的语速、语言、声音与个性
+  title_en: Configure a voice assistant's pace, language, voice and personality
   author: Melvin Vivas
   author_url: https://x.com/melvindvivas
   source: x
@@ -1216,6 +1337,7 @@
 - id: x-michael-fenech-manager-crash-course
   url: https://x.com/Michael_Fenech_/status/2110655208078631110
   title: 多助手团队管理入门：委派、检查点与复盘
+  title_en: "Managing a Bot team: delegation, checkpoints and reviews"
   author: Michael
   author_url: https://x.com/Michael_Fenech_
   source: x
@@ -1240,6 +1362,7 @@
 - id: x-michael-fenech-quiet-deals-sweep
   url: https://x.com/Michael_Fenech_/status/2110439998038200787
   title: 找回沉默客户：回看九十天记录并起草跟进
+  title_en: "Revisit quiet deals: review ninety days and draft follow-ups"
   author: Michael
   author_url: https://x.com/Michael_Fenech_
   source: x
@@ -1268,6 +1391,7 @@
 - id: x-michael-fenech-routine-six-step-test
   url: https://x.com/Michael_Fenech_/status/2106352565528977469
   title: 把工作设成定时任务之前的六步测试
+  title_en: Six checks before turning work into a routine
   author: Michael
   author_url: https://x.com/Michael_Fenech_
   source: x
@@ -1293,6 +1417,7 @@
 - id: x-mikogen-four-workflows-101
   url: https://x.com/mikogen/status/2102759432488702259
   title: 官方入门指南中的四个工作流程
+  title_en: Four workflows from the official beginner guide
   author: Michael shares.
   author_url: https://x.com/mikogen
   source: x
@@ -1320,6 +1445,7 @@
 - id: x-mikogen-three-fields
   url: https://x.com/mikogen/status/2101296130831138883
   title: 创建助手的三个核心字段：名称、头衔与描述
+  title_en: "Three core Bot fields: name, title and description"
   author: Michael shares.
   author_url: https://x.com/mikogen
   source: x
@@ -1345,6 +1471,7 @@
 - id: x-mikogen-three-ways-to-talk
   url: https://x.com/mikogen/status/2101909106315444353
   title: 与助手协作的三种方式：聊天、定时触发与助手互联
+  title_en: "Three collaboration modes: chat, scheduled triggers and Bot handoffs"
   author: Michael shares.
   author_url: https://x.com/mikogen
   source: x
@@ -1371,7 +1498,9 @@
 - id: x-mizorewwww-cloud-pc-server
   url: https://x.com/mizorewwww/status/2089363471314100342
   title: 全天候云端私人服务器：远程终端与图形桌面
+  title_en: A personal cloud server with remote terminal and desktop access
   author: 小雪
+  author_en: "@mizorewwww"
   author_url: https://x.com/mizorewwww
   source: x
   lang: zh
@@ -1395,6 +1524,7 @@
 - id: x-mrbeko-root-agent-v2
   url: https://x.com/mrbeko_/status/2108154519058006250
   title: 多助手团队协调模板：派工、复核与汇报
+  title_en: A team coordinator template for assignments, review and reporting
   author: Berkay
   author_url: https://x.com/mrbeko_
   source: x
@@ -1419,6 +1549,7 @@
 - id: x-mvanhorn-every-grok-bot-hack
   url: https://x.com/mvanhorn/status/2092629365045559547
   title: 作者自用的二十一条 Grok Bot 技巧
+  title_en: Twenty-one Grok Bot tips from an author's own setup
   author: Matt Van Horn
   author_url: https://x.com/mvanhorn
   source: x
@@ -1446,6 +1577,7 @@
 - id: x-poteto-first-last-mile
   url: https://x.com/poteto/status/2107510472601985336
   title: 用助手处理工作的前期准备与后续跟进
+  title_en: Use assistants for preparation and follow-through
   author: lauren
   author_url: https://x.com/poteto
   source: x
@@ -1471,6 +1603,7 @@
 - id: x-realsamhu-event-routines
   url: https://x.com/realSamHu/status/2100353286746566838
   title: 让告警事件自动触发故障调查与分拣
+  title_en: Trigger incident investigation and triage from alert events
   author: Samuel Hu
   author_url: https://x.com/realSamHu
   source: x
@@ -1499,6 +1632,7 @@
 - id: x-ryantanaka-apply-desk
   url: https://x.com/RyanTanaka/status/2104511660799189490
   title: 求职助手模板：找岗位、改简历与准备面试
+  title_en: A job-search assistant for listings, resumes and interview preparation
   author: Ryan Tanaka
   author_url: https://x.com/RyanTanaka
   source: x
@@ -1527,6 +1661,7 @@
 - id: x-springhao-tailscale-ssh
   url: https://x.com/SpringHaoAI/status/2095915259521585458
   title: 用 Tailscale 远程连接云电脑
+  title_en: Connect remotely to the cloud computer with Tailscale
   author: Spring Hao
   author_url: https://x.com/SpringHaoAI
   source: x
@@ -1552,6 +1687,7 @@
 - id: x-techhubgroup-linkedin-connector
   url: https://x.com/techhubgroup/status/2110465301099978977
   title: 用插件连接领英：授权、测试与发送边界
+  title_en: "A LinkedIn plugin: authorization, testing and sending boundaries"
   author: Techub Group
   author_url: https://x.com/techhubgroup
   source: x
@@ -1578,6 +1714,7 @@
 - id: x-thatdudepaco-iphone-calendar-bridge
   url: https://x.com/thatdudepacoAI/status/2101786222771544502
   title: 免费把 Grok Bot 的事件同步到苹果手机日历
+  title_en: Sync Grok Bot events to an iPhone calendar
   author: Paolo
   author_url: https://x.com/thatdudepacoAI
   source: x
@@ -1606,6 +1743,7 @@
 - id: x-thedogfather-local-pc-control
   url: https://x.com/thedogfather/status/2091197750582849571
   title: 让 Grok Bot 操作 Windows 电脑
+  title_en: Use Grok Bot with a Windows computer
   author: Nick Losciuto
   author_url: https://x.com/thedogfather
   source: x
@@ -1631,6 +1769,7 @@
 - id: x-todaykan-bot-templates-start
   url: https://x.com/TodayKan/status/2105669007256772710
   title: 新手从官方助手模板开始
+  title_en: Start with official Bot templates
   author: Today🦘
   author_url: https://x.com/TodayKan
   source: x
@@ -1658,6 +1797,7 @@
 - id: x-undefinedki-lingxi-li-team
   url: https://x.com/undefinedKi/status/2109737642090701038
   title: 工程团队案例：管理两百多个编码代理
+  title_en: An engineering team managing more than two hundred coding agents
   author: Yarchi
   author_url: https://x.com/undefinedKi
   source: x
@@ -1685,6 +1825,7 @@
 - id: x-unicodef1wn-lauren-tan-verify-skill
   url: https://x.com/unicodef1wn/status/2102081277683810491
   title: 把 Lauren Tan 的代理核验方法整理成技能
+  title_en: Turn Lauren Tan's agent verification method into a Skill
   author: unicode
   author_url: https://x.com/unicodef1wn
   source: x
@@ -1709,6 +1850,7 @@
 - id: x-valstry-ten-minute-team
   url: https://x.com/Valstry/status/2098069526743224668
   title: 十分钟搭建 Grok Bot 团队：入门与分工
+  title_en: "Build a Grok Bot team in ten minutes: setup and responsibilities"
   author: Valstry
   author_url: https://x.com/Valstry
   source: x
@@ -1733,6 +1875,7 @@
 - id: x-wangsicong-start-checklist
   url: https://x.com/_WangSiCong/status/2104884490434675121
   title: 三步上手与权限、模板检查要点
+  title_en: A three-step start with permission and template checks
   author: SuperKOI
   author_url: https://x.com/_WangSiCong
   source: x
@@ -1756,6 +1899,7 @@
 - id: x-wjw-pstack-to-grok-build
   url: https://x.com/wjw_writes/status/2109434851741016348
   title: 把 pstack 技能迁移到 Grok Build 命令行工具
+  title_en: Move pstack Skills to the Grok Build command line
   author: W.J. Winter
   author_url: https://x.com/wjw_writes
   source: x
@@ -1782,7 +1926,9 @@
 - id: x-xiaomovps-three-machines
   url: https://x.com/xiaomovps/status/2095775647859945815
   title: 本机、Grok 云电脑和自有服务器如何分工
+  title_en: Divide work among your computer, the Grok cloud computer and your own server
   author: 小墨同学
+  author_en: "@xiaomovps"
   author_url: https://x.com/xiaomovps
   source: x
   lang: zh
@@ -1805,6 +1951,7 @@
 - id: x-zeuss-two-templates-lessons
   url: https://x.com/zeuss_000/status/2103979981093355985
   title: 零代码制作两个助手模板：网站监控与安全审查
+  title_en: "Two no-code assistant templates: site monitoring and security review"
   author: zeus
   author_url: https://x.com/zeuss_000
   source: x
@@ -2062,6 +2209,7 @@
   id: datacamp-grok-bot-learning-scout
   url: https://datacamp.com/zh/tutorial/grok-bot-tutorial
   title: Grok Bot 教程：构建每周 AI 研究代理
+  title_en: Build a weekly AI research assistant with Grok Bot
   author: DataCamp
   source: blog
   lang: zh
@@ -2194,6 +2342,7 @@
   url: https://github.com/coolxeo/grok-bot-skills/blob/main/skills/writing/no-ai-slop/SKILL.md
   title: No AI slop
   author: Dani Acosta（coolxeo）；原作 Peter Yang
+  author_en: Dani Acosta (coolxeo); original by Peter Yang
   source: github
   lang: en
   categories:
@@ -2261,6 +2410,7 @@
   id: leosplain-grok-bot-notion-store
   url: https://leosplain.com/grok-bot-notion-store-os
   title: Grok Bot 教學：用技能接 Notion，做出網店 OS（記帳、排班、毛利）
+  title_en: A Notion store workflow for bookkeeping, shifts and gross margin
   author: Leo（Leosplain）
   source: blog
   lang: zh
@@ -2284,7 +2434,9 @@
 - id: linuxdo-joseph-research-bot
   url: https://linux.do/t/topic/2991469
   title: 分享一个自己的grok bot,大家自提
+  title_en: An author's shared research Bot
   author: huisenandong（晦涩男董）
+  author_en: huisenandong
   source: forum
   lang: zh
   added: 2026-10-15
@@ -2309,7 +2461,9 @@
 - id: linuxdo-lunet-team-coding
   url: https://linux.do/t/topic/3008217
   title: 关于grok bot使用方式的一些想法
+  title_en: Reflections on using Grok Bot for team coding
   author: lunet（白榆）
+  author_en: lunet
   source: forum
   lang: zh
   added: 2026-10-15

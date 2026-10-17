@@ -1,0 +1,40 @@
+---
+import { caseCatalog } from '../../data/workflow-topics/catalog';
+import { groups } from '../../data/workflow-topics/cases/factory';
+interface Props { group?: string }
+const { group } = Astro.props;
+const entries = caseCatalog.filter(item => !group || item.group === group);
+const key = group || 'all';
+---
+<section id="all-cases" class="wc-directory" data-case-directory aria-labelledby={`directory-${key}`}>
+	<div class="wf-section-heading"><div><div class="wf-kicker">完整教程 / 每篇都能独立阅读与练习</div><h2 id={`directory-${key}`}>{group ? '本专题全部教程' : '全部 25 篇案例教程'}</h2></div><p>原始材料、分阶段指令、参考结果，<br />排错、验收与下载都放在各自页面。</p></div>
+	<form class="wc-filters" role="search" aria-label="筛选案例教程"><div><label for={`query-${key}`}>搜索教程</label><input id={`query-${key}`} type="search" name="query" placeholder="搜索工具、任务或教程" autocomplete="off" disabled /></div>{!group && <div><label for="case-group">选择专题</label><select id="case-group" name="group" disabled><option value="">全部专题</option>{Object.entries(groups).map(([id,meta]) => <option value={id}>{meta.title}</option>)}</select></div>}<button type="reset">重置</button></form>
+	<p class="wc-count" role="status" aria-live="polite" data-case-count>显示 {entries.length} / {entries.length} 篇完整教程</p>
+	<div class="wc-grid">{entries.map((entry,i) => <article class="wc-card" data-case-card data-group={entry.group} data-search={`${entry.title} ${entry.lead} ${entry.groupTitle} ${entry.slug} ${entry.tools}`.toLocaleLowerCase()}><div class="wc-card-top"><span>{String(i+1).padStart(2,'0')}</span><small>{entry.groupTitle}</small></div><h3><a href={entry.href}>{entry.title}<span aria-hidden="true">↗</span></a></h3><p class="wc-card-tools">{entry.tools}</p><p>{entry.lead}</p><div class="wc-card-meta"><span>{entry.stages} 个阶段</span><span>{entry.prompts} 段提示词</span><span>{entry.files} 份文件</span></div><a class="wc-open" href={entry.href} aria-label={`打开完整教程：${entry.title}`}>打开完整教程 <span aria-hidden="true">→</span></a></article>)}</div>
+	<p class="wc-empty" data-case-empty hidden>没有匹配的教程。试试其他关键词，或点“重置”查看全部。</p>
+</section>
+<script>
+	document.querySelectorAll<HTMLElement>('[data-case-directory]').forEach(directory => {
+		const form = directory.querySelector<HTMLFormElement>('form')!;
+		const query = form.querySelector<HTMLInputElement>('[name="query"]')!;
+		const group = form.querySelector<HTMLSelectElement>('[name="group"]');
+		const cards = [...directory.querySelectorAll<HTMLElement>('[data-case-card]')];
+		const update = () => {
+			const terms = query.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+			let visible = 0;
+			for (const card of cards) {
+				const matches = (!group?.value || card.dataset.group === group.value) && terms.every(term => card.dataset.search?.includes(term));
+				card.hidden = !matches; if (matches) visible++;
+			}
+			const count = directory.querySelector('[data-case-count]');
+			if (count) count.textContent = `显示 ${visible} / ${cards.length} 篇完整教程`;
+			const empty = directory.querySelector<HTMLElement>('[data-case-empty]');
+			if (empty) empty.hidden = visible > 0;
+		};
+		form.addEventListener('submit', event => event.preventDefault());
+		form.addEventListener('input', update); form.addEventListener('change', update);
+		form.addEventListener('reset', () => requestAnimationFrame(update));
+		query.disabled = false; if (group) group.disabled = false;
+		update();
+	});
+</script>

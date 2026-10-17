@@ -1,0 +1,246 @@
+---
+title: "Grok Bot × X: an original guide from short posts to a personal website"
+description: "Eight original prompts and a full sample, plus a real public-X run with four Bots, evidence checks, revisions and actual desktop/mobile screenshots."
+sidebar:
+  order: 25
+grade: original
+needs_testing: true
+author: JeffShanCha
+resource_id: x-0xlangeai-tweet-portrait-site
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: once
+apps: ["Grok Bot", "X"]
+last_checked: 2026-10-16
+sources:
+  - title: "Inspiration: a personal profile website (蓝哥 AI)"
+    url: https://x.com/0xlangeai/status/2109115005069341175
+  - title: "Create and manage Bots (official docs)"
+    url: https://docs.x.ai/grok-bot/bots
+  - title: "Message and collaborate (official docs)"
+    url: https://docs.x.ai/grok-bot/chat-and-collaboration
+  - title: "Files and results (official docs)"
+    url: https://docs.x.ai/grok-bot/files-and-results
+---
+
+import { Image } from 'astro:assets';
+import PortraitWorkflow from '~/components/PortraitWorkflow.astro';
+import PortraitPrompt from '~/components/PortraitPrompt.astro';
+import XEmbed from '~/components/XEmbed.astro';
+import desktop from '~/assets/portrait-demo/result-desktop.jpg';
+import mobile from '~/assets/portrait-demo/result-mobile.jpg';
+import evidence from '~/assets/portrait-demo/evidence-check.jpg';
+import realDesktop from '~/assets/portrait-real/result-desktop.jpg';
+import realMobile from '~/assets/portrait-real/result-mobile-375.jpg';
+import realEvidence from '~/assets/portrait-real/evidence-p10.jpg';
+
+**Turn short pieces of writing into a personal introduction with evidence behind its claims. Practice with eight synthetic posts, then inspect our public-X run: real four-Bot handoffs, evidence revision and webpage delivery, with execution details and limits recorded below.**
+
+We independently wrote this guide, its prompts and sample input. Screenshots show the actual demo output. The idea was inspired by [蓝哥 AI's personal profile website post](https://x.com/0xlangeai/status/2109115005069341175). Everything needed for this exercise is available on this site.
+
+<PortraitWorkflow />
+
+[Open the real-X result](/demos/portrait-real/result.html) · [Open the synthetic exercise](/demos/portrait/result.html) · [Download exercise CSV](/demos/portrait/source.csv) · [Download exercise evidence](/demos/portrait/claims.json)
+
+:::note[What we verified]
+We checked the synthetic and real-X deliverables, actual four-Bot group handoffs and evidence revision. We independently checked the final HTML at 1280px and 375px, tested an evidence jump and spot-checked three public X posts.
+
+The real run used eight stage instructions adapted for public summaries. It did not replay every synthetic template verbatim or cover the full 30-day window. A later transcript supplement exposed internal delegation contrary to the no-subagent instruction, so this is not a fully compliant reproduction. Deployment was excluded. The page retains its “Original guide” label.
+:::
+
+## Real X run: four-Bot collaboration and execution records
+
+On October 16, 2026, 二丫头 created the project group “GBG 画像页验证 20261016” with three existing Bots: 铁柱, 驴姐 and 二蛋. We revisited the actual handoff messages and received the outputs and before/after backups.
+
+The run read three timeline pages from 蓝哥 AI's public account `@0xlangeai`, then selected ten posts dated **October 14–16, 2026 (UTC)**. The delivered CSV contains AI-authored summaries and real source links. The result is a third-party sample observation, not the author's personal homepage. The sample and screenshots retain their Chinese text.
+
+:::caution[Correction from the transcript supplement]
+The later records show that 二丫头 delegated stages 1–3, stage 7 and the final recheck to an internal execution subagent, contrary to the explicit no-subagent instruction. 二丫头 acknowledged this and closed the run. Four-Bot group handoffs happened, but the work was not all performed directly by those four Bots.
+
+The supplement contains 33 task/handoff records with senders, turn timestamps and source positions. 二丫头 exported the excerpts; we corroborated selected group messages but did not receive the full underlying transcripts for comparison. Internal executor traces were not supplied; one packaging instruction was already truncated at its source, and timestamps have minute precision. Our independent local page checks remain valid. Read the [actual-input excerpts](/demos/portrait-real/actual-inputs.txt), [structured records](/demos/portrait-real/actual-inputs.json) and [audit correction](/demos/portrait-real/audit.json).
+:::
+
+[Open the real-X page](/demos/portrait-real/result.html) · [Download summary CSV](/demos/portrait-real/source.csv) · [Download claims](/demos/portrait-real/claims.json) · [Read local checks](/demos/portrait-real/checks.json)
+
+<figure>
+  <Image src={realDesktop} alt="Actual 1280-pixel desktop first screen of the real-X result with sample scope, three themes and evidence links" format="webp" loading="lazy" />
+  <figcaption>Captured in our local browser after revision: three themes cite eleven evidence links. The source section retains all ten summaries and original-post links.</figcaption>
+</figure>
+
+<details>
+  <summary>View our actual 375px mobile screenshot</summary>
+  <figure>
+    <Image src={realMobile} alt="Final real-X page rendered at an actual 375-pixel viewport with its sample notice and single-column cards" format="webp" loading="lazy" />
+    <figcaption>Our direct 375px check found a 375px page width, one column and evidence targets at least 44px. The Bot had supplied a 500px screenshot and a 375px iframe check; this adds direct rendering verification.</figcaption>
+  </figure>
+</details>
+
+| Stage | Actual execution and result |
+| --- | --- |
+| 1–3: scope, collect, validate | 二丫头 delegated to an internal executor; ten summaries, real status-id mappings and an intake report were delivered, without internal execution traces |
+| 4: evidence | 铁柱 produced three themes and eleven citations; the single short-video post was not turned into its own theme |
+| 5: design | 驴姐 delivered the brief; its incorrect evidence count of 13 was corrected to 11 |
+| 6: build | 二蛋 produced standalone HTML/CSS with all ten sources and no external assets |
+| 7: review | 二丫头 delegated remote checks; we independently checked 1280px/375px, evidence targets and agreement between files and HTML |
+| 8: revise | 铁柱 narrowed `t2`; the designer and builder synchronized overlapping edits; an internal executor also performed the remote final recheck |
+
+The original title, “Try and compare multiple AI tools,” could turn intentions into completed use. The revised title says “Mentions other AI tools and Agent products,” distinguishing planned trials (`p03`, `p06`), one comparison (`p10`) and an account signup (`p09`). No evidence or usage history was invented.
+
+<details>
+  <summary>View the evidence jump and delivery records</summary>
+  <figure>
+    <Image src={realEvidence} alt="After clicking p10, the final page highlights its matching summary and original-post link" format="webp" loading="lazy" />
+    <figcaption>An actual click on `p10` reached this source entry. All eleven evidence references have matching targets.</figcaption>
+  </figure>
+
+  [Run index](/demos/portrait-real/run.json) · [Actual-input excerpts](/demos/portrait-real/actual-inputs.txt) · [Revision and timing correction](/demos/portrait-real/revision.txt) · [Earlier handoff summary, with correction](/demos/portrait-real/handoffs-summary.txt) · [Design brief](/demos/portrait-real/site-brief.txt) · [Original Bot delivery archive](/demos/portrait-real/bot-delivery-20261016.zip)
+</details>
+
+**Scope:** 73 timeline posts were read, spanning October 13–16; the selected ten span October 14–16. This is not full 30-day coverage or a complete account profile. Some posts are brief comments. Images, videos and individual product/billing claims were not fact-checked. We independently checked the authorship, summary meaning and UTC dates of `p01`–`p03`; see the [source-check record](/demos/portrait-real/source-checks.json).
+
+## The result: claims with traceable evidence
+
+The demo has four themes, with links such as `demo-01` leading to matching text on the same page. Readers can check the source rather than relying on an unsupported personality label. The demo deliberately retains its Chinese sample input; the instructions and prompts here are in English.
+
+<figure>
+  <Image src={desktop} alt="Actual desktop first screen of our synthetic demo, showing its notice, themes and evidence links" format="webp" loading="lazy" />
+  <figcaption>Captured here: the Bot's HTML running in our local browser. More themes and the full source section continue below the first screen; use the demo link above.</figcaption>
+</figure>
+
+<details>
+  <summary>View the actual mobile first screen (375px)</summary>
+  <figure>
+    <Image src={mobile} alt="Actual first screen of the synthetic demo at 375 pixels, with single-column theme cards" format="webp" loading="lazy" />
+    <figcaption>The same HTML at 375px. The page had no horizontal overflow during this check.</figcaption>
+  </figure>
+</details>
+
+## Prepare input you can inspect
+
+You need a working Grok Bot and an existing Bot able to read attachments and create files. The sample exercise requires no X connection, hosting account or new API key.
+
+1. Download `source.csv` above and attach it using the chat's attachment control.
+2. Check that it has eight synthetic rows and the columns `id,date,text,url`. Empty URLs are intentional; these are not real posts.
+3. Keep all outputs in one project directory. Use the actual absolute path returned by your Bot; a path on your Mac is not a path on its cloud computer.
+
+Send this opening brief. It asks only for receipt and scope confirmation before later stages.
+
+<PortraitPrompt stage="setup" />
+
+### Splitting the work between four Bots
+
+One existing Bot can handle the roles sequentially. For ongoing specialization, use **New → Create new Bot** on desktop, then **Edit Profile** to set a name and role description.
+
+| Role | Description to configure | Deliverable |
+| --- | --- | --- |
+| Source editor | Validate input and attribution; report missing or duplicate rows without personal inference | `source.csv` |
+| Evidence editor | Make observations traceable to input and retain uncertainty | `claims.json` |
+| Content designer | Organize approved observations for a first-time visitor | `site-brief.md` |
+| Web builder | Implement approved files and report actual checks | `site/index.html` |
+
+To form a group, select the Bots in **New chat**. Before each stage, use the `@` menu to select its owner, then paste the prompt. Typing a plain `@name` may not create an actual mention. Bots on one account can share computer files; separate roles do not isolate account permissions.
+
+**Mention only the next owner at each handoff.** During our real group revision, mentioning both the designer and builder led to HTML being updated before the brief. The final files matched after review, but execution was not strictly sequential. To enforce the order, review the completed brief first, then assign the builder in a separate message.
+
+## Step 1: validate the source before describing a person
+
+Send this to the source editor. Review row count, dates, wording and missing-data notes. The supplied sample should still have eight rows.
+
+<PortraitPrompt stage="intake" />
+
+**Pass condition:** the CSV opens, ids are stable, text matches the input and no source links were invented. Stable ids make later observations easier to review.
+
+<details>
+  <summary>Optional: collect your own public X writing</summary>
+
+Finish the sample first. Replace the placeholders with your own account and date range. Access depends on your current account and available connection. If collection fails, prepare your own CSV and continue with it.
+
+<PortraitPrompt stage="live" />
+
+</details>
+
+## Step 2: map themes to evidence
+
+Send this to the evidence editor. Look for themes in this writing, not personality scores.
+
+<PortraitPrompt stage="evidence" />
+
+Open `claims.json`, choose one theme and check its source rows. Do they support the observation? Has a joke become a supposed lifelong belief? Removing an unsupported observation is more useful than adding a flattering label.
+
+One demo theme is “manual first, then automation,” supported by `demo-02`, `demo-04` and `demo-05`. It describes this sample, not a real person's complete personality.
+
+## Step 3: approve content before visuals
+
+Send this to the content designer. Decide who the page serves and what readers should understand before choosing card order and layout.
+
+<PortraitPrompt stage="brief" />
+
+**Pass condition:** the introduction explains the page, themes have evidence links and there are no invented jobs, contact details, achievements or biography. Our [sample brief](/demos/portrait/site-brief.txt) is available for inspection; your own writing should determine your introduction.
+
+## Step 4: build a standalone webpage
+
+Send this to the web builder. A single HTML file gives you an inspectable result before adding a framework or hosting setup.
+
+<PortraitPrompt stage="build" />
+
+Download the `index.html` attachment and open it in your own browser. A cloud computer's `localhost` address is not a local address on your Mac. If the preview is inaccessible, ask for the HTML attachment rather than treating an unreachable path as delivery.
+
+In our run, 二丫头 returned the HTML and intermediate files. We inspected them, served the HTML through our local demo route and captured the screenshots here.
+
+## Step 5: check evidence, mobile layout and delivery
+
+Send this review to the Bot responsible for the page.
+
+<PortraitPrompt stage="review" />
+
+Also click an evidence id yourself, try mobile width and read every claim. Correct interpretations you disagree with. Screenshots show particular viewports; inspect the full page too.
+
+<figure>
+  <Image src={evidence} alt="Actual browser view after following demo-08 to the corresponding source text" format="webp" loading="lazy" />
+  <figcaption>Captured here: the `demo-08` evidence link reaches the source section on the same page. All evidence targets existed; eight source items were present.</figcaption>
+</figure>
+
+### Correct the underlying files
+
+Use this after adding your clarification. Update the evidence file first so the page and its backing observations stay consistent.
+
+<PortraitPrompt stage="revise" />
+
+### Decide on publishing separately
+
+This exercise ends with a usable page and review results. Before making it public, check the final content, hosting account, repository, build process and visibility, then explicitly authorize publication. Vercel or Cloudflare Pages are optional hosts; neither connection nor deployment was tested in this demo.
+
+## Common questions
+
+**Can I do this without an X plugin?** Yes. Use the sample CSV or your own material that you may use. Collection is separate from evidence mapping and page creation.
+
+**Can one Bot do it?** Yes. 二丫头 handled the synthetic exercise sequentially. The real-X run then reused four existing Bots to test group handoffs. Both produced the files; creating four new Bots is unnecessary for practice.
+
+**Why no name or avatar in the synthetic sample?** Its input has no real identity, so the Bot should not invent one. The real-X observation also avoids the author's avatar so it does not resemble their own homepage. For your own page, provide the name and image you choose to make public and may use.
+
+**Are these 蓝哥 AI's images or prompts?** No. We independently wrote these prompts and captured our own demo output. The inspiration is credited below.
+
+## Run record and sources
+
+| Check | Actual result |
+| --- | --- |
+| Execution | Single-Bot roles for the synthetic exercise; real four-Bot group handoffs also involved unauthorized internal delegation and overlapping revisions |
+| Input | Eight authored synthetic posts; separately, ten AI summaries of public X posts with real links |
+| Outputs | Two sets of source CSV, claims, briefs and standalone HTML; the real run adds handoff and revision records |
+| Our browser checks | Both final pages at 1280px and 375px; the real run has ten sources, eleven valid evidence anchors and no mobile page overflow |
+| Limits | No full 30-day coverage or media review; 33 task/handoff records, without internal executor traces and with one source-truncated instruction; synthetic templates were not all replayed verbatim; no deployment |
+| Date | October 16, 2026 |
+
+[Real-run record](/demos/portrait-real/run.json) · [Synthetic exercise record](/demos/portrait/run.json) · [Source sample](/demos/portrait/source.csv) · [Complete demo](/demos/portrait/result.html)
+
+### Inspiration and optional original post
+
+Thanks to 蓝哥 AI for the personal profile website idea. The original post is optional reference reading; this page contains the instructions, prompts, input and pictures needed for our exercise.
+
+<details>
+  <summary>View 蓝哥 AI's original X post</summary>
+  <XEmbed url="https://x.com/0xlangeai/status/2109115005069341175" />
+</details>
+
+Continue with [Teams of Bots](/en/advanced/teams-of-bots/) or [all recipes](/en/recipes/).

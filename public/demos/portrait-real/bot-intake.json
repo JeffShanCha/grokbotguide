@@ -1,0 +1,32 @@
+{
+ "checked_at": "2026-10-16",
+ "rows": 10,
+ "checks": {
+  "duplicates": "pass",
+  "empty": "pass",
+  "author_match": "pass (author_id 1759530111534243840 = @0xlangeai)",
+  "url_id_match": "pass",
+  "date_window": "pass (2026-09-16..2026-10-16 UTC)",
+  "summary_not_verbatim_len<=60": "pass"
+ },
+ "issues": [],
+ "spot_check": [
+  {
+   "key": "p02",
+   "status_id": "2110914366183006625",
+   "refetch": "match id/author/created_at 2026-10-16T02:02:58Z, no referenced_tweets"
+  },
+  {
+   "key": "p04",
+   "status_id": "2110577151519178919",
+   "refetch": "match, created_at 2026-10-15T03:43:00Z"
+  },
+  {
+   "key": "p10",
+   "status_id": "2110221269899895024",
+   "refetch": "match, created_at 2026-10-14T04:08:51Z"
+  }
+ ],
+ "coverage": "Only 3 timeline pages read (73 posts, exclude retweets+replies, 2026-10-13T~ to 2026-10-16); oldest read 2109901175063765397 (2026-10-13). Days 2026-09-16..10-13 NOT read; not all tweets collected. Quote posts and self-thread replies (still returned) excluded by selection. Images/videos not viewed.",
+ "selection_note": "Topic 'AI tools/workflows' judged by me; several are light comments rather than workflows."
+}

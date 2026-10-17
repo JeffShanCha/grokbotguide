@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import { formatDate, toLang, useT } from '../i18n/ui';
+import { caseBySlug } from '../data/workflow-en/catalog';
+import { resourceTutorials } from '../data/workflow-en/entry-points';
 
 interface Props { category?: string; compact?: boolean; limit?: number }
 const { category, compact = false, limit } = Astro.props;
@@ -10,16 +12,25 @@ const labels = {
   zh: { start: '快速上手', advanced: '进阶教程', recipes: '实战案例', bots: '角色库', templates: '模板库', news: '更新动态', resources: '资源导航' },
   en: { start: 'Get started', advanced: 'Advanced', recipes: 'Recipes', bots: 'Bot library', templates: 'Templates', news: 'News', resources: 'Resources' },
 }[lang];
-const platforms: Record<string, string> = { official: lang === 'zh' ? '官方' : 'Official', github: 'GitHub', youtube: 'YouTube', reddit: 'Reddit', linuxdo: 'LINUX DO', bilibili: 'Bilibili', x: 'X', arxiv: 'arXiv', wechat: lang === 'zh' ? '公众号' : 'WeChat', web: lang === 'zh' ? '其他网站' : 'Web', hackernews: 'Hacker News', zhihu: '知乎', v2ex: 'V2EX' };
+const platforms: Record<string, string> = { official: lang === 'zh' ? '官方' : 'Official', github: 'GitHub', youtube: 'YouTube', reddit: 'Reddit', linuxdo: 'LINUX DO', bilibili: 'Bilibili', x: 'X', arxiv: 'arXiv', wechat: lang === 'zh' ? '公众号' : 'WeChat', web: lang === 'zh' ? '其他网站' : 'Web', hackernews: 'Hacker News', zhihu: lang === 'zh' ? '知乎' : 'Zhihu', v2ex: 'V2EX' };
 const evidence = {
   zh: { official: '官方资料', 'author-reported': '作者分享', research: '研究案例', editorial: '报道 / 评述' },
   en: { official: 'Official source', 'author-reported': 'Author report', research: 'Research', editorial: 'Coverage / commentary' },
 }[lang];
 const allItems = (await getCollection('resources')).filter((r) => !category || r.data.categories.includes(category as keyof typeof labels)).sort((a, b) => +b.data.added - +a.data.added || a.id.localeCompare(b.id));
 const items = limit ? allItems.slice(0, limit) : allItems;
+const guides = new Map((await getCollection('docs', (entry) => entry.id.startsWith(`${lang}/`) && !!entry.data.resource_id)).map((entry) => [entry.data.resource_id, `/${entry.id}/`]));
 const platformKeys = [...new Set(items.map((i) => i.data.platform || (i.data.source === 'official' ? 'official' : 'web')))];
 const relOf = (d: (typeof items)[number]['data']) => ['noopener', d.sponsored && 'sponsored', d.ugc && 'ugc'].filter(Boolean).join(' ');
 const countText = lang === 'zh' ? '条资源' : 'resources';
+type ResourceData = (typeof items)[number]['data'];
+const titleOf = (d: ResourceData) => lang === 'en' ? d.title_en || d.title : d.title;
+const authorOf = (d: ResourceData) => lang === 'en' ? d.author_en || d.author.replaceAll('（','(').replaceAll('）',')') : d.author;
+const tutorialsFor = (d: ResourceData) => lang === 'en' ? (resourceTutorials[d.id] || []).map(slug => {
+  const entry = caseBySlug.get(slug);
+  if (!entry) throw new Error(`Unknown resource tutorial: ${d.id}/${slug}`);
+  return entry;
+}).filter(entry => entry.href !== guides.get(d.id)) : [];
 ---
 
 <div class="gbg-resource-list" data-resource-list data-lang={lang}>
@@ -42,7 +53,7 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
     <label>{lang === 'zh' ? '原文语言' : 'Source language'}
       <select data-resource-language>
         <option value="">{t('res.all')}</option>
-        <option value="zh">中文</option>
+        <option value="zh">{lang === 'zh' ? '中文' : 'Chinese'}</option>
         <option value="en">English</option>
       </select>
     </label>
@@ -50,25 +61,28 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
   {!compact && <p class="gbg-result-count" role="status" aria-live="polite"><span data-resource-count>{items.length}</span> {countText}</p>}
   <p data-resource-empty hidden={items.length > 0}>{lang === 'zh' ? '暂时没有匹配的资源，请调整分类、平台、原文语言或搜索词。' : 'No matching resources. Try another category, platform, source language or search term.'}</p>
   <ul class="gbg-res not-content">
-    {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-original-lang={d.lang} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.author, d.summary_zh, d.summary_en, ...d.tags, ...(d.apps ?? [])].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
+    {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-original-lang={d.lang} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.title_en, d.author, d.author_en, d.summary_zh, d.summary_en, ...d.tags, ...(d.apps ?? [])].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
       <div class="gbg-res-head">
-        <a href={d.url} rel={relOf(d)}>{d.title}</a>
+        <a href={guides.get(d.id) || d.url} rel={guides.has(d.id) ? undefined : relOf(d)}>{titleOf(d)}</a>
+        {lang === 'en' && guides.has(d.id) && <span class="gbg-badge">Complete tutorial</span>}
         {d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
       </div>
       <p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>
       {!!d.apps?.length && <div class="gbg-res-apps"><span>{lang === 'zh' ? '关联应用' : 'Apps'}</span>{d.apps.map((app) => <span class="gbg-badge">{app}</span>)}</div>}
       <div class="gbg-res-meta">
         <span class="gbg-badge">{platforms[d.platform || ''] || (d.source === 'official' ? platforms.official : platforms.web)}</span>
-        <span>{d.author_url ? <a href={d.author_url}>{d.author}</a> : d.author}</span>
+        <span>{d.author_url ? <a href={d.author_url}>{authorOf(d)}</a> : authorOf(d)}</span>
+        {guides.has(d.id) && <a href={d.url} rel={relOf(d)}>{lang === 'zh' ? '阅读原帖 ↗' : 'Original post ↗'}</a>}
         {d.categories.map((c) => <a href={`/${lang}/resources/?category=${c}`}>{labels[c]}</a>)}
         {d.evidence && <span>{evidence[d.evidence]}</span>}
-        <span>{d.lang === 'zh' ? '中文' : 'English'}</span>
+        <span>{d.lang === 'zh' ? (lang === 'zh' ? '中文' : 'Chinese') : 'English'}</span>
         {d.published && <span>{lang === 'zh' ? '原文发布' : 'Published'} {formatDate(d.published, lang)}</span>}
         <span>{t('res.added')} {formatDate(d.added, lang)}</span>
         {d.checked_at && <span>{lang === 'zh' ? '来源核验' : 'Source checked'} {formatDate(d.checked_at, lang)}</span>}
         {d.status === 'broken' && <span class="warn">{t('res.broken')}</span>}
         {d.archive && <a href={d.archive}>{t('res.archive')}</a>}
       </div>
+      {tutorialsFor(d).length > 0 && <div class="gbg-resource-tutorials"><span>Practice with a complete tutorial</span><ul>{tutorialsFor(d).map(entry => <li><a href={entry.href} data-complete-tutorial={entry.slug}>{entry.title} →</a></li>)}</ul></div>}
       {(lang === 'zh' ? d.verification_note_zh : d.verification_note_en) && <details class="gbg-verification"><summary>{lang === 'zh' ? '核验范围' : 'What was checked'}</summary><p>{lang === 'zh' ? d.verification_note_zh : d.verification_note_en}</p></details>}
     </li>)}
   </ul>
@@ -130,6 +144,12 @@ const countText = lang === 'zh' ? '条资源' : 'resources';
   .gbg-res-meta { display: flex; flex-wrap: wrap; gap: 0.45rem 0.85rem; align-items: center; font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); }
   .gbg-res-meta .warn { color: var(--sl-color-orange-high); }
   .gbg-res-apps { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0; font-size: var(--sl-text-xs); color: var(--sl-color-gray-2); }
+  .gbg-resource-tutorials { margin-top: .75rem; padding: .7rem .9rem; border-inline-start: 2px solid var(--sl-color-text-accent); background: var(--sl-color-accent-low); font-size: var(--sl-text-sm); }
+  .gbg-resource-tutorials > span { font-weight: 600; color: var(--sl-color-white); }
+  .gbg-resource-tutorials ul { padding: 0; margin: .3rem 0 0; list-style: none; }
+  .gbg-resource-tutorials li { padding: 0; border: 0; }
+  .gbg-resource-tutorials a { display: inline-flex; align-items: center; min-height: 44px; line-height: 1.5; color: var(--sl-color-text-accent); }
+  .gbg-resource-tutorials a:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
   .gbg-verification { margin-top: 0.5rem; font-size: var(--sl-text-sm); }
   .gbg-verification summary { cursor: pointer; color: var(--sl-color-gray-2); }
   @media (max-width: 40rem) { .gbg-resource-controls { grid-template-columns: 1fr 1fr; } .gbg-resource-controls label:first-child { grid-column: 1 / -1; } }

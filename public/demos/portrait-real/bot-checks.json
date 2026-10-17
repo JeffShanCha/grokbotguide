@@ -1,0 +1,72 @@
+{
+ "generated_at": "2026-10-16 20:27:24 CST",
+ "before": {
+  "evidence_links": 11,
+  "evidence_all_resolve": true,
+  "evidence_matches_claims": true,
+  "source_count": 10,
+  "sources_match_csv": true,
+  "external_resources": [],
+  "has_@import": false,
+  "script_tags": false,
+  "img_tags": false,
+  "viewport_meta": true,
+  "banner_present": true,
+  "dom_dump_bytes": 5344,
+  "brief_vs_claims": "site-brief.md 写的是“全部 11 个证据链接（4+4+3）”，与 claims.json 的 11 个一致；未发现“13”。",
+  "checked_at": "2026-10-16 20:2x CST",
+  "reviewer": "二丫头",
+  "overflow_375": {
+   "method": "临时副本 /tmp/fr.html 用 375px iframe 加载 site/index.html，读取 documentElement.scrollWidth/clientWidth（未改动内容文件）",
+   "scrollWidth": 360,
+   "clientWidth": 360,
+   "innerWidth": 375,
+   "grid_columns": "328px（单列）",
+   "result": "无横向溢出（clientWidth 360 = 375 减去 iframe 滚动条）",
+   "caveat": "直接用 --window-size=375 时 headless 实测视口为 500（SW=CW=500），说明窗口有最小宽度；手机截图可能是按 500 视口渲染后裁成 375，不能作为严格 375 渲染"
+  },
+  "screenshots": {
+   "desktop": "shots/before-desktop-1280.png (1280x2400)",
+   "mobile": "shots/before-mobile-375.png (375x3200)"
+  },
+  "brief_claims_mismatch": "任务说 brief 写 13 个，但 site-brief.md 实际写“全部 11 个证据链接（4+4+3）”，文件里没有“13”；与 claims.json 和页面的 11 个一致"
+ },
+ "after": {
+  "evidence_links": 11,
+  "evidence_all_resolve": true,
+  "evidence_matches_claims": true,
+  "source_count": 10,
+  "sources_match_csv": true,
+  "external_resources": [],
+  "has_@import": false,
+  "script_tags": false,
+  "img_tags": false,
+  "viewport_meta": true,
+  "banner_present": true,
+  "sample_date_range_csv": [
+   "2026-10-14",
+   "2026-10-16"
+  ],
+  "range_in_html": true,
+  "range_in_brief": true,
+  "banned_words_in_t2_claims": [],
+  "banned_words_in_t2_html": [],
+  "banned_words_in_intro": [],
+  "note_brief": "site-brief.md 第 21 行出现「试用了」「多次」，是禁止使用这些词的说明，不是页面文案"
+ },
+ "iframe_375_after": {
+  "check": "375px iframe overflow (temp /tmp/fr.html, content files untouched)",
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "innerWidth": 375,
+  "grid_columns": "328px (single column)",
+  "result": "pass, no horizontal overflow"
+ },
+ "screenshots": {
+  "before_desktop": "shots/before-desktop-1280.png (1280x2400; footer cut off)",
+  "before_mobile": "shots/before-mobile-500px-actual.png (renamed from before-mobile-375.png; headless min viewport 500, 375 crop)",
+  "after_desktop": "shots/after-desktop-1280.png (1280x2600, footer visible)",
+  "after_mobile": "shots/after-mobile-500px-actual.png (500x3600)"
+ },
+ "pass": true
+}

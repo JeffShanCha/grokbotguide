@@ -1,0 +1,12 @@
+---
+import WorkflowPreviewLayout from '~/components/preview/WorkflowPreviewLayout.astro';
+import GmailGuide from '~/components/workflow-en/GmailGuide.astro';
+import WorkflowGuidePage from '~/components/workflow-en/WorkflowGuidePage.astro';
+import {caseCatalog} from '~/data/workflow-en/catalog';
+import {workflowGuides,caseSlug} from '~/data/workflow-en';
+export function getStaticPaths(){return caseCatalog.map(entry=>({params:{slug:entry.slug},props:{entry,topic:workflowGuides.find(guide=>caseSlug(guide)===entry.slug)}}));}
+const {entry,topic}=Astro.props;
+---
+<WorkflowPreviewLayout title={entry.title} description={entry.lead} page="gmail" updated="2026.10.18">
+ {topic?<WorkflowGuidePage topic={topic}/>:<GmailGuide/>}
+</WorkflowPreviewLayout>

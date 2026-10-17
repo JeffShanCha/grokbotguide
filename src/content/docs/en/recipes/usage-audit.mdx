@@ -1,0 +1,112 @@
+---
+title: "Grok Bot × usage audit: review routines before changing your workflow"
+description: "Record a baseline, find unnecessary runs, shorten handoffs, bound retries and compare a small change before automating it."
+sidebar:
+  order: 26
+grade: community
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: operations
+difficulty: intermediate
+risk: medium
+cadence: monthly
+resource_id: x-cgnot996-usage-endurance-guide
+apps: ["Grok Bot"]
+sources:
+  - title: "Twelve Grok Bot usage tips (Tiezhu AGI (@cgnot996))"
+    url: https://x.com/cgnot996/status/2108504325609984233
+  - title: "Routines (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "Plans and billing (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/plans
+  - title: "Which AI models power Grok Bot? (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/models
+  - title: "Settings and notifications (Cursor Docs)"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Limits (OpenRouter Docs)"
+    url: https://openrouter.ai/docs/api_reference/limits
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+**Find work that runs without producing a useful result, then change one thing at a time. Keep a before-and-after record so you can judge the tradeoff.**
+
+This guide reorganizes [Tiezhu AGI (@cgnot996)'s twelve usage tips](https://x.com/cgnot996/status/2108504325609984233) into an audit. The collection Bot read the article and its ten images; we also checked current official billing, model, settings and routine documentation. We have not executed this workflow or measured savings.
+
+## What you get
+
+A task inventory, one proposed adjustment for your approval, and a useful handoff. An hourly check producing only one useful weekly brief is an example worth investigating, not a measured result from this site.
+
+## Identify your account first
+
+The official documentation checked on October 18, 2026 distinguishes legacy Cursor plans or linked SuperGrok usage from The X Subscription. Legacy accounts use Cursor billing and eligible Usage & Billing screens. The X Subscription uses a shared weekly pool and additional prepaid credit managed through [Grok billing](https://grok.com/dashboard/billing).
+
+The article's blanket advice against funding usage at grok.com does not apply to every account. Check [the current plan documentation](https://cursor.com/help/grok-bot/plans) and your own account before changing anything. This audit does not require a purchase or enabling extra usage.
+
+## 1. Save a baseline
+
+Record the time, account type, visible usage and recent work. Compare the same metric later. Without task-level data, do not attribute the entire account's usage change to one Bot.
+
+## 2. Inventory routines
+
+Review each routine's owner, enabled state, schedule or event rule, latest useful output and failure history. Mark unavailable fields explicitly.
+
+Every routine run consumes usage. Suppressing an unchanged report does not make the check itself free. Reducing runs requires changing the cadence, narrowing the event rule or evaluating another detection mechanism. [Official details](https://cursor.com/help/grok-bot/routines)
+
+## 3. Propose one change
+
+Choose one candidate to pause, slow down or narrow. Explain the reason and recovery plan before editing it.
+
+<CopyTemplate id="usage-audit-review">
+
+```text
+Review the Bots and routines you can actually read. Make no changes yet.
+List each task, owner, trigger, enabled state, latest useful output and evidence link.
+Mark missing fields unavailable. Do not invent task-level usage figures.
+Recommend one adjustment, explaining its purpose and how to reverse it.
+Wait for my confirmation. Do not delete Bots, install tools, buy services,
+enable additional billing or contact anyone.
+```
+
+</CopyTemplate>
+
+## 4. Make handoffs smaller
+
+Keep longer reference material and intermediate results in files; return conclusions, sources and paths. A handoff should explain what is complete, what is missing and what to do next. This avoids restarting work, but storing material in a file does not guarantee lower usage.
+
+Older advice about a description field or copying Bots only on iPhone is not a universal current menu path. Personal Bot instructions can be given in chat. Review old routines when changing Bots; hiding a Bot is not a pause command.
+
+## 5. Add checkpoints and a retry boundary
+
+Start with one or two safe samples and check quality before expanding. Stop after two total attempts at the same operation and return the error and completed work.
+
+<CopyTemplate id="usage-audit-checkpoint">
+
+```text
+Validate this step using the one or two samples I supplied, not the full batch.
+Return the output, evidence or file paths, and unresolved issues.
+Try the same operation at most twice in total, then stop.
+Wait while I inspect the result and account usage before expanding the task.
+Save a handoff before ending. Do not call other Bots or subagents.
+```
+
+</CopyTemplate>
+
+## 6. Compare, then save the process
+
+Observe a comparable amount of work after changing one variable. Record quality, omissions, latency and usage alongside other activity. Restore the previous setting if the tradeoff is poor. Save a stable process as a skill; review the owner, time zone, cadence and failure handling before scheduling it. A routine Test performs real work and uses usage.
+
+## Keep these options separate
+
+CLI offloading needs another tool, authorization and potentially another allowance. A webhook is supported, but a reliable change detector needs its own hosting and tests. Neither is a guaranteed saving.
+
+OpenRouter documents free model variants and rate limits; credentials, fallback behavior and actual charges still need checking. ModelScope documentation and credit rules were not verified. Do not install the linked skills as part of this audit. Claims of quota-free X search and guaranteed cloud access after usage is exhausted remain unverified.
+
+## Correct three common assumptions
+
+Grok Bot has [no user-facing model picker](https://cursor.com/help/grok-bot/models). Calling an external CLI is a separate execution route. Legacy Cursor and linked SuperGrok allowances use the higher grant rather than adding together; The X Subscription follows its shared-pool rules. Billing entry points therefore depend on account type.
+
+## Verification limits
+
+The author's percentages, bills and outcomes were not reproduced. Two linked skills were only partly read, private key pages were not accessed, ModelScope pages failed or returned empty content, and only the first page of author replies was checked. Images illustrate the workflows; they do not establish savings.

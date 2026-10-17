@@ -1,0 +1,21 @@
+---
+import WorkflowPreviewLayout from '~/components/preview/WorkflowPreviewLayout.astro';
+import WorkflowHub from '~/components/preview/WorkflowHub.astro';
+import OfficeTopic from '~/components/preview/OfficeTopic.astro';
+import WorkflowTopicPage from '~/components/preview/WorkflowTopicPage.astro';
+import { workflowTopics, topicHref, guideHref } from '~/data/workflow-topics';
+
+export function getStaticPaths() {
+	return [
+		{ params: { entry: undefined }, props: { page: 'hub' } },
+		{ params: { entry: 'office' }, props: { page: 'topic' } },
+		...workflowTopics.map(topic => ({ params: { entry: topic.id }, props: { page: 'topic', topic } })),
+	];
+}
+const { page, topic } = Astro.props;
+const title = page === 'hub' ? '实际案例库 · 五个专题' : topic?.title || '办公与信息整理';
+const description = page === 'hub' ? '五个专题、25 篇完整案例教程，原始材料、分阶段提示词、参考结果、排错、验收与下载。' : topic?.summary || '从邮件、日程、文档和群聊里，找出需要处理的事，按场景完成一次完整练习。';
+---
+<WorkflowPreviewLayout title={title} description={description} page={page} topicTitle={topic?.title} topicUrl={topic ? topicHref(topic) : undefined} guideTitle="完整教程" guideUrl={topic ? guideHref(topic) : undefined} updated="2026.10.17" scope="练习与真实实测范围在各教程中分别说明。">
+	{page === 'hub' ? <WorkflowHub /> : topic ? <WorkflowTopicPage topic={topic} /> : <OfficeTopic />}
+</WorkflowPreviewLayout>

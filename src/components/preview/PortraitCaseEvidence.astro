@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import desktop from '../../assets/portrait-real/result-desktop.jpg';
+import mobile from '../../assets/portrait-real/result-mobile-375.jpg';
+---
+<div class="wc-history">
+	<h3>已有真实 X 加测：保留截图与执行限制</h3>
+	<p>2026 年 10 月 16 日的历史加测使用蓝哥 AI 公开账号的 10 条 AI 摘要，样本日期覆盖 10 月 14—16 日。它是第三方样本观察，不是作者本人主页，也不代表完整 30 天。</p>
+	<figure><Image src={desktop} alt="历史真实 X 样本网页的桌面首屏，包含样本范围、主题和证据入口" format="webp" loading="lazy" /><figcaption>已有真实网页截图，本轮未重新执行远端采集。</figcaption></figure>
+	<details><summary>查看已有 375px 手机截图</summary><figure class="wc-phone"><Image src={mobile} alt="同一历史网页在 375 像素下的手机首屏" format="webp" loading="lazy" /></figure></details>
+	<p><strong>历史更正：</strong>执行记录曾出现未经允许的内部委派，未完全遵守禁开子代理要求。本页保留该限制；本站完成的页面检查与远端执行过程分别看待。本轮没有开启子代理。</p>
+	<div class="wt-fixture-links"><a href="/demos/portrait-real/result.html" target="_blank" rel="noopener noreferrer">打开已有真实样本页 ↗</a><a href="/demos/portrait/result.html" target="_blank" rel="noopener noreferrer">打开合成练习页 ↗</a><a href="/demos/portrait-real/audit.json" target="_blank" rel="noopener noreferrer">查看历史更正记录 ↗</a><a href="/demos/portrait-real/checks.json" target="_blank" rel="noopener noreferrer">查看已有页面检查 ↗</a></div>
+</div>

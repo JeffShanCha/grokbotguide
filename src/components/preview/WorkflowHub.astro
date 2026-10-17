@@ -1,0 +1,18 @@
+---
+import { workflowTopics, topicHref, guideHref } from '../../data/workflow-topics';
+import { officeBase, gmailGuideUrl } from '../../data/office-preview';
+import { caseCatalog } from '../../data/workflow-topics/catalog';
+import CaseDirectory from './CaseDirectory.astro';
+const promptCount = caseCatalog.reduce((sum,item) => sum+item.prompts,0);
+const fileCount = caseCatalog.reduce((sum,item) => sum+item.files,0);
+const topics = [
+	{ number: '01', title: '办公与信息整理', summary: '邮件、会议、文档、群聊、手机语音与团队问答，每个场景都有完整教程。', count: caseCatalog.filter(item=>item.group==='office').length, topic: officeBase, guide: gmailGuideUrl, guideTitle: 'Gmail 收件箱整理：从分类到每日简报', facts: '8 封邮件 → 分类、草稿与每日简报', tags: ['Gmail', 'Calendar', 'Slack', '手机语音'] },
+	...workflowTopics.map(item => ({ number: item.number, title: item.title, summary: item.summary, count: caseCatalog.filter(entry=>entry.group===item.id).length, topic: topicHref(item), guide: guideHref(item), guideTitle: item.guideTitle, facts: item.lab.caption, tags: item.quickCases.slice(0, 3).map(quick => quick.apps.split(' · ')[0]) })),
+];
+---
+<div id="main" class="wf-shell wt-hub">
+	<header class="wt-hub-hero"><div><div class="wf-kicker">WORKFLOWS / 实际案例库</div><p class="wf-eyebrow">按要完成的事，选择一条路线</p><h1>25 个案例，<br />照着步骤做一遍。</h1><p class="wf-lead">统一按 Gmail 完整教程的结构整理。每个案例都有准备材料、分阶段提示词、完整样例、排错与验收，选择一个开始。</p><div class="wf-byline">shancha 整理 <span>·</span> {caseCatalog.length} 篇完整教程 <span>·</span> {promptCount} 段提示词 <span>·</span> {fileCount} 份文件</div><div class="wf-actions"><a class="wf-button" href="#all-cases">查看全部教程 ↓</a><a class="wf-text-link" href={gmailGuideUrl}>从 Gmail 开始 →</a></div></div><aside class="wt-hub-method"><span>每个案例都能走完这四步</span><ol><li><b>01</b><div><strong>看完整输入</strong><p>下载材料，明确任务与范围。</p></div></li><li><b>02</b><div><strong>按阶段完成</strong><p>复制提示词，逐步查看交付。</p></div></li><li><b>03</b><div><strong>对照参考结果</strong><p>查来源、缺失和异常，不只看总数。</p></div></li><li><b>04</b><div><strong>验收后再复用</strong><p>用自己的小批材料验证，再安排重复。</p></div></li></ol></aside></header>
+	<section id="topics" aria-labelledby="topics-title"><div class="wf-section-heading"><div><div class="wf-kicker">从你的问题出发</div><h2 id="topics-title">选择一个专题</h2></div><p>先按工作场景选专题，<br />每个案例都有独立完整教程。</p></div><div class="wt-topic-list">{topics.map(item => <article class="wt-topic-card"><span class="wt-topic-number">{item.number}</span><div class="wt-topic-main"><p class="wf-eyebrow">{item.count} 篇完整教程</p><h3><a href={item.topic}>{item.title} <span aria-hidden="true">↗</span></a></h3><p>{item.summary}</p><div class="wt-topic-tags">{item.tags.map(tag => <span>{tag}</span>)}</div></div><div class="wt-topic-guide"><span>推荐从这里开始</span><a href={item.guide}>{item.guideTitle} <b aria-hidden="true">→</b></a><small>{item.facts}</small></div></article>)}</div></section>
+	<CaseDirectory />
+	<div class="wf-reading-note"><strong>关于这组教程</strong><p>各教程提供完整输入、提示词和参考交付物。合成练习与已有真实实测分别标明；真实账号连接、写入与定时任务仍需按各页范围核对。每篇案例均使用独立地址，可从案例库、学习路线和相关问题进入。</p></div>
+</div>

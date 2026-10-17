@@ -12,7 +12,7 @@ sources:
   - title: "Grok Bot on The X Subscription (official docs)"
     url: https://docs.x.ai/x-subscription/grok-bot
   - title: "Tag @bot on X (official docs)"
-    url: https://docs.x.ai/grok-bot/tag-bot-on-x
+    url: https://docs.x.ai/grok-bot/tag-on-x
   - title: "Regions (Cursor docs)"
     url: https://docs.cursor.com/account/regions
 head:
@@ -75,4 +75,4 @@ The official web payment methods are cards, Apple Pay, Google Pay and Link; Alip
 
 - [What is Grok Bot?](/en/start/what-is-grok-bot/)
 - [Which plan to choose](/en/answers/grok-bot-vs-cursor-plans/)
-- [Grok Bot × X: hand off threads with @bot](/en/recipes/x-tag-bot/)
+- [Complete tutorial: Reading X discussions: a bounded note from an incomplete thread](/en/recipes/x-tag-bot/)

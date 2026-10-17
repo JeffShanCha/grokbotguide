@@ -1,0 +1,13 @@
+---
+import { officeBase, gmailGuideUrl } from '~/data/office-preview';
+
+// Compatibility with links shared during local review.
+export function getStaticPaths() {
+	if (!import.meta.env.DEV) return [];
+	return [
+		{ params: { entry: undefined }, props: { href: officeBase } },
+		{ params: { entry: 'gmail-inbox' }, props: { href: gmailGuideUrl } },
+	];
+}
+return Astro.redirect(Astro.props.href + Astro.url.search, 302);
+---

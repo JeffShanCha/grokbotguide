@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import desktop from '../../assets/portrait-real/result-desktop.jpg';
+import mobile from '../../assets/portrait-real/result-mobile-375.jpg';
+---
+<div class="wc-history">
+	<h3>Historical X test: retained screenshots and execution limits</h3>
+	<p>The historical test on October 16, 2026 used 10 AI summaries from LanGe AI’s public account, covering October 14–16. This is a third-party sample observation, not the author’s own homepage or a complete 30-day record. The retained evidence pages and screenshots are in Chinese.</p>
+	<figure><Image src={desktop} alt="Historical X sample page on desktop, showing scope, themes and evidence links" format="webp" loading="lazy" /><figcaption>Retained screenshot of the actual historical page. No new remote collection was run.</figcaption></figure>
+	<details><summary>View the retained 375px mobile screenshot</summary><figure class="wc-phone"><Image src={mobile} alt="The same historical page at 375 pixels" format="webp" loading="lazy" /></figure></details>
+	<p><strong>Historical correction:</strong>The execution record contains unauthorized internal delegation and did not fully obey the no-subagent requirement. That limitation is retained. Site checks and remote execution evidence are assessed separately. No subagents were opened in this round.</p>
+	<div class="wt-fixture-links"><a href="/demos/portrait-real/result.html" target="_blank" rel="noopener noreferrer">Open historical real sample ↗</a><a href="/demos/portrait/result.html" target="_blank" rel="noopener noreferrer">Open synthetic practice page ↗</a><a href="/demos/portrait-real/audit.json" target="_blank" rel="noopener noreferrer">Read historical correction ↗</a><a href="/demos/portrait-real/checks.json" target="_blank" rel="noopener noreferrer">Read retained page checks ↗</a></div>
+</div>

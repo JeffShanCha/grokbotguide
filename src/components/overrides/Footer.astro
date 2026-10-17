@@ -1,5 +1,7 @@
 ---
 import Default from '@astrojs/starlight/components/Footer.astro';
+import CompleteTutorialLinks from '../workflow-en/CompleteTutorialLinks.astro';
+import { faqTutorials } from '../../data/workflow-en/entry-points';
 import { SITE } from '../../../site.config.mjs';
 import { formatDate, toLang, useT } from '../../i18n/ui';
 import { getCollection } from 'astro:content';
@@ -13,12 +15,15 @@ const sources = data.sources ?? [];
 const basisDate = data.last_checked ?? data.last_verified ?? route.lastUpdated;
 const [basisBefore, basisAfter] = basisDate ? t('meta.basis').split('{date}') : [t('meta.basisNoDate'), ''];
 const section = route.entry.id.split('/')[1];
+const faqSlug = route.entry.id.split('/')[2];
 const showCollected = ['start', 'advanced', 'recipes', 'bots', 'templates', 'news'].includes(section);
 // 外部资料只显示一行链接，完整列表在资源导航里按分类筛选
 const collected = showCollected && route.entry.id !== `${lang}/${section}`
 	? (await getCollection('resources')).filter((r) => r.data.categories.includes(section as 'recipes')).length
 	: 0;
 ---
+
+{lang === 'en' && section === 'answers' && <CompleteTutorialLinks slugs={faqTutorials[faqSlug || ''] ?? ['gmail-inbox-triage','summarize-a-document','website-daily-check']} />}
 
 {
 	sources.length > 0 && (
@@ -32,7 +37,7 @@ const collected = showCollected && route.entry.id !== `${lang}/${section}`
 		</p>
 		<details>
 			<summary>
-				{t('meta.sources')}（{sources.length}）
+				{t('meta.sources')}{lang === 'zh' ? `（${sources.length}）` : ` (${sources.length})`}
 			</summary>
 			<ul>
 				{sources.map((s) => (

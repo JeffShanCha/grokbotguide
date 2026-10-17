@@ -1,0 +1,45 @@
+{
+  "notice": "合成样例，非真人分析。证据仅来自 source.csv 的 8 条合成短文；不含性格分数、职业或经历推断。",
+  "source": "source.csv",
+  "themes": [
+    {
+      "id": "t1",
+      "title": "把事情拆成小步骤",
+      "observation": "多条短文把任务拆成固定的两到三步来做。",
+      "evidence": [
+        "demo-01",
+        "demo-03",
+        "demo-08"
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "自动化先手动、再放权",
+      "observation": "先手动跑通或只出草稿，确认稳定后再交给工具或增加权限。",
+      "evidence": [
+        "demo-02",
+        "demo-04",
+        "demo-05"
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "定期删减，只留有用的",
+      "observation": "复盘时删除不用的东西，保留能指向下一步的内容。",
+      "evidence": [
+        "demo-03",
+        "demo-06"
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "清楚和可复现优先于好看",
+      "observation": "强调写清内容与说明，胜过动效或截图美观。",
+      "evidence": [
+        "demo-07",
+        "demo-08",
+        "demo-02"
+      ]
+    }
+  ]
+}

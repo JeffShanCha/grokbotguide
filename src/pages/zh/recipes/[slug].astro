@@ -1,0 +1,15 @@
+---
+import WorkflowPreviewLayout from '~/components/preview/WorkflowPreviewLayout.astro';
+import GmailGuide from '~/components/preview/GmailGuide.astro';
+import WorkflowGuidePage from '~/components/preview/WorkflowGuidePage.astro';
+import { caseCatalog } from '~/data/workflow-topics/catalog';
+import { workflowGuides, caseSlug, topicHref } from '~/data/workflow-topics';
+
+export function getStaticPaths() {
+	return caseCatalog.map(entry => ({ params: { slug: entry.slug }, props: { entry, topic: workflowGuides.find(guide => caseSlug(guide) === entry.slug) } }));
+}
+const { entry, topic } = Astro.props;
+---
+<WorkflowPreviewLayout title={entry.title} description={entry.lead} page="gmail" topicTitle={entry.groupTitle} topicUrl={topicHref({ id: entry.group })} guideTitle="完整教程" guideUrl={entry.href} updated="2026.10.17" scope="练习与真实实测范围在教程中分别说明。">
+	{topic ? <WorkflowGuidePage topic={topic} /> : <GmailGuide />}
+</WorkflowPreviewLayout>

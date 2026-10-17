@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-18-platform-release-approved",
+  "collected_at": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "review_only": false,
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-18",
+    "user_message": "等当前两个任务结束后直接帮我更新平台代码，合并过程中如果有问题直接解决，解决后push，然后等待更新，更新以后检查是否更新成功",
+    "task_ids": [
+      "01a13e9b-0e20-7060-838a-0b45fd079096",
+      "01a143e7-020a-7380-ac93-1db0b3fc6393"
+    ],
+    "approved_ids": [
+      "x-cgnot996-usage-endurance-guide"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "review_batch_id": "2026-10-18-cgnot996-usage-review",
+    "review_batch_sha256": "11d7fdc5b135a73b2a020925b1f30453ea64a3a7322b8329f1466fbd9e2d091a",
+    "scope_zh": "仅本轮用量审计资源及两任务已完成的平台教程和配套功能；不授权历史待审候选。"
+  },
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "用户授权两个任务结束后统一合并、推送和检查上线；仅发布本任务已完成的用量审计资源。",
+      "relevance": "讨论 Grok Bot 例行任务、上下文、CLI分流和用量管理。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-cgnot996-usage-endurance-guide",
+        "title": "Grok Bot 省额度指南：任务降频、上下文整理与工具分流",
+        "summary_zh": "作者汇总12条省额度建议，涉及定时降频、上下文交接、CLI分流、重试上限和用量封顶。已补读10张图；充值结论需按账号类型纠正，免费接口和云电脑运行保证仍有未核实部分。",
+        "summary_en": "Twelve author-reported usage tips on routines, context, CLI handoffs and retries. All ten images read; billing needs account-specific updates. External API and cloud-runtime claims remain untested.",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "url": "https://x.com/cgnot996/status/2108504325609984233",
+        "author": "铁柱AGI",
+        "published": "2026-10-09",
+        "author_url": "https://x.com/cgnot996",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-18",
+        "checked_at": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "铁柱读取原帖长文和10张图；Codex 补读官方用量、模型、设置与Routine说明并纠正历史计费入口。第三方技能只读开头，部分外链失败；未运行流程或复现节省比例。",
+        "verification_note_en": "The collection Bot read the article and all ten images. Codex checked current official billing, models, settings and routines. Third-party skills were partly read and some links failed. No savings or workflow reproduced.",
+        "apps": [
+          "Grok Build",
+          "Cursor",
+          "X",
+          "OpenRouter",
+          "ModelScope"
+        ],
+        "tags": [
+          "usage",
+          "routines",
+          "context",
+          "cli",
+          "webhook"
+        ],
+        "title_en": "Grok Bot usage guide: routine cadence, context handoffs and tool offloading",
+        "author_en": "Tiezhu AGI (@cgnot996)"
+      },
+      "approval_status": "approved"
+    }
+  ]
+}

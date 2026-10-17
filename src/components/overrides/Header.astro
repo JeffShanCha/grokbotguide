@@ -2,15 +2,17 @@
 // 顶栏：站点名 + 五个下拉菜单（学习路线 / 快速上手 / 进阶教程 / 实战案例 / 资源与社区）+ 搜索 + 图标按钮。
 // 下拉面板的内容都从内容集合里读取，新增页面会自动出现。窄屏不显示下拉菜单，改用侧边栏菜单。
 import { getCollection } from 'astro:content';
-import Search from '@astrojs/starlight/components/Search.astro';
+import Search from './Search.astro';
 import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
 import SocialIcons from './SocialIcons.astro';
 import ThemeSelect from './ThemeSelect.astro';
 import LanguageSelect from './LanguageSelect.astro';
 import { formatDate, toLang, useT } from '../../i18n/ui';
+import { localRecipeNavigation } from '../../lib/local-recipe-navigation';
 
 const route = Astro.locals.starlightRoute;
 const lang = toLang(route.locale);
+const previewNavigation = await localRecipeNavigation(lang);
 const t = useT(lang);
 const u = (p: string) => `/${lang}/${p}`;
 const section = route.id.split('/')[1] ?? '';
@@ -137,6 +139,10 @@ const c = {
 		mainNav: 'Main',
 	},
 }[lang];
+if (previewNavigation.enabled) {
+	c.allRecipes = lang === 'zh' ? `查看全部 ${previewNavigation.total} 篇完整版教程 →` : `All ${previewNavigation.total} complete tutorials →`;
+	c.hot = lang === 'zh' ? '热门完整版教程' : 'Popular complete tutorials';
+}
 
 const MENUS = [
 	{ id: 'path', match: ['guide'] },
@@ -253,7 +259,7 @@ const needBurger = !route.hasSidebar;
 								<span class="pill">{c.zeroBadge}</span>
 								<strong>{c.zeroT}</strong>
 								<p>{c.zeroD}</p>
-								<a class="more" href={`/${zeroRisk.id}/`}>
+								<a class="more" href={previewNavigation.href(`/${zeroRisk.id}/`)}>
 									{c.go}
 								</a>
 							</div>
@@ -320,9 +326,9 @@ const needBurger = !route.hasSidebar;
 							popular.map((e) => {
 								const { tool, task } = split(e.data.title);
 								return (
-									<a class="mi row" href={`/${e.id}/`}>
+									<a class="mi row" href={previewNavigation.href(`/${e.id}/`)}>
 										<span class="tool">{tool}</span>
-										<span class="task">{task}</span>
+										<span class="task">{previewNavigation.entryForId(e.id)?.title || task}</span>
 									</a>
 								);
 							})
@@ -351,9 +357,9 @@ const needBurger = !route.hasSidebar;
 					</div>
 					{
 						featured && (
-							<a class="card feat" href={`/${featured.id}/`}>
+							<a class="card feat" href={previewNavigation.href(`/${featured.id}/`)}>
 								<span class="pill">{c.featuredBadge}</span>
-								<strong>{split(featured.data.title).tool}：{split(featured.data.title).task}</strong>
+								<strong>{previewNavigation.entryForId(featured.id)?.title || `${split(featured.data.title).tool}: ${split(featured.data.title).task}`}</strong>
 								<span class="d">{featured.data.apps.join(' · ')}</span>
 							</a>
 						)

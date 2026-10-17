@@ -6,6 +6,7 @@ const ui = {
 	zh: {
 		'grade.official': '依据官方文档',
 		'grade.community': '来自社区实测',
+		'grade.original': '本站原创教程',
 		'grade.tested': '本站实测',
 		'grade.opinion': '观点 / 评测',
 		'meta.verified': '最后验证',
@@ -74,6 +75,7 @@ const ui = {
 	en: {
 		'grade.official': 'Based on official docs',
 		'grade.community': 'From community tests',
+		'grade.original': 'Original guide',
 		'grade.tested': 'Tested here',
 		'grade.opinion': 'Opinion / review',
 		'meta.verified': 'Last verified',

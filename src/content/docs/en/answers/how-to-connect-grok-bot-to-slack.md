@@ -62,6 +62,6 @@ A Team Bot only answers in channels when it is mentioned; in DMs it answers ever
 
 ## Read next
 
-- [Grok Bot × Slack: daily standup](/en/recipes/slack-daily-standup/)
-- [Grok Bot × Slack for teams](/en/recipes/slack-team-bot/)
+- [Complete tutorial: Slack standups: decisions, changed deadlines and message evidence](/en/recipes/slack-daily-standup/)
+- [Complete tutorial: Team data questions: shared definitions before shared answers](/en/recipes/slack-team-bot/)
 - [How do I connect Grok Bot to Gmail?](/en/answers/how-to-connect-grok-bot-to-gmail/)

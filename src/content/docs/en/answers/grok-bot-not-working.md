@@ -82,4 +82,4 @@ Without on-demand usage it stops until the weekly reset; with on-demand it conti
 
 - [How do I schedule Grok Bot routines?](/en/answers/how-to-schedule-grok-bot-routines/)
 - [Approvals, security and privacy](/en/advanced/approvals-and-security/)
-- [Grok Bot × X: @bot region limits](/en/recipes/x-tag-bot/)
+- [Complete tutorial: Reading X discussions: a bounded note from an incomplete thread](/en/recipes/x-tag-bot/)

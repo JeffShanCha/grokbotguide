@@ -1,0 +1,42 @@
+---
+import type { WorkflowGuide } from '../../data/workflow-topics/types';
+import { fileHref } from '../../data/workflow-en/factory';
+interface Props { topic: WorkflowGuide }
+const { topic } = Astro.props;
+const { lab } = topic;
+const tabs = [['input', '01 Original input'], ['output', '02 Reference results'], ['report', '03 Complete report']];
+---
+<figure class="wf-lab wt-lab">
+	<div class="wf-lab-head"><div><span class="wf-dot" aria-hidden="true"></span><strong>{lab.title}</strong></div><span>{lab.caption}</span></div>
+	<div class="wf-tabs" role="tablist" aria-label="Explore practice inputs and results" data-wt-tabs>{tabs.map(([id, title], i) => <button type="button" role="tab" id={`tab-${id}`} aria-controls={`panel-${id}`} aria-selected={String(i === 0)} tabindex={i === 0 ? 0 : -1} disabled>{title}</button>)}</div>
+	<div class="wf-lab-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" tabindex="0"><p class="wf-lab-hint">Original synthetic material. Try the input independently, then compare the reference results.</p><div class="wt-input-list">{lab.input.map((item, i) => <details open={i === 0}><summary>{item.title}</summary><pre tabindex="0">{item.body}</pre></details>)}</div>{topic.guideSlug === 'website-daily-check' && <p class="wt-fixture-links"><a href={fileHref(topic, 'site-index.html')} target="_blank" rel="noopener noreferrer">Open fixture home ↗</a><a href={fileHref(topic, 'site-about.html')} target="_blank" rel="noopener noreferrer">Open fixture about ↗</a></p>}{topic.caseId === 'x-bookmarks-demo' && <p class="wt-fixture-links"><a href={fileHref(topic,'prototype.html')} target="_blank" rel="noopener noreferrer">Open native chart prototype ↗</a></p>}</div>
+	<div class="wf-lab-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" tabindex="0" hidden><p class="wf-lab-hint">Complete reference results under this tutorial’s rules; nothing was written to a third-party service.<span class="wt-table-hint">Scroll horizontally within the table if needed.</span></p><div class="wf-table-scroll" tabindex="0" role="region" aria-label={`${topic.title} reference results`}><table><thead><tr>{lab.columns.map(title => <th scope="col">{title}</th>)}</tr></thead><tbody>{lab.rows.map(row => <tr>{row.map((cell, i) => i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody></table></div><div class="wf-draft-grid">{lab.cards.map(card => <div class="wf-draft"><div><span>{card.title}</span><span class="wf-tag">{card.badge}</span></div><p>{card.body}</p></div>)}</div></div>
+	<div class="wf-lab-panel" id="panel-report" role="tabpanel" aria-labelledby="tab-report" tabindex="0" hidden><pre class="wf-digest-text">{lab.report}</pre></div>
+	<figcaption>This shows complete inputs and expected outputs. Switching tabs runs no task; verify real connections and writes separately in your environment.</figcaption>
+</figure>
+<script>
+	document.querySelectorAll<HTMLElement>('[data-wt-tabs]').forEach(bar => {
+		const tabs = [...bar.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+		const activate = (tab: HTMLButtonElement) => {
+			for (const item of tabs) {
+				const selected = item === tab;
+				item.setAttribute('aria-selected', String(selected)); item.tabIndex = selected ? 0 : -1;
+				const panel = document.getElementById(item.getAttribute('aria-controls') || '');
+				if (panel) panel.hidden = !selected;
+			}
+		};
+		tabs.forEach((tab, i) => {
+			tab.addEventListener('click', () => activate(tab));
+			tab.addEventListener('keydown', event => {
+				let next: number;
+				if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+				else if (event.key === 'ArrowLeft') next = (i + tabs.length - 1) % tabs.length;
+				else if (event.key === 'Home') next = 0;
+				else if (event.key === 'End') next = tabs.length - 1;
+				else return;
+				event.preventDefault(); activate(tabs[next]); tabs[next].focus();
+			});
+			tab.disabled = false;
+		});
+	});
+</script>
