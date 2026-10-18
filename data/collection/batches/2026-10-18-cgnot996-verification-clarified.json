@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-18-cgnot996-verification-clarified",
+  "collected_at": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "review_only": false,
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-18",
+    "user_message": "这版可以，按这个内容加到案例和资源导航里，未核实的内容标清楚，搞完直接发布",
+    "approved_ids": [
+      "x-cgnot996-usage-endurance-guide"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "scope_zh": "仅已审核用量审计案例及对应资源；保留中文标题和摘要，澄清未实测及待核实项，不导入其他候选。"
+  },
+  "discovery": [
+    "最新 main 已在平台整合批次收录同一原帖，本批只更新核验说明，不重复新增资源。",
+    "保留原始收录日期、中文标题、摘要及账号类型纠正；明确未运行和未取得资料的范围。"
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "update_id": "x-cgnot996-usage-endurance-guide",
+      "reason": "用户批准本版上线并要求明确未核实内容；更新已有条目的核验范围，不增加重复来源。",
+      "relevance": "Grok Bot 用量管理、例行任务和工具分流。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-cgnot996-usage-endurance-guide",
+        "title": "Grok Bot 省额度指南：任务降频、上下文整理与工具分流",
+        "summary_zh": "作者汇总12条省额度建议，涉及定时降频、上下文交接、CLI分流、重试上限和用量封顶。已补读10张图；充值结论需按账号类型纠正，免费接口和云电脑运行保证仍有未核实部分。",
+        "summary_en": "Twelve author-reported usage tips on routines, context, CLI handoffs and retries. All ten images read; billing needs account-specific updates. External API and cloud-runtime claims remain untested.",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "url": "https://x.com/cgnot996/status/2108504325609984233",
+        "author": "铁柱AGI",
+        "published": "2026-10-09",
+        "author_url": "https://x.com/cgnot996",
+        "source": "x",
+        "lang": "zh",
+        "added": "2026-10-18",
+        "checked_at": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "已读原帖长文和10张图，并对照官方用量、模型、设置与Routine说明；流程和节省比例未实测。未核实：X搜索免额度、免费接口限额、云电脑持续运行或耗尽后接管、封顶对在途任务的影响。第三方技能仅部分读取，部分外链失败。",
+        "verification_note_en": "Article and ten images read; official billing, models, settings and routines checked. No workflow or savings tested. Quota-free X search, free API limits, cloud uptime/access after exhaustion, and caps on in-flight work remain unverified. Skills partly read; some links failed.",
+        "apps": [
+          "Grok Build",
+          "Cursor",
+          "X",
+          "OpenRouter",
+          "ModelScope"
+        ],
+        "tags": [
+          "usage",
+          "routines",
+          "context",
+          "cli",
+          "webhook"
+        ],
+        "title_en": "Grok Bot usage guide: routine cadence, context handoffs and tool offloading",
+        "author_en": "Tiezhu AGI (@cgnot996)",
+        "platform": "x",
+        "collection_batch": "2026-10-18-platform-release-approved"
+      }
+    }
+  ]
+}

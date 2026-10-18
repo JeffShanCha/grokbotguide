@@ -16,8 +16,8 @@
   checked_at: 2026-10-18
   status: alive
   evidence: author-reported
-  verification_note_zh: 铁柱读取原帖长文和10张图；Codex 补读官方用量、模型、设置与Routine说明并纠正历史计费入口。第三方技能只读开头，部分外链失败；未运行流程或复现节省比例。
-  verification_note_en: The collection Bot read the article and all ten images. Codex checked current official billing, models, settings and routines. Third-party skills were partly read and some links failed. No savings or workflow reproduced.
+  verification_note_zh: 已读原帖长文和10张图，并对照官方用量、模型、设置与Routine说明；流程和节省比例未实测。未核实：X搜索免额度、免费接口限额、云电脑持续运行或耗尽后接管、封顶对在途任务的影响。第三方技能仅部分读取，部分外链失败。
+  verification_note_en: Article and ten images read; official billing, models, settings and routines checked. No workflow or savings tested. Quota-free X search, free API limits, cloud uptime/access after exhaustion, and caps on in-flight work remain unverified. Skills partly read; some links failed.
   apps:
     - Grok Build
     - Cursor
@@ -33,7 +33,7 @@
   title_en: "Grok Bot usage guide: routine cadence, context handoffs and tool offloading"
   author_en: Tiezhu AGI (@cgnot996)
   platform: x
-  collection_batch: 2026-10-18-platform-release-approved
+  collection_batch: 2026-10-18-cgnot996-verification-clarified
 - added: 2026-10-16
   checked_at: 2026-10-16
   status: alive

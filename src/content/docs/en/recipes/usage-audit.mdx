@@ -34,6 +34,10 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 This guide reorganizes [Tiezhu AGI (@cgnot996)'s twelve usage tips](https://x.com/cgnot996/status/2108504325609984233) into an audit. The collection Bot read the article and its ten images; we also checked current official billing, model, settings and routine documentation. We have not executed this workflow or measured savings.
 
+:::note[Verification status]
+The article, images and related official documentation have been reviewed. **This workflow and its savings have not been tested by this site.** Free external APIs, quota-free X search, continuous cloud uptime and access after usage is exhausted remain unverified.
+:::
+
 ## What you get
 
 A task inventory, one proposed adjustment for your approval, and a useful handoff. An hourly check producing only one useful weekly brief is an example worth investigating, not a measured result from this site.
@@ -99,9 +103,16 @@ Observe a comparable amount of work after changing one variable. Record quality,
 
 ## Keep these options separate
 
-CLI offloading needs another tool, authorization and potentially another allowance. A webhook is supported, but a reliable change detector needs its own hosting and tests. Neither is a guaranteed saving.
+| Direction from the article | Verification status | How to treat it |
+| --- | --- | --- |
+| Offload multimodal or coding work to a CLI | Savings not tested | Another tool, authorization and potentially another allowance are required |
+| Detect changes with a script, then trigger a webhook | Webhook support documented; runtime conditions untested | Verify hosting, deduplication and retries; continuous cloud uptime is not guaranteed |
+| Save X search results to a file | Organization method only; quota-free use and fixed limits unverified | Keep results and sources without promising an allowance exemption |
+| OpenRouter free models | Free variants documented; execution chain not tested | Check credentials, model capabilities, fallbacks and actual charges before use |
+| ModelScope image generation | Documentation, credits and compatibility unverified | Keep it outside this workflow |
+| Access the cloud computer after usage is exhausted | No official guarantee found | Save a checkpoint before exhaustion rather than relying on later access |
 
-OpenRouter documents free model variants and rate limits; credentials, fallback behavior and actual charges still need checking. ModelScope documentation and credit rules were not verified. Do not install the linked skills as part of this audit. Claims of quota-free X search and guaranteed cloud access after usage is exhausted remain unverified.
+Do not install the linked skills as part of this audit. A spending cap is also not a task stop button: **we have not verified whether it interrupts work already in progress**. Check your account's billing rules and save progress early.
 
 ## Correct three common assumptions
 
