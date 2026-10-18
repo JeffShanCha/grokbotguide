@@ -44,8 +44,8 @@
   evidence: author-reported
   categories:
     - recipes
-  summary_zh: 先在影子模式比较Jev分流与人工标签。视频补清作者八样本评估及结果文件，与原配图重复；不是新实验或本站实测，脚本与完整用例未取得。
-  summary_en: Compare Jev triage with human labels in shadow mode. The video shows the same eight-case evaluation and result file as the images, not a new experiment or site test. Source and cases unavailable.
+  summary_zh: 先在影子模式对照Jev分流与人工标签。原脚本、完整八样本与标准答案经公开来源追查仍未取得；已有指标是同一次作者演示，不能当成可复现结果或本站实测。
+  summary_en: Review Jev triage in shadow mode. Public-source follow-up did not obtain the original script, complete eight cases or labels. Metrics remain one author demonstration, not a reproduced site result.
   apps:
     - Grok Bot
     - Jev
@@ -55,10 +55,10 @@
     - source-review
     - confidence-triage-shadow
   checked_at: 2026-10-18
-  verification_note_zh: 正文与7张图片已读；39.60秒无音轨视频按约1fps抽帧补读，非连续观看。00:00–00:07.3显示启动脚本、8条用例及指标，之后画面经10fps帧差检测为静止。timeline_last_run.json、235ms均为作者同一次演示，与配图重复。表格右侧有截断，源码和完整用例集未取得，未运行或验证指标。
-  verification_note_en: Body and seven images read. The 39.60s video has no audio track and received sampled review at about 1fps, not continuous viewing. 00:00–00:07.3 shows a script and eight-case metrics; 10fps frame differences found a static remainder. timeline_last_run.json and 235ms repeat the same author demonstration from the images. The table is cropped. Source and full cases unavailable; no execution or metric verification.
+  verification_note_zh: 前轮正文、7图与39.60秒无音轨视频范围不变。本轮追查原帖、可见作者链接与公开代码；独立GitHub检索timeline_gate.py+jev及jev-grokbot-gate无结果，不能据此断言私有代码不存在。未用相似SDK或本站脚本替代原作；原脚本、完整用例、标准答案和阈值实现仍未取得，未运行。
+  verification_note_en: Prior body, seven images and 39.60s silent-track-free sampled video scope retained. Follow-up checked the post, visible author links and public code; independent timeline_gate.py+jev and jev-grokbot-gate searches returned no matches, not proof private code does not exist. No similar SDK or site script substituted. Original script, full cases, labels and threshold implementation unavailable; no execution.
   platform: x
-  collection_batch: 2026-10-18-langeai-videos-approved
+  collection_batch: 2026-10-18-langeai-source-audio-approved
 - id: x-0xlangeai-feature-evidence-review
   url: https://x.com/0xlangeai/status/2097839261039153381
   title: Grok Bot × 功能验收：让编码任务交出可回查的完成证据
@@ -106,10 +106,10 @@
   categories:
     - resources
     - start
-  summary_zh: 合集24篇正文、245张图片与79项首轮方法；6段视频已抽帧补读，补出2项视频方法和2处手机入口细节。分别标明音频、读取与未实测范围。
-  summary_en: "24 bodies, 245 images and 79 initial methods, plus sampled reviews of six videos: two video methods and two phone-entry details. Audio limits and untested workflows are explicit."
-  verification_note_zh: 24篇正文与245张图片沿用首轮记录；6个视频已按约1fps抽帧补读，含首尾和关键画面放大，最大已看帧间隔1.23秒，非连续观看。5条音轨作全程自动识别及音量分析，未人工听辨；飞书音频仍未确认。视频方法2项，其中1项扩展已有方法；另外2条为手机细节，1条模型背景，1条重复评估证据。全部真实流程未实测。
-  verification_note_en: Retains 24 bodies and 245 images. Six videos received sampled visual review at about 1fps, including both ends and enlarged key frames, with a 1.23s maximum viewed-frame gap; no continuous viewing. Five full audio tracks were analyzed automatically, without human listening; Feishu audio remains uncertain. Two video methods include one existing-method extension, plus two phone details, one model background and one repeated evaluation. Workflows remain untested.
+  summary_zh: 24篇资料与六段视频的改写入口。已补两个作者仓库的固定版本源码核对、监控公式差异与边界算例；Jev原脚本和飞书音频仍有明确缺口。真实流程未实测。
+  summary_en: 24-source and six-video map, now with two pinned author repositories, source checks and monitoring boundary cases. Original Jev code and Feishu audio remain unresolved. Workflows untested.
+  verification_note_zh: 延续24篇正文、245张图和6段抽帧视频。补读 xaiwind/x-article-publisher@6cd2f1b 与 aehyok/x-viral-monitor@8ad0a75；关键逻辑静态核对，监控算例仅独立计算。Jev原脚本/完整样本、飞书SOUL/桥接代码未取得，音轨再次自动分析仍未确认。没有安装或执行第三方流程。
+  verification_note_en: Retains 24 bodies, 245 images and six sampled video reviews. Pinned xaiwind/x-article-publisher@6cd2f1b and aehyok/x-viral-monitor@8ad0a75 were reviewed statically; monitoring fixtures validate arithmetic only. Original Jev code/cases and Feishu role/bridge files unavailable; audio remains uncertain after automatic reanalysis. No third-party workflow run.
   apps:
     - Grok Bot
   tags:
@@ -117,7 +117,7 @@
     - langeai-reading
     - source-review
   platform: x
-  collection_batch: 2026-10-18-langeai-videos-approved
+  collection_batch: 2026-10-18-langeai-source-audio-approved
 - id: x-0xlangeai-tailscale-ssh-check
   url: https://x.com/0xlangeai/status/2093192039051489662
   title: 远程连接检查：用 Tailscale 访问 Grok Bot 云电脑
@@ -193,8 +193,8 @@
   evidence: author-reported
   categories:
     - recipes
-  summary_zh: 区分浏览总量与小时增量，先验证监控与通知去重。补读视频实际是Ling模型网页演示，没有Grok Bot监控安装步骤；安装指令与免费期仍未核实，流程未实测。
-  summary_en: Validate snapshots, hourly growth and alert deduplication. The video is a Ling browser demo, with no Bot monitoring setup. Installation instructions and free API terms remain unverified. Untested.
+  summary_zh: 已补作者公开Skill、Routine与失败归档，核对严格阈值和实际间隔；首次观测两套公式有差异。仓库没有独立采集脚本，网页模型演示也不证明监控跑通。未实测。
+  summary_en: "Author Skill, routine and failure archive reviewed: strict thresholds, elapsed intervals and differing first-sighting formulas. No standalone collector; the model demo does not prove a running monitor. Untested."
   apps:
     - Grok Bot
     - X
@@ -204,10 +204,10 @@
     - source-review
     - x-signal-monitor
   checked_at: 2026-10-18
-  verification_note_zh: 正文与3张图片已读；20.37秒视频按约1fps抽帧补读、关键画面放大，非连续观看。00:00–00:20是百灵网页端生成3D腕表，不是Grok Bot监控或OpenRouter调用，没有新增Bot方法。全程音量分析接近底噪，未人工听辨。监控安装指令仍未取得，不能据该片证明API免费或推送成功；未运行模型、采集或提交。
-  verification_note_en: Body and three images read; the 20.37s video was sampled at about 1fps with enlarged frames, not continuously viewed. 00:00–00:20 shows a 3D watch in the Bailing web interface, not Bot monitoring or an OpenRouter call; no new Bot method. Full-track audio analysis found near-noise-floor sound; no human listening. Monitoring installation instructions remain unavailable. This does not verify free APIs or successful pushes. No model, collection or commit run.
+  verification_note_zh: 固定作者仓库8ad0a75，完整读Skill、Routine，核对状态、0909读取失败归档和账号精简提交。首次观测分母下限为1分钟/1小时两种，独立算例为12000/h对1000/h；等于5000不达标。旧12账号归档与新2账号配置按历史解释。无独立采集脚本、许可证声明或实时复现；免费API和外部模型代提交未核实。
+  verification_note_en: "Pinned author repository 8ad0a75: full Skill/routine plus state, 0909 read-failure archive and account-reduction commit reviewed. First-sighting floors differ by one minute/one hour, producing 12000/h versus 1000/h in a synthetic check; exactly 5000 does not qualify. Historical twelve-account archives are distinct from the new two-account configuration. No standalone collector, license declaration or live reproduction; free APIs and delegated commits unverified."
   platform: x
-  collection_batch: 2026-10-18-langeai-videos-approved
+  collection_batch: 2026-10-18-langeai-source-audio-approved
 - id: x-cgnot996-bot-backup-restore
   url: https://x.com/cgnot996/status/2098222795847315967
   title: Bot 备份与恢复演练：先验证可导出内容，再保存快照
@@ -553,8 +553,8 @@
   evidence: author-reported
   categories:
     - recipes
-  summary_zh: 在飞书群通过总管串起情报、深挖与内容官，交A/B两版待审稿，把选稿和发到X的明确确认分开。已补读视频画面，音轨内容未确认，流程未实测。
-  summary_en: A Feishu coordinator routes research and writing into A/B drafts, with version selection separate from X-post confirmation. Video visuals reviewed; audio uncertain. Untested.
+  summary_zh: 通过总管串起情报、深挖与A/B待审稿，选稿和发X确认分开。音轨复核仍不确定，不新增音频步骤；完整角色SOUL与桥接源码未取得。现有步骤依据正文与画面，未实测。
+  summary_en: Route research and A/B drafts through a Feishu coordinator, separating selection from X confirmation. Audio remains uncertain after reanalysis; role SOUL and bridge source unavailable. Visual/text steps untested.
   apps:
     - Grok Bot
     - Feishu
@@ -564,10 +564,10 @@
     - source-review
     - feishu-content-desk
   checked_at: 2026-10-18
-  verification_note_zh: 正文与22张图片已读；13.84秒视频按约1fps抽帧补读，非连续观看。00:00–00:12显示总管→深挖→A/B稿，00:12–00:13.8显示选稿与另行发X确认，没有发布成功回执。完整音轨自动识别无可信语音，是否配乐未人工确认；本节只用画面证据。各岗提示词仍未取得，未复现飞书或X操作。
-  verification_note_en: Body and 22 images read; the 13.84s video received sampled visual review at about 1fps, without continuous viewing. 00:00–00:12 shows coordinator, investigation and A/B drafts; 00:12–00:13.8 separates selection from X confirmation, with no completed post shown. Full-track ASR yielded no reliable speech; music could not be confirmed by human listening. Visual evidence only. Role prompts unavailable; no Feishu/X reproduction.
+  verification_note_zh: 正文22图与13.84秒抽帧视频范围不变。音轨再次全段自动识别和音量/静音分析，未人工听辨，不能确认纯配乐或排除人声；未采用Whisper幻觉文字，不提取音频新步骤。各岗完整SOUL与桥接程序未取得，文件路径不当作源码。A/B选择不等于发X完成；未复现。
+  verification_note_en: Retains body, 22 images and the 13.84s sampled video scope. Full-track automatic recognition and loudness/silence analysis were repeated without human listening; music only is unconfirmed and speech cannot be excluded. ASR hallucinations were rejected and no audio-derived steps added. Full role SOUL and bridge code unavailable; visible paths are not source contents. A/B choice is not completed X publication. Untested.
   platform: x
-  collection_batch: 2026-10-18-langeai-videos-approved
+  collection_batch: 2026-10-18-langeai-source-audio-approved
 - id: x-maiyangai-conference-notes-workflow
   url: https://x.com/MaiYangAI/status/2090919833366040919
   title: Grok Bot × 参会整理：从一份笔记到稳定的会后交付
@@ -641,8 +641,8 @@
   evidence: author-reported
   categories:
     - bots
-  summary_zh: 先定义团队成果与角色交接。视频补充发布统筹将本地 Markdown 整理成 X 长文草稿的过程，含本人登录、图片缺失与草稿验收；未实测。
-  summary_en: Define team outputs and handoffs. A video adds a Markdown-to-X-Article draft workflow, user sign-in, missing-image reporting and draft acceptance. Untested.
+  summary_zh: 先定义团队成果与交接。已补作者发布工具源码：Markdown到X草稿、图片解析、独立浏览器会话与逐字段回执验收；ok不代表图片齐全。固定版本静态核对，未实测。
+  summary_en: "Plan outputs and handoffs, then inspect the author publisher source: Markdown drafts, image paths, browser profile and field-level receipts. ok does not prove complete images. Static review; untested."
   apps:
     - Grok Bot
   tags:
@@ -650,10 +650,10 @@
     - source-review
     - team-blueprint
   checked_at: 2026-10-18
-  verification_note_zh: 正文与11张图片已读；59秒视频按约1fps抽帧补读并放大关键画面，非连续观看。00:14–00:18出现本机命令授权，00:25–00:43为本人登录，00:43–00:58回报草稿与8/10张图片。配乐判断来自全程自动识别，未人工听辨。技能仓库、两张失败图片处理及当前X插件限制未独立核实；未安装、登录或复现。
-  verification_note_en: Body and 11 images read. The 59s video was sampled at about 1fps with enlarged key frames, not continuously viewed. It shows command approval at 00:14–00:18, user login at 00:25–00:43 and a draft with 8/10 images at 00:43–00:58. Music-only audio is an automatic full-track result, not human listening. Skill source, failed-image repair and current X connector limits remain unverified. No installation or reproduction.
+  verification_note_zh: 正文、11图与59秒视频沿用前轮读取范围。现已取得作者仓库，固定6cd2f1b，读取Skill、依赖、入口、图片处理和写入关键路径，MIT声明已读。ok可与imgFail并存；草稿URL后还需回读。录屏具体commit与两张失败图片修复未证实，当前页面兼容性未实测。
+  verification_note_en: "Retains body, 11 images and the prior 59s sampled video scope. Author source pinned to 6cd2f1b: Skill, dependencies, entry point, image handling and key write paths reviewed, with MIT declaration read. ok may coexist with imgFail; a draft URL needs readback. Recording commit and its two repairs unverified; current interface not tested."
   platform: x
-  collection_batch: 2026-10-18-langeai-videos-approved
+  collection_batch: 2026-10-18-langeai-source-audio-approved
 - id: x-xilo2991-team-workflow-interview
   url: https://x.com/xilo2991/status/2109613437215293905
   title: Grok Bot × 团队需求访谈：先约定三处交接，再建角色

@@ -22,6 +22,12 @@ sources:
     url: https://cursor.com/help/grok-bot/connect-plugins
   - title: "官方核对：security"
     url: https://cursor.com/docs/grok-bot/security
+  - title: "作者发布工具源码：固定版本"
+    url: https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js
+  - title: "发布工具许可证"
+    url: https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/LICENSE
+  - title: "X 官方 Articles 说明"
+    url: https://help.x.com/en/using-x/articles
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
@@ -111,7 +117,7 @@ roster.csv：role、input、deliverable、reviewer、trigger。起步只设资�
 ### 把这个岗位写成五步交付
 
 1. **交素材清单。** 给出 Markdown 的确切路径、标题、封面和应有图片清单，约定本轮只生成草稿。
-2. **核对执行条件。** 原演示使用第三方技能和浏览器自动化；本轮没有取得它的仓库地址或审查脚本，不能仅凭技能名称补造安装命令。已有可信实现时，再核对它将运行的命令、位置和文件范围。
+2. **核对执行条件。** 原演示使用第三方技能和浏览器自动化；现已取得作者仓库并静态核对关键脚本，具体文件、版本和新增验收点见下方源码补充。复现前仍须核对命令、位置、profile 与文件范围。
 3. **检查素材是否齐全。** 文件拷贝失败要报缺项；“已复制 10 张”不能替代编辑器中的上传结果。
 4. **由本人完成登录。** 按电脑接管卡片登录并处理验证，再交还给 Bot；这是[官方接管流程](https://cursor.com/docs/grok-bot/work)，本文不复述画面里的账号或验证码。
 5. **按草稿清单验收。** 回执包含草稿链接、标题、封面、应有与实际图片数、缺图名称和未完成项。像录屏的 8/10，应先补图并重新预览；最终发布另作明确决定。
@@ -130,7 +136,38 @@ roster.csv：role、input、deliverable、reviewer、trigger。起步只设资�
 </CopyTemplate>
 
 :::note[视频核验范围]
-铁柱按约每秒 1 帧检查全时段，含首尾帧，并用 10fps 帧差辅助定位、放大关键画面；已看帧最大间隔 1 秒，未连续播放观看。部分转场模糊、气泡句尾不完整。音轨经全程自动识别仅报告配乐，未人工听辨。上述草稿结果为作者演示，本站未安装技能或复现；技能仓库与两张失败图片的处理仍未知。视频中关于 X 插件能力的说法也未独立核实为当前通用限制。
+铁柱按约每秒 1 帧检查全时段，含首尾帧，并用 10fps 帧差辅助定位、放大关键画面；已看帧最大间隔 1 秒，未连续播放观看。部分转场模糊、气泡句尾不完整。音轨经全程自动识别仅报告配乐，未人工听辨。上述草稿结果为作者演示，本站未安装技能或复现；技能仓库已补读；录屏两张失败图片的具体修复仍未证实。视频中关于 X 插件能力的说法也未独立核实为当前通用限制。
+:::
+
+## 源码补充：把发布统筹的草稿回执核对到文件
+
+已取得作者的 [xaiwind/x-article-publisher](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/README.md)，固定在 `6cd2f1b`。仓库账号关联的 X 用户为 @xaiwind，系统 Chrome、`playwright-core`、跨助手技能目录与草稿输出均和录屏相符；**没有证据证明录屏运行的恰好是这个 commit**。`LICENSE` 声明 MIT，并保留上游传承说明。
+
+### 按源码落实五步
+
+1. **固定工具与输入。** 记录仓库、commit、Markdown 路径、标题和配图清单。入口是 [auto-publish.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js#L22-L51)，依赖见 [package.json](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/package.json)。账号还须实际具备文章编辑入口，资格按 [X 官方说明](https://help.x.com/en/using-x/articles)核对。
+2. **先整理图片路径。** [payload.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/payload.js#L77-L141)优先解析文章目录中的文件，也会查找 Obsidian 附件；这个入口明确拒绝 HTTP 远程图片。macOS 的 PNG/JPEG 达到压缩阈值时才尝试 `sips`，其他平台会跳过，不能承诺所有图片都已压缩。
+3. **明确浏览器会话范围。** 首次用有界面模式由本人登录，后续才考虑 `--headless`；`--profile` 指定独立会话目录。源码会尝试关闭占用同一 profile 的实例并清理锁文件，复现前应确认对应窗口与执行范围，不能将它描述为只读检查。本文没有运行该入口。
+4. **逐项判定回执。** [xpage.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/xpage.js#L725-L854)分别累计 `imgOk`、`imgFail`、`atomicFail`，图片或代码、表格插入失败可能降级为文字。函数末尾仍可能返回 `ok: true`；因此总开关成功不代表正文图片和格式齐全。
+5. **重新打开草稿验收。** [入口的收尾逻辑](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js#L189-L220)会等待自动保存、清理标记并输出草稿 URL；没有独立回读服务端内容的验收步骤。拿到链接后再核对标题、封面、图片顺序、数量、格式降级和残留标记，最后由本人决定发布。
+
+例如一份**合成回执**：`ok=true`，但 `summary.imgOk=8`、`summary.imgFail=2`，应记“草稿部分完成，待补图”，不能记“可直接发布”。这解释了录屏为什么已有链接仍需补图；它不是本站修复了作者那两张图片的证据。
+
+<CopyTemplate id="team-blueprint-source-receipt">
+
+```text
+只核对一份发布统筹回执，先不运行工具。
+工具来源：xaiwind/x-article-publisher，commit 6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4。
+输入应有10张图；合成回执为 ok=true、summary.imgOk=8、summary.imgFail=2。
+检查标题、封面、图片数量/顺序、atomicFail、残留标记和草稿重新打开后的状态。
+把已确认、失败、需要回读和未测试分别列出；单凭ok或URL不放行。
+没有真实草稿时，只交待办清单；不要虚构补图或发布结果。
+```
+
+</CopyTemplate>
+
+:::note[源码核验状态]
+技能说明、依赖、入口、图片解析与页面写入逻辑已作静态核对；只引用文件和关键位置，不搬运源码。未安装该技能、启动它的浏览器、写 X 草稿或验证当前页面兼容性。源码取得已解决，录屏版本、两张失败图片的具体修复及当前 X 插件能力仍未证实。
 :::
 
 ## 来源与适用边界

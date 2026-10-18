@@ -18,6 +18,10 @@ sources:
     url: https://x.com/aehyok/status/2109817788198158347
   - title: "Official reference: routines"
     url: https://cursor.com/help/grok-bot/routines
+  - title: "Author monitoring Skill: pinned revision"
+    url: https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md
+  - title: "Author routine configuration: pinned revision"
+    url: https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
@@ -97,12 +101,52 @@ Propose one next step with a recovery plan and wait for confirmation.
 
 The 20.37-second video needs a different scope from the monitoring article. At 00:00–00:03, the Bailing web interface selects `Ling-3.1-flash` and requests a single-file 3D watch page. At 00:03–00:20, it shows a preview, slider and draggable viewpoint. It does not show Grok Bot installing a monitoring Skill, calling OpenRouter, scanning X or committing to GitHub.
 
-This is background for the model mentioned in the body, with no additional Grok Bot method. One browser-generated example does not establish current API pricing, suitability for code commits or a working monitor. The installation instruction sent to the Bot remains unavailable.
+This is background for the model mentioned in the body, with no additional Grok Bot method. One browser-generated example does not establish current API pricing, suitability for code commits or a working monitor. The related Skill and routine are now reviewed below; the repository has no standalone collector script and no installation was performed.
 
 For the existing fifth acceptance step, request collection logs, threshold calculations, notification receipts and the target commit record separately. Keep missing evidence unresolved rather than substituting this model demo. This guide's 6,000-view hourly change remains a synthetic site exercise.
 
 :::note[Video verification scope]
 The collector sampled approximately one frame per second across the timeline, enlarged the prompt and ending, and used 10fps frame differences as an aid. The largest viewed-frame gap was one second; this was not continuous viewing. The prompt's right edge is cropped. Full-track loudness analysis was near the noise floor, with no recognized speech or music; no human listening check was performed. Neither the model nor the monitoring workflow was run.
+:::
+
+## Source supplement: align rules before testing thresholds and failed runs
+
+The article's [aehyok/x-viral-monitor](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/README.md) is verified at `8ad0a75`. It publishes a readable Skill, routine instructions, state and archives, **without a standalone collector script or installer**. No license declaration was found. The following are documented rules, not a reproduced program.
+
+### Five operational details
+
+1. **Separate scanning and scheduling.** The [Skill inputs](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md#L12-L39) come from the caller: accounts, threshold, lookback, timezone and state path. The [routine](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md#L3-L22) adds an hourly 06:04–23:04 Shanghai window, with 06:04 as a non-alerting baseline. Specify your own parameters and schedule first.
+2. **Use actual snapshot intervals.** For a previously observed post, both files divide the view change by elapsed hours and require strictly more than 5,000. A gain of 6,000 over two hours is 3,000 per hour.
+3. **Choose an explicit first-observation policy.** [SKILL.md lines 59–65](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md#L59-L65) floors post age at one minute; [PROMPT.md lines 18–20](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md#L18-L20) floors it at one hour. A five-minute-old post with 1,000 views becomes 12,000/h or 1,000/h respectively. This site's fixture retains a baseline-only first observation. The source rules are kept distinct and the author's repository was not changed.
+4. **Separate read failures from zero hits.** The [0909 failed archive](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-13/0909.json#L37-L41) records `x_read_unavailable`, zero checked posts and unchanged snapshots. Empty hits do not prove a successful read; retain failed accounts, errors and the last valid observation time.
+5. **Version state, delivery and archives together.** Retain delivered IDs, snapshots and per-run results separately. An uncertain notification is not confirmed delivery. The current commit reduced the list to two accounts; old archives retain their historical twelve. Use the run's own configuration when auditing it. Instructions describe Git storage, without a standalone implementation establishing atomic state, notification and push behavior.
+
+### Synthetic boundary calculations checked
+
+| Synthetic input | Hourly increase | Strictly over 5,000 |
+| --- | --- | --- |
+| 4,000 to 10,000 over one hour | 6,000 | Qualifies |
+| 4,000 to 10,000 over two hours | 3,000 | Does not qualify |
+| 4,000 to 9,000 over one hour | 5,000 | Does not qualify |
+
+These cases and the first-observation disagreement were checked with independent arithmetic, without executing third-party code. The existing `pending/sent/unknown` states are a site acceptance design, not a claim of transactional delivery in the author's implementation.
+
+<CopyTemplate id="x-signal-monitor-source-boundaries">
+
+```text
+Perform an offline rule review: no X reads, routines, notifications or Git submissions.
+Pin aehyok/x-viral-monitor to 8ad0a750c4f794036c4e946aca655eadf55e100d.
+Use snapshot change / actual elapsed hours, strictly greater than 5000; first sightings establish a baseline only.
+Check 4000→10000 over one hour, 4000→10000 over two hours, and 4000→9000 over one hour.
+Separately report the Skill/routine disagreement on first observations; do not silently choose one.
+Distinguish baseline, success_no_hits, read_failed, notification_unknown and archive_failed.
+Mark actions without real receipts as not executed. Empty new_hits does not establish a successful read.
+```
+
+</CopyTemplate>
+
+:::note[Source verification status]
+The Skill, routine, pinned state, failure archive and account-reduction commit were reviewed statically. Fixtures validate arithmetic only. No X call, schedule, notification, external model or author-repository push occurred. Tool names in a source Skill do not guarantee availability on every account. Free API terms and external-model commit delegation remain unverified.
 :::
 
 ## Sources and applicability
@@ -111,7 +155,7 @@ Original article: [@aehyok](https://x.com/aehyok/status/2109817788198158347); pu
 
 Index-to-source mapping: strong content match.
 
-The collector reports viewing 3 images and reviewing 1 video(s) through sampled frames, without continuous playback. The alert screenshot separates total views, hourly growth and publication time, with GitHub storage. The complete install instructions and current free-model terms were not obtained.
+The collector reports viewing 3 images and reviewing 1 video(s) through sampled frames, without continuous playback. The alert screenshot separates total views, hourly growth and publication time, with GitHub storage. The public Skill and routine are now reviewed; a standalone collector and verbatim installation message remain unavailable, as do verified free-model terms.
 
 Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
 

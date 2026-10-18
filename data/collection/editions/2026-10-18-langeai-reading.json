@@ -702,5 +702,6 @@
     "Item 15 is an official access checklist replacement, not a reproduction of the embedded registration method."
   ],
   "video_supplement": "2026-10-18-langeai-video-supplement.json",
-  "video_method_count": 2
+  "video_method_count": 2,
+  "source_audio_followup": "2026-10-18-langeai-source-audio.json"
 }

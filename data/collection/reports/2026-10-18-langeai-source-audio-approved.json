@@ -1,0 +1,15 @@
+{
+  "batch_id": "2026-10-18-langeai-source-audio-approved",
+  "date": "2026-10-18",
+  "added": [],
+  "updated": [
+    "x-0xlangeai-must-read-index",
+    "x-xaiwind-team-blueprint",
+    "x-aehyok-x-signal-monitor",
+    "x-0xlangeai-confidence-triage-shadow",
+    "x-liyue-ai-feishu-content-desk"
+  ],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}

@@ -22,6 +22,12 @@ sources:
     url: https://cursor.com/help/grok-bot/connect-plugins
   - title: "Official reference: security"
     url: https://cursor.com/docs/grok-bot/security
+  - title: "Author publishing source: pinned revision"
+    url: https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js
+  - title: "Publisher license declaration"
+    url: https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/LICENSE
+  - title: "Official X Articles guidance"
+    url: https://help.x.com/en/using-x/articles
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
@@ -111,7 +117,7 @@ The 59-second recording shows a publishing coordinator preparing an X Article fr
 ### Turn the role into five delivery steps
 
 1. **List the inputs.** Supply an exact Markdown path, title, cover and expected image list, with draft creation as this run's limit.
-2. **Check execution conditions.** The recording uses a third-party skill and browser automation. Its repository and scripts were not obtained or reviewed, so no installation command can be reconstructed from the name. With a trusted implementation, inspect commands, execution location and affected files first.
+2. **Check execution conditions.** The recording uses a third-party skill and browser automation. The author repository is now available and key scripts were reviewed statically, as detailed below. Inspect commands, execution location, profile and affected files before any reproduction.
 3. **Check asset completeness.** Report copy failures individually. Copying ten images does not establish that all ten reached the editor.
 4. **Let the user handle sign-in.** Use the computer takeover card for login and verification, then return control, following the [official takeover guidance](https://cursor.com/docs/grok-bot/work). Account details and verification codes are omitted.
 5. **Review the draft receipt.** Include the draft link, title, cover, expected and actual image counts, missing assets and unfinished work. An 8/10 result needs repairs and another preview before a separate publication decision.
@@ -131,7 +137,39 @@ Do not run commands, sign in, upload assets or publish in this planning run.
 </CopyTemplate>
 
 :::note[Video verification scope]
-The collector checked approximately one frame per second across the timeline, including both ends, used 10fps frame differences to locate changes, and enlarged key frames. The largest viewed-frame gap was one second; this was not continuous playback. Some transitions and cropped message endings remain unreadable. Full-track automatic recognition reported music only; no human listening check was performed. Draft results are the author's demonstration, not a site reproduction. The skill repository and repair of two failed images remain unavailable. The recording's claim about X plugin limitations was not independently verified as a current general rule.
+The collector checked approximately one frame per second across the timeline, including both ends, used 10fps frame differences to locate changes, and enlarged key frames. The largest viewed-frame gap was one second; this was not continuous playback. Some transitions and cropped message endings remain unreadable. Full-track automatic recognition reported music only; no human listening check was performed. Draft results are the author's demonstration, not a site reproduction. The skill source is now available; repair of the two images in the recording remains unverified. The recording's claim about X plugin limitations was not independently verified as a current general rule.
+:::
+
+## Source supplement: audit the publishing receipt against actual files
+
+The author's [xaiwind/x-article-publisher](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/README.md) is now available, pinned to `6cd2f1b`. The account links to @xaiwind, and its system Chrome, `playwright-core`, skill directory and draft output match the recording. **The commit actually used in the recording is unverified.** Its `LICENSE` declares MIT and retains upstream attribution.
+
+### Apply five source-backed steps
+
+1. **Pin the tool and inputs.** Record repository, commit, Markdown path, title and assets. The entry point is [auto-publish.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js#L22-L51), with dependencies in [package.json](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/package.json). Verify actual Articles access against [X's official guidance](https://help.x.com/en/using-x/articles).
+2. **Resolve image paths first.** [payload.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/payload.js#L77-L141) checks local paths and Obsidian attachments; this entry point rejects HTTP remote images. Eligible PNG/JPEG files may use macOS `sips` compression; other platforms skip it. Do not assume every asset was compressed.
+3. **Define the browser-session scope.** The user signs in during a headed first run before considering `--headless`. `--profile` selects a separate session directory. The code may close an instance sharing that profile and clear lock files, so identify affected windows and execution scope first. This entry point has not been run here.
+4. **Inspect individual receipt fields.** [xpage.js](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/xpage.js#L725-L854) counts `imgOk`, `imgFail` and `atomicFail`; failed images, code or tables may degrade to text. The function can still return `ok: true`, which does not establish complete images or formatting.
+5. **Reopen the draft for acceptance.** The [entry-point ending](https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js#L189-L220) waits for autosave, cleans markers and returns a draft URL, without a separate server-content readback. Reopen it and check title, cover, image order/count, format degradation and leftover markers before a human publication decision.
+
+A **synthetic receipt** with `ok=true`, `summary.imgOk=8` and `summary.imgFail=2` means a partial draft needing repairs. This explains the recording's missing-image state; it does not prove this site repaired those two images.
+
+<CopyTemplate id="team-blueprint-source-receipt">
+
+```text
+Review a publishing receipt without running the tool.
+Source: xaiwind/x-article-publisher at 6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4.
+Ten images are expected; the synthetic receipt has ok=true, summary.imgOk=8 and summary.imgFail=2.
+Check title, cover, image order/count, atomicFail, leftover markers and a reopened draft.
+Separate confirmed facts, failures, readback needed and untested items.
+Do not approve from ok or a URL alone. If no real draft exists, return a checklist.
+Do not invent image repairs or publication results.
+```
+
+</CopyTemplate>
+
+:::note[Source verification status]
+The skill description, dependencies, entry point, image handling and relevant page-write logic were reviewed statically. Source files and locations are linked rather than republished. No skill installation, browser launch, X draft write or current-interface reproduction occurred. Source availability is resolved; the recording's exact version, its two image repairs and current X connector capabilities remain unverified.
 :::
 
 ## Sources and applicability

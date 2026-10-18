@@ -1,0 +1,215 @@
+{
+  "id": "2026-10-18-langeai-source-audio",
+  "prepared_at": "2026-10-18",
+  "finalized": true,
+  "entry_url": "https://x.com/0xlangeai/status/2111396742264742034",
+  "evidence_basis": "Pinned primary repositories independently read by Codex, source arithmetic checks, and the collector native final summary. The downloadable raw collector file is not the sole basis for any published repository claim.",
+  "collector_delivery": {
+    "filename": "langeai-source-audio-followup-2026-10-18.json",
+    "downloaded": false,
+    "read_scope": "Native final summary observed; raw downloadable JSON not locally saved. Pinned primary files were read independently."
+  },
+  "repository_count": 2,
+  "targets": [
+    {
+      "article_id": "a08",
+      "resource_id": "x-xaiwind-team-blueprint",
+      "path": "bots/team-blueprint",
+      "source_url": "https://x.com/xaiwind/status/2100027951618416963",
+      "status": "author_repository_static_review",
+      "repository": {
+        "url": "https://github.com/xaiwind/x-article-publisher",
+        "commit": "6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4",
+        "recording_commit_verified": false,
+        "license": "MIT declaration read in LICENSE; upstream attribution retained",
+        "github_spdx_result": "NOASSERTION"
+      },
+      "files": [
+        {
+          "path": "SKILL.md",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/SKILL.md",
+          "scope": "full skill description, treated as source material"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/package.json",
+          "scope": "full manifest"
+        },
+        {
+          "path": "auto-publish.js",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/auto-publish.js",
+          "scope": "full entry point"
+        },
+        {
+          "path": "payload.js",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/payload.js",
+          "scope": "full input/image builder"
+        },
+        {
+          "path": "xpage.js",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/xpage.js",
+          "scope": "title/cover GraphQL helpers and page-write, image, fallback, cleanup and return paths"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/xaiwind/x-article-publisher/blob/6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4/LICENSE",
+          "scope": "full license declaration"
+        }
+      ],
+      "findings": [
+        "Local Markdown entry and persistent system-Chrome profile with headed first sign-in.",
+        "HTTP remote images are rejected by this entry point; macOS compression has platform/format/size guards.",
+        "A successful outer result may contain imgFail or atomicFail; a draft URL is not complete acceptance.",
+        "The entry point waits for autosave and outputs a URL, without an independent server-content readback."
+      ],
+      "remaining": [
+        "Exact recording commit unverified.",
+        "Actual repair of the two failed recording images unavailable.",
+        "Current live X interface compatibility and connector limitations untested."
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a20",
+      "resource_id": "x-aehyok-x-signal-monitor",
+      "path": "recipes/x-signal-monitor",
+      "source_url": "https://x.com/aehyok/status/2109817788198158347",
+      "status": "skill_and_routine_static_review",
+      "repository": {
+        "url": "https://github.com/aehyok/x-viral-monitor",
+        "commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+        "license": "No license declaration found in the repository tree",
+        "standalone_collector_script": false
+      },
+      "files": [
+        {
+          "path": "skill/SKILL.md",
+          "url": "https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md",
+          "scope": "full readable scan recipe"
+        },
+        {
+          "path": "routine/PROMPT.md",
+          "url": "https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md",
+          "scope": "full readable routine instructions"
+        },
+        {
+          "path": "data/state/state.json",
+          "url": "https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/state/state.json",
+          "scope": "schema, checked_at and account count; no copied post bodies"
+        },
+        {
+          "path": "data/hourly/2026-10-13/0909.json",
+          "url": "https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-13/0909.json",
+          "scope": "full failure status record"
+        },
+        {
+          "path": "account reduction commit",
+          "url": "https://github.com/aehyok/x-viral-monitor/commit/8ad0a750c4f794036c4e946aca655eadf55e100d",
+          "scope": "commit metadata and account changes"
+        }
+      ],
+      "findings": [
+        "Generic Skill separates caller parameters from scheduled routine.",
+        "First-sighting age floors differ: one minute in the Skill versus one hour in the Routine.",
+        "Threshold is strictly greater than 5000; real elapsed interval matters.",
+        "The failed archive records x_read_unavailable rather than a successful zero-hit run.",
+        "The latest account reduction is historical context, not evidence that a twelve-account archive is corrupt."
+      ],
+      "remaining": [
+        "No standalone collector or installer is published in the pinned tree.",
+        "Original chat installation wording unavailable.",
+        "Live tool availability, delivery transaction behavior and external API/free-model terms unverified."
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a24",
+      "resource_id": "x-0xlangeai-confidence-triage-shadow",
+      "path": "recipes/confidence-triage-shadow",
+      "source_url": "https://x.com/0xlangeai/status/2101555600618602625",
+      "status": "original_script_and_cases_not_obtained",
+      "files": [],
+      "checks": [
+        "Collector reports checking the post, visible author links and public repositories.",
+        "Independent GitHub code search: filename:timeline_gate.py jev returned no results.",
+        "Independent GitHub code search: exact jev-grokbot-gate returned no results."
+      ],
+      "remaining": [
+        "Original timeline_gate.py, full eight-case dataset and expected labels not obtained.",
+        "Similar SDKs or sample repositories were not substituted for the original."
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a10",
+      "resource_id": "x-liyue-ai-feishu-content-desk",
+      "path": "recipes/feishu-content-desk",
+      "source_url": "https://x.com/liyue_ai/status/2109203944799141922",
+      "media_key": "13_2109198914998169600",
+      "status": "audio_unconfirmed_role_sources_not_obtained",
+      "files": [],
+      "audio": {
+        "full_track_automatic_reanalysis": true,
+        "human_listening": false,
+        "speech_or_music_confirmed": false,
+        "asr_hallucination_rejected": true,
+        "new_audio_derived_steps": 0,
+        "evidence_basis": "collector native final summary observed on 2026-10-18; no human listening claim"
+      },
+      "remaining": [
+        "Audio cannot yet be reliably classified as intelligible speech or music only.",
+        "Complete role SOUL.md files and bridge program/versioned source link not obtained."
+      ],
+      "execution_status": "not_tested"
+    }
+  ],
+  "synthetic_check": {
+    "scope": "Independent synthetic arithmetic only; no third-party code, X reads, notifications, routines or Git pushes executed.",
+    "source_commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+    "threshold": 5000,
+    "rows": [
+      {
+        "name": "one_hour_growth",
+        "before": 4000,
+        "after": 10000,
+        "hours": 1,
+        "expected_rate": 6000,
+        "expected_hit": true,
+        "computed_rate": 6000
+      },
+      {
+        "name": "two_hour_gap",
+        "before": 4000,
+        "after": 10000,
+        "hours": 2,
+        "expected_rate": 3000,
+        "expected_hit": false,
+        "computed_rate": 3000
+      },
+      {
+        "name": "equal_threshold",
+        "before": 4000,
+        "after": 9000,
+        "hours": 1,
+        "expected_rate": 5000,
+        "expected_hit": false,
+        "computed_rate": 5000
+      }
+    ],
+    "first_sighting_conflict": {
+      "views": 1000,
+      "age_minutes": 5,
+      "skill_rate": 12000,
+      "routine_rate": 1000,
+      "skill_hit": true,
+      "routine_hit": false
+    }
+  },
+  "official_check": {
+    "url": "https://help.x.com/en/using-x/articles",
+    "checked_at": "2026-10-18",
+    "scope": "Articles compose access and separate manual publish action"
+  },
+  "publication_scope": "Four existing bilingual guides and the reading/resource map only; no unrelated daily candidates.",
+  "reproduction_status": "No third-party script installed or executed; no X drafts, account authorization, routines, messages or author-repository pushes performed."
+}

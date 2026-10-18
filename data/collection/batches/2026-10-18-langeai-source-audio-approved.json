@@ -1,0 +1,227 @@
+{
+  "id": "2026-10-18-langeai-source-audio-approved",
+  "collected_at": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-18",
+    "user_message": "让铁柱继续把缺失的技能、脚本源码和飞书视频音频补齐，提取新增方法和步骤，核实后补到对应案例里，直接发布。",
+    "import_authorized": true,
+    "publish_authorized": true,
+    "scope_zh": "仅已收录合集的4个源码/音频目标与导航；未取得或不确定项明示，不导入其他定时待审批次。"
+  },
+  "discovery": [
+    "两个作者仓库固定版本静态核对，监控数值例子独立验算。",
+    "Jev原作与飞书角色/桥接源码本轮未取得，音轨复核仍不确定。",
+    "不安装或执行第三方技能脚本，不创建定时任务，不把检索无结果写成原作绝不存在。"
+  ],
+  "candidates": [
+    {
+      "decision": "publish",
+      "update_id": "x-0xlangeai-must-read-index",
+      "relevance": "用户指定的已发布资料源码及音轨后续核对",
+      "reason": "用户直接授权核实后补入并发布；只更新同一原帖和对应站内内容，未知项保持明示。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-0xlangeai-must-read-index",
+        "url": "https://x.com/0xlangeai/status/2111396742264742034",
+        "title": "24 篇 Grok Bot 资料深读：案例、教程与核验地图",
+        "title_en": "24 Grok Bot sources: workflow guides and verification map",
+        "author": "蓝哥AI（@0xlangeai）",
+        "author_en": "Lange AI (@0xlangeai)",
+        "author_url": "https://x.com/0xlangeai",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-17",
+        "added": "2026-10-18",
+        "checked_at": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "categories": [
+          "resources",
+          "start"
+        ],
+        "summary_zh": "24篇资料与六段视频的改写入口。已补两个作者仓库的固定版本源码核对、监控公式差异与边界算例；Jev原脚本和飞书音频仍有明确缺口。真实流程未实测。",
+        "summary_en": "24-source and six-video map, now with two pinned author repositories, source checks and monitoring boundary cases. Original Jev code and Feishu audio remain unresolved. Workflows untested.",
+        "verification_note_zh": "延续24篇正文、245张图和6段抽帧视频。补读 xaiwind/x-article-publisher@6cd2f1b 与 aehyok/x-viral-monitor@8ad0a75；关键逻辑静态核对，监控算例仅独立计算。Jev原脚本/完整样本、飞书SOUL/桥接代码未取得，音轨再次自动分析仍未确认。没有安装或执行第三方流程。",
+        "verification_note_en": "Retains 24 bodies, 245 images and six sampled video reviews. Pinned xaiwind/x-article-publisher@6cd2f1b and aehyok/x-viral-monitor@8ad0a75 were reviewed statically; monitoring fixtures validate arithmetic only. Original Jev code/cases and Feishu role/bridge files unavailable; audio remains uncertain after automatic reanalysis. No third-party workflow run.",
+        "apps": [
+          "Grok Bot"
+        ],
+        "tags": [
+          "reading-list",
+          "langeai-reading",
+          "source-review"
+        ],
+        "platform": "x",
+        "collection_batch": "2026-10-18-langeai-videos-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "update_id": "x-xaiwind-team-blueprint",
+      "relevance": "用户指定的已发布资料源码及音轨后续核对",
+      "reason": "用户直接授权核实后补入并发布；只更新同一原帖和对应站内内容，未知项保持明示。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-xaiwind-team-blueprint",
+        "url": "https://x.com/xaiwind/status/2100027951618416963",
+        "title": "团队规划 Bot：把“一句话建团队”改成可审阅方案",
+        "title_en": "Team planner Bot: turn a one-line request into a reviewable roster",
+        "author": "@xaiwind",
+        "author_en": "@xaiwind",
+        "author_url": "https://x.com/xaiwind",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-16",
+        "added": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "categories": [
+          "bots"
+        ],
+        "summary_zh": "先定义团队成果与交接。已补作者发布工具源码：Markdown到X草稿、图片解析、独立浏览器会话与逐字段回执验收；ok不代表图片齐全。固定版本静态核对，未实测。",
+        "summary_en": "Plan outputs and handoffs, then inspect the author publisher source: Markdown drafts, image paths, browser profile and field-level receipts. ok does not prove complete images. Static review; untested.",
+        "apps": [
+          "Grok Bot"
+        ],
+        "tags": [
+          "langeai-reading",
+          "source-review",
+          "team-blueprint"
+        ],
+        "checked_at": "2026-10-18",
+        "verification_note_zh": "正文、11图与59秒视频沿用前轮读取范围。现已取得作者仓库，固定6cd2f1b，读取Skill、依赖、入口、图片处理和写入关键路径，MIT声明已读。ok可与imgFail并存；草稿URL后还需回读。录屏具体commit与两张失败图片修复未证实，当前页面兼容性未实测。",
+        "verification_note_en": "Retains body, 11 images and the prior 59s sampled video scope. Author source pinned to 6cd2f1b: Skill, dependencies, entry point, image handling and key write paths reviewed, with MIT declaration read. ok may coexist with imgFail; a draft URL needs readback. Recording commit and its two repairs unverified; current interface not tested.",
+        "platform": "x",
+        "collection_batch": "2026-10-18-langeai-videos-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "update_id": "x-aehyok-x-signal-monitor",
+      "relevance": "用户指定的已发布资料源码及音轨后续核对",
+      "reason": "用户直接授权核实后补入并发布；只更新同一原帖和对应站内内容，未知项保持明示。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-aehyok-x-signal-monitor",
+        "url": "https://x.com/aehyok/status/2109817788198158347",
+        "title": "Grok Bot × 热帖观察：用快照与去重验证监控规则",
+        "title_en": "Grok Bot × post monitoring: validate signals with snapshots and deduplication",
+        "author": "@aehyok",
+        "author_en": "@aehyok",
+        "author_url": "https://x.com/aehyok",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-13",
+        "added": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "已补作者公开Skill、Routine与失败归档，核对严格阈值和实际间隔；首次观测两套公式有差异。仓库没有独立采集脚本，网页模型演示也不证明监控跑通。未实测。",
+        "summary_en": "Author Skill, routine and failure archive reviewed: strict thresholds, elapsed intervals and differing first-sighting formulas. No standalone collector; the model demo does not prove a running monitor. Untested.",
+        "apps": [
+          "Grok Bot",
+          "X",
+          "GitHub"
+        ],
+        "tags": [
+          "langeai-reading",
+          "source-review",
+          "x-signal-monitor"
+        ],
+        "checked_at": "2026-10-18",
+        "verification_note_zh": "固定作者仓库8ad0a75，完整读Skill、Routine，核对状态、0909读取失败归档和账号精简提交。首次观测分母下限为1分钟/1小时两种，独立算例为12000/h对1000/h；等于5000不达标。旧12账号归档与新2账号配置按历史解释。无独立采集脚本、许可证声明或实时复现；免费API和外部模型代提交未核实。",
+        "verification_note_en": "Pinned author repository 8ad0a75: full Skill/routine plus state, 0909 read-failure archive and account-reduction commit reviewed. First-sighting floors differ by one minute/one hour, producing 12000/h versus 1000/h in a synthetic check; exactly 5000 does not qualify. Historical twelve-account archives are distinct from the new two-account configuration. No standalone collector, license declaration or live reproduction; free APIs and delegated commits unverified.",
+        "platform": "x",
+        "collection_batch": "2026-10-18-langeai-videos-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "update_id": "x-0xlangeai-confidence-triage-shadow",
+      "relevance": "用户指定的已发布资料源码及音轨后续核对",
+      "reason": "用户直接授权核实后补入并发布；只更新同一原帖和对应站内内容，未知项保持明示。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-0xlangeai-confidence-triage-shadow",
+        "url": "https://x.com/0xlangeai/status/2101555600618602625",
+        "title": "Grok Bot × Jev：先在影子模式验证信息分流",
+        "title_en": "Grok Bot × Jev: validate triage in shadow mode first",
+        "author": "@0xlangeai",
+        "author_en": "@0xlangeai",
+        "author_url": "https://x.com/0xlangeai",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-09-20",
+        "added": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "先在影子模式对照Jev分流与人工标签。原脚本、完整八样本与标准答案经公开来源追查仍未取得；已有指标是同一次作者演示，不能当成可复现结果或本站实测。",
+        "summary_en": "Review Jev triage in shadow mode. Public-source follow-up did not obtain the original script, complete eight cases or labels. Metrics remain one author demonstration, not a reproduced site result.",
+        "apps": [
+          "Grok Bot",
+          "Jev",
+          "X"
+        ],
+        "tags": [
+          "langeai-reading",
+          "source-review",
+          "confidence-triage-shadow"
+        ],
+        "checked_at": "2026-10-18",
+        "verification_note_zh": "前轮正文、7图与39.60秒无音轨视频范围不变。本轮追查原帖、可见作者链接与公开代码；独立GitHub检索timeline_gate.py+jev及jev-grokbot-gate无结果，不能据此断言私有代码不存在。未用相似SDK或本站脚本替代原作；原脚本、完整用例、标准答案和阈值实现仍未取得，未运行。",
+        "verification_note_en": "Prior body, seven images and 39.60s silent-track-free sampled video scope retained. Follow-up checked the post, visible author links and public code; independent timeline_gate.py+jev and jev-grokbot-gate searches returned no matches, not proof private code does not exist. No similar SDK or site script substituted. Original script, full cases, labels and threshold implementation unavailable; no execution.",
+        "platform": "x",
+        "collection_batch": "2026-10-18-langeai-videos-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "update_id": "x-liyue-ai-feishu-content-desk",
+      "relevance": "用户指定的已发布资料源码及音轨后续核对",
+      "reason": "用户直接授权核实后补入并发布；只更新同一原帖和对应站内内容，未知项保持明示。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-liyue-ai-feishu-content-desk",
+        "url": "https://x.com/liyue_ai/status/2109203944799141922",
+        "title": "Grok Bot × 飞书：把 X 情报和内容草稿接到同一张交接表",
+        "title_en": "Grok Bot × Feishu: connect X research and drafts through a handoff table",
+        "author": "@liyue_ai",
+        "author_en": "@liyue_ai",
+        "author_url": "https://x.com/liyue_ai",
+        "source": "x",
+        "lang": "zh",
+        "published": "2026-10-11",
+        "added": "2026-10-18",
+        "status": "alive",
+        "evidence": "author-reported",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "通过总管串起情报、深挖与A/B待审稿，选稿和发X确认分开。音轨复核仍不确定，不新增音频步骤；完整角色SOUL与桥接源码未取得。现有步骤依据正文与画面，未实测。",
+        "summary_en": "Route research and A/B drafts through a Feishu coordinator, separating selection from X confirmation. Audio remains uncertain after reanalysis; role SOUL and bridge source unavailable. Visual/text steps untested.",
+        "apps": [
+          "Grok Bot",
+          "Feishu",
+          "X"
+        ],
+        "tags": [
+          "langeai-reading",
+          "source-review",
+          "feishu-content-desk"
+        ],
+        "checked_at": "2026-10-18",
+        "verification_note_zh": "正文22图与13.84秒抽帧视频范围不变。音轨再次全段自动识别和音量/静音分析，未人工听辨，不能确认纯配乐或排除人声；未采用Whisper幻觉文字，不提取音频新步骤。各岗完整SOUL与桥接程序未取得，文件路径不当作源码。A/B选择不等于发X完成；未复现。",
+        "verification_note_en": "Retains body, 22 images and the 13.84s sampled video scope. Full-track automatic recognition and loudness/silence analysis were repeated without human listening; music only is unconfirmed and speech cannot be excluded. ASR hallucinations were rejected and no audio-derived steps added. Full role SOUL and bridge code unavailable; visible paths are not source contents. A/B choice is not completed X publication. Untested.",
+        "platform": "x",
+        "collection_batch": "2026-10-18-langeai-videos-approved"
+      }
+    }
+  ]
+}

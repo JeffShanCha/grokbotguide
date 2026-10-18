@@ -18,6 +18,10 @@ sources:
     url: https://x.com/aehyok/status/2109817788198158347
   - title: "官方核对：routines"
     url: https://cursor.com/help/grok-bot/routines
+  - title: "作者监控 Skill：固定版本"
+    url: https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md
+  - title: "作者 Routine 配置：固定版本"
+    url: https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
@@ -97,12 +101,52 @@ P1 的一小时增量为 6,000，触发一次。只有 10,000 累计值而无前
 
 这段 20.37 秒视频需要与正文的监控教程分开理解。00:00–00:03 可见百灵网页端选择 `Ling-3.1-flash` 并输入一个单文件 3D 腕表页面需求；00:03–00:20 展示网页预览、滑杆和拖动视角。画面没有 Grok Bot 安装监控 Skill、调用 OpenRouter、扫描 X 或提交 GitHub 的过程。
 
-它只能作为正文提及该模型的背景材料，不增加 Grok Bot 方法。模型网页端的一次作品也不能证明当前 API 免费、适合提交代码，或监控已正常运行。发给 Bot 的监控安装指令仍未取得。
+它只能作为正文提及该模型的背景材料，不增加 Grok Bot 方法。模型网页端的一次作品也不能证明当前 API 免费、适合提交代码，或监控已正常运行。相关 Skill 与 Routine 已补读，见下方源码补充；仓库没有独立采集脚本，本文未执行安装。
 
 在现有第 5 步验收中，应分别索取采集日志、阈值计算、通知回执和目标提交记录；缺哪一项就把哪一项保留为未知，不能用这段模型演示替代。本文 6,000 次小时增量的样本仍是本站合成练习。
 
 :::note[视频核验范围]
 铁柱按约每秒 1 帧检查全时段并放大提示词与末帧，已看帧最大间隔 1 秒；另以 10fps 帧差辅助，未连续观看。提示词右侧被裁，句尾未取得。完整音轨的音量分析接近底噪，未识别出语音或配乐；未人工听辨。没有运行该模型或监控流程。
+:::
+
+## 源码补充：先对齐扫描规则，再验收阈值与失败轮次
+
+原文指向的 [aehyok/x-viral-monitor](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/README.md)已核对，固定版本 `8ad0a75`。公开内容是可读的 Skill、Routine 提示词、状态与归档，**没有独立采集脚本或安装器**；仓库未见许可证声明。这里补充文件支持的规则，不将文字流程称作已跑通的程序。
+
+### 五个可落实的操作点
+
+1. **分开扫描与调度。** [Skill 输入](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md#L12-L39)由调用方提供账号、阈值、回看窗口、时区与状态路径；[Routine](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md#L3-L22)另设北京时间 06:04–23:04 的小时窗口，06:04 只建基线，不推送。复用时先把自己的参数与时间表列清楚。
+2. **用实际间隔算相邻快照。** 已有快照时，两份文件都用浏览差值除以实际间隔小时数，严格大于 5,000 才达标。两个小时多了 6,000 次只等于每小时 3,000 次，不能当作 6,000 次。
+3. **明确首次观测采用哪条规则。** [SKILL.md 59–65 行](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/skill/SKILL.md#L59-L65)对首次帖龄取至少 1 分钟；[PROMPT.md 18–20 行](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/routine/PROMPT.md#L18-L20)取至少 1 小时。5 分钟前发布、1,000 次浏览，分别会算成 12,000/h 与 1,000/h，结论相反。本文合成练习继续用“首次只建基线”，不把两条源规则混成一种，也未替作者修订仓库。
+4. **把读取失败和零命中分开。** [0909 失败归档](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-13/0909.json#L37-L41)记录 `x_read_unavailable`、检查 0 帖且保留旧快照。没有新命中不等于取数成功；回执应保留失败账号、错误和上次有效观测时间。
+5. **对齐状态、通知和归档的版本。** 已通知 ID、快照和每小时结果分别保存，通知不明不能冒充已送达。当前 commit 把账号精简为 2 个，旧归档仍保留当轮 12 个，这是历史配置；回查时用当轮名单。源文件描述了 Git 归档，但没有独立实现证明写入、通知与推送具备原子性。
+
+### 已核对的合成边界
+
+| 合成输入 | 每小时增长 | 严格大于 5,000 |
+| --- | --- | --- |
+| 1 小时从 4,000 到 10,000 | 6,000 | 达标 |
+| 2 小时从 4,000 到 10,000 | 3,000 | 不达标 |
+| 1 小时从 4,000 到 9,000 | 5,000 | 不达标 |
+
+这三项与首次观测的分歧算例已用独立数值计算核对，未执行第三方代码。原有 `pending/sent/unknown` 状态是本站验收设计，不声称作者已经实现了可靠通知事务。
+
+<CopyTemplate id="x-signal-monitor-source-boundaries">
+
+```text
+先做离线规则验收，不采集X、不建Routine、不通知、不提交Git。
+固定参考 aehyok/x-viral-monitor 的 8ad0a750c4f794036c4e946aca655eadf55e100d。
+本文采用相邻快照差值/实际小时数，阈值严格大于5000；首次只建基线。
+核对三条合成样本：4000→10000/1小时，4000→10000/2小时，4000→9000/1小时。
+另列原Skill与Routine首次观测算法的差异，不能静默择一。
+区分 baseline、success_no_hits、read_failed、notification_unknown、archive_failed。
+没有真实回执就标未执行；不要把空new_hits写成读取成功。
+```
+
+</CopyTemplate>
+
+:::note[源码核验状态]
+Skill、Routine、固定版本状态文件、失败归档与账号精简提交已作静态核对；算例只验证数值。未调用 X、配置调度、发送通知、运行外部模型或推送作者仓库。源 Skill 的工具名不保证在每个账号可用，API 免费期和外部模型代提交流程仍未核实。
 :::
 
 ## 来源与适用边界
@@ -111,7 +155,7 @@ P1 的一小时增量为 6,000，触发一次。只有 10,000 累计值而无前
 
 合集章节对应：内容对应较明确。
 
-铁柱已查看 3 张图片，并按抽帧方式补读 1 个视频，未作连续观看。 推送截图区分累计浏览、每小时增量和发帖时间，并显示 GitHub 存档；安装指令全文未取得，外部模型免费期未核实。
+铁柱已查看 3 张图片，并按抽帧方式补读 1 个视频，未作连续观看。 推送截图区分累计浏览、每小时增量和发帖时间，并显示 GitHub 存档；现已补读公开 Skill 与 Routine；逐字安装口令及独立采集脚本未取得，外部模型免费期未核实。
 
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 

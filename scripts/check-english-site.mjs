@@ -91,6 +91,27 @@ for(const video of videoEdition.video_records){
  assert(page&&find(page.tree,n=>n.tagName==='h2'&&text(n).startsWith('Video supplement:')).length,`Missing video supplement: ${video.path}`);
  assert(text(page.tree).includes('Video verification scope'),`Missing video limitations: ${video.path}`);
 }
+const sourceEdition=JSON.parse(await readFile(new URL('../data/collection/editions/2026-10-18-langeai-source-audio.json',import.meta.url),'utf8'));
+assert(sourceEdition.finalized,'Source/audio follow-up must be finalized.');
+assert.equal(sourceEdition.targets.length,4,'Keep all four requested source/audio targets explicit.');
+assert.equal(sourceEdition.targets.filter(item=>item.repository).length,2,'Do not replace unavailable originals with similar repositories.');
+for(const target of sourceEdition.targets){
+ const page=pages.get(`/en/${target.path}/`);assert(page,`Missing source follow-up destination: ${target.path}`);
+ assert.equal(target.execution_status,'not_tested','Static source reading must not become a live reproduction.');
+ assert(linkSource(page.tree,target.source_url),`Missing original source for follow-up: ${target.path}`);
+ if(target.repository){
+  assert(/^[a-f0-9]{40}$/.test(target.repository.commit),'Source links need a pinned commit.');
+  assert(target.files.some(file=>file.url.includes(target.repository.commit)&&linkSource(page.tree,file.url)),`Missing pinned source link: ${target.path}`);
+  assert(text(page.tree).includes('Source verification status'),`Missing static-review limits: ${target.path}`);
+ }
+}
+function linkSource(tree,url){return find(tree,node=>node.tagName==='a'&&attr(node,'href')===url).length>0;}
+const publisherSource=sourceEdition.targets.find(item=>item.article_id==='a08');
+assert.equal(publisherSource.repository.recording_commit_verified,false,'Author repository is not proof of the recording commit.');
+assert.equal(sourceEdition.targets.find(item=>item.article_id==='a20').repository.standalone_collector_script,false,'Readable instructions must not be called a standalone collector.');
+assert.equal(sourceEdition.targets.find(item=>item.article_id==='a24').status,'original_script_and_cases_not_obtained');
+const audioFollowup=sourceEdition.targets.find(item=>item.article_id==='a10').audio;
+assert.equal(audioFollowup.human_listening,false);assert.equal(audioFollowup.speech_or_music_confirmed,false);assert.equal(audioFollowup.new_audio_derived_steps,0);
 for(const item of readingEdition.articles){
  const path=`/en/${item.path}/`,page=pages.get(path);
  assert(page,`Missing rewritten guide: ${path}`);

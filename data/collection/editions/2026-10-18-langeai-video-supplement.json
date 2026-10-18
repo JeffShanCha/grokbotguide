@@ -57,15 +57,15 @@
       "media_key": "13_2099918614094884864",
       "resource_id": "x-xaiwind-team-blueprint",
       "path": "bots/team-blueprint",
-      "duration_s": 59.0,
+      "duration_s": 59,
       "review_method": "sampled_visual_review",
       "continuous_viewing": false,
       "coverage": {
         "starts_at_s": 0,
-        "ends_at_s": 59.0,
+        "ends_at_s": 59,
         "first_and_last_frame_reviewed": true,
         "frames_viewed_1fps": 59,
-        "max_viewed_gap_s": 1.0,
+        "max_viewed_gap_s": 1,
         "extra_zoom_frames": [
           "0",
           "1.2",
@@ -116,6 +116,13 @@
       "verification": "author_demo_only",
       "execution_status": "not_tested",
       "unknowns_zh": [
+        "录屏实际运行的commit未证实；两张失败图片的具体修复未见证据。"
+      ],
+      "source_followup": {
+        "edition": "2026-10-18-langeai-source-audio.json",
+        "status": "author_repository_static_review"
+      },
+      "initial_unknowns_zh": [
         "skill 来源仓库全称",
         "失败 2 张图的处理方式"
       ]
@@ -134,7 +141,7 @@
         "ends_at_s": 13.84,
         "first_and_last_frame_reviewed": true,
         "frames_viewed_1fps": 14,
-        "max_viewed_gap_s": 1.0,
+        "max_viewed_gap_s": 1,
         "extra_zoom_frames": [
           "13.8"
         ],
@@ -167,7 +174,11 @@
       "execution_status": "not_tested",
       "unknowns_zh": [
         "音轨内容是否为配乐（未能人工听辨）"
-      ]
+      ],
+      "source_followup": {
+        "edition": "2026-10-18-langeai-source-audio.json",
+        "status": "audio_unconfirmed_role_sources_not_obtained"
+      }
     },
     {
       "article_id": "a11",
@@ -229,7 +240,7 @@
         "ends_at_s": 16.97,
         "first_and_last_frame_reviewed": true,
         "frames_viewed_1fps": 17,
-        "max_viewed_gap_s": 1.0,
+        "max_viewed_gap_s": 1,
         "extra_zoom_frames": [
           "16.95 末帧"
         ],
@@ -275,7 +286,7 @@
         "ends_at_s": 20.37,
         "first_and_last_frame_reviewed": true,
         "frames_viewed_1fps": 20,
-        "max_viewed_gap_s": 1.0,
+        "max_viewed_gap_s": 1,
         "extra_zoom_frames": [
           "0.5 提示词",
           "5 要点",
@@ -304,6 +315,14 @@
       "verification": "author_demo_only",
       "execution_status": "not_tested",
       "unknowns_zh": [
+        "已取得公开Skill与Routine；没有独立采集脚本，原对话逐字安装口令仍未取得。",
+        "视频与监控流程的关系仅属模型背景，外部模型费用和实际推送仍未核实。"
+      ],
+      "source_followup": {
+        "edition": "2026-10-18-langeai-source-audio.json",
+        "status": "skill_and_routine_static_review"
+      },
+      "initial_unknowns_zh": [
         "与正文爆款监控 Skill 的具体关联（为何放此视频）未在画面说明",
         "发给 Bot 的安装指令仍未取得"
       ]
@@ -322,7 +341,7 @@
         "ends_at_s": 39.6,
         "first_and_last_frame_reviewed": true,
         "frames_viewed_1fps": 40,
-        "max_viewed_gap_s": 1.0,
+        "max_viewed_gap_s": 1,
         "extra_zoom_frames": [
           "0.3 命令行",
           "39.5 末帧指标"
@@ -352,7 +371,11 @@
       "execution_status": "not_tested",
       "unknowns_zh": [
         "timeline_gate.py 内容与用例集未公开，未运行"
-      ]
+      ],
+      "source_followup": {
+        "edition": "2026-10-18-langeai-source-audio.json",
+        "status": "original_script_and_cases_not_obtained"
+      }
     }
   ],
   "editorial_notes": [
@@ -362,5 +385,6 @@
     "The WeChat invocation mechanism is unknown; Action-button triggering is not presented as observed.",
     "Ling browser generation is background only and does not verify the monitoring Skill or API billing.",
     "No source video, full transcript, credentials or third-party full prompt is republished."
-  ]
+  ],
+  "source_audio_followup": "2026-10-18-langeai-source-audio.json"
 }
