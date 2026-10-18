@@ -29,6 +29,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 **先找出哪些任务在空跑、哪些结果没人使用，再只调整一处。保留前后记录，比直接照搬一整套“省额度设置”更容易判断是否有效。**
 
@@ -37,6 +39,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 已完成原文、图片和相关官方资料的核对；**本站尚未实测这套流程或节省比例**。外部免费接口、X 搜索免额度、云电脑持续运行及额度耗尽后接管等说法仍待核实，不能作为操作保证。
 :::
+
+<CaseBoundaries slug="usage-audit" />
 
 ## 你会得到什么
 
@@ -142,3 +146,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 原作者的百分比、账单金额和节省案例没有在本站复现。两份第三方技能只读到开头；需要登录的密钥页未进入；魔搭文档存在报错或空页；作者会话只查了第一页。图片补充了流程示意和分工，没有新增可以替代实测的账单证据。
 
 本篇也收录在[24 篇资料的改写与核验地图](/zh/resources/langeai-reading-map/)中；本轮铁柱重新查看了本篇 10 张图片，没有视频。不重复创建同一原帖的资源条目。
+
+
+## 核验记录
+
+<CaseVerification slug="usage-audit" />

@@ -11,8 +11,8 @@ const data = route.entry.data;
 const lang = toLang(route.locale);
 const t = useT(lang);
 const sources = data.sources ?? [];
-// 参考来源上方的中性说明：日期优先用 last_checked，其次 last_verified，最后用页面最后更新日期
-const basisDate = data.last_checked ?? data.last_verified ?? route.lastUpdated;
+// 资料核验只取明确的资料核验记录，实操日期和编辑日期都不能替代。
+const basisDate = data.last_checked;
 const [basisBefore, basisAfter] = basisDate ? t('meta.basis').split('{date}') : [t('meta.basisNoDate'), ''];
 const section = route.entry.id.split('/')[1];
 const faqSlug = route.entry.id.split('/')[2];

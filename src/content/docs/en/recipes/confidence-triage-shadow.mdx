@@ -21,6 +21,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 Use fixed fields for information type, relevance, public risk and next action, comparing predictions with human labels before automation.
 
@@ -29,6 +31,8 @@ The source combines Jev classification with Bot execution and starts in shadow m
 :::note[Verification status]
 Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
 :::
+
+<CaseBoundaries slug="confidence-triage-shadow" english />
 
 ## Scenario and input
 
@@ -140,3 +144,8 @@ The collector reports viewing 7 images and reviewing 1 video(s) through sampled 
 Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
 
 [See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)
+
+
+## Verification record
+
+<CaseVerification slug="confidence-triage-shadow" english />

@@ -8,7 +8,7 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
  * 文章额外的 frontmatter 字段。
  * - grade：official = 官方依据；community = 社区作者分享；original = 本站原创教程（不代表全流程实测）；tested = 本站按步骤跑通；opinion = 观点/评测
  *   只有真正跑通的页面才能标 tested，页面上会显示绿色「✓ 本站实测」。
- * - last_checked：最后一次对照官方资料核对的日期（official 页面显示「核对于 …」；缺省用页面最后更新日期）
+ * - last_checked：最后一次对照官方资料核对的日期；缺省明确显示未核验，不用内容更新时间替代
  * - needs_testing：内部跟踪字段，页面上不显示；npm run check:content 会打印还没实测的页面清单
  * - last_verified：tested 页面按文中步骤跑通的日期
  * - tested_plan：tested 页面测试时用的订阅档位，例如 SuperGrok

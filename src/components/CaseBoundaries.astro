@@ -1,0 +1,26 @@
+---
+import { getCaseGovernance } from '../data/case-governance';
+interface Props { slug: string; english?: boolean }
+const { slug, english = false } = Astro.props;
+const lang = english ? 'en' : 'zh';
+const { boundaries } = getCaseGovernance(slug);
+const groups = [
+	{ id: 'automatic', title: english ? 'Can run automatically' : '可自动执行', text: boundaries.automatic[lang] },
+	{ id: 'confirmation', title: english ? 'Requires confirmation' : '需要确认', text: boundaries.confirmation[lang] },
+	{ id: 'takeover', title: english ? 'Take over after a failure' : '失败后接管', text: boundaries.takeover[lang] },
+];
+---
+<section id="automation-boundaries" data-case-boundaries={slug} aria-labelledby="automation-boundaries-heading">
+	<div class="wf-section-title"><span>{english ? 'EXECUTION & TAKEOVER' : '执行与接管'}</span><h2 id="automation-boundaries-heading">{english ? 'Execution and takeover boundaries' : '执行与接管边界'}</h2></div>
+	<p>{english ? 'The actions below require the agreed inputs, accounts and scope. Configuring a Routine does not expand that authorization.' : '以下动作以已约定的输入、账号和范围为前提；设置 Routine 不会扩大授权范围。'}</p>
+	<div class="case-boundary-list">
+		{groups.map(group => <div data-boundary={group.id}><h3>{group.title}</h3><p>{group.text}</p></div>)}
+	</div>
+</section>
+
+<style>
+	.case-boundary-list { display: grid; gap: 14px; margin: 22px 0; }
+	.case-boundary-list > div { min-width: 0; border: 1px solid var(--wf-line, var(--sl-color-hairline)); border-radius: 8px; background: var(--wf-paper, var(--sl-color-bg)); padding: 20px; }
+	.case-boundary-list h3, :global(.wf-prose) .case-boundary-list h3 { font-size: 16px; margin: 0 0 10px; line-height: 1.6; }
+	.case-boundary-list p, :global(.wf-prose) .case-boundary-list p { margin: 0; color: var(--wf-muted, var(--sl-color-gray-2)); font-size: 14px; line-height: 1.9; overflow-wrap: anywhere; }
+</style>

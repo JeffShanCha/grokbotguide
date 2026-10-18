@@ -1,0 +1,1299 @@
+{
+  "gmail-inbox-triage": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "按约定查询范围只读邮件，分类、列依据并生成本地回复草稿和简报。",
+        "en": "Read messages within the agreed query; classify them with evidence and prepare local reply text and a brief."
+      },
+      "confirmation": {
+        "zh": "真实标签写入、草稿保存先确认具体 message_id 和动作；发送、转发、删除及 Routine 配置另行确认。",
+        "en": "Confirm exact message ids and actions before applying labels or saving Gmail drafts. Sending, forwarding, deletion and Routine configuration need separate approval."
+      },
+      "takeover": {
+        "zh": "暂停写入，按 message_id 与 draft_id 检查已有结果；保存状态不明时不重建草稿，交人工核查后再恢复。",
+        "en": "Pause writes and inspect existing results by message_id and draft_id. Do not recreate a draft after an uncertain save; resume after manual inspection."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-16",
+      "note": {
+        "zh": "保留原 Gmail 教程记录：当日读取官方资料，范围为接入、标签、草稿及自动化基础说明。本次未重新核验，也不代表真实邮箱已跑通。",
+        "en": "Historical record from the Chinese Gmail tutorial: documentation was read for connection, labels, drafts and automation basics. It has not been rechecked in this edit; the English edition and live mailbox workflow were not independently verified."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "google-calendar-meeting-brief": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读指定日期与时区的日程和已提供背景，整理冲突、缺项及会议简报。",
+        "en": "Read the agreed date, time zone and supplied context; prepare conflicts, gaps and meeting briefs."
+      },
+      "confirmation": {
+        "zh": "新增、改期、取消日程、发送邀请或向他人投递简报前确认；不替你承诺报价或交付日期。",
+        "en": "Confirm event creation, rescheduling, cancellation, invitations and delivery to others. Do not commit to prices or delivery dates."
+      },
+      "takeover": {
+        "zh": "日程缺失、时区或权限不明时停止推断，列出已读范围；由你核查日历或接管登录，再手动重跑小批。",
+        "en": "Stop inference when events, time zones or permissions are unclear. Report coverage; have the user inspect Calendar or take over login, then rerun a small batch."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "summarize-a-document": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读提供的文件，清点覆盖范围，提取带段落依据的摘要、待办与缺失项。",
+        "en": "Read supplied files; inventory coverage and extract summaries, actions and gaps with paragraph references."
+      },
+      "confirmation": {
+        "zh": "缺页后是否继续、引入其他资料、修改原件、外发或创建提醒，都先确认范围。",
+        "en": "Confirm whether to continue with missing pages, add sources, edit originals, distribute results or create reminders."
+      },
+      "takeover": {
+        "zh": "OCR、表格或段落不可读时保留原件并标未读，不猜内容；由你补件或修正识别结果，再重新清点。",
+        "en": "Preserve originals and mark unread OCR, tables or paragraphs; do not guess. Request missing material or corrected extraction, then inventory again."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "slack-daily-standup": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读约定频道和时间窗口，整理决定、待办、阻塞及消息依据，结果先留文件。",
+        "en": "Read agreed channels and time windows; prepare decisions, actions, blockers and message references as local files."
+      },
+      "confirmation": {
+        "zh": "向频道或私聊发送、@成员、创建任务，以及扩大频道或读取范围前确认。",
+        "en": "Confirm channel or direct messages, mentions, task creation and any expansion of channels or read scope."
+      },
+      "takeover": {
+        "zh": "权限不足、线程不全或读取失败时列未取得内容，不绕过权限；由你补充或接管，再核对变更链。",
+        "en": "Report inaccessible or incomplete threads without bypassing permissions. Have the user supply context or take over, then recheck the change history."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "mobile-voice": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "仅处理你提供且已确认的文字、语音转写或照片说明，生成可审阅任务草案。",
+        "en": "Process supplied, confirmed text, transcripts or photo descriptions into a reviewable task draft."
+      },
+      "confirmation": {
+        "zh": "识别不清的人名、金额、日期先确认；录音、拨号、发消息、上传私人材料或调用外部工具另行确认。",
+        "en": "Confirm unclear names, amounts and dates. Recording, calls, messages, private uploads and external tools need separate approval."
+      },
+      "takeover": {
+        "zh": "转写或图片信息不完整时停在草案，列出原句和疑点；由你纠正或转到桌面手动处理，不猜指令。",
+        "en": "Stop at a draft when transcription or image context is incomplete. Show the original and ambiguities for user correction or desktop handling."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "slack-team-bot": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "基于提供的合成问题与指标快照生成答复草稿，保留来源、口径与未知项。",
+        "en": "Draft answers from supplied synthetic questions and metric snapshots, retaining sources, definitions and unknowns."
+      },
+      "confirmation": {
+        "zh": "发布 Team Bot、连接数据源、调整成员权限，以及向 Slack 发答复或公开指标前确认。",
+        "en": "Confirm publishing a Team Bot, connecting sources, changing member access and sending answers or exposing metrics in Slack."
+      },
+      "takeover": {
+        "zh": "权限或指标口径不明时停止查询扩展，保留问题和已知范围；由管理员核查访问，再人工审阅答复。",
+        "en": "Stop expanding queries when access or metric definitions are unclear. Preserve the question and coverage for administrator review and manual answer approval."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "typefully-repurpose": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只依据已提供文章生成分渠道本地草稿和事实对照表，不新增效果数据。",
+        "en": "Prepare local channel-specific drafts and a fact map from the supplied article, without inventing performance data."
+      },
+      "confirmation": {
+        "zh": "写入 Typefully 前确认 social set、平台账号与正文；排期、分享和发布分别确认。",
+        "en": "Confirm the social set, platform identity and text before saving to Typefully. Scheduling, sharing and publishing require separate approval."
+      },
+      "takeover": {
+        "zh": "保存超时先按账号与 draft_id 查重，暂停后续写入；无保存能力时交付文件，意外排期由你检查并处理。",
+        "en": "After a save timeout, inspect the account and draft id before retrying and pause writes. Deliver files if saving is unavailable; have the user inspect unintended schedules."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "sheets-audience-tracker": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "整理指定快照中的平台、指标、观察时间与精度，仅在同口径确切数值间计算变化。",
+        "en": "Organize platforms, metrics, observation times and precision from agreed snapshots; calculate changes only between comparable exact values."
+      },
+      "confirmation": {
+        "zh": "真实平台读取范围、Sheets 目标表与写入批次、覆盖既有行，以及 Routine 时间表先确认。",
+        "en": "Confirm live read scope, the target Sheet and write batch, overwriting existing rows and the Routine schedule."
+      },
+      "takeover": {
+        "zh": "来源读不到时标缺失，不沿用旧值；写入不明先按平台、指标与批次查重，人工核查后只补失败项。",
+        "en": "Mark unread sources as missing rather than reusing old values. Inspect platform, metric and batch keys after uncertain writes; manually verify before retrying failed items only."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "youtube-competitor-watch": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "按指定频道与发布窗口筛选可见视频，记录视频 id、发布时间和观察数据。",
+        "en": "Filter visible videos within agreed channels and publication windows; record video ids, publication times and observed metrics."
+      },
+      "confirmation": {
+        "zh": "增加频道、付费或账号授权、发布评论和对外分发前确认；没有正文或字幕时不批准内容级结论。",
+        "en": "Confirm additional channels, paid access, account authorization, comments and external distribution. Review content-level claims when transcripts or full content are missing."
+      },
+      "takeover": {
+        "zh": "列表、字幕或指标缺失时标明可见范围，暂停定时任务排查来源；补齐后按视频 id 去重重跑。",
+        "en": "State visible coverage when lists, transcripts or metrics are missing. Pause the Routine to inspect sources; deduplicate by video id before rerunning."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "google-ads-scoreboard": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读提供的广告报表，核对时间、币种与分母，计算可计算指标并标小样本。",
+        "en": "Read supplied ad reports; check periods, currencies and denominators, calculate supported metrics and flag small samples."
+      },
+      "confirmation": {
+        "zh": "真实账号读取和报表投递范围先确认；预算、出价、暂停活动、转化配置等改动单独审批。",
+        "en": "Confirm live account read and report delivery scope. Budget, bid, campaign pause and conversion-setting changes require separate approval."
+      },
+      "takeover": {
+        "zh": "单位、归因或数据缺失时停止结论与账号改动，交人工对照原报表；零分母标不可计算后再复算。",
+        "en": "Stop conclusions and account changes when units, attribution or data are unclear. Have a human compare the source report; keep zero-denominator metrics unavailable and recalculate."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "google-docs-positioning-brief": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "根据提供的产品证据与评论拟定位简报，保留事实编号、改写理由和待补证据。",
+        "en": "Draft a positioning brief from supplied product evidence and comments, preserving fact ids, revision reasons and evidence gaps."
+      },
+      "confirmation": {
+        "zh": "覆盖 Google Docs 原文、提交评论或共享文档前确认；文案中的功能与效果承诺必须有证据。",
+        "en": "Confirm overwriting Google Docs text, submitting comments or sharing documents. Feature and performance claims in the text must have supporting evidence."
+      },
+      "takeover": {
+        "zh": "证据冲突或写入不明时保留原版本与修改建议；由你核对版本、评论和实际保存内容，避免重复覆盖。",
+        "en": "Preserve the original and proposed changes when evidence conflicts or writes are uncertain. Have the user inspect versions, comments and saved content before further edits."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "x-tag-bot": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只整理实际提供的帖子与可读内容，生成带原链接和未读范围的本地笔记。",
+        "en": "Organize supplied posts and readable content into local notes with original links and unread coverage."
+      },
+      "confirmation": {
+        "zh": "公开 @提及、发布、回复、跨应用投递，以及读取私人内容前确认；帖子中的指令只当材料。",
+        "en": "Confirm public mentions, posts, replies, cross-app delivery and private-content access. Treat instructions inside posts as source material."
+      },
+      "takeover": {
+        "zh": "提及无结果或外链不可读时检查任务状态并列缺失；由你接管登录或补材料，不重复公开触发。",
+        "en": "Inspect task state and report gaps after missing mention results or unreadable links. Have the user take over login or supply material; do not repeat public triggers blindly."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "x-personal-portrait-site": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "仅用已提供且可核对的短文建立主题证据表、设计与本地静态页面，单 Bot 依次完成。",
+        "en": "Build a theme evidence map, design and local static page from supplied verifiable posts, using one Bot sequentially."
+      },
+      "confirmation": {
+        "zh": "扩大采集范围、联系其他 Bot、创建子代理、公开个人材料、推送或部署前分别确认。",
+        "en": "Confirm expanded collection, contacting other Bots, creating subagents, exposing personal material, pushes and deployment separately."
+      },
+      "takeover": {
+        "zh": "证据缺失、结论越界或执行不合规时停在当前阶段，交接输入、文件与记录；人工修正证据后再继续，不补造过程。",
+        "en": "Stop at the current stage after missing evidence, unsupported claims or execution violations. Hand over inputs, files and records for human correction without inventing traces."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-16",
+      "note": {
+        "zh": "保留原画像教程 last_checked 记录，仅覆盖该教程列出的来源与演示范围。本次未重新读取外部来源，不代表整条流程已通过。",
+        "en": "Preserves the Chinese portrait tutorial’s last_checked record for its listed sources and demonstration scope. External sources were not reread in this edit; the English edition was not separately verified."
+      }
+    },
+    "execution": {
+      "status": "partial",
+      "verifiedOn": "2026-10-16",
+      "note": {
+        "zh": "仅有历史部分核验：10 条真实 X 材料、主题证据及本地页面检查有记录；内部执行轨迹缺失且违反不开子代理的约束，流程合规未通过，不能标全流程实测通过。",
+        "en": "Historical partial verification only: records cover 10 real X inputs, theme evidence and local page checks. Internal traces are incomplete and the no-subagent constraint was violated; process compliance failed, so this is not a full workflow pass."
+      },
+      "evidenceUrl": "/demos/portrait-real/checks.json",
+      "auditUrl": "/demos/portrait-real/audit.json"
+    }
+  },
+  "website-daily-check": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "在约定网址与路径内只读巡检，记录响应、链接、截图和异常，先交本地报告。",
+        "en": "Inspect agreed URLs and paths read-only; record responses, links, screenshots and anomalies in a local report."
+      },
+      "confirmation": {
+        "zh": "登录、扩大抓取范围、提交表单、修改站点、部署，以及 Routine 频率和通知目标先确认。",
+        "en": "Confirm login, expanded crawling, form submissions, site changes, deployment, Routine frequency and notification destinations."
+      },
+      "takeover": {
+        "zh": "网络或登录失败与真实站点异常分开，保留响应和失败位置；暂停重复巡检，由你接管后手动验证恢复。",
+        "en": "Separate network or login failures from site faults and preserve responses and stopping points. Pause recurring checks; validate manually after user takeover."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "cursor-cloud-agent": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "分析已提供需求与代码片段，准备改动范围、计算对照和一次性验收计划。",
+        "en": "Analyze supplied requirements and code snippets; prepare scope, calculation comparisons and a one-shot validation plan."
+      },
+      "confirmation": {
+        "zh": "真实仓库写入、启动云 Agent、费用、分支、推送、PR 与部署按具体范围确认；当前案例不启动子代理。",
+        "en": "Confirm repository writes, Cloud Agent launch, costs, branches, pushes, PRs and deployment with explicit scope. This exercise launches no subagent."
+      },
+      "takeover": {
+        "zh": "上下文不足不猜文件或命令；执行行为不符合约束时停止远端任务，保留本地差异与日志，由你决定恢复路径。",
+        "en": "Do not guess files or commands without context. Stop remote work that violates constraints, preserve local diffs and logs, and let the user choose recovery."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "github-pr-watch": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读指定 PR 的当前提交、检查与评审，分别报告冲突、草稿和合并状态。",
+        "en": "Read current commits, checks and reviews for specified PRs; report conflicts, draft state and merge state separately."
+      },
+      "confirmation": {
+        "zh": "写 Notion 状态、通知负责人、提交评审、改代码、重跑 CI 或合并前确认具体动作与目标。",
+        "en": "Confirm exact targets before changing Notion status, notifying owners, reviewing, editing code, rerunning CI or merging."
+      },
+      "takeover": {
+        "zh": "检查与当前 SHA 不匹配或无权读取时标未知；由你打开对应提交核对，恢复后只更新确有变化的记录。",
+        "en": "Mark mismatched SHA checks or inaccessible data as unknown. Have the user inspect the current commit, then update only records with verified changes."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "x-bookmarks-demo": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "仅分析提供的书签与需求，选择资料足够的小目标，生成不调用外部 API 的本地原型方案。",
+        "en": "Analyze supplied bookmarks and requirements; choose a small supported goal and prepare a local prototype plan without external API calls."
+      },
+      "confirmation": {
+        "zh": "安装依赖、读取真实书签、调用付费工具、修改仓库、委派、推送或部署前确认。",
+        "en": "Confirm dependency installation, live bookmark reads, paid tools, repository edits, delegation, pushes and deployment."
+      },
+      "takeover": {
+        "zh": "库源码、许可证或运行条件未核对时停在候选说明；交人工检查，保留阻塞项，不把漂亮预览当功能通过。",
+        "en": "Stop at a candidate proposal when source code, licensing or runtime conditions are unverified. Hand off blockers for manual inspection; a preview is not proof of working behavior."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "composio-many-apps": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "检查已提供的连接状态和 Airtable 记录，筛选本周待发布项，生成 Slack 消息草稿。",
+        "en": "Inspect supplied connection states and Airtable records; select this week’s pending items and draft a Slack message."
+      },
+      "confirmation": {
+        "zh": "账号授权、扩大权限及实际发送前确认连接身份、目标频道与完整正文；Airtable 保持只读。",
+        "en": "Confirm account authorization, broader permissions and actual sending with the connected identity, target channel and complete message. Keep Airtable read-only."
+      },
+      "takeover": {
+        "zh": "授权过期时停止发送，交用户重新授权；发送超时先检查频道历史和消息 id，不能直接重发。",
+        "en": "Stop sending when authorization expires and have the user reconnect. After a timeout, inspect channel history and message ids before any resend."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "zendesk-support-queue": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读约定工单队列，整理分类、优先级、依据与回复草稿，区分内部备注和公开回复。",
+        "en": "Read the agreed ticket queue; prepare classifications, priorities, evidence and reply drafts, distinguishing internal notes from public replies."
+      },
+      "confirmation": {
+        "zh": "提交内部备注、公开回复、分派、改状态或批量更新前确认具体工单与字段。",
+        "en": "Confirm exact tickets and fields before internal notes, public replies, assignment, status changes or bulk updates."
+      },
+      "takeover": {
+        "zh": "会话过期或更新不明时暂停写入，按 ticket_id 检查最新记录；由你接管登录或处理冲突，再补失败项。",
+        "en": "Pause writes after expired sessions or uncertain updates and inspect current records by ticket_id. Let the user take over login or resolve conflicts before retrying failed items."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "notion-personal-crm": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "整理提供的公开资料快照，按稳定 account_id 去重，保留原文、日期和缺失字段。",
+        "en": "Organize supplied public-profile snapshots; deduplicate by stable account_id and preserve source text, dates and missing fields."
+      },
+      "confirmation": {
+        "zh": "真实资料读取范围、Notion 新增或更新字段先确认；联系账号、共享资料和搜索私人信息不能由导入授权推导。",
+        "en": "Confirm live read scope and Notion fields to create or update. Import approval does not authorize outreach, sharing or private-information searches."
+      },
+      "takeover": {
+        "zh": "字段冲突先保留双方来源与时间；写入不明按 account_id 查重并回读页面 id，交人工决定，不整批重复追加。",
+        "en": "Preserve both sources and times for conflicting fields. After uncertain writes, deduplicate by account_id and read page ids; request human decisions rather than appending the batch again."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "call-transcripts-review": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "仅对已提供转写按约定评分标准提取原话、时间点、待办与可判断项。",
+        "en": "Extract quotes, timestamps, actions and assessable items from supplied transcripts using the agreed rubric."
+      },
+      "confirmation": {
+        "zh": "处理真实录音、修改评分标准、写 CRM、员工排名、对外发送或设置 Routine 前确认用途与范围。",
+        "en": "Confirm purpose and scope before processing real recordings, changing the rubric, writing CRM, ranking staff, distributing results or configuring a Routine."
+      },
+      "takeover": {
+        "zh": "转写截断、说话人错误或评分分歧时标无法判断，停用总分比较；由你对照原记录纠正，再复评相关项。",
+        "en": "Mark truncated transcripts, speaker errors and disputed scores as unknown and stop total-score comparisons. Have a human correct the source, then reassess affected items."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "stripe-refunds": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读提供的申请、政策和交易快照，计算可核对余额，生成建议、例外与客户回复草稿。",
+        "en": "Read supplied requests, policy and transaction snapshots; calculate checkable balances and draft recommendations, exceptions and replies."
+      },
+      "confirmation": {
+        "zh": "本教程只做审核建议；真实退款、发邮件、改订单或优惠均需逐笔明确批准，不能从余额推导退款授权。",
+        "en": "This tutorial prepares recommendations only. Live refunds, emails, order changes and discounts need per-item approval; an available balance is not authorization."
+      },
+      "takeover": {
+        "zh": "付款 id 缺失、历史冲突或退款状态不明时停在待判断，交人工回查 Stripe；不能重复提交退款或把已提交写成已到账。",
+        "en": "Stop for human review when payment ids, history or refund state are unclear. Inspect Stripe before any retry; submitted does not mean settled."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "gmail-drive-invoices": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "整理提供的票据提取文本，核对金额、币种、状态和重复项，生成待归档清单。",
+        "en": "Organize supplied invoice text extracts; check amounts, currencies, payment status and duplicates in a proposed archive list."
+      },
+      "confirmation": {
+        "zh": "读取真实附件、Drive 上传位置、文件命名与覆盖、移动或删除原件先确认；归档不包含付款授权。",
+        "en": "Confirm real attachment access, Drive destinations, names, overwrites and moving or deleting originals. Filing does not authorize payment."
+      },
+      "takeover": {
+        "zh": "OCR、金额或上传状态不明时保留原件和异常表；按原邮件、附件身份及目标文件查重，由你核查后再补传。",
+        "en": "Preserve originals and exceptions for unclear OCR, amounts or upload state. Deduplicate by original message, attachment and target file; manually inspect before retrying uploads."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "shopping-compare": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "对提供的报价核对规格、数量、单位价与已知费用，生成带缺项和观察时间的比较表。",
+        "en": "Compare supplied offers by specifications, quantities, unit prices and known fees, retaining gaps and observation times."
+      },
+      "confirmation": {
+        "zh": "真实读取地区、会员条件与替代规格先确认；登录由你接管，加车、下单和付款分别确认并由你完成交易。",
+        "en": "Confirm live region, membership assumptions and substitute specifications. The user takes over login and separately approves cart, order and payment actions, completing the purchase."
+      },
+      "takeover": {
+        "zh": "税费、库存或型号不明时不宣布最低到手价；交你核价并保留旧观察时间，重新读取后更新报告，不沿用旧报价。",
+        "en": "Do not declare the lowest final price when taxes, stock or models are unclear. Ask the user to verify, retain old observation times and reread prices before updating."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "marketplace-watch": {
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "按约定快照与条件筛选商品，按 listing_id 去重，分别记录新品、降价、下架与缺失。",
+        "en": "Filter agreed snapshots by criteria; deduplicate by listing_id and separate new items, price drops, removals and missing data."
+      },
+      "confirmation": {
+        "zh": "真实平台、城市、半径与 Routine 通知范围先确认；不自行定位用户，联系卖家、出价和付款另行确认。",
+        "en": "Confirm the live platform, city, radius and Routine notification scope. Do not infer user location; seller contact, bids and payment need separate approval."
+      },
+      "takeover": {
+        "zh": "登录验证交你接管，读取失败不能报无更新；暂停观察并保存已读范围，人工核对后按商品身份恢复去重。",
+        "en": "Let the user handle login verification; read failure is not no change. Pause monitoring, preserve coverage and resume deduplication by listing identity after manual checks."
+      }
+    },
+    "documentation": {
+      "checkedOn": null,
+      "note": {
+        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
+        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
+        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
+      }
+    }
+  },
+  "conference-notes-workflow": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "整理已获授权的脱敏笔记，区分决定、提议和行动项，生成带来源位置的摘要与缺项清单。",
+        "en": "Organize authorized, redacted notes into decisions, proposals and actions, with source locations and gaps."
+      },
+      "confirmation": {
+        "zh": "录音、补充外部资料、通知参会者、写日历、保存 Skill 或创建 Routine 前确认。",
+        "en": "Confirm recordings, external sources, attendee notifications, Calendar writes, Skill saves and Routine creation."
+      },
+      "takeover": {
+        "zh": "缺段或承诺不明时停在待确认项，交你补原笔记或人工纠正，重新核对负责人和日期后再继续。",
+        "en": "Stop at unresolved items when notes or commitments are incomplete. Have the user supply or correct notes, then recheck owners and dates."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "confidence-triage-shadow": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "仅在影子模式记录脱敏样本的分类、理由和置信信息，并与人工答案对照。",
+        "en": "Record classifications, reasons and confidence for redacted samples in shadow mode and compare them with human labels."
+      },
+      "confirmation": {
+        "zh": "接入真实信息、发送到外部分类服务、开放分流动作或改阈值前确认；发送、删除和客户回复单独审批。",
+        "en": "Confirm real-data access, external classification, enabling routing actions and threshold changes. Sending, deletion and customer replies need separate approval."
+      },
+      "takeover": {
+        "zh": "低置信、字段非法或误分时停止自动分流，保留输入与预测交人工标注；原脚本未取得时不声称复现通过。",
+        "en": "Stop routing after low confidence, invalid fields or misclassification. Preserve inputs and predictions for human labeling; unavailable original scripts cannot establish reproduction."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "editorial-review-pipeline": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "根据已提供来源与已批准选题起草内容，生成数字、引用和推断的事实审阅表。",
+        "en": "Draft from supplied sources and approved topics, with a fact-review table for numbers, quotes and inferences."
+      },
+      "confirmation": {
+        "zh": "选题、角色创建或协作、终稿、对外联系及发布分别确认；本案例由本人手动发布。",
+        "en": "Confirm topics, role creation or collaboration, final text, external contact and publication separately. This case uses human publication."
+      },
+      "takeover": {
+        "zh": "来源不足或事实冲突时停稿，交接来源与待核实表，由你删改或补证；不以风格文件替代事实来源。",
+        "en": "Stop drafting on missing sources or conflicting facts. Hand over sources and unresolved claims for user correction; style files are not factual evidence."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "feature-evidence-review": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "读取获准的需求与证据，核对代码版本、测试、日志和截图，列通过、失败及未测范围。",
+        "en": "Read authorized requirements and evidence; align code versions, tests, logs and screenshots, listing passed, failed and untested scope."
+      },
+      "confirmation": {
+        "zh": "执行真实命令、改代码、启用控制工具、提交、PR、委派和部署前按具体范围确认。",
+        "en": "Confirm real commands, code edits, control tools, commits, PRs, delegation and deployment within explicit scope."
+      },
+      "takeover": {
+        "zh": "证据与版本不符或服务失败时停止验收，保留复现步骤；由你确认运行条件后复测，不重复启动已有服务。",
+        "en": "Stop acceptance when evidence versions mismatch or services fail. Preserve reproduction steps and confirm conditions before retesting; reuse existing servers."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "feishu-content-desk": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "用已提供来源整理情报、草稿和交接表，保留 task_id、读取范围、A/B 版本与待审状态。",
+        "en": "Organize supplied sources, research, drafts and handoffs with task ids, read scope, A/B versions and review state."
+      },
+      "confirmation": {
+        "zh": "配置桥接、授权应用或用户、共享文档、创建角色、写入测试或生产文档、发群消息和发布前分别确认。",
+        "en": "Confirm bridge configuration, app or user authorization, document sharing, role creation, test or production writes, group messages and publication separately."
+      },
+      "takeover": {
+        "zh": "停在应用、用户或文档权限缺失的对应层，交你接管授权；按 task_id 回查接收与完成状态，抑制回声，不盲目重发。",
+        "en": "Stop at the missing app, user or document permission layer for user takeover. Inspect acceptance and completion by task id, suppress echoes and avoid blind resends."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "nontechnical-task-brief": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "在约定岗位标准、输入与预算范围内整理候选、客户、采购或设计资料，交付带依据的草稿。",
+        "en": "Organize candidate, customer, purchasing or design material within agreed job criteria, inputs and budgets, producing evidence-backed drafts."
+      },
+      "confirmation": {
+        "zh": "扩大名单、修改设计或预算、联系候选或客户、发送、采购和条款确认分别审批。",
+        "en": "Confirm expanded lists, design or budget changes, candidate or customer outreach, sending, purchasing and legal terms separately."
+      },
+      "takeover": {
+        "zh": "数据缺失或口径不一致时保留空项，停在草稿；由你核对一条样本并补材料，不推断敏感个人特征。",
+        "en": "Keep gaps and stop at drafts when data or definitions are unclear. Have the user verify one sample and supply evidence without inferring sensitive personal traits."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "onboarding-store-brief": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读已提供的脱敏经营表，复核数字和异常，形成可交接的晨报与流程草案。",
+        "en": "Read supplied redacted business tables, check figures and exceptions, and prepare a handoff-ready brief and workflow draft."
+      },
+      "confirmation": {
+        "zh": "连接店铺、写入经营系统、保存 Skill、创建 Routine 或增加 Bot 岗位前确认。",
+        "en": "Confirm store connections, business-system writes, Skill saves, Routine creation and additional Bot roles."
+      },
+      "takeover": {
+        "zh": "金额、状态或输入更新时间不明时停止出经营结论，保留原表交你核对；换输入复测后再恢复。",
+        "en": "Stop business conclusions when amounts, states or input freshness are unclear. Preserve the source table for user checks and retest with a new input before resuming."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "pr-operations-review": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读已约定 PR、当前 SHA、检查与评审，整理阻塞、负责人和可回查的跟进单。",
+        "en": "Read agreed PRs, current SHAs, checks and reviews to prepare traceable blockers, owners and follow-up actions."
+      },
+      "confirmation": {
+        "zh": "改代码、写台账、发通知、调整巡检频率、重跑 CI、合并或生产操作前分别确认。",
+        "en": "Confirm code changes, ledger writes, notifications, inspection frequency, CI reruns, merges and production actions separately."
+      },
+      "takeover": {
+        "zh": "旧 SHA 通过或当前检查缺失时保持等待，交你核对当前版本；新的提交重新验收，停止无限加密巡检。",
+        "en": "Remain waiting when only old-SHA checks pass or current checks are missing. Have the user inspect the current version, revalidate new commits and stop unbounded polling."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "remote-coding-desk": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "整理已提供的主机、账号与版本信息，准备测试 README 的最小只读验证和恢复清单。",
+        "en": "Organize supplied host, identity and version information; prepare a minimal read-only README check and recovery list."
+      },
+      "confirmation": {
+        "zh": "安装、付费授权、设备配对、私网访问规则、远程连接、真实命令和定时自检先按范围确认。",
+        "en": "Confirm installations, paid authorization, pairing, private-network access rules, remote connections, real commands and scheduled self-checks within scope."
+      },
+      "takeover": {
+        "zh": "配对、授权或连接失败时停在对应层，由你接管登录；保留版本、日志和回滚路径，不改配置掩盖失败。",
+        "en": "Stop at failed pairing, authorization or connection for user login takeover. Preserve versions, logs and rollback paths without disguising failures through configuration changes."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "team-workflow-interview": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "访谈并整理约束、来源规则与三处交接字段，给出小规模方案，先用一条样本生成文件交接。",
+        "en": "Collect constraints, source rules and handoff fields, compare small plans and prepare file handoffs from one sample."
+      },
+      "confirmation": {
+        "zh": "创建角色、分派或联系其他 Bot、接入平台、共享输出及创建定时任务前确认。",
+        "en": "Confirm role creation, delegation or contact with other Bots, platform connections, output sharing and scheduled tasks."
+      },
+      "takeover": {
+        "zh": "缺少来源、负责人或状态转换时停在相应交接，交你补齐；从失败样本恢复，不让后续角色自行编造来源。",
+        "en": "Stop at handoffs missing sources, owners or state transitions for user correction. Resume from the failed sample without letting later roles invent sources."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "usage-audit": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只读已提供的用量记录和例行任务清单，找空跑、重试与冗余交接，先提出单项调整建议。",
+        "en": "Read supplied usage records and Routine lists, identify idle runs, retries and redundant handoffs, and propose one adjustment."
+      },
+      "confirmation": {
+        "zh": "暂停、删除或改 Routine，切换模型、订阅或外部服务，以及变更账号设置前确认。",
+        "en": "Confirm pausing, deleting or changing Routines, switching models, subscriptions or external services, and account-setting changes."
+      },
+      "takeover": {
+        "zh": "用量窗口或账号归属不明时停止比较，交你核对；变更前保留基线和原设置，效果不佳时按记录恢复。",
+        "en": "Stop comparisons when usage windows or account identities are unclear. Have the user verify them; preserve baselines and settings for restoration if an approved change fails."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "webhook-knowledge-inbox": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "在合成输入上校验链接、request_id 和产物字段，整理来源记录与短摘要，分别记录接受和完成。",
+        "en": "Validate links, request ids and output fields on synthetic inputs; prepare source records and short summaries, separating acceptance from completion."
+      },
+      "confirmation": {
+        "zh": "创建 Webhook Routine、配置快捷指令或凭据、发送真实请求、写测试或正式知识库前确认。",
+        "en": "Confirm Webhook Routine creation, Shortcut or credential configuration, real requests and test or production knowledge-base writes."
+      },
+      "takeover": {
+        "zh": "返回 200 但无产物时按同一 request_id 回查 Bot 状态与文件；不可读来源标失败，交你处理，不重复入库或泄露密钥。",
+        "en": "When HTTP 200 has no artifact, inspect Bot state and files by the same request id. Mark unread sources as failed for user handling without duplicate entries or key exposure."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "wechat-webhook-bridge": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "用无敏感信息的合成消息检查字段和 client_id，整理接收、接受、完成与回复四段状态。",
+        "en": "Check fields and client ids on nonsensitive synthetic messages, tracking reception, acceptance, completion and reply separately."
+      },
+      "confirmation": {
+        "zh": "微信扫码或授权、部署桥接、配置凭据、绑定发送者、转发真实消息和回复前分别确认。",
+        "en": "Confirm WeChat login or authorization, bridge deployment, credentials, sender binding, live-message forwarding and replies separately."
+      },
+      "takeover": {
+        "zh": "入口或连接失效时停止转发，由你接管授权；结果不明先按 client_id 查四段记录，不换账号绕过或重复投递。",
+        "en": "Stop forwarding after unavailable entry points or lost connections for user authorization takeover. Inspect all four states by client id before retrying; do not bypass with another account."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "x-signal-monitor": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "只在约定公开范围比较帖子快照，按 post_id 去重，区分累计值、增量、缺基线和失败轮次。",
+        "en": "Compare post snapshots within agreed public scope, deduplicate by post id and distinguish totals, increments, missing baselines and failed runs."
+      },
+      "confirmation": {
+        "zh": "真实采集、阈值与通知目标、GitHub 存档或公开、提交推送、Routine 时间和外部模型计费前确认。",
+        "en": "Confirm live collection, thresholds and notification targets, GitHub archiving or publication, commits and pushes, Routine schedules and external-model costs."
+      },
+      "takeover": {
+        "zh": "采集失败不更新成功基线，发送不明先查回执；保留失败轮次与文件交你核查，只恢复获准范围。",
+        "en": "Do not advance a successful baseline after collection failure; inspect receipts after uncertain sends. Preserve failed runs and files for user checks and resume only authorized scope."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  },
+  "x-topic-library": {
+    "format": "handbook",
+    "updatedOn": "2026-10-18",
+    "boundaries": {
+      "automatic": {
+        "zh": "基于已读公开来源整理身份卡、来源时间、可见指标和原创选题角度，保留待审状态。",
+        "en": "Organize profile briefs, source times, visible metrics and original topic angles from read public sources, keeping review-pending state."
+      },
+      "confirmation": {
+        "zh": "新增采集范围、Notion 写入、选题批准、草稿写作、对外联系和发布前按阶段确认。",
+        "en": "Confirm expanded collection, Notion writes, topic approval, drafting, external contact and publication at each stage."
+      },
+      "takeover": {
+        "zh": "正文不可读或指标缺失时不进入可写选题，交你补证；保留原链接与未知项，不补造曝光或复制原文。",
+        "en": "Do not advance unread sources or missing metrics into draftable topics. Request user evidence while preserving links and unknowns without inventing exposure or copying originals."
+      }
+    },
+    "documentation": {
+      "checkedOn": "2026-10-18",
+      "note": {
+        "zh": "沿用本页已有来源核验记录；正文、图片、视频或源码的实际读取范围与未取得项见本页来源说明。本次整合未重新核验外部资料，不代表真实流程已跑通。",
+        "en": "Preserves this page’s existing source-review record. Its source notes state actual text, image, video or code coverage and unavailable material. This integration did not recheck external sources or establish a live workflow pass."
+      }
+    },
+    "execution": {
+      "status": "unverified",
+      "verifiedOn": null,
+      "note": {
+        "zh": "本站未实操本页真实账号、桥接、外部工具写入或定时流程；作者演示、合成样本和页面自查不替代本站实操核验。",
+        "en": "This site has not executed the live accounts, bridges, external writes or scheduled workflow. Author demonstrations, synthetic fixtures and page checkboxes do not establish this site’s live verification."
+      }
+    }
+  }
+}

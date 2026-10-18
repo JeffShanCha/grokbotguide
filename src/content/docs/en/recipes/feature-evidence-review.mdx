@@ -19,6 +19,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 Define the user path, input, success and failure behavior, then tie tests, logs and screenshots to a code revision.
 
@@ -27,6 +29,8 @@ The source discusses pstack, self-verification, project controls and a Feature M
 :::note[Verification status]
 Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
 :::
+
+<CaseBoundaries slug="feature-evidence-review" english />
 
 ## Scenario and input
 
@@ -102,3 +106,8 @@ The collector reports viewing 1 images; 0 videos remain unwatched. The image is 
 Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
 
 [See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)
+
+
+## Verification record
+
+<CaseVerification slug="feature-evidence-review" english />

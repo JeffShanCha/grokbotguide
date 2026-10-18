@@ -25,6 +25,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 分别验证飞书应用、用户授权和目标文档权限，打通群消息到 Webhook 的路径，再做来源到草稿的单条试跑。
 
@@ -33,6 +35,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 原文正文、配图和视频的读取范围分别见下文；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
 :::
+
+<CaseBoundaries slug="feishu-content-desk" />
 
 ## 场景与输入
 
@@ -163,3 +167,8 @@ handoff.csv：source_url、read_scope、topic_status、draft_doc、reviewer。Ap
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 
 [查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
+
+
+## 核验记录
+
+<CaseVerification slug="feishu-content-desk" />

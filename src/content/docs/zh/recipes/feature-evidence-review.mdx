@@ -19,6 +19,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 先定义用户路径、输入、成功与失败，再核对测试、日志和截图对应的代码版本。
 
@@ -27,6 +29,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
 :::
+
+<CaseBoundaries slug="feature-evidence-review" />
 
 ## 场景与输入
 
@@ -102,3 +106,8 @@ acceptance.md 三行：X 筛选、清空、不匹配。evidence.csv 记录 case_
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 
 [查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
+
+
+## 核验记录
+
+<CaseVerification slug="feature-evidence-review" />

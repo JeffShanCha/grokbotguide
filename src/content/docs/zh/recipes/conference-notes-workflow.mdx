@@ -25,6 +25,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 先用已获授权的会议笔记校对要点、行动项和来源，再考虑连接应用、技能与例行任务。
 
@@ -33,6 +35,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
 :::
+
+<CaseBoundaries slug="conference-notes-workflow" />
 
 ## 场景与输入
 
@@ -108,3 +112,8 @@ actions.csv：item、owner、due、evidence、status。演示可以标 proposed�
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 
 [查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
+
+
+## 核验记录
+
+<CaseVerification slug="conference-notes-workflow" />

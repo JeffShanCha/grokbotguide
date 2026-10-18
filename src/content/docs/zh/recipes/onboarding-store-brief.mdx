@@ -25,6 +25,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 第一名 Bot 可以只负责一份可检查的经营晨报。先让它读对一张表、说清异常，再考虑保存流程和拆分岗位。
 
@@ -35,6 +37,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::
 
 本轮铁柱重新读完原文并查看 7 张图片，没有视频；配图展示岗位交接、技能菜单和例行任务。本文的经营表与验收答案为本站另写。[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)。
+
+<CaseBoundaries slug="onboarding-store-brief" />
 
 ## 准备一份最小输入
 
@@ -116,3 +120,8 @@ Routine 的 Test 会执行真实工作并消耗额度。设了定时不等于输
 晨报稳定后，如果内容选题、库存分析与售后确实需要不同判断标准，再定义各自输入、负责人和交接停止点。原文的电商多岗位团队是作者示例，不是本站运行结果。
 
 客户发送、库存写入、退款和采购，应先展示具体对象与拟变更内容，再由用户确认。入门的验收标准是一名 Bot 按同一规则完成两份输入，而不是创建了多少个头衔。
+
+
+## 核验记录
+
+<CaseVerification slug="onboarding-store-brief" />

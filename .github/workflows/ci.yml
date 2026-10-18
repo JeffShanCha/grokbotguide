@@ -31,3 +31,5 @@ jobs:
         run: npm run check:search
       - name: Check English navigation and content
         run: npm run check:english
+      - name: Check case boundaries and verification on built pages
+        run: node scripts/check-case-governance.mjs --built

@@ -23,6 +23,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 把微信接收、Webhook 接受、Bot 完成和微信回复分开记录，先用一条无敏感内容的消息检查整条链。
 
@@ -31,6 +33,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
 :::
+
+<CaseBoundaries slug="wechat-webhook-bridge" />
 
 ## 场景与输入
 
@@ -106,3 +110,8 @@ bridge-log.csv：client_id、sender_match、received_at、webhook_accepted、bot
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 
 [查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
+
+
+## 核验记录
+
+<CaseVerification slug="wechat-webhook-bridge" />

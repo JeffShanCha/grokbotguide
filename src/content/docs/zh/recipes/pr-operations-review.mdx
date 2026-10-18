@@ -23,6 +23,8 @@ sources:
 ---
 
 import CopyTemplate from '~/components/CopyTemplate.astro';
+import CaseBoundaries from '~/components/CaseBoundaries.astro';
+import CaseVerification from '~/components/CaseVerification.astro';
 
 用 PR 台账检查当前提交、失败检查、冲突和待审意见，再给负责人一份可执行的跟进单。
 
@@ -31,6 +33,8 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 :::note[核验状态]
 原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
 :::
+
+<CaseBoundaries slug="pr-operations-review" />
 
 ## 场景与输入
 
@@ -106,3 +110,8 @@ pr-ledger.csv：pr_url、head_sha、check_sha、check_state、conflict、open_co
 价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
 
 [查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
+
+
+## 核验记录
+
+<CaseVerification slug="pr-operations-review" />

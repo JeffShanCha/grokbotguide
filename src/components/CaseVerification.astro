@@ -1,0 +1,23 @@
+---
+import { getCaseGovernance } from '../data/case-governance';
+interface Props { slug: string; english?: boolean }
+const { slug, english = false } = Astro.props;
+const lang = english ? 'en' : 'zh';
+const { updatedOn, documentation, execution } = getCaseGovernance(slug);
+const statuses = english
+	? { unverified: 'Unverified', partial: 'Partial verification · includes failed checks', verified: 'Verified within the recorded scope' }
+	: { unverified: '未核验', partial: '部分核验（含未通过项）', verified: '已按记录范围核验' };
+---
+<div class="case-verification" data-case-verification={slug}>
+	<p><strong>{english ? 'Content updated: ' : '内容更新日期：'}</strong><time datetime={updatedOn}>{updatedOn}</time><span>{english ? ' · Editing a page does not reverify its sources or live workflow.' : ' · 修改页面不等于重新核验资料或实操。'}</span></p>
+	<p data-documentation-status={documentation.checkedOn ? 'recorded' : 'unverified'}><strong>{english ? 'Documentation review: ' : '资料核验：'}</strong>{documentation.checkedOn ? <time datetime={documentation.checkedOn}>{documentation.checkedOn}</time> : <span>{english ? 'Unverified · no review date recorded' : '未核验 · 暂无核验日期'}</span>}<br />{documentation.note[lang]}</p>
+	<p data-execution-status={execution.status}><strong>{english ? 'Live workflow verification: ' : '实操核验：'}</strong>{statuses[execution.status]}{execution.verifiedOn && <> · <time datetime={execution.verifiedOn}>{execution.verifiedOn}</time></>}<br />{execution.note[lang]}</p>
+	{execution.evidenceUrl && <p class="case-verification-links"><a href={execution.evidenceUrl}>{english ? 'Historical check record' : '历史核验记录'} ↗</a>{execution.auditUrl && <a href={execution.auditUrl}>{english ? 'Process audit and failed checks' : '流程审计与未通过项'} ↗</a>}</p>}
+</div>
+
+<style>
+	.case-verification { border-left: 3px solid var(--wf-accent, var(--sl-color-text-accent)); padding: 4px 0 4px 18px; margin: 25px 0; }
+	.case-verification p, :global(.wf-prose) .case-verification p { font-size: 14px; line-height: 1.9; overflow-wrap: anywhere; }
+	.case-verification-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+	.case-verification-links a { display: inline-flex; align-items: center; min-height: 44px; }
+</style>

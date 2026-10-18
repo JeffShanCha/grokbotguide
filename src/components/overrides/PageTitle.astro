@@ -45,10 +45,10 @@ const showMeta = !isSplash && !isIndex && (data.grade || data.author);
 const fmt = (d?: Date) => (d ? formatDate(d, lang) : '');
 
 // 来源徽章的文字
-// official：依据官方文档 · 核对于 {last_checked，缺省用最后更新日期}
+// 核验日期只使用明确记录的 last_checked，不以内容更新时间代替。
 // community：来自社区实测 · 原作者 {第一条非官方来源括号里的作者名}
 // tested：✓ 本站实测 · {last_verified} · {tested_plan}
-const checked = data.last_checked ?? route.lastUpdated;
+const checked = data.last_checked;
 const communityAuthor = (() => {
 	for (const src of data.sources) {
 		if (/x\.ai|cursor\.com/.test(src.url)) continue;
@@ -58,12 +58,12 @@ const communityAuthor = (() => {
 	return '';
 })();
 let gradeText = '';
-if (data.grade === 'official') gradeText = [t('grade.official'), checked && `${t('meta.checkedOn')} ${fmt(checked)}`].filter(Boolean).join(' · ');
+if (data.grade === 'official') gradeText = [t('grade.official'), checked ? `${t('meta.checkedOn')} ${fmt(checked)}` : t('meta.unchecked')].join(' · ');
 else if (data.grade === 'community') gradeText = [t('grade.community'), communityAuthor && `${t('meta.origAuthor')} ${communityAuthor}`].filter(Boolean).join(' · ');
 else if (data.grade === 'tested') gradeText = ['✓ ' + t('grade.tested'), fmt(data.last_verified), data.tested_plan].filter(Boolean).join(' · ');
 else if (data.grade) gradeText = t(`grade.${data.grade}`);
-// official 的日期已经在徽章里，其余分级单独显示更新日期
-const showUpdated = data.grade !== 'official' && data.grade !== 'tested' && route.lastUpdated;
+// 内容更新与资料/实操核验是不同记录，分别显示。
+const showUpdated = route.lastUpdated;
 
 // 实战案例文章：标题下的摘要格
 const isRecipe = /^[a-z]+\/recipes\/.+/.test(route.id);
