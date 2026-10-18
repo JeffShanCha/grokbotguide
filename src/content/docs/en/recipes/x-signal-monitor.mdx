@@ -149,6 +149,18 @@ Mark actions without real receipts as not executed. Empty new_hits does not esta
 The Skill, routine, pinned state, failure archive and account-reduction commit were reviewed statically. Fixtures validate arithmetic only. No X call, schedule, notification, external model or author-repository push occurred. Tool names in a source Skill do not guarantee availability on every account. Free API terms and external-model commit delegation remain unverified.
 :::
 
+## Archive supplement: distinguish imports, baselines and actual run times
+
+Three more pinned archives make the handoff easier to audit. These are author-maintained records; the site did not rerun the monitor or independently verify their X data or notification delivery.
+
+| Source record | What the file records | How to classify the handoff |
+| --- | --- | --- |
+| [Initial state import](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-09/1236.json) | `kind=bootstrap`, 48 imported snapshots and four existing push records; explicitly not a full scan | Classify an import of old state; existing counts are not new scans or notifications |
+| [06:04 baseline archive](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-13/0604.json) | `baseline=true`, 108 posts recorded as checked, actual `run_at` 06:14:31, empty qualification list | Store scheduled slot, actual time and baseline status separately; an empty list does not validate delivery |
+| [09:07 failure archive](https://github.com/aehyok/x-viral-monitor/blob/8ad0a750c4f794036c4e946aca655eadf55e100d/data/hourly/2026-10-13/0907.json) | `scheduled_slot=0904`, actual time 09:08:30, `x_read_unavailable`, zero posts checked, old state preserved | Record a read failure and the last valid observation; a filename or schedule is not the execution time |
+
+Add three checks: classify the run as a state import, baseline or scan; save planned and actual times separately; then reconcile new counts and delivery receipts for that run. Cumulative counters cannot establish a successful new run. Delivery remains unverified without an independent receipt.
+
 ## Sources and applicability
 
 Original article: [@aehyok](https://x.com/aehyok/status/2109817788198158347); published 2026-10-13.

@@ -1,0 +1,517 @@
+{
+  "id": "2026-10-18-langeai-unresolved-source-followup",
+  "prepared_at": "2026-10-18",
+  "checked_at": "2026-10-18T20:37:16.283972+08:00",
+  "finalized": true,
+  "entry_url": "https://x.com/0xlangeai/status/2111396742264742034",
+  "source_file": "langeai-unresolved-source-followup-2026-10-18.json",
+  "source_sha256": "97ca836b05618ccabe322cf0600b1179b1636c75eead71f2e65fc515b5507d6f",
+  "collector_delivery": {
+    "downloaded": true,
+    "full_json_inspected": true,
+    "raw_bytes": 14770,
+    "time_note": "Collector-generated timestamps are retained in the raw artifact as reported; this edition uses the actual reviewer inspection time."
+  },
+  "evidence_basis": "Collector public X follow-up, Codex independent authenticated GitHub read-only searches, complete default-branch path trees, pinned source records and template-directory pages. No source software was installed or executed.",
+  "operational_refinements": [
+    {
+      "article_id": "a20",
+      "path": "recipes/x-signal-monitor",
+      "kind": "refined_acceptance",
+      "title": "Separate imports, baselines, scans, scheduled slots and actual run times",
+      "basis": "Three pinned author-maintained JSON records; record contents verified, underlying X data and delivery not independently reproduced",
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a11",
+      "path": "recipes/webhook-knowledge-inbox",
+      "kind": "author_statement_with_site_written_acceptance",
+      "title": "Map different input types to multiple instructed Webhooks for one Bot",
+      "basis": "Collector read author reply 2111499978728448348; configuration and acceptance suggestions are original site writing",
+      "execution_status": "not_tested"
+    }
+  ],
+  "not_counted_as_new": [
+    "Existing Git archive workflow is not counted again.",
+    "Generic publisher image fixes do not establish repair of the two recording failures.",
+    "Similar Jev or Feishu repositories are not substituted for originals."
+  ],
+  "targets": [
+    {
+      "article_id": "a24",
+      "path": "recipes/confidence-triage-shadow",
+      "source_url": "https://x.com/0xlangeai/status/2101555600618602625",
+      "status": "original_script_and_cases_not_obtained",
+      "collector_scope": "Limited recent author posts, metadata, public identifiers and available author links; not an exhaustive timeline review",
+      "access_limit": "Article endpoint returned 404 in this round; prior article/image/sampled-video reading is retained, not reclassified as a deleted post",
+      "independent_pages": [
+        {
+          "url": "https://grok-bot.app/",
+          "scope": "Homepage"
+        },
+        {
+          "url": "https://grok-bot.app/creators",
+          "scope": "Creator index; no author-specific URL guessed"
+        }
+      ],
+      "remaining": [
+        "Original timeline_gate.py and dependencies",
+        "All eight cases and expected labels",
+        "Exact schema, thresholds and shadow implementation"
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a10",
+      "path": "recipes/feishu-content-desk",
+      "source_url": "https://x.com/liyue_ai/status/2109203944799141922",
+      "status": "role_and_bridge_sources_not_obtained",
+      "associated_github_account": "https://github.com/liyue-aigc",
+      "attribution_source": "https://api.github.com/users/liyue-aigc",
+      "twitter_username": "liyue_ai",
+      "repository_listing_count": 14,
+      "path_review_count": 14,
+      "full_source_review_claimed": false,
+      "path_scope": "Default-branch recursive path trees only; not full content review of every file",
+      "trees": [
+        {
+          "repository": "liyue-aigc/emberfall-rpg",
+          "default_branch": "main",
+          "tree_sha": "bd69fa88d7fb0ec24f815470b83f8ae61f90b951",
+          "truncated": false,
+          "entry_count": 70,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/female-outfit-director",
+          "default_branch": "main",
+          "tree_sha": "1f96d63ec5ae9d6fdbc7e3b4e95b06138f1449c0",
+          "truncated": false,
+          "entry_count": 15,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/female-portrait-director",
+          "default_branch": "main",
+          "tree_sha": "8cddecd6786d187688e8e89a1f606540186a962f",
+          "truncated": false,
+          "entry_count": 191,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/Hello-Python",
+          "default_branch": "master",
+          "tree_sha": "43d91f46102cd7747b1a6080d1ece139aabb3cf9",
+          "truncated": false,
+          "entry_count": 4,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/holo-koi-card",
+          "default_branch": "main",
+          "tree_sha": "43c26b76ba4e96dff016528b2d3a992aa35e3439",
+          "truncated": false,
+          "entry_count": 24,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/local-markdown-studio",
+          "default_branch": "main",
+          "tree_sha": "54a38eb89ac77510567b2993615e4800e8e849a6",
+          "truncated": false,
+          "entry_count": 4,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/mistpine-defense",
+          "default_branch": "main",
+          "tree_sha": "f16c7c4607b3505d9553fb42bd49134c07fdf7de",
+          "truncated": false,
+          "entry_count": 94,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/neon-zenith",
+          "default_branch": "main",
+          "tree_sha": "fbfff3da90c28a5be0cc9e0feeaa344a86acd456",
+          "truncated": false,
+          "entry_count": 66,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/outfit-director",
+          "default_branch": "main",
+          "tree_sha": "c291d92c2638476fed21fc05a30672ea16547bf7",
+          "truncated": false,
+          "entry_count": 12,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/seedance-2-5-fight-director",
+          "default_branch": "main",
+          "tree_sha": "4e7d67657432b8a48bf9a90275d568445cc341fb",
+          "truncated": false,
+          "entry_count": 20,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/seedance-2-5-video-director",
+          "default_branch": "main",
+          "tree_sha": "ad0e68ba6ce24fb9ae9c67c9276061cef37663f1",
+          "truncated": false,
+          "entry_count": 21,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/SQL-Basic-Knowledge",
+          "default_branch": "main",
+          "tree_sha": "afc5a659edabb686ed822f785192525fd97a9123",
+          "truncated": false,
+          "entry_count": 4,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/xianxia-cinematic-video-director",
+          "default_branch": "main",
+          "tree_sha": "e19620041ee3aac87c17e91a8507fd01b66ff0a4",
+          "truncated": false,
+          "entry_count": 14,
+          "matches": [],
+          "error": null
+        },
+        {
+          "repository": "liyue-aigc/xianxia-visual-director",
+          "default_branch": "main",
+          "tree_sha": "bd886174f4d84659f2381c4f5baa610003c5bdda",
+          "truncated": false,
+          "entry_count": 15,
+          "matches": [],
+          "error": null
+        }
+      ],
+      "keyword_match_review": [
+        {
+          "repository": "liyue-aigc/seedance-2-5-video-director",
+          "commit": "ad0e68ba6ce24fb9ae9c67c9276061cef37663f1",
+          "path": "references/capabilities-and-limits.md",
+          "blob_sha": "6cdfca3904d990b1b3e076a8d535c32eddaa2dd8",
+          "read_scope": "lark keyword lines with surrounding context",
+          "matches": [
+            {
+              "line": 13,
+              "text": "\n- Source: `https://bytedance.larkoffice.com/wiki/NjnWwvf4BiFYFLk2RzrcEgaunGf`\n- Document title: `【Dreamina】Seedance 2.5 User Guide`"
+            },
+            {
+              "line": 18,
+              "text": "\nTreat this local file as the V1 runtime authority so the Skill does not depend on network access or Lark permissions. If the Dreamina UI conflicts with this snapshot, state the discrepancy and follow the current UI for submission constraints; do not silently invent updated limits.\n"
+            }
+          ]
+        },
+        {
+          "repository": "liyue-aigc/seedance-2-5-video-director",
+          "commit": "ad0e68ba6ce24fb9ae9c67c9276061cef37663f1",
+          "path": "references/official-examples.md",
+          "blob_sha": "63d43f8072277f89e79aab3592cc52afc3b88931",
+          "read_scope": "lark keyword lines with surrounding context",
+          "matches": [
+            {
+              "line": 18,
+              "text": "\n- Source: `https://bytedance.larkoffice.com/wiki/NjnWwvf4BiFYFLk2RzrcEgaunGf`\n- Source revision: `419`"
+            }
+          ]
+        }
+      ],
+      "remaining": [
+        "Full role SOUL.md files",
+        "Bridge entry point and role/profile mapping",
+        "Message filtering, deduplication, echo and completion handling"
+      ],
+      "audio": {
+        "human_listening": false,
+        "speech_or_music_confirmed": false,
+        "new_audio_derived_steps": 0
+      },
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a08",
+      "path": "bots/team-blueprint",
+      "source_url": "https://x.com/xaiwind/status/2100027951618416963",
+      "status": "generic_fix_records_read_specific_repairs_unverified",
+      "pinned_commit": "6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4",
+      "issues_count": 0,
+      "recording_commit_verified": false,
+      "recorded_image_repairs_verified": false,
+      "remaining": [
+        "Exact recording commit",
+        "Repair receipts for its two failed images",
+        "Current X compatibility"
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a20",
+      "path": "recipes/x-signal-monitor",
+      "source_url": "https://x.com/aehyok/status/2109817788198158347",
+      "status": "additional_archive_records_read",
+      "pinned_commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+      "remaining": [
+        "Original chat installation wording",
+        "Standalone collector",
+        "Independent notification delivery receipt",
+        "Live reproduction and current external-model terms"
+      ],
+      "execution_status": "not_tested"
+    },
+    {
+      "article_id": "a11",
+      "path": "recipes/webhook-knowledge-inbox",
+      "source_url": "https://x.com/cgnot996/status/2097487429104197688",
+      "followup_url": "https://x.com/cgnot996/status/2111499978728448348",
+      "status": "author_statement_not_reproduced",
+      "remaining": [
+        "Complete Shortcut actions",
+        "Exact phone invocation",
+        "End-to-end storage receipt"
+      ],
+      "execution_status": "not_tested"
+    }
+  ],
+  "independent_searches": [
+    {
+      "query": "filename:timeline_gate.py",
+      "checked_at": "2026-10-18T20:29:49.277375+08:00",
+      "exit_code": 0,
+      "total_count": 6,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "ly989264/valkey-scale-lab",
+          "path": "project/scripts/fault_failover_timeline_gate.py",
+          "html_url": "https://github.com/ly989264/valkey-scale-lab/blob/2500722d0313a593f4dead0bc30f46c524b4b34f/project/scripts/fault_failover_timeline_gate.py"
+        },
+        {
+          "repository": "lyndonkl/chipandadmarketresearch",
+          "path": "p2-ad-market/research/notes/prove_p1_timeline_gate.py",
+          "html_url": "https://github.com/lyndonkl/chipandadmarketresearch/blob/e8962f4b29072d867230b87765a73d04538ce8aa/p2-ad-market/research/notes/prove_p1_timeline_gate.py"
+        },
+        {
+          "repository": "carlzimmerman/zimmerman-formula",
+          "path": "book/figures/ch26_test_timeline_gate.py",
+          "html_url": "https://github.com/carlzimmerman/zimmerman-formula/blob/a0c7f22324fffa8442b76384c7a0540cbb1606e5/book/figures/ch26_test_timeline_gate.py"
+        },
+        {
+          "repository": "pamu512/tarka",
+          "path": "packages/shared-core/tests/test_view_case_timeline_gate.py",
+          "html_url": "https://github.com/pamu512/tarka/blob/8f1faa89705095067c0677cd7aca15303bab12ef/packages/shared-core/tests/test_view_case_timeline_gate.py"
+        },
+        {
+          "repository": "benjamin0331/Bridgeus2026",
+          "path": "backend/api/tests_ccnd_timeline_gate.py",
+          "html_url": "https://github.com/benjamin0331/Bridgeus2026/blob/853a116160383a8040fc24a7b550f16cf31b459d/backend/api/tests_ccnd_timeline_gate.py"
+        },
+        {
+          "repository": "grammy-jiang/claude-code-mods-knowledge",
+          "path": "tests/test_unreviewed_version_timeline_gate.py",
+          "html_url": "https://github.com/grammy-jiang/claude-code-mods-knowledge/blob/9fc19358f6f3abaa0c5dd222273fff5a39c7fb92/tests/test_unreviewed_version_timeline_gate.py"
+        }
+      ],
+      "message": null
+    },
+    {
+      "query": "\"jev-grokbot-gate\"",
+      "checked_at": "2026-10-18T20:29:49.506443+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    },
+    {
+      "query": "\"feishu-bots\" \"SOUL.md\"",
+      "checked_at": "2026-10-18T20:29:49.049699+08:00",
+      "exit_code": 0,
+      "total_count": 4,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "YangYuChen-Work/awesome-ai-skills",
+          "path": "生产力/multi-gateway-feishu-bots/SKILL.md",
+          "html_url": "https://github.com/YangYuChen-Work/awesome-ai-skills/blob/3115c771dfdcf7c43bc77632af66e086337cf752/生产力/multi-gateway-feishu-bots/SKILL.md"
+        },
+        {
+          "repository": "star-fx/geektime-enterprise-java-ai",
+          "path": "chapter-3/资料/新skills集合/生产力/multi-gateway-feishu-bots/SKILL.md",
+          "html_url": "https://github.com/star-fx/geektime-enterprise-java-ai/blob/b4a3d253a96a9e0fb6c1e7a8d83669ce102728f5/chapter-3/资料/新skills集合/生产力/multi-gateway-feishu-bots/SKILL.md"
+        },
+        {
+          "repository": "star-fx/geektime-enterprise-java-ai",
+          "path": "chapter-3/资料/新skills集合/生产力/multi-gateway-feishu-bots/SKILL(1).md",
+          "html_url": "https://github.com/star-fx/geektime-enterprise-java-ai/blob/b4a3d253a96a9e0fb6c1e7a8d83669ce102728f5/chapter-3/资料/新skills集合/生产力/multi-gateway-feishu-bots/SKILL(1).md"
+        },
+        {
+          "repository": "openclaw/docs",
+          "path": "docs/de/channels/feishu.md",
+          "html_url": "https://github.com/openclaw/docs/blob/e96c9ce80d4939af00e363ccb0a9cf91ee17a28d/docs/de/channels/feishu.md"
+        }
+      ],
+      "message": null
+    },
+    {
+      "query": "\"timeline_last_run.json\"",
+      "checked_at": "2026-10-18T20:30:05.270062+08:00",
+      "exit_code": 0,
+      "total_count": 2,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "michael-developer-1384/hold-the-tower",
+          "path": "docs/domain_model.md",
+          "html_url": "https://github.com/michael-developer-1384/hold-the-tower/blob/e3487dd7cd7340ef6b4e5e046ff570470e346c09/docs/domain_model.md"
+        },
+        {
+          "repository": "michael-developer-1384/hold-the-tower",
+          "path": "scripts/run/timeline_recorder.gd",
+          "html_url": "https://github.com/michael-developer-1384/hold-the-tower/blob/e3487dd7cd7340ef6b4e5e046ff570470e346c09/scripts/run/timeline_recorder.gd"
+        }
+      ],
+      "message": null
+    },
+    {
+      "query": "\"jev-typesafe-smoke\"",
+      "checked_at": "2026-10-18T20:30:05.238665+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    },
+    {
+      "query": "\"/workspace/feishu-bots\"",
+      "checked_at": "2026-10-18T20:30:05.237718+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    },
+    {
+      "query": "user:liyue-aigc SOUL",
+      "checked_at": "2026-10-18T20:32:06.884701+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    },
+    {
+      "query": "user:liyue-aigc feishu",
+      "checked_at": "2026-10-18T20:32:06.769681+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    },
+    {
+      "query": "user:liyue-aigc lark",
+      "checked_at": "2026-10-18T20:32:06.874072+08:00",
+      "exit_code": 0,
+      "total_count": 2,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "liyue-aigc/seedance-2-5-video-director",
+          "path": "references/capabilities-and-limits.md",
+          "html_url": "https://github.com/liyue-aigc/seedance-2-5-video-director/blob/ad0e68ba6ce24fb9ae9c67c9276061cef37663f1/references/capabilities-and-limits.md"
+        },
+        {
+          "repository": "liyue-aigc/seedance-2-5-video-director",
+          "path": "references/official-examples.md",
+          "html_url": "https://github.com/liyue-aigc/seedance-2-5-video-director/blob/ad0e68ba6ce24fb9ae9c67c9276061cef37663f1/references/official-examples.md"
+        }
+      ],
+      "message": null
+    },
+    {
+      "query": "user:liyue-aigc \"x-intel\"",
+      "checked_at": "2026-10-18T20:32:06.757779+08:00",
+      "exit_code": 0,
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": [],
+      "message": null
+    }
+  ],
+  "pinned_record_checks": [
+    {
+      "repository": "xaiwind/x-article-publisher",
+      "commit": "6cd2f1b752afe966c00bb803c1a1c5eb7a1085d4",
+      "path": "CHANGELOG.md",
+      "blob_sha": "34503deaff9d0b48ea180865e2b2f43adbeb72a9",
+      "sha256": "f2c01f7a8772af13d79271e59eb795f1d7848dd542ff8b4ee6626581c7ee8ecf"
+    },
+    {
+      "repository": "aehyok/x-viral-monitor",
+      "commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+      "path": "data/hourly/2026-10-13/0604.json",
+      "blob_sha": "0dc08e151d45644359157c2f75b013374563ced8",
+      "sha256": "91919d2df10139debab473892cf20aa4bab2ab72d32224a1e2766c28fa10e6f6"
+    },
+    {
+      "repository": "aehyok/x-viral-monitor",
+      "commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+      "path": "data/hourly/2026-10-13/0907.json",
+      "blob_sha": "51bd4f1854bb525aa7def452eca31c205fcfb2cc",
+      "sha256": "58aa26b981a321ebfd95e031ca5b23c65058d2eb3f82eaa38ec7f53a98c2f398"
+    },
+    {
+      "repository": "aehyok/x-viral-monitor",
+      "commit": "8ad0a750c4f794036c4e946aca655eadf55e100d",
+      "path": "data/hourly/2026-10-09/1236.json",
+      "blob_sha": "8aac26e9c9bcd6b69e379b8d43fa983d11bd870d",
+      "sha256": "6efb5b46e5b828b634fac6c3e0f1e99524bb10c20869be91623bccedfc27f9a4"
+    }
+  ],
+  "archive_acceptance": [
+    {
+      "path": "data/hourly/2026-10-09/1236.json",
+      "kind": "bootstrap",
+      "snapshot_count": 48,
+      "pushed_count": 4,
+      "full_scan": false
+    },
+    {
+      "path": "data/hourly/2026-10-13/0604.json",
+      "baseline": true,
+      "slot": "0604",
+      "actual_run_at": "2026-10-13T06:14:31.451410+08:00",
+      "posts_checked": 108,
+      "new_qualified_count": 0,
+      "underlying_results_independently_reproduced": false
+    },
+    {
+      "path": "data/hourly/2026-10-13/0907.json",
+      "scheduled_slot": "0904",
+      "actual_run_at": "2026-10-13T09:08:30+08:00",
+      "status": "x_read_unavailable",
+      "posts_checked": 0,
+      "state_unchanged": true
+    }
+  ],
+  "publication_scope": "Five existing bilingual guides and the reading/resource map; no new catalog entries or unrelated daily candidates.",
+  "reproduction_status": "not_tested; no third-party script, account operation, webhook call, notification or routine was executed.",
+  "missing_source_policy": "Not obtained within the recorded public-source and access scope is not proof of nonexistence."
+}
