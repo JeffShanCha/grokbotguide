@@ -28,9 +28,12 @@
         "a01-m03"
       ],
       "photos_viewed": 2,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 2,
@@ -62,9 +65,12 @@
         "a02-m13"
       ],
       "photos_viewed": 10,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 3,
@@ -90,9 +96,12 @@
         "a03-m07"
       ],
       "photos_viewed": 7,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 4,
@@ -116,9 +125,12 @@
         "a04-m05"
       ],
       "photos_viewed": 1,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 5,
@@ -140,9 +152,12 @@
         "a05-m03"
       ],
       "photos_viewed": 12,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 6,
@@ -168,9 +183,12 @@
         "a06-m07"
       ],
       "photos_viewed": 26,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 7,
@@ -192,9 +210,12 @@
         "a07-m03"
       ],
       "photos_viewed": 18,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 8,
@@ -216,9 +237,15 @@
         "a08-m03"
       ],
       "photos_viewed": 11,
-      "videos_unread": 1,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 1,
+      "videos_sampled": 1,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0,
+      "video_methods": [
+        "a08-v01"
+      ]
     },
     {
       "entry_item": 9,
@@ -238,9 +265,12 @@
         "a09-m01"
       ],
       "photos_viewed": 12,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 10,
@@ -260,9 +290,15 @@
         "a10-m01"
       ],
       "photos_viewed": 22,
-      "videos_unread": 1,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 1,
+      "videos_sampled": 1,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0,
+      "video_methods": [
+        "a10-v01"
+      ]
     },
     {
       "entry_item": 11,
@@ -284,9 +320,13 @@
         "a11-m03"
       ],
       "photos_viewed": 12,
-      "videos_unread": 2,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 2,
+      "videos_sampled": 2,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0,
+      "video_methods": []
     },
     {
       "entry_item": 12,
@@ -306,9 +346,12 @@
         "a12-m01"
       ],
       "photos_viewed": 5,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 13,
@@ -329,9 +372,12 @@
         "a13-m02"
       ],
       "photos_viewed": 12,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 14,
@@ -357,9 +403,12 @@
         "a14-m07"
       ],
       "photos_viewed": 8,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 15,
@@ -377,9 +426,12 @@
       },
       "methods": [],
       "photos_viewed": 11,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "official-access-check-replacement"
+      "editorial_mode": "official-access-check-replacement",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 16,
@@ -400,9 +452,12 @@
         "a16-m02"
       ],
       "photos_viewed": 8,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 17,
@@ -425,9 +480,12 @@
         "a17-m04"
       ],
       "photos_viewed": 19,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 18,
@@ -449,9 +507,12 @@
         "a18-m03"
       ],
       "photos_viewed": 16,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 19,
@@ -472,9 +533,12 @@
         "a19-m02"
       ],
       "photos_viewed": 1,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 20,
@@ -495,9 +559,13 @@
         "a20-m02"
       ],
       "photos_viewed": 3,
-      "videos_unread": 1,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 1,
+      "videos_sampled": 1,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0,
+      "video_methods": []
     },
     {
       "entry_item": 21,
@@ -517,9 +585,12 @@
         "a21-m01"
       ],
       "photos_viewed": 1,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 22,
@@ -541,9 +612,12 @@
         "a22-m03"
       ],
       "photos_viewed": 8,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 23,
@@ -564,9 +638,12 @@
         "a23-m02"
       ],
       "photos_viewed": 13,
-      "videos_unread": 0,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 0,
+      "videos_sampled": 0,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0
     },
     {
       "entry_item": 24,
@@ -586,9 +663,13 @@
         "a24-m01"
       ],
       "photos_viewed": 7,
-      "videos_unread": 1,
       "execution_status": "not_tested",
-      "editorial_mode": "original-workflow-from-source"
+      "editorial_mode": "original-workflow-from-source",
+      "videos_total": 1,
+      "videos_sampled": 1,
+      "videos_unreviewed": 0,
+      "videos_continuously_watched": 0,
+      "video_methods": []
     }
   ],
   "media_reconciliation": {
@@ -602,17 +683,24 @@
     },
     "videos": {
       "total": 6,
-      "watched": 0,
-      "unread": 6,
-      "note_zh": "视频未下载未观看，标未读"
+      "reviewed": 6,
+      "sampled_visual_review": 6,
+      "continuously_watched": 0,
+      "unreviewed": 0,
+      "audio_tracks_automatically_processed": 5,
+      "audio_unconfirmed": 1,
+      "note_zh": "约1fps覆盖首尾和中间画面、10fps帧差辅助与关键帧放大；最大已看帧间隔1.23秒，非连续观看。5条音轨作全程自动处理，未人工听辨；飞书音频仍未确认。全部流程未实测。"
     },
     "articles": 24,
-    "methods": 79
+    "methods": 79,
+    "video_methods": 2
   },
   "editorial_corrections": [
     "Collector confirmed the iMessage/webhook correction belongs to a10, not a01.",
     "Collector confirmed the local-execution menu correction belongs to a17, not a07.",
-    "Stale body-stage image gaps are superseded by photo records; missing prompts and six unwatched videos remain unresolved.",
+    "Stale body-stage image gaps are superseded by photo records; missing prompts remain unavailable; video reading scope is now detailed in the separate supplement.",
     "Item 15 is an official access checklist replacement, not a reproduction of the embedded registration method."
-  ]
+  ],
+  "video_supplement": "2026-10-18-langeai-video-supplement.json",
+  "video_method_count": 2
 }

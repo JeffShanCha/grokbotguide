@@ -24,7 +24,7 @@ import CopyTemplate from '~/components/CopyTemplate.astro';
 
 Submit shared links with a request identity and distinguish accepted, read, organized and stored states.
 
-The source describes webhook routines, the iOS Get Contents of URL action and a text-input alternative. This guide adds identity and receipt checks without assuming video coverage.
+The source describes webhook routines, the iOS Get Contents of URL action and a text-input alternative. This guide adds identity and receipt checks; the two phone recordings are reviewed in the supplement below.
 
 :::note[Verification status]
 Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
@@ -93,13 +93,43 @@ Propose one next step with a recovery plan and wait for confirmation.
 
 </CopyTemplate>
 
+## Video supplement: two phone entry points and completion states
+
+The two recordings clarify where the existing Shortcuts are used on a phone. They do not add a knowledge-base architecture. Both show submission from the phone, with no final storage receipt.
+
+### Video one: Douyin share sheet (12.23 seconds)
+
+1. Tap Share on the content page (00:00–00:03).
+2. Choose More to open the system share sheet (00:03–00:06).
+3. Select the Shortcut named “Send to knowledge Bot” in the recording (00:06–00:07).
+4. Return to playback (00:07–00:12), then check the request and artifact in the Bot chat separately. Returning to the app does not establish successful storage.
+
+This adds entry-point detail to `a11-m02`. The audio belongs to the third-party video being shared, not to a Grok Bot tutorial. Automatic recognition covered the full track; that work is not transcribed here.
+
+### Video two: copy a WeChat link and enter it (16.97 seconds)
+
+1. Copy the article link from its top-right menu and check the copied confirmation (00:00–00:04).
+2. Invoke Shortcuts and choose the knowledge-inbox action (00:04–00:06).
+3. Paste the URL into the link prompt (00:06–00:12).
+4. Submit and return to reading (00:12–00:17); check source-reading status, summary and output path in the Bot separately.
+
+This expands `a11-m03`. The recording does not establish whether an Action button or another entry point invoked the Shortcut. Action-button configuration is therefore not a verified prerequisite. Full-track analysis found digital silence.
+
+### Add these to the acceptance run
+
+Submit the same synthetic test link through both paths, recording `entry=share_sheet` or `entry=manual_link`, a request identifier and response time. Retain the existing `request_id` deduplication rule. Record server-side acceptance, source reading and storage separately: an HTTP 200 means accepted and started under the [official routine guidance](https://cursor.com/help/grok-bot/routines). A phone demonstration does not prove server-side processing, deduplication or writing completed.
+
+:::note[Video verification scope]
+Both recordings were sampled at approximately one frame per second, including their ends. The largest viewed-frame gaps were 1.23 seconds and one second; this was not continuous viewing. The first recording's share-menu scroll at 00:03.4–00:06.5 was not inspected frame by frame. The second recording's invocation mechanism remains unknown. Full audio tracks underwent automatic recognition and loudness analysis, without human listening. The Shortcuts were not rerun and the shared third-party works were not read.
+:::
+
 ## Sources and applicability
 
 Original article: [@cgnot996](https://x.com/cgnot996/status/2097487429104197688); published 2026-09-09.
 
 Index-to-source mapping: strong content match.
 
-The collector reports viewing 12 images; 2 videos remain unwatched. The screenshot uses info for Shortcut Input. If adopting the request_id/source_url fixture, update the routine parser to match. The images also show stored paths and receipts.
+The collector reports viewing 12 images and reviewing 2 video(s) through sampled frames, without continuous playback. The screenshot uses info for Shortcut Input. If adopting the request_id/source_url fixture, update the routine parser to match. The images also show stored paths and receipts.
 
 Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
 

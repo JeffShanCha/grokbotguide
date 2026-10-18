@@ -1,0 +1,366 @@
+{
+  "id": "2026-10-18-langeai-video-supplement",
+  "prepared_at": "2026-10-18",
+  "finalized": true,
+  "entry_url": "https://x.com/0xlangeai/status/2111396742264742034",
+  "source_file": "langeai-six-video-supplement-2026-10-18.json",
+  "source_sha256": "30c556d1d1cbcfa1a373ab9f062b196d3ebf673858bb952e603b06c492a56eff",
+  "base_body_image_method_count": 79,
+  "video_method_count": 2,
+  "standalone_method_count": 1,
+  "existing_method_extensions": 1,
+  "phone_entry_details": 2,
+  "background_only_videos": 1,
+  "duplicate_evidence_videos": 1,
+  "summary_zh": "6个视频按抽帧补读：1项新增独立流程、1项已有方法扩展、2个手机入口细节；另外2个视频分别是模型背景与重复评估证据。",
+  "verification_zh": "约1fps覆盖首尾和中间画面、10fps帧差辅助与关键帧放大；最大已看帧间隔1.23秒，非连续观看。5条音轨作全程自动处理，未人工听辨；飞书音频仍未确认。全部流程未实测。",
+  "official_checks": [
+    {
+      "url": "https://cursor.com/help/grok-bot/routines",
+      "read_scope": "official page body",
+      "confirmed": [
+        "Webhook requests use an HTTP POST and Authorization Bearer key, optionally carrying a JSON body.",
+        "A 200 response means the call was accepted and a run started; completion must be checked in the Bot chat.",
+        "Routine Test executes real work and uses usage; it can affect connected services."
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/grok-bot/security",
+      "read_scope": "architecture, approvals and identity sections",
+      "confirmed": [
+        "Connected-service actions retain the permissions of the signed-in member.",
+        "The request should specify allowed actions and stop points; an approval covers the proposed action.",
+        "Separate Bots or task roles do not themselves establish independent credentials."
+      ]
+    },
+    {
+      "url": "https://cursor.com/help/grok-bot/connect-plugins",
+      "read_scope": "official page body",
+      "confirmed": [
+        "An installed plugin may still need provider authentication.",
+        "Plugin connections use the account signed in to Grok Bot and cannot exceed that account permissions."
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/grok-bot/work",
+      "read_scope": "computer, sign-in and plugin sections",
+      "confirmed": [
+        "The Bot computer retains website sessions separately from connector-backend OAuth tokens.",
+        "The user takes over sensitive sign-in, two-factor and payment steps."
+      ]
+    }
+  ],
+  "video_records": [
+    {
+      "article_id": "a08",
+      "source_url": "https://x.com/xaiwind/status/2100027951618416963",
+      "media_key": "13_2099918614094884864",
+      "resource_id": "x-xaiwind-team-blueprint",
+      "path": "bots/team-blueprint",
+      "duration_s": 59.0,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 59.0,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 59,
+        "max_viewed_gap_s": 1.0,
+        "extra_zoom_frames": [
+          "0",
+          "1.2",
+          "5",
+          "9",
+          "14.3",
+          "16.3",
+          "18.6",
+          "20",
+          "25",
+          "28.5",
+          "35.5",
+          "39",
+          "41",
+          "44",
+          "50",
+          "56",
+          "58.9"
+        ],
+        "limits_zh": [
+          "t≈17s、41s、58–59s 为转场模糊帧",
+          "聊天气泡右侧被裁或过小，个别句尾未读全"
+        ]
+      },
+      "audio": {
+        "has_track": true,
+        "status": "background_music_only",
+        "automatic_full_track_analysis": true,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2099918614094884864",
+        "relation": "new_method",
+        "id": "a08-v01"
+      },
+      "evidence_spans": [
+        "0–4s",
+        "4–8s",
+        "8–14s",
+        "14–18s",
+        "18–25s",
+        "25–43s",
+        "43–58s"
+      ],
+      "method_ids": [
+        "a08-v01"
+      ],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "skill 来源仓库全称",
+        "失败 2 张图的处理方式"
+      ]
+    },
+    {
+      "article_id": "a10",
+      "source_url": "https://x.com/liyue_ai/status/2109203944799141922",
+      "media_key": "13_2109198914998169600",
+      "resource_id": "x-liyue-ai-feishu-content-desk",
+      "path": "recipes/feishu-content-desk",
+      "duration_s": 13.84,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 13.84,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 14,
+        "max_viewed_gap_s": 1.0,
+        "extra_zoom_frames": [
+          "13.8"
+        ],
+        "limits_zh": [
+          "情报正文条目字号小，仅读结构与结尾提示，未逐条转录（也无需）"
+        ]
+      },
+      "audio": {
+        "has_track": true,
+        "status": "audio_present_no_speech_recognized",
+        "automatic_full_track_analysis": true,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2109198914998169600",
+        "relation": "new_method",
+        "id": "a10-v01",
+        "extends": "a10-m01"
+      },
+      "evidence_spans": [
+        "0–4s",
+        "4–7s",
+        "7–12s",
+        "12–13.8s"
+      ],
+      "method_ids": [
+        "a10-v01"
+      ],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "音轨内容是否为配乐（未能人工听辨）"
+      ]
+    },
+    {
+      "article_id": "a11",
+      "source_url": "https://x.com/cgnot996/status/2097487429104197688",
+      "media_key": "13_2097483410847719426",
+      "resource_id": "x-cgnot996-webhook-knowledge-inbox",
+      "path": "recipes/webhook-knowledge-inbox",
+      "duration_s": 12.23,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 12.23,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 12,
+        "max_viewed_gap_s": 1.23,
+        "extra_zoom_frames": [
+          "12.2 末帧"
+        ],
+        "limits_zh": [
+          "分享菜单滚动段 3.4–6.5s 帧变化快，只看到每秒帧；中间滚动过程未逐帧看"
+        ]
+      },
+      "audio": {
+        "has_track": true,
+        "status": "speech_recognized",
+        "automatic_full_track_analysis": true,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2097483410847719426",
+        "relation": "duplicate_with_detail",
+        "of": "a11-m02"
+      },
+      "evidence_spans": [
+        "0–3s",
+        "3–6s",
+        "6–7s",
+        "7–12s"
+      ],
+      "method_ids": [],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "入库结果未在本视频出现（配图有）"
+      ]
+    },
+    {
+      "article_id": "a11",
+      "source_url": "https://x.com/cgnot996/status/2097487429104197688",
+      "media_key": "13_2097484193081196544",
+      "resource_id": "x-cgnot996-webhook-knowledge-inbox",
+      "path": "recipes/webhook-knowledge-inbox",
+      "duration_s": 16.97,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 16.97,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 17,
+        "max_viewed_gap_s": 1.0,
+        "extra_zoom_frames": [
+          "16.95 末帧"
+        ],
+        "limits_zh": [
+          "链接内容属他人文章，未读取"
+        ]
+      },
+      "audio": {
+        "has_track": true,
+        "status": "silent",
+        "automatic_full_track_analysis": true,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2097484193081196544",
+        "relation": "duplicate_with_detail",
+        "of": "a11-m03"
+      },
+      "evidence_spans": [
+        "0–4s",
+        "4–6s",
+        "6–12s",
+        "12–17s"
+      ],
+      "method_ids": [],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "是否由侧边/操作按钮触发无法从画面完全确定"
+      ]
+    },
+    {
+      "article_id": "a20",
+      "source_url": "https://x.com/aehyok/status/2109817788198158347",
+      "media_key": "13_2109649833992855552",
+      "resource_id": "x-aehyok-x-signal-monitor",
+      "path": "recipes/x-signal-monitor",
+      "duration_s": 20.37,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 20.37,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 20,
+        "max_viewed_gap_s": 1.0,
+        "extra_zoom_frames": [
+          "0.5 提示词",
+          "5 要点",
+          "20.4 末帧"
+        ],
+        "limits_zh": [
+          "提示词气泡右侧被裁，句尾数字未完整读"
+        ]
+      },
+      "audio": {
+        "has_track": true,
+        "status": "silent_noise_floor",
+        "automatic_full_track_analysis": true,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2109649833992855552",
+        "relation": "context_only",
+        "of": "a20-m02"
+      },
+      "evidence_spans": [
+        "0–3s",
+        "3–20s"
+      ],
+      "method_ids": [],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "与正文爆款监控 Skill 的具体关联（为何放此视频）未在画面说明",
+        "发给 Bot 的安装指令仍未取得"
+      ]
+    },
+    {
+      "article_id": "a24",
+      "source_url": "https://x.com/0xlangeai/status/2101555600618602625",
+      "media_key": "13_2101549386958245888",
+      "resource_id": "x-0xlangeai-confidence-triage-shadow",
+      "path": "recipes/confidence-triage-shadow",
+      "duration_s": 39.6,
+      "review_method": "sampled_visual_review",
+      "continuous_viewing": false,
+      "coverage": {
+        "starts_at_s": 0,
+        "ends_at_s": 39.6,
+        "first_and_last_frame_reviewed": true,
+        "frames_viewed_1fps": 40,
+        "max_viewed_gap_s": 1.0,
+        "extra_zoom_frames": [
+          "0.3 命令行",
+          "39.5 末帧指标"
+        ],
+        "limits_zh": [
+          "表格右侧列被窗口截断"
+        ]
+      },
+      "audio": {
+        "has_track": false,
+        "status": "no_audio_track",
+        "automatic_full_track_analysis": false,
+        "human_listening": false
+      },
+      "relation": {
+        "media_key": "13_2101549386958245888",
+        "relation": "duplicate",
+        "of": "a24-m01 及配图"
+      },
+      "evidence_spans": [
+        "0–5s",
+        "5–7s",
+        "7–39.6s"
+      ],
+      "method_ids": [],
+      "verification": "author_demo_only",
+      "execution_status": "not_tested",
+      "unknowns_zh": [
+        "timeline_gate.py 内容与用例集未公开，未运行"
+      ]
+    }
+  ],
+  "editorial_notes": [
+    "a10-v01 extends a10-m01; it is not counted as an independent third source or a duplicated resource.",
+    "A/B selection is not a completed X publication; the recording ends at a confirmation prompt.",
+    "The claim about X connector limitations is a recording statement, not an independently verified current platform limit.",
+    "The WeChat invocation mechanism is unknown; Action-button triggering is not presented as observed.",
+    "Ling browser generation is background only and does not verify the monitoring Skill or API billing.",
+    "No source video, full transcript, credentials or third-party full prompt is republished."
+  ]
+}

@@ -97,13 +97,50 @@ Propose one next step with a recovery plan and wait for confirmation.
 
 </CopyTemplate>
 
+## Video supplement: give the publishing role a checkable X Article draft
+
+The 59-second recording shows a publishing coordinator preparing an X Article from local Markdown and images. It is a role demonstration rather than team creation, and adds a workflow absent from the body and images.
+
+| Time | Visible evidence | Delivery meaning |
+| --- | --- | --- |
+| 00:00–00:14 | The Bot reports using `x-article-publisher`; the user supplies a local Markdown path | Identify the article and assets; installation is reported in the recording |
+| 00:14–00:25 | Local-command approval appears; copying assets encounters failures and retries | Command approval and asset completeness require separate checks |
+| 00:25–00:43 | The user signs in to X in the Bot computer browser and returns control | The user handles the website session; installing a connector does not complete this login |
+| 00:43–00:58 | The Bot returns a draft link, title, cover and an 8-of-10 image result | A draft exists in the demonstration, with two missing images; publication is not shown |
+
+### Turn the role into five delivery steps
+
+1. **List the inputs.** Supply an exact Markdown path, title, cover and expected image list, with draft creation as this run's limit.
+2. **Check execution conditions.** The recording uses a third-party skill and browser automation. Its repository and scripts were not obtained or reviewed, so no installation command can be reconstructed from the name. With a trusted implementation, inspect commands, execution location and affected files first.
+3. **Check asset completeness.** Report copy failures individually. Copying ten images does not establish that all ten reached the editor.
+4. **Let the user handle sign-in.** Use the computer takeover card for login and verification, then return control, following the [official takeover guidance](https://cursor.com/docs/grok-bot/work). Account details and verification codes are omitted.
+5. **Review the draft receipt.** Include the draft link, title, cover, expected and actual image counts, missing assets and unfinished work. An 8/10 result needs repairs and another preview before a separate publication decision.
+
+<CopyTemplate id="team-blueprint-article-draft">
+
+```text
+Write a Markdown-to-X-Article draft plan for a publishing coordinator; return the plan first.
+Inputs I will supply: Markdown path, title, cover, image list and a reviewed tool source.
+List missing inputs, proposed commands and execution location, and user takeover steps.
+The draft receipt must include its link, title, cover, expected/actual image counts and missing assets.
+Mark unavailable source code as unavailable; do not install a similarly named tool.
+Mark an uncreated draft as not executed.
+Do not run commands, sign in, upload assets or publish in this planning run.
+```
+
+</CopyTemplate>
+
+:::note[Video verification scope]
+The collector checked approximately one frame per second across the timeline, including both ends, used 10fps frame differences to locate changes, and enlarged key frames. The largest viewed-frame gap was one second; this was not continuous playback. Some transitions and cropped message endings remain unreadable. Full-track automatic recognition reported music only; no human listening check was performed. Draft results are the author's demonstration, not a site reproduction. The skill repository and repair of two failed images remain unavailable. The recording's claim about X plugin limitations was not independently verified as a current general rule.
+:::
+
 ## Sources and applicability
 
 Original article: [@xaiwind](https://x.com/xaiwind/status/2100027951618416963); published 2026-09-16.
 
 Index-to-source mapping: strong content match.
 
-The collector reports viewing 11 images; 1 videos remain unwatched. Screenshots show the author creating three groups and nine Bots; template and plugin availability still need checking.
+The collector reports viewing 11 images and reviewing 1 video(s) through sampled frames, without continuous playback. Screenshots show the author creating three groups and nine Bots; template and plugin availability still need checking.
 
 Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
 

@@ -67,7 +67,30 @@ assert(readingEdition.finalized,'Reading collection must be finalized before rel
 assert.equal(readingEdition.articles.length,24,'All 24 source mappings must be present.');
 assert.equal(new Set(readingEdition.articles.map(item=>item.source_url)).size,24,'Reading sources must be distinct.');
 assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.photos_viewed,0),245,'All photo coverage must be reconciled.');
-assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.videos_unread,0),6,'Unwatched videos must remain explicit.');
+const videoEdition=JSON.parse(await readFile(new URL('../data/collection/editions/2026-10-18-langeai-video-supplement.json',import.meta.url),'utf8'));
+assert(videoEdition.finalized,'Video supplement must be finalized before release.');
+assert.equal(videoEdition.video_records.length,6,'All six original videos need an individual reading record.');
+assert.deepEqual(new Set(videoEdition.video_records.map(video=>video.media_key)),new Set(['13_2099918614094884864','13_2109198914998169600','13_2097483410847719426','13_2097484193081196544','13_2109649833992855552','13_2101549386958245888']),'Video identities must match the six outstanding media.');
+assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.videos_sampled,0),6,'Sampled reviews must be reconciled.');
+assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.videos_unreviewed,0),0,'Untouched videos must not be silently omitted.');
+assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.videos_continuously_watched,0),0,'Do not upgrade sampled review to continuous viewing.');
+assert.equal(videoEdition.video_records.filter(video=>video.audio.has_track).length,5,'Audio-track reconciliation changed.');
+assert.equal(videoEdition.video_records.filter(video=>video.audio.status==='audio_present_no_speech_recognized').length,1,'Uncertain Feishu audio must remain explicit.');
+assert.equal(new Set(videoEdition.video_records.flatMap(video=>video.method_ids)).size,2,'Retain two video methods without duplicating phone or background evidence.');
+for(const video of videoEdition.video_records){
+ const item=readingEdition.articles.find(item=>item.resource_id===video.resource_id);
+ assert(item&&item.path===video.path&&item.source_url===video.source_url,`Video assigned to wrong guide: ${video.media_key}`);
+ assert.equal(video.review_method,'sampled_visual_review');
+ assert.equal(video.continuous_viewing,false);
+ assert.equal(video.coverage.starts_at_s,0);
+ assert.equal(video.coverage.ends_at_s,video.duration_s);
+ assert(video.coverage.first_and_last_frame_reviewed&&video.coverage.max_viewed_gap_s<=1.23,`Incomplete sampling record: ${video.media_key}`);
+ assert.equal(video.audio.human_listening,false);
+ assert.equal(video.execution_status,'not_tested');
+ const page=pages.get(`/en/${video.path}/`);
+ assert(page&&find(page.tree,n=>n.tagName==='h2'&&text(n).startsWith('Video supplement:')).length,`Missing video supplement: ${video.path}`);
+ assert(text(page.tree).includes('Video verification scope'),`Missing video limitations: ${video.path}`);
+}
 for(const item of readingEdition.articles){
  const path=`/en/${item.path}/`,page=pages.get(path);
  assert(page,`Missing rewritten guide: ${path}`);
