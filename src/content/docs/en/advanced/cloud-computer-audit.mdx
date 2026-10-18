@@ -1,0 +1,108 @@
+---
+title: "Hosted computer audit: check resources and lifecycle before serving apps"
+description: "Use a resource inventory, connectivity checks and recovery plan rather than treating one author's machine as a plan guarantee."
+sidebar:
+  order: 39
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-0xlangeai-cloud-computer-audit
+apps: ["Grok Bot", "Linux", "Tailscale"]
+sources:
+  - title: "Related source by @0xlangeai"
+    url: https://x.com/0xlangeai/status/2100411223410110578
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Use a resource inventory, connectivity checks and recovery plan rather than treating one author's machine as a plan guarantee.
+
+The source examines CPU, memory, storage and tunnels. This audit replaces fixed-resource and uptime assumptions with environment checks.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic goal: a test page reachable only by its owner, with no production customer traffic.
+
+## 1. Inventory resources read-only
+
+Record OS, CPU and cgroup limits, memory, mounts and tools with a timestamp rather than generalizing them to every plan.
+
+## 2. Define the service boundary
+
+Specify private or public access, streaming, WebSocket, persistence and authentication requirements, testing each protocol separately.
+
+## 3. Evaluate the tunnel
+
+Choose a private or protected test route and check current vendor limits. A reachable temporary tunnel is not an uptime guarantee.
+
+## 4. Test lifecycle behavior
+
+Record the effects of closing the client, idling, software updates and a computer rebuild. Autostart scripts still need recovery tests.
+
+## 5. Choose the workload from evidence
+
+Use the environment experimentally when tests pass; assess availability, backups and appropriate hosting for critical services.
+
+## A synthetic acceptance fixture
+
+audit.csv: cpu_limit, memory_limit, disk_mount, network_path, sleep_test, restore_test. Do not add capacities for directories on the same filesystem.
+
+## Copyable task brief
+
+<CopyTemplate id="cloud-computer-audit-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Hosted computer audit: check resources and lifecycle before serving apps. Do not connect real services yet.
+Input: Synthetic goal: a test page reachable only by its owner, with no production customer traffic.
+Requirements:
+1. Record OS, CPU and cgroup limits, memory, mounts and tools with a timestamp rather than generalizing them to every plan.
+2. Specify private or public access, streaming, WebSocket, persistence and authentication requirements, testing each protocol separately.
+3. Choose a private or protected test route and check current vendor limits. A reachable temporary tunnel is not an uptime guarantee.
+4. Record the effects of closing the client, idling, software updates and a computer rebuild. Autostart scripts still need recovery tests.
+5. Use the environment experimentally when tests pass; assess availability, backups and appropriate hosting for critical services.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Every resource and protocol has evidence or a pending test, without guaranteed uptime, specifications or persistence.
+
+<CopyTemplate id="cloud-computer-audit-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Every resource and protocol has evidence or a pending test, without guaranteed uptime, specifications or persistence.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@0xlangeai](https://x.com/0xlangeai/status/2100411223410110578); published 2026-09-17.
+
+Index-to-source mapping: inferred from content; exact placement unavailable.
+
+The collector reports viewing 12 images; 0 videos remain unwatched. Images report the author's system, CPU/cgroup, memory, storage, GPU probes and permissions/tools. Missing GPU utilities alone do not prove GPU absence.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

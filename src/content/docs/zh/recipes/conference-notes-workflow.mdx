@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × 参会整理：从一份笔记到稳定的会后交付"
+description: "先用已获授权的会议笔记校对要点、行动项和来源，再考虑连接应用、技能与例行任务。"
+sidebar:
+  order: 31
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-maiyangai-conference-notes-workflow
+apps: ["Grok Bot", "Markdown"]
+sources:
+  - title: "Grok Bot 门槛又又又降了！Grok Bot 到底可以做什么，从入门到进阶"
+    url: https://x.com/MaiYangAI/status/2090919833366040919
+  - title: "官方核对：settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "官方核对：security"
+    url: https://cursor.com/docs/grok-bot/security
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+先用已获授权的会议笔记校对要点、行动项和来源，再考虑连接应用、技能与例行任务。
+
+原文介绍单岗位起步、参会助手、权限与进阶顺序。本文选择会后整理作为第一条工作流，作者的耗量样本不作为效果承诺。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成笔记：M1 说周五演示；M2 说预算仍待确认；没有明确项目负责人。
+
+## 1. 圈定可用材料
+
+先提供脱敏笔记或获准使用的转录，记录会议日期与覆盖时段。没有录音权限时用手动笔记即可。
+
+## 2. 拆分事实与待办
+
+把观点、明确决定、提议与行动项分栏；每条挂记录位置，不替参会者补承诺。
+
+## 3. 列出缺项
+
+负责人、截止日或预算没有说清就写未明确，并集中列成待确认问题。
+
+## 4. 返回固定格式
+
+交 summary.md、actions.csv 和 questions.md。登录、对外通知和写日历都不在这一步执行。
+
+## 5. 复测再复用
+
+换第二份笔记检查规则，确认后保存 Skill；需要 Routine 时另核对输入如何更新、负责人和时间。
+
+## 一份合成验收样例
+
+actions.csv：item、owner、due、evidence、status。演示可以标 proposed；负责人写未明确；不能把预算待定改成已批准。
+
+## 可复制的任务说明
+
+<CopyTemplate id="conference-notes-workflow-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × 参会整理：从一份笔记到稳定的会后交付 的交付，不连接真实服务。
+输入：合成笔记：M1 说周五演示；M2 说预算仍待确认；没有明确项目负责人。
+处理要求：
+1. 先提供脱敏笔记或获准使用的转录，记录会议日期与覆盖时段。没有录音权限时用手动笔记即可。
+2. 把观点、明确决定、提议与行动项分栏；每条挂记录位置，不替参会者补承诺。
+3. 负责人、截止日或预算没有说清就写未明确，并集中列成待确认问题。
+4. 交 summary.md、actions.csv 和 questions.md。登录、对外通知和写日历都不在这一步执行。
+5. 换第二份笔记检查规则，确认后保存 Skill；需要 Routine 时另核对输入如何更新、负责人和时间。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+待定预算仍待定；未明确的负责人没有被编造；每个行动项都有记录依据。
+
+<CopyTemplate id="conference-notes-workflow-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：待定预算仍待定；未明确的负责人没有被编造；每个行动项都有记录依据。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@MaiYangAI](https://x.com/MaiYangAI/status/2090919833366040919)；发布日期 2026-08-22。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 12 张图片；另有 0 个视频未观看。 图片展示授权、审批规则、参会照片与一次用量记录；资格截图属于旧时期，不能沿用其中“部分基础方案不能用”的结论。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

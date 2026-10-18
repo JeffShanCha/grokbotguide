@@ -1,0 +1,119 @@
+---
+title: "Grok Bot × store brief: turn a first task into a reusable workflow"
+description: "Validate a first Bot with a synthetic operating sheet, check its numbers, repeat with another input, then draft a skill and routine."
+sidebar:
+  order: 27
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: operations
+difficulty: beginner
+risk: low
+cadence: on-demand
+resource_id: x-jinchenma-onboarding-guide
+apps: ["Grok Bot", "CSV"]
+sources:
+  - title: "Grok Bot from beginner to advanced (Jinchenma)"
+    url: https://x.com/jinchenma_ai/status/2094984812251746424
+  - title: "Change what a Bot does (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/edit-bot
+  - title: "Connect plugins (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Routines (Cursor Help Center)"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Give a first Bot one checkable job: read an operating sheet and produce a store brief. Establish reliable numbers before adding roles or automation.
+
+This exercise reorganizes [Jinchenma's guide](https://x.com/jinchenma_ai/status/2094984812251746424) on role definitions, task briefs, file handoffs, skills, routines and an ecommerce team. The fixture, field names and prompts below were written for this site.
+
+:::note[Verification status]
+Based on a detailed source reading and current official help. We have not connected a store, run this workflow or measured business results. The data is synthetic. Historical description fields, plugin menus and platform lists may differ from the current interface.
+:::
+
+The collector reread the article and viewed its seven images, with no video. The images show role handoffs, a skill menu and a routine. This site's store fixture and reference answers are independent. [See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/).
+
+## Prepare the smallest input
+
+Save this as `store-daily.csv`, or provide an authorized, redacted equivalent. Currency is CNY; dates and products are illustrative.
+
+```csv
+date,sku,revenue_cny,orders,stock_units,stock_floor,refund_orders
+2026-10-17,DEMO-A,600,6,4,5,1
+2026-10-17,DEMO-B,400,4,12,5,0
+```
+
+The stock floor is an exercise rule, not a demand forecast. Costs, replenishment lead time and historical sales are missing, so profit, stock coverage and purchasing quantities cannot be calculated.
+
+## 1. Define a role by its output
+
+Use a role such as store operations reviewer. State its result, allowed sources, processing rules, deliverables, acceptance criteria, prohibited actions, approval points and failure handling.
+
+Personal Bot responsibilities can currently be explained in chat; do not depend on the historical Description field. A role name does not grant store access. Start without a production connection or additional Bots.
+
+## 2. Complete the task brief
+
+The result is a daily brief, the only source is the CSV, system changes are excluded, deliverables are a brief and exception table, and review comes before larger inputs or scheduling.
+
+<CopyTemplate id="store-brief-first-task">
+
+```text
+Analyze only my store-daily.csv as a store operations reviewer.
+Group revenue_cny, orders and refund_orders by date.
+Flag stock_units below stock_floor and cite the sku and source fields.
+Do not confuse the refunded-order ratio with a refunded-revenue ratio.
+Do not infer profit, stock coverage or purchasing quantities from missing data.
+Return daily-brief.md, an exception table, and input-row, missing-column and duplicate checks.
+Report gaps instead of guessing. Do not connect to or change a store, send messages, create Bots or schedule work.
+```
+
+</CopyTemplate>
+
+## 3. Check the arithmetic first
+
+| Check | Expected result for this fixture |
+| --- | --- |
+| Revenue and orders | CNY 1,000 and 10 orders on October 17 |
+| Refunded orders | 1; the order-count ratio is 1 / 10 = 10% |
+| Low stock | DEMO-A: 4 below 5; DEMO-B does not trigger |
+| Unsupported conclusions | Profit, purchase quantity, customer identities or completed transactions |
+
+These are manually calculated reference answers, not outputs from an executed Bot run. Report duplicates and agree on a rule before removing rows; equal order amounts do not establish duplicates.
+
+## 4. Make the handoff usable
+
+Return the actual output directory, source filename, processing time and rule version. Link the exception table, unresolved questions and next step from the brief. Return a summary in chat too.
+
+Project folders organize information; they are not security isolation between Bots. Check account, file and connector access before using a real connection. The account holder completes login or verification.
+
+## 5. Repeat before saving a skill
+
+For a second fixture, change DEMO-A stock to 6 and refunded orders to 0. It should no longer appear in low-stock exceptions. Keep the earlier brief dated correctly.
+
+After verification, save the reading, validation, calculation, output and failure rules. Include required columns, missing-value and duplicate handling, output locations and stop points.
+
+## 6. Draft the schedule first
+
+<CopyTemplate id="store-brief-routine-draft">
+
+```text
+Draft a routine for the verified store brief; do not create it yet.
+Specify owner, timezone, cadence, input-refresh mechanism, cutoff time and output folder.
+Handle stale, missing, duplicate and inaccessible data separately; missing is not zero.
+An unchanged report can be quiet, but checks still consume usage. Limit one operation to two attempts.
+Give a small-sample Test checklist and pause procedure; wait for approval before creating or testing it.
+Do not contact customers, change stock, refund, purchase or call other Bots.
+```
+
+</CopyTemplate>
+
+A routine Test performs work and consumes usage. Scheduling does not update the input file: establish that path first.
+
+## Add another role when the work needs it
+
+After a stable first workflow, distinct content, inventory and support decisions may justify separate roles. Define inputs, owners and handoff stops first. The source author's ecommerce team is an example, not a team executed by this site.
+
+Show the exact target and proposed change before customer messages, stock edits, refunds or purchasing. A reliable first workflow matters more than a roster of impressive titles.

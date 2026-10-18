@@ -1,0 +1,106 @@
+---
+title: "Subscription worksheet: check Bot access before switching plans"
+description: "Compare access, existing subscriptions, usage pools and additional charges before deciding whether to switch."
+sidebar:
+  order: 27
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+risk: low
+cadence: on-demand
+resource_id: x-kingao476942-subscription-decision-sheet
+apps: ["Grok Bot", "Cursor"]
+sources:
+  - title: "Related source by @KinGao476942"
+    url: https://x.com/KinGao476942/status/2109824830698848561
+  - title: "Official reference: plans"
+    url: https://cursor.com/help/grok-bot/plans
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Compare access, existing subscriptions, usage pools and additional charges before deciding whether to switch.
+
+The source compares unified and legacy subscriptions and reports a payment experience. This worksheet uses the decision framework while checking eligibility against current official help.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic request: an existing legacy plan, a need for Grok Bot, and an undecided budget.
+
+## 1. Inventory existing access
+
+Record the actual Cursor, Grok/X and team-seat names, renewal dates and billing channels from redacted account evidence.
+
+## 2. Check the required capability
+
+Start with Bot eligibility, then compare the usage pool and team requirements. The current X Subscription Plus tier does not include Bot.
+
+## 3. Separate billing paths
+
+Keep legacy linked grants and the X Subscription shared pool on separate rows, with an explicit additional-usage field.
+
+## 4. Check switching terms
+
+Record remaining term, cancellation behavior, refund evidence and third-party model charges. Mark unsupported terms unknown.
+
+## 5. Return the decision sheet
+
+Present keep, switch and defer options with evidence. The account holder checks the checkout details and makes the purchase decision.
+
+## A synthetic acceptance fixture
+
+comparison.csv: account_type, bot_included, weekly_pool, extra_usage, renewal_date, unknown. Leave the renewal date unknown without evidence; do not mark Plus as including Bot.
+
+## Copyable task brief
+
+<CopyTemplate id="subscription-decision-sheet-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Subscription worksheet: check Bot access before switching plans. Do not connect real services yet.
+Input: Synthetic request: an existing legacy plan, a need for Grok Bot, and an undecided budget.
+Requirements:
+1. Record the actual Cursor, Grok/X and team-seat names, renewal dates and billing channels from redacted account evidence.
+2. Start with Bot eligibility, then compare the usage pool and team requirements. The current X Subscription Plus tier does not include Bot.
+3. Keep legacy linked grants and the X Subscription shared pool on separate rows, with an explicit additional-usage field.
+4. Record remaining term, cancellation behavior, refund evidence and third-party model charges. Mark unsupported terms unknown.
+5. Present keep, switch and defer options with evidence. The account holder checks the checkout details and makes the purchase decision.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Every entitlement has a source and date; unknown terms remain unknown; no purchase, cancellation or refund promise was made.
+
+<CopyTemplate id="subscription-decision-sheet-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Every entitlement has a source and date; unknown terms remain unknown; no purchase, cancellation or refund promise was made.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@KinGao476942](https://x.com/KinGao476942/status/2109824830698848561); published 2026-10-13.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 2 images; 0 videos remain unwatched. The screenshot lists Free, Plus, Premium and Super, placing Bot under Premium. It does not establish Ultra or promotions; prices and discounts remain unverified.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

@@ -1,0 +1,106 @@
+---
+title: "订阅核对表：先确认 Grok Bot 资格，再比较切换成本"
+description: "把现有方案、所需功能、周用量与额外收费列在同一张表里，避免把历史优惠和不同计费池混在一起。"
+sidebar:
+  order: 27
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: beginner
+risk: low
+cadence: on-demand
+resource_id: x-kingao476942-subscription-decision-sheet
+apps: ["Grok Bot", "Cursor"]
+sources:
+  - title: "马斯克的“大一统AI会员”来了！新手小白和老用户该怎么选？一站式搞定 Grok Bot、X 会员、Cursor 会员！"
+    url: https://x.com/KinGao476942/status/2109824830698848561
+  - title: "官方核对：plans"
+    url: https://cursor.com/help/grok-bot/plans
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+把现有方案、所需功能、周用量与额外收费列在同一张表里，避免把历史优惠和不同计费池混在一起。
+
+原文比较统一订阅与旧方案，并分享支付体验。本文保留选择框架，套餐资格按当前官方说明核对；历史折扣、退款与地址建议不作为现行规则。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成需求：已有一份旧方案，需要 Grok Bot；预算尚未确认。
+
+## 1. 列出现有权益
+
+分别记录 Cursor、Grok/X 和团队席位的实际名称、到期日与付款渠道，只使用本人提供的脱敏资料。
+
+## 2. 核对要买的能力
+
+从是否包含 Bot 开始，再看周池、工具和团队要求。当前 The X Subscription 的 Plus 不含 Bot，不能只按入门价格选档。
+
+## 3. 分开计费路径
+
+旧版绑定额度与 The X Subscription 的共享周池分两行记录，额外收费入口另列；不要把两份订阅的额度相加。
+
+## 4. 核对切换条件
+
+标出旧方案剩余期限、是否自动取消、退款依据和第三方模型费用。找不到当前官方依据的项写待确认。
+
+## 5. 交付待选方案
+
+给保留现状、切换、稍后再评估三种选项及依据。用户自行核对结账页、真实账单资料和最终金额后决定。
+
+## 一份合成验收样例
+
+comparison.csv：account_type、bot_included、weekly_pool、extra_usage、renewal_date、unknown。缺少账单截图时 renewal_date 留待确认；Plus 不列为已包含 Bot。
+
+## 可复制的任务说明
+
+<CopyTemplate id="subscription-decision-sheet-brief">
+
+```text
+先用本文合成样例整理 订阅核对表：先确认 Grok Bot 资格，再比较切换成本 的交付，不连接真实服务。
+输入：合成需求：已有一份旧方案，需要 Grok Bot；预算尚未确认。
+处理要求：
+1. 分别记录 Cursor、Grok/X 和团队席位的实际名称、到期日与付款渠道，只使用本人提供的脱敏资料。
+2. 从是否包含 Bot 开始，再看周池、工具和团队要求。当前 The X Subscription 的 Plus 不含 Bot，不能只按入门价格选档。
+3. 旧版绑定额度与 The X Subscription 的共享周池分两行记录，额外收费入口另列；不要把两份订阅的额度相加。
+4. 标出旧方案剩余期限、是否自动取消、退款依据和第三方模型费用。找不到当前官方依据的项写待确认。
+5. 给保留现状、切换、稍后再评估三种选项及依据。用户自行核对结账页、真实账单资料和最终金额后决定。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+每个权益有来源和核对日期；未知项不补全；没有代付、自动退订或承诺退款。
+
+<CopyTemplate id="subscription-decision-sheet-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：每个权益有来源和核对日期；未知项不补全；没有代付、自动退订或承诺退款。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@KinGao476942](https://x.com/KinGao476942/status/2109824830698848561)；发布日期 2026-10-13。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 2 张图片；另有 0 个视频未观看。 截图只列出 Free、Plus、Premium 和 Super，Bot 出现在 Premium 的权益中；Ultra 与优惠不能仅凭该图判断。具体价格和折扣尚未核实。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

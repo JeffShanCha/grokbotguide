@@ -1,0 +1,110 @@
+---
+title: "Remote access checklist: reach the Bot computer over Tailscale"
+description: "Separate private-network reachability from SSH authorization and validate the host, user and revocation path."
+sidebar:
+  order: 38
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-0xlangeai-tailscale-ssh-check
+apps: ["Grok Bot", "Tailscale", "SSH"]
+sources:
+  - title: "Related source by @0xlangeai"
+    url: https://x.com/0xlangeai/status/2093192039051489662
+  - title: "Official reference: tailscale"
+    url: https://tailscale.com/docs/features/tailscale-ssh
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Separate private-network reachability from SSH authorization and validate the host, user and revocation path.
+
+The source connects a local machine to the hosted computer over Tailscale and SSH. Host names and users remain environment-specific rather than universal defaults.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Prepare client, target, os_user, ssh_mode, allowed_scope and revoke_method without placing private keys in ordinary notes.
+
+## 1. Confirm target and scope
+
+Record device ownership and the intended directory before approving client installation or access-policy changes.
+
+## 2. Authorize the devices
+
+Authenticate through the current Tailscale flow and verify device identities instead of copying another environment's parameters.
+
+## 3. Choose the SSH mode
+
+Traditional SSH over the tailnet and Tailscale-managed SSH are different configurations. The latter needs network and SSH authorization.
+
+## 4. Verify host and directory read-only
+
+Check the host identity prompt, then use read-only commands such as whoami and pwd to confirm the actual user and directory.
+
+## 5. Document recovery and revocation
+
+Document failure handling, device revocation and an alternate authorized recovery path without exposing SSH publicly.
+
+## A synthetic acceptance fixture
+
+Two separate checks: the network reaches the target, and the intended identity can access the intended OS user. Network reachability alone does not enable SSH.
+
+## Copyable task brief
+
+<CopyTemplate id="tailscale-ssh-check-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Remote access checklist: reach the Bot computer over Tailscale. Do not connect real services yet.
+Input: Prepare client, target, os_user, ssh_mode, allowed_scope and revoke_method without placing private keys in ordinary notes.
+Requirements:
+1. Record device ownership and the intended directory before approving client installation or access-policy changes.
+2. Authenticate through the current Tailscale flow and verify device identities instead of copying another environment's parameters.
+3. Traditional SSH over the tailnet and Tailscale-managed SSH are different configurations. The latter needs network and SSH authorization.
+4. Check the host identity prompt, then use read-only commands such as whoami and pwd to confirm the actual user and directory.
+5. Document failure handling, device revocation and an alternate authorized recovery path without exposing SSH publicly.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Host, user and directory match the plan; access is revocable and is rechecked after sleep, rebuild or policy changes.
+
+<CopyTemplate id="tailscale-ssh-check-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Host, user and directory match the plan; access is revocable and is rechecked after sleep, rebuild or policy changes.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@0xlangeai](https://x.com/0xlangeai/status/2093192039051489662); published 2026-08-28.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 5 images; 0 videos remain unwatched. Images show two devices, an additional browser authentication step and the author's box user. Host, user and authentication rules remain environment-specific.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

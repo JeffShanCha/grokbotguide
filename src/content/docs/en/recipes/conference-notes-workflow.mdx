@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × conference notes: build a repeatable follow-up"
+description: "Check key points, action items and evidence in authorized meeting notes before connecting tools or scheduling follow-up."
+sidebar:
+  order: 31
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-maiyangai-conference-notes-workflow
+apps: ["Grok Bot", "Markdown"]
+sources:
+  - title: "Related source by @MaiYangAI"
+    url: https://x.com/MaiYangAI/status/2090919833366040919
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Check key points, action items and evidence in authorized meeting notes before connecting tools or scheduling follow-up.
+
+The source discusses role-first onboarding, a conference assistant and gradual automation. This guide focuses on post-meeting organization without adopting its usage anecdote.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic notes: M1 proposes a Friday demo; M2 says the budget is unresolved; no owner is named.
+
+## 1. Choose authorized material
+
+Start with redacted notes or an authorized transcript and record the meeting date and coverage period.
+
+## 2. Separate facts and actions
+
+Separate opinions, decisions, proposals and actions, with a source location for each.
+
+## 3. Expose missing fields
+
+Mark absent owners, deadlines and budgets unspecified and collect them as clarification items.
+
+## 4. Return a stable format
+
+Return summary.md, actions.csv and questions.md before any external notification or calendar edit.
+
+## 5. Repeat before reusing
+
+Validate with a second note set, then save the stable rules. Review input refresh and ownership before scheduling.
+
+## A synthetic acceptance fixture
+
+actions.csv: item, owner, due, evidence, status. Mark the demo proposed, leave the owner unspecified, and preserve the unresolved budget.
+
+## Copyable task brief
+
+<CopyTemplate id="conference-notes-workflow-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × conference notes: build a repeatable follow-up. Do not connect real services yet.
+Input: Synthetic notes: M1 proposes a Friday demo; M2 says the budget is unresolved; no owner is named.
+Requirements:
+1. Start with redacted notes or an authorized transcript and record the meeting date and coverage period.
+2. Separate opinions, decisions, proposals and actions, with a source location for each.
+3. Mark absent owners, deadlines and budgets unspecified and collect them as clarification items.
+4. Return summary.md, actions.csv and questions.md before any external notification or calendar edit.
+5. Validate with a second note set, then save the stable rules. Review input refresh and ownership before scheduling.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+The budget stays unresolved, owners are not invented, and every action has evidence.
+
+<CopyTemplate id="conference-notes-workflow-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: The budget stays unresolved, owners are not invented, and every action has evidence.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@MaiYangAI](https://x.com/MaiYangAI/status/2090919833366040919); published 2026-08-22.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 12 images; 0 videos remain unwatched. Images show approvals, conference photos and an anecdotal usage record. Historical eligibility screenshots are not current plan rules.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

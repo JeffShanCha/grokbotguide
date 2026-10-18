@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × 远程编码桌面：逐段验收 Orca、Tailscale 与 Claude Code"
+description: "把网络、远程界面、CLI 身份和任务验收拆开检查，并给更新后的恢复留下记录。"
+sidebar:
+  order: 40
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-app-sail-claude-code-cloud
+apps: ["Grok Bot", "Orca", "Tailscale", "Claude Code"]
+sources:
+  - title: "把这篇文章丢给 Grok Bot：给你注册 Claude，搭配 Orca + Tailscale，打造 7×24 在线的 Claude Code 云主机"
+    url: https://x.com/app_sail/status/2108523630900748335
+  - title: "官方核对：claude-setup"
+    url: https://code.claude.com/docs/en/setup
+  - title: "官方核对：tailscale"
+    url: https://tailscale.com/docs/features/tailscale-ssh
+  - title: "官方核对：settings"
+    url: https://cursor.com/docs/grok-bot/settings
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+把网络、远程界面、CLI 身份和任务验收拆开检查，并给更新后的恢复留下记录。
+
+原文组合 Orca、Tailscale 与 Claude Code，并提供恢复脚本。本文改写为分层验收案例，不直接执行附录脚本，也不承诺七天全天在线。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成任务：在测试目录读 README，返回三个事实和引用位置；不改代码、不推送。
+
+## 1. 先核对软件与身份
+
+确认官方安装来源、版本、受支持账号与执行主机，授权和付费由本人完成；不用来源里的其他人凭据。
+
+## 2. 先通私网再通界面
+
+确认设备与访问规则，再按当前 Orca 文档建立受保护的远程会话；来源里的端口和配对链接只作环境示例。
+
+## 3. 单独检查 CLI 状态
+
+记录运行位置、账号、版本与授权状态；缺少授权就停，不修改配置来掩盖登录失败。
+
+## 4. 执行最小只读任务
+
+用测试 README 检查终端输入、输出回读与引用路径；把发出命令、结束和结果通过分成不同状态。
+
+## 5. 验证更新恢复
+
+记录软件更新或电脑重建前后哪些包、服务和会话需要恢复，保留回滚路径；定时自检先出草案。
+
+## 一份合成验收样例
+
+connection-check.md 分四层：network、remote_session、cli_identity、task_result。能打开远程界面不代表 Claude 已登录或任务已完成。
+
+## 可复制的任务说明
+
+<CopyTemplate id="remote-coding-desk-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × 远程编码桌面：逐段验收 Orca、Tailscale 与 Claude Code 的交付，不连接真实服务。
+输入：合成任务：在测试目录读 README，返回三个事实和引用位置；不改代码、不推送。
+处理要求：
+1. 确认官方安装来源、版本、受支持账号与执行主机，授权和付费由本人完成；不用来源里的其他人凭据。
+2. 确认设备与访问规则，再按当前 Orca 文档建立受保护的远程会话；来源里的端口和配对链接只作环境示例。
+3. 记录运行位置、账号、版本与授权状态；缺少授权就停，不修改配置来掩盖登录失败。
+4. 用测试 README 检查终端输入、输出回读与引用路径；把发出命令、结束和结果通过分成不同状态。
+5. 记录软件更新或电脑重建前后哪些包、服务和会话需要恢复，保留回滚路径；定时自检先出草案。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+四层状态逐项可回查；只读任务有真实产物；脚本与长期在线保证仍需现场验证。
+
+<CopyTemplate id="remote-coding-desk-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：四层状态逐项可回查；只读任务有真实产物；脚本与长期在线保证仍需现场验证。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@app_sail](https://x.com/app_sail/status/2108523630900748335)；发布日期 2026-10-09。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 8 张图片；另有 0 个视频未观看。 架构图展示 Orca 远程服务经 Tailscale 连接 CLI，并分别使用电脑和手机配对方式；看门狗与恢复任务只是作者方案，未复现其稳定性。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

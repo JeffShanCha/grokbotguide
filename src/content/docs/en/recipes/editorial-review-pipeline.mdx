@@ -1,0 +1,108 @@
+---
+title: "Grok Bot × editorial desk: five roles and three human reviews"
+description: "Connect source records, topic approval, drafting and fact review through a single low-risk sample."
+sidebar:
+  order: 43
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-adrianpunk115-editorial-review-pipeline
+apps: ["Grok Bot", "X", "Markdown"]
+sources:
+  - title: "Related source by @AdrianPunk115"
+    url: https://x.com/AdrianPunk115/status/2097311704547987756
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Connect source records, topic approval, drafting and fact review through a single low-risk sample.
+
+The source separates research, planning, writing, fact review and retrospective roles with directory boundaries. This exercise uses independently written handoffs and prompts.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic topic: summarize an official feature announcement into one draft, without publishing it.
+
+## 1. Write the editorial profile
+
+Put audience, columns, examples, tone and forbidden phrases in voice.md; style guidance is not factual evidence.
+
+## 2. Collect evidence before topics
+
+Research records actual reading scope; planning proposes three evidence-based topics for a human to select.
+
+## 3. Draft the approved brief
+
+The writer uses the approved brief, sources and voice.md, leaving personal experience and missing facts for the author.
+
+## 4. Create a separate fact review
+
+Map numbers, quotations, dates and inferences to evidence, removing or marking unverified claims before final review.
+
+## 5. Review after manual publication
+
+The owner publishes. Retrospectives use authorized public data with period and sample size, keeping conclusions weak for small samples.
+
+## A synthetic acceptance fixture
+
+sources.csv → brief.md → draft.md → fact-review.csv. Every factual claim has a source_id and drafting waits for topic approval.
+
+## Copyable task brief
+
+<CopyTemplate id="editorial-review-pipeline-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × editorial desk: five roles and three human reviews. Do not connect real services yet.
+Input: Synthetic topic: summarize an official feature announcement into one draft, without publishing it.
+Requirements:
+1. Put audience, columns, examples, tone and forbidden phrases in voice.md; style guidance is not factual evidence.
+2. Research records actual reading scope; planning proposes three evidence-based topics for a human to select.
+3. The writer uses the approved brief, sources and voice.md, leaving personal experience and missing facts for the author.
+4. Map numbers, quotations, dates and inferences to evidence, removing or marking unverified claims before final review.
+5. The owner publishes. Retrospectives use authorized public data with period and sample size, keeping conclusions weak for small samples.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Topic selection, personal input and final copy have human checkpoints; claims are traceable and correlation is not presented as causation.
+
+<CopyTemplate id="editorial-review-pipeline-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Topic selection, personal input and final copy have human checkpoints; claims are traceable and correlation is not presented as causation.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@AdrianPunk115](https://x.com/AdrianPunk115/status/2097311704547987756); published 2026-09-08.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 19 images; 0 videos remain unwatched. Images assign 01-inbox, 02-briefs, 03-drafts, 04-review and 06-analysis to separate roles. Writing uses supplied evidence and retrospectives use authorized data. The local-execution screenshot differs from the old text.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

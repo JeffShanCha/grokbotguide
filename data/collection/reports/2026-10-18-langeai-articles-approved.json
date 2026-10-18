@@ -1,0 +1,36 @@
+{
+  "batch_id": "2026-10-18-langeai-articles-approved",
+  "date": "2026-10-18",
+  "added": [
+    "x-0xlangeai-must-read-index",
+    "x-kingao476942-subscription-decision-sheet",
+    "x-jinchenma-onboarding-guide",
+    "x-kingao476942-nontechnical-task-brief",
+    "x-maiyangai-conference-notes-workflow",
+    "x-czzzzzzj-day-zero-bot-checklist",
+    "x-xilo2991-team-workflow-interview",
+    "x-xaiwind-team-blueprint",
+    "x-liyue-ai-feishu-content-desk",
+    "x-cgnot996-webhook-knowledge-inbox",
+    "x-0xlangeai-tailscale-ssh-check",
+    "x-0xlangeai-cloud-computer-audit",
+    "x-kingao476942-claude-code-access-check",
+    "x-sitinme-chief-of-staff-brief",
+    "x-adrianpunk115-editorial-review-pipeline",
+    "x-jackywxsz-content-roster-audit",
+    "x-kingao476942-x-topic-library",
+    "x-aehyok-x-signal-monitor",
+    "x-0xlangeai-feature-evidence-review",
+    "x-kingao476942-pr-operations-review",
+    "x-cgnot996-bot-backup-restore",
+    "x-0xlangeai-confidence-triage-shadow"
+  ],
+  "updated": [
+    "x-cgnot996-usage-endurance-guide",
+    "x-kin-wechat-guide",
+    "x-app-sail-claude-code-cloud"
+  ],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}

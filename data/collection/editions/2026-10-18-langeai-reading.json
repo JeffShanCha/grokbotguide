@@ -1,0 +1,618 @@
+{
+  "id": "2026-10-18-langeai-reading",
+  "entry_url": "https://x.com/0xlangeai/status/2111396742264742034",
+  "prepared_at": "2026-10-18",
+  "source_sha256": "778180bd192bc6c55a7badabfa6f7524d794fbf8a1988240f7f136f7160d0979",
+  "source_file": "langeai-2111396742264742034-deep-research-2026-10-18.json",
+  "finalized": true,
+  "source_count": 24,
+  "method_count": 79,
+  "articles": [
+    {
+      "entry_item": 1,
+      "source_url": "https://x.com/KinGao476942/status/2109824830698848561",
+      "source_author": "KinGao476942",
+      "source_published": "2026-10-13",
+      "resource_id": "x-kingao476942-subscription-decision-sheet",
+      "section": "start",
+      "slug": "subscription-decision-sheet",
+      "path": "start/subscription-decision-sheet",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集写「会员与订阅机制对照：梳理不同订阅档位的权益和限制」；原文正是 The X Subscription 各档对比与老用户切换说明。"
+      },
+      "methods": [
+        "a01-m01",
+        "a01-m02",
+        "a01-m03"
+      ],
+      "photos_viewed": 2,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 2,
+      "source_url": "https://x.com/cgnot996/status/2108504325609984233",
+      "source_author": "cgnot996",
+      "source_published": "2026-10-09",
+      "resource_id": "x-cgnot996-usage-endurance-guide",
+      "section": "recipes",
+      "slug": "usage-audit",
+      "path": "recipes/usage-audit",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "medium",
+        "evidence_zh": "合集第 2 条「日常使用强度与额度体验：从日常任务出发介绍额度消耗」；嵌入原帖实际标题为「额度超长续航保姆级新手指南」（cgnot996），讲省额度做法。主题相近但合集描述偏「体验」，属同组唯一剩余嵌入，按排除法对应，置信中等。"
+      },
+      "methods": [
+        "a02-m01",
+        "a02-m02",
+        "a02-m03",
+        "a02-m04",
+        "a02-m05",
+        "a02-m06",
+        "a02-m07",
+        "a02-m08",
+        "a02-m09",
+        "a02-m10",
+        "a02-m11",
+        "a02-m12",
+        "a02-m13"
+      ],
+      "photos_viewed": 10,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 3,
+      "source_url": "https://x.com/jinchenma_ai/status/2094984812251746424",
+      "source_author": "jinchenma_ai",
+      "source_published": "2026-09-02",
+      "resource_id": "x-jinchenma-onboarding-guide",
+      "section": "recipes",
+      "slug": "onboarding-store-brief",
+      "path": "recipes/onboarding-store-brief",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 3 标题与原文标题一致，且条目下「查看文章」链接直接指向 jinchenma_ai/article/2094984812251746424。"
+      },
+      "methods": [
+        "a03-m01",
+        "a03-m02",
+        "a03-m03",
+        "a03-m04",
+        "a03-m05",
+        "a03-m06",
+        "a03-m07"
+      ],
+      "photos_viewed": 7,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 4,
+      "source_url": "https://x.com/KinGao476942/status/2097915898971742325",
+      "source_author": "KinGao476942",
+      "source_published": "2026-09-10",
+      "resource_id": "x-kingao476942-nontechnical-task-brief",
+      "section": "recipes",
+      "slug": "nontechnical-task-brief",
+      "path": "recipes/nontechnical-task-brief",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「非技术背景的上手方案：面向不熟悉 API、JSON 和命令行的读者」；原文「非工程师怎么用好 Grok Bot」整理官方非工程岗位案例。"
+      },
+      "methods": [
+        "a04-m01",
+        "a04-m02",
+        "a04-m03",
+        "a04-m04",
+        "a04-m05"
+      ],
+      "photos_viewed": 1,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 5,
+      "source_url": "https://x.com/MaiYangAI/status/2090919833366040919",
+      "source_author": "MaiYangAI",
+      "source_published": "2026-08-22",
+      "resource_id": "x-maiyangai-conference-notes-workflow",
+      "section": "recipes",
+      "slug": "conference-notes-workflow",
+      "path": "recipes/conference-notes-workflow",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「整体认知与进阶路径：从基础提问、角色设定到多工具协同」；原文「从入门到进阶」。"
+      },
+      "methods": [
+        "a05-m01",
+        "a05-m02",
+        "a05-m03"
+      ],
+      "photos_viewed": 12,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 6,
+      "source_url": "https://x.com/czzzzzzJ_/status/2110207286845292842",
+      "source_author": "czzzzzzJ_",
+      "source_published": "2026-10-14",
+      "resource_id": "x-czzzzzzj-day-zero-bot-checklist",
+      "section": "advanced",
+      "slug": "day-zero-bot-checklist",
+      "path": "advanced/day-zero-bot-checklist",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「零基础入门：创建 Bot、Skill 与连接器——主 Bot、云电脑、固定任务、专业领域、CLI 工具与连接器」；原文章节依次正是主 Bot、云电脑、四类 Bot 方向（固定任务/Skill/CLI/连接器），段落一一对应。此前判为低置信有误，现据正文改为高置信。"
+      },
+      "methods": [
+        "a06-m01",
+        "a06-m02",
+        "a06-m03",
+        "a06-m04",
+        "a06-m05",
+        "a06-m06",
+        "a06-m07"
+      ],
+      "photos_viewed": 26,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 7,
+      "source_url": "https://x.com/xilo2991/status/2109613437215293905",
+      "source_author": "xilo2991",
+      "source_published": "2026-10-12",
+      "resource_id": "x-xilo2991-team-workflow-interview",
+      "section": "recipes",
+      "slug": "team-workflow-interview",
+      "path": "recipes/team-workflow-interview",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「从开通到多 AI 协作的完整入门教程——界面、任务触发、Bot 模板、团队搭建，以内容采集为例，附访谈提示词」；原文结构完全对应。"
+      },
+      "methods": [
+        "a07-m01",
+        "a07-m02",
+        "a07-m03"
+      ],
+      "photos_viewed": 18,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 8,
+      "source_url": "https://x.com/xaiwind/status/2100027951618416963",
+      "source_author": "xaiwind",
+      "source_published": "2026-09-16",
+      "resource_id": "x-xaiwind-team-blueprint",
+      "section": "bots",
+      "slug": "team-blueprint",
+      "path": "bots/team-blueprint",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「入门：安装登录、创建 Bot 与团队搭建、常用插件」；原文目录一致。"
+      },
+      "methods": [
+        "a08-m01",
+        "a08-m02",
+        "a08-m03"
+      ],
+      "photos_viewed": 11,
+      "videos_unread": 1,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 9,
+      "source_url": "https://x.com/KinGao476942/status/2108132811635032316",
+      "source_author": "KinGao476942",
+      "source_published": "2026-10-08",
+      "resource_id": "x-kin-wechat-guide",
+      "section": "recipes",
+      "slug": "wechat-webhook-bridge",
+      "path": "recipes/wechat-webhook-bridge",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「微信接入教程：通过消息转发等方式在微信中调用 Bot」；原文即微信 ClawBot 接入。"
+      },
+      "methods": [
+        "a09-m01"
+      ],
+      "photos_viewed": 12,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 10,
+      "source_url": "https://x.com/liyue_ai/status/2109203944799141922",
+      "source_author": "liyue_ai",
+      "source_published": "2026-10-11",
+      "resource_id": "x-liyue-ai-feishu-content-desk",
+      "section": "recipes",
+      "slug": "feishu-content-desk",
+      "path": "recipes/feishu-content-desk",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 10 标题与原文标题一致。"
+      },
+      "methods": [
+        "a10-m01"
+      ],
+      "photos_viewed": 22,
+      "videos_unread": 1,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 11,
+      "source_url": "https://x.com/cgnot996/status/2097487429104197688",
+      "source_author": "cgnot996",
+      "source_published": "2026-09-09",
+      "resource_id": "x-cgnot996-webhook-knowledge-inbox",
+      "section": "recipes",
+      "slug": "webhook-knowledge-inbox",
+      "path": "recipes/webhook-knowledge-inbox",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「Webhook 与快捷指令：Webhook、API 和 Shortcuts」；原文即此。"
+      },
+      "methods": [
+        "a11-m01",
+        "a11-m02",
+        "a11-m03"
+      ],
+      "photos_viewed": 12,
+      "videos_unread": 2,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 12,
+      "source_url": "https://x.com/0xlangeai/status/2093192039051489662",
+      "source_author": "0xlangeai",
+      "source_published": "2026-08-28",
+      "resource_id": "x-0xlangeai-tailscale-ssh-check",
+      "section": "advanced",
+      "slug": "tailscale-ssh-check",
+      "path": "advanced/tailscale-ssh-check",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「SSH 与远程环境连接」；原文即 Tailscale SSH 教程。"
+      },
+      "methods": [
+        "a12-m01"
+      ],
+      "photos_viewed": 5,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 13,
+      "source_url": "https://x.com/0xlangeai/status/2100411223410110578",
+      "source_author": "0xlangeai",
+      "source_published": "2026-09-17",
+      "resource_id": "x-0xlangeai-cloud-computer-audit",
+      "section": "advanced",
+      "slug": "cloud-computer-audit",
+      "path": "advanced/cloud-computer-audit",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "medium",
+        "evidence_zh": "合集「云电脑选型与长期运行：从成本、连接情况和维护介绍云环境选择」；原文是对 Grok Bot 云电脑配置与能否当服务器的调研，覆盖连接与长期运行，但不涉及成本比较，置信中等。该帖也出现在 0xlangeai 历史文章列表。"
+      },
+      "methods": [
+        "a13-m01",
+        "a13-m02"
+      ],
+      "photos_viewed": 12,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 14,
+      "source_url": "https://x.com/app_sail/status/2108523630900748335",
+      "source_author": "app_sail",
+      "source_published": "2026-10-09",
+      "resource_id": "x-app-sail-claude-code-cloud",
+      "section": "recipes",
+      "slug": "remote-coding-desk",
+      "path": "recipes/remote-coding-desk",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 14 标题与原文主题一致（Orca + Tailscale + Claude Code 云主机）。"
+      },
+      "methods": [
+        "a14-m01",
+        "a14-m02",
+        "a14-m03",
+        "a14-m04",
+        "a14-m05",
+        "a14-m06",
+        "a14-m07"
+      ],
+      "photos_viewed": 8,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 15,
+      "source_url": "https://x.com/KinGao476942/status/2106985933966832090",
+      "source_author": "KinGao476942",
+      "source_published": "2026-10-05",
+      "resource_id": "x-kingao476942-claude-code-access-check",
+      "section": "advanced",
+      "slug": "claude-code-access-check",
+      "path": "advanced/claude-code-access-check",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "ambiguous",
+        "evidence_zh": "合集第 15 条写「Claude Code 额度与消耗机制：扩展阅读，讨论 Claude Code 的上下文、缓存与 Token 消耗」。嵌入原帖实际标题是「如何用 Grok Bot 稳定注册并订阅 Claude Code」（KinGao476942），讲注册与订阅流程，正文没有上下文、缓存、Token 消耗的讨论。它属于合集嵌入的 23 个原帖之一，按排除法是第 15 条唯一剩余候选，但描述与内容不符，标 ambiguous；未用其他帖子替代。"
+      },
+      "methods": [],
+      "photos_viewed": 11,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "official-access-check-replacement"
+    },
+    {
+      "entry_item": 16,
+      "source_url": "https://x.com/sitinme/status/2109814883688796459",
+      "source_author": "sitinme",
+      "source_published": "2026-10-13",
+      "resource_id": "x-sitinme-chief-of-staff-brief",
+      "section": "bots",
+      "slug": "chief-of-staff-brief",
+      "path": "bots/chief-of-staff-brief",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「首席助理与十几个专职 Bot 的协作：X 早报、选题、邮件、项目运营、日常简报」；原文一致。"
+      },
+      "methods": [
+        "a16-m01",
+        "a16-m02"
+      ],
+      "photos_viewed": 8,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 17,
+      "source_url": "https://x.com/AdrianPunk115/status/2097311704547987756",
+      "source_author": "AdrianPunk115",
+      "source_published": "2026-09-08",
+      "resource_id": "x-adrianpunk115-editorial-review-pipeline",
+      "section": "recipes",
+      "slug": "editorial-review-pipeline",
+      "path": "recipes/editorial-review-pipeline",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「自媒体多 Bot 内容流水线：选题、初稿、润色和多平台转换」；原文为五角色自媒体团队教程。"
+      },
+      "methods": [
+        "a17-m01",
+        "a17-m02",
+        "a17-m03",
+        "a17-m04"
+      ],
+      "photos_viewed": 19,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 18,
+      "source_url": "https://x.com/Jackywxsz/status/2108808842045956343",
+      "source_author": "Jackywxsz",
+      "source_published": "2026-10-10",
+      "resource_id": "x-jackywxsz-content-roster-audit",
+      "section": "bots",
+      "slug": "content-roster-audit",
+      "path": "bots/content-roster-audit",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 18 标题与原文一致。"
+      },
+      "methods": [
+        "a18-m01",
+        "a18-m02",
+        "a18-m03"
+      ],
+      "photos_viewed": 16,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 19,
+      "source_url": "https://x.com/KinGao476942/status/2099736121781764594",
+      "source_author": "KinGao476942",
+      "source_published": "2026-09-15",
+      "resource_id": "x-kingao476942-x-topic-library",
+      "section": "recipes",
+      "slug": "x-topic-library",
+      "path": "recipes/x-topic-library",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "medium",
+        "evidence_zh": "合集「内容风格与写作约束：提示词约束、参考语料和语调调整」；原文讲做自媒体的身份卡、方法论、选题字段与禁编数据规则，覆盖写作约束，置信中等。"
+      },
+      "methods": [
+        "a19-m01",
+        "a19-m02"
+      ],
+      "photos_viewed": 1,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 20,
+      "source_url": "https://x.com/aehyok/status/2109817788198158347",
+      "source_author": "aehyok",
+      "source_published": "2026-10-13",
+      "resource_id": "x-aehyok-x-signal-monitor",
+      "section": "recipes",
+      "slug": "x-signal-monitor",
+      "path": "recipes/x-signal-monitor",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 20 主题一致（X 爆款监控 Skill）。"
+      },
+      "methods": [
+        "a20-m01",
+        "a20-m02"
+      ],
+      "photos_viewed": 3,
+      "videos_unread": 1,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 21,
+      "source_url": "https://x.com/0xlangeai/status/2097839261039153381",
+      "source_author": "0xlangeai",
+      "source_published": "2026-09-10",
+      "resource_id": "x-0xlangeai-feature-evidence-review",
+      "section": "recipes",
+      "slug": "feature-evidence-review",
+      "path": "recipes/feature-evidence-review",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集「Cursor 与 pstack 协同」；原文一致。该帖也在历史文章列表。"
+      },
+      "methods": [
+        "a21-m01"
+      ],
+      "photos_viewed": 1,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 22,
+      "source_url": "https://x.com/KinGao476942/status/2096232745538334913",
+      "source_author": "KinGao476942",
+      "source_published": "2026-09-05",
+      "resource_id": "x-kingao476942-pr-operations-review",
+      "section": "recipes",
+      "slug": "pr-operations-review",
+      "path": "recipes/pr-operations-review",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "medium",
+        "evidence_zh": "合集「代码协作与排错流程：角色规范、增量修改、测试检查」；原文是 Kin 翻译的官方工程师 Lingxi Li「工程师如何用好 Grok Bot」，讲工程 Bot 管 cloud agent、PR 巡检与夜间审计，覆盖该描述，置信中等。"
+      },
+      "methods": [
+        "a22-m01",
+        "a22-m02",
+        "a22-m03"
+      ],
+      "photos_viewed": 8,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 23,
+      "source_url": "https://x.com/cgnot996/status/2098222795847315967",
+      "source_author": "cgnot996",
+      "source_published": "2026-09-11",
+      "resource_id": "x-cgnot996-bot-backup-restore",
+      "section": "advanced",
+      "slug": "bot-backup-restore",
+      "path": "advanced/bot-backup-restore",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "high",
+        "evidence_zh": "合集条目 23 主题一致（记忆管家 Git 备份）。"
+      },
+      "methods": [
+        "a23-m01",
+        "a23-m02"
+      ],
+      "photos_viewed": 13,
+      "videos_unread": 0,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    },
+    {
+      "entry_item": 24,
+      "source_url": "https://x.com/0xlangeai/status/2101555600618602625",
+      "source_author": "0xlangeai",
+      "source_published": "2026-09-20",
+      "resource_id": "x-0xlangeai-confidence-triage-shadow",
+      "section": "recipes",
+      "slug": "confidence-triage-shadow",
+      "path": "recipes/confidence-triage-shadow",
+      "body_read": "full",
+      "mapping": {
+        "confidence": "medium",
+        "evidence_zh": "合集「JEV、GrokBot 与 X 发布流程：素材整理、内容处理和 X 发布」；原文标题一致，但内容是用 Jev 做时间线分流闸门，不涉及代发布，描述只部分吻合。该帖也在历史文章列表。"
+      },
+      "methods": [
+        "a24-m01"
+      ],
+      "photos_viewed": 7,
+      "videos_unread": 1,
+      "execution_status": "not_tested",
+      "editorial_mode": "original-workflow-from-source"
+    }
+  ],
+  "media_reconciliation": {
+    "media_total": 251,
+    "photos": {
+      "total": 245,
+      "downloaded": 245,
+      "viewed": 245,
+      "failed": 0,
+      "method_zh": "下载原图拼为 2×2 拼图后逐张查看；记录的是查看结论，未存图片本身"
+    },
+    "videos": {
+      "total": 6,
+      "watched": 0,
+      "unread": 6,
+      "note_zh": "视频未下载未观看，标未读"
+    },
+    "articles": 24,
+    "methods": 79
+  },
+  "editorial_corrections": [
+    "Collector confirmed the iMessage/webhook correction belongs to a10, not a01.",
+    "Collector confirmed the local-execution menu correction belongs to a17, not a07.",
+    "Stale body-stage image gaps are superseded by photo records; missing prompts and six unwatched videos remain unresolved.",
+    "Item 15 is an official access checklist replacement, not a reproduction of the embedded registration method."
+  ]
+}

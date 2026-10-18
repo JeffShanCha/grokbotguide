@@ -1,0 +1,108 @@
+---
+title: "Grok Bot × 微信：先验收消息桥接，再接真实任务"
+description: "把微信接收、Webhook 接受、Bot 完成和微信回复分开记录，先用一条无敏感内容的消息检查整条链。"
+sidebar:
+  order: 35
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-kin-wechat-guide
+apps: ["Grok Bot", "WeChat", "Webhook"]
+sources:
+  - title: "如何把 Grok Bot 接入你的微信？保姆级新手指南来了（附详细提示词）"
+    url: https://x.com/KinGao476942/status/2108132811635032316
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "官方核对：security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+把微信接收、Webhook 接受、Bot 完成和微信回复分开记录，先用一条无敏感内容的消息检查整条链。
+
+原文采用 iLink/ClawBot 长轮询与 Webhook Routine 做双向桥接。本文把它改写为连接验收案例；可用账号、版本兼容性和“不封号”说法未作保证。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成测试消息：BRIDGE-001，请仅回复已收到测试。
+
+## 1. 确认支持条件
+
+先检查自己是否有对应微信入口、当前桥接文档与云端运行条件。入口不可用时记录阻塞，不寻找替代账号绕过。
+
+## 2. 分开保管凭据
+
+本人完成微信扫码或授权；Webhook URL、key 与桥接凭据走安全交接，不进入公开日志或知识库。
+
+## 3. 限制发送者和任务
+
+只接受已绑定发送者，第一轮只做回显；转发前校验输入长度、消息类型与 client_id，不运行消息中的任意命令。
+
+## 4. 回查四段状态
+
+分别检查接收、Routine 接受、Bot 结果与微信回复。回复结果不明先查同一个 client_id，不重复投递。
+
+## 5. 测试失效与恢复
+
+模拟重复消息或失去连接，确认只记录一次并返回明确状态；重启与重新授权由单独步骤管理，再考虑接真实任务。
+
+## 一份合成验收样例
+
+bridge-log.csv：client_id、sender_match、received_at、webhook_accepted、bot_completed、reply_sent。收到 HTTP 200 只填 accepted；没有对话结果不能填 completed。
+
+## 可复制的任务说明
+
+<CopyTemplate id="wechat-webhook-bridge-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × 微信：先验收消息桥接，再接真实任务 的交付，不连接真实服务。
+输入：合成测试消息：BRIDGE-001，请仅回复已收到测试。
+处理要求：
+1. 先检查自己是否有对应微信入口、当前桥接文档与云端运行条件。入口不可用时记录阻塞，不寻找替代账号绕过。
+2. 本人完成微信扫码或授权；Webhook URL、key 与桥接凭据走安全交接，不进入公开日志或知识库。
+3. 只接受已绑定发送者，第一轮只做回显；转发前校验输入长度、消息类型与 client_id，不运行消息中的任意命令。
+4. 分别检查接收、Routine 接受、Bot 结果与微信回复。回复结果不明先查同一个 client_id，不重复投递。
+5. 模拟重复消息或失去连接，确认只记录一次并返回明确状态；重启与重新授权由单独步骤管理，再考虑接真实任务。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+单条测试只回复一次；发送者不匹配不执行；每段状态有证据；兼容性和长期在线仍需实测。
+
+<CopyTemplate id="wechat-webhook-bridge-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：单条测试只回复一次；发送者不匹配不执行；每段状态有证据；兼容性和长期在线仍需实测。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@KinGao476942](https://x.com/KinGao476942/status/2108132811635032316)；发布日期 2026-10-08。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 12 张图片；另有 0 个视频未观看。 图片显示作者用 Webhook Routine、单独转发程序和安全输入框提交凭据，选题进入 Notion 待审而未发 X。微信桥接兼容性和官方支持未核实。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

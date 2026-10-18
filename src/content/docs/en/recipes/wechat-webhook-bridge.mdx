@@ -1,0 +1,108 @@
+---
+title: "Grok Bot × WeChat: validate the message bridge before real work"
+description: "Track receipt, webhook acceptance, Bot completion and the WeChat reply separately using a harmless test message."
+sidebar:
+  order: 35
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-kin-wechat-guide
+apps: ["Grok Bot", "WeChat", "Webhook"]
+sources:
+  - title: "Related source by @KinGao476942"
+    url: https://x.com/KinGao476942/status/2108132811635032316
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Track receipt, webhook acceptance, Bot completion and the WeChat reply separately using a harmless test message.
+
+The source uses an iLink/ClawBot polling bridge and a webhook routine. This guide focuses on connection acceptance without guaranteeing account availability, compatibility or enforcement outcomes.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic message: BRIDGE-001, reply only that the test was received.
+
+## 1. Check prerequisites
+
+Check the account's available WeChat entry, current bridge documentation and hosting conditions. Record unavailable prerequisites.
+
+## 2. Handle credentials separately
+
+The account holder completes pairing. Keep webhook and bridge credentials out of public logs and knowledge files.
+
+## 3. Bound sender and task
+
+Accept the paired sender and use an echo-only first test. Validate message type, size and identity before forwarding.
+
+## 4. Trace each segment
+
+Verify receipt, routine acceptance, completion and reply independently. Investigate an uncertain result before replaying the same identity.
+
+## 5. Test failure and recovery
+
+Test duplicate delivery and lost connectivity. Keep restart and reauthorization separate before introducing real tasks.
+
+## A synthetic acceptance fixture
+
+bridge-log.csv: client_id, sender_match, received_at, webhook_accepted, bot_completed, reply_sent. HTTP 200 establishes acceptance, not completed work.
+
+## Copyable task brief
+
+<CopyTemplate id="wechat-webhook-bridge-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × WeChat: validate the message bridge before real work. Do not connect real services yet.
+Input: Synthetic message: BRIDGE-001, reply only that the test was received.
+Requirements:
+1. Check the account's available WeChat entry, current bridge documentation and hosting conditions. Record unavailable prerequisites.
+2. The account holder completes pairing. Keep webhook and bridge credentials out of public logs and knowledge files.
+3. Accept the paired sender and use an echo-only first test. Validate message type, size and identity before forwarding.
+4. Verify receipt, routine acceptance, completion and reply independently. Investigate an uncertain result before replaying the same identity.
+5. Test duplicate delivery and lost connectivity. Keep restart and reauthorization separate before introducing real tasks.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+One test yields one reply; unmatched senders do not run; every state has evidence, with compatibility and uptime still requiring testing.
+
+<CopyTemplate id="wechat-webhook-bridge-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: One test yields one reply; unmatched senders do not run; every state has evidence, with compatibility and uptime still requiring testing.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@KinGao476942](https://x.com/KinGao476942/status/2108132811635032316); published 2026-10-08.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 12 images; 0 videos remain unwatched. Images show a routine, a separate relay and secure credential input, with Notion ideas awaiting review rather than X publication. Bridge compatibility and official support remain unverified.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

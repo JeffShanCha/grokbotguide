@@ -1,4 +1,243 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: x-0xlangeai-cloud-computer-audit
+  url: https://x.com/0xlangeai/status/2100411223410110578
+  title: 云电脑能力审计：先测资源与生命周期，再考虑托管服务
+  title_en: "Hosted computer audit: check resources and lifecycle before serving apps"
+  author: "@0xlangeai"
+  author_en: "@0xlangeai"
+  author_url: https://x.com/0xlangeai
+  source: x
+  lang: zh
+  published: 2026-09-17
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - advanced
+  summary_zh: 用资源清单、网络测试和重启恢复表回答能否运行目标任务，避免把作者的一台机器当成套餐保证。 未实测。
+  summary_en: Use a resource inventory, connectivity checks and recovery plan rather than treating one author's machine as a plan guarantee. Untested.
+  apps:
+    - Grok Bot
+    - Linux
+    - Tailscale
+  tags:
+    - langeai-reading
+    - source-review
+    - cloud-computer-audit
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看12张图；0个视频未观看。铁柱本轮报告已查看 12 张图片；另有 0 个视频未观看。 配图按系统时间、CPU/cgroup、内存、磁盘、GPU 探测和权限/工具给出自查结果，均为作者当时实例；缺少 nvidia-smi 等命令不证明没有 GPU。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 12 images; 0 videos were not watched. The collector reports viewing 12 images; 0 videos remain unwatched. Images report the author's system, CPU/cgroup, memory, storage, GPU probes and permissions/tools. Missing GPU utilities alone do not prove GPU absence. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-0xlangeai-confidence-triage-shadow
+  url: https://x.com/0xlangeai/status/2101555600618602625
+  title: Grok Bot × Jev：先在影子模式验证信息分流
+  title_en: "Grok Bot × Jev: validate triage in shadow mode first"
+  author: "@0xlangeai"
+  author_en: "@0xlangeai"
+  author_url: https://x.com/0xlangeai
+  source: x
+  lang: zh
+  published: 2026-09-20
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 把信息类型、主题相关度、公开风险和下一步建议写成固定字段，先记录预测与人工答案，再决定是否自动分流。 未实测。
+  summary_en: Use fixed fields for information type, relevance, public risk and next action, comparing predictions with human labels before automation. Untested.
+  apps:
+    - Grok Bot
+    - Jev
+    - X
+  tags:
+    - langeai-reading
+    - source-review
+    - confidence-triage-shadow
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看7张图；1个视频未观看。铁柱本轮报告已查看 7 张图片；另有 1 个视频未观看。 截图给出八条样本和一次平均延迟约 235ms 的作者结果；worth_reply 只进入判断队列。小样本与置信度都不代表真实业务准确率。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 7 images; 1 videos were not watched. The collector reports viewing 7 images; 1 videos remain unwatched. Screenshots report eight samples and about 235ms mean latency from the author, with worth_reply routed for judgment. Neither the sample nor confidence establishes production accuracy. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-0xlangeai-feature-evidence-review
+  url: https://x.com/0xlangeai/status/2097839261039153381
+  title: Grok Bot × 功能验收：让编码任务交出可回查的完成证据
+  title_en: "Grok Bot × feature acceptance: require traceable completion evidence"
+  author: "@0xlangeai"
+  author_en: "@0xlangeai"
+  author_url: https://x.com/0xlangeai
+  source: x
+  lang: zh
+  published: 2026-09-10
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 先定义用户路径、输入、成功与失败，再核对测试、日志和截图对应的代码版本。 未实测。
+  summary_en: Define the user path, input, success and failure behavior, then tie tests, logs and screenshots to a code revision. Untested.
+  apps:
+    - Grok Bot
+    - Cursor
+    - GitHub
+  tags:
+    - langeai-reading
+    - source-review
+    - feature-evidence-review
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看1张图；0个视频未观看。铁柱本轮报告已查看 1 张图片；另有 0 个视频未观看。 仅有封面图；Lauren 原文和插件页本轮没有完整复读，本文只采用已读文章中的验收框架。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 1 images; 0 videos were not watched. The collector reports viewing 1 images; 0 videos remain unwatched. The image is a cover. The Lauren article and plugin page were not fully reread; this guide uses the acceptance framework from the read source. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-0xlangeai-must-read-index
+  url: https://x.com/0xlangeai/status/2111396742264742034
+  title: 24 篇 Grok Bot 资料深读：案例、教程与核验地图
+  title_en: "24 Grok Bot sources: workflow guides and verification map"
+  author: 蓝哥AI（@0xlangeai）
+  author_en: Lange AI (@0xlangeai)
+  author_url: https://x.com/0xlangeai
+  source: x
+  lang: zh
+  published: 2026-10-17
+  added: 2026-10-18
+  checked_at: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - resources
+    - start
+  summary_zh: 逐篇读取合集24个目标，查看245张图片，整理79项方法并改写为站内案例、教程和角色卡；6个视频未看，1处主题错配单列说明。全部流程未实测。
+  summary_en: 24 sources read, 245 images viewed and 79 methods reviewed into site guides. Six videos remain unwatched; one topic mismatch is disclosed. Workflows are untested.
+  verification_note_zh: 铁柱读取合集、24篇正文与245张图片；6个视频未观看。Codex 核对原帖ID、改写并分类，修正两处采集元数据错位；不复制全文、完整提示词或图片。来源映射18项高、5项中、1项描述不符；执行效果均未实测。
+  verification_note_en: "The collector read the index, 24 bodies and 245 images; six videos were not watched. Codex checked identities, rewrote and categorized the guides, and corrected two metadata assignments. Mapping: 18 strong, five inferred, one mismatch. No workflow reproduced."
+  apps:
+    - Grok Bot
+  tags:
+    - reading-list
+    - langeai-reading
+    - source-review
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-0xlangeai-tailscale-ssh-check
+  url: https://x.com/0xlangeai/status/2093192039051489662
+  title: 远程连接检查：用 Tailscale 访问 Grok Bot 云电脑
+  title_en: "Remote access checklist: reach the Bot computer over Tailscale"
+  author: "@0xlangeai"
+  author_en: "@0xlangeai"
+  author_url: https://x.com/0xlangeai
+  source: x
+  lang: zh
+  published: 2026-08-28
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - advanced
+  summary_zh: 先分清私网连接与 SSH 授权，再核对目标主机、系统用户和撤销路径，用只读命令验证连接。 未实测。
+  summary_en: Separate private-network reachability from SSH authorization and validate the host, user and revocation path. Untested.
+  apps:
+    - Grok Bot
+    - Tailscale
+    - SSH
+  tags:
+    - langeai-reading
+    - source-review
+    - tailscale-ssh-check
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看5张图；0个视频未观看。铁柱本轮报告已查看 5 张图片；另有 0 个视频未观看。 截图展示两台设备、SSH 的额外浏览器认证和作者使用的 box 用户。主机地址、用户名和认证规则都需按自己的环境确认。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 5 images; 0 videos were not watched. The collector reports viewing 5 images; 0 videos remain unwatched. Images show two devices, an additional browser authentication step and the author's box user. Host, user and authentication rules remain environment-specific. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-adrianpunk115-editorial-review-pipeline
+  url: https://x.com/AdrianPunk115/status/2097311704547987756
+  title: Grok Bot × 内容编辑部：五个角色、三次人工审阅
+  title_en: "Grok Bot × editorial desk: five roles and three human reviews"
+  author: "@AdrianPunk115"
+  author_en: "@AdrianPunk115"
+  author_url: https://x.com/AdrianPunk115
+  source: x
+  lang: zh
+  published: 2026-09-08
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 用来源记录、选题批准、稿件和事实审阅串起内容流程，先用一条低风险主题逐阶段检查。 未实测。
+  summary_en: Connect source records, topic approval, drafting and fact review through a single low-risk sample. Untested.
+  apps:
+    - Grok Bot
+    - X
+    - Markdown
+  tags:
+    - langeai-reading
+    - source-review
+    - editorial-review-pipeline
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看19张图；0个视频未观看。铁柱本轮报告已查看 19 张图片；另有 0 个视频未观看。 图中五岗目录依次为 01-inbox、02-briefs、03-drafts、04-review、06-analysis；主笔不另搜材料，复盘只读获准数据。本机执行页与旧正文路径不一致。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 19 images; 0 videos were not watched. The collector reports viewing 19 images; 0 videos remain unwatched. Images assign 01-inbox, 02-briefs, 03-drafts, 04-review and 06-analysis to separate roles. Writing uses supplied evidence and retrospectives use authorized data. The local-execution screenshot differs from the old text. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-aehyok-x-signal-monitor
+  url: https://x.com/aehyok/status/2109817788198158347
+  title: Grok Bot × 热帖观察：用快照与去重验证监控规则
+  title_en: "Grok Bot × post monitoring: validate signals with snapshots and deduplication"
+  author: "@aehyok"
+  author_en: "@aehyok"
+  author_url: https://x.com/aehyok
+  source: x
+  lang: zh
+  published: 2026-10-13
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 把采集窗口、累计数据、增量阈值和通知状态分开，先离线比较两次样本，再讨论定时与存档。 未实测。
+  summary_en: Separate collection windows, cumulative metrics, growth thresholds and notification states before scheduling monitoring. Untested.
+  apps:
+    - Grok Bot
+    - X
+    - GitHub
+  tags:
+    - langeai-reading
+    - source-review
+    - x-signal-monitor
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看3张图；1个视频未观看。铁柱本轮报告已查看 3 张图片；另有 1 个视频未观看。 推送截图区分累计浏览、每小时增量和发帖时间，并显示 GitHub 存档；安装指令全文未取得，外部模型免费期未核实。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 3 images; 1 videos were not watched. The collector reports viewing 3 images; 1 videos remain unwatched. The alert screenshot separates total views, hourly growth and publication time, with GitHub storage. The complete install instructions and current free-model terms were not obtained. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-cgnot996-bot-backup-restore
+  url: https://x.com/cgnot996/status/2098222795847315967
+  title: Bot 备份与恢复演练：先验证可导出内容，再保存快照
+  title_en: "Bot backup and restore drill: verify exportable material before snapshots"
+  author: "@cgnot996"
+  author_en: "@cgnot996"
+  author_url: https://x.com/cgnot996
+  source: x
+  lang: zh
+  published: 2026-09-11
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - advanced
+  summary_zh: 把岗位说明、可读取记忆、工作文件和恢复步骤分开，检查备份清单与一次小范围恢复，不承诺完整迁移平台状态。 未实测。
+  summary_en: Separate role definitions, accessible memory, work files and recovery instructions, then test a small restore. Untested.
+  apps:
+    - Grok Bot
+    - Markdown
+    - Git
+  tags:
+    - langeai-reading
+    - source-review
+    - bot-backup-restore
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看13张图；0个视频未观看。铁柱本轮报告已查看 13 张图片；另有 0 个视频未观看。 图片补出 registry.md、MEMORY.md、agent-spec.md 和 RESTORE.md，并先让用户圈定名单；约 73KB、7 个角色和恢复 80% 都是作者样本或说法，未复现。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 13 images; 0 videos were not watched. The collector reports viewing 13 images; 0 videos remain unwatched. Images add registry.md, MEMORY.md, agent-spec.md and RESTORE.md, beginning with a user-approved roster. The 73KB, seven-role and 80% figures are author reports, not reproduced results. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
 - id: x-cgnot996-usage-endurance-guide
   title: Grok Bot 省额度指南：任务降频、上下文整理与工具分流
   summary_zh: 作者汇总12条省额度建议，涉及定时降频、上下文交接、CLI分流、重试上限和用量封顶。已补读10张图；充值结论需按账号类型纠正，免费接口和云电脑运行保证仍有未核实部分。
@@ -16,8 +255,8 @@
   checked_at: 2026-10-18
   status: alive
   evidence: author-reported
-  verification_note_zh: 已读原帖长文和10张图，并对照官方用量、模型、设置与Routine说明；流程和节省比例未实测。未核实：X搜索免额度、免费接口限额、云电脑持续运行或耗尽后接管、封顶对在途任务的影响。第三方技能仅部分读取，部分外链失败。
-  verification_note_en: Article and ten images read; official billing, models, settings and routines checked. No workflow or savings tested. Quota-free X search, free API limits, cloud uptime/access after exhaustion, and caps on in-flight work remain unverified. Skills partly read; some links failed.
+  verification_note_zh: 铁柱读完原文并查看10张图；0个视频未观看。铁柱本轮报告已查看 10 张图片；另有 0 个视频未观看。 图片补充上下文整理、CLI 分工和 Webhook 路线。充值说法已按账号类型纠正，节省比例未复现。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。 已另核对旧版 Cursor 按量月上限允许在途任务完成；不外推到其他账号。
+  verification_note_en: The collector read the body and viewed 10 images; 0 videos were not watched. The collector reports viewing 10 images; 0 videos remain unwatched. Images illustrate context management, CLI division and webhooks. Billing advice is account-specific and savings have not been reproduced. Independent site exercises; no live workflow tested. Linked references were not all reread. Legacy Cursor in-progress cap behavior was checked separately; it is not generalized to other accounts.
   apps:
     - Grok Build
     - Cursor
@@ -33,7 +272,417 @@
   title_en: "Grok Bot usage guide: routine cadence, context handoffs and tool offloading"
   author_en: Tiezhu AGI (@cgnot996)
   platform: x
-  collection_batch: 2026-10-18-cgnot996-verification-clarified
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-cgnot996-webhook-knowledge-inbox
+  url: https://x.com/cgnot996/status/2097487429104197688
+  title: Grok Bot × 快捷指令：把分享链接送入有回执的知识收件箱
+  title_en: "Grok Bot × Shortcuts: send shared links to a traceable knowledge inbox"
+  author: "@cgnot996"
+  author_en: "@cgnot996"
+  author_url: https://x.com/cgnot996
+  source: x
+  lang: zh
+  published: 2026-09-09
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 用手机分享面板提交链接，以请求编号去重，并区分接受、读取、整理和入库完成四种状态。 未实测。
+  summary_en: Submit shared links with a request identity and distinguish accepted, read, organized and stored states. Untested.
+  apps:
+    - Grok Bot
+    - Shortcuts
+    - Webhook
+  tags:
+    - langeai-reading
+    - source-review
+    - webhook-knowledge-inbox
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看12张图；2个视频未观看。铁柱本轮报告已查看 12 张图片；另有 2 个视频未观看。 原图请求体字段是 info=快捷指令输入。本文额外定义 request_id、source_url 等字段时，Routine 的解析规则必须同步；原图还有产物路径与入库回执。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 12 images; 2 videos were not watched. The collector reports viewing 12 images; 2 videos remain unwatched. The screenshot uses info for Shortcut Input. If adopting the request_id/source_url fixture, update the routine parser to match. The images also show stored paths and receipts. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-czzzzzzj-day-zero-bot-checklist
+  url: https://x.com/czzzzzzJ_/status/2110207286845292842
+  title: Day 0 配置检查：主 Bot、连接器、CLI 与固定任务
+  title_en: "Day-zero checklist: main Bot, connectors, CLI and recurring work"
+  author: "@czzzzzzJ_"
+  author_en: "@czzzzzzJ_"
+  author_url: https://x.com/czzzzzzJ_
+  source: x
+  lang: zh
+  published: 2026-10-14
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - advanced
+  summary_zh: 把创建、授权、执行环境和定时触发拆开检查，先验收一项任务，再扩展工具与角色。 未实测。
+  summary_en: Check role setup, identity, execution environment and triggers separately before expanding a first workflow. Untested.
+  apps:
+    - Grok Bot
+    - CLI
+  tags:
+    - langeai-reading
+    - source-review
+    - day-zero-bot-checklist
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看26张图；0个视频未观看。铁柱本轮报告已查看 26 张图片；另有 0 个视频未观看。 截图补充主 Bot 设置、连接器、跨 Bot 消息回执和云端/本机 CLI 的区别；其中小字开关未完整辨认，不列成通用路径。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 26 images; 0 videos were not watched. The collector reports viewing 26 images; 0 videos remain unwatched. Screenshots add main-Bot settings, connectors, handoff receipts and local versus cloud CLI use. An unreadable small-text setting is not made into a universal instruction. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-jackywxsz-content-roster-audit
+  url: https://x.com/Jackywxsz/status/2108808842045956343
+  title: 内容团队编制审计：用交付文件判断该保留哪些 Bot
+  title_en: "Content roster audit: evaluate roles by their deliverables"
+  author: "@Jackywxsz"
+  author_en: "@Jackywxsz"
+  author_url: https://x.com/Jackywxsz
+  source: x
+  lang: zh
+  published: 2026-10-10
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - bots
+  summary_zh: 按总控、判断、输入、增长、生产与巡检盘点职责，把重复工作和没有产物的角色列成调整建议。 未实测。
+  summary_en: Inventory coordination, judgment, research, growth, production and monitoring, then review overlaps and missing artifacts. Untested.
+  apps:
+    - Grok Bot
+    - Markdown
+  tags:
+    - langeai-reading
+    - source-review
+    - content-roster-audit
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看16张图；0个视频未观看。铁柱本轮报告已查看 16 张图片；另有 0 个视频未观看。 配图列出谁交给谁、交付文件和验收人，并把选题、作者观点、终稿与发布留给本人；公开安装包未安装或运行。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 16 images; 0 videos were not watched. The collector reports viewing 16 images; 0 videos remain unwatched. Images identify sender, recipient, artifact and reviewer, keeping topic, author input, final copy and publication with the owner. Public installation packages were not run. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-jinchenma-onboarding-guide
+  url: https://x.com/jinchenma_ai/status/2094984812251746424
+  title: Grok Bot × 店铺晨报：从第一项任务到可复用流程
+  title_en: "Grok Bot × store brief: turn a first task into a reusable workflow"
+  author: "@jinchenma_ai"
+  author_en: "@jinchenma_ai"
+  author_url: https://x.com/jinchenma_ai
+  source: x
+  lang: zh
+  published: 2026-09-02
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 用脱敏经营表验收第一名 Bot：定义岗位、检查输入、输出晨报、复测 Skill，再准备定时任务。 未实测。
+  summary_en: Validate a first Bot with a synthetic operating sheet, check its numbers, repeat with another input, then draft a skill and routine. Untested.
+  apps:
+    - Grok Bot
+    - CSV
+  tags:
+    - langeai-reading
+    - source-review
+    - onboarding-store-brief
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看7张图；0个视频未观看。铁柱本轮报告已查看 7 张图片；另有 0 个视频未观看。 配图展示团队交接、技能菜单和一条例行任务；图片中的旧配置界面不当作当前菜单说明。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 7 images; 0 videos were not watched. The collector reports viewing 7 images; 0 videos remain unwatched. Images show handoffs, a skill menu and a routine; historical configuration screens are not treated as current menus. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-kingao476942-claude-code-access-check
+  url: https://x.com/KinGao476942/status/2106985933966832090
+  title: Claude Code 接入核对：账号、环境、计费与官方认证
+  title_en: "Claude Code access check: account, environment, billing and authentication"
+  author: "@KinGao476942"
+  author_en: "@KinGao476942"
+  author_url: https://x.com/KinGao476942
+  source: x
+  lang: zh
+  published: 2026-10-05
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - advanced
+  summary_zh: 核对支持环境和账号，再区分订阅登录与 API 认证；合集的额度描述与实际嵌入文章不一致。 未实测。
+  summary_en: Check supported environments and account types, distinguishing subscription login from API authentication and the index's mismatched description. Untested.
+  apps:
+    - Claude Code
+    - Grok Bot
+  tags:
+    - langeai-reading
+    - source-review
+    - claude-code-access-check
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看11张图；0个视频未观看。合集描述与嵌入帖不符；本站另按官方资料写接入核对，未采用注册、接码或虚构账单技巧。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: "The collector read the body and viewed 11 images; 0 videos were not watched. Index/source mismatch: the local page uses official access checks, not the original registration technique. Independent site exercises; no live workflow tested. Linked references were not all reread."
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-kingao476942-nontechnical-task-brief
+  url: https://x.com/KinGao476942/status/2097915898971742325
+  title: Grok Bot × 非技术岗位：把工作交成可验收的任务书
+  title_en: "Grok Bot × business roles: write a checkable task brief"
+  author: "@KinGao476942"
+  author_en: "@KinGao476942"
+  author_url: https://x.com/KinGao476942
+  source: x
+  lang: zh
+  published: 2026-09-10
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 从招聘、销售、市场、采购与设计的例子里，拆清资料入口、判断规则、交付物和确认点。 未实测。
+  summary_en: Translate recruiting, sales, marketing, procurement and design requests into evidence, deliverables and review points. Untested.
+  apps:
+    - Grok Bot
+    - Gmail
+    - Figma
+  tags:
+    - langeai-reading
+    - source-review
+    - nontechnical-task-brief
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看1张图；0个视频未观看。铁柱本轮报告已查看 1 张图片；另有 0 个视频未观看。 仅有封面图，没有新增操作步骤。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 1 images; 0 videos were not watched. The collector reports viewing 1 images; 0 videos remain unwatched. The only image is a cover and adds no operational steps. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-kingao476942-pr-operations-review
+  url: https://x.com/KinGao476942/status/2096232745538334913
+  title: Grok Bot × PR 值班：把代码版本、CI 与交接状态对齐
+  title_en: "Grok Bot × PR operations: align revisions, CI and handoff states"
+  author: "@KinGao476942"
+  author_en: "@KinGao476942"
+  author_url: https://x.com/KinGao476942
+  source: x
+  lang: zh
+  published: 2026-09-05
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 用 PR 台账检查当前提交、失败检查、冲突和待审意见，再给负责人一份可执行的跟进单。 未实测。
+  summary_en: Review a PR ledger against the current commit, checks, conflicts and comments before proposing follow-up. Untested.
+  apps:
+    - Grok Bot
+    - GitHub
+    - Notion
+  tags:
+    - langeai-reading
+    - source-review
+    - pr-operations-review
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看8张图；0个视频未观看。铁柱本轮报告已查看 8 张图片；另有 0 个视频未观看。 截图补出 Owner、Working/Watching/Ready for review 状态，并把 Agent done 与人工合并分开。本文把合并作为独立的人审动作。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 8 images; 0 videos were not watched. The collector reports viewing 8 images; 0 videos remain unwatched. Screenshots add ownership and Working/Watching/Ready-for-review states, distinguishing Agent completion from human merging. This guide keeps merging at a separate review point. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-kingao476942-subscription-decision-sheet
+  url: https://x.com/KinGao476942/status/2109824830698848561
+  title: 订阅核对表：先确认 Grok Bot 资格，再比较切换成本
+  title_en: "Subscription worksheet: check Bot access before switching plans"
+  author: "@KinGao476942"
+  author_en: "@KinGao476942"
+  author_url: https://x.com/KinGao476942
+  source: x
+  lang: zh
+  published: 2026-10-13
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - start
+  summary_zh: 把现有方案、所需功能、周用量与额外收费列在同一张表里，避免把历史优惠和不同计费池混在一起。 未实测。
+  summary_en: Compare access, existing subscriptions, usage pools and additional charges before deciding whether to switch. Untested.
+  apps:
+    - Grok Bot
+    - Cursor
+  tags:
+    - langeai-reading
+    - source-review
+    - subscription-decision-sheet
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看2张图；0个视频未观看。铁柱本轮报告已查看 2 张图片；另有 0 个视频未观看。 截图只列出 Free、Plus、Premium 和 Super，Bot 出现在 Premium 的权益中；Ultra 与优惠不能仅凭该图判断。具体价格和折扣尚未核实。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 2 images; 0 videos were not watched. The collector reports viewing 2 images; 0 videos remain unwatched. The screenshot lists Free, Plus, Premium and Super, placing Bot under Premium. It does not establish Ultra or promotions; prices and discounts remain unverified. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-kingao476942-x-topic-library
+  url: https://x.com/KinGao476942/status/2099736121781764594
+  title: Grok Bot × 选题库：把公开信号变成带证据的待审题目
+  title_en: "Grok Bot × topic library: turn public signals into reviewable ideas"
+  author: "@KinGao476942"
+  author_en: "@KinGao476942"
+  author_url: https://x.com/KinGao476942
+  source: x
+  lang: zh
+  published: 2026-09-15
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 用身份卡、来源时间、可见数据和创作角度组织选题，不补造曝光量，也不把结构研究变成复制正文。 未实测。
+  summary_en: Organize ideas with an editorial profile, source timestamps, visible metrics and original angles without inventing reach or copying posts. Untested.
+  apps:
+    - Grok Bot
+    - X
+    - Notion
+  tags:
+    - langeai-reading
+    - source-review
+    - x-topic-library
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看1张图；0个视频未观看。铁柱本轮报告已查看 1 张图片；另有 0 个视频未观看。 仅有封面图，没有新增操作步骤。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 1 images; 0 videos were not watched. The collector reports viewing 1 images; 0 videos remain unwatched. The only image is a cover and adds no operational steps. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-liyue-ai-feishu-content-desk
+  url: https://x.com/liyue_ai/status/2109203944799141922
+  title: Grok Bot × 飞书：把 X 情报和内容草稿接到同一张交接表
+  title_en: "Grok Bot × Feishu: connect X research and drafts through a handoff table"
+  author: "@liyue_ai"
+  author_en: "@liyue_ai"
+  author_url: https://x.com/liyue_ai
+  source: x
+  lang: zh
+  published: 2026-10-11
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 分别验证飞书应用、用户授权和目标文档权限，打通群消息到 Webhook 的路径，再做来源到草稿的单条试跑。 未实测。
+  summary_en: Verify app, user and document permissions separately, then test one source-to-draft handoff through the message bridge. Untested.
+  apps:
+    - Grok Bot
+    - Feishu
+    - X
+  tags:
+    - langeai-reading
+    - source-review
+    - feishu-content-desk
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看22张图；1个视频未观看。铁柱本轮报告已查看 22 张图片；另有 1 个视频未观看。 图片补齐 im.message.receive_v1 订阅、IM 权限与应用发版；两个 CLI profile 分别绑定情报和内容身份，并各自读取 SOUL.md。Webhook 接受不等于飞书消息已完成。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 22 images; 1 videos were not watched. The collector reports viewing 22 images; 1 videos remain unwatched. Images add im.message.receive_v1 subscription, IM permissions and app publication. Two CLI profiles separate research and content identities and read their SOUL.md files. Webhook acceptance is not completed delivery. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-maiyangai-conference-notes-workflow
+  url: https://x.com/MaiYangAI/status/2090919833366040919
+  title: Grok Bot × 参会整理：从一份笔记到稳定的会后交付
+  title_en: "Grok Bot × conference notes: build a repeatable follow-up"
+  author: "@MaiYangAI"
+  author_en: "@MaiYangAI"
+  author_url: https://x.com/MaiYangAI
+  source: x
+  lang: zh
+  published: 2026-08-22
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 先用已获授权的会议笔记校对要点、行动项和来源，再考虑连接应用、技能与例行任务。 未实测。
+  summary_en: Check key points, action items and evidence in authorized meeting notes before connecting tools or scheduling follow-up. Untested.
+  apps:
+    - Grok Bot
+    - Markdown
+  tags:
+    - langeai-reading
+    - source-review
+    - conference-notes-workflow
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看12张图；0个视频未观看。铁柱本轮报告已查看 12 张图片；另有 0 个视频未观看。 图片展示授权、审批规则、参会照片与一次用量记录；资格截图属于旧时期，不能沿用其中“部分基础方案不能用”的结论。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 12 images; 0 videos were not watched. The collector reports viewing 12 images; 0 videos remain unwatched. Images show approvals, conference photos and an anecdotal usage record. Historical eligibility screenshots are not current plan rules. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-sitinme-chief-of-staff-brief
+  url: https://x.com/sitinme/status/2109814883688796459
+  title: 首席助理 Bot：用任务台账汇总多条工作线
+  title_en: "Chief-of-staff Bot: summarize work through a task ledger"
+  author: "@sitinme"
+  author_en: "@sitinme"
+  author_url: https://x.com/sitinme
+  source: x
+  lang: zh
+  published: 2026-10-13
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - bots
+  summary_zh: 一个入口接收需求，用负责人、状态和交付文件汇总进展；缺少负责人时先提案，不自动扩编。 未实测。
+  summary_en: Use one intake and a ledger of owners, states and artifacts; propose a missing role before expanding the roster. Untested.
+  apps:
+    - Grok Bot
+    - Feishu
+  tags:
+    - langeai-reading
+    - source-review
+    - chief-of-staff-brief
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看8张图；0个视频未观看。铁柱本轮报告已查看 8 张图片；另有 0 个视频未观看。 图片展示多个岗位和一份发到飞书的竞品早报，补充了首席助理汇总产物的例子；旧套餐价格不作为当前依据。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 8 images; 0 videos were not watched. The collector reports viewing 8 images; 0 videos remain unwatched. Images show multiple roles and a Feishu competitor brief, illustrating consolidated outputs without establishing current prices. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-xaiwind-team-blueprint
+  url: https://x.com/xaiwind/status/2100027951618416963
+  title: 团队规划 Bot：把“一句话建团队”改成可审阅方案
+  title_en: "Team planner Bot: turn a one-line request into a reviewable roster"
+  author: "@xaiwind"
+  author_en: "@xaiwind"
+  author_url: https://x.com/xaiwind
+  source: x
+  lang: zh
+  published: 2026-09-16
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - bots
+  summary_zh: 先定义一个团队的结果、最小角色与交接表，再核对模板和应用；一次创建三支团队不是验收标准。 未实测。
+  summary_en: Define one team's outcome, smallest roster and handoff contract before checking templates and applications. Untested.
+  apps:
+    - Grok Bot
+  tags:
+    - langeai-reading
+    - source-review
+    - team-blueprint
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看11张图；1个视频未观看。铁柱本轮报告已查看 11 张图片；另有 1 个视频未观看。 截图显示作者建出三组群聊和九个 Bot，这只是作者演示；插件与模板是否仍可导入需另核对。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 11 images; 1 videos were not watched. The collector reports viewing 11 images; 1 videos remain unwatched. Screenshots show the author creating three groups and nine Bots; template and plugin availability still need checking. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
+- id: x-xilo2991-team-workflow-interview
+  url: https://x.com/xilo2991/status/2109613437215293905
+  title: Grok Bot × 团队需求访谈：先约定三处交接，再建角色
+  title_en: "Grok Bot × team discovery: agree on handoffs before creating roles"
+  author: "@xilo2991"
+  author_en: "@xilo2991"
+  author_url: https://x.com/xilo2991
+  source: x
+  lang: zh
+  published: 2026-10-12
+  added: 2026-10-18
+  status: alive
+  evidence: author-reported
+  categories:
+    - recipes
+  summary_zh: 把平台、采集规则与结果位置问清，再用一条样本验证采集、选题、写作和审阅之间的交接。 未实测。
+  summary_en: Clarify platforms, collection rules and output locations, then validate a sample across research, selection, writing and review. Untested.
+  apps:
+    - Grok Bot
+    - Feishu
+  tags:
+    - langeai-reading
+    - source-review
+    - team-workflow-interview
+  checked_at: 2026-10-18
+  verification_note_zh: 铁柱读完原文并查看18张图；0个视频未观看。铁柱本轮报告已查看 18 张图片；另有 0 个视频未观看。 图片确认素材表→选题表→初稿的交接与人工审批；两段访谈提示词没有在配图中取得，本文访谈题为原创。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 18 images; 0 videos were not watched. The collector reports viewing 18 images; 0 videos remain unwatched. Images confirm source-to-topic-to-draft handoffs and human review. Two interview prompts were not obtained from the images; this guide writes its own questions. Independent site exercises; no live workflow tested. Linked references were not all reread.
+  platform: x
+  collection_batch: 2026-10-18-langeai-articles-approved
 - added: 2026-10-16
   checked_at: 2026-10-16
   status: alive
@@ -299,15 +948,15 @@
   lang: zh
   published: 2026-10-09
   added: 2026-10-16
-  checked_at: 2026-10-15
+  checked_at: 2026-10-18
   status: alive
   categories:
     - advanced
   evidence: author-reported
   summary_zh: 长文让助手逐步执行：在 Grok Bot 云电脑装 Orca 作远程服务器，经 Tailscale 让 Mac 和手机连入，控制其中运行的 Claude Code；列出需人工确认的授权与登录步骤。
   summary_en: "A step-by-step article to hand the bot: install Orca on the Grok Bot computer as a remote server, connect Mac and phone through Tailscale to drive Claude Code there, with the human sign-in steps listed."
-  verification_note_zh: 已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。需另行订阅 Claude；属社区玩法，非官方支持。
-  verification_note_en: Read the X Article body via the X read API; images not viewed; author results not reproduced. Requires a separate Claude subscription; community approach, not officially supported.
+  verification_note_zh: 铁柱读完原文并查看8张图；0个视频未观看。铁柱本轮报告已查看 8 张图片；另有 0 个视频未观看。 架构图展示 Orca 远程服务经 Tailscale 连接 CLI，并分别使用电脑和手机配对方式；看门狗与恢复任务只是作者方案，未复现其稳定性。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 8 images; 0 videos were not watched. The collector reports viewing 8 images; 0 videos remain unwatched. The architecture connects an Orca service and CLI over Tailscale with separate desktop and phone pairing. Watchdog reliability has not been reproduced. Independent site exercises; no live workflow tested. Linked references were not all reread.
   tags:
     - cloud-computer
     - coding
@@ -316,7 +965,7 @@
     - Tailscale
     - Orca
   platform: x
-  collection_batch: 2026-10-16-x-history-approved-zh
+  collection_batch: 2026-10-18-langeai-articles-approved
 - id: x-austinginder-routines-offloaded
   url: https://x.com/austinginder/status/2102065336811966739
   title: 托管服务创始人的定时任务：巡检、维护与整理
@@ -987,7 +1636,7 @@
   lang: zh
   published: 2026-10-08
   added: 2026-10-16
-  checked_at: 2026-10-15
+  checked_at: 2026-10-18
   status: alive
   categories:
     - advanced
@@ -995,15 +1644,15 @@
   evidence: author-reported
   summary_zh: 作者分三步把 Grok Bot 接入微信：把整理好的提示词发给助手、建立微信通道并提供所需信息、微信扫码绑定，之后在微信里指挥多个助手。
   summary_en: "The author connects Grok Bot to WeChat in three steps: send a prepared prompt to the bot, set up a WeChat channel with the needed values, and scan a QR code to bind, then direct bots from WeChat."
-  verification_note_zh: 已通过 X 读帖接口读取 X 长文（Article）正文；文中图片未查看；未复现作者结果。属非官方第三方接入，账号与安全风险需自行评估；作者为 SpaceXAI 认证大使。
-  verification_note_en: Read the X Article body via the X read API; images not viewed; author results not reproduced. Unofficial third-party integration; weigh account and security risk. The author is a SpaceXAI ambassador.
+  verification_note_zh: 铁柱读完原文并查看12张图；0个视频未观看。铁柱本轮报告已查看 12 张图片；另有 0 个视频未观看。 图片显示作者用 Webhook Routine、单独转发程序和安全输入框提交凭据，选题进入 Notion 待审而未发 X。微信桥接兼容性和官方支持未核实。 Codex 原创改写步骤、示例与验收，流程未实测；相关外链未全部复读。
+  verification_note_en: The collector read the body and viewed 12 images; 0 videos were not watched. The collector reports viewing 12 images; 0 videos remain unwatched. Images show a routine, a separate relay and secure credential input, with Notion ideas awaiting review rather than X publication. Bridge compatibility and official support remain unverified. Independent site exercises; no live workflow tested. Linked references were not all reread.
   tags:
     - channels
     - third-party
   apps:
     - WeChat
   platform: x
-  collection_batch: 2026-10-16-x-history-approved-zh
+  collection_batch: 2026-10-18-langeai-articles-approved
 - id: x-kocer-routine-audit
   url: https://x.com/kocer_eth/status/2101669438038634827
   title: 每月审查定时任务：停掉低价值流程

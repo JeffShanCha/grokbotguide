@@ -1,0 +1,110 @@
+---
+title: "远程连接检查：用 Tailscale 访问 Grok Bot 云电脑"
+description: "先分清私网连接与 SSH 授权，再核对目标主机、系统用户和撤销路径，用只读命令验证连接。"
+sidebar:
+  order: 38
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-0xlangeai-tailscale-ssh-check
+apps: ["Grok Bot", "Tailscale", "SSH"]
+sources:
+  - title: "用 SSH 连上 Grok Bot 服务器, 保姆级教程"
+    url: https://x.com/0xlangeai/status/2093192039051489662
+  - title: "官方核对：tailscale"
+    url: https://tailscale.com/docs/features/tailscale-ssh
+  - title: "官方核对：settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "官方核对：security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+先分清私网连接与 SSH 授权，再核对目标主机、系统用户和撤销路径，用只读命令验证连接。
+
+原文通过 Tailscale 将本机接到云电脑，并演示 SSH。本文将作者环境中的用户名与地址改成待核对参数，不承诺固定配置或持续在线。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+先列 client、target、os_user、ssh_mode、allowed_scope、revoke_method，不在普通笔记记录私钥。
+
+## 1. 确认目标与范围
+
+记录两台设备的所有者与目标目录；需要安装客户端或改访问策略时先由本人确认具体影响。
+
+## 2. 完成设备授权
+
+按当前 Tailscale 官方方式登录并确认控制台设备身份，不复制来源文章的真实地址、令牌或账号参数。
+
+## 3. 选择 SSH 模式
+
+传统 SSH 走 Tailscale 私网，与 Tailscale SSH 代管认证是两种配置。后者需网络与 SSH 规则同时允许。
+
+## 4. 只读验证主机与目录
+
+先检查主机身份提示，再用 whoami、pwd 等只读命令确认实际用户与目录，不先改生产文件。
+
+## 5. 留恢复与撤销方案
+
+记录连接失败停点、设备撤销方式和另一条合法恢复路径；不把 SSH 端口直接开放公网来补救。
+
+## 一份合成验收样例
+
+两项独立验收：网络能到目标；指定身份可进入指定用户。Tailscale 网络连通不等于系统 SSH 已启用。
+
+## 可复制的任务说明
+
+<CopyTemplate id="tailscale-ssh-check-brief">
+
+```text
+先用本文合成样例整理 远程连接检查：用 Tailscale 访问 Grok Bot 云电脑 的交付，不连接真实服务。
+输入：先列 client、target、os_user、ssh_mode、allowed_scope、revoke_method，不在普通笔记记录私钥。
+处理要求：
+1. 记录两台设备的所有者与目标目录；需要安装客户端或改访问策略时先由本人确认具体影响。
+2. 按当前 Tailscale 官方方式登录并确认控制台设备身份，不复制来源文章的真实地址、令牌或账号参数。
+3. 传统 SSH 走 Tailscale 私网，与 Tailscale SSH 代管认证是两种配置。后者需网络与 SSH 规则同时允许。
+4. 先检查主机身份提示，再用 whoami、pwd 等只读命令确认实际用户与目录，不先改生产文件。
+5. 记录连接失败停点、设备撤销方式和另一条合法恢复路径；不把 SSH 端口直接开放公网来补救。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+主机、用户和目录与计划一致；访问可撤销；云电脑休眠、重建和策略变动需重新检查。
+
+<CopyTemplate id="tailscale-ssh-check-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：主机、用户和目录与计划一致；访问可撤销；云电脑休眠、重建和策略变动需重新检查。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@0xlangeai](https://x.com/0xlangeai/status/2093192039051489662)；发布日期 2026-08-28。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 5 张图片；另有 0 个视频未观看。 截图展示两台设备、SSH 的额外浏览器认证和作者使用的 box 用户。主机地址、用户名和认证规则都需按自己的环境确认。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

@@ -64,7 +64,7 @@ const tutorialsFor = (d: ResourceData) => lang === 'en' ? (resourceTutorials[d.i
     {items.map(({ data: d }) => <li data-resource-row data-categories={d.categories.join(' ')} data-original-lang={d.lang} data-platform={d.platform || (d.source === 'official' ? 'official' : 'web')} data-search={[d.title, d.title_en, d.author, d.author_en, d.summary_zh, d.summary_en, ...d.tags, ...(d.apps ?? [])].join(' ').toLowerCase()} class:list={{ broken: d.status === 'broken' }}>
       <div class="gbg-res-head">
         <a href={guides.get(d.id) || d.url} rel={guides.has(d.id) ? undefined : relOf(d)}>{titleOf(d)}</a>
-        {lang === 'en' && guides.has(d.id) && <span class="gbg-badge">Complete tutorial</span>}
+        {lang === 'en' && guides.has(d.id) && <span class="gbg-badge">Site guide</span>}
         {d.sponsored && <span class="gbg-badge">{t('res.sponsored')}</span>}
       </div>
       <p>{lang === 'zh' ? d.summary_zh : d.summary_en}</p>

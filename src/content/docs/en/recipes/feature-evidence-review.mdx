@@ -1,0 +1,104 @@
+---
+title: "Grok Bot × feature acceptance: require traceable completion evidence"
+description: "Define the user path, input, success and failure behavior, then tie tests, logs and screenshots to a code revision."
+sidebar:
+  order: 47
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-0xlangeai-feature-evidence-review
+apps: ["Grok Bot", "Cursor", "GitHub"]
+sources:
+  - title: "Related source by @0xlangeai"
+    url: https://x.com/0xlangeai/status/2097839261039153381
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Define the user path, input, success and failure behavior, then tie tests, logs and screenshots to a code revision.
+
+The source discusses pstack, self-verification, project controls and a Feature Map. This exercise focuses on acceptance evidence rather than unverified throughput claims.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic requirement: selecting X shows X sources, clearing restores all items, and an unmatched query shows an empty state.
+
+## 1. Define observable completion
+
+Define entry, input, visible result, data changes and failure states rather than compilation alone.
+
+## 2. Inspect the real environment
+
+Read project instructions and existing processes, confirming commands, ports and scope before starting anything.
+
+## 3. Prepare minimal acceptance cases
+
+Provide success, empty-result and reset fixtures, keeping any project controls within authorized operations.
+
+## 4. Collect evidence for one revision
+
+Attach revision and time to tests, screenshots and logs; historical evidence does not establish current behavior.
+
+## 5. Report coverage and gaps
+
+Report pass, fail, untested and reproduction steps before deciding on commits, PRs or deployment.
+
+## A synthetic acceptance fixture
+
+acceptance.md has X filtering, clearing and empty-result cases. evidence.csv records case_id, revision, command, result, screenshot and uncovered areas.
+
+## Copyable task brief
+
+<CopyTemplate id="feature-evidence-review-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × feature acceptance: require traceable completion evidence. Do not connect real services yet.
+Input: Synthetic requirement: selecting X shows X sources, clearing restores all items, and an unmatched query shows an empty state.
+Requirements:
+1. Define entry, input, visible result, data changes and failure states rather than compilation alone.
+2. Read project instructions and existing processes, confirming commands, ports and scope before starting anything.
+3. Provide success, empty-result and reset fixtures, keeping any project controls within authorized operations.
+4. Attach revision and time to tests, screenshots and logs; historical evidence does not establish current behavior.
+5. Report pass, fail, untested and reproduction steps before deciding on commits, PRs or deployment.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+All three user paths have revision-specific evidence, with failures and untested risks clearly visible.
+
+<CopyTemplate id="feature-evidence-review-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: All three user paths have revision-specific evidence, with failures and untested risks clearly visible.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@0xlangeai](https://x.com/0xlangeai/status/2097839261039153381); published 2026-09-10.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 1 images; 0 videos remain unwatched. The image is a cover. The Lauren article and plugin page were not fully reread; this guide uses the acceptance framework from the read source.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

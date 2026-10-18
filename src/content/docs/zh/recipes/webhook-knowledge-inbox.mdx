@@ -1,0 +1,106 @@
+---
+title: "Grok Bot × 快捷指令：把分享链接送入有回执的知识收件箱"
+description: "用手机分享面板提交链接，以请求编号去重，并区分接受、读取、整理和入库完成四种状态。"
+sidebar:
+  order: 37
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-cgnot996-webhook-knowledge-inbox
+apps: ["Grok Bot", "Shortcuts", "Webhook"]
+sources:
+  - title: "Grok Bot Webhook + 快捷指令：知识自动入库流水线搭建"
+    url: https://x.com/cgnot996/status/2097487429104197688
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+用手机分享面板提交链接，以请求编号去重，并区分接受、读取、整理和入库完成四种状态。
+
+原文展示 Webhook Routine、iOS 获取 URL 内容及无分享面板时的文本输入入口。本文补上去重和回执验收，不默认已经看过视频。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成输入：request_id=KB-001、source_url=https://example.com、kind=link。
+
+## 1. 定义知识库产物
+
+先确定允许写入的测试目录和必需字段，要求短摘要、原链接、作者和实际读取范围。
+
+## 2. 创建受控触发草案
+
+由负责 Bot 的 Routine 接收 JSON，核对 POST 地址与 Bearer 标头；凭据不写进公开快捷指令示例。
+
+## 3. 配置手机发送端
+
+快捷指令使用获取 URL 内容、POST、JSON 请求体和授权标头；从分享输入取得链接，文本菜单作为另一个输入入口。
+
+## 4. 检查接受与完成
+
+HTTP 200 只记录已接受；回到 Bot 对话查看来源读取、产物路径和失败项。视频没有转录或看图时分别注明。
+
+## 5. 用异常样本复测
+
+验证正常链接、重复编号和不可访问链接；失败不写成空内容成功，确认后再连接正式知识库。
+
+## 一份合成验收样例
+
+inbox.csv：request_id、source_url、read_status、stored_path、error。重复提交 KB-001 只产生一条记录；不可读网页保留失败原因。
+
+## 可复制的任务说明
+
+<CopyTemplate id="webhook-knowledge-inbox-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × 快捷指令：把分享链接送入有回执的知识收件箱 的交付，不连接真实服务。
+输入：合成输入：request_id=KB-001、source_url=https://example.com、kind=link。
+处理要求：
+1. 先确定允许写入的测试目录和必需字段，要求短摘要、原链接、作者和实际读取范围。
+2. 由负责 Bot 的 Routine 接收 JSON，核对 POST 地址与 Bearer 标头；凭据不写进公开快捷指令示例。
+3. 快捷指令使用获取 URL 内容、POST、JSON 请求体和授权标头；从分享输入取得链接，文本菜单作为另一个输入入口。
+4. HTTP 200 只记录已接受；回到 Bot 对话查看来源读取、产物路径和失败项。视频没有转录或看图时分别注明。
+5. 验证正常链接、重复编号和不可访问链接；失败不写成空内容成功，确认后再连接正式知识库。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+重复不多建记录；失败可回查；原文未读到就没有伪造摘要；最终回执包含路径。
+
+<CopyTemplate id="webhook-knowledge-inbox-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：重复不多建记录；失败可回查；原文未读到就没有伪造摘要；最终回执包含路径。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@cgnot996](https://x.com/cgnot996/status/2097487429104197688)；发布日期 2026-09-09。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 12 张图片；另有 2 个视频未观看。 原图请求体字段是 info=快捷指令输入。本文额外定义 request_id、source_url 等字段时，Routine 的解析规则必须同步；原图还有产物路径与入库回执。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

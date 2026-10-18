@@ -1,0 +1,108 @@
+---
+title: "Bot backup and restore drill: verify exportable material before snapshots"
+description: "Separate role definitions, accessible memory, work files and recovery instructions, then test a small restore."
+sidebar:
+  order: 49
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: operations
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-cgnot996-bot-backup-restore
+apps: ["Grok Bot", "Markdown", "Git"]
+sources:
+  - title: "Related source by @cgnot996"
+    url: https://x.com/cgnot996/status/2098222795847315967
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Separate role definitions, accessible memory, work files and recovery instructions, then test a small restore.
+
+The source uses a memory coordinator to collect role material and produce RESTORE.md. This drill adds export boundaries, credential exclusions and restore acceptance.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic inventory: two role definitions and one work file each, without sessions, keys or real conversation history.
+
+## 1. Bound the backup
+
+List the selected roles, accessible definitions and project files, separating shared material and excluding credentials from ordinary snapshots.
+
+## 2. Export accessible material
+
+Export only accessible material and inspect the actual artifact rather than relying on a completion message.
+
+## 3. Write the manifest and restore guide
+
+Record source, scope, time, path and checksum, explicitly listing omitted history, sessions and installed software.
+
+## 4. Run a bounded restore drill
+
+Verify readability and checksums in a separate test directory, then reconstruct one synthetic role brief without overwriting real state.
+
+## 5. Schedule after acceptance
+
+Review secret scanning, destination and access before choosing version control or cadence, preserving snapshots on restore failure.
+
+## A synthetic acceptance fixture
+
+manifest.csv: item, source, export_scope, path, checksum, restore_test. RESTORE.md records order and gaps; inaccessible internal state is not a complete export.
+
+## Copyable task brief
+
+<CopyTemplate id="bot-backup-restore-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Bot backup and restore drill: verify exportable material before snapshots. Do not connect real services yet.
+Input: Synthetic inventory: two role definitions and one work file each, without sessions, keys or real conversation history.
+Requirements:
+1. List the selected roles, accessible definitions and project files, separating shared material and excluding credentials from ordinary snapshots.
+2. Export only accessible material and inspect the actual artifact rather than relying on a completion message.
+3. Record source, scope, time, path and checksum, explicitly listing omitted history, sessions and installed software.
+4. Verify readability and checksums in a separate test directory, then reconstruct one synthetic role brief without overwriting real state.
+5. Review secret scanning, destination and access before choosing version control or cadence, preserving snapshots on restore failure.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+The manifest matches files, credentials are excluded, and recovery limits are explicit without a complete-platform-migration claim.
+
+<CopyTemplate id="bot-backup-restore-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: The manifest matches files, credentials are excluded, and recovery limits are explicit without a complete-platform-migration claim.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@cgnot996](https://x.com/cgnot996/status/2098222795847315967); published 2026-09-11.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 13 images; 0 videos remain unwatched. Images add registry.md, MEMORY.md, agent-spec.md and RESTORE.md, beginning with a user-approved roster. The 73KB, seven-role and 80% figures are author reports, not reproduced results.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

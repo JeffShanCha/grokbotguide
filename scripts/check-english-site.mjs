@@ -62,7 +62,24 @@ for (const [key,from] of internal) {
 const tutorialPaths=new Set([...pages].filter(([,page])=>find(page.tree,n=>n.tagName==='pre'&&attr(n,'id')?.startsWith('wf-')).length).map(([url])=>url));
 assert.equal(tutorialPaths.size,25,'Expected all 25 complete English tutorials.');
 // Starlight handbook supplements sit alongside the 25 interactive workflows.
-const supplements=new Set(['/en/recipes/usage-audit/']);
+const readingEdition=JSON.parse(await readFile(new URL('../data/collection/editions/2026-10-18-langeai-reading.json',import.meta.url),'utf8'));
+assert(readingEdition.finalized,'Reading collection must be finalized before release.');
+assert.equal(readingEdition.articles.length,24,'All 24 source mappings must be present.');
+assert.equal(new Set(readingEdition.articles.map(item=>item.source_url)).size,24,'Reading sources must be distinct.');
+assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.photos_viewed,0),245,'All photo coverage must be reconciled.');
+assert.equal(readingEdition.articles.reduce((sum,item)=>sum+item.videos_unread,0),6,'Unwatched videos must remain explicit.');
+for(const item of readingEdition.articles){
+ const path=`/en/${item.path}/`,page=pages.get(path);
+ assert(page,`Missing rewritten guide: ${path}`);
+ assert(find(page.tree,n=>n.tagName==='h2').length>=6,`Incomplete guide: ${path}`);
+ assert(find(page.tree,n=>attr(n,'class')?.split(' ').includes('gbg-tpl')).length>=2,`Missing task and review prompts: ${path}`);
+ assert(find(page.tree,n=>n.tagName==='a'&&attr(n,'href')===item.source_url).length,`Missing original source: ${path}`);
+ const resources=pages.get('/en/resources/').tree;
+ const rows=find(resources,n=>attr(n,'data-resource-row')!==undefined&&find(n,c=>c.tagName==='a'&&attr(c,'href')===item.source_url).length);
+ assert.equal(rows.length,1,`Missing or repeated reading resource: ${item.source_url}`);
+ assert(find(rows[0],n=>n.tagName==='a'&&attr(n,'href')===path).length,`Missing resource-to-guide link: ${path}`);
+}
+const supplements=new Set(['/en/recipes/usage-audit/',...readingEdition.articles.filter(item=>item.section==='recipes').map(item=>`/en/${item.path}/`)]);
 for(const path of supplements){const page=pages.get(path);assert(page,`Missing handbook supplement: ${path}`);assert(find(page.tree,n=>n.tagName==='h2').length>=6,`Incomplete handbook supplement: ${path}`);assert(find(page.tree,n=>attr(n,'class')?.split(' ').includes('gbg-tpl')).length>=2,`Missing reusable prompts: ${path}`);}
 for(const link of caseLinks)assert(tutorialPaths.has(new URL(link.href,'https://grokbotguide.ai'+link.page).pathname)||supplements.has(new URL(link.href,'https://grokbotguide.ai'+link.page).pathname),`Case link is not a complete tutorial: ${link.page} -> ${link.href}`);
 assert.equal(han.length,0,`Untranslated English text or labels: ${JSON.stringify(han)}`);

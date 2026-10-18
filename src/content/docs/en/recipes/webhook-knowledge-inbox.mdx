@@ -1,0 +1,106 @@
+---
+title: "Grok Bot × Shortcuts: send shared links to a traceable knowledge inbox"
+description: "Submit shared links with a request identity and distinguish accepted, read, organized and stored states."
+sidebar:
+  order: 37
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-cgnot996-webhook-knowledge-inbox
+apps: ["Grok Bot", "Shortcuts", "Webhook"]
+sources:
+  - title: "Related source by @cgnot996"
+    url: https://x.com/cgnot996/status/2097487429104197688
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Submit shared links with a request identity and distinguish accepted, read, organized and stored states.
+
+The source describes webhook routines, the iOS Get Contents of URL action and a text-input alternative. This guide adds identity and receipt checks without assuming video coverage.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic input: request_id=KB-001, source_url=https://example.com, kind=link.
+
+## 1. Define the stored artifact
+
+Choose a test destination and required metadata: short summary, original link, author and actual reading scope.
+
+## 2. Draft the trigger
+
+Have the responsible routine accept JSON and verify its POST URL and Bearer header without publishing credentials.
+
+## 3. Configure the phone sender
+
+Use Get Contents of URL with POST, a JSON body and authorization header. Accept a shared URL or a separate text-input menu.
+
+## 4. Separate acceptance and completion
+
+Treat HTTP 200 as acceptance, then inspect source reading, output path and failures in the Bot's result. State video and image coverage explicitly.
+
+## 5. Retest edge cases
+
+Test a normal URL, a duplicate identity and an inaccessible URL before using the real knowledge destination.
+
+## A synthetic acceptance fixture
+
+inbox.csv: request_id, source_url, read_status, stored_path, error. Replaying KB-001 creates no duplicate; inaccessible sources retain their failure reason.
+
+## Copyable task brief
+
+<CopyTemplate id="webhook-knowledge-inbox-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × Shortcuts: send shared links to a traceable knowledge inbox. Do not connect real services yet.
+Input: Synthetic input: request_id=KB-001, source_url=https://example.com, kind=link.
+Requirements:
+1. Choose a test destination and required metadata: short summary, original link, author and actual reading scope.
+2. Have the responsible routine accept JSON and verify its POST URL and Bearer header without publishing credentials.
+3. Use Get Contents of URL with POST, a JSON body and authorization header. Accept a shared URL or a separate text-input menu.
+4. Treat HTTP 200 as acceptance, then inspect source reading, output path and failures in the Bot's result. State video and image coverage explicitly.
+5. Test a normal URL, a duplicate identity and an inaccessible URL before using the real knowledge destination.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Duplicates do not multiply entries, failures remain traceable, unread sources have no invented summary, and completion includes a path.
+
+<CopyTemplate id="webhook-knowledge-inbox-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Duplicates do not multiply entries, failures remain traceable, unread sources have no invented summary, and completion includes a path.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@cgnot996](https://x.com/cgnot996/status/2097487429104197688); published 2026-09-09.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 12 images; 2 videos remain unwatched. The screenshot uses info for Shortcut Input. If adopting the request_id/source_url fixture, update the routine parser to match. The images also show stored paths and receipts.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

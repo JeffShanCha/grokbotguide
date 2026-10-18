@@ -1,0 +1,108 @@
+---
+title: "Grok Bot × PR 值班：把代码版本、CI 与交接状态对齐"
+description: "用 PR 台账检查当前提交、失败检查、冲突和待审意见，再给负责人一份可执行的跟进单。"
+sidebar:
+  order: 48
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-kingao476942-pr-operations-review
+apps: ["Grok Bot", "GitHub", "Notion"]
+sources:
+  - title: "工程师如何用好 Grok bot?"
+    url: https://x.com/KinGao476942/status/2096232745538334913
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "官方核对：security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+用 PR 台账检查当前提交、失败检查、冲突和待审意见，再给负责人一份可执行的跟进单。
+
+原文讨论领域 Bot、共享 PR 表、巡检和故障跟进。本文保留值班与证据规则，合并、改代码和临时加密巡检不自动执行。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成 PR：当前 head=new-b，旧 head=old-a 的 CI 已通过，新 head 尚无结果。
+
+## 1. 确定负责范围
+
+列仓库、PR 与领域负责人，优先读取已授权范围；一个 PR 当前只有一个跟进负责人。
+
+## 2. 绑定当前提交
+
+先取得 head SHA，再读检查和评论；旧版本通过只写历史结果，不升级成当前 Ready。
+
+## 3. 分类阻塞与待办
+
+失败 CI、冲突、待回复评论和资料缺失分项记录，给出来源链接与下一步，不笼统说有问题。
+
+## 4. 审阅修复与复测
+
+需要修复时先写范围和验收证明；新的提交产生后重新检查对应版本，状态变更留记录。
+
+## 5. 控制巡检与合并
+
+正常与 P0 的频率、负责人和停止条件分别设定；自动合并与生产动作须有单独明确政策，默认交人审。
+
+## 一份合成验收样例
+
+pr-ledger.csv：pr_url、head_sha、check_sha、check_state、conflict、open_comment、owner、next_action。样本必须标等待当前版本检查，而不是可合并。
+
+## 可复制的任务说明
+
+<CopyTemplate id="pr-operations-review-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × PR 值班：把代码版本、CI 与交接状态对齐 的交付，不连接真实服务。
+输入：合成 PR：当前 head=new-b，旧 head=old-a 的 CI 已通过，新 head 尚无结果。
+处理要求：
+1. 列仓库、PR 与领域负责人，优先读取已授权范围；一个 PR 当前只有一个跟进负责人。
+2. 先取得 head SHA，再读检查和评论；旧版本通过只写历史结果，不升级成当前 Ready。
+3. 失败 CI、冲突、待回复评论和资料缺失分项记录，给出来源链接与下一步，不笼统说有问题。
+4. 需要修复时先写范围和验收证明；新的提交产生后重新检查对应版本，状态变更留记录。
+5. 正常与 P0 的频率、负责人和停止条件分别设定；自动合并与生产动作须有单独明确政策，默认交人审。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+当前 SHA 与检查 SHA 相同才可用于验收；每个阻塞有负责人；没有暗中合并或无限加密巡检。
+
+<CopyTemplate id="pr-operations-review-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：当前 SHA 与检查 SHA 相同才可用于验收；每个阻塞有负责人；没有暗中合并或无限加密巡检。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@KinGao476942](https://x.com/KinGao476942/status/2096232745538334913)；发布日期 2026-09-05。
+
+合集章节对应：按内容推断，章节位置未取得。
+
+铁柱本轮报告已查看 8 张图片；另有 0 个视频未观看。 截图补出 Owner、Working/Watching/Ready for review 状态，并把 Agent done 与人工合并分开。本文把合并作为独立的人审动作。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

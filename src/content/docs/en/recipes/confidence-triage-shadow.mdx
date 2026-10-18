@@ -1,0 +1,106 @@
+---
+title: "Grok Bot × Jev: validate triage in shadow mode first"
+description: "Use fixed fields for information type, relevance, public risk and next action, comparing predictions with human labels before automation."
+sidebar:
+  order: 50
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-0xlangeai-confidence-triage-shadow
+apps: ["Grok Bot", "Jev", "X"]
+sources:
+  - title: "Related source by @0xlangeai"
+    url: https://x.com/0xlangeai/status/2101555600618602625
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Use fixed fields for information type, relevance, public risk and next action, comparing predictions with human labels before automation.
+
+The source combines Jev classification with Bot execution and starts in shadow mode. The schema and fixture here are independent; video coverage and execution are reported separately.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Three synthetic records: a relevant update, unrelated chatter and a message containing nonpublic customer information, with human labels saved first.
+
+## 1. Fix questions and labels
+
+Define information type, relevance, public risk and proposed save, ignore or review actions with explicit labels.
+
+## 2. Prepare redacted fixtures
+
+Start with synthetic or redacted material rather than sending nonpublic customer content to an external classifier.
+
+## 3. Log without acting
+
+Shadow mode records predictions and reasons without deleting, forwarding or replying; low confidence or invalid structure goes to review.
+
+## 4. Compare with human labels
+
+Count mistaken ignores, mistaken recommendations and missed risks separately, with sample size and source mix.
+
+## 5. Enable bounded routing
+
+Consider automation only for verified, reversible low-risk actions, retaining specific approval for posting, payments, deletion and customer replies.
+
+## A synthetic acceptance fixture
+
+triage.csv: item_id, information_kind, topic_match, public_risk, next_action, confidence, human_label, disagreement. Confidence is not observed accuracy.
+
+## Copyable task brief
+
+<CopyTemplate id="confidence-triage-shadow-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × Jev: validate triage in shadow mode first. Do not connect real services yet.
+Input: Three synthetic records: a relevant update, unrelated chatter and a message containing nonpublic customer information, with human labels saved first.
+Requirements:
+1. Define information type, relevance, public risk and proposed save, ignore or review actions with explicit labels.
+2. Start with synthetic or redacted material rather than sending nonpublic customer content to an external classifier.
+3. Shadow mode records predictions and reasons without deleting, forwarding or replying; low confidence or invalid structure goes to review.
+4. Count mistaken ignores, mistaken recommendations and missed risks separately, with sample size and source mix.
+5. Consider automation only for verified, reversible low-risk actions, retaining specific approval for posting, payments, deletion and customer replies.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Shadow mode performs no real actions, disagreements remain traceable, and confidence alone authorizes nothing.
+
+<CopyTemplate id="confidence-triage-shadow-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Shadow mode performs no real actions, disagreements remain traceable, and confidence alone authorizes nothing.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@0xlangeai](https://x.com/0xlangeai/status/2101555600618602625); published 2026-09-20.
+
+Index-to-source mapping: inferred from content; exact placement unavailable.
+
+The collector reports viewing 7 images; 1 videos remain unwatched. Screenshots report eight samples and about 235ms mean latency from the author, with worth_reply routed for judgment. Neither the sample nor confidence establishes production accuracy.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

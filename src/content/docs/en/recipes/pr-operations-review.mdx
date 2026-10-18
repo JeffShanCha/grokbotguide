@@ -1,0 +1,108 @@
+---
+title: "Grok Bot × PR operations: align revisions, CI and handoff states"
+description: "Review a PR ledger against the current commit, checks, conflicts and comments before proposing follow-up."
+sidebar:
+  order: 48
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-kingao476942-pr-operations-review
+apps: ["Grok Bot", "GitHub", "Notion"]
+sources:
+  - title: "Related source by @KinGao476942"
+    url: https://x.com/KinGao476942/status/2096232745538334913
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Review a PR ledger against the current commit, checks, conflicts and comments before proposing follow-up.
+
+The source describes domain owners, a shared PR table, periodic checks and incident follow-up. This guide prepares evidence without automatically editing or merging.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic PR: current head is new-b; checks for old-a passed, while the new revision has no result.
+
+## 1. Set the ownership scope
+
+Identify repositories, PRs and domain owners within authorized access, with one current follow-up owner.
+
+## 2. Bind evidence to the current commit
+
+Read the head SHA before checks and comments, keeping earlier passing results historical.
+
+## 3. Classify blockers
+
+Separate failed checks, conflicts, unanswered comments and missing information with links and next actions.
+
+## 4. Review fixes and retesting
+
+Propose repair scope and evidence, then recheck the new revision after any authorized fix.
+
+## 5. Control monitoring and merging
+
+Set normal and incident cadences with explicit owners and stop conditions, keeping merging and production actions under a separate policy.
+
+## A synthetic acceptance fixture
+
+pr-ledger.csv: pr_url, head_sha, check_sha, check_state, conflict, open_comment, owner, next_action. The fixture waits for current checks rather than being merge-ready.
+
+## Copyable task brief
+
+<CopyTemplate id="pr-operations-review-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × PR operations: align revisions, CI and handoff states. Do not connect real services yet.
+Input: Synthetic PR: current head is new-b; checks for old-a passed, while the new revision has no result.
+Requirements:
+1. Identify repositories, PRs and domain owners within authorized access, with one current follow-up owner.
+2. Read the head SHA before checks and comments, keeping earlier passing results historical.
+3. Separate failed checks, conflicts, unanswered comments and missing information with links and next actions.
+4. Propose repair scope and evidence, then recheck the new revision after any authorized fix.
+5. Set normal and incident cadences with explicit owners and stop conditions, keeping merging and production actions under a separate policy.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Acceptance uses matching revision evidence, each blocker has an owner, and merging or intensified monitoring does not happen implicitly.
+
+<CopyTemplate id="pr-operations-review-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Acceptance uses matching revision evidence, each blocker has an owner, and merging or intensified monitoring does not happen implicitly.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@KinGao476942](https://x.com/KinGao476942/status/2096232745538334913); published 2026-09-05.
+
+Index-to-source mapping: inferred from content; exact placement unavailable.
+
+The collector reports viewing 8 images; 0 videos remain unwatched. Screenshots add ownership and Working/Watching/Ready-for-review states, distinguishing Agent completion from human merging. This guide keeps merging at a separate review point.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

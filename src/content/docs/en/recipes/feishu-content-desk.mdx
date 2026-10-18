@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × Feishu: connect X research and drafts through a handoff table"
+description: "Verify app, user and document permissions separately, then test one source-to-draft handoff through the message bridge."
+sidebar:
+  order: 36
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-liyue-ai-feishu-content-desk
+apps: ["Grok Bot", "Feishu", "X"]
+sources:
+  - title: "Related source by @liyue_ai"
+    url: https://x.com/liyue_ai/status/2109203944799141922
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "Official reference: plugins"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Official reference: security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Verify app, user and document permissions separately, then test one source-to-draft handoff through the message bridge.
+
+The source organizes a coordinator, researcher and writer in Feishu. Its screenshot uses iMessage as a routine name; the actual function is a Feishu-group-to-webhook bridge.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic material: one read public X article and a designated test document.
+
+## 1. Map the message path
+
+Identify the group, app bot, relay, webhook routine and Grok Bot. Distinguish a group posting webhook from an app that subscribes to messages.
+
+## 2. Check three permission layers
+
+Check app scope, user or CLI identity and document sharing. Stop at the missing layer instead of broadening access.
+
+## 3. Run one research item
+
+Create a source record with its link and reading scope. The writer uses that record rather than inventing evidence.
+
+## 4. Keep a task identity
+
+Assign a task identity, suppress bot echoes and deduplicate events. Verify acceptance and completion separately.
+
+## 5. Deliver to the test document
+
+Deliver evidence, draft and questions to the test document for human review before production writing or publication.
+
+## A synthetic acceptance fixture
+
+handoff.csv: source_url, read_scope, topic_status, draft_doc, reviewer. App reception, CLI identity and document writing each need their own test.
+
+## Copyable task brief
+
+<CopyTemplate id="feishu-content-desk-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × Feishu: connect X research and drafts through a handoff table. Do not connect real services yet.
+Input: Synthetic material: one read public X article and a designated test document.
+Requirements:
+1. Identify the group, app bot, relay, webhook routine and Grok Bot. Distinguish a group posting webhook from an app that subscribes to messages.
+2. Check app scope, user or CLI identity and document sharing. Stop at the missing layer instead of broadening access.
+3. Create a source record with its link and reading scope. The writer uses that record rather than inventing evidence.
+4. Assign a task identity, suppress bot echoes and deduplicate events. Verify acceptance and completion separately.
+5. Deliver evidence, draft and questions to the test document for human review before production writing or publication.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+A group message traces to one source and one draft, without loops or false success on permission failures.
+
+<CopyTemplate id="feishu-content-desk-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: A group message traces to one source and one draft, without loops or false success on permission failures.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@liyue_ai](https://x.com/liyue_ai/status/2109203944799141922); published 2026-10-11.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 22 images; 1 videos remain unwatched. Images add im.message.receive_v1 subscription, IM permissions and app publication. Two CLI profiles separate research and content identities and read their SOUL.md files. Webhook acceptance is not completed delivery.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

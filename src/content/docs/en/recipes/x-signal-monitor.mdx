@@ -1,0 +1,106 @@
+---
+title: "Grok Bot × post monitoring: validate signals with snapshots and deduplication"
+description: "Separate collection windows, cumulative metrics, growth thresholds and notification states before scheduling monitoring."
+sidebar:
+  order: 46
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-aehyok-x-signal-monitor
+apps: ["Grok Bot", "X", "GitHub"]
+sources:
+  - title: "Related source by @aehyok"
+    url: https://x.com/aehyok/status/2109817788198158347
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Separate collection windows, cumulative metrics, growth thresholds and notification states before scheduling monitoring.
+
+The source uses scheduled scans, threshold notifications and GitHub storage. This guide adds an independent snapshot exercise without adopting its free-model or traffic claims.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic snapshots: P1 has 4,000 views at 08:00 and 10,000 at 09:00; the exercise threshold is 5,000 additional views per hour.
+
+## 1. Fix the observation scope
+
+Specify accounts, public sources, time windows and active hours, reporting unavailable data without coverage guarantees.
+
+## 2. Build timestamped snapshots
+
+Store post identity, observation time, views and read state, deduplicating by source identity.
+
+## 3. Define the threshold metric
+
+Distinguish cumulative value, increment and rate. This fixture divides the difference by elapsed hours and requires a baseline.
+
+## 4. Validate alert deduplication
+
+Send at most one alert per post and rule, distinguishing pending, sent and unknown before retrying.
+
+## 5. Approve storage and scheduling separately
+
+Return local fixture results before separately approving repository scope, visibility, commits, pushes and routine cadence.
+
+## A synthetic acceptance fixture
+
+P1 grows by 6,000 in an hour and triggers once. A lone cumulative value cannot establish hourly growth; alert_key combines post identity and rule version.
+
+## Copyable task brief
+
+<CopyTemplate id="x-signal-monitor-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × post monitoring: validate signals with snapshots and deduplication. Do not connect real services yet.
+Input: Synthetic snapshots: P1 has 4,000 views at 08:00 and 10,000 at 09:00; the exercise threshold is 5,000 additional views per hour.
+Requirements:
+1. Specify accounts, public sources, time windows and active hours, reporting unavailable data without coverage guarantees.
+2. Store post identity, observation time, views and read state, deduplicating by source identity.
+3. Distinguish cumulative value, increment and rate. This fixture divides the difference by elapsed hours and requires a baseline.
+4. Send at most one alert per post and rule, distinguishing pending, sent and unknown before retrying.
+5. Return local fixture results before separately approving repository scope, visibility, commits, pushes and routine cadence.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+The fixture triggers once, cumulative values are not treated as rates, and missing data and uncertain delivery remain distinct.
+
+<CopyTemplate id="x-signal-monitor-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: The fixture triggers once, cumulative values are not treated as rates, and missing data and uncertain delivery remain distinct.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@aehyok](https://x.com/aehyok/status/2109817788198158347); published 2026-10-13.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 3 images; 1 videos remain unwatched. The alert screenshot separates total views, hourly growth and publication time, with GitHub storage. The complete install instructions and current free-model terms were not obtained.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

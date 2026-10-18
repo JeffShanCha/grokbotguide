@@ -4,7 +4,7 @@ const { total, href } = Astro.props;
 const english = Astro.url.pathname.startsWith('/en/');
 ---
 <aside class="recipe-preview-notice not-content" aria-label={english ? 'Complete tutorials' : '完整版教程'}>
-	<div><strong>{english ? `${total} complete tutorials` : `${total} 篇完整版教程`}</strong><p>{english ? 'Every case card opens a complete tutorial with practice materials, staged prompts, reference results and acceptance checks. Each page states its verification scope.' : '下方每张案例卡片都直达完整版，包含练习材料、分步提示词、参考结果和验收清单。验证范围在各篇中说明。'}</p></div>
+	<div><strong>{english ? `${total} interactive tutorials, plus workflow guides` : `${total} 篇交互教程与专题案例`}</strong><p>{english ? 'Interactive tutorials include practice materials, staged prompts and reference results. Additional workflow guides provide their own examples, steps and acceptance checks. Each page states its verification scope.' : '交互教程包含练习材料、分步提示词和参考结果；专题案例另附示例、操作步骤与验收点。各篇均说明来源与验证范围。'}</p></div>
 	<a href={href}>{english ? 'Browse five topics →' : '按五个专题浏览 →'}</a>
 </aside>
 <style is:inline>

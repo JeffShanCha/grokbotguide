@@ -1,0 +1,110 @@
+---
+title: "Day 0 配置检查：主 Bot、连接器、CLI 与固定任务"
+description: "把创建、授权、执行环境和定时触发拆开检查，先验收一项任务，再扩展工具与角色。"
+sidebar:
+  order: 32
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-czzzzzzj-day-zero-bot-checklist
+apps: ["Grok Bot", "CLI"]
+sources:
+  - title: "我看谁不学Grok bot -Day0"
+    url: https://x.com/czzzzzzJ_/status/2110207286845292842
+  - title: "官方核对：settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "官方核对：plugins"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+把创建、授权、执行环境和定时触发拆开检查，先验收一项任务，再扩展工具与角色。
+
+原文依次讲主 Bot、固定任务、专业技能、CLI 和连接器。本文保留这条顺序，未读完的第三方技能不作为默认安装建议。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成目标：主 Bot 每次接收一个研究请求，先只输出有来源的三条要点。
+
+## 1. 给主 Bot 一个职责
+
+用聊天说明接活、追问缺项和交短报；先列角色草案，不让它自动创建其他 Bot。
+
+## 2. 先跑一个固定任务
+
+提供明确输入和验收标准，检查它确实读到原文并给出处；失败先记录原因。
+
+## 3. 逐项核对连接器
+
+从当前连接应用入口核对账号与范围，再做少量只读测试；删除 Bot 后外部授权仍需单独处理。
+
+## 4. 区分 CLI 的执行位置
+
+记录命令运行在本机还是云电脑、由谁登录、使用哪份额度；通过当前官方认证流程授权，不复制浏览器登录态。
+
+## 5. 最后增加触发条件
+
+确认手动结果稳定后再提出 Skill、Routine 或 Webhook 草案，写清时区、重复处理与停止方式。
+
+## 一份合成验收样例
+
+capabilities.csv：capability、account、environment、read_test、write_scope。已连接 X 不能证明本机 CLI 已授权；云端和本机分别记录。
+
+## 可复制的任务说明
+
+<CopyTemplate id="day-zero-bot-checklist-brief">
+
+```text
+先用本文合成样例整理 Day 0 配置检查：主 Bot、连接器、CLI 与固定任务 的交付，不连接真实服务。
+输入：合成目标：主 Bot 每次接收一个研究请求，先只输出有来源的三条要点。
+处理要求：
+1. 用聊天说明接活、追问缺项和交短报；先列角色草案，不让它自动创建其他 Bot。
+2. 提供明确输入和验收标准，检查它确实读到原文并给出处；失败先记录原因。
+3. 从当前连接应用入口核对账号与范围，再做少量只读测试；删除 Bot 后外部授权仍需单独处理。
+4. 记录命令运行在本机还是云电脑、由谁登录、使用哪份额度；通过当前官方认证流程授权，不复制浏览器登录态。
+5. 确认手动结果稳定后再提出 Skill、Routine 或 Webhook 草案，写清时区、重复处理与停止方式。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+每项能力都能说明账号与执行位置；未安装技能、未建群或定时任务的状态写清。
+
+<CopyTemplate id="day-zero-bot-checklist-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：每项能力都能说明账号与执行位置；未安装技能、未建群或定时任务的状态写清。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@czzzzzzJ_](https://x.com/czzzzzzJ_/status/2110207286845292842)；发布日期 2026-10-14。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 26 张图片；另有 0 个视频未观看。 截图补充主 Bot 设置、连接器、跨 Bot 消息回执和云端/本机 CLI 的区别；其中小字开关未完整辨认，不列成通用路径。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)

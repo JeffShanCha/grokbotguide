@@ -1,0 +1,110 @@
+---
+title: "Day-zero checklist: main Bot, connectors, CLI and recurring work"
+description: "Check role setup, identity, execution environment and triggers separately before expanding a first workflow."
+sidebar:
+  order: 32
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: assistant
+difficulty: intermediate
+risk: low
+cadence: on-demand
+resource_id: x-czzzzzzj-day-zero-bot-checklist
+apps: ["Grok Bot", "CLI"]
+sources:
+  - title: "Related source by @czzzzzzJ_"
+    url: https://x.com/czzzzzzJ_/status/2110207286845292842
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+  - title: "Official reference: plugins"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "Official reference: routines"
+    url: https://cursor.com/help/grok-bot/routines
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Check role setup, identity, execution environment and triggers separately before expanding a first workflow.
+
+The source covers a main Bot, fixed tasks, specialist skills, CLI tools and connectors. This checklist preserves the sequence while keeping third-party installation conditional.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic goal: a main Bot handles one research request and returns three sourced points.
+
+## 1. Define the main role
+
+Explain intake, clarification and concise reporting in chat. Start with role proposals rather than automatic roster creation.
+
+## 2. Run one fixed task
+
+Use explicit input and acceptance criteria, checking that the original source was actually read.
+
+## 3. Check connector identities
+
+Verify account and scope in the current connection interface, then use a small read-only test. Manage external authorization separately from a Bot's existence.
+
+## 4. Distinguish CLI environments
+
+Record whether a CLI runs locally or in the cloud, its identity and its allowance. Use its supported authentication flow rather than copying sessions.
+
+## 5. Add triggers last
+
+After stable manual results, propose skills or triggers with timezone, duplicate handling and stop conditions.
+
+## A synthetic acceptance fixture
+
+capabilities.csv: capability, account, environment, read_test, write_scope. An X connection does not prove CLI authorization; cloud and local environments get separate rows.
+
+## Copyable task brief
+
+<CopyTemplate id="day-zero-bot-checklist-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Day-zero checklist: main Bot, connectors, CLI and recurring work. Do not connect real services yet.
+Input: Synthetic goal: a main Bot handles one research request and returns three sourced points.
+Requirements:
+1. Explain intake, clarification and concise reporting in chat. Start with role proposals rather than automatic roster creation.
+2. Use explicit input and acceptance criteria, checking that the original source was actually read.
+3. Verify account and scope in the current connection interface, then use a small read-only test. Manage external authorization separately from a Bot's existence.
+4. Record whether a CLI runs locally or in the cloud, its identity and its allowance. Use its supported authentication flow rather than copying sessions.
+5. After stable manual results, propose skills or triggers with timezone, duplicate handling and stop conditions.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+Each capability has an identity and environment, with uninstalled skills and uncreated triggers clearly recorded.
+
+<CopyTemplate id="day-zero-bot-checklist-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: Each capability has an identity and environment, with uninstalled skills and uncreated triggers clearly recorded.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@czzzzzzJ_](https://x.com/czzzzzzJ_/status/2110207286845292842); published 2026-10-14.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 26 images; 0 videos remain unwatched. Screenshots add main-Bot settings, connectors, handoff receipts and local versus cloud CLI use. An unreadable small-text setting is not made into a universal instruction.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × remote coding desk: validate each connection layer"
+description: "Check the network, remote interface, CLI identity and task evidence separately, including post-update recovery."
+sidebar:
+  order: 40
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: engineering
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-app-sail-claude-code-cloud
+apps: ["Grok Bot", "Orca", "Tailscale", "Claude Code"]
+sources:
+  - title: "Related source by @app_sail"
+    url: https://x.com/app_sail/status/2108523630900748335
+  - title: "Official reference: claude-setup"
+    url: https://code.claude.com/docs/en/setup
+  - title: "Official reference: tailscale"
+    url: https://tailscale.com/docs/features/tailscale-ssh
+  - title: "Official reference: settings"
+    url: https://cursor.com/docs/grok-bot/settings
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+Check the network, remote interface, CLI identity and task evidence separately, including post-update recovery.
+
+The source combines Orca, Tailscale and Claude Code with recovery scripts. This guide uses staged acceptance without executing the appendix or promising continuous uptime.
+
+:::note[Verification status]
+Source reading and media coverage are listed below. This site has not executed the live workflow. Fixtures, fields and prompts here are independent exercises, not the author's results.
+:::
+
+## Scenario and input
+
+Synthetic task: read a test README and return three facts with locations, without editing or pushing.
+
+## 1. Check software and identity
+
+Check official installation sources, versions, account eligibility and execution host. The owner handles authentication and payment.
+
+## 2. Connect the private network first
+
+Verify devices and access rules before a protected remote session using current Orca documentation. Source-specific ports and pairing links are examples.
+
+## 3. Check the CLI separately
+
+Record the CLI location, identity, version and authentication state. Stop on missing access rather than concealing login failures.
+
+## 4. Run a minimal read task
+
+Use the test README to verify command submission, output retrieval and file references as distinct states.
+
+## 5. Verify recovery after change
+
+Document packages, services and sessions needing recovery after updates or rebuilds, with a rollback plan before scheduling checks.
+
+## A synthetic acceptance fixture
+
+connection-check.md separates network, remote_session, cli_identity and task_result. Opening a remote interface does not prove CLI authentication or completed work.
+
+## Copyable task brief
+
+<CopyTemplate id="remote-coding-desk-brief">
+
+```text
+Use the synthetic fixture to prepare the deliverable for Grok Bot × remote coding desk: validate each connection layer. Do not connect real services yet.
+Input: Synthetic task: read a test README and return three facts with locations, without editing or pushing.
+Requirements:
+1. Check official installation sources, versions, account eligibility and execution host. The owner handles authentication and payment.
+2. Verify devices and access rules before a protected remote session using current Orca documentation. Source-specific ports and pairing links are examples.
+3. Record the CLI location, identity, version and authentication state. Stop on missing access rather than concealing login failures.
+4. Use the test README to verify command submission, output retrieval and file references as distinct states.
+5. Document packages, services and sessions needing recovery after updates or rebuilds, with a rollback plan before scheduling checks.
+Return itemized records, evidence locations, unknowns and next steps, marking unperformed actions explicitly.
+Do not install tools, change access, purchase, publish, create Bots or schedule work in this pass.
+```
+
+</CopyTemplate>
+
+## Acceptance and review
+
+All four layers have traceable states and the read task has evidence; scripts and long-running availability remain environment tests.
+
+<CopyTemplate id="remote-coding-desk-review">
+
+```text
+Review the artifacts without taking external actions.
+Acceptance: All four layers have traceable states and the read task has evidence; scripts and long-running availability remain environment tests.
+Separate pass, fail, untested and evidence; distinguish synthetic fixtures from live results.
+Stop on missing sources, permissions or uncertain outcomes and list the required evidence.
+Propose one next step with a recovery plan and wait for confirmation.
+```
+
+</CopyTemplate>
+
+## Sources and applicability
+
+Original article: [@app_sail](https://x.com/app_sail/status/2108523630900748335); published 2026-10-09.
+
+Index-to-source mapping: strong content match.
+
+The collector reports viewing 8 images; 0 videos remain unwatched. The architecture connects an Orca service and CLI over Tailscale with separate desktop and phone pairing. Watchdog reliability has not been reproduced.
+
+Prices, interfaces and menus change. Check unresolved conditions against the actual account and current official documentation.
+
+[See the rewrite and verification map for all 24 sources](/en/resources/langeai-reading-map/)

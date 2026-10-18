@@ -1,0 +1,110 @@
+---
+title: "Grok Bot × 飞书：把 X 情报和内容草稿接到同一张交接表"
+description: "分别验证飞书应用、用户授权和目标文档权限，打通群消息到 Webhook 的路径，再做来源到草稿的单条试跑。"
+sidebar:
+  order: 36
+grade: original
+needs_testing: true
+last_checked: 2026-10-18
+author: JeffShanCha
+role: marketing
+difficulty: intermediate
+risk: medium
+cadence: on-demand
+resource_id: x-liyue-ai-feishu-content-desk
+apps: ["Grok Bot", "Feishu", "X"]
+sources:
+  - title: "Grok Bot连接飞书，组建一支X内容团队，附保姆级教程"
+    url: https://x.com/liyue_ai/status/2109203944799141922
+  - title: "官方核对：routines"
+    url: https://cursor.com/help/grok-bot/routines
+  - title: "官方核对：plugins"
+    url: https://cursor.com/help/grok-bot/connect-plugins
+  - title: "官方核对：security"
+    url: https://cursor.com/docs/grok-bot/security
+---
+
+import CopyTemplate from '~/components/CopyTemplate.astro';
+
+分别验证飞书应用、用户授权和目标文档权限，打通群消息到 Webhook 的路径，再做来源到草稿的单条试跑。
+
+原文用总管、情报官、内容官组织飞书团队。配图显示所谓 iMessage 渠道是一条例行任务的名称，实际作用是飞书群到 Webhook 的桥接。
+
+:::note[核验状态]
+原文正文与配图读取范围见文末；本站没有执行本页真实流程。练习样本、字段与话术由本站另写，不能当作作者运行结果。
+:::
+
+## 场景与输入
+
+合成材料：一条已读的公开 X 文章和一个仅供测试的飞书文档。
+
+## 1. 画出消息路径
+
+注明飞书群、应用机器人、转发程序、Webhook Routine 和 Grok Bot；群自定义 Webhook 与可订阅消息的应用机器人分开。
+
+## 2. 检查三层权限
+
+核对应用范围、用户或 CLI 身份、目标文档共享权限；缺一就停在对应层，不扩大到整个企业空间。
+
+## 3. 只跑一条情报
+
+把允许读取的来源整理为带链接和读取范围的记录，内容官只读这条记录，不自行补造素材。
+
+## 4. 桥接时保留任务身份
+
+为群消息生成任务编号，忽略机器人自身回声并防重复；200 与任务完成分别回查。
+
+## 5. 在测试文档交稿
+
+写入来源、草稿和待确认项后由本人核对；生产文档、群通知和公开发布在验证后另按授权执行。
+
+## 一份合成验收样例
+
+handoff.csv：source_url、read_scope、topic_status、draft_doc、reviewer。App 能收消息、CLI 已登录、文档允许写入分别有测试结果。
+
+## 可复制的任务说明
+
+<CopyTemplate id="feishu-content-desk-brief">
+
+```text
+先用本文合成样例整理 Grok Bot × 飞书：把 X 情报和内容草稿接到同一张交接表 的交付，不连接真实服务。
+输入：合成材料：一条已读的公开 X 文章和一个仅供测试的飞书文档。
+处理要求：
+1. 注明飞书群、应用机器人、转发程序、Webhook Routine 和 Grok Bot；群自定义 Webhook 与可订阅消息的应用机器人分开。
+2. 核对应用范围、用户或 CLI 身份、目标文档共享权限；缺一就停在对应层，不扩大到整个企业空间。
+3. 把允许读取的来源整理为带链接和读取范围的记录，内容官只读这条记录，不自行补造素材。
+4. 为群消息生成任务编号，忽略机器人自身回声并防重复；200 与任务完成分别回查。
+5. 写入来源、草稿和待确认项后由本人核对；生产文档、群通知和公开发布在验证后另按授权执行。
+交付逐项记录、证据位置、未知项与下一步；未执行的动作写未执行。
+本轮不安装工具、不改授权、不购买、不发布、不创建其他 Bot 或定时任务。
+```
+
+</CopyTemplate>
+
+## 验收与复核
+
+群消息能追到一份来源和一份稿件；没有自触发循环；权限失败不被写成成功。
+
+<CopyTemplate id="feishu-content-desk-review">
+
+```text
+逐项检查刚才的产物，先不执行任何外部动作。
+验收标准：群消息能追到一份来源和一份稿件；没有自触发循环；权限失败不被写成成功。
+分开列通过、失败、未测试与依据；合成数据和真实结果分别标注。
+发现缺来源、缺权限或结果不确定时停止，列出需要补的材料。
+给我一项下一步建议和恢复方式，等待确认后再操作。
+```
+
+</CopyTemplate>
+
+## 来源与适用边界
+
+原始文章：[@liyue_ai](https://x.com/liyue_ai/status/2109203944799141922)；发布日期 2026-10-11。
+
+合集章节对应：内容对应较明确。
+
+铁柱本轮报告已查看 22 张图片；另有 1 个视频未观看。 图片补齐 im.message.receive_v1 订阅、IM 权限与应用发版；两个 CLI profile 分别绑定情报和内容身份，并各自读取 SOUL.md。Webhook 接受不等于飞书消息已完成。
+
+价格、软件接口和菜单会变化；未取得或未验证的条件以实际账号及当前官方说明为准。
+
+[查看全部 24 篇的改写与核验地图](/zh/resources/langeai-reading-map/)
