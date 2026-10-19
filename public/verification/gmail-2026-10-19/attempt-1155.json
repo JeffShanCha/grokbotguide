@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "case": "gmail-inbox-triage",
+  "runId": "gbg-gmail-20261019-1155",
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-19T11:55:59+08:00",
+  "endedAt": "2026-10-19T11:56:25+08:00",
+  "reviewer": "Codex",
+  "productActor": "二丫头 (existing Grok Bot, same private conversation)",
+  "status": "unverified",
+  "verifiedOn": null,
+  "lastAttemptOn": "2026-10-19",
+  "result": "blocked_label_not_found",
+  "fullWorkflowVerified": false,
+  "scope": {
+    "label": "GBG/Test",
+    "maxUniqueMessages": 5,
+    "actualMessagesRead": 0,
+    "classifiedMessages": 0,
+    "allowed": "Exact-label metadata lookup, followed by bounded read-only classification if the target exists.",
+    "forbidden": [
+      "Read-state changes",
+      "Label writes",
+      "Draft creation",
+      "Sending/replying/forwarding",
+      "Archive/delete",
+      "Attachments/links",
+      "OAuth or permission expansion",
+      "Skills/Routines",
+      "Delegation"
+    ]
+  },
+  "observations": {
+    "exactLabelPresentInReturnedMetadata": false,
+    "gmailCallsInAvailableOriginalExcerpt": [
+      {
+        "tool": "list_labels",
+        "arguments": {},
+        "count": 1
+      }
+    ],
+    "messageReadsInAvailableOriginalExcerpt": 0,
+    "writeCallsInAvailableOriginalExcerpt": 0,
+    "delegationCallsInAvailableOriginalExcerpt": 0,
+    "mailboxIdentityVerified": false,
+    "bodyCoverage": "untested",
+    "classification": "untested",
+    "unreadStateBeforeAfter": "untested",
+    "mailboxUnchangedIndependentlyVerified": false
+  },
+  "finding": {
+    "zh": "本次已连接 Gmail 返回的标签元数据中未找到完整名称 GBG/Test，因此停止；没有搜索、读取或分类邮件。此结果仅限该连接和该次查询，不能说明其他账号或之后是否有此标签。",
+    "en": "The returned metadata from this connected Gmail did not contain the exact label GBG/Test, so the task stopped before searching, reading or classifying messages. This finding is limited to that connection and observation; it does not establish absence in another account or at a later time."
+  },
+  "evidenceReview": {
+    "rawLabelResponseParsedCompletely": true,
+    "exactNameComparedAgainstEveryReturnedLabel": true,
+    "runTimesMatchSavedClockOutputs": true,
+    "observedServiceCallMatchesReportedStop": true,
+    "originalArchiveRetainedLocally": true,
+    "originalArchivePublished": false,
+    "publicEvidenceContainsUnrelatedMailboxMetadata": false,
+    "limits": [
+      "The available original transcript starts with the acknowledgement/schema lookup, not the user instruction. The instruction and final stop were observed separately in the native UI.",
+      "The excerpt ends at the label-response read. Artifact construction, packaging and attachment delivery are outside it; it is not a full end-to-end trace.",
+      "The long schema/read outputs in the transcript are truncated. Label absence was checked against the complete separate raw response file.",
+      "No write call observed does not establish an independently measured unchanged mailbox state. No message-state snapshots were taken.",
+      "The presence of search_threads/get_message in a schema is not a successful bounded-message read test. No empty-query, fixture or catalog check counts as a classification pass."
+    ]
+  },
+  "unverifiedStages": [
+    "Real message reads",
+    "Classification",
+    "Message-level scope enforcement",
+    "Body completeness",
+    "Before/after unread state",
+    "Labels/drafts/sending",
+    "Deduplication/reruns",
+    "Skills/Routines"
+  ],
+  "nextUserAction": {
+    "zh": "确认 GBG/Test 位于二丫头当前连接的 Gmail 账号，并把测试邮件加入该标签，准备好后再告知；不需要提供邮箱地址、正文或凭据。",
+    "en": "Confirm GBG/Test exists in the Gmail account currently connected to this Bot and contains test messages, then report readiness. No address, message text or credentials are needed."
+  },
+  "previousEvidence": "/verification/p0-2026-10-18/execution-attempt.json",
+  "documentationContext": {
+    "reviewedOn": "2026-10-19",
+    "purpose": "API semantics only; official documentation does not prove connector behavior or mailbox state.",
+    "sources": [
+      {
+        "url": "https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/list",
+        "finding": "Message-level label filtering and limits are distinct from thread membership; a message list returns identities before fetching details."
+      },
+      {
+        "url": "https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/get",
+        "finding": "GET can retrieve one specified message; metadata and full-body formats are separate."
+      },
+      {
+        "url": "https://developers.google.com/workspace/gmail/api/guides/filtering",
+        "finding": "API search supports label filtering; Gmail UI and API searches have different behavior."
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "gmail-inbox-triage": {
-    "updatedOn": "2026-10-18",
+    "updatedOn": "2026-10-19",
     "boundaries": {
       "automatic": {
         "zh": "按约定查询范围只读邮件，分类、列依据并生成本地回复草稿和简报。",
@@ -28,10 +28,11 @@
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验：当前工具清单显示 Gmail 已连接，但未读取真实邮件。用户已选择指定测试标签，等待完整标签名后只读最多 5 封；标签、草稿、发送与 Routine 均未测。",
-        "en": "Unverified: the current tool catalog reports Gmail connected, but no real email has been read. The user chose a test label; its exact name is pending before reading at most five messages. Labels, drafts, sending and Routines remain untested."
+        "zh": "未核验：2026-10-19 只读查询标签，本次连接返回的元数据中未找到完整名称 GBG/Test，已停止。实际读信 0 封，分类与未读状态前后对比均未测；没有扩大搜索、写标签、建草稿或发送。最近尝试是阻塞记录，不代表实操通过；需确认标签位于当前连接账号并准备好测试邮件后重跑。",
+        "en": "Unverified: a read-only label lookup on 2026-10-19 did not find the exact name GBG/Test in metadata returned by this connection, so the task stopped. Zero messages were read; classification and before/after unread state remain untested. No broader search, label writes, drafts or sending occurred. This is a blocked attempt, not a live workflow pass. Confirm the label and test messages in the connected account before rerunning."
       },
-      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
+      "evidenceUrl": "/verification/gmail-2026-10-19/attempt-1155.json",
+      "lastAttemptOn": "2026-10-19"
     }
   },
   "google-calendar-meeting-brief": {
