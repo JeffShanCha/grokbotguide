@@ -1,0 +1,295 @@
+{
+  "id": "2026-10-19-daily-0900-approved",
+  "collected_at": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-19-daily-0900-review",
+  "source_review_sha256": "14fc95ea59e449a4605382db33e099d1ea1cc266949207b87c974eb6701cb119",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-19",
+    "approved_ids": [
+      "ofox-grok-bot-first-deliverable",
+      "github-explorium-gtm-skills-bot",
+      "templatesgrokbot-team-collaboration-issue",
+      "reddit-representativeuse115-ai-news-digest",
+      "getgptplus-grok-bot-content-relay",
+      "xai-grok-bot-troubleshooting",
+      "github-heredotnow-here-now-skill",
+      "github-uncooe-grok-dot-bridge"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月19日这批建议收录的8条，导入并发布。",
+    "scope_zh": "只批准本批建议收录8条，不包含待核验、重复、排除项或其他批次。"
+  },
+  "baseline": {
+    "head": "920a60eb055bac5845d88dded694c9eb684f554f",
+    "catalog_count": 132
+  },
+  "editorial_note_zh": "保留审核通过的中文标题、双语摘要、来源及核验边界；仅补充英文作者显示名称。历史审核文件与其他候选均不随本批提交。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "ofox-grok-bot-first-deliverable",
+        "url": "https://ofox.ai/zh/blog/grok-bot-get-started-guide/",
+        "title": "中文首项任务模板：从批准素材到可验收文件",
+        "author": "Ofox",
+        "source": "blog",
+        "lang": "zh",
+        "categories": [
+          "start",
+          "templates"
+        ],
+        "apps": [],
+        "summary_zh": "以已批准的采访素材为输入，定义摘要、草稿和结构化待办三个交付物，要求保留来源、缺失值与人工验收，再考虑保存 Skill 和排期。",
+        "summary_en": "An original first-task template turns approved interview material into a summary, draft posts and structured actions, with source references, missing-value rules and human acceptance checks.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "通过普通公开HTTPS请求独立读取全文；网页检索工具超时后正常curl读取成功，未关闭证书验证。文章明示模板未成功实测；套餐和旧界面信息未当当前结论。商业API平台文章，未购买服务。",
+        "verification_note_en": "Read the public page via ordinary HTTPS after a web-tool timeout, with certificate checks enabled. The author says the template is untested. Old UI and plan details are not current guidance; no service purchased.",
+        "published": "2026-10-09",
+        "title_en": "A first Grok Bot task with verifiable file deliverables",
+        "author_en": "Ofox"
+      },
+      "discovery_window": "weekly-backfill-14-days"
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-explorium-gtm-skills-bot",
+        "url": "https://github.com/explorium-ai/gtm-skills",
+        "title": "GTM Skill 集：公司筛选、线索评分与周期简报",
+        "author": "Explorium AI",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Explorium",
+          "Vibe Prospecting"
+        ],
+        "summary_zh": "仓库说明将销售工作方法保存为 Grok Bot Skill，并配合 Routine 生成筛选、评分和会议准备结果；list-builder 先展示样本，再经确认导出。",
+        "summary_en": "The vendor describes saving GTM methods as bot skills and scheduling scoring or briefing routines. Its list-builder previews a sample before an approved export.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读取README的Grok Bot专节和list-builder/SKILL.md。依赖第三方MCP与账户，完整导出标注付费；未安装、连接、查询人员数据或调用API。界面及实际兼容性未实测。",
+        "verification_note_en": "Read the bot-specific README section and list-builder/SKILL.md. Requires a vendor MCP/account; full exports use a paid path. No installation, API call, contact lookup or compatibility test performed.",
+        "title_en": "GTM skills for recurring Grok Bot workflows",
+        "author_en": "Explorium AI"
+      },
+      "related_source_urls": [
+        "https://raw.githubusercontent.com/explorium-ai/gtm-skills/main/skills/list-builder/SKILL.md"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "templatesgrokbot-team-collaboration-issue",
+        "url": "https://templatesgrokbot.com/bot/team-collaboration-issue",
+        "title": "GitHub Issue 处理模板：澄清、测试、修复与 PR",
+        "author": "TemplatesGrokBot 团队",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "GitHub"
+        ],
+        "summary_zh": "角色模板按问题澄清、根因分析、测试、修复和 PR 交接组织工作，要求人审核合并与部署；适合把单个 Issue 的完成标准说清楚。",
+        "summary_en": "A bot role template structures issue clarification, investigation, tests, implementation and PR handoff, keeping merges and deployment subject to human approval.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取10月18日介绍文章，并通过普通公开HTTPS读取模板页公开提供的定义；未登录、复制安装或连接GitHub。模板页标注为团队改编自开放条目，原上游未核对；不将9月5日上架日当首发日。",
+        "verification_note_en": "Read the October 18 article and the publicly served template definition via ordinary HTTPS. No sign-in, installation or GitHub connection. The upstream open-library attribution was not independently checked; listing date is not publication date.",
+        "title_en": "Team Collaboration Issue",
+        "author_en": "TemplatesGrokBot team"
+      },
+      "discovered_via_url": "https://templatesgrokbot.com/blog/from-github-issue-to-pull-request-without-the-back-and-forth",
+      "discovery_published": "2026-10-18"
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "reddit-representativeuse115-ai-news-digest",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1x769gz/i_made_a_grok_bot_agent_that_reads_a_russian_ai/",
+        "title": "跨语言资讯整理：去重新主题后生成 GitHub Pages 简报",
+        "author": "RepresentativeUse115",
+        "source": "forum",
+        "lang": "en",
+        "categories": [
+          "recipes"
+        ],
+        "apps": [
+          "GitHub Pages"
+        ],
+        "summary_zh": "作者描述每日阅读论坛新主题、保存已处理清单、生成带原链接的英文短摘要，并发布到 GitHub Pages；无新主题时跳过更新。",
+        "summary_en": "The author describes reading new forum topics daily, tracking seen items, writing linked English summaries and publishing a GitHub Pages digest only when there is new material.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取Reddit原帖和作者链接的公开成品站。成品页显示10月16日，不能据此确认持续每日运行；未检查后台、原论坛或自动化配置，不复现访问方式。原帖仅相对时间，未推算发布日期。",
+        "verification_note_en": "Read the original post and linked public site. Its visible October 16 page does not prove ongoing daily execution. No backend, forum access method or automation tested; no publication date inferred from relative time.",
+        "title_en": "A multilingual AI-news digest on GitHub Pages",
+        "author_en": "RepresentativeUse115"
+      },
+      "related_source_urls": [
+        "https://submitgame.github.io/ai-news-digest/"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "getgptplus-grok-bot-content-relay",
+        "url": "https://getgptplus.app/blog/grok-bot-guide",
+        "title": "中文内容接力案例：选题、写稿、审稿与人工确认",
+        "author": "GetGPTPlus",
+        "source": "blog",
+        "lang": "zh",
+        "categories": [
+          "start",
+          "bots",
+          "recipes"
+        ],
+        "apps": [
+          "X"
+        ],
+        "summary_zh": "作者用监控、选题、写稿、审稿四个 Bot 接力，选题和最终表达由人决定；审稿关注事实、立场、来源与时效，缺证据的内容标为未核实。",
+        "summary_en": "An author-reported content workflow separates monitoring, topic selection, drafting and review among four bots, with human editorial decisions and explicit source checks.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读取原创文章正文，聚焦作者内容接力案例；未看配图或实测。网站提供商业代充服务；不采纳旧套餐、费用、平台覆盖和效果数据，也不据其重置描述操作账户。",
+        "verification_note_en": "Read the original article, focusing on its content handoff example. Images and workflow not tested. The site sells recharge services; old plan, pricing, platform and performance claims are not adopted.",
+        "published": "2026-10-11",
+        "title_en": "A Chinese multi-bot content handoff case",
+        "author_en": "GetGPTPlus"
+      },
+      "discovery_window": "weekly-backfill-14-days"
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "xai-grok-bot-troubleshooting",
+        "url": "https://docs.x.ai/grok-bot/troubleshooting",
+        "title": "官方排障：区分登录、云电脑、附件与 Routine 故障",
+        "author": "xAI / Cursor",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [],
+        "summary_zh": "官方按登录、云电脑连接、应用认证、附件和 Routine 状态逐项定位问题，区分重试、恢复、更新与重置，并列出求助时应提供的信息。",
+        "summary_en": "Official troubleshooting covers sign-in, cloud-computer access, app authentication, attachments and routines, distinguishing retry, recovery, update and reset steps.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "official",
+        "verification_note_zh": "独立读取官方正文；10月12日为更新日，不作首发日。未调整权限、测试外部动作或更新/重置电脑；仅收录指南，不把排障步骤应用到用户账户。",
+        "verification_note_en": "Read the official page. October 12 is an update date, not publication. No permissions changed, external tests run, or computer updated/reset; guidance was not executed on the account.",
+        "title_en": "Troubleshooting",
+        "author_en": "xAI / Cursor"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-heredotnow-here-now-skill",
+        "url": "https://github.com/heredotnow/skill/blob/main/here-now/SKILL.md",
+        "title": "here.now Skill：网站与文件交付、私有 Drive 和版本检查",
+        "author": "here.now（heredotnow）",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "here.now"
+        ],
+        "summary_zh": "公开 Skill 介绍网站和文件发布、私有 Drive 及版本冲突检查，并明示 grok-bot 客户端标识；可作为跨 Agent 文件交付的方法参考。",
+        "summary_en": "The public skill describes site/file publishing, private Drives and version-conflict checks, explicitly including a grok-bot client identifier for cross-agent delivery workflows.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读取SKILL.md，未将其指令作为本任务规则。未安装、获取密钥、登录、上传、发布或测试Grok Bot导入；仅核对文档内容，未验证服务端权限、保留期限和价格承诺。",
+        "verification_note_en": "Read SKILL.md as source data, not task instructions. No installation, credentials, login, upload or publishing. Bot import, server permissions, retention and price claims were not verified.",
+        "title_en": "here.now skill for file delivery and publishing",
+        "author_en": "here.now (heredotnow)"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取原始页面，包含独立工作流或模板；按说明范围建议收录，等待用户审核。",
+      "relevance": "原文讨论xAI/Cursor的Grok Bot、应用工作流或明确提及该平台的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-uncooe-grok-dot-bridge",
+        "url": "https://github.com/UnCooe/grok-dot-bridge",
+        "title": "Grok Bot 与 ChatGPT Dot 消息桥：事件接收与去重交接",
+        "author": "UnCooe",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "ChatGPT Dot"
+        ],
+        "summary_zh": "非官方开源消息桥用 Python、SQLite、MCP Events 与 Webhook Routine 连接两个现有 Agent，区分接收、认领、回复和完成，并限制重复处理与对话轮数。",
+        "summary_en": "An unofficial bridge links existing agents with Python, SQLite, MCP Events and webhook routines, separating delivery, claim, reply and completion with duplicate-handling limits.",
+        "added": "2026-10-19",
+        "checked_at": "2026-10-19",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取V2EX作者介绍、仓库README及acceptance/README.md。验收结果仅为仓库作者记录，未独立核验原始日志、运行代码或审计鉴权；未连接账号、发送消息或启用服务。不同于既有Rladmsrl/A2A项目。",
+        "verification_note_en": "Read the V2EX introduction, repository README and acceptance notes. Results are author records; raw logs, code and authentication were not independently tested or audited. No accounts connected or messages sent.",
+        "title_en": "An unofficial Grok Bot and ChatGPT Dot message bridge",
+        "author_en": "UnCooe"
+      },
+      "discovered_via_url": "https://www.v2ex.com/t/1247898",
+      "related_source_urls": [
+        "https://github.com/UnCooe/grok-dot-bridge/blob/main/acceptance/README.md"
+      ],
+      "distinct_from": "github-a2a-bridge-chinese-guide"
+    }
+  ]
+}
