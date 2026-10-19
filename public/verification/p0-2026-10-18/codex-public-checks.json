@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-18T14:36:59.447Z",
+  "dateTimezone": "Asia/Shanghai",
+  "executor": "Codex",
+  "kind": "independent_public_reads",
+  "limitation": "HTTP availability, source hashes and public API observations only. Not a Grok Bot execution, not a login/write/Routine test, and not a substitute for semantic source review.",
+  "cases": [
+    {
+      "slug": "summarize-a-document",
+      "sourceUrls": [
+        "https://docs.x.ai/grok-bot/files-and-results",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "gmail-inbox-triage",
+      "sourceUrls": [
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+        "https://support.google.com/mail/answer/118708?hl=zh-Hans",
+        "https://support.google.com/mail/answer/7190?hl=zh-Hans",
+        "https://developers.google.com/workspace/gmail/api/guides/labels",
+        "https://developers.google.com/workspace/gmail/api/guides/drafts"
+      ]
+    },
+    {
+      "slug": "website-daily-check",
+      "sourceUrls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "google-calendar-meeting-brief",
+      "sourceUrls": [
+        "https://developers.google.com/calendar/api/v3/reference/events/list",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "slack-daily-standup",
+      "sourceUrls": [
+        "https://docs.slack.dev/reference/methods/conversations.history/",
+        "https://docs.x.ai/grok-bot/chat-and-collaboration",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "github-pr-watch",
+      "sourceUrls": [
+        "https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks",
+        "https://docs.github.com/en/pull-requests/concepts/resolving-reviews",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "stripe-refunds",
+      "sourceUrls": [
+        "https://docs.stripe.com/refunds",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "zendesk-support-queue",
+      "sourceUrls": [
+        "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_comments/",
+        "https://developer.zendesk.com/documentation/ticketing/managing-tickets/creating-and-updating-tickets/",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    },
+    {
+      "slug": "shopping-compare",
+      "sourceUrls": [
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ]
+    }
+  ],
+  "retrievals": [
+    {
+      "url": "https://docs.x.ai/grok-bot/files-and-results",
+      "startedAt": "2026-10-18T14:36:44.842Z",
+      "finishedAt": "2026-10-18T14:36:46.024Z",
+      "status": 200,
+      "finalUrl": "https://docs.x.ai/grok-bot/files-and-results",
+      "bytes": 242883,
+      "sha256": "4656d04441f8e2d15e66444fc1615d5b2190d207a4baaa88d1b4bbd161d6502f",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Files and results | SpaceXSI Docs"
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "startedAt": "2026-10-18T14:36:44.872Z",
+      "finishedAt": "2026-10-18T14:36:47.049Z",
+      "status": 200,
+      "finalUrl": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "bytes": 245888,
+      "sha256": "0429ebe04523d81bed711668d075f2a7f1e6e02c1431ff81b4f73a1fd5d0018e",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Use the computer and apps | SpaceXSI Docs"
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "startedAt": "2026-10-18T14:36:44.873Z",
+      "finishedAt": "2026-10-18T14:36:46.065Z",
+      "status": 200,
+      "finalUrl": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "bytes": 248318,
+      "sha256": "6949a50f4f1feff82afa761d5f87332a9c3c895ba2a2490d12c6b5be8ea0a761",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Skills and routines | SpaceXSI Docs"
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "startedAt": "2026-10-18T14:36:44.874Z",
+      "finishedAt": "2026-10-18T14:36:46.047Z",
+      "status": 200,
+      "finalUrl": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "bytes": 258605,
+      "sha256": "b68d706cf8ab5a32fd496a2220f1ef6e7c9b3a4e3232622d40187d0fbd575a9d",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Approvals, security, and privacy | SpaceXSI Docs"
+    },
+    {
+      "url": "https://support.google.com/mail/answer/118708?hl=zh-Hans",
+      "startedAt": "2026-10-18T14:36:47.049Z",
+      "finishedAt": "2026-10-18T14:36:48.814Z",
+      "status": 200,
+      "finalUrl": "https://support.google.com/mail/answer/118708?hl=zh-Hans",
+      "bytes": 1636662,
+      "sha256": "7caf26a76fd191d1c2b6edee03d4dedaf92c9e58d9a71d514df10748d1c4ece9",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "在 Gmail 中创建和管理标签 - 计算机 - Gmail帮助"
+    },
+    {
+      "url": "https://support.google.com/mail/answer/7190?hl=zh-Hans",
+      "startedAt": "2026-10-18T14:36:47.051Z",
+      "finishedAt": "2026-10-18T14:36:48.925Z",
+      "status": 200,
+      "finalUrl": "https://support.google.com/mail/answer/7190?hl=zh-Hans",
+      "bytes": 1630054,
+      "sha256": "49c13ebd317f48aa57f73bc0ca347addd01cc8172126ad787238f1f120406483",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "在 Gmail 中优化搜索结果 - 计算机 - Gmail帮助"
+    },
+    {
+      "url": "https://developers.google.com/workspace/gmail/api/guides/labels",
+      "startedAt": "2026-10-18T14:36:47.054Z",
+      "finishedAt": "2026-10-18T14:36:48.440Z",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/workspace/gmail/api/guides/labels",
+      "bytes": 169648,
+      "sha256": "7e6254accc2ab8b7bc45c0523b0c75a958ec2e2bdfa86ffc19d2fc6a46bf5b64",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Manage labels &nbsp;|&nbsp; Gmail &nbsp;|&nbsp; Google for Developers"
+    },
+    {
+      "url": "https://developers.google.com/workspace/gmail/api/guides/drafts",
+      "startedAt": "2026-10-18T14:36:47.056Z",
+      "finishedAt": "2026-10-18T14:36:49.263Z",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/workspace/gmail/api/guides/drafts?hl=es-419",
+      "bytes": 210181,
+      "sha256": "63d7d32015103f27b95aa2cd51afbb69c632ed28d14c2144b38cb73d3c6c5954",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Crea y envía borradores de correos electrónicos &nbsp;|&nbsp; Gmail &nbsp;|&nbsp; Google for Developers"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "startedAt": "2026-10-18T14:36:49.263Z",
+      "finishedAt": "2026-10-18T14:36:50.276Z",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "bytes": 234548,
+      "sha256": "fc6cade9d6611a3a2c22e2f39634c5d2d9da3ae858972d0b8e69140b6d1b8a16",
+      "contentType": "text/html",
+      "title": "HTTP response status codes - HTTP | MDN"
+    },
+    {
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/list",
+      "startedAt": "2026-10-18T14:36:49.266Z",
+      "finishedAt": "2026-10-18T14:36:50.623Z",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/workspace/calendar/api/v3/reference/events/list?hl=es-419",
+      "bytes": 185689,
+      "sha256": "8e509b8546c19f3be66d781e1c1596e6f25f57a6fcbcc9eb5e7c67d403039d2c",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Events: list &nbsp;|&nbsp; Google Calendar &nbsp;|&nbsp; Google for Developers"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/conversations.history/",
+      "startedAt": "2026-10-18T14:36:49.267Z",
+      "finishedAt": "2026-10-18T14:36:50.502Z",
+      "status": 200,
+      "finalUrl": "https://docs.slack.dev/reference/methods/conversations.history/",
+      "bytes": 106738,
+      "sha256": "8dfc78c641afaaaceb05c20e4fba35f85fa05bd8c7a890cdc3c4aeb9db83451b",
+      "contentType": "text/html; charset=utf-8",
+      "title": "conversations.history method | Slack Developer Docs"
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+      "startedAt": "2026-10-18T14:36:49.268Z",
+      "finishedAt": "2026-10-18T14:36:49.729Z",
+      "status": 200,
+      "finalUrl": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+      "bytes": 266823,
+      "sha256": "031ad3b8a72d81ddaeb2b8921fcc511c99fd7bc4449104452db56583aceb0ddb",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Message and collaborate | SpaceXSI Docs"
+    },
+    {
+      "url": "https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks",
+      "startedAt": "2026-10-18T14:36:50.623Z",
+      "finishedAt": "2026-10-18T14:36:51.820Z",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks",
+      "bytes": 181140,
+      "sha256": "f25571d0abee06647fe78642384f86ae90e33b9172b69a68682c28938282a1e9",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Troubleshooting required status checks - GitHub Docs"
+    },
+    {
+      "url": "https://docs.github.com/en/pull-requests/concepts/resolving-reviews",
+      "startedAt": "2026-10-18T14:36:50.624Z",
+      "finishedAt": "2026-10-18T14:36:51.693Z",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/pull-requests/concepts/resolving-reviews",
+      "bytes": 138825,
+      "sha256": "647c18de82d794d9aaf4b55eca6d066324e60812de7c0f524d38ae8462f5b75d",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Resolving reviews - GitHub Docs"
+    },
+    {
+      "url": "https://docs.stripe.com/refunds",
+      "startedAt": "2026-10-18T14:36:50.626Z",
+      "finishedAt": "2026-10-18T14:36:52.292Z",
+      "status": 200,
+      "finalUrl": "https://docs.stripe.com/refunds",
+      "bytes": 590503,
+      "sha256": "b01e2f7b2e7ab6e343f97f028f530bb6d67f323d7ff645c201d4e4525533a95e",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Refund and cancel payments | Stripe Documentation"
+    },
+    {
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_comments/",
+      "startedAt": "2026-10-18T14:36:50.627Z",
+      "finishedAt": "2026-10-18T14:36:51.845Z",
+      "status": 200,
+      "finalUrl": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_comments/",
+      "bytes": 1462593,
+      "sha256": "a744dc110fcbb8b31a48126467578fc1d32265684a13fcb46bc4456c1e7cb4eb",
+      "contentType": "text/html",
+      "title": "Ticket Comments | Zendesk Developer Docs"
+    },
+    {
+      "url": "https://developer.zendesk.com/documentation/ticketing/managing-tickets/creating-and-updating-tickets/",
+      "startedAt": "2026-10-18T14:36:52.293Z",
+      "finishedAt": "2026-10-18T14:36:52.600Z",
+      "status": 200,
+      "finalUrl": "https://developer.zendesk.com/documentation/ticketing/managing-tickets/creating-and-updating-tickets/",
+      "bytes": 336566,
+      "sha256": "aab67a0a2416e4774396579b903e52e162b20a1b6638b78fed762694c09bb2eb",
+      "contentType": "text/html",
+      "title": "Creating and updating tickets | Zendesk Developer Docs"
+    },
+    {
+      "url": "https://cursor.com/docs/grok-bot/get-started",
+      "startedAt": "2026-10-18T14:36:52.293Z",
+      "finishedAt": "2026-10-18T14:36:53.501Z",
+      "status": 200,
+      "finalUrl": "https://cursor.com/docs/grok-bot/get-started",
+      "bytes": 238432,
+      "sha256": "19b4fdacba63cf598350df6a7e9eeaf190fb60bbce2039941583a845f046b040",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Get started with Grok Bot | Cursor Docs"
+    },
+    {
+      "url": "https://cursor.com/help/grok-bot/connect-plugins",
+      "startedAt": "2026-10-18T14:36:52.295Z",
+      "finishedAt": "2026-10-18T14:36:53.301Z",
+      "status": 200,
+      "finalUrl": "https://cursor.com/help/grok-bot/connect-plugins",
+      "bytes": 171630,
+      "sha256": "ab57ec159f540bab61171d07f9a4b464b8b26b1622b8d152f2836c7972507492",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Connect plugins | Cursor Docs"
+    },
+    {
+      "url": "https://cursor.com/help/grok-bot/routines",
+      "startedAt": "2026-10-18T14:36:52.296Z",
+      "finishedAt": "2026-10-18T14:36:54.334Z",
+      "status": 200,
+      "finalUrl": "https://cursor.com/help/grok-bot/routines",
+      "bytes": 169050,
+      "sha256": "4530497ffd740edcfb6526ae3c4d66d2ff1fcfdc8686e8eb8401221e41a67c1d",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Routines | Cursor Docs"
+    },
+    {
+      "url": "https://cursor.com/docs/grok-bot/security",
+      "startedAt": "2026-10-18T14:36:54.334Z",
+      "finishedAt": "2026-10-18T14:36:54.702Z",
+      "status": 200,
+      "finalUrl": "https://cursor.com/docs/grok-bot/security",
+      "bytes": 390662,
+      "sha256": "46179c440add3c8c21ce9d192a147ffdf48822a65bb866e7ce18491a96137ca3",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Grok Bot security | Cursor Docs"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/conversations.replies/",
+      "startedAt": "2026-10-18T14:36:54.335Z",
+      "finishedAt": "2026-10-18T14:36:54.895Z",
+      "status": 200,
+      "finalUrl": "https://docs.slack.dev/reference/methods/conversations.replies/",
+      "bytes": 93492,
+      "sha256": "a990810be25640dfe6da5092bc9951a02b26c4152b074bb5f98da9f94fd04930",
+      "contentType": "text/html; charset=utf-8",
+      "title": "conversations.replies method | Slack Developer Docs"
+    }
+  ],
+  "readme": {
+    "url": "https://raw.githubusercontent.com/JeffShanCha/grokbotguide/920a60eb055bac5845d88dded694c9eb684f554f/README.md",
+    "startedAt": "2026-10-18T14:36:54.895Z",
+    "finishedAt": "2026-10-18T14:36:55.860Z",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/JeffShanCha/grokbotguide/920a60eb055bac5845d88dded694c9eb684f554f/README.md",
+    "bytes": 23189,
+    "sha256": "de133e0737a1fc5528155bbd7b4ff259c368ca8de0dab7199e5342427d0ad366",
+    "contentType": "text/plain; charset=utf-8",
+    "title": null,
+    "headings": [
+      "在线网站",
+      "网站怎么用",
+      "项目愿景",
+      "适合谁",
+      "你会在这里看到什么",
+      "网站一览",
+      "推荐阅读路径",
+      "快速入口",
+      "内容框架",
+      "本地预览",
+      "设计原则",
+      "事实来源",
+      "参与贡献",
+      "开源协议",
+      "声明"
+    ]
+  },
+  "website": [
+    {
+      "url": "https://grokbotguide.ai/zh/",
+      "startedAt": "2026-10-18T14:36:55.860Z",
+      "finishedAt": "2026-10-18T14:36:56.948Z",
+      "status": 200,
+      "finalUrl": "https://grokbotguide.ai/zh/",
+      "bytes": 52583,
+      "sha256": "3991e1cab78da4fae6ac3ae461365e6888dc38332a24feb667c2c439a907318f",
+      "contentType": "text/html",
+      "title": "Grok Bot 中文教程、角色模板与自动化工作流 | GrokBotGuide",
+      "negativeControl": false
+    },
+    {
+      "url": "https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/",
+      "startedAt": "2026-10-18T14:36:55.861Z",
+      "finishedAt": "2026-10-18T14:36:57.086Z",
+      "status": 200,
+      "finalUrl": "https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/",
+      "bytes": 85175,
+      "sha256": "88d018eb68dadab59cad2e4c3a3ca40aaac85a8c5042768f388894735cdacaf5",
+      "contentType": "text/html",
+      "title": "Gmail 收件箱整理：从分类到每日简报 | GrokBotGuide",
+      "negativeControl": false,
+      "boundaries": {
+        "anchor": true,
+        "headings": [
+          {
+            "text": "可自动执行",
+            "present": true
+          },
+          {
+            "text": "需要确认",
+            "present": true
+          },
+          {
+            "text": "失败后接管",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://grokbotguide.ai/zh/p0-audit-not-found-20261018/",
+      "startedAt": "2026-10-18T14:36:55.863Z",
+      "finishedAt": "2026-10-18T14:36:56.864Z",
+      "status": 404,
+      "finalUrl": "https://grokbotguide.ai/zh/p0-audit-not-found-20261018/",
+      "bytes": 45091,
+      "sha256": "a630a47ad6869f5fa14e70a2b04689d60ca38f466b5b4cfa75f9cc088b8b3551",
+      "contentType": "text/html",
+      "title": "404 | GrokBotGuide",
+      "negativeControl": true
+    }
+  ],
+  "pr": {
+    "retrieval": {
+      "url": "https://api.github.com/repos/JeffShanCha/grokbotguide/pulls/3",
+      "startedAt": "2026-10-18T14:36:57.087Z",
+      "finishedAt": "2026-10-18T14:36:58.164Z",
+      "status": 200,
+      "finalUrl": "https://api.github.com/repos/JeffShanCha/grokbotguide/pulls/3",
+      "bytes": 19116,
+      "sha256": "cf79eb875045b7fcab902eafc3265ece56d97aae910ca2be92263181185bf234",
+      "contentType": "application/json; charset=utf-8",
+      "title": null
+    },
+    "number": 3,
+    "state": "closed",
+    "draft": false,
+    "headSha": "a776a4cc590ce3577da587e30a820173e568e224",
+    "mergeCommitSha": "f5b4208994caafe722f2815f3f96d422d8a9c4a7",
+    "merged": true,
+    "mergedAt": "2026-10-17T18:00:26Z",
+    "mergeable": null,
+    "requests": [
+      {
+        "url": "https://api.github.com/repos/JeffShanCha/grokbotguide/commits/a776a4cc590ce3577da587e30a820173e568e224/check-runs",
+        "startedAt": "2026-10-18T14:36:58.165Z",
+        "finishedAt": "2026-10-18T14:36:59.447Z",
+        "status": 200,
+        "finalUrl": "https://api.github.com/repos/JeffShanCha/grokbotguide/commits/a776a4cc590ce3577da587e30a820173e568e224/check-runs",
+        "bytes": 3104,
+        "sha256": "ce056f567b5f91853af782b0780a4e13df1ad0f0d38eae6bbd68e01469e20881",
+        "contentType": "application/json; charset=utf-8",
+        "title": null
+      },
+      {
+        "url": "https://api.github.com/repos/JeffShanCha/grokbotguide/commits/a776a4cc590ce3577da587e30a820173e568e224/status",
+        "startedAt": "2026-10-18T14:36:58.167Z",
+        "finishedAt": "2026-10-18T14:36:59.168Z",
+        "status": 200,
+        "finalUrl": "https://api.github.com/repos/JeffShanCha/grokbotguide/commits/a776a4cc590ce3577da587e30a820173e568e224/status",
+        "bytes": 4780,
+        "sha256": "8520bbc481363429a79a78d3ff8bda0ab87fb751d6393e011681b1befb4dc65a",
+        "contentType": "application/json; charset=utf-8",
+        "title": null
+      },
+      {
+        "url": "https://api.github.com/repos/JeffShanCha/grokbotguide/pulls/3/reviews",
+        "startedAt": "2026-10-18T14:36:58.169Z",
+        "finishedAt": "2026-10-18T14:36:59.154Z",
+        "status": 200,
+        "finalUrl": "https://api.github.com/repos/JeffShanCha/grokbotguide/pulls/3/reviews",
+        "bytes": 2,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "contentType": "application/json; charset=utf-8",
+        "title": null
+      }
+    ],
+    "checks": [
+      {
+        "name": "build",
+        "headSha": "a776a4cc590ce3577da587e30a820173e568e224",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "combinedStatus": "pending",
+    "reviews": []
+  }
+}

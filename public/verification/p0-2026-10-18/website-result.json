@@ -1,0 +1,66 @@
+{
+  "method": "HTTP GET via curl -L（源码检查）",
+  "browser_test": "未测：本轮未进行真实浏览器点击或渲染检查",
+  "pages": [
+    {
+      "url": "https://grokbotguide.ai/zh/",
+      "negative_check": false,
+      "status_code": 200,
+      "final_url": "https://grokbotguide.ai/zh/",
+      "redirects": 0,
+      "bytes": 52216,
+      "content_type": "text/html",
+      "title": "Grok Bot 中文教程、角色模板与自动化工作流 | GrokBotGuide",
+      "content_obtained": true,
+      "raw_body": "raw/site-zh.body",
+      "raw_headers": "raw/site-zh.headers",
+      "result": "pass"
+    },
+    {
+      "url": "https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/",
+      "negative_check": false,
+      "status_code": 200,
+      "final_url": "https://grokbotguide.ai/zh/recipes/gmail-inbox-triage/",
+      "redirects": 0,
+      "bytes": 84808,
+      "content_type": "text/html",
+      "title": "Gmail 收件箱整理：从分类到每日简报 | GrokBotGuide",
+      "content_obtained": true,
+      "raw_body": "raw/site-gmail.body",
+      "raw_headers": "raw/site-gmail.headers",
+      "result": "pass",
+      "anchor_automation_boundaries": {
+        "present": true,
+        "count": 1,
+        "section_h2": [
+          "执行与接管边界"
+        ],
+        "block_h3": [
+          "可自动执行",
+          "需要确认",
+          "失败后接管"
+        ]
+      },
+      "three_block_titles_present": true
+    },
+    {
+      "url": "https://grokbotguide.ai/zh/p0-audit-not-found-20261018/",
+      "negative_check": true,
+      "status_code": 404,
+      "final_url": "https://grokbotguide.ai/zh/p0-audit-not-found-20261018/",
+      "redirects": 0,
+      "bytes": 44724,
+      "content_type": "text/html",
+      "title": "404 | GrokBotGuide",
+      "content_obtained": true,
+      "raw_body": "raw/site-404.body",
+      "raw_headers": "raw/site-404.headers",
+      "result": "pass（预期 404，实际 404）"
+    }
+  ],
+  "scope_note": "只请求了这三个网址，未扫描其他页面，未登录后台，未修改站点。",
+  "_review_context": {
+    "rawPaths": "Paths inside the private original archive, not public download links.",
+    "botReportedFields": "Coverage, direct-executor and completion claims are Bot reports; independent checks and acceptance limits are in execution-attempt.json."
+  }
+}

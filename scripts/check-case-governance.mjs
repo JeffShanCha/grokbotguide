@@ -39,6 +39,12 @@ for (const [slug, record] of Object.entries(records)) {
 	assert(documentation && execution, `${slug}: separate documentation and execution records required`);
 	assert(Object.hasOwn(documentation, 'checkedOn'), `${slug}: explicitly use null for an unrecorded documentation review`);
 	if (documentation.checkedOn !== null) date(documentation.checkedOn, `${slug}.documentation.checkedOn`);
+	const documentationStatus = documentation.status ?? (documentation.checkedOn ? 'recorded' : 'unverified');
+	assert(['unverified', 'recorded', 'partial', 'verified'].includes(documentationStatus), `${slug}: invalid documentation status`);
+	if (documentationStatus === 'unverified') assert.equal(documentation.checkedOn, null, `${slug}: unverified documentation cannot have a review date`);
+	else date(documentation.checkedOn, `${slug}.documentation.checkedOn`);
+	if (['partial', 'verified'].includes(documentationStatus)) assert(documentation.evidenceUrl, `${slug}: documentation review needs evidence and scope`);
+	if (documentation.evidenceUrl) assert(documentation.evidenceUrl.startsWith('/') && !documentation.evidenceUrl.includes('..') && existsSync(root + 'public' + documentation.evidenceUrl), `${slug}: missing public documentation evidence`);
 	localized(documentation.note, `${slug}.documentation.note`);
 	if (record.format === 'handbook') for (const lang of langs) {
 		const source = readFileSync(root + `src/content/docs/${lang}/recipes/${slug}.mdx`, 'utf8');
@@ -47,6 +53,10 @@ for (const [slug, record] of Object.entries(records)) {
 	}
 	assert(['unverified', 'partial', 'verified'].includes(execution.status), `${slug}: invalid execution status`);
 	localized(execution.note, `${slug}.execution.note`);
+	if (execution.lastAttemptOn) {
+		date(execution.lastAttemptOn, `${slug}.execution.lastAttemptOn`);
+		assert(execution.evidenceUrl, `${slug}: execution attempts need an evidence record, not just a date`);
+	}
 	if (execution.status === 'unverified') assert.equal(execution.verifiedOn, null, `${slug}: unverified execution cannot have a verification date`);
 	else {
 		date(execution.verifiedOn, `${slug}.execution.verifiedOn`);
@@ -93,9 +103,10 @@ if (process.argv.includes('--built') || liveOrigin) {
 			const verification = find(tree, node => attr(node, 'data-case-verification') === slug);
 			assert.equal(verification.length, 1, `${label}: expected one verification record`);
 			const box = verification[0];
-			assert.equal(find(box, node => attr(node, 'data-documentation-status') === (record.documentation.checkedOn ? 'recorded' : 'unverified')).length, 1, `${label}: wrong documentation status`);
+			assert.equal(find(box, node => attr(node, 'data-documentation-status') === (record.documentation.status ?? (record.documentation.checkedOn ? 'recorded' : 'unverified'))).length, 1, `${label}: wrong documentation status`);
+			if (record.documentation.evidenceUrl) assert(find(box, node => node.tagName === 'a' && attr(node, 'href') === record.documentation.evidenceUrl).length, `${label}: documentation evidence link missing`);
 			assert.equal(find(box, node => attr(node, 'data-execution-status') === record.execution.status).length, 1, `${label}: wrong execution status`);
-			assert.deepEqual(find(box, node => node.tagName === 'time').map(node => attr(node, 'datetime')), [record.updatedOn, record.documentation.checkedOn, record.execution.verifiedOn].filter(Boolean), `${label}: dates must come from this case's independent records`);
+			assert.deepEqual(find(box, node => node.tagName === 'time').map(node => attr(node, 'datetime')), [record.updatedOn, record.documentation.checkedOn, record.execution.verifiedOn, record.execution.lastAttemptOn].filter(Boolean), `${label}: dates must come from this case's independent records`);
 			assert(text(box).includes(record.documentation.note[lang]) && text(box).includes(record.execution.note[lang]), `${label}: verification limits missing`);
 		}
 	}

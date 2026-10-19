@@ -7,12 +7,18 @@ const { updatedOn, documentation, execution } = getCaseGovernance(slug);
 const statuses = english
 	? { unverified: 'Unverified', partial: 'Partial verification · includes failed checks', verified: 'Verified within the recorded scope' }
 	: { unverified: '未核验', partial: '部分核验（含未通过项）', verified: '已按记录范围核验' };
+const documentationStatus = documentation.status ?? (documentation.checkedOn ? 'recorded' : 'unverified');
+const documentationStatuses = english
+	? { unverified: 'Unverified · no review date recorded', recorded: 'Historical review record', partial: 'Partially reviewed', verified: 'Reviewed within the recorded scope' }
+	: { unverified: '未核验 · 暂无核验日期', recorded: '历史核验记录', partial: '部分核验', verified: '已按记录范围核验' };
 ---
 <div class="case-verification" data-case-verification={slug}>
 	<p><strong>{english ? 'Content updated: ' : '内容更新日期：'}</strong><time datetime={updatedOn}>{updatedOn}</time><span>{english ? ' · Editing a page does not reverify its sources or live workflow.' : ' · 修改页面不等于重新核验资料或实操。'}</span></p>
-	<p data-documentation-status={documentation.checkedOn ? 'recorded' : 'unverified'}><strong>{english ? 'Documentation review: ' : '资料核验：'}</strong>{documentation.checkedOn ? <time datetime={documentation.checkedOn}>{documentation.checkedOn}</time> : <span>{english ? 'Unverified · no review date recorded' : '未核验 · 暂无核验日期'}</span>}<br />{documentation.note[lang]}</p>
+	<p data-documentation-status={documentationStatus}><strong>{english ? 'Documentation review: ' : '资料核验：'}</strong>{documentationStatuses[documentationStatus]}{documentation.checkedOn && <> · <time datetime={documentation.checkedOn}>{documentation.checkedOn}</time></>}<br />{documentation.note[lang]}</p>
+	{documentation.evidenceUrl && <p class="case-verification-links"><a href={documentation.evidenceUrl}>{english ? 'Documentation review evidence and limits' : '资料核验依据与范围'} ↗</a></p>}
 	<p data-execution-status={execution.status}><strong>{english ? 'Live workflow verification: ' : '实操核验：'}</strong>{statuses[execution.status]}{execution.verifiedOn && <> · <time datetime={execution.verifiedOn}>{execution.verifiedOn}</time></>}<br />{execution.note[lang]}</p>
-	{execution.evidenceUrl && <p class="case-verification-links"><a href={execution.evidenceUrl}>{english ? 'Historical check record' : '历史核验记录'} ↗</a>{execution.auditUrl && <a href={execution.auditUrl}>{english ? 'Process audit and failed checks' : '流程审计与未通过项'} ↗</a>}</p>}
+	{execution.lastAttemptOn && <p><strong>{english ? 'Last execution attempt: ' : '最近实操尝试：'}</strong><time datetime={execution.lastAttemptOn}>{execution.lastAttemptOn}</time>{english ? ' · An attempt date does not establish a passed verification.' : ' · 尝试日期不代表已核验通过。'}</p>}
+	{execution.evidenceUrl && <p class="case-verification-links"><a href={execution.evidenceUrl}>{execution.status === 'unverified' ? (english ? 'Execution attempt and blockers' : '实操尝试与阻塞记录') : (english ? 'Execution verification record' : '实操核验记录')} ↗</a>{execution.auditUrl && <a href={execution.auditUrl}>{english ? 'Process audit and failed checks' : '流程审计与未通过项'} ↗</a>}</p>}
 </div>
 
 <style>

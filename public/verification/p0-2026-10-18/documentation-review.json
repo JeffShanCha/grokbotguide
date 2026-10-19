@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "reviewer": "Codex",
+  "method": "Read official documentation through the web reader and independently recorded HTTP retrieval metadata. Semantic review and HTTP availability are distinct.",
+  "transportEvidence": "codex-public-checks.json",
+  "executionCertification": false,
+  "checks": [
+    {
+      "id": "files",
+      "sourceUrl": "https://docs.x.ai/grok-bot/files-and-results",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "文件、链接和可审阅交付；访问受限或不可读必须说明。",
+        "en": "Files, links and inspectable deliverables; inaccessible or unreadable material must be declared."
+      }
+    },
+    {
+      "id": "shared-computer",
+      "sourceUrl": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "共享电脑不是 Bot 之间的权限隔离；登录验证由用户接管。",
+        "en": "The shared computer does not isolate Bots; the user handles authentication steps."
+      }
+    },
+    {
+      "id": "manual-before-routine",
+      "sourceUrl": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "先验收单次任务，再保存方法并考虑重复运行。",
+        "en": "Accept a one-time task before saving a method and considering recurring runs."
+      }
+    },
+    {
+      "id": "routine-test",
+      "sourceUrl": "https://cursor.com/help/grok-bot/routines",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "Test 会执行实际工作；读取运行状态、失败原因和下一次运行时间。",
+        "en": "Test performs actual work; inspect state, failure reason and next run."
+      }
+    },
+    {
+      "id": "plugins",
+      "sourceUrl": "https://cursor.com/help/grok-bot/connect-plugins",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "安装不等于已授权；服务范围取决于所连接身份。",
+        "en": "Installation is not authentication; service scope depends on the connected identity."
+      }
+    },
+    {
+      "id": "approvals",
+      "sourceUrl": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "敏感操作的目标与范围先确认，密码与验证码不进入普通聊天。",
+        "en": "Confirm targets and scope for consequential actions; keep passwords and one-time codes out of ordinary chat."
+      }
+    },
+    {
+      "id": "gmail-labels",
+      "sourceUrl": "https://developers.google.com/workspace/gmail/api/guides/labels",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "原邮件与草稿的标签规则不同，新回复不能由旧线程标签推断已处理。",
+        "en": "Original-message and draft label rules differ; existing thread labels do not establish handling of new replies."
+      }
+    },
+    {
+      "id": "gmail-drafts",
+      "sourceUrl": "https://developers.google.com/workspace/gmail/api/guides/drafts",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "草稿容器身份与内部邮件身份分开；重复创建前核对已有草稿。",
+        "en": "Draft-container and contained-message identities differ; inspect existing drafts before retrying creation."
+      }
+    },
+    {
+      "id": "gmail-search",
+      "sourceUrl": "https://support.google.com/mail/answer/7190?hl=zh-Hans",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "查询必须保留范围限制，不能把会话结果数量当作原邮件数量。",
+        "en": "Retain query scope and do not equate conversation counts with original-message counts."
+      }
+    },
+    {
+      "id": "calendar",
+      "sourceUrl": "https://developers.google.com/workspace/calendar/api/v3/reference/events/list",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "时间窗使用明确偏移量，边界针对开始/结束时间不同，分页与同步条件另核对。",
+        "en": "Use explicit time offsets; start/end bounds differ, and pagination/synchronization parameters need separate checks."
+      }
+    },
+    {
+      "id": "slack-history",
+      "sourceUrl": "https://docs.slack.dev/reference/methods/conversations.history/",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "频道历史读取受身份、范围与分页限制，失败不能作为无消息。",
+        "en": "Channel history depends on identity, scope and pagination; failure is not an empty history."
+      }
+    },
+    {
+      "id": "slack-replies",
+      "sourceUrl": "https://docs.slack.dev/reference/methods/conversations.replies/",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "线程回复与频道历史分开取得，缺失内容要标明。",
+        "en": "Retrieve thread replies separately from channel history and declare missing coverage."
+      }
+    },
+    {
+      "id": "chat-drafts",
+      "sourceUrl": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "起草结果与实际发送分开验收。",
+        "en": "Accept a prepared draft separately from actual delivery."
+      }
+    },
+    {
+      "id": "http",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "区分成功、重定向与客户端/服务端错误，保留响应与未取得内容。",
+        "en": "Distinguish success, redirects and client/server errors while retaining responses and missing coverage."
+      }
+    },
+    {
+      "id": "github-checks",
+      "sourceUrl": "https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "旧提交的检查不能替代当前有效版本；测试合并提交也可能是有效检查对象。",
+        "en": "Old-commit checks cannot replace the effective current version; a test-merge commit may be the applicable target."
+      }
+    },
+    {
+      "id": "github-reviews",
+      "sourceUrl": "https://docs.github.com/en/pull-requests/concepts/resolving-reviews",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "评审意见、修改和检查是不同证据，不能混成可合并状态。",
+        "en": "Review feedback, changes and checks are separate evidence and do not alone establish merge readiness."
+      }
+    },
+    {
+      "id": "stripe",
+      "sourceUrl": "https://docs.stripe.com/refunds",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "累计退款受原付款金额约束，提交、待处理、成功和失败不混同。",
+        "en": "Aggregate refunds are bounded by the original payment; submission, pending, success and failure differ."
+      }
+    },
+    {
+      "id": "zendesk-comments",
+      "sourceUrl": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_comments/",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "内部备注和公开回复均改变工单；创建评论经由 Tickets API。",
+        "en": "Both internal notes and public replies change tickets; comment creation uses the Tickets API."
+      }
+    },
+    {
+      "id": "zendesk-updates",
+      "sourceUrl": "https://developer.zendesk.com/documentation/ticketing/managing-tickets/creating-and-updating-tickets/",
+      "result": "supported_within_scope",
+      "finding": {
+        "zh": "更新工单需检查并发冲突与实际结果，不重复覆盖他人变更。",
+        "en": "Inspect concurrent updates and actual outcomes rather than overwriting another update."
+      }
+    }
+  ],
+  "cases": {
+    "summarize-a-document": {
+      "zh": "已核对文件输入、引用章节、交付文件和保留原件的要求；PDF/OCR 与真实文档实操分别验收。",
+      "en": "Reviewed file inputs, section references, inspectable outputs and preservation of originals. PDF/OCR and actual document execution require separate checks.",
+      "checks": [
+        "files",
+        "shared-computer",
+        "manual-before-routine"
+      ]
+    },
+    "gmail-inbox-triage": {
+      "zh": "已核对连接授权、原邮件标签、草稿独立身份及新回复处理；连接器实际工具、保存和去重仍需账号实测。",
+      "en": "Reviewed authorization, labels on original messages, stable draft identity and new replies. Available connector tools, saved drafts and deduplication still need an account test.",
+      "checks": [
+        "plugins",
+        "gmail-labels",
+        "gmail-drafts",
+        "gmail-search",
+        "shared-computer",
+        "approvals"
+      ]
+    },
+    "website-daily-check": {
+      "zh": "已核对 HTTP 状态码、只读巡检和 Routine 测试的区别；状态码不能代替业务验收，定时与后台仍未实测。",
+      "en": "Reviewed HTTP status classes, read-only inspection and actual Routine tests. Status codes do not establish business correctness; schedules and dashboards remain untested.",
+      "checks": [
+        "http",
+        "shared-computer",
+        "manual-before-routine",
+        "routine-test"
+      ]
+    },
+    "google-calendar-meeting-brief": {
+      "zh": "已核对事件时间窗、时区、分页及重复/取消事件的查询条件；未验证账号中的工具或真实日程。",
+      "en": "Reviewed event time bounds, time zones, pagination and recurring/cancelled-event parameters. Account tools and real calendar data remain untested.",
+      "checks": [
+        "calendar",
+        "plugins",
+        "shared-computer",
+        "manual-before-routine"
+      ]
+    },
+    "slack-daily-standup": {
+      "zh": "已核对频道历史、线程回复、分页、可见范围及连接身份；未接入真实工作区，也未发送摘要。",
+      "en": "Reviewed channel history, thread replies, pagination, visibility and connected identity. No live workspace read or summary delivery was tested.",
+      "checks": [
+        "slack-history",
+        "slack-replies",
+        "plugins",
+        "chat-drafts",
+        "manual-before-routine"
+      ]
+    },
+    "github-pr-watch": {
+      "zh": "已核对最新提交/测试合并提交的有效检查、评审与合并状态；公开读取与 Notion 写入、持续跟进分开验收。",
+      "en": "Reviewed effective checks for current head/test-merge commits, reviews and merge state. Public reads, Notion writes and sustained monitoring require separate acceptance.",
+      "checks": [
+        "github-checks",
+        "github-reviews",
+        "shared-computer",
+        "manual-before-routine"
+      ]
+    },
+    "stripe-refunds": {
+      "zh": "已核对部分退款、累计金额上限及待处理/失败等状态；资料核验不代表账号权限、退款或客户通知已验证。",
+      "en": "Reviewed partial refunds, aggregate amount limits and pending/failed states. Documentation review establishes neither account access nor live refunds or customer notifications.",
+      "checks": [
+        "stripe",
+        "shared-computer",
+        "approvals"
+      ]
+    },
+    "zendesk-support-queue": {
+      "zh": "已核对公开回复/内部备注、Tickets API 创建评论及更新冲突；未读取、提交或修改真实工单。",
+      "en": "Reviewed public replies/internal notes, comment creation through the Tickets API and update collisions. No live tickets were read, submitted or modified.",
+      "checks": [
+        "zendesk-comments",
+        "zendesk-updates",
+        "shared-computer",
+        "approvals"
+      ]
+    },
+    "shopping-compare": {
+      "zh": "已核对页面读取、登录和付款接管边界；报价为合成材料，未核验商店实时价格、库存、税费或交易。",
+      "en": "Reviewed page access and user takeover for login/payment. Offers remain synthetic; live store prices, stock, taxes and transactions were not verified.",
+      "checks": [
+        "shared-computer",
+        "approvals",
+        "plugins"
+      ]
+    }
+  },
+  "unresolved": [
+    {
+      "zh": "x.ai 与 Cursor 安全文档对个人 Auto-review 规则同步范围的描述不同，本轮未解决此差异；不作为 P0 的实测保证。",
+      "en": "The x.ai and Cursor security documentation describe personal Auto-review rule synchronization differently. This review did not resolve that discrepancy or certify it for P0."
+    }
+  ],
+  "limits": {
+    "zh": "只核对列出的资料与规则。合成材料、HTTP 可访问、独立 Codex 脚本或 Bot 自报完成，均不等于 Grok Bot 真实流程验收通过。",
+    "en": "Review covers only listed sources and rules. Fixtures, HTTP access, independent Codex scripts and Bot self-reports do not establish a passed Grok Bot workflow."
+  }
+}

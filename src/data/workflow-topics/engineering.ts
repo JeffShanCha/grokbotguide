@@ -22,7 +22,7 @@ const report = '网站巡检参考报告｜合成训练站\n\n检查范围：2 �
 
 export const engineeringTopic = completeTopic({
 	id: 'engineering', number: '03', title: '开发与网站维护', eyebrow: '让检查有证据，让改动有验收', summary: '从网站巡检、PR 状态到原型需求，把“看一下有没有问题”变成能复查的任务。先提供失败证据，再决定要不要修改。',
-	guideSlug: 'website-daily-check', guideTitle: '网站巡检：从三处预设问题到可复查报告', guideLead: '用一个有意保留错误的训练站，检查页面状态、链接、图片和锚点。把发现、影响与修复建议分开，最后再安排固定巡检。', scope: '训练站与参考报告为本站原创。可在运行本站服务的机器上核对预设问题；没有巡检、修改或部署真实业务网站。',
+	guideSlug: 'website-daily-check', guideTitle: '网站巡检：从三处预设问题到可复查报告', guideLead: '用一个有意保留错误的训练站，检查页面状态、链接、图片和锚点。把发现、影响与修复建议分开，最后再安排固定巡检。', scope: '下方训练站与参考报告为本站原创。2026-10-18 另对本站三个公开地址做了单次 HTTP 检查（含预期 404 对照），见页末记录；浏览器呈现、业务后台与 Routine 未测。',
 	deskTitle: '站点能打开，细节仍要看。', deskRows: [{ title: '价格入口', detail: '目标页面返回 404', tag: '待修复' }, { title: '首页横幅', detail: '图片资源不存在', tag: '待补图' }, { title: '联系表单', detail: '页面里缺少对应锚点', tag: '待核对' }], flow: ['2 个训练页面', '3 处预设问题', '1 份可复查报告'],
 	deliverables: [{ title: '检查清单', description: '逐项注明范围、目标和预期结果。', format: 'JSON' }, { title: '问题证据表', description: '保留来源页、目标、状态与实际观察。', format: 'CSV' }, { title: '巡检报告', description: '正常项、问题、未检查项和修复建议。', format: 'MD' }, { title: '重复运行规则', description: '固定范围、差异通知和复查条件。', format: 'SKILL' }],
 	prepare: [{ title: '先检查训练材料', items: ['下载 site-fixture.json，里面包含两页 HTML 与模拟资源状态。', '打开本站训练页，可观察预设的坏链、缺图与锚点。', '原始输入没有附带问题答案，先独立检查再对照。'] }, { title: '真实站点需要另定范围', items: ['指定由你管理或明确允许检查的站点与路径。', '限定只读请求，排除登录、付款、表单提交和破坏性操作。', '云电脑不能直接访问你 Mac 上的 localhost；使用上传材料，或在同一台本地机器检查。'] }],

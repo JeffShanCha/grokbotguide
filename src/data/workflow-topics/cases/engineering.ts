@@ -27,7 +27,7 @@ const agent = buildCase({
 const pr = buildCase({
 	slug: 'github-pr-watch', group: 'engineering', title: 'PR 跟进：把最新检查、评审和合并状态分开',
 	lead: '用五条合成 PR 快照练习旧检查失效、待处理评审、草稿和无权读取。先形成待办，再决定是否更新看板。',
-	scope: 'PR 和提交标识为合成数据；未读取 GitHub、写入 Notion、通知 Agent、推送或合并。',
+	scope: '下方 PR、提交标识与参考结果为合成快照。2026-10-18 另只读核对了本站公开 PR #3 及对应 head 的检查和评审；Notion 写入、通知、持续跟进与 Routine 未测，见页末记录。',
 	input: { prs: [{ id: 'PR12', head: 'new-b', checks: [{ sha: 'old-a', status: 'success' }, { sha: 'new-b', status: 'pending' }], review: 'unknown', state: 'open' }, { id: 'PR13', head: 'c', checks: [{ sha: 'c', status: 'success' }], review: 'changes_requested', state: 'open' }, { id: 'PR14', state: 'merged', merged: true }, { id: 'PR15', head: 'd', draft: true, checks: [{ sha: 'd', status: 'success' }], review: 'not_reviewed', state: 'open' }, { id: 'PR16', readable: false, error: '无读取权限' }] },
 	rules: '只判断快照，不推断所有分支保护。成功检查必须关联当前提交，旧 SHA 成功不替代新 SHA。CI通过、评审、草稿、冲突和合并状态分列；无权读取为未知，不当成已关闭。',
 	prepare: [['下载五条 PR 快照，按当前提交判断检查。', '练习编号不是真实 GitHub PR。', '先不提供参考待办表。'], ['明确仓库与 PR 清单，不全站搜索。', '核对检查和评审读取能力，以及是否能确定最新提交。', '写看板、联系负责人或重跑 CI 都另定范围，先只读。']],

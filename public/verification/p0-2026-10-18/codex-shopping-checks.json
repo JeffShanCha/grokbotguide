@@ -1,0 +1,51 @@
+{
+  "executor": "Codex",
+  "kind": "independent_public_reads",
+  "notGrokExecution": true,
+  "retrievals": [
+    {
+      "url": "https://www.apple.com.cn/shop/buy-airpods/airpods-4/",
+      "at": "2026-10-18T14:42:35.518816+00:00",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>"
+    },
+    {
+      "url": "https://support.apple.com/zh-cn/121203",
+      "at": "2026-10-18T14:42:36.217249+00:00",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>"
+    },
+    {
+      "url": "https://support.apple.com/zh-cn/121204",
+      "at": "2026-10-18T14:42:36.880238+00:00",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>"
+    }
+  ],
+  "retries": [
+    {
+      "url": "https://www.apple.com.cn/shop/buy-airpods/airpods-4/",
+      "at": "2026-10-18T14:43:20.331Z",
+      "status": 200,
+      "finalUrl": "https://www.apple.com.cn/shop/buy-airpods/airpods-5",
+      "bytes": 245817,
+      "sha256": "6478583d7e7da88ad236233535b6675d4fdb32dc283e75dd472edba5d8c62ff1",
+      "title": "购买 AirPods 5 - Apple (中国大陆)"
+    },
+    {
+      "url": "https://support.apple.com/zh-cn/121203",
+      "at": "2026-10-18T14:43:23.140Z",
+      "status": 200,
+      "finalUrl": "https://support.apple.com/zh-cn/121203",
+      "bytes": 167963,
+      "sha256": "5a917942028f18420a6060986b926ab0c554d49f60505404e16dc69aa2f3aba7",
+      "title": "AirPods 4 - 技术规格 - 官方 Apple 支持 (中国)"
+    },
+    {
+      "url": "https://support.apple.com/zh-cn/121204",
+      "at": "2026-10-18T14:43:24.708Z",
+      "status": 200,
+      "finalUrl": "https://support.apple.com/zh-cn/121204",
+      "bytes": 170138,
+      "sha256": "44974ae69e50c9565b17253405d0084802cadc78620b973b7b0f506e4684f970",
+      "title": "AirPods 4 (支持主动降噪) - 技术规格 - 官方 Apple 支持 (中国)"
+    }
+  ]
+}

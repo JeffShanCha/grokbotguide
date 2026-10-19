@@ -37,8 +37,9 @@
 
 - `boundaries`：中英文的可自动执行、需要确认、失败后接管；写明具体对象、停止位置、人工检查和防重复执行方法。
 - `updatedOn`：该案例内容实际编辑的日期，与核验日期分开。
-- `documentation.checkedOn`：确实查阅来源并核对本案例后才填写 `YYYY-MM-DD`，同时在双语 `note` 中写清核对范围；未核验填 `null`。没有逐篇记录的旧模板日期不能沿用。
+- `documentation`：确实查阅来源并核对本案例后才填写 `checkedOn: YYYY-MM-DD`，同时在双语 `note` 中写清核对范围；未核验填 `null`。新核验记录填写 `status`（`unverified`、`partial` 或 `verified`）及公开脱敏的 `evidenceUrl`；有日期但没有明确状态的旧记录只显示为历史记录。没有逐篇记录的旧模板日期不能沿用。
 - `execution`：未实操填 `status: unverified`、`verifiedOn: null`；部分核验填 `partial` 并列出未通过项；只有记录范围内通过才填 `verified`。实际核验后填写日期、双语范围说明和公开脱敏的 `evidenceUrl`，不能用合成练习、页面自查或来源核验代替。
+- 实操尝试被阻塞时，可记录 `execution.lastAttemptOn` 和证据，仍保留 `unverified` 与 `verifiedOn: null`。尝试日期、Bot 自报完成、工具目录显示已连接，都不代表真实数据读取或整篇流程通过。资料核验、独立检查、Bot 原始执行、人工复核分别注明；缺失或截断的工具记录要明说。不要公开账号内容、凭据、无关私聊或思考过程。
 
 已有历史日期仅表示当时记录的范围；翻译或编辑页面不算重新核验。新增案例必须同时补齐记录。运行 `npm run check:content` 检查元数据，构建后运行 `node scripts/check-case-governance.mjs --built` 检查中英文实际页面是否完整展示边界和核验状态。
 

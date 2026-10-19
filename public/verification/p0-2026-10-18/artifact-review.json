@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-18T14:44:54.289Z",
+  "kind": "offline_review_of_actual_grok_bot_artifacts",
+  "runId": "gbg-p0-20261018-2235",
+  "checks": [
+    {
+      "name": "Pinned real README, complete bytes and independently observed hash",
+      "result": "pass"
+    },
+    {
+      "name": "All real README H2 headings and source line positions",
+      "result": "pass"
+    },
+    {
+      "name": "Five points, actions with unknown owners/deadlines, and exact source excerpts",
+      "result": "pass"
+    },
+    {
+      "name": "Three real HTTP responses, including an intentional 404 control",
+      "result": "pass"
+    },
+    {
+      "name": "Boundary anchor and all three headings in the actual Gmail HTML section",
+      "result": "pass"
+    },
+    {
+      "name": "Real PR state, current-head check identities and independent review data",
+      "result": "pass"
+    },
+    {
+      "name": "No delegation tool calls in the available current-run transcript excerpt",
+      "result": "pass"
+    },
+    {
+      "name": "Follow-up source references: all 27 excerpts match their exact README lines",
+      "result": "pass"
+    },
+    {
+      "name": "Real product responses, source hashes and changed-model redirect",
+      "result": "pass"
+    }
+  ],
+  "sourceBytes": 23189,
+  "sourceSha256": "de133e0737a1fc5528155bbd7b4ff259c368ca8de0dab7199e5342427d0ad366",
+  "availableToolCallNames": [
+    "SendToUser",
+    "Shell",
+    "Shell",
+    "Shell",
+    "Read",
+    "Shell"
+  ],
+  "limits": [
+    "Exact excerpt matches do not establish semantic support for every clause; a human-readable review is required.",
+    "The original transcript export truncates long tool arguments/results. It ends before packaging and is not a complete execution trace.",
+    "No delegation was observed in the available excerpt; this does not prove unseen activity absent.",
+    "These supporting checks do not promote any case to a full workflow pass. Browser, login, writes and Routines require separate evidence."
+  ]
+}

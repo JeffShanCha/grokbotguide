@@ -1,0 +1,288 @@
+{
+  "method": "Read 工具在本会话直接调用 6 次，offset 1/61/121/181/241/301，limit 60；每段返回内容完整显示，无截断标记",
+  "file": "raw/readme.body",
+  "lines_in_read_view": 320,
+  "note_lines": "wc -l 为 319（换行符数）；Read 显示 320 行，第 320 行为末尾换行后的空行",
+  "segments": [
+    {
+      "segment": 1,
+      "start": 1,
+      "end": 60,
+      "complete": true
+    },
+    {
+      "segment": 2,
+      "start": 61,
+      "end": 120,
+      "complete": true
+    },
+    {
+      "segment": 3,
+      "start": 121,
+      "end": 180,
+      "complete": true
+    },
+    {
+      "segment": 4,
+      "start": 181,
+      "end": 240,
+      "complete": true
+    },
+    {
+      "segment": 5,
+      "start": 241,
+      "end": 300,
+      "complete": true
+    },
+    {
+      "segment": 6,
+      "start": 301,
+      "end": 320,
+      "complete": true
+    }
+  ],
+  "all_320_lines_read": true,
+  "first_round_review": [
+    {
+      "item": "摘要：社区维护、中文 Grok Bot 实战手册",
+      "verdict": "成立",
+      "support": [
+        {
+          "line": 5,
+          "quote": "面向中文用户的 xAI Grok Bot 实战手册"
+        },
+        {
+          "line": 319,
+          "quote": "GrokBotGuide 是社区维护的独立项目"
+        }
+      ]
+    },
+    {
+      "item": "摘要：列出的栏目（学习路线、完整版教程、模板、资源导航、用量审计、搜索高亮）",
+      "verdict": "成立",
+      "support": [
+        {
+          "line": 60,
+          "quote": "学习路线"
+        },
+        {
+          "line": 64,
+          "quote": "模板库"
+        },
+        {
+          "line": 65,
+          "quote": "资源导航"
+        },
+        {
+          "line": 66,
+          "quote": "用量审计"
+        },
+        {
+          "line": 90,
+          "quote": "搜索、章节跳转与关键词高亮"
+        }
+      ]
+    },
+    {
+      "item": "要点1：每篇标注来源、核对日期和内容分级",
+      "verdict": "成立，属原文陈述，未验证",
+      "support": [
+        {
+          "line": 36,
+          "quote": "每篇都标注来源、核对日期和内容分级"
+        }
+      ]
+    },
+    {
+      "item": "要点2：25 篇、151 段、134 份；合计 50/302/268",
+      "verdict": "成立，属原文陈述，未清点；首轮只写了中英文各数，合计数也应保留",
+      "support": [
+        {
+          "line": 71,
+          "quote": "各有 **25 篇完整版教程、151 段提示词、134 份下载材料**，共 50 篇、302 段提示词和 268 份文件"
+        }
+      ]
+    },
+    {
+      "item": "要点3：区分验证范围；练习台只看示例",
+      "verdict": "成立",
+      "support": [
+        {
+          "line": 88,
+          "quote": "每篇会区分合成练习、历史实测和真实账号操作的验证范围"
+        },
+        {
+          "line": 88,
+          "quote": "页面练习台用于查看示例，实际任务在你自己的 Grok Bot 中执行"
+        }
+      ]
+    },
+    {
+      "item": "要点4：不承诺节省比例；安静结束也耗额度",
+      "verdict": "成立",
+      "support": [
+        {
+          "line": 109,
+          "quote": "每次 Routine 运行都会使用额度，安静结束不代表检查免费"
+        },
+        {
+          "line": 109,
+          "quote": "不承诺节省比例"
+        }
+      ]
+    },
+    {
+      "item": "要点5：只有真正跑通才标本站实测；外部资料不搬运",
+      "verdict": "成立，但两句分属同一章节不同条目（如实分级、尊重原作者）",
+      "support": [
+        {
+          "line": 285,
+          "quote": "只有真正按步骤跑通的内容才标本站实测"
+        },
+        {
+          "line": 289,
+          "quote": "不搬运原文和图片"
+        }
+      ]
+    }
+  ],
+  "participation_steps_corrected": [
+    {
+      "item": "提交亲自跑通的实战案例",
+      "sub_conclusions": [
+        "亲自跑通",
+        "写明测试日期",
+        "写明订阅档位"
+      ],
+      "support": [
+        {
+          "line": 305,
+          "quote": "你亲自跑通的实战案例（写明测试日期和订阅档位）。"
+        }
+      ],
+      "owner": "未明确（投稿人）",
+      "deadline": "未明确",
+      "nature": "欢迎提交，非义务"
+    },
+    {
+      "item": "提交新的「Grok Bot × 工具」组合",
+      "sub_conclusions": [
+        "示例 Shopify、Search Console、飞书、Linear"
+      ],
+      "support": [
+        {
+          "line": 306,
+          "quote": "新的「Grok Bot × 工具」组合，比如 Shopify、Search Console、飞书、Linear。"
+        }
+      ],
+      "owner": "未明确",
+      "deadline": "未明确",
+      "nature": "欢迎提交"
+    },
+    {
+      "item": "提交常见错误和解决方法",
+      "support": [
+        {
+          "line": 307,
+          "quote": "常见错误和解决方法。"
+        }
+      ],
+      "owner": "未明确",
+      "deadline": "未明确",
+      "nature": "欢迎提交"
+    },
+    {
+      "item": "官方文档变更后的内容更新和纠错",
+      "support": [
+        {
+          "line": 308,
+          "quote": "官方文档变更后的内容更新和纠错。"
+        }
+      ],
+      "owner": "未明确",
+      "deadline": "未明确",
+      "nature": "欢迎提交"
+    },
+    {
+      "item": "提交途径：会用 GitHub 提 PR 且先读贡献指南；不碰 Git 用投稿表单",
+      "sub_conclusions": [
+        "PR 前先读 CONTRIBUTING.md",
+        "投稿表单为替代途径"
+      ],
+      "support": [
+        {
+          "line": 310,
+          "quote": "会用 GitHub 就提 PR，先读 [贡献指南](./CONTRIBUTING.md)"
+        },
+        {
+          "line": 310,
+          "quote": "不想碰 Git，用站内的 [投稿表单]"
+        }
+      ],
+      "owner": "未明确",
+      "deadline": "未明确",
+      "nature": "途径说明"
+    },
+    {
+      "item": "投稿表单细节",
+      "sub_conclusions": [
+        "选择相应类型",
+        "推荐链接和纠错需填写对应网址",
+        "成功后可通过返回的 GitHub Issue 跟踪",
+        "联系方式选填且不进入公开 Issue",
+        "新内容审核后发布"
+      ],
+      "support": [
+        {
+          "line": 131,
+          "quote": "选择相应类型；推荐链接和纠错需填写对应网址"
+        },
+        {
+          "line": 131,
+          "quote": "提交成功后可通过返回的 GitHub Issue 跟踪处理进度"
+        },
+        {
+          "line": 131,
+          "quote": "联系方式为选填且不包含在公开 Issue 中"
+        },
+        {
+          "line": 131,
+          "quote": "新内容与资料收录经过审核后发布"
+        }
+      ],
+      "owner": "审核方未明确",
+      "deadline": "未明确",
+      "nature": "途径说明"
+    },
+    {
+      "item": "内容检查 npm run check:content",
+      "sub_conclusions": [
+        "检查 frontmatter、中英文对照、外部资料是否重复"
+      ],
+      "support": [
+        {
+          "line": 274,
+          "quote": "提交前可以跑一遍内容检查"
+        },
+        {
+          "line": 274,
+          "quote": "它会检查 frontmatter、中英文对照和外部资料是否重复"
+        }
+      ],
+      "owner": "未明确",
+      "deadline": "未明确",
+      "nature": "建议（原文“可以”），非强制"
+    }
+  ],
+  "corrections_to_first_round": [
+    "首轮把组合、常见错误、文档纠错合并为一项，现拆为三项，各有原文支持（第 306/307/308 行）。",
+    "首轮 check:content 条目的 item 写成“运行”，现改为建议，nature 标“非强制”。",
+    "首轮投稿跟踪条目只引了审核一句，现补齐第 131 行的全部子结论。",
+    "首轮要点2补充合计数 50/302/268。"
+  ],
+  "transcript_note": "本轮导出的会话记录若对长 Read 结果截断，会在 run-followup.json 中如实标注；本文件的结论依据本轮直接 Read 结果。",
+  "_review_context": {
+    "rawPaths": "Paths inside the private original archive, not public download links.",
+    "botReportedFields": "Coverage, direct-executor and completion claims are Bot reports; independent checks and acceptance limits are in execution-attempt.json."
+  }
+}

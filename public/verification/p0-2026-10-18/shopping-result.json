@@ -1,0 +1,100 @@
+{
+  "scope": {
+    "region": "中国大陆",
+    "currency": "CNY",
+    "logged_in": false,
+    "membership_assumed": false,
+    "purpose": "教程实测对象，不是购买建议"
+  },
+  "method": "HTTP GET via curl -L（源码/文本检查）；浏览器：未测",
+  "fetch_log": [
+    "2026-10-18T22:42:27+08:00 GET https://www.apple.com.cn/shop/buy-airpods/airpods-4/ -> raw/apple-buy",
+    "2026-10-18T22:42:28+08:00 GET https://support.apple.com/zh-cn/121203 -> raw/spec-121203",
+    "2026-10-18T22:42:28+08:00 GET https://support.apple.com/zh-cn/121204 -> raw/spec-121204"
+  ],
+  "sources": {
+    "buy_page": {
+      "http_code": "200",
+      "url_effective": "https://www.apple.com.cn/shop/buy-airpods/airpods-5",
+      "num_redirects": "2",
+      "size_download": "245595",
+      "content_type": "text/html;charset=utf-8",
+      "exit": "0",
+      "sha256": "4520a6618c98de929fa649a0d28233f92d4c082e47400c29de314a23ad4b9022",
+      "raw_body": "raw/apple-buy.body",
+      "raw_headers": "raw/apple-buy.headers"
+    },
+    "spec_121203": {
+      "http_code": "200",
+      "url_effective": "https://support.apple.com/zh-cn/121203",
+      "num_redirects": "0",
+      "size_download": "167963",
+      "content_type": "text/html;charset=utf-8",
+      "exit": "0",
+      "sha256": "5a917942028f18420a6060986b926ab0c554d49f60505404e16dc69aa2f3aba7",
+      "raw_body": "raw/spec-121203.body",
+      "raw_headers": "raw/spec-121203.headers"
+    },
+    "spec_121204": {
+      "http_code": "200",
+      "url_effective": "https://support.apple.com/zh-cn/121204",
+      "num_redirects": "0",
+      "size_download": "170138",
+      "content_type": "text/html;charset=utf-8",
+      "exit": "0",
+      "sha256": "44974ae69e50c9565b17253405d0084802cadc78620b973b7b0f506e4684f970",
+      "raw_body": "raw/spec-121204.body",
+      "raw_headers": "raw/spec-121204.headers"
+    }
+  },
+  "key_finding": {
+    "text": "指定的 AirPods 4 购买页已不存在：请求经 2 次 302 跳转（先到 /shop/buy-airpods/airpods-4，再到 /shop/buy-airpods/airpods-5），最终落到“购买 AirPods 5 - Apple (中国大陆)”。页面只上架 AirPods 5（RMB 999）和 AirPods 5 配无线充电盒（RMB 1,149），AirPods 4 只在对比脚注中出现，没有标价。",
+    "evidence": [
+      "页面标题：购买 AirPods 5 - Apple (中国大陆)",
+      "页面文字：两款机型均具备主动降噪功能。",
+      "结构化数据 partNumber：MKFT4CH/A、MKFW4CH/A，名称为 AirPods 5 / AirPods 5 with Wireless Charging Case"
+    ]
+  },
+  "models": [
+    {
+      "model": "AirPods 4（标准款）",
+      "spec_source": "support.apple.com/zh-cn/121203",
+      "spec_page_title": "AirPods 4 - 技术规格",
+      "list_price_on_official_page": "未知（当前官方购买页未上架，无标价）",
+      "in_box": "AirPods 4；充电盒 (USB-C)；资料；USB-C 充电线需单独购买",
+      "charging_case": "充电盒 (USB-C)；规格页未提无线充电或扬声器",
+      "active_noise_cancellation": "规格页音频技术未列主动降噪（“主动降噪”只出现在清洁说明和兼容性脚注里），判为无",
+      "shipping_fee": "未知",
+      "tax": "未知（页面未单列）",
+      "stock_delivery": "无法确定（无购买页）"
+    },
+    {
+      "model": "AirPods 4（支持主动降噪）",
+      "spec_source": "support.apple.com/zh-cn/121204",
+      "spec_page_title": "AirPods 4 (支持主动降噪) - 技术规格",
+      "list_price_on_official_page": "未知（当前官方购买页未上架，无标价）",
+      "in_box": "AirPods 4 (支持主动降噪)；自带扬声器的充电盒 (USB-C)；资料；USB-C 充电线需单独购买",
+      "charging_case": "可通过 USB-C、Apple Watch 充电器或 Qi 认证充电器充电；内置扬声器，支持查找",
+      "active_noise_cancellation": "有（音频技术列有“主动降噪”）",
+      "shipping_fee": "未知",
+      "tax": "未知（页面未单列）",
+      "stock_delivery": "无法确定（无购买页）"
+    }
+  ],
+  "not_compared": [
+    "页面上的 AirPods 5 价格未当作 AirPods 4 价格使用",
+    "没有跨店比价，没有选出最便宜",
+    "未登录、未加车、未下单"
+  ],
+  "result": {
+    "spec_comparison": "pass（两份规格页均为 200，包装和降噪差异可确定）",
+    "price_comparison": "无法完成：官方页已改为 AirPods 5，AirPods 4 两款无当前标价",
+    "browser": "未测"
+  },
+  "login_or_captcha": "未遇到",
+  "_review_context": {
+    "rawPaths": "Paths inside the private original archive, not public download links.",
+    "botReportedFields": "Coverage, direct-executor and completion claims are Bot reports; independent checks and acceptance limits are in execution-attempt.json.",
+    "reviewerCorrection": "Only the specified purchase URL was observed to redirect. This does not establish that every official purchase route is unavailable. AirPods 5 prices are not prices for the requested AirPods 4 models."
+  }
+}

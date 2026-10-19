@@ -1,0 +1,55 @@
+{
+  "url": "https://api.github.com/repos/JeffShanCha/grokbotguide/pulls/3",
+  "html_url": "https://github.com/JeffShanCha/grokbotguide/pull/3",
+  "title": "docs: 更新双语 README 的教程、搜索高亮与用量审计指南",
+  "state": "closed",
+  "draft": false,
+  "merged": true,
+  "merged_at_utc": "2026-10-17T18:00:26Z",
+  "merged_at_shanghai": "2026-10-18 02:00:26 (UTC+8)",
+  "merged_by": "JeffShanCha",
+  "merge_commit_sha": "f5b4208994caafe722f2815f3f96d422d8a9c4a7",
+  "mergeable": null,
+  "mergeable_state": "unknown",
+  "head_ref": "codex/readme-release-guide",
+  "head_sha": "a776a4cc590ce3577da587e30a820173e568e224",
+  "base_ref": "main",
+  "base_sha": "0ea1475d49aab71918dfb07f2c5315a035a3b2d8",
+  "check_runs": {
+    "endpoint": "commits/a776a4cc590ce3577da587e30a820173e568e224/check-runs",
+    "total_count": 1,
+    "runs": [
+      {
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "a776a4cc590ce3577da587e30a820173e568e224",
+        "matches_pr_head": true,
+        "completed_at_utc": "2026-10-17T18:00:02Z"
+      }
+    ]
+  },
+  "commit_status": {
+    "endpoint": "commits/a776a4cc590ce3577da587e30a820173e568e224/status",
+    "state": "pending",
+    "sha": "a776a4cc590ce3577da587e30a820173e568e224",
+    "total_count": 0,
+    "note": "combined status 无任何 status 上报时 GitHub 返回 pending；本结果以 check-runs 为准，不推断为失败或通过。"
+  },
+  "reviews": {
+    "endpoint": "pulls/3/reviews",
+    "count": 0,
+    "items": [],
+    "note": "公开接口返回 0 条评审。"
+  },
+  "unknown": [
+    "mergeable 字段为 null（PR 已合并后 GitHub 不再计算），mergeable_state=unknown"
+  ],
+  "not_done": [
+    "未重跑 CI、未评论、未合并、未写 Notion、未调用私有仓库"
+  ],
+  "_review_context": {
+    "rawPaths": "Paths inside the private original archive, not public download links.",
+    "botReportedFields": "Coverage, direct-executor and completion claims are Bot reports; independent checks and acceptance limits are in execution-attempt.json."
+  }
+}

@@ -5,9 +5,13 @@ export interface CaseGovernance {
 	format?: 'workflow' | 'handbook';
 	updatedOn: string;
 	boundaries: { automatic: LocalizedText; confirmation: LocalizedText; takeover: LocalizedText };
-	documentation: { checkedOn: string | null; note: LocalizedText };
+	documentation: {
+		status?: 'unverified' | 'recorded' | 'partial' | 'verified';
+		checkedOn: string | null; note: LocalizedText; evidenceUrl?: string;
+	};
 	execution: {
 		status: 'unverified' | 'partial' | 'verified'; verifiedOn: string | null; note: LocalizedText;
+		lastAttemptOn?: string;
 		evidenceUrl?: string; auditUrl?: string;
 	};
 }

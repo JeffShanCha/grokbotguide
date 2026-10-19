@@ -16,19 +16,22 @@
       }
     },
     "documentation": {
-      "checkedOn": "2026-10-16",
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "保留原 Gmail 教程记录：当日读取官方资料，范围为接入、标签、草稿及自动化基础说明。本次未重新核验，也不代表真实邮箱已跑通。",
-        "en": "Historical record from the Chinese Gmail tutorial: documentation was read for connection, labels, drafts and automation basics. It has not been rechecked in this edit; the English edition and live mailbox workflow were not independently verified."
-      }
+        "zh": "已核对连接授权、原邮件标签、草稿独立身份及新回复处理；连接器实际工具、保存和去重仍需账号实测。",
+        "en": "Reviewed authorization, labels on original messages, stable draft identity and new replies. Available connector tools, saved drafts and deduplication still need an account test."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "未核验：当前工具清单显示 Gmail 已连接，但未读取真实邮件。用户已选择指定测试标签，等待完整标签名后只读最多 5 封；标签、草稿、发送与 Routine 均未测。",
+        "en": "Unverified: the current tool catalog reports Gmail connected, but no real email has been read. The user chose a test label; its exact name is pending before reading at most five messages. Labels, drafts, sending and Routines remain untested."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "google-calendar-meeting-brief": {
@@ -48,19 +51,22 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对事件时间窗、时区、分页及重复/取消事件的查询条件；未验证账号中的工具或真实日程。",
+        "en": "Reviewed event time bounds, time zones, pagination and recurring/cancelled-event parameters. Account tools and real calendar data remain untested."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "未核验：本轮只复核资料；二丫头当前工具清单未暴露 Calendar 连接。需用户连接或提供可访问的测试日历并指定日期，再做小范围只读；不能据清单缺项断言账号全局未连接。",
+        "en": "Unverified: documentation review only. The current Bot tool catalog does not expose Calendar. The user needs to connect/provide an accessible test calendar and a date for a bounded read. Catalog absence does not establish global disconnection."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "summarize-a-document": {
@@ -80,19 +86,23 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对文件输入、引用章节、交付文件和保留原件的要求；PDF/OCR 与真实文档实操分别验收。",
+        "en": "Reviewed file inputs, section references, inspectable outputs and preservation of originals. PDF/OCR and actual document execution require separate checks."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
-      "status": "unverified",
-      "verifiedOn": null,
+      "status": "partial",
+      "verifiedOn": "2026-10-18",
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "部分核验：Grok Bot 取得并整理了真实公开 README（23189 字节、15 个二级标题）；已独立核对哈希与补充结果的 27 处逐行引文，并修正建议/强制等表述。补读覆盖为 Bot 自报，补充原始工具记录缺失；文件上传、PDF/OCR、缺页与 Skill 复用未测，不算整篇流程通过。",
+        "en": "Partial: Grok Bot retrieved and summarized a real public README (23,189 bytes, 15 H2 headings). Its hash and 27 line-specific follow-up excerpts were independently checked; recommendation/requirement wording was corrected. Follow-up coverage is Bot-reported and its original tool transcript is missing. Uploads, PDF/OCR, missing-page handling and Skill reuse remain untested; this is not a full workflow pass."
+      },
+      "lastAttemptOn": "2026-10-18",
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "slack-daily-standup": {
@@ -112,19 +122,22 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对频道历史、线程回复、分页、可见范围及连接身份；未接入真实工作区，也未发送摘要。",
+        "en": "Reviewed channel history, thread replies, pagination, visibility and connected identity. No live workspace read or summary delivery was tested."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "未核验：本轮只复核资料；二丫头当前工具清单未暴露 Slack 连接。需用户连接并指定测试工作区、频道和时间窗，再核对主消息、线程与覆盖；未发送消息或创建 Routine。",
+        "en": "Unverified: documentation review only. The current Bot tool catalog does not expose Slack. The user needs to connect and specify a test workspace, channel and time window before checking messages, threads and coverage. No messages or Routines were created."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "mobile-voice": {
@@ -434,19 +447,23 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对 HTTP 状态码、只读巡检和 Routine 测试的区别；状态码不能代替业务验收，定时与后台仍未实测。",
+        "en": "Reviewed HTTP status classes, read-only inspection and actual Routine tests. Status codes do not establish business correctness; schedules and dashboards remain untested."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
-      "status": "unverified",
-      "verifiedOn": null,
+      "status": "partial",
+      "verifiedOn": "2026-10-18",
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "部分核验：Grok Bot 对三个真实公开地址执行单次 HTTP 读取，结果为 200/200/预期 404；Gmail 页边界锚点与三个标题已复核。仅含请求与源码检查，未测浏览器点击、图片呈现、后台、修复或 Routine；负向对照不是线上故障。",
+        "en": "Partial: Grok Bot made one-time HTTP reads of three real public URLs, returning 200/200/expected 404. The Gmail boundary anchor and three headings were checked. Requests and source inspection only; browser clicks, image rendering, backends, repairs and Routines remain untested. The negative control is not a production fault."
+      },
+      "lastAttemptOn": "2026-10-18",
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "cursor-cloud-agent": {
@@ -498,19 +515,23 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对最新提交/测试合并提交的有效检查、评审与合并状态；公开读取与 Notion 写入、持续跟进分开验收。",
+        "en": "Reviewed effective checks for current head/test-merge commits, reviews and merge state. Public reads, Notion writes and sustained monitoring require separate acceptance."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
-      "status": "unverified",
-      "verifiedOn": null,
+      "status": "partial",
+      "verifiedOn": "2026-10-18",
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "部分核验：Grok Bot 只读了本站真实公开 PR #3、当前 head 对应检查与评审，原始接口结果已复核；CI、评审和已合并状态分别记录。未测未合并 PR 的持续跟进、分页、Notion 写入、通知或 Routine；mergeable=null 保持未知。",
+        "en": "Partial: Grok Bot read real public PR #3, its current-head checks and reviews; original API results were reviewed. CI, review and merged state are separate. Continuous tracking of open PRs, pagination, Notion writes, notifications and Routines remain untested; mergeable=null remains unknown."
+      },
+      "lastAttemptOn": "2026-10-18",
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "x-bookmarks-demo": {
@@ -594,19 +615,22 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对公开回复/内部备注、Tickets API 创建评论及更新冲突；未读取、提交或修改真实工单。",
+        "en": "Reviewed public replies/internal notes, comment creation through the Tickets API and update collisions. No live tickets were read, submitted or modified."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "未核验：本轮只复核评论可见性与写入边界资料；二丫头当前工具清单未暴露 Zendesk。需用户提供测试环境与指定工单后先只读；私密备注、公开回复、状态更改及 Routine 均未测。",
+        "en": "Unverified: comment visibility and write-boundary documentation only. The current Bot tool catalog does not expose Zendesk. A test environment and specified tickets are needed before a read-only run. Private notes, public replies, status changes and Routines remain untested."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "notion-personal-crm": {
@@ -690,19 +714,22 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对部分退款、累计金额上限及待处理/失败等状态；资料核验不代表账号权限、退款或客户通知已验证。",
+        "en": "Reviewed partial refunds, aggregate amount limits and pending/failed states. Documentation review establishes neither account access nor live refunds or customer notifications."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
       "status": "unverified",
       "verifiedOn": null,
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "未核验：本轮只复核退款状态与边界资料；二丫头当前工具清单未暴露 Stripe。后续需用户提供测试模式连接和具体测试对象；仅做只读核对，真实退款由人工接管，未执行资金操作。",
+        "en": "Unverified: refund-state and boundary documentation only. The current Bot tool catalog does not expose Stripe. A test-mode connection and specified test objects are needed for a later read-only check; real refunds require user takeover. No financial action occurred."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json"
     }
   },
   "gmail-drive-invoices": {
@@ -754,19 +781,23 @@
       }
     },
     "documentation": {
-      "checkedOn": null,
+      "status": "verified",
+      "checkedOn": "2026-10-18",
       "note": {
-        "zh": "尚无本案例单独核验官方资料的记录；下列来源供复核，不能视为已核验。",
-        "en": "No case-specific documentation review is recorded. References below are provided for review and do not establish verification."
-      }
+        "zh": "已核对页面读取、登录和付款接管边界；报价为合成材料，未核验商店实时价格、库存、税费或交易。",
+        "en": "Reviewed page access and user takeover for login/payment. Offers remain synthetic; live store prices, stock, taxes and transactions were not verified."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/documentation-review.json"
     },
     "execution": {
-      "status": "unverified",
-      "verifiedOn": null,
+      "status": "partial",
+      "verifiedOn": "2026-10-18",
       "note": {
-        "zh": "未核验真实账号、外部工具写入、定时执行或长期运行效果；合成练习与页面自查不能替代实操核验。",
-        "en": "Live accounts, external writes, scheduled execution and long-term operation are unverified. Synthetic exercises and page checkboxes do not establish live verification."
-      }
+        "zh": "部分核验：Grok Bot 只读了真实官方商品入口与两份规格，原始响应哈希已核对。给定 AirPods 4 购买地址跳到 AirPods 5，原型号当前价格、运费、税费和配送未取得，没有沿用旧价或替换型号价格；未完成真实到手价比较。浏览器、跨店比价、Skill 与交易未测，补充原始工具记录缺失。",
+        "en": "Partial: Grok Bot read real official product/specification pages and response hashes were checked. The specified AirPods 4 purchase URL redirected to AirPods 5. Current prices, shipping, taxes and delivery for the requested models were not obtained; neither old prices nor another model’s prices were substituted. Delivered-price comparison is incomplete. Browser, cross-store comparisons, Skills and transactions remain untested; the follow-up original tool transcript is missing."
+      },
+      "evidenceUrl": "/verification/p0-2026-10-18/execution-attempt.json",
+      "lastAttemptOn": "2026-10-18"
     }
   },
   "marketplace-watch": {

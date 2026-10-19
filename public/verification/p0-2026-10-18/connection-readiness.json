@@ -1,0 +1,37 @@
+{
+  "observedOn": "2026-10-18",
+  "method": "Bot-reported GetMcpServerStatus, with a saved catalog transcription; original follow-up tool transcript is missing.",
+  "privateDataRead": false,
+  "services": {
+    "Gmail": {
+      "catalogStatus": "connected",
+      "actualReadTested": false
+    },
+    "Google Calendar": {
+      "catalogStatus": "not_exposed_in_this_session",
+      "actualReadTested": false
+    },
+    "Slack": {
+      "catalogStatus": "not_exposed_in_this_session",
+      "actualReadTested": false
+    },
+    "Stripe": {
+      "catalogStatus": "not_exposed_in_this_session",
+      "actualReadTested": false
+    },
+    "Zendesk": {
+      "catalogStatus": "not_exposed_in_this_session",
+      "actualReadTested": false
+    },
+    "Notion": {
+      "catalogStatus": "not_exposed_in_this_session",
+      "actualReadTested": false
+    }
+  },
+  "limits": [
+    "Connected catalog status does not prove actual account data access or successful read.",
+    "Absence from this session catalog does not establish global account/service disconnection.",
+    "No private message, event, payment or ticket was read."
+  ],
+  "nextGmailStep": "User selected a test label; awaiting its exact name. Read-only maximum 5 messages after scope is specified; no links, attachments or state changes."
+}
