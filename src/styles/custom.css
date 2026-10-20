@@ -393,22 +393,40 @@ h1#_top {
 	outline-offset: 4px;
 }
 @media (min-width: 72rem) {
-	/* 正文从左侧导航旁开始，目录紧随其后，避免 auto 0 把宽屏余量留在左侧。 */
+	/* 三栏占满可用宽度；超宽屏将整个阅读区居中，余量不再堆在某一侧。 */
+	[data-has-sidebar] {
+		--gbg-layout-gutter: max(0px, calc((100vw - 120rem) / 2));
+		--gbg-toc-width: 14rem;
+	}
+	[data-has-sidebar] .main-frame {
+		padding-inline: calc(var(--gbg-layout-gutter) + var(--sl-sidebar-width)) var(--gbg-layout-gutter);
+	}
+	[data-has-sidebar] .sidebar-pane {
+		inset-inline-start: var(--gbg-layout-gutter);
+	}
+	[data-has-sidebar] .page > .header {
+		padding-inline: calc(var(--gbg-layout-gutter) + var(--sl-nav-pad-x));
+	}
 	[data-has-sidebar] .main-pane {
-		--sl-content-width: 64rem;
+		--sl-content-width: 100%;
 		--sl-content-margin-inline: 0;
-		width: min(100%, calc(var(--sl-content-width) + 2 * var(--sl-content-pad-x)));
-		flex-shrink: 0;
+		--sl-content-pad-x: clamp(2rem, 3vw, 4rem);
+		width: 100%;
+		min-width: 0;
 	}
 	[data-has-sidebar][data-has-toc] .main-pane {
-		width: min(calc(100% - 13.5rem), calc(var(--sl-content-width) + 2 * var(--sl-content-pad-x)));
+		width: calc(100% - var(--gbg-toc-width));
 	}
-	.right-sidebar-container,
-	.right-sidebar {
-		width: 13.5rem;
+	[data-has-sidebar] .right-sidebar-container,
+	[data-has-sidebar] .right-sidebar {
+		width: var(--gbg-toc-width);
 		flex-shrink: 0;
 	}
-	.right-sidebar {
+	[data-has-sidebar] .right-sidebar {
+		position: sticky;
+		top: var(--sl-nav-height);
+		height: calc(100vh - var(--sl-nav-height));
+		padding-top: 0;
 		border-inline-start: 0;
 	}
 	.right-sidebar-panel .sl-container {
