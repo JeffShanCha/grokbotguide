@@ -476,7 +476,8 @@ const needBurger = !route.hasSidebar;
 		height: 100%;
 	}
 	.title-wrapper {
-		overflow: clip;
+		flex: 0 0 auto;
+		overflow: visible;
 		padding: 0.25rem;
 		margin: -0.25rem;
 		min-width: 0;
@@ -489,17 +490,18 @@ const needBurger = !route.hasSidebar;
 	/* 右侧：图标组（GitHub、X、主题）间距 8px → 1×20px 竖线（左右各 12px）→ 语言按钮 */
 	.right-group {
 		align-items: center;
+		flex-shrink: 0;
 	}
 	.icon-group {
 		display: flex;
 		align-items: center;
-		gap: 8px;
+		gap: 4px;
 	}
 	.divider {
 		width: 1px;
 		height: 20px;
-		margin: 0 12px;
-		background: #e4e4e7;
+		margin: 0 10px;
+		background: var(--sl-color-hairline);
 	}
 	:global(:root[data-theme='dark']) .divider {
 		background: #3f3f46;
@@ -507,7 +509,7 @@ const needBurger = !route.hasSidebar;
 	.gbg-mega-nav {
 		display: none;
 		align-items: center;
-		gap: 0 1.25rem;
+		gap: 0 0.875rem;
 		height: 100%;
 	}
 	.gbg-mega-btn {
@@ -518,7 +520,7 @@ const needBurger = !route.hasSidebar;
 		gap: 0.25rem;
 		height: 100%;
 		padding: 0 0.15rem;
-		font-size: 0.9375rem;
+		font-size: 0.875rem;
 		color: var(--sl-color-gray-2);
 		cursor: pointer;
 		white-space: nowrap;
@@ -856,15 +858,24 @@ const needBurger = !route.hasSidebar;
 	}
 	@media (min-width: 50rem) {
 		.search :global(button[data-open-modal]) {
-			width: 17rem;
+			width: clamp(10.5rem, 17vw, 15rem);
 			max-width: 100%;
-			border-radius: 0.6rem;
+			border-radius: 0.625rem;
 			background: var(--gbg-soft-bg);
-			border-color: var(--sl-color-hairline-shade);
+			border-color: var(--sl-color-hairline);
+		}
+		.search :global(button[data-open-modal] > span) {
+			min-width: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.search :global(button[data-open-modal] > :is(svg, kbd)) {
+			flex-shrink: 0;
 		}
 		.header {
 			display: flex;
-			gap: 1.75rem;
+			gap: clamp(0.75rem, 1.4vw, 1.5rem);
 		}
 	}
 </style>

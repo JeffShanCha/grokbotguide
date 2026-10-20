@@ -266,7 +266,7 @@ if (previewNavigation.enabled) {
 	.gbg-home {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
+		gap: 4.5rem;
 		padding-block: 0 2rem;
 	}
 	.gbg-home :is(h1, h2) {
@@ -279,11 +279,12 @@ if (previewNavigation.enabled) {
 		align-items: center;
 		min-height: 3rem;
 		padding: 0 1.5rem;
-		border-radius: 0.75rem;
+		border-radius: 0.625rem;
 		border: 1px solid var(--sl-color-hairline-shade);
 		color: var(--sl-color-white);
 		text-decoration: none;
 		font-weight: 500;
+		transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 	}
 	.btn:hover {
 		border-color: var(--sl-color-gray-4);
@@ -317,14 +318,17 @@ if (previewNavigation.enabled) {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		padding: 4.5rem 0 1rem;
+		padding: 3rem 0 2rem;
 	}
 	.eyebrow {
-		margin: 0 0 1rem;
-		font-family: var(--sl-font-mono);
-		font-size: var(--sl-text-xs);
-		letter-spacing: 0.06em;
-		color: var(--sl-color-text-accent);
+		margin: 0 0 1.25rem;
+		padding: 0.35rem 0.85rem;
+		border: 1px solid var(--sl-color-hairline);
+		border-radius: 999px;
+		background: var(--gbg-soft-bg);
+		font-size: 0.75rem;
+		letter-spacing: 0.015em;
+		color: var(--sl-color-gray-2);
 	}
 	.hero h1 {
 		max-width: 60rem;
@@ -352,10 +356,10 @@ if (previewNavigation.enabled) {
 		max-width: none;
 		margin: 0;
 		font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-		font-size: 56px;
-		font-weight: 700;
-		line-height: 1.22;
-		letter-spacing: 0;
+		font-size: clamp(2rem, 4.2vw, 3.25rem);
+		font-weight: 650;
+		line-height: 1.3;
+		letter-spacing: -0.025em;
 	}
 	.zh-title .l1,
 	.zh-title .l2 {
@@ -363,7 +367,7 @@ if (previewNavigation.enabled) {
 		white-space: nowrap;
 	}
 	.zh-title .em {
-		color: #c2410c;
+		color: var(--sl-color-text-accent);
 	}
 	:root:not([data-theme='light']) .zh-title .em {
 		color: var(--sl-color-text-accent);
@@ -383,7 +387,7 @@ if (previewNavigation.enabled) {
 		margin: 22px 0 0;
 		font-size: 22px;
 		font-weight: 500;
-		color: #3f3f46;
+		color: var(--sl-color-gray-2);
 	}
 	:root:not([data-theme='light']) .hero.zh .tagline {
 		color: var(--sl-color-gray-2);
@@ -391,7 +395,7 @@ if (previewNavigation.enabled) {
 	.hero.zh .lead {
 		max-width: 32em;
 		font-size: 17px;
-		color: #71717a;
+		color: var(--sl-color-gray-3);
 		text-wrap: pretty;
 	}
 	:root:not([data-theme='light']) .hero.zh .lead {
@@ -403,20 +407,22 @@ if (previewNavigation.enabled) {
 		gap: 0.65rem;
 		width: 100%;
 		max-width: 37.5rem;
-		min-height: 3.5rem;
+		min-height: 3.75rem;
 		margin-top: 2rem;
 		padding: 0 1rem;
-		border: 1px solid var(--sl-color-hairline-shade);
-		border-radius: 0.9rem;
-		background: var(--sl-color-black);
-		box-shadow: 0 4px 16px rgba(24, 24, 27, 0.06);
+		border: 1px solid var(--sl-color-hairline);
+		border-radius: var(--gbg-radius);
+		background: var(--gbg-card-bg);
+		box-shadow: var(--gbg-shadow);
 		color: var(--sl-color-gray-3);
 		font: inherit;
 		text-align: start;
-		cursor: text;
+		cursor: pointer;
+		transition: border-color 180ms ease, box-shadow 180ms ease;
 	}
 	.big-search:hover {
-		border-color: var(--sl-color-gray-4);
+		border-color: color-mix(in srgb, var(--sl-color-accent) 45%, var(--gbg-card-border));
+		box-shadow: var(--gbg-shadow-hover);
 	}
 	.big-search span {
 		flex: 1;
@@ -466,10 +472,10 @@ if (previewNavigation.enabled) {
 	.featured {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
-		gap: 2rem;
-		padding: 2.25rem;
+		gap: 2.5rem;
+		padding: 2.5rem;
 		border: 1px solid var(--sl-color-hairline);
-		border-radius: 1.25rem;
+		border-radius: 1rem;
 		background: var(--gbg-soft-bg);
 	}
 	.featured-copy {
@@ -514,8 +520,9 @@ if (previewNavigation.enabled) {
 		gap: 0.75rem;
 		padding: 1.75rem;
 		border: 1px solid var(--sl-color-hairline);
-		border-radius: 0.9rem;
-		background: var(--sl-color-black);
+		border-radius: var(--gbg-radius);
+		background: var(--gbg-card-bg);
+		box-shadow: var(--gbg-shadow);
 		color: var(--sl-color-gray-2);
 		font-size: var(--sl-text-sm);
 	}
