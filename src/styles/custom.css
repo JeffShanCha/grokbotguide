@@ -393,8 +393,15 @@ h1#_top {
 	outline-offset: 4px;
 }
 @media (min-width: 72rem) {
+	/* 正文从左侧导航旁开始，目录紧随其后，避免 auto 0 把宽屏余量留在左侧。 */
+	[data-has-sidebar] .main-pane {
+		--sl-content-width: 64rem;
+		--sl-content-margin-inline: 0;
+		width: min(100%, calc(var(--sl-content-width) + 2 * var(--sl-content-pad-x)));
+		flex-shrink: 0;
+	}
 	[data-has-sidebar][data-has-toc] .main-pane {
-		width: calc(100% - 13.5rem);
+		width: min(calc(100% - 13.5rem), calc(var(--sl-content-width) + 2 * var(--sl-content-pad-x)));
 	}
 	.right-sidebar-container,
 	.right-sidebar {
@@ -403,6 +410,10 @@ h1#_top {
 	}
 	.right-sidebar {
 		border-inline-start: 0;
+	}
+	.right-sidebar-panel .sl-container {
+		width: 100%;
+		max-width: 100%;
 	}
 	.right-sidebar h2 {
 		font-size: 0.8125rem;
