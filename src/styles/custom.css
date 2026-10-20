@@ -393,7 +393,7 @@ h1#_top {
 	outline-offset: 4px;
 }
 @media (min-width: 72rem) {
-	/* 三栏占满可用宽度；超宽屏将整个阅读区居中，余量不再堆在某一侧。 */
+	/* 阅读区居中；侧栏底色延伸至窗口左边，外侧不留白条。 */
 	[data-has-sidebar] {
 		--gbg-layout-gutter: max(0px, calc((100vw - 112rem) / 2));
 		--gbg-toc-width: 14rem;
@@ -402,7 +402,11 @@ h1#_top {
 		padding-inline: calc(var(--gbg-layout-gutter) + var(--sl-sidebar-width)) var(--gbg-layout-gutter);
 	}
 	[data-has-sidebar] .sidebar-pane {
-		inset-inline-start: var(--gbg-layout-gutter);
+		inset-inline-start: 0;
+		width: calc(var(--gbg-layout-gutter) + var(--sl-sidebar-width));
+	}
+	[data-has-sidebar] .sidebar-pane .sidebar-content {
+		padding-inline-start: calc(var(--gbg-layout-gutter) + var(--sl-sidebar-pad-x));
 	}
 	[data-has-sidebar] .page > .header {
 		padding-inline: calc(var(--gbg-layout-gutter) + var(--sl-nav-pad-x));
