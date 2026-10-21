@@ -1,0 +1,613 @@
+{
+  "id": "2026-10-20-daily-0900-approved",
+  "collected_at": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-20-daily-0900-review",
+  "source_review_sha256": "821d27bbbd88aaedab83ddaa2c45ec800d01868a003ae0b93e5a436719a2e504",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-21",
+    "approved_ids": [
+      "x-liu-zhongxisn-esp32-grok-bot",
+      "x-tspy-bot-computer-two-layer-backup",
+      "x-eugeniu-ghelbur-grok-bot-101",
+      "x-eng-khairallah1-make-money-guide",
+      "x-allballbearings-grok-bot-backup-template",
+      "x-dailygroktips-x-briefing-prompts",
+      "x-av1dlive-home-printer-cleanup",
+      "x-rodrigouroz-bot-to-bot-mailbox-template",
+      "x-michael-fenech-meeting-scheduler-prompt",
+      "xai-grok-bot-team-bots",
+      "xai-x-subscription-grok-bot",
+      "github-ofershap-slack-voice",
+      "leosplain-notion-state-handoff",
+      "youtube-komputer-mechanic-five-bot-setup"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "把10月20日那批建议收录的14条也导入并发布。",
+    "scope_zh": "仅批准10月20日批次中建议收录的14条（X 9条、其他平台5条）；不包括待核验、重复、排除项或其他批次。"
+  },
+  "baseline": {
+    "head": "809e2771a5dde1160d0bd7faca6035da4cc60c4d",
+    "catalog_count": 168
+  },
+  "source_review_baseline": {
+    "head": "6ddf07040bb5ed5e0ebeee906f51fe024c580ce0",
+    "catalog_count": 153,
+    "resources_sha256": "ba2e3ac37af19ec7cb383eb995d8c724a6e622291a236d1eb2fb720cee2e1a69",
+    "working_tree_clean_at_start": true,
+    "remote_main_matched": true
+  },
+  "editorial_note_zh": "保留审核通过的中文标题、双语摘要、署名、应用、分类、来源及核验范围；added采用2026-10-21实际首次收录日，checked_at保留2026-10-20实际读取日，published不变。候选reason中的等待审核属于送审时记录，本文件approval记载本轮明确授权。原始审核批次、预览及其他候选保持原样，不随本批提交。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-liu-zhongxisn-esp32-grok-bot",
+        "url": "https://x.com/Liu_zhongxisn/status/2112118491239379227",
+        "title": "ESP32 语音圆屏：通过 Webhook 与已有 Bot 对话",
+        "author": "Drunk",
+        "author_url": "https://x.com/Liu_zhongxisn",
+        "lang": "zh",
+        "published": "2026-10-19",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "summary_zh": "用 ESP32-S3 圆屏收发语音，由电脑识别、Webhook 交给已有 Bot，再把回复回传为字幕和朗读；作者提供固件备份、配网与排错指令。",
+        "summary_en": "An ESP32-S3 display routes transcribed speech to an existing bot through a computer and webhook, then returns captions and audio. The author supplies backup, Wi-Fi and troubleshooting prompts.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文及接口返回的 15 个代码块；配图未查看；GitHub 仓库 Liu-zhongxian/zongzhu-bot 与固件未打开、未刷写。涉及刷写第三方固件、本机后端常驻与 Webhook 令牌保管，需自行核验；电脑后端需一直运行。未复现。AI小少年(@aehyok0624)的导读帖已并入本条。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full X article and all 15 code blocks returned by the API; images not viewed; the zongzhu-bot repo and firmware were not opened or flashed. Third-party firmware, an always-on local backend and webhook token handling need checking. Not reproduced.",
+        "tags": [
+          "webhook",
+          "hardware",
+          "esp32",
+          "voice"
+        ],
+        "apps": [
+          "Codex",
+          "GitHub"
+        ],
+        "title_en": "An ESP32 voice display connected to an existing Grok Bot",
+        "author_en": "Drunk"
+      },
+      "collector_record": {
+        "candidate_id": "x-liu-zhongxisn-esp32-grok-bot",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-tspy-bot-computer-two-layer-backup",
+        "url": "https://x.com/tspy/status/2112056388474351906",
+        "title": "云电脑双层备份：GitHub 日备与 Google Drive 周备",
+        "author": "yishan",
+        "author_url": "https://x.com/tspy",
+        "lang": "zh",
+        "published": "2026-10-19",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "summary_zh": "把代码、文稿、技能和规范按日备份到私有 GitHub，按周打包到 Google Drive；提交前检查敏感文件，并让 Routine 汇报异常。",
+        "summary_en": "A two-layer backup plan sends selected working files to private GitHub nightly and archives to Google Drive weekly, with secret checks and routine failure reports.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读帖子全文；配图未查看；作者引用的自家模板长文另作处理（未收录）。云电脑重置经历为作者自述；备份方案未复现，私有仓库与网盘授权需自行把关。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full post; images not viewed. Reset incidents are author-reported; the backup setup was not reproduced. Private repo and Drive access need your own review.",
+        "tags": [
+          "backup",
+          "routine",
+          "security"
+        ],
+        "apps": [
+          "GitHub",
+          "Google Drive"
+        ],
+        "title_en": "Nightly GitHub and weekly Google Drive backups",
+        "author_en": "yishan"
+      },
+      "collector_record": {
+        "candidate_id": "x-tspy-bot-computer-two-layer-backup",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-eugeniu-ghelbur-grok-bot-101",
+        "url": "https://x.com/eugeniu_ghelbur/status/2112280924268155363",
+        "title": "首个 Bot 入门：只读简报、两次试跑与定时任务",
+        "author": "Eugeniu Ghelbur",
+        "author_url": "https://x.com/eugeniu_ghelbur",
+        "lang": "en",
+        "published": "2026-10-19",
+        "categories": [
+          "start"
+        ],
+        "summary_zh": "从公开来源的只读简报起步，手动跑通后再保存 Skill、安排 Routine，并先约定审批和停止条件；套餐与用量建议按当前官方页面另核。",
+        "summary_en": "Start with a read-only public-source brief, validate it manually, then save a skill and routine with approval and stop rules. Plan and usage advice needs current official confirmation.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文与 2 个提示词代码块；封面与配图未查看。价格与套餐为作者称 2026-10-19 核对的官方信息，具有时效，需以官方页面为准；未复现。 本条不采纳旧套餐或省用量保证。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full article and its 2 prompt blocks; images not viewed. Plan prices are the author's 2026-10-19 reading of official pages and may change. Not reproduced.",
+        "tags": [
+          "beginner",
+          "safety",
+          "usage",
+          "routine"
+        ],
+        "apps": [
+          "X"
+        ],
+        "title_en": "Start a first bot with a read-only brief and manual trials",
+        "author_en": "Eugeniu Ghelbur"
+      },
+      "collector_record": {
+        "candidate_id": "x-eugeniu-ghelbur-grok-bot-101",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-eng-khairallah1-make-money-guide",
+        "url": "https://x.com/eng_khairallah1/status/2112115524624658525",
+        "title": "七类服务交付思路：Skill、例程与人工验收",
+        "author": "Khairallah AL-Awady",
+        "author_url": "https://x.com/eng_khairallah1",
+        "lang": "en",
+        "published": "2026-10-19",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "从内容复用、调研到定制报告，讨论把 Bot 工作组织为可验收的服务，并附 Skill、Routine 和交付检查示例；收入效果尚未验证。",
+        "summary_en": "Seven service-delivery ideas organize content, research and reporting work around skills, routines and human acceptance checks. Revenue outcomes are unverified.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文与 3 个代码块；封面未查看。收入为作者观点与规划，非实测数据；套餐价格、上线日期等为作者引述，具时效；对外发送与客户数据处理需人工审批。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full article and 3 code blocks; cover not viewed. Income ideas are the author's views, not measured results; pricing and dates are cited and time-sensitive. Not reproduced.",
+        "tags": [
+          "business",
+          "routine",
+          "skill",
+          "safety"
+        ],
+        "apps": [],
+        "title_en": "Seven service-delivery ideas with skills and review gates",
+        "author_en": "Khairallah AL-Awady"
+      },
+      "collector_record": {
+        "candidate_id": "x-eng-khairallah1-make-money-guide",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-allballbearings-grok-bot-backup-template",
+        "url": "https://x.com/allballbearings/status/2111826011872514306",
+        "title": "夜间备份文章：配置、脱敏记录与凭据排除",
+        "author": "Jay Graves",
+        "author_url": "https://x.com/allballbearings",
+        "lang": "en",
+        "published": "2026-10-18",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "summary_zh": "作者提出按夜备份配置、例程、记忆和脱敏聊天记录，并排除密码、令牌与 Cookie；发现敏感内容时先停止打包。",
+        "summary_en": "A nightly backup proposal covers settings, routines, memories and redacted transcripts, excluding passwords, tokens and cookies and stopping when sensitive material is detected.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文；封面未查看；模板 https://x.ai/bot/GhM3Yv6pbQ2k_wu0fSO-b 未打开；可选的 Mac 端提取脚本未读未运行。锁定经历为作者自述；第三方用户模板，未复现。 仅收录文章中的备份思路，未核验所链模板或提取脚本。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full article; cover not viewed; the template and the optional Mac extract script were not opened or run. Lockout is author-reported; user-made template; not reproduced.",
+        "tags": [
+          "backup",
+          "template",
+          "security"
+        ],
+        "apps": [],
+        "title_en": "A nightly backup plan that excludes credentials",
+        "author_en": "Jay Graves"
+      },
+      "collector_record": {
+        "candidate_id": "x-allballbearings-grok-bot-backup-template",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-dailygroktips-x-briefing-prompts",
+        "url": "https://x.com/DailyGrokTips/status/2111933604288745663",
+        "title": "X 简报三种提示词：话题、提及与时间线",
+        "author": "Daily Grok Tips",
+        "author_url": "https://x.com/DailyGrokTips",
+        "lang": "en",
+        "published": "2026-10-18",
+        "categories": [
+          "start",
+          "recipes"
+        ],
+        "summary_zh": "用三种提示词分别整理某话题的公开帖子、需要回复的提及和时间线动态，再把满意的简报保存为 Routine；涉及个人内容须使用自己的连接与授权。",
+        "summary_en": "Three prompts cover public topic posts, mentions to review and timeline summaries, with a routine for repeat briefs. Personal content requires the account owner’s connection and approval.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读线程首帖及 3 条后续；首帖配图未查看。“付费用户获赠 X API 额度”为作者说法，需以官方说明为准；读提及/时间线需连接用户自己的 X 账号。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the thread root and 3 follow-ups; image not viewed. The free X API credits claim is the author's; mentions and timeline need your own X connection. Not reproduced.",
+        "tags": [
+          "x",
+          "prompt",
+          "routine",
+          "briefing"
+        ],
+        "apps": [
+          "X"
+        ],
+        "title_en": "Three X briefing prompts for topics, mentions and timelines",
+        "author_en": "Daily Grok Tips"
+      },
+      "collector_record": {
+        "candidate_id": "x-dailygroktips-x-briefing-prompts",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-av1dlive-home-printer-cleanup",
+        "url": "https://x.com/Av1dlive/status/2112152148045943113",
+        "title": "家用打印机配置提示词：先查手册、备份再调整",
+        "author": "Avid",
+        "author_url": "https://x.com/Av1dlive",
+        "lang": "en",
+        "published": "2026-10-19",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "先根据设备型号查官方手册、备份现有设置，再经确认配置局域网打印与扫描到文件夹；设备和本机权限需要单独确认。",
+        "summary_en": "Identify the printer and official manual, back up settings, then seek approval for network printing and scan-to-folder changes. Device and local-computer access require separate approval.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读正文与作者首条回复中的完整提示词；演示视频未观看。需 Bot 能访问与打印机同一局域网的电脑（本机执行权限），存在本机与内网设备控制风险；关闭固件更新有安全取舍。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the post and the full prompt in the author's reply; video not watched. Needs local-computer access on the printer's network, which carries local and LAN control risk; disabling firmware updates is a security trade-off. Not reproduced.",
+        "tags": [
+          "prompt",
+          "home",
+          "local-computer"
+        ],
+        "apps": [],
+        "title_en": "A printer-setup prompt with manual checks and backups",
+        "author_en": "Avid"
+      },
+      "collector_record": {
+        "candidate_id": "x-av1dlive-home-printer-cleanup",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-rodrigouroz-bot-to-bot-mailbox-template",
+        "url": "https://x.com/rodrigouroz/status/2112186437424631873",
+        "title": "跨账号 Bot 便条设计：独立 Webhook 与逐条确认",
+        "author": "Rodrigo Uroz",
+        "author_url": "https://x.com/rodrigouroz",
+        "lang": "en",
+        "published": "2026-10-19",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "summary_zh": "每个联系人使用独立 Webhook 和密钥传递便条；来信先展示给主人，不直接变成发信、花钱或执行任务的授权。",
+        "summary_en": "Per-contact webhooks and keys deliver notes to another person’s bot. Each note is shown to its owner and does not itself authorize sending, spending or task execution.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读线程首帖与 2 条后续；模板 https://x.ai/bot/gWdJNp-mXfCjaafn1N7ss 未打开，模板内容与权限未核；跨账号 Webhook 通信的安全性需自行评估。未复现。 仅按通信设计文章送审，不声明模板可用或跨账号鉴权安全性已验证。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the thread root and 2 follow-ups; the template was not opened, so contents and permissions are unchecked. Cross-account webhook messaging needs your own security review. Not reproduced.",
+        "tags": [
+          "template",
+          "webhook",
+          "multi-bot"
+        ],
+        "apps": [],
+        "title_en": "A cross-account bot mailbox with per-contact approval",
+        "author_en": "Rodrigo Uroz"
+      },
+      "collector_record": {
+        "candidate_id": "x-rodrigouroz-bot-to-bot-mailbox-template",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "根据铁柱原作读取交接建议收录这篇文章；Codex复核摘要、分类与去重，尚待用户确认。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "id": "x-michael-fenech-meeting-scheduler-prompt",
+        "url": "https://x.com/Michael_Fenech_/status/2109232290794520821",
+        "title": "会议助理提示词：核对时区、日历与可代发范围",
+        "author": "Michael | AI + Agents",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "lang": "en",
+        "published": "2026-10-11",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "用 Bot 邮箱和收信例程协调会议，先核对时区与实时日历，再给出候选时段；明确哪些排期邮件可代发，其他动作先询问。",
+        "summary_en": "A bot-inbox routine checks time zones and the live calendar before proposing meeting slots, with explicit limits on scheduling emails it may send and actions that need approval.",
+        "verification_note_zh": "铁柱读取原帖；Codex仅复核交接与去重，未独立读取X。铁柱已读原帖长文全文提示词；配图未查看。作者 2026-10-19 引用帖（2112039034398863636）为同作者重复分享，已并入本条。允许 Bot 自动代发排期邮件属作者自定授权范围，需自行决定；未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication, without independently reading X or testing the workflow. The collector read the full prompt in the original long post; image not viewed. The author's 2026-10-19 quote repost is merged here. Letting the bot send scheduling emails is the author's own choice. Not reproduced.",
+        "tags": [
+          "prompt",
+          "email",
+          "calendar",
+          "routine"
+        ],
+        "apps": [
+          "Email",
+          "Calendar"
+        ],
+        "title_en": "A meeting-scheduler prompt with time-zone and sending limits",
+        "author_en": "Michael | AI + Agents"
+      },
+      "collector_record": {
+        "candidate_id": "x-michael-fenech-meeting-scheduler-prompt",
+        "decision": "publish",
+        "source_reader": "铁柱",
+        "codex_independently_read_x": false
+      },
+      "merged_reposts": [
+        "https://x.com/Michael_Fenech_/status/2112039034398863636"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取原始来源，建议按下述核验范围收录；等待用户审核。",
+      "relevance": "明确涉及xAI/Cursor Grok Bot或作者为其提供的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "xai-grok-bot-team-bots",
+        "url": "https://docs.x.ai/grok-bot/team-bots",
+        "title": "官方 Team Bots：团队共享设置与 Slack 接入",
+        "title_en": "Team Bots: shared setup and Slack access",
+        "author": "xAI / Cursor",
+        "author_en": "xAI / Cursor",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "bots"
+        ],
+        "apps": [
+          "Slack"
+        ],
+        "summary_zh": "官方说明团队 Bot 的创建、共享 Skill 与插件、团队记忆和私人对话的区别，以及接入 Slack 的流程；共享会话使用个人连接器时有单独授权。",
+        "summary_en": "The official guide covers Team Bot setup, shared skills and plugins, team memory, private chats and Slack access, including consent for personal connectors in shared conversations.",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "status": "alive",
+        "evidence": "official",
+        "verification_note_zh": "独立读取官方全文，页面标注10月16日更新；核对个人会话、共享Slack会话、OAuth与固定凭据的区别。未创建或发布Team Bot，未连接Slack或更改权限。",
+        "verification_note_en": "Read the official page, updated October 16, including chat, credential and connector distinctions. No Team Bot was created or published; no Slack connection or permission change was made."
+      },
+      "source_updated_at": "2026-10-16"
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取原始来源，建议按下述核验范围收录；等待用户审核。",
+      "relevance": "明确涉及xAI/Cursor Grok Bot或作者为其提供的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "xai-x-subscription-grok-bot",
+        "url": "https://docs.x.ai/x-subscription/grok-bot",
+        "title": "官方统一订阅说明：Grok Bot 资格与共享用量",
+        "title_en": "Grok Bot access and usage under The X Subscription",
+        "author": "xAI",
+        "author_en": "xAI",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [
+          "Cursor",
+          "Grok",
+          "X"
+        ],
+        "summary_zh": "区分原有订阅与统一订阅下的 Grok Bot 资格、周用量来源及查看入口，并说明合并的不可撤销性；应按自己当前账户状态核对。",
+        "summary_en": "The official page distinguishes existing subscriptions from unified-plan access, shared weekly usage and dashboard locations, and notes that completed unification is irreversible.",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "status": "alive",
+        "evidence": "official",
+        "verification_note_zh": "独立读取官方全文，页面标注10月12日更新；本条不提供价格承诺或切换建议。未进入账户结账、合并订阅、取消服务或购买任何内容。",
+        "verification_note_en": "Read the official page, updated October 12. No price promise or switching recommendation is made; no account checkout, subscription unification, cancellation or purchase was performed."
+      },
+      "source_updated_at": "2026-10-12"
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取原始来源，建议按下述核验范围收录；等待用户审核。",
+      "relevance": "明确涉及xAI/Cursor Grok Bot或作者为其提供的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-ofershap-slack-voice",
+        "url": "https://github.com/ofershap/grok-bot-skills/blob/main/skills/slack-voice/SKILL.md",
+        "title": "Slack 语气草稿 Skill：按上下文起草，确认后发送",
+        "title_en": "Slack voice: context-aware drafts with an explicit send gate",
+        "author": "Ofer Shapira",
+        "author_en": "Ofer Shapira",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Slack"
+        ],
+        "summary_zh": "一份社区 Skill 用上下文与用户改稿学习语气，先把信息保存为对应频道或线程的草稿，获得明确发送指令后再发出；依赖助手已有的 Slack 集成。",
+        "summary_en": "A community skill adapts drafts to context and owner rewrites, keeps drafts in the intended Slack destination, and waits for an explicit send instruction. It depends on the assistant’s Slack integration.",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读取README及slack-voice/SKILL.md全文；README明示Grok技能加载器未实测。仅把它作为可阅读的社区指令模板，不保证自动加载或原生草稿支持；未安装、读取Slack或发消息。",
+        "verification_note_en": "Read the README and full slack-voice file. The README says Grok loaders are untested. This is a readable instruction template, with no loading or native-draft guarantee. No install or Slack access occurred."
+      },
+      "related_source_urls": [
+        "https://github.com/ofershap/grok-bot-skills"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取原始来源，建议按下述核验范围收录；等待用户审核。",
+      "relevance": "明确涉及xAI/Cursor Grok Bot或作者为其提供的Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "leosplain-notion-state-handoff",
+        "url": "https://leosplain.com/grok-bot-multi-agent-routine-workflow-guide/",
+        "title": "Notion 状态交接：分工、空结果停止与待审草稿",
+        "title_en": "Notion state handoffs with empty-run exits and draft review",
+        "author": "Leo / Leosplain",
+        "author_en": "Leo / Leosplain",
+        "source": "blog",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Notion"
+        ],
+        "summary_zh": "用 Notion 状态与各 Bot 专属字段交接核对、拟稿和人工验收；Routine 遇到零条待办就停止，并限制单批数量。文章附 Skill 与例程示例。",
+        "summary_en": "A Notion status field and role-specific columns coordinate checking, drafting and human review. Routines stop on empty results and cap batch sizes, with example skills and prompts.",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读全文及两个模板，10月18日发布、19日修订。只推荐状态交接与空结果停止思路，不采纳“零冲突”保证；作者实测非本站复现。Notion授权入口混用等说法未逐项核实，截图未查看，未连接账户。",
+        "verification_note_en": "Read the article and two templates, published October 18 and revised October 19. State handoffs are not a locking guarantee. Author testing is not our reproduction; connector/UI claims and images were not verified.",
+        "published": "2026-10-18"
+      },
+      "source_updated_at": "2026-10-19",
+      "distinct_from": "leosplain-grok-bot-notion-store"
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取原始来源，建议按下述核验范围收录；等待用户审核。",
+      "relevance": "明确涉及xAI/Cursor Grok Bot或作者为其提供的Skill。",
+      "verified_via": "video-description",
+      "resource": {
+        "id": "youtube-komputer-mechanic-five-bot-setup",
+        "url": "https://www.youtube.com/watch?v=ZNFZPY1hlxE",
+        "title": "五岗位团队教程简介：研究、开发、写作与日常事务",
+        "title_en": "Five-role Grok Bot team tutorial, description reviewed",
+        "author": "Komputer Mechanic",
+        "author_en": "Komputer Mechanic",
+        "source": "video",
+        "lang": "en",
+        "categories": [
+          "start",
+          "bots",
+          "recipes"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Notion",
+          "AgentMail"
+        ],
+        "summary_zh": "作者的视频说明介绍研究、开发、写作、日常事务与协调五种角色，搭配 Gmail、日历、Notion 和 AgentMail，并设置定时简报与草稿发送边界。",
+        "summary_en": "The video description outlines research, coding, writing, operations and coordinator roles, with Gmail, Calendar, Notion, AgentMail, scheduled briefs and draft-only sending rules.",
+        "added": "2026-10-21",
+        "checked_at": "2026-10-20",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "网页工具未取回视频页后，经普通HTTPS读取作者完整说明与元数据；2026-08-28发布，是本轮发现的旧教程。未观看视频、打开提示词包或复现。说明中每Bot独占电脑/邮箱、平台和套餐等旧说法不采纳。",
+        "verification_note_en": "Read the full author description and metadata via ordinary HTTPS after a web-tool failure. An August 28 discovery, not a new release. Video and prompt pack were not reviewed; old platform/plan claims are not adopted.",
+        "published": "2026-08-28"
+      },
+      "discovery_window": "incidental-older-source-not-today-release"
+    }
+  ]
+}
