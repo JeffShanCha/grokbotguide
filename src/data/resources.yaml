@@ -1,4 +1,422 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: composio-grok-bot-multiple-outlook
+  url: https://composio.dev/content/how-to-connect-multiple-outlook-accounts-to-grok-bot
+  title: 多 Outlook 账户：用连接别名选择邮箱与日历
+  title_en: Select Outlook mail and calendar accounts by connection alias
+  author: Varshisth / Composio
+  author_en: Varshisth / Composio
+  source: blog
+  lang: en
+  categories:
+    - advanced
+    - recipes
+  apps:
+    - Outlook
+    - Microsoft 365
+    - Composio
+  summary_zh: 为不同 Microsoft 账户分别授权并命名连接，请求中指定账户别名；先核对别名背后的真实邮箱，再处理草稿和日历，工作账户可能需要管理员批准。
+  summary_en: Authorize and label each Microsoft connection, name the account in requests, and verify the mailbox behind each alias before using drafts or calendars. Work accounts may require administrator approval.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读取供应商教程，页面署名Varshisth、日期10月8日；商业来源。未安装插件、授权Microsoft账户、读取邮箱或调用API，“两分钟”、共享邮箱及兼容性未实测。
+  verification_note_en: Read the vendor’s October 8 guide by Varshisth. Commercial source; no plugin install, Microsoft authorization, mailbox access or API call. Setup time, shared mailboxes and compatibility were not tested.
+  published: 2026-10-08
+  platform: web
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: github-agent-skills-lab-grok-bot-delegation
+  url: https://github.com/agent-skills-lab/grok-bot-delegation/blob/master/SKILL.md
+  title: 任务委派 Skill：五要素简报、例程与验收
+  title_en: A delegation skill for task briefs, routines and output review
+  author: agent-skills-lab contributors
+  author_en: agent-skills-lab contributors
+  source: github
+  lang: en
+  categories:
+    - templates
+    - bots
+    - advanced
+  apps:
+    - Salesforce
+    - Slack
+    - LinkedIn
+    - Gmail
+  summary_zh: 把目标、工具、上下文、边界和完成标准写进任务简报，配合角色、保存 Skill、例程与人工验收模板；应用名称为文件中的任务示例。
+  summary_en: Use goal, tools, context, boundaries and acceptance criteria in task briefs, with role, skill, routine and review templates. Named apps are examples in the files, not tested integrations.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读取SKILL.md的角色、简报、例程及安全部分和配套prompt-templates.md。只推荐模板方法；产品分流、用量与旧界面说法未作为当前结论。未安装、加载或连接任何示例应用。
+  verification_note_en: Read the role, brief, routine and safety sections plus prompt-templates.md. Only template methods are recommended; old UI, usage and product-triage claims are not adopted. No installation or app connection.
+  platform: github
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: github-rthomas24-grok-bot-mcp
+  url: https://github.com/rthomas24/grok-bot-mcp
+  title: 桌面 MCP 桥接：从编码助手协作 Grok Bot
+  title_en: A desktop MCP bridge between coding agents and Grok Bot
+  author: Ryan Thomas
+  author_en: Ryan Thomas
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - resources
+  apps:
+    - Claude Code
+    - Codex
+    - Cursor
+    - VS Code
+  summary_zh: 作者提供 macOS 桌面 MCP，通过辅助功能界面列出 Bot、读取会话、发消息和处理选项，连接编码助手与 Grok Bot；项目另附协作 Skill。
+  summary_en: The author’s macOS MCP bridge uses the accessibility UI to list bots, read chats, send messages and handle choices from coding agents, with an accompanying collaboration skill.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读取完整README，区分作者宣称的功能与已验证范围。未审计实现源码、授予辅助功能权限、安装MCP或运行doctor，兼容性与“无网络/遥测”等实现声明均未实测。
+  verification_note_en: Read the full README. No source-code audit, accessibility grant, MCP install or doctor run. Compatibility and implementation claims such as network or telemetry behavior were not tested.
+  platform: github
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: github-zeropointrepo-awesome-grok-bot
+  url: https://github.com/zeropointrepo/awesome-grok-bot
+  title: 社区工具目录：Skill、插件、MCP 与接入方式
+  title_en: A community directory of skills, plugins, MCP and extension methods
+  author: ZeroPointRepo maintainers
+  author_en: ZeroPointRepo maintainers
+  source: github
+  lang: en
+  categories:
+    - resources
+  apps: []
+  summary_zh: 社区目录按 Skill、插件与 MCP 等机制整理项目，记录扩展格式和稳定性标签；适合作为原仓库线索，目录标签不等于安全审计或本站验证。
+  summary_en: A community directory groups skills, plugins and MCP projects with format and stability notes. Use it to find originals; directory labels do not constitute a security audit or site verification.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 从dimpurr Fork追溯上游原仓库，读取README扩展说明、目录与风险说明，合并为一项。未逐个核验所列项目，不采纳旧价格、平台或“全部已验证”的概括；未安装目录中的项目。
+  verification_note_en: Traced the discovered fork to its upstream and read extension, catalog and risk sections. Listed projects were not individually checked. Old pricing/platform claims and blanket verification claims are not adopted.
+  platform: github
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: linuxdo-xingyingyuzhui-mcphub-local-mac
+  url: https://linux.do/t/topic/3046980
+  title: 云端 Bot 调用本地创作工具：MCPHub 与 SSH 隧道
+  title_en: Cloud bots use local creative tools through MCPHub and SSH
+  author: xingyingyuzhui
+  author_en: xingyingyuzhui
+  source: forum
+  lang: zh
+  categories:
+    - advanced
+    - recipes
+  apps:
+    - Claude Code
+    - Oracle Cloud
+    - MCPHub
+    - Blender
+    - ComfyUI
+    - Home Assistant
+    - Android
+  summary_zh: 作者把任务入口、MCP 中转、编译和本地创作软件分开：经 Oracle 上的 MCPHub 与 SSH 隧道调用 Mac 的 Blender、ComfyUI 和模拟器，并交接文件结果。
+  summary_en: An author separates bot orchestration, an Oracle-hosted MCPHub, compilation and local creative software, using SSH tunnels to reach Mac Blender, ComfyUI and emulators and hand off artifacts.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读取10月19日原帖的架构、工具调用与文件交接正文；图片和外链实现未审查，未安装远控/MCP或复现。环境、模型路由、注册经历及“避免封号”等说法不作为通用结论。
+  verification_note_en: Read the October 19 original’s architecture, tool and artifact-handoff text. Images and linked implementations were not audited; no remote-control/MCP installation or reproduction. Account and model claims are not general guidance.
+  published: 2026-10-19
+  platform: linuxdo
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-cradrrat-first-bot-walkthrough
+  url: https://x.com/cradrrat/status/2112670551919722906
+  title: 首项任务演练：资料标签、研究笔记与逐项引用
+  author: cradrrat
+  author_url: https://x.com/cradrrat
+  lang: en
+  published: 2026-10-20
+  categories:
+    - start
+  summary_zh: 任务先写清结果、资料、边界、返回内容和停止条件；用资料标签追踪引用，先核对研究笔记，再区分证据与建议并提出具体修改。
+  summary_en: Brief the outcome, sources, limits, deliverable and stop point; label sources for citations, review research notes before the result, and distinguish evidence from proposed next steps.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文正文；配套的 4 分钟教学视频未观看。作者说明内容基于官方入门资料，示例客户资料为虚构，视频未展示修改后的生成结果。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the article text; the 4-minute video was not watched. Based on official getting-started material with fictional sample data. Not reproduced.
+  tags:
+    - beginner
+    - prompting
+    - citations
+  apps: []
+  title_en: A first-task walkthrough with source labels and review
+  author_en: cradrrat
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-ericosiu-single-grain-10-bots
+  url: https://x.com/ericosiu/status/2112242396033417348
+  title: 营销团队十种 Bot 岗位：协调、会前准备与草稿
+  author: ericosiu
+  author_url: https://x.com/ericosiu
+  lang: en
+  published: 2026-10-19
+  categories:
+    - bots
+    - recipes
+  summary_zh: Single Grain 负责人介绍协调、Bot 改进、会前准备、外联草稿、选题与短视频等岗位及边界；是团队用例分享，未公开全部提示词或技能。
+  summary_en: Single Grain’s owner outlines coordination, bot improvement, pre-call preparation, outreach drafts, topics and video roles. This is an author-reported case, without the full underlying prompts or skills.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读帖子全文；配图未查看。作者为该公司负责人，内容为自家团队实践自述，各 Bot 的提示词与技能未公开。@wohsj110 的中文导读并入本条。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the full post; image not viewed. Author-reported practice at his own company; prompts and skills not shared. A Chinese recap is merged here. Not reproduced.
+  tags:
+    - team
+    - marketing
+    - seo
+    - outreach
+  apps: []
+  title_en: "Ten bot roles in an agency: coordination, preparation and drafts"
+  author_en: ericosiu
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-jpegwhisperer-24-7-agent-team
+  url: https://x.com/JPEGWhisperer/status/2112354237875208201
+  title: 团队上线清单：角色、持久文件与审批
+  author: JPEG Whisperer
+  author_url: https://x.com/JPEGWhisperer
+  lang: en
+  published: 2026-10-20
+  categories:
+    - advanced
+    - bots
+  summary_zh: 先约定协调者和专才的职责、工作文件位置，再将已跑通任务保存为 Skill；Routine 写明时间、输入、产物、审批与失败处理。
+  summary_en: Define coordinator and specialist roles and working-file locations, validate tasks before saving skills, and specify routine timing, inputs, outputs, approvals and failure handling.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文及接口返回的 3 个代码块（Routine 示例、审批边界、/workspace 目录结构）；配图未查看。文中功能限额（50 个 Routine、保留 20 条运行记录等）为作者引用文档的说法，随版本可能变化。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the full X article and its 3 code blocks; images not viewed. Feature limits quoted from docs may change. Not reproduced.
+  tags:
+    - team
+    - routine
+    - skill
+    - approval
+    - workspace
+  apps: []
+  title_en: A team rollout checklist for roles, files and approvals
+  author_en: JPEG Whisperer
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-krajan-303-bot-backup-procedure
+  url: https://x.com/KraJan_303/status/2112483571633971573
+  title: 备份恢复流程：外部副本、校验与重建演练
+  author: Janusz
+  author_url: https://x.com/KraJan_303
+  lang: en
+  published: 2026-10-20
+  categories:
+    - advanced
+    - recipes
+  summary_zh: 列出 Bot 配置、例程提示词、Skill 与经检查的工作文件，备份到账号之外；记录凭据来源而不保存值，定期校验副本并演练重建。
+  summary_en: Inventory bot settings, routine prompts, skills and checked files, keep copies outside the account, record credential sources without values, and periodically validate backups and rehearse rebuilding.
+  verification_note_zh: 铁柱读取长帖；Codex复核交接并对照昨日待审Jay Graves备份文章。铁柱所称“已收录模板”实际尚未导入。本条为不同作者的手工导出与恢复检查流程；丢失9个Bot及其原因仅为作者自述。未独立读取X或复现。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff against yesterday’s still-pending Jay Graves template. This is a separate manual export and restore-check article. The loss and cause are author reports; not reproduced.
+  tags:
+    - backup
+    - routine
+    - skill
+    - memory
+  apps:
+    - GitHub
+  title_en: A backup process with external copies and restore checks
+  author_en: Janusz
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-maestrooth-one-person-company
+  url: https://x.com/maestrooth/status/2111505949131227180
+  title: 一人公司十二步：周产出、试跑与定期复盘
+  author: maestro
+  author_url: https://x.com/maestrooth
+  lang: en
+  published: 2026-10-17
+  categories:
+    - advanced
+    - bots
+    - recipes
+  summary_zh: 从可计数周产出安排最小角色组合，试跑后保存 Skill；无人值守例程只产草稿或报告，使用窄触发条件，并按周期审查职责与返工。
+  summary_en: Map measurable weekly outcomes to a minimal roster, validate skills, keep unattended routines at drafts or reports, narrow event triggers, and periodically review roles and rework.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文及接口返回的 12 个提示词代码块；配图未查看。文中有作者 Substack 推广链接，未打开。约 10 分钟审批过期等说法为作者对文档的转述，随版本可能变化。与已收录 KanikaBK 一人公司长文主题相近但内容独立。作者 2026-10-20 的引用转发帖已并入本条。未复现。 只采纳任务设计思路，不把无人值守解释为关闭审批；文中限额与过期时间未独立核实。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the full X article and all 12 prompt code blocks; images not viewed; Substack link not opened. Similar theme to the KanikaBK entry but independent. Not reproduced.
+  tags:
+    - one-person-company
+    - routine
+    - skill
+    - approval
+    - team
+  apps: []
+  title_en: Twelve steps from weekly outcomes to a reviewed bot team
+  author_en: maestro
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-richomiga-staff-grok-bot
+  url: https://x.com/richomiga/status/2112405098928472108
+  title: 把 Bot 当员工协作的十一条实践
+  author: Fd
+  author_url: https://x.com/richomiga
+  lang: en
+  published: 2026-10-20
+  categories:
+    - start
+    - advanced
+    - recipes
+  summary_zh: 作者围绕单一职责、长期偏好、结果简报、来源核对及外发审批组织团队，并提供首周起步计划；账号增长效果仅为作者自述。
+  summary_en: An author organizes bots around focused roles, standing preferences, outcome briefs, source checks and sending approvals, with a first-week plan. Growth outcomes remain author reports.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读 X 长文全文（约 1.7 万字符）；配图未查看。作者为自家 App（TypeAide）开发者，文中提到增长 Bot 参与撰写；账号审计中 13 倍触达等数据为作者单账号小样本自述。设置路径为作者撰文时的界面。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the full X article; images not viewed. Author builds TypeAide and says a bot helped write it; the 13x reach figure is a small single-account sample. Not reproduced.
+  tags:
+    - team
+    - best-practices
+    - approval
+    - routine
+    - skill
+  apps:
+    - X
+    - Gmail
+    - GitHub
+  title_en: Eleven practices for working with a bot team
+  author_en: Fd
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-thereal-bcm-bot-inbox-forwarding
+  url: https://x.com/TheReal_BCM/status/2112514178871345362
+  title: Gmail 转发到 Bot 邮箱：分拣与人工回复边界
+  author: BlueCollarMillionaire
+  author_url: https://x.com/TheReal_BCM
+  lang: en
+  published: 2026-10-20
+  categories:
+    - recipes
+  summary_zh: 作者将 Gmail 来信转发给 Bot，仅汇报需要决定或回复的邮件，不自动回信，并用测试邮件检查流程；实际转发范围仍需自行界定。
+  summary_en: An author forwards Gmail to the bot inbox, surfaces mail needing decisions without automatic replies, and checks the flow with a test email. The forwarding scope still needs explicit review.
+  verification_note_zh: 铁柱读取原帖，Codex仅复核交接与去重，未独立读取X。铁柱已读帖子全文；配图（回执截图）未查看。转发全部邮件会把邮件内容交给 Bot 处理，隐私范围需自行权衡。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication without independently reading X or reproducing the workflow. The collector read the full post; receipt screenshot not viewed. Forwarding all mail shares its contents with the Bot. Not reproduced.
+  tags:
+    - email
+    - gmail
+    - routine
+    - inbox
+  apps:
+    - Gmail
+  title_en: Gmail forwarding to a bot inbox with reply limits
+  author_en: BlueCollarMillionaire
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  id: x-yuzucmz-iphone-back-tap-voice
+  url: https://x.com/YuzuCMZ/status/2112699776861159803
+  title: iPhone 轻点背面：用快捷指令启动 Bot 语音
+  author: 草莓柚子✨Yuzu
+  author_url: https://x.com/YuzuCMZ
+  lang: zh
+  published: 2026-10-21
+  categories:
+    - start
+  summary_zh: 作者将快捷指令中的 Bot 语音动作绑定到 iPhone 轻点背面，也介绍了操作按钮入口；具体动作名称、版本与设备条件需要在实际手机上确认。
+  summary_en: An author binds a bot voice action in Shortcuts to iPhone Back Tap and describes an Action Button option. Action names, app versions and device support require checking on the actual phone.
+  verification_note_zh: 铁柱读取原帖正文，Codex复核交接，未独立读X。配图未看，手机动作、1.16门槛与设备范围未实测，未独立核验所称官方更新；不将作者版本或设备说法写成通用要求。相同操作按钮转述合并到原帖。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff, not X itself. Images, shortcut actions, version and device requirements were not independently checked. Similar Action Button reposts are merged; no reproduction.
+  tags:
+    - ios
+    - voice
+    - shortcuts
+  apps:
+    - Shortcuts
+  title_en: Start bot voice chat from an iPhone Back Tap shortcut
+  author_en: "@YuzuCMZ"
+  platform: x
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: xai-grok-bot-mobile
+  url: https://docs.x.ai/grok-bot/mobile
+  title: 官方移动端指南：会话、草稿与云电脑接管
+  title_en: "Mobile guide: chats, drafts and cloud-computer handoffs"
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  lang: en
+  categories:
+    - start
+    - advanced
+  apps:
+    - Slack
+  summary_zh: 官方说明手机端同步会话、语音、分享文件、查看消息草稿与接管云电脑；例程指令编辑和测试等操作仍有桌面端边界。
+  summary_en: The official guide covers synced mobile chats, voice, sharing files, reviewing message drafts and computer handoffs, while distinguishing routine editing and testing that still need desktop.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: official
+  verification_note_zh: 独立读取官方全文，页面标注10月17日更新；未在手机端试用、编辑例程、连接Slack或更改权限。没有据此确认社区帖中的快捷指令动作与版本要求。
+  verification_note_en: Read the official page, updated October 17. No mobile trial, routine edit, Slack connection or permission change. This does not verify community shortcut actions or version claims.
+  platform: official
+  collection_batch: 2026-10-21-daily-0900-approved
+- id: youtube-nate-herk-build-sell-course
+  url: https://youtube.com/watch?v=4hKJ9X6rGFo
+  title: 团队搭建课程简介：上下文、连接、能力与例程
+  title_en: A bot-team course organized around context, connections, capabilities and cadence
+  author: Nate Herk | AI Automation
+  author_en: Nate Herk | AI Automation
+  source: video
+  lang: en
+  categories:
+    - start
+    - bots
+    - recipes
+  apps:
+    - ClickUp
+    - Slack
+    - Composio
+  summary_zh: 作者课程说明用四层框架搭建团队，涵盖邮件、ClickUp 任务记录、会议转写、Slack 触发例程与模板分享；本轮只核对完整说明及章节。
+  summary_en: The author’s course description uses four layers to cover email, ClickUp work logs, transcripts, Slack-triggered routines and template sharing. Review is limited to the full description and chapters.
+  added: 2026-10-21
+  checked_at: 2026-10-21
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 从The Aigentic导读追溯原视频，普通HTTPS读取作者完整说明与元数据，未观看视频或购买课程。元数据时间换算北京时间为8月31日，是本轮发现的旧教程；变现与效果说法不采纳。
+  verification_note_en: Traced the derivative guide to the original video and read the full author description and metadata via HTTPS. Not watched or purchased. Published August 31 in Beijing time; an older discovery, without outcome claims.
+  published: 2026-08-31
+  platform: youtube
+  collection_batch: 2026-10-21-daily-0900-approved
 - id: getgptplus-grok-bot-content-relay
   url: https://getgptplus.app/blog/grok-bot-guide
   title: 中文内容接力案例：选题、写稿、审稿与人工确认
