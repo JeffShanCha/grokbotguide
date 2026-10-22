@@ -1,0 +1,613 @@
+{
+  "id": "2026-10-22-x-incremental-approved",
+  "collected_at": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-22-x-incremental-review",
+  "source_review_sha256": "d0eff5492b20b3d799faa647abc41e882f5e2da09fdb2d581287d000ddc29c60",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-22",
+    "approved_ids": [
+      "x-cgnot996-beginner-learning-path",
+      "x-manaengineer-cloudflare-email-forwarding",
+      "x-xueshiqiao-route-traffic-local",
+      "x-robotshelp-warm-intro-finder",
+      "x-its-brill-claude-code-two-way",
+      "x-grokbotradar-first-useful-hour",
+      "x-takerovitch-routine-schedule-audit",
+      "x-wizzifnab-two-account-fitness-dashboard",
+      "x-bstodd-subscription-tracker",
+      "x-socalfsd-earnings-call-page",
+      "x-grokbotuses-x-competitor-lead-watch",
+      "x-victorzh-tesla-grok-to-bot",
+      "x-pluvio9yte-four-bot-setup"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月22日这两批建议收录的24条，全部导入并发布。",
+    "scope_zh": "本文件仅含10月22日x-incremental审核批次建议收录的13条；与当天另一获批批次一起共24条。待核验、重复、排除项和其他新批次均不在本次授权范围内。"
+  },
+  "baseline": {
+    "head": "d69ed42fa65889c59896432c8be3d949e2ec1674",
+    "catalog_count": 182,
+    "resources_sha256": "ae4a32d7a645c0e7f022d5f75fcfe9024b7f63ccd4741caf5f74286dcf44a136"
+  },
+  "editorial_note_zh": "逐字保留已审阅的资源标题、双语摘要、分类、应用、署名、日期、来源和核验限制。候选reason中的等待审核是送审时记录；本文件approval记录本轮明确授权。原始审核文件和预览保持原样，不随本批提交。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-cgnot996-beginner-learning-path",
+        "url": "https://x.com/cgnot996/status/2112761781080965416",
+        "title": "中文学习路线：单任务、磨合、触发器与团队",
+        "author": "铁柱AGI",
+        "author_url": "https://x.com/cgnot996",
+        "lang": "zh",
+        "published": "2026-10-21",
+        "categories": [
+          "start",
+          "resources"
+        ],
+        "summary_zh": "作者按跑通单项任务、磨合调整、固定触发器和组建团队组织学习路线，并介绍自建中文学习站、案例与模板入口。",
+        "summary_en": "An author presents four stages: validate one task, refine the workflow, add triggers and build a team, alongside an unofficial Chinese learning site and template directory.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读 X 长文全文（无代码块）；学习站本身、开源仓库与 9 个模板均未打开。利益相关：学习站与模板为作者自建自推。订阅档位说法以发文日期为准。未复现。 只收录这篇学习路线文章；学习站章节和模板数量是作者介绍，未逐项核对，不采纳旧套餐结论。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full X article; the site, repo and templates were not opened. Author promotes their own site. Not reproduced. This entry covers the article, not verified site chapters or templates. Site counts and old plan claims are not adopted.",
+        "tags": [
+          "learning-path",
+          "beginner",
+          "templates",
+          "chinese"
+        ],
+        "apps": [],
+        "title_en": "A Chinese learning path from one task to a bot team",
+        "author_en": "@cgnot996"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-manaengineer-cloudflare-email-forwarding",
+        "url": "https://x.com/ManaEngineer/status/2112481479158587884",
+        "title": "Cloudflare 邮件转发：按域名收件地址分派 Bot",
+        "author": "ManaEngineer",
+        "author_url": "https://x.com/ManaEngineer",
+        "lang": "en",
+        "published": "2026-10-20",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "summary_zh": "作者建议把自有域名的转发地址接到 Bot 邮箱，再按原收件地址区分客服与私人来信；转发配置和对外回复需要各自明确授权。",
+        "summary_en": "The author proposes forwarding domain aliases into a bot inbox and routing support and personal mail by recipient address, with separate authority for setup and external replies.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读原帖全文（短帖）。vikingmute 的中文转述（含按邮件类型自动回复、生成工单的设想）已并入本条。让 Bot 操作 Cloudflare 需授权域名账户，自动回复外部邮件需注意审批边界。未复现。 不把“免费”当现行计费承诺，也未核验邮箱头保留与分流效果。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full short post; a Chinese paraphrase by vikingmute is merged here. Requires granting domain account access. Not reproduced. Current pricing, preserved headers and actual routing behavior were not verified.",
+        "tags": [
+          "email",
+          "cloudflare",
+          "routing",
+          "domain"
+        ],
+        "apps": [
+          "Cloudflare",
+          "Email"
+        ],
+        "title_en": "Route domain email to different bots with Cloudflare forwarding",
+        "author_en": "ManaEngineer"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      },
+      "editorial_distinction_zh": "不同于已收录Julien/Shipmail的MCP邮箱方案，本条是另一作者的Cloudflare转发地址设计。vikingmute转述由铁柱并入原作。"
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-xueshiqiao-route-traffic-local",
+        "url": "https://x.com/XueshiQiao/status/2112866936229183589",
+        "title": "本机网络路由选项：云电脑连通性说明",
+        "author": "Xueshi Qiao",
+        "author_url": "https://x.com/XueshiQiao",
+        "lang": "zh",
+        "published": "2026-10-21",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "summary_zh": "作者介绍云电脑连通性问题中的本机网络路由选项，说明访问可以经由本机出口；设置名称、位置和适用条件需按当前版本核对。",
+        "summary_en": "The author describes routing cloud-computer traffic through the local machine for connectivity issues; the option name, location and applicability need current-version checks.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子正文；配图（设置截图）未查看。该选项名称与位置为作者所述，随版本可能变化；流量经本机出口意味着 Bot 的访问会以你的本地网络身份发出。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the post text; screenshot not viewed. Setting name per author, may change by version. Not reproduced.",
+        "tags": [
+          "network",
+          "settings",
+          "browser",
+          "troubleshooting"
+        ],
+        "apps": [],
+        "title_en": "A local-network routing option for the cloud computer",
+        "author_en": "Xueshi Qiao"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-robotshelp-warm-intro-finder",
+        "url": "https://x.com/robotshelp/status/2112872408000364994",
+        "title": "引荐提示词：先查已有关系，再起草请求",
+        "author": "Pete (robotshelp)",
+        "author_url": "https://x.com/robotshelp",
+        "lang": "en",
+        "published": "2026-10-21",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "外联前先从已授权 CRM 与邮箱查找目标公司的已有关系，按关系远近排序，为合适联系人起草引荐请求，并明确不发送。",
+        "summary_en": "Before outreach, search authorized CRM and inbox connections for existing relationships at a target company, rank them and draft an introduction request without sending.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含完整提示词；配图未查看。需连接 CRM 与邮箱，提示词已要求只起草不发送。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post including the prompt; image not viewed. Requires CRM and email connections. Not reproduced.",
+        "tags": [
+          "sales",
+          "crm",
+          "outreach",
+          "prompt"
+        ],
+        "apps": [
+          "CRM",
+          "Email"
+        ],
+        "title_en": "Find existing relationships before drafting an introduction request",
+        "author_en": "Pete (robotshelp)"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-its-brill-claude-code-two-way",
+        "url": "https://x.com/its_brill_/status/2112991511986266123",
+        "title": "双向协作提示词：Claude Code、MCP 与 Webhook",
+        "author": "its_brill_",
+        "author_url": "https://x.com/its_brill_",
+        "lang": "en",
+        "published": "2026-10-21",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "作者用本机 MCP、Webhook Routine 和 Tailscale Funnel 设计 Claude Code 与 Bot 双向消息，并附搭建提示词；收到的回复只作信息，不自动视为指令。",
+        "summary_en": "An author combines local MCP, routine webhooks and Tailscale Funnel for two-way Claude Code handoffs, with a setup prompt and a rule that received replies are information, not instructions.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文（含搭建提示词）；配图（对话查看页）未查看。风险：把本机服务经 Tailscale Funnel 暴露到公网、需管理令牌与 webhook 密钥；作者提示把 Bot 回复当信息而非指令。未复现。 铁柱提到的“Claude Code四次API调用”旧hold在本地可用批次未找到原件，未声称完成该旧文语义比对；本条按独立原帖送审。公网暴露、鉴权与本机接口均未审计。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; image not viewed. Risk: exposes a local server publicly; manage tokens. Not reproduced. The referenced older four-API-call hold was unavailable locally; no completed comparison with it is claimed. This is a separate original-post candidate, not an audited public endpoint or integration.",
+        "tags": [
+          "claude-code",
+          "mcp",
+          "webhook",
+          "routine",
+          "tailscale"
+        ],
+        "apps": [
+          "Claude Code",
+          "Tailscale Funnel"
+        ],
+        "title_en": "Two-way Claude Code and Grok Bot handoffs via MCP and webhooks",
+        "author_en": "its_brill_"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      },
+      "editorial_distinction_zh": "已对照可用的182条资源和284条历史候选，无同源身份重合；铁柱所提旧hold未取得原件，作为比对限制保留。"
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-grokbotradar-first-useful-hour",
+        "url": "https://x.com/GrokBotRadar/status/2098462353293811890",
+        "title": "首个有效小时：只做一件可核对的事",
+        "author": "Grok Bot Radar",
+        "author_url": "https://x.com/GrokBotRadar",
+        "lang": "en",
+        "published": "2026-09-11",
+        "categories": [
+          "start"
+        ],
+        "summary_zh": "第一小时只用一个 Bot：从文件和限定范围调研开始，再接应用做只读任务；先划审批边界，跑顺后保存 Skill、安排 Routine，再按需要增加角色。",
+        "summary_en": "Start with one bot and one verifiable task: files, scoped research and read-only connected apps. Define approval boundaries before saving skills, scheduling routines or adding roles.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读 X 长文全文（无代码块）；作者 10-21 新帖（800,000 付费用户数据 + 首个任务提示词 + 视频）为本文推广，已并入，视频未观看、用户数据未核实。未复现。 原作发布于9月11日，由10月21日推广帖发现，不冒充今日新教程。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full X article; the author's 10-21 promo post is merged (video not watched, user figures unverified). Not reproduced. The September 11 original was rediscovered through an October 21 promotion; it is not a new release.",
+        "tags": [
+          "beginner",
+          "approval",
+          "skill",
+          "routine",
+          "first-task"
+        ],
+        "apps": [],
+        "title_en": "A first useful hour built around one verifiable task",
+        "author_en": "Grok Bot Radar"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      },
+      "discovery_window": "original-2026-09-11-discovered-through-repost"
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-takerovitch-routine-schedule-audit",
+        "url": "https://x.com/Takerovitch/status/2113046554458104279",
+        "title": "Routine 排程审查：说明频率理由，确认后再调整",
+        "author": "Takerovitch",
+        "author_url": "https://x.com/Takerovitch",
+        "lang": "en",
+        "published": "2026-10-21",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "summary_zh": "用审查提示词让每项 Routine 解释运行频率，根据事件、变化速度和交付类型提出调整方案；先给出理由和预览，得到确认后再修改。",
+        "summary_en": "Ask each routine to justify its frequency, then propose changes based on events, update speed and deliverables. Review the reasons and plan before approving edits.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；视频未观看。费用从约 $397 降到约 $45/月为作者自述数字，未核实；引用的 Kevin_VibeX 长文与本方法无关，未纳入。未复现。 不采纳具体省费数字或把每小时/五分钟写成通用推荐；与现有事件触发概念条目相比，本条聚焦完整排程审查提示词。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; video not watched. Cost figures are author-reported. Not reproduced. Savings and fixed hourly/five-minute intervals are not general guidance. Unlike existing trigger overviews, this entry focuses on a schedule-audit prompt.",
+        "tags": [
+          "routine",
+          "schedule",
+          "cost",
+          "webhook",
+          "prompt"
+        ],
+        "apps": [],
+        "title_en": "Audit routine schedules and confirm proposed changes first",
+        "author_en": "Takerovitch"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      },
+      "editorial_distinction_zh": "现有x-mikogen-three-ways-to-talk和官方Skills/Routines条目讲交互与触发概念；本条是Takerovitch独立的频率审查和修改前确认提示词。“schedules vs triggers”原始标题未在本地找到，不声称核对了未取得的旧文。"
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-wizzifnab-two-account-fitness-dashboard",
+        "url": "https://x.com/WizZifnab/status/2113058896310948089",
+        "title": "双账号健身看板：角色规划、模板交接与邮件同步",
+        "author": "WizZifnab",
+        "author_url": "https://x.com/WizZifnab",
+        "lang": "en",
+        "published": "2026-10-22",
+        "categories": [
+          "bots",
+          "recipes"
+        ],
+        "summary_zh": "作者描述两个账号的健身 Bot 共用自建看板：先规划角色，再改为多用户，把模板链接和说明交给另一账号，最后通过 Bot 邮箱同步。",
+        "summary_en": "Two accounts share a self-hosted fitness dashboard through role planning, multi-user changes, template handoffs and bot-email synchronization, as described by the author.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；引用的 7SwanSwimming 帖为评论，未纳入。涉及家用服务器公网访问与登录凭据（作者称亲自交付凭据，敏感细节通过邮件附件而非模板发布）。未复现。 仅作协作案例，未验证模板、看板、跨账号访问隔离或健身建议。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post. Involves a self-hosted server exposed publicly; credentials handed over by the author. Not reproduced. A collaboration case only; templates, dashboard access isolation and fitness advice were not verified.",
+        "tags": [
+          "template",
+          "email",
+          "multi-account",
+          "dashboard",
+          "case"
+        ],
+        "apps": [
+          "Email"
+        ],
+        "title_en": "A two-account fitness dashboard with template and email handoffs",
+        "author_en": "WizZifnab"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-bstodd-subscription-tracker",
+        "url": "https://x.com/bstodd/status/2113061998573342914",
+        "title": "周期扣费整理提示词：流水、收据与更新清单",
+        "author": "bstodd",
+        "author_url": "https://x.com/bstodd",
+        "lang": "en",
+        "published": "2026-10-22",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "提示词把用户提供或授权的流水与邮件收据整理成周期扣费清单，汇总月度支出并标记待人工核对项目；不代表已验证金额或会自动取消服务。",
+        "summary_en": "A prompt organizes supplied or authorized statements and email receipts into recurring charges, monthly totals and items for human review; amounts and cancellation behavior are unverified.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；配图未查看。需连接银行与邮箱数据，金额与发现为作者自述，未核实。未复现。 只收录账目整理方法；未读取任何用户银行或邮件数据，也未取消订阅。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; image not viewed. Requires bank/email access; figures author-reported. Not reproduced. Bookkeeping organization only; no user bank/email data read and no subscription cancelled.",
+        "tags": [
+          "finance",
+          "subscriptions",
+          "pages",
+          "prompt"
+        ],
+        "apps": [
+          "Email"
+        ],
+        "title_en": "A recurring-charge prompt for statements, receipts and a tracker",
+        "author_en": "bstodd"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-socalfsd-earnings-call-page",
+        "url": "https://x.com/socalfsd/status/2113060075896242469",
+        "title": "财报会页面提示词：直接引语与可访问来源",
+        "author": "socalfsd",
+        "author_url": "https://x.com/socalfsd",
+        "lang": "en",
+        "published": "2026-10-22",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "作者用提示词把财报电话会整理成报纸式页面，要求保留直接引语与可访问的来源链接；本条仅介绍产物设计，不核实其中财务结论。",
+        "summary_en": "A prompt turns an earnings call into a newspaper-style page with direct quotes and accessible source links. This entry describes the artifact design, not verified financial conclusions.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；生成的页面链接与配图未打开；引用的 @bot 帖为功能公告，未纳入。未复现。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; generated page and image not opened. Not reproduced.",
+        "tags": [
+          "pages",
+          "research",
+          "prompt"
+        ],
+        "apps": [],
+        "title_en": "An earnings-call page prompt with quotes and accessible sources",
+        "author_en": "socalfsd"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-grokbotuses-x-competitor-lead-watch",
+        "url": "https://x.com/GrokBotUses/status/2113050361506243008",
+        "title": "工作日 X 简报：竞品动态与潜在线索分栏",
+        "author": "Grok Bot Uses",
+        "author_url": "https://x.com/GrokBotUses",
+        "lang": "en",
+        "published": "2026-10-21",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "summary_zh": "用提示词按工作日检索竞品动态与相关求购信号，生成带原帖链接的分栏简报，并明确禁止回复或互动。",
+        "summary_en": "A weekday prompt searches competitor updates and relevant purchase requests, returning a linked brief in separate sections without replying or interacting.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读主帖与作者首条回复中的完整提示词；配图未查看。未复现。 仅收录铁柱已读的提示词；本轮未为测试而扫描X或接入个人账号。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the post and the prompt in the author's first reply; image not viewed. Not reproduced. Only the collector-read prompt is reviewed; no test scan of X or personal-account connection occurred.",
+        "tags": [
+          "x",
+          "monitoring",
+          "leads",
+          "routine",
+          "prompt"
+        ],
+        "apps": [
+          "X"
+        ],
+        "title_en": "A weekday X brief separating competitor news and potential leads",
+        "author_en": "Grok Bot Uses"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-victorzh-tesla-grok-to-bot",
+        "url": "https://x.com/victorzh/status/2113042936221081862",
+        "title": "作者案例：车机 Grok 交接购物清单到 Apple Notes",
+        "author": "Victor Zhou",
+        "author_url": "https://x.com/victorzh",
+        "lang": "en",
+        "published": "2026-10-21",
+        "categories": [
+          "recipes"
+        ],
+        "summary_zh": "作者描述从车机 Grok 向购物 Bot 交接任务，再把清单按门店整理到 Apple Notes 的流程；短信和备忘录接入方式、版本与地区支持仍待核对。",
+        "summary_en": "The author describes handing a shopping task from in-car Grok to a bot and organizing it in Apple Notes; messaging/notes integration and version or region support remain unverified.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；视频未观看。车机版本号与地区（澳大利亚）为作者自述，功能可用范围未核实；Bot 读取短信与写入 Apple Notes 的接入方式帖中未说明。未复现。 只作为作者报告的组合用例，不写成通用开通教程或官方功能公告。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post; video not watched. Availability by region/version unverified; integration details not given. Not reproduced. An author-reported use case, not a general setup tutorial or official feature announcement.",
+        "tags": [
+          "tesla",
+          "voice",
+          "shopping",
+          "case"
+        ],
+        "apps": [
+          "Tesla Grok",
+          "Apple Notes"
+        ],
+        "title_en": "An author case: in-car Grok hands a shopping list to Apple Notes",
+        "author_en": "Victor Zhou"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "依据铁柱对原作的读取交接，按所列范围建议收录；Codex复核中文标题、双语摘要、分类及现有/待审批次去重，等待本批明确审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "id": "x-pluvio9yte-four-bot-setup",
+        "url": "https://x.com/Pluvio9yte/status/2113065297284599924",
+        "title": "四角色配置参考：站点、自媒体、AI 周报与待办",
+        "author": "Pluvio9yte",
+        "author_url": "https://x.com/Pluvio9yte",
+        "lang": "zh",
+        "published": "2026-10-22",
+        "categories": [
+          "bots"
+        ],
+        "summary_zh": "作者将站点观察、自媒体资料、AI 周报和待办提醒分给四个 Bot；可作为职责划分参考，未说明的插件与自动外链操作不当作可复用方法。",
+        "summary_en": "An author separates site monitoring, media research, AI news and reminders into four bots. Unspecified plugins and backlink automation are not treated as reusable instructions.",
+        "verification_note_zh": "铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；配图未查看；“上外链”所用插件未说明。额度体感与 Cursor Ultra 相关为作者自述。引用的作者自己关于 Personal Agent 的观点帖未纳入。未复现。 未核验小红书、抖音的连接或数据获取方式，不保证这些来源可访问，也不采纳额度体感。",
+        "verification_note_en": "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post; image not viewed; the backlink plugin is unnamed. Not reproduced. Xiaohongshu/Douyin access methods and quota impressions were not verified or generalized.",
+        "tags": [
+          "multi-bot",
+          "seo",
+          "social-media",
+          "todo",
+          "case"
+        ],
+        "apps": [
+          "X",
+          "Xiaohongshu",
+          "Douyin"
+        ],
+        "title_en": "Four bot roles for site monitoring, media, AI news and reminders",
+        "author_en": "Pluvio9yte"
+      },
+      "collector_record": {
+        "source_reader": "铁柱",
+        "decision": "publish",
+        "codex_independently_read_x": false
+      }
+    }
+  ]
+}

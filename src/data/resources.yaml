@@ -1,4 +1,676 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-aipmer-codex-grok-task-bridge
+  url: https://github.com/aipmer/codex-grok-task-bridge/blob/main/README.zh-CN.md
+  title: MCP 任务桥设计：领取租约、幂等与证据回传
+  title_en: An MCP task bridge with leases, idempotency and evidence handoffs
+  author: aipmer
+  author_en: aipmer
+  source: github
+  lang: zh
+  categories:
+    - advanced
+    - recipes
+  apps:
+    - Codex
+    - Claude Code
+    - Cursor
+    - Cloudflare Workers
+    - Cloudflare D1
+    - Cloudflare R2
+  summary_zh: 任务桥把本机助手提交的只读任务交给 Grok Bot 领取，用租约、幂等键和结构化结果管理交接；作者案例通过手动触发对话回传证据。
+  summary_en: A task bridge queues read-only work for Grok Bot, tracking leases, idempotency keys and structured results. The author case returns evidence through a manually triggered bot conversation.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取V2EX作者介绍、中英文README及9月13日案例记录。案例为作者报告，未审原始日志、代码或鉴权；Routine无人值守仍未验收。未安装或部署，未打开案例中的X链接；旧接口限制不作当前产品结论。
+  verification_note_en: Read the author V2EX post, both READMEs and the September 13 case. Author-reported; raw logs, code and auth not audited. Unattended routines remain unverified. No install, deployment or X-link access.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-chekusu-yobiru-wake-skill
+  url: https://github.com/chekusu/yobiru/blob/main/plugins/yobiru/skills/yobiru-wake/SKILL.md
+  title: Yobiru 唤醒 Skill：接收方限频、Webhook 与完成状态
+  title_en: Yobiru wake policy, routine webhooks and completion states
+  author: chekusu
+  author_en: chekusu
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - templates
+    - recipes
+  apps:
+    - Tailscale
+    - Codex
+  summary_zh: 唤醒 Skill 由接收方决定发送者权限、静默时段和频率，给出 Grok Bot Routine Webhook 配置，并把通知已送达与任务已完成分开。
+  summary_en: A receiver-side skill caps senders, quiet hours and wake rates, documents a Grok Bot routine-webhook adapter, and distinguishes accepted wake-ups from completed work.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取README唤醒/状态段和yobiru-wake/SKILL.md全文。未安装、启动接收器、连接Tailscale或调用Webhook；Grok适配、鉴权实现和可选Codex队列接口未实测，收件文字不视为授权。
+  verification_note_en: Read README wake/status sections and the full wake skill. No install, receiver, Tailscale or webhook call. Grok adapter, authentication and optional Codex queue compatibility not tested; messages are not authorization.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-doublesq-bot-team-playbook
+  url: https://github.com/doublesq97-ui/bot-team-playbook/blob/main/README.zh-CN.md
+  title: 八类岗位团队手册：主管分派、专员交付与验收模板
+  title_en: Eight team patterns with supervisor handoffs and acceptance templates
+  author: Su (doublesq97-ui)
+  author_en: Su (doublesq97-ui)
+  source: github
+  lang: zh
+  categories:
+    - bots
+    - templates
+    - advanced
+  apps:
+    - Gmail
+    - Calendar
+    - Slack
+    - GitHub
+    - X
+    - Notion
+  summary_zh: 中文手册按八类职业组织主管与专员，用七部分描述定义角色、产物和边界；交接模板要求文件路径、逐项验收结果与未解决问题。
+  summary_en: A Chinese playbook defines supervisor-specialist teams for eight roles, with seven-part bot descriptions and handoffs that report file paths, acceptance checks and unresolved issues.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取中英文README及handoff.md全文，合并为同一作品。未逐个审查35份岗位提示词、安装Skill或实测八支团队；工具为文档列举示例，独立桌面等产品描述未另核。
+  verification_note_en: Read both READMEs and the full handoff template, merged as one work. All 35 prompts, skill loading and eight teams not tested. Named tools are examples; product-architecture claims not independently verified.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-jexmarc-telegram-webhook-bridge
+  url: https://github.com/jexmarc/grokbot-telegram
+  title: Telegram Webhook 桥：白名单、定向触发与分步接入
+  title_en: A Telegram webhook bridge with allowlists and staged setup
+  author: jexmarc
+  author_en: jexmarc
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - recipes
+    - templates
+  apps:
+    - Telegram
+    - Cloudflare Workers
+    - Vercel
+  summary_zh: 桥接服务先校验 Telegram 消息和白名单，再唤醒 Bot 的 Webhook Routine；连接 Skill 逐步配置，回复使用限定会话的短期令牌。
+  summary_en: A bridge checks Telegram updates and allowlists before waking a bot routine. Its setup skill walks through configuration; replies use short-lived tokens scoped to a chat and topic.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取原始README的架构、部署、Routine和回复段，以及telegram-connect/SKILL.md的权限、配置与回复规则。未审实现、安装、建Bot、提交令牌或发消息；费用、原生入口和兼容性未验证。
+  verification_note_en: Read README architecture, hosting, routine and reply sections plus setup-skill access and reply rules. No code audit, installation, bot creation, secrets or messages; pricing and compatibility unverified.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-psylch-grokbot-wechat
+  url: https://github.com/psylch/grokbot-wechat
+  title: 微信桥接：消息合批、过时回复停止与补发队列
+  title_en: A WeChat bridge with batches, superseded replies and an outbox
+  author: psylch
+  author_en: psylch
+  source: github
+  lang: zh
+  categories:
+    - advanced
+    - recipes
+    - templates
+  apps:
+    - WeChat ClawBot
+  summary_zh: 作者以常驻转发器把微信消息合批送入 Bot Webhook；用消息时间判断过时回复，并区分已发送、待补发和被新消息打断的结果。
+  summary_en: A persistent forwarder batches WeChat messages into a bot webhook, stops superseded replies and separates delivered messages from queued sends that wait for a later conversation window.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读README架构、消息契约、安装段与入站Routine模板。模板明示是按代码契约整理的等价版本，非作者原配置导出。未审实现或微信条款、扫码绑定、读取微信或实测；窗口与版本为作者说明。
+  verification_note_en: Read README architecture, payload and setup sections and the inbound template, an equivalent example rather than an exported live routine. No code/terms audit, binding, WeChat access or tests; version/window claims are author reports.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-roelsmelt-telegram-gateway
+  url: https://github.com/roelsmelt/grok-telegram-gateway
+  title: Telegram 长轮询插件示例：监听、唤醒与发送结果确认
+  title_en: A Telegram long-poll plugin example with delivery checks
+  author: roelsmelt
+  author_en: roelsmelt
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - recipes
+    - templates
+  apps:
+    - Telegram
+  summary_zh: 公开插件示例用长轮询接收 Telegram，再通过带鉴权的 Webhook 唤醒 Bot；Skill 列出监听、输入状态、发送和发送结果确认步骤。
+  summary_en: A public plugin example long-polls Telegram and wakes a bot through an authenticated webhook. Its skill separates listening, typing, sending and checking the send result.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取README和telegram-gateway/SKILL.md全文。未安装、改群隐私或读取令牌；源码、内部目录/secret-request兼容性及市场上架未核验。文中的5分钟限制和无原生入口说法不作本站当前结论。
+  verification_note_en: Read the README and full gateway skill. No install, group-privacy change or token access. Code, private-path/secret-flow compatibility and marketplace listing unverified; timing and native-channel claims not adopted.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: github-sit-in-awesome-playbooks
+  url: https://github.com/sit-in/awesome-grokbot-playbooks
+  title: 中文配方库：角色分工、文件交接与审核流程
+  title_en: A Chinese playbook directory for roles, file handoffs and review
+  author: sit-in
+  author_en: sit-in
+  source: github
+  lang: zh
+  categories:
+    - resources
+    - templates
+    - bots
+  apps:
+    - Claude Code
+  summary_zh: 中文目录汇总生态工具和原创配方；作战室示例用专项角色、任务板和文件交接组织雷达与草稿，并在对外发布前交由人审核。
+  summary_en: A Chinese directory combines ecosystem links and original playbooks. Its war-room example coordinates focused roles, task boards and file handoffs, with human review before publication.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 读取README主要说明及war-room.md全文。样例产品、变量和产物明示虚构；未逐项复核目录或复现协作。作者验证标记不是本站实测，中英文README合并为同一目录作品；未扫描其X索引。
+  verification_note_en: Read README guidance and the full war-room example, whose products and outputs are fictional. Directory entries and execution not independently tested; author badges are not our tests. Translations merged; no X-index scan.
+  platform: github
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: whatshouldmybotdo-notion-read-first
+  url: https://whatshouldmybotdo.com/guides/connect-notion-to-grok-bot
+  title: Notion 接入指南：工作区标签、只读起步与恢复检查
+  title_en: A Notion setup guide with workspace labels and read-first trials
+  author: Rosh Perera
+  author_en: Rosh Perera
+  source: blog
+  lang: en
+  categories:
+    - start
+    - advanced
+    - recipes
+  apps:
+    - Notion
+  summary_zh: 作者按连接状态、工作区标签、只读任务和版本恢复组织 Notion 配置与排障，建议先验证读取结果，再在预留页面中尝试编辑。
+  summary_en: An author organizes Notion setup around connection state, workspace labels, read-only trials and recovery checks, validating reads before trying edits in a dedicated page.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读取公开正文，页面标注10月21日更新；作者销售模板包，未订阅或领取。界面、授权范围、恢复期限等引用说明未逐项核验，未连接Notion或修改页面；只收录教程流程。
+  verification_note_en: Read the public guide, updated October 21. The author sells a template pack; none acquired. UI, access scope and retention claims not individually verified; no Notion connection or edits.
+  platform: web
+  collection_batch: 2026-10-22-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-bstodd-subscription-tracker
+  url: https://x.com/bstodd/status/2113061998573342914
+  title: 周期扣费整理提示词：流水、收据与更新清单
+  author: bstodd
+  author_url: https://x.com/bstodd
+  lang: en
+  published: 2026-10-22
+  categories:
+    - recipes
+    - templates
+  summary_zh: 提示词把用户提供或授权的流水与邮件收据整理成周期扣费清单，汇总月度支出并标记待人工核对项目；不代表已验证金额或会自动取消服务。
+  summary_en: A prompt organizes supplied or authorized statements and email receipts into recurring charges, monthly totals and items for human review; amounts and cancellation behavior are unverified.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；配图未查看。需连接银行与邮箱数据，金额与发现为作者自述，未核实。未复现。 只收录账目整理方法；未读取任何用户银行或邮件数据，也未取消订阅。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; image not viewed. Requires bank/email access; figures author-reported. Not reproduced. Bookkeeping organization only; no user bank/email data read and no subscription cancelled.
+  tags:
+    - finance
+    - subscriptions
+    - pages
+    - prompt
+  apps:
+    - Email
+  title_en: A recurring-charge prompt for statements, receipts and a tracker
+  author_en: bstodd
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-cgnot996-beginner-learning-path
+  url: https://x.com/cgnot996/status/2112761781080965416
+  title: 中文学习路线：单任务、磨合、触发器与团队
+  author: 铁柱AGI
+  author_url: https://x.com/cgnot996
+  lang: zh
+  published: 2026-10-21
+  categories:
+    - start
+    - resources
+  summary_zh: 作者按跑通单项任务、磨合调整、固定触发器和组建团队组织学习路线，并介绍自建中文学习站、案例与模板入口。
+  summary_en: "An author presents four stages: validate one task, refine the workflow, add triggers and build a team, alongside an unofficial Chinese learning site and template directory."
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读 X 长文全文（无代码块）；学习站本身、开源仓库与 9 个模板均未打开。利益相关：学习站与模板为作者自建自推。订阅档位说法以发文日期为准。未复现。 只收录这篇学习路线文章；学习站章节和模板数量是作者介绍，未逐项核对，不采纳旧套餐结论。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full X article; the site, repo and templates were not opened. Author promotes their own site. Not reproduced. This entry covers the article, not verified site chapters or templates. Site counts and old plan claims are not adopted.
+  tags:
+    - learning-path
+    - beginner
+    - templates
+    - chinese
+  apps: []
+  title_en: A Chinese learning path from one task to a bot team
+  author_en: "@cgnot996"
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-grokbotradar-first-useful-hour
+  url: https://x.com/GrokBotRadar/status/2098462353293811890
+  title: 首个有效小时：只做一件可核对的事
+  author: Grok Bot Radar
+  author_url: https://x.com/GrokBotRadar
+  lang: en
+  published: 2026-09-11
+  categories:
+    - start
+  summary_zh: 第一小时只用一个 Bot：从文件和限定范围调研开始，再接应用做只读任务；先划审批边界，跑顺后保存 Skill、安排 Routine，再按需要增加角色。
+  summary_en: "Start with one bot and one verifiable task: files, scoped research and read-only connected apps. Define approval boundaries before saving skills, scheduling routines or adding roles."
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读 X 长文全文（无代码块）；作者 10-21 新帖（800,000 付费用户数据 + 首个任务提示词 + 视频）为本文推广，已并入，视频未观看、用户数据未核实。未复现。 原作发布于9月11日，由10月21日推广帖发现，不冒充今日新教程。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full X article; the author's 10-21 promo post is merged (video not watched, user figures unverified). Not reproduced. The September 11 original was rediscovered through an October 21 promotion; it is not a new release.
+  tags:
+    - beginner
+    - approval
+    - skill
+    - routine
+    - first-task
+  apps: []
+  title_en: A first useful hour built around one verifiable task
+  author_en: Grok Bot Radar
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-grokbotuses-x-competitor-lead-watch
+  url: https://x.com/GrokBotUses/status/2113050361506243008
+  title: 工作日 X 简报：竞品动态与潜在线索分栏
+  author: Grok Bot Uses
+  author_url: https://x.com/GrokBotUses
+  lang: en
+  published: 2026-10-21
+  categories:
+    - recipes
+    - templates
+  summary_zh: 用提示词按工作日检索竞品动态与相关求购信号，生成带原帖链接的分栏简报，并明确禁止回复或互动。
+  summary_en: A weekday prompt searches competitor updates and relevant purchase requests, returning a linked brief in separate sections without replying or interacting.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读主帖与作者首条回复中的完整提示词；配图未查看。未复现。 仅收录铁柱已读的提示词；本轮未为测试而扫描X或接入个人账号。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the post and the prompt in the author's first reply; image not viewed. Not reproduced. Only the collector-read prompt is reviewed; no test scan of X or personal-account connection occurred.
+  tags:
+    - x
+    - monitoring
+    - leads
+    - routine
+    - prompt
+  apps:
+    - X
+  title_en: A weekday X brief separating competitor news and potential leads
+  author_en: Grok Bot Uses
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-its-brill-claude-code-two-way
+  url: https://x.com/its_brill_/status/2112991511986266123
+  title: 双向协作提示词：Claude Code、MCP 与 Webhook
+  author: its_brill_
+  author_url: https://x.com/its_brill_
+  lang: en
+  published: 2026-10-21
+  categories:
+    - advanced
+    - recipes
+    - templates
+  summary_zh: 作者用本机 MCP、Webhook Routine 和 Tailscale Funnel 设计 Claude Code 与 Bot 双向消息，并附搭建提示词；收到的回复只作信息，不自动视为指令。
+  summary_en: An author combines local MCP, routine webhooks and Tailscale Funnel for two-way Claude Code handoffs, with a setup prompt and a rule that received replies are information, not instructions.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文（含搭建提示词）；配图（对话查看页）未查看。风险：把本机服务经 Tailscale Funnel 暴露到公网、需管理令牌与 webhook 密钥；作者提示把 Bot 回复当信息而非指令。未复现。 铁柱提到的“Claude Code四次API调用”旧hold在本地可用批次未找到原件，未声称完成该旧文语义比对；本条按独立原帖送审。公网暴露、鉴权与本机接口均未审计。
+  verification_note_en: "Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; image not viewed. Risk: exposes a local server publicly; manage tokens. Not reproduced. The referenced older four-API-call hold was unavailable locally; no completed comparison with it is claimed. This is a separate original-post candidate, not an audited public endpoint or integration."
+  tags:
+    - claude-code
+    - mcp
+    - webhook
+    - routine
+    - tailscale
+  apps:
+    - Claude Code
+    - Tailscale Funnel
+  title_en: Two-way Claude Code and Grok Bot handoffs via MCP and webhooks
+  author_en: its_brill_
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-manaengineer-cloudflare-email-forwarding
+  url: https://x.com/ManaEngineer/status/2112481479158587884
+  title: Cloudflare 邮件转发：按域名收件地址分派 Bot
+  author: ManaEngineer
+  author_url: https://x.com/ManaEngineer
+  lang: en
+  published: 2026-10-20
+  categories:
+    - advanced
+    - recipes
+  summary_zh: 作者建议把自有域名的转发地址接到 Bot 邮箱，再按原收件地址区分客服与私人来信；转发配置和对外回复需要各自明确授权。
+  summary_en: The author proposes forwarding domain aliases into a bot inbox and routing support and personal mail by recipient address, with separate authority for setup and external replies.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读原帖全文（短帖）。vikingmute 的中文转述（含按邮件类型自动回复、生成工单的设想）已并入本条。让 Bot 操作 Cloudflare 需授权域名账户，自动回复外部邮件需注意审批边界。未复现。 不把“免费”当现行计费承诺，也未核验邮箱头保留与分流效果。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full short post; a Chinese paraphrase by vikingmute is merged here. Requires granting domain account access. Not reproduced. Current pricing, preserved headers and actual routing behavior were not verified.
+  tags:
+    - email
+    - cloudflare
+    - routing
+    - domain
+  apps:
+    - Cloudflare
+    - Email
+  title_en: Route domain email to different bots with Cloudflare forwarding
+  author_en: ManaEngineer
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-pluvio9yte-four-bot-setup
+  url: https://x.com/Pluvio9yte/status/2113065297284599924
+  title: 四角色配置参考：站点、自媒体、AI 周报与待办
+  author: Pluvio9yte
+  author_url: https://x.com/Pluvio9yte
+  lang: zh
+  published: 2026-10-22
+  categories:
+    - bots
+  summary_zh: 作者将站点观察、自媒体资料、AI 周报和待办提醒分给四个 Bot；可作为职责划分参考，未说明的插件与自动外链操作不当作可复用方法。
+  summary_en: An author separates site monitoring, media research, AI news and reminders into four bots. Unspecified plugins and backlink automation are not treated as reusable instructions.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；配图未查看；“上外链”所用插件未说明。额度体感与 Cursor Ultra 相关为作者自述。引用的作者自己关于 Personal Agent 的观点帖未纳入。未复现。 未核验小红书、抖音的连接或数据获取方式，不保证这些来源可访问，也不采纳额度体感。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post; image not viewed; the backlink plugin is unnamed. Not reproduced. Xiaohongshu/Douyin access methods and quota impressions were not verified or generalized.
+  tags:
+    - multi-bot
+    - seo
+    - social-media
+    - todo
+    - case
+  apps:
+    - X
+    - Xiaohongshu
+    - Douyin
+  title_en: Four bot roles for site monitoring, media, AI news and reminders
+  author_en: Pluvio9yte
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-robotshelp-warm-intro-finder
+  url: https://x.com/robotshelp/status/2112872408000364994
+  title: 引荐提示词：先查已有关系，再起草请求
+  author: Pete (robotshelp)
+  author_url: https://x.com/robotshelp
+  lang: en
+  published: 2026-10-21
+  categories:
+    - recipes
+    - templates
+  summary_zh: 外联前先从已授权 CRM 与邮箱查找目标公司的已有关系，按关系远近排序，为合适联系人起草引荐请求，并明确不发送。
+  summary_en: Before outreach, search authorized CRM and inbox connections for existing relationships at a target company, rank them and draft an introduction request without sending.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含完整提示词；配图未查看。需连接 CRM 与邮箱，提示词已要求只起草不发送。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post including the prompt; image not viewed. Requires CRM and email connections. Not reproduced.
+  tags:
+    - sales
+    - crm
+    - outreach
+    - prompt
+  apps:
+    - CRM
+    - Email
+  title_en: Find existing relationships before drafting an introduction request
+  author_en: Pete (robotshelp)
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-socalfsd-earnings-call-page
+  url: https://x.com/socalfsd/status/2113060075896242469
+  title: 财报会页面提示词：直接引语与可访问来源
+  author: socalfsd
+  author_url: https://x.com/socalfsd
+  lang: en
+  published: 2026-10-22
+  categories:
+    - recipes
+    - templates
+  summary_zh: 作者用提示词把财报电话会整理成报纸式页面，要求保留直接引语与可访问的来源链接；本条仅介绍产物设计，不核实其中财务结论。
+  summary_en: A prompt turns an earnings call into a newspaper-style page with direct quotes and accessible source links. This entry describes the artifact design, not verified financial conclusions.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；生成的页面链接与配图未打开；引用的 @bot 帖为功能公告，未纳入。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; generated page and image not opened. Not reproduced.
+  tags:
+    - pages
+    - research
+    - prompt
+  apps: []
+  title_en: An earnings-call page prompt with quotes and accessible sources
+  author_en: socalfsd
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-takerovitch-routine-schedule-audit
+  url: https://x.com/Takerovitch/status/2113046554458104279
+  title: Routine 排程审查：说明频率理由，确认后再调整
+  author: Takerovitch
+  author_url: https://x.com/Takerovitch
+  lang: en
+  published: 2026-10-21
+  categories:
+    - advanced
+    - templates
+  summary_zh: 用审查提示词让每项 Routine 解释运行频率，根据事件、变化速度和交付类型提出调整方案；先给出理由和预览，得到确认后再修改。
+  summary_en: Ask each routine to justify its frequency, then propose changes based on events, update speed and deliverables. Review the reasons and plan before approving edits.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文含提示词；视频未观看。费用从约 $397 降到约 $45/月为作者自述数字，未核实；引用的 Kevin_VibeX 长文与本方法无关，未纳入。未复现。 不采纳具体省费数字或把每小时/五分钟写成通用推荐；与现有事件触发概念条目相比，本条聚焦完整排程审查提示词。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post incl. prompt; video not watched. Cost figures are author-reported. Not reproduced. Savings and fixed hourly/five-minute intervals are not general guidance. Unlike existing trigger overviews, this entry focuses on a schedule-audit prompt.
+  tags:
+    - routine
+    - schedule
+    - cost
+    - webhook
+    - prompt
+  apps: []
+  title_en: Audit routine schedules and confirm proposed changes first
+  author_en: Takerovitch
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-victorzh-tesla-grok-to-bot
+  url: https://x.com/victorzh/status/2113042936221081862
+  title: 作者案例：车机 Grok 交接购物清单到 Apple Notes
+  author: Victor Zhou
+  author_url: https://x.com/victorzh
+  lang: en
+  published: 2026-10-21
+  categories:
+    - recipes
+  summary_zh: 作者描述从车机 Grok 向购物 Bot 交接任务，再把清单按门店整理到 Apple Notes 的流程；短信和备忘录接入方式、版本与地区支持仍待核对。
+  summary_en: The author describes handing a shopping task from in-car Grok to a bot and organizing it in Apple Notes; messaging/notes integration and version or region support remain unverified.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；视频未观看。车机版本号与地区（澳大利亚）为作者自述，功能可用范围未核实；Bot 读取短信与写入 Apple Notes 的接入方式帖中未说明。未复现。 只作为作者报告的组合用例，不写成通用开通教程或官方功能公告。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post; video not watched. Availability by region/version unverified; integration details not given. Not reproduced. An author-reported use case, not a general setup tutorial or official feature announcement.
+  tags:
+    - tesla
+    - voice
+    - shopping
+    - case
+  apps:
+    - Tesla Grok
+    - Apple Notes
+  title_en: "An author case: in-car Grok hands a shopping list to Apple Notes"
+  author_en: Victor Zhou
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-wizzifnab-two-account-fitness-dashboard
+  url: https://x.com/WizZifnab/status/2113058896310948089
+  title: 双账号健身看板：角色规划、模板交接与邮件同步
+  author: WizZifnab
+  author_url: https://x.com/WizZifnab
+  lang: en
+  published: 2026-10-22
+  categories:
+    - bots
+    - recipes
+  summary_zh: 作者描述两个账号的健身 Bot 共用自建看板：先规划角色，再改为多用户，把模板链接和说明交给另一账号，最后通过 Bot 邮箱同步。
+  summary_en: Two accounts share a self-hosted fitness dashboard through role planning, multi-user changes, template handoffs and bot-email synchronization, as described by the author.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子全文；引用的 7SwanSwimming 帖为评论，未纳入。涉及家用服务器公网访问与登录凭据（作者称亲自交付凭据，敏感细节通过邮件附件而非模板发布）。未复现。 仅作协作案例，未验证模板、看板、跨账号访问隔离或健身建议。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the full post. Involves a self-hosted server exposed publicly; credentials handed over by the author. Not reproduced. A collaboration case only; templates, dashboard access isolation and fitness advice were not verified.
+  tags:
+    - template
+    - email
+    - multi-account
+    - dashboard
+    - case
+  apps:
+    - Email
+  title_en: A two-account fitness dashboard with template and email handoffs
+  author_en: WizZifnab
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  id: x-xueshiqiao-route-traffic-local
+  url: https://x.com/XueshiQiao/status/2112866936229183589
+  title: 本机网络路由选项：云电脑连通性说明
+  author: Xueshi Qiao
+  author_url: https://x.com/XueshiQiao
+  lang: zh
+  published: 2026-10-21
+  categories:
+    - start
+    - advanced
+  summary_zh: 作者介绍云电脑连通性问题中的本机网络路由选项，说明访问可以经由本机出口；设置名称、位置和适用条件需按当前版本核对。
+  summary_en: The author describes routing cloud-computer traffic through the local machine for connectivity issues; the option name, location and applicability need current-version checks.
+  verification_note_zh: 铁柱读取X原文；Codex仅复核附件、摘要和去重，未独立读X。已读帖子正文；配图（设置截图）未查看。该选项名称与位置为作者所述，随版本可能变化；流量经本机出口意味着 Bot 的访问会以你的本地网络身份发出。未复现。
+  verification_note_en: Tie Zhu read X; Codex reviewed the handoff and deduplication only, without independently reading X or testing the workflow. Read the post text; screenshot not viewed. Setting name per author, may change by version. Not reproduced.
+  tags:
+    - network
+    - settings
+    - browser
+    - troubleshooting
+  apps: []
+  title_en: A local-network routing option for the cloud computer
+  author_en: Xueshi Qiao
+  platform: x
+  collection_batch: 2026-10-22-x-incremental-approved
+- id: xai-grok-bot-chat-collaboration
+  url: https://docs.x.ai/grok-bot/chat-and-collaboration
+  title: 官方协作指南：定向消息、群聊交接与草稿审阅
+  title_en: Official messaging, group handoffs and draft review
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  lang: en
+  categories:
+    - start
+    - advanced
+  apps:
+    - Slack
+  summary_zh: 官方说明如何用定向消息、群聊、异步交接和线程分配工作，并区分可编辑草稿、待批准动作及工作中的纠正指令。
+  summary_en: Official guidance covers directed messages, group chats, asynchronous handoffs and threads, alongside editable drafts, pending approvals and redirecting work in progress.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: official
+  verification_note_zh: 独立读取官方正文，页面标注10月17日更新。核对群聊、交接和草稿说明；未创建群聊、发送消息或更改账户。没有把群聊当成所有审批与登录卡片均可出现的界面。
+  verification_note_en: Read the official page, updated October 17. Reviewed groups, handoffs and drafts; no group created, message sent or account changed. Group chats do not expose every approval or login card.
+  platform: official
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: xai-grok-bot-files-results
+  url: https://docs.x.ai/grok-bot/files-and-results
+  title: 官方文件交付指南：附件说明、验收条件与证据保留
+  title_en: Official file delivery with acceptance criteria and evidence
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  lang: en
+  categories:
+    - start
+    - advanced
+  apps: []
+  summary_zh: 为附件说明用途，指定文档、表格或草稿的交付格式与验收条件，并在结果中区分事实、推断、已完成动作和待批准事项。
+  summary_en: Describe each attachment, specify reviewable documents, spreadsheets or drafts, and separate source facts, inferences, completed actions and pending approvals in the result.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: official
+  verification_note_zh: 独立读取官方正文，10月3日为页面更新日。仅核对文件与结果指南；未上传用户文件、调用Cloud Agent或实测格式兼容、大小上限和文件持久性。
+  verification_note_en: Read the official page, updated October 3. No user files uploaded or Cloud Agent invoked; format compatibility, size limits and persistence were not tested.
+  platform: official
+  collection_batch: 2026-10-22-daily-0900-approved
+- id: youtube-matt-palmer-getting-started
+  url: https://youtube.com/watch?v=jwogmXNt7o4
+  title: 入门视频简介：权限、例程与跨应用交接
+  title_en: "Getting started: permissions, routines and cross-app handoffs"
+  author: Matt Palmer
+  author_en: Matt Palmer
+  source: video
+  lang: en
+  categories:
+    - start
+    - advanced
+    - recipes
+  apps:
+    - Gmail
+    - Notion
+    - Cursor
+    - Slack
+    - GitHub
+  summary_zh: 作者说明列出账号集成、审批规则、Routine 和多 Bot 组合章节，举例把公开信息整理到 Notion，以及为 Cursor 云代理准备任务。
+  summary_en: The author description outlines integrations, permissions, routines and bot chains, with examples of organizing public information in Notion and preparing work for Cursor cloud agents.
+  added: 2026-10-22
+  checked_at: 2026-10-22
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 网页工具返回抓取限流后，经普通HTTPS核对完整作者说明与公开元数据，未关闭证书验证。8月25日旧教程，本轮补充发现；未观看视频、实测或收集X用户资料，不采纳旧费用与界面承诺。
+  verification_note_en: Read the full public author description and metadata via ordinary HTTPS after a web-tool throttle, with TLS checks enabled. An August 25 backfill; video not watched, workflow not tested and no X user data collected.
+  published: 2026-08-25
+  platform: youtube
+  collection_batch: 2026-10-22-daily-0900-approved
 - id: composio-grok-bot-multiple-outlook
   url: https://composio.dev/content/how-to-connect-multiple-outlook-accounts-to-grok-bot
   title: 多 Outlook 账户：用连接别名选择邮箱与日历

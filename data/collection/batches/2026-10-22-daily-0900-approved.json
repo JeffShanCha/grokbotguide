@@ -1,0 +1,441 @@
+{
+  "id": "2026-10-22-daily-0900-approved",
+  "collected_at": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-22-daily-0900-review",
+  "source_review_sha256": "383d1a32ee4ac0675f559c3b389ef9458c314f18ec4d36f0daf3d2e33b381332",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-22",
+    "approved_ids": [
+      "xai-grok-bot-chat-collaboration",
+      "xai-grok-bot-files-results",
+      "github-jexmarc-telegram-webhook-bridge",
+      "github-psylch-grokbot-wechat",
+      "github-roelsmelt-telegram-gateway",
+      "github-sit-in-awesome-playbooks",
+      "github-chekusu-yobiru-wake-skill",
+      "whatshouldmybotdo-notion-read-first",
+      "github-doublesq-bot-team-playbook",
+      "youtube-matt-palmer-getting-started",
+      "github-aipmer-codex-grok-task-bridge"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月22日这两批建议收录的24条，全部导入并发布。",
+    "scope_zh": "本文件仅含10月22日daily-0900审核批次建议收录的11条；与当天另一获批批次一起共24条。待核验、重复、排除项和其他新批次均不在本次授权范围内。"
+  },
+  "baseline": {
+    "head": "d69ed42fa65889c59896432c8be3d949e2ec1674",
+    "catalog_count": 182,
+    "resources_sha256": "ae4a32d7a645c0e7f022d5f75fcfe9024b7f63ccd4741caf5f74286dcf44a136"
+  },
+  "editorial_note_zh": "逐字保留已审阅的资源标题、双语摘要、分类、应用、署名、日期、来源和核验限制。候选reason中的等待审核是送审时记录；本文件approval记录本轮明确授权。原始审核文件和预览保持原样，不随本批提交。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "xai-grok-bot-chat-collaboration",
+        "url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+        "title": "官方协作指南：定向消息、群聊交接与草稿审阅",
+        "title_en": "Official messaging, group handoffs and draft review",
+        "author": "xAI / Cursor",
+        "author_en": "xAI / Cursor",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [
+          "Slack"
+        ],
+        "summary_zh": "官方说明如何用定向消息、群聊、异步交接和线程分配工作，并区分可编辑草稿、待批准动作及工作中的纠正指令。",
+        "summary_en": "Official guidance covers directed messages, group chats, asynchronous handoffs and threads, alongside editable drafts, pending approvals and redirecting work in progress.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "official",
+        "verification_note_zh": "独立读取官方正文，页面标注10月17日更新。核对群聊、交接和草稿说明；未创建群聊、发送消息或更改账户。没有把群聊当成所有审批与登录卡片均可出现的界面。",
+        "verification_note_en": "Read the official page, updated October 17. Reviewed groups, handoffs and drafts; no group created, message sent or account changed. Group chats do not expose every approval or login card."
+      },
+      "source_updated_at": "2026-10-17"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "xai-grok-bot-files-results",
+        "url": "https://docs.x.ai/grok-bot/files-and-results",
+        "title": "官方文件交付指南：附件说明、验收条件与证据保留",
+        "title_en": "Official file delivery with acceptance criteria and evidence",
+        "author": "xAI / Cursor",
+        "author_en": "xAI / Cursor",
+        "source": "official",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [],
+        "summary_zh": "为附件说明用途，指定文档、表格或草稿的交付格式与验收条件，并在结果中区分事实、推断、已完成动作和待批准事项。",
+        "summary_en": "Describe each attachment, specify reviewable documents, spreadsheets or drafts, and separate source facts, inferences, completed actions and pending approvals in the result.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "official",
+        "verification_note_zh": "独立读取官方正文，10月3日为页面更新日。仅核对文件与结果指南；未上传用户文件、调用Cloud Agent或实测格式兼容、大小上限和文件持久性。",
+        "verification_note_en": "Read the official page, updated October 3. No user files uploaded or Cloud Agent invoked; format compatibility, size limits and persistence were not tested."
+      },
+      "source_updated_at": "2026-10-03"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-jexmarc-telegram-webhook-bridge",
+        "url": "https://github.com/jexmarc/grokbot-telegram",
+        "title": "Telegram Webhook 桥：白名单、定向触发与分步接入",
+        "title_en": "A Telegram webhook bridge with allowlists and staged setup",
+        "author": "jexmarc",
+        "author_en": "jexmarc",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Telegram",
+          "Cloudflare Workers",
+          "Vercel"
+        ],
+        "summary_zh": "桥接服务先校验 Telegram 消息和白名单，再唤醒 Bot 的 Webhook Routine；连接 Skill 逐步配置，回复使用限定会话的短期令牌。",
+        "summary_en": "A bridge checks Telegram updates and allowlists before waking a bot routine. Its setup skill walks through configuration; replies use short-lived tokens scoped to a chat and topic.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取原始README的架构、部署、Routine和回复段，以及telegram-connect/SKILL.md的权限、配置与回复规则。未审实现、安装、建Bot、提交令牌或发消息；费用、原生入口和兼容性未验证。",
+        "verification_note_en": "Read README architecture, hosting, routine and reply sections plus setup-skill access and reply rules. No code audit, installation, bot creation, secrets or messages; pricing and compatibility unverified."
+      },
+      "related_source_urls": [
+        "https://github.com/jexmarc/grokbot-telegram/blob/main/.grok/skills/telegram-connect/SKILL.md"
+      ],
+      "editorial_distinction_zh": "独立项目，采用Telegram Webhook入站；与本批roelsmelt的本机长轮询方案合并比较而不当成同一作品。"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-psylch-grokbot-wechat",
+        "url": "https://github.com/psylch/grokbot-wechat",
+        "title": "微信桥接：消息合批、过时回复停止与补发队列",
+        "title_en": "A WeChat bridge with batches, superseded replies and an outbox",
+        "author": "psylch",
+        "author_en": "psylch",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "WeChat ClawBot"
+        ],
+        "summary_zh": "作者以常驻转发器把微信消息合批送入 Bot Webhook；用消息时间判断过时回复，并区分已发送、待补发和被新消息打断的结果。",
+        "summary_en": "A persistent forwarder batches WeChat messages into a bot webhook, stops superseded replies and separates delivered messages from queued sends that wait for a later conversation window.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读README架构、消息契约、安装段与入站Routine模板。模板明示是按代码契约整理的等价版本，非作者原配置导出。未审实现或微信条款、扫码绑定、读取微信或实测；窗口与版本为作者说明。",
+        "verification_note_en": "Read README architecture, payload and setup sections and the inbound template, an equivalent example rather than an exported live routine. No code/terms audit, binding, WeChat access or tests; version/window claims are author reports."
+      },
+      "related_source_urls": [
+        "https://github.com/psylch/grokbot-wechat/blob/main/routines/inbound-webhook.md"
+      ],
+      "editorial_distinction_zh": "不同于既有EvanWritesX微信文章，本条是psylch独立仓库的合批、过时回复和补发设计。"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-roelsmelt-telegram-gateway",
+        "url": "https://github.com/roelsmelt/grok-telegram-gateway",
+        "title": "Telegram 长轮询插件示例：监听、唤醒与发送结果确认",
+        "title_en": "A Telegram long-poll plugin example with delivery checks",
+        "author": "roelsmelt",
+        "author_en": "roelsmelt",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Telegram"
+        ],
+        "summary_zh": "公开插件示例用长轮询接收 Telegram，再通过带鉴权的 Webhook 唤醒 Bot；Skill 列出监听、输入状态、发送和发送结果确认步骤。",
+        "summary_en": "A public plugin example long-polls Telegram and wakes a bot through an authenticated webhook. Its skill separates listening, typing, sending and checking the send result.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取README和telegram-gateway/SKILL.md全文。未安装、改群隐私或读取令牌；源码、内部目录/secret-request兼容性及市场上架未核验。文中的5分钟限制和无原生入口说法不作本站当前结论。",
+        "verification_note_en": "Read the README and full gateway skill. No install, group-privacy change or token access. Code, private-path/secret-flow compatibility and marketplace listing unverified; timing and native-channel claims not adopted."
+      },
+      "related_source_urls": [
+        "https://github.com/roelsmelt/grok-telegram-gateway/blob/main/skills/telegram-gateway/SKILL.md"
+      ],
+      "editorial_distinction_zh": "与jexmarc方案是不同作者和实现：本机长轮询加Webhook唤醒，不是托管Telegram Webhook入站。"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-sit-in-awesome-playbooks",
+        "url": "https://github.com/sit-in/awesome-grokbot-playbooks",
+        "title": "中文配方库：角色分工、文件交接与审核流程",
+        "title_en": "A Chinese playbook directory for roles, file handoffs and review",
+        "author": "sit-in",
+        "author_en": "sit-in",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "resources",
+          "templates",
+          "bots"
+        ],
+        "apps": [
+          "Claude Code"
+        ],
+        "summary_zh": "中文目录汇总生态工具和原创配方；作战室示例用专项角色、任务板和文件交接组织雷达与草稿，并在对外发布前交由人审核。",
+        "summary_en": "A Chinese directory combines ecosystem links and original playbooks. Its war-room example coordinates focused roles, task boards and file handoffs, with human review before publication.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取README主要说明及war-room.md全文。样例产品、变量和产物明示虚构；未逐项复核目录或复现协作。作者验证标记不是本站实测，中英文README合并为同一目录作品；未扫描其X索引。",
+        "verification_note_en": "Read README guidance and the full war-room example, whose products and outputs are fictional. Directory entries and execution not independently tested; author badges are not our tests. Translations merged; no X-index scan."
+      },
+      "related_source_urls": [
+        "https://github.com/sit-in/awesome-grokbot-playbooks/blob/main/examples/war-room.md"
+      ],
+      "merged_translation_urls": [
+        "https://github.com/sit-in/awesome-grokbot-playbooks/blob/main/README.en.md"
+      ],
+      "editorial_distinction_zh": "目录与既有sitinme首席助理文章的体裁、范围不同；不把同作者主题重合当重复作品。"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-chekusu-yobiru-wake-skill",
+        "url": "https://github.com/chekusu/yobiru/blob/main/plugins/yobiru/skills/yobiru-wake/SKILL.md",
+        "title": "Yobiru 唤醒 Skill：接收方限频、Webhook 与完成状态",
+        "title_en": "Yobiru wake policy, routine webhooks and completion states",
+        "author": "chekusu",
+        "author_en": "chekusu",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Tailscale",
+          "Codex"
+        ],
+        "summary_zh": "唤醒 Skill 由接收方决定发送者权限、静默时段和频率，给出 Grok Bot Routine Webhook 配置，并把通知已送达与任务已完成分开。",
+        "summary_en": "A receiver-side skill caps senders, quiet hours and wake rates, documents a Grok Bot routine-webhook adapter, and distinguishes accepted wake-ups from completed work.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取README唤醒/状态段和yobiru-wake/SKILL.md全文。未安装、启动接收器、连接Tailscale或调用Webhook；Grok适配、鉴权实现和可选Codex队列接口未实测，收件文字不视为授权。",
+        "verification_note_en": "Read README wake/status sections and the full wake skill. No install, receiver, Tailscale or webhook call. Grok adapter, authentication and optional Codex queue compatibility not tested; messages are not authorization."
+      },
+      "related_source_urls": [
+        "https://github.com/chekusu/yobiru"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "whatshouldmybotdo-notion-read-first",
+        "url": "https://whatshouldmybotdo.com/guides/connect-notion-to-grok-bot",
+        "title": "Notion 接入指南：工作区标签、只读起步与恢复检查",
+        "title_en": "A Notion setup guide with workspace labels and read-first trials",
+        "author": "Rosh Perera",
+        "author_en": "Rosh Perera",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Notion"
+        ],
+        "summary_zh": "作者按连接状态、工作区标签、只读任务和版本恢复组织 Notion 配置与排障，建议先验证读取结果，再在预留页面中尝试编辑。",
+        "summary_en": "An author organizes Notion setup around connection state, workspace labels, read-only trials and recovery checks, validating reads before trying edits in a dedicated page.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读取公开正文，页面标注10月21日更新；作者销售模板包，未订阅或领取。界面、授权范围、恢复期限等引用说明未逐项核验，未连接Notion或修改页面；只收录教程流程。",
+        "verification_note_en": "Read the public guide, updated October 21. The author sells a template pack; none acquired. UI, access scope and retention claims not individually verified; no Notion connection or edits."
+      },
+      "source_updated_at": "2026-10-21"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-doublesq-bot-team-playbook",
+        "url": "https://github.com/doublesq97-ui/bot-team-playbook/blob/main/README.zh-CN.md",
+        "title": "八类岗位团队手册：主管分派、专员交付与验收模板",
+        "title_en": "Eight team patterns with supervisor handoffs and acceptance templates",
+        "author": "Su (doublesq97-ui)",
+        "author_en": "Su (doublesq97-ui)",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "bots",
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Gmail",
+          "Calendar",
+          "Slack",
+          "GitHub",
+          "X",
+          "Notion"
+        ],
+        "summary_zh": "中文手册按八类职业组织主管与专员，用七部分描述定义角色、产物和边界；交接模板要求文件路径、逐项验收结果与未解决问题。",
+        "summary_en": "A Chinese playbook defines supervisor-specialist teams for eight roles, with seven-part bot descriptions and handoffs that report file paths, acceptance checks and unresolved issues.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取中英文README及handoff.md全文，合并为同一作品。未逐个审查35份岗位提示词、安装Skill或实测八支团队；工具为文档列举示例，独立桌面等产品描述未另核。",
+        "verification_note_en": "Read both READMEs and the full handoff template, merged as one work. All 35 prompts, skill loading and eight teams not tested. Named tools are examples; product-architecture claims not independently verified."
+      },
+      "related_source_urls": [
+        "https://github.com/doublesq97-ui/bot-team-playbook/blob/main/templates/handoff.md"
+      ],
+      "merged_translation_urls": [
+        "https://github.com/doublesq97-ui/bot-team-playbook"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "video-description",
+      "resource": {
+        "id": "youtube-matt-palmer-getting-started",
+        "url": "https://www.youtube.com/watch?v=jwogmXNt7o4",
+        "title": "入门视频简介：权限、例程与跨应用交接",
+        "title_en": "Getting started: permissions, routines and cross-app handoffs",
+        "author": "Matt Palmer",
+        "author_en": "Matt Palmer",
+        "source": "video",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Gmail",
+          "Notion",
+          "Cursor",
+          "Slack",
+          "GitHub"
+        ],
+        "summary_zh": "作者说明列出账号集成、审批规则、Routine 和多 Bot 组合章节，举例把公开信息整理到 Notion，以及为 Cursor 云代理准备任务。",
+        "summary_en": "The author description outlines integrations, permissions, routines and bot chains, with examples of organizing public information in Notion and preparing work for Cursor cloud agents.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "网页工具返回抓取限流后，经普通HTTPS核对完整作者说明与公开元数据，未关闭证书验证。8月25日旧教程，本轮补充发现；未观看视频、实测或收集X用户资料，不采纳旧费用与界面承诺。",
+        "verification_note_en": "Read the full public author description and metadata via ordinary HTTPS after a web-tool throttle, with TLS checks enabled. An August 25 backfill; video not watched, workflow not tested and no X user data collected.",
+        "published": "2026-08-25"
+      },
+      "discovery_window": "incidental-older-source-not-today-release"
+    },
+    {
+      "decision": "publish",
+      "reason": "已核对原始正文或指定文档，建议按所列核验范围收录；等待本批明确审核。",
+      "relevance": "原始来源明确讨论xAI/Cursor Grok Bot的协作、应用组合、Skill、Routine或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-aipmer-codex-grok-task-bridge",
+        "url": "https://github.com/aipmer/codex-grok-task-bridge/blob/main/README.zh-CN.md",
+        "title": "MCP 任务桥设计：领取租约、幂等与证据回传",
+        "title_en": "An MCP task bridge with leases, idempotency and evidence handoffs",
+        "author": "aipmer",
+        "author_en": "aipmer",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Codex",
+          "Claude Code",
+          "Cursor",
+          "Cloudflare Workers",
+          "Cloudflare D1",
+          "Cloudflare R2"
+        ],
+        "summary_zh": "任务桥把本机助手提交的只读任务交给 Grok Bot 领取，用租约、幂等键和结构化结果管理交接；作者案例通过手动触发对话回传证据。",
+        "summary_en": "A task bridge queues read-only work for Grok Bot, tracking leases, idempotency keys and structured results. The author case returns evidence through a manually triggered bot conversation.",
+        "added": "2026-10-22",
+        "checked_at": "2026-10-22",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "读取V2EX作者介绍、中英文README及9月13日案例记录。案例为作者报告，未审原始日志、代码或鉴权；Routine无人值守仍未验收。未安装或部署，未打开案例中的X链接；旧接口限制不作当前产品结论。",
+        "verification_note_en": "Read the author V2EX post, both READMEs and the September 13 case. Author-reported; raw logs, code and auth not audited. Unattended routines remain unverified. No install, deployment or X-link access."
+      },
+      "related_source_urls": [
+        "https://v2ex.com/t/1241782",
+        "https://github.com/aipmer/codex-grok-task-bridge/blob/main/docs/case-study-public-x-research-2026-09-13.md"
+      ],
+      "merged_translation_urls": [
+        "https://github.com/aipmer/codex-grok-task-bridge"
+      ],
+      "discovery_window": "incidental-older-project-discovered-through-author-post"
+    }
+  ]
+}
