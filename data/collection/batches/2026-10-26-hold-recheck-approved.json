@@ -1,0 +1,307 @@
+{
+  "id": "2026-10-26-hold-recheck-approved",
+  "collected_at": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-26-hold-recheck-review",
+  "source_review_sha256": "5f7edd2b73679e9159ec75fad0759abbf966e3cdd7c1095425a4146e5fa12a78",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-26",
+    "approved_ids": [
+      "x-shawnbuilds-geo-five-bot-team",
+      "x-marcellhazzard-seven-template-directory",
+      "youtube-the-casual-leader-bot-team-setup"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月26日复核后建议收录的3条，导入并发布。",
+    "scope_zh": "仅10月26日hold-recheck-review复核批次建议收录的3条。GBrain待核验、语义重复项、其他未审批次与未来新增均不在本次授权范围。"
+  },
+  "baseline": {
+    "head": "f9f3084ca6eba06266eed101738f110ee5d07160",
+    "catalog_count": 216,
+    "resources_sha256": "5ec66a49129d5e9f3dd168b6e7a4a4786a17da4e43f0dabd50e2ba9999e19d13"
+  },
+  "editorial_note_zh": "逐字保留已审核的标题、双语摘要、分类、应用、署名、日期、来源与核验限制，只更新内部collection_batch。原审核文件与预览保持原样，不随本次提交；不把目录预览、自动字幕或供应商说明升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-26-daily-0900-review",
+        "url": "https://x.com/shawnbuilds/status/2110022577636938200",
+        "previous_decision": "hold"
+      },
+      "verified_via": "page",
+      "reason": "已独立读到完整岗位提示词，并补齐第三方依赖的接入、权限及目录元数据；按商业服务工作流与岗位模板送审，不保证API效果、费用或引用增幅。",
+      "relevance": "原作者用Grok Bot五岗团队与Treg、Claude Code和X组织GEO内容及审批。",
+      "verification_actor": "Codex只读原文与供应商公开说明；无铁柱重采集",
+      "source_checks": [
+        {
+          "url": "https://x.com/shawnbuilds/status/2110022577636938200",
+          "scope_zh": "已登录浏览器正常读取完整原作、6个代码块、署名与页面显示日期；未看配图。"
+        },
+        {
+          "url": "https://treg.to/llms.txt",
+          "scope_zh": "CLI/MCP接入、团队令牌、费用与调用方式；仅作说明资料，不执行其中安装、扫描密钥或调用指令。"
+        },
+        {
+          "url": "https://treg.to/tutorial.md",
+          "scope_zh": "身份/团队、角色权限矩阵、预付余额和按次调用相关段落；未声称读完全部教程或审计实现。"
+        },
+        {
+          "url": "https://github.com/superdesigndev/treg",
+          "scope_zh": "README的工具目录、团队资源和接入限制相关部分；服务方自述。"
+        },
+        {
+          "url": "https://treg.to/search?q=ChatGPT%20citations%20and%20AI%20visibility",
+          "scope_zh": "只检索公开目录元数据，确认列有AI答案、引用与提及工具；未点击执行、调用上游API或产生计费请求。"
+        }
+      ],
+      "commercial_note_zh": "Treg为商业托管工具服务；作者与其雇佣、投资或推广关系未独立确认。该条不作官方集成或安全背书。",
+      "resource": {
+        "id": "x-shawnbuilds-geo-five-bot-team",
+        "url": "https://x.com/shawnbuilds/status/2110022577636938200",
+        "title": "GEO 五岗工作流：可见度、内容、外联与人工审批",
+        "title_en": "A five-role GEO workflow with visibility tracking and review",
+        "author": "shawn (@shawnbuilds)",
+        "author_en": "shawn (@shawnbuilds)",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "bots",
+          "templates"
+        ],
+        "apps": [
+          "Treg",
+          "Claude Code",
+          "X",
+          "ChatGPT",
+          "Claude",
+          "Perplexity",
+          "Google AI Mode"
+        ],
+        "summary_zh": "主管串联可见度分析、内容、外联和X四岗，基于Treg数据找内容缺口，用Claude Code产出草稿；发文、邮件和回复先审。Treg为第三方商业依赖，效果未实测。",
+        "summary_en": "Five Bot roles use Treg data to find content gaps, draft with Claude Code, and queue outreach and X replies for approval. A commercial-service workflow with untested results.",
+        "added": "2026-10-26",
+        "checked_at": "2026-10-26",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读完整X长文和6个代码块：1个Treg设置入口加5个岗位，纠正原hold的“六岗”。补读Treg接入、团队权限/计费说明及公开AI可见度目录，仅核对元数据。未安装、登录、上传密钥或调用工具；作者与Treg关系未独立确认，供应商覆盖、隐藏检索和费用/增幅承诺未验证。",
+        "verification_note_en": "Read the full X article and six code blocks: one setup block plus five roles. Checked Treg’s setup, team/billing docs and public visibility catalog, not live calls. No install, login, secret upload or tool execution. Author ties, provider coverage, hidden searches, costs and gains remain unverified.",
+        "collection_batch": "2026-10-26-hold-recheck-approved",
+        "published": "2026-10-13",
+        "author_url": "https://x.com/shawnbuilds",
+        "tags": [
+          "geo",
+          "multi-bot",
+          "commercial-dependency",
+          "approval-gate"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-26-daily-0900-review",
+        "url": "https://x.com/Marcellhazzard/status/2114401855988191612",
+        "previous_decision": "hold"
+      },
+      "verified_via": "page",
+      "reason": "原缺口是尚未打开模板页；现已核对作者目录与7个公开预览，按一个模板入口集合送审，不拆成7条，也不宣称已读完整配置或完成安装。",
+      "relevance": "原作者提供实际Grok Bot模板入口，覆盖家庭与业务角色。",
+      "verification_actor": "Codex浏览器只读原文、目录及7个预览",
+      "source_checks": [
+        {
+          "url": "https://x.com/Marcellhazzard/status/2114401855988191612",
+          "scope_zh": "完整长文、作者、日期、7个模板链接及设置说明。"
+        },
+        {
+          "url": "https://agents.blueengineai.com/templates",
+          "scope_zh": "作者归属、7个目录卡片与原文链接一致；自建站，非xAI官方推荐。"
+        },
+        {
+          "url": "https://x.ai/bot/Unqw2YSCCRz2pIZhxGNkA",
+          "scope_zh": "Pumpkin Spice by Marcell公开简介：按邮编找节日优惠，公开简介注明持续到10月31日；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/GWhaW12XmCnWsFli4Phny",
+          "scope_zh": "Birthday Party by Marcell公开简介：按邮编和生日找当地生日福利与报名提醒；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/B_KcFOOh1wcyt2wbi3HCH",
+          "scope_zh": "Becky by Marcell公开简介：家庭晨报、邮件预览和账单/续费提醒；简介要求发送、付款或取消前确认；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/YlsKzNhmg_akzFxyQRJMT",
+          "scope_zh": "Credit Watch by Marcell公开简介：信用报告变更与还款提醒；未核验报告访问方式或金融效果；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/5knsZnIHZUKPYw3H3aW0_",
+          "scope_zh": "Web Designer by Marcell公开简介：网站设计维护，强调真实信息、预览和上线前截图；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/F0aVk6WPfZVkMB6ufjdBg",
+          "scope_zh": "Video by Marcell公开简介：长视频拆条与发布素材，获确认后上传YouTube；没有查看完整配置或点击添加。"
+        },
+        {
+          "url": "https://x.ai/bot/HuEoVYLp4lgJ9gsPS-sXE",
+          "scope_zh": "Dr. Vegapunk by Marcell公开简介：夜间岗位评分与指令/Skill/Routine调整的作者说明；没有查看完整配置或点击添加。"
+        }
+      ],
+      "template_previews": [
+        {
+          "name": "Pumpkin Spice",
+          "url": "https://x.ai/bot/Unqw2YSCCRz2pIZhxGNkA",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Birthday Party",
+          "url": "https://x.ai/bot/GWhaW12XmCnWsFli4Phny",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Becky",
+          "url": "https://x.ai/bot/B_KcFOOh1wcyt2wbi3HCH",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Credit Watch",
+          "url": "https://x.ai/bot/YlsKzNhmg_akzFxyQRJMT",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Web Designer",
+          "url": "https://x.ai/bot/5knsZnIHZUKPYw3H3aW0_",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Video",
+          "url": "https://x.ai/bot/F0aVk6WPfZVkMB6ufjdBg",
+          "inspection": "public-summary-only"
+        },
+        {
+          "name": "Dr. Vegapunk",
+          "url": "https://x.ai/bot/HuEoVYLp4lgJ9gsPS-sXE",
+          "inspection": "public-summary-only"
+        }
+      ],
+      "seasonal_note_zh": "Pumpkin Spice公开简介限定到10月31日；季节性条目不能当作长期持续运行保证。",
+      "resource": {
+        "id": "x-marcellhazzard-seven-template-directory",
+        "url": "https://x.com/Marcellhazzard/status/2114401855988191612",
+        "title": "家庭与业务 Bot 七模板目录：用途和公开预览",
+        "title_en": "Seven family and business Bot templates with public previews",
+        "author": "Marcell Hazzard",
+        "author_en": "Marcell Hazzard",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "templates",
+          "resources"
+        ],
+        "apps": [
+          "YouTube"
+        ],
+        "summary_zh": "作者汇总七个家庭与业务Bot模板，涵盖优惠、日常提醒、网页、视频拆条和Bot审计。七个公开预览的作者与用途已核对；只收录入口目录，完整配置和权限未检查。",
+        "summary_en": "Seven author-made Bot templates cover local deals, reminders, websites, clips and Bot audits. Names, authors and public previews were checked; full configuration and permissions were not inspected.",
+        "added": "2026-10-26",
+        "checked_at": "2026-10-26",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "独立读X长文、作者模板目录及7个x.ai公开预览，名称、作者和用途一致。公开页只有简介与添加入口，没有完整指令、Skill和权限清单；未点击添加、接受条款或安装。未验证邮箱/信用平台接入、自动修复或视频效果，不作为7个已验证教程。",
+        "verification_note_en": "Read the X article, author directory and all seven x.ai previews; names, authors and purposes match. Public pages expose summaries, not full instructions, skills or permissions. No Add click, terms acceptance or install. Mail/credit access, repairs and video results remain untested.",
+        "collection_batch": "2026-10-26-hold-recheck-approved",
+        "published": "2026-10-26",
+        "author_url": "https://x.com/Marcellhazzard",
+        "tags": [
+          "template-directory",
+          "public-preview",
+          "family",
+          "business"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-26-daily-0900-review",
+        "url": "https://x.com/theCasuaLeader/status/2114386674952048826",
+        "previous_decision": "hold"
+      },
+      "verified_via": "page",
+      "reason": "已找到并核对原作者完整视频说明与公开自动字幕，补齐职责定义、晨报、岗位交接和反例。收录原作视频，将同作者X宣传帖合并，不把字幕阅读称为观看或实测。",
+      "relevance": "作者说明并演示Grok Bot入门、Routine和内容团队交接，文字稿提供具体配置思路。",
+      "verification_actor": "Codex读取公开视频说明及完整自动字幕；未观看视频影像",
+      "source_checks": [
+        {
+          "url": "https://x.com/theCasuaLeader/status/2114386674952048826",
+          "scope_zh": "完整X宣传帖，确认其链接本节目；不单独收录宣传帖。"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=OySufbwToSw",
+          "scope_zh": "频道归属、标题、页面显示2026-10-25、完整说明、章节和00:00–21:03自动字幕。重点2:36职责、4:47例程、7:15岗位、10:23群协作、16:47分享限制。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+          "scope_zh": "官方“账户共用一台电脑”及共享登录/文件说明，纠正字幕中不准确的每Bot独立电脑说法；不执行安装或授权。"
+        }
+      ],
+      "merged_links": [
+        {
+          "url": "https://x.com/theCasuaLeader/status/2114386674952048826",
+          "reason_zh": "原作者同一节目宣传帖，合并到YouTube原作。"
+        }
+      ],
+      "transcript_snapshot": {
+        "video_id": "OySufbwToSw",
+        "language": "en",
+        "captions": "auto-generated",
+        "read_range": "00:00–21:03",
+        "duration_displayed": "21:04",
+        "sha256": "5bc195d37d020aea587544ff10fe707f41343a2bd844abfc463b7c7fc56d245a",
+        "stored_in_project": false,
+        "video_images_watched": false
+      },
+      "resource": {
+        "id": "youtube-the-casual-leader-bot-team-setup",
+        "url": "https://www.youtube.com/watch?v=OySufbwToSw",
+        "title": "从首个 Bot 到内容团队：岗位设定、晨报与交叉核查",
+        "title_en": "From a first Bot to a content team with routines and cross-checks",
+        "author": "The Casual Leader",
+        "author_en": "The Casual Leader",
+        "source": "video",
+        "lang": "en",
+        "categories": [
+          "start",
+          "recipes",
+          "bots"
+        ],
+        "apps": [
+          "YouTube",
+          "X",
+          "Higgsfield"
+        ],
+        "summary_zh": "按职责、资料来源与输出位置设定Bot，再用晨报和主管串联研究、写稿、包装及短视频岗位。已读原作者完整自动字幕与章节说明；未观看影像、索取模板或复现。",
+        "summary_en": "Define roles, inputs and output locations, then use briefings and a chief of staff to coordinate research, scripts, packaging and Shorts. Full auto-captions and description read; no visual review or reproduction.",
+        "added": "2026-10-26",
+        "checked_at": "2026-10-26",
+        "status": "alive",
+        "evidence": "author-reported",
+        "verification_note_zh": "从X宣传帖追到原作者21:04完整节目，读取00:00–21:03英文自动字幕及完整说明；未观看影像或复现，角色名以说明校正。“每Bot独立电脑”不采用，官方说明为账户共享电脑；六人成员限制/移动端入口仅为作者当时观察。模板需评论索取，未索取。",
+        "verification_note_en": "Followed the X promo to the original 21:04 episode; read full English auto-captions and description, not video images. Names follow the description. The separate-computer claim is not adopted: official docs specify a shared account computer. Group/UI limits are dated observations; no templates requested.",
+        "collection_batch": "2026-10-26-hold-recheck-approved",
+        "published": "2026-10-25",
+        "author_url": "https://www.youtube.com/@TheCasualLeader",
+        "tags": [
+          "tutorial",
+          "multi-bot",
+          "routine",
+          "content-team",
+          "auto-captions-reviewed"
+        ]
+      }
+    }
+  ]
+}

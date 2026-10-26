@@ -176,6 +176,37 @@
   title_en: A Chinese guide to template dependencies and a first trial task
   author_en: manbaout678
   platform: x
+- id: x-marcellhazzard-seven-template-directory
+  url: https://x.com/Marcellhazzard/status/2114401855988191612
+  title: 家庭与业务 Bot 七模板目录：用途和公开预览
+  title_en: Seven family and business Bot templates with public previews
+  author: Marcell Hazzard
+  author_en: Marcell Hazzard
+  source: x
+  lang: en
+  categories:
+    - bots
+    - templates
+    - resources
+  apps:
+    - YouTube
+  summary_zh: 作者汇总七个家庭与业务Bot模板，涵盖优惠、日常提醒、网页、视频拆条和Bot审计。七个公开预览的作者与用途已核对；只收录入口目录，完整配置和权限未检查。
+  summary_en: Seven author-made Bot templates cover local deals, reminders, websites, clips and Bot audits. Names, authors and public previews were checked; full configuration and permissions were not inspected.
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读X长文、作者模板目录及7个x.ai公开预览，名称、作者和用途一致。公开页只有简介与添加入口，没有完整指令、Skill和权限清单；未点击添加、接受条款或安装。未验证邮箱/信用平台接入、自动修复或视频效果，不作为7个已验证教程。
+  verification_note_en: Read the X article, author directory and all seven x.ai previews; names, authors and purposes match. Public pages expose summaries, not full instructions, skills or permissions. No Add click, terms acceptance or install. Mail/credit access, repairs and video results remain untested.
+  collection_batch: 2026-10-26-hold-recheck-approved
+  published: 2026-10-26
+  author_url: https://x.com/Marcellhazzard
+  tags:
+    - template-directory
+    - public-preview
+    - family
+    - business
+  platform: x
 - source: x
   status: alive
   evidence: author-reported
@@ -245,6 +276,43 @@
   title_en: An X content team with a brand interview and eleven Bot roles
   author_en: ryangrowthh
   platform: x
+- id: x-shawnbuilds-geo-five-bot-team
+  url: https://x.com/shawnbuilds/status/2110022577636938200
+  title: GEO 五岗工作流：可见度、内容、外联与人工审批
+  title_en: A five-role GEO workflow with visibility tracking and review
+  author: shawn (@shawnbuilds)
+  author_en: shawn (@shawnbuilds)
+  source: x
+  lang: en
+  categories:
+    - recipes
+    - bots
+    - templates
+  apps:
+    - Treg
+    - Claude Code
+    - X
+    - ChatGPT
+    - Claude
+    - Perplexity
+    - Google AI Mode
+  summary_zh: 主管串联可见度分析、内容、外联和X四岗，基于Treg数据找内容缺口，用Claude Code产出草稿；发文、邮件和回复先审。Treg为第三方商业依赖，效果未实测。
+  summary_en: Five Bot roles use Treg data to find content gaps, draft with Claude Code, and queue outreach and X replies for approval. A commercial-service workflow with untested results.
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 独立读完整X长文和6个代码块：1个Treg设置入口加5个岗位，纠正原hold的“六岗”。补读Treg接入、团队权限/计费说明及公开AI可见度目录，仅核对元数据。未安装、登录、上传密钥或调用工具；作者与Treg关系未独立确认，供应商覆盖、隐藏检索和费用/增幅承诺未验证。
+  verification_note_en: "Read the full X article and six code blocks: one setup block plus five roles. Checked Treg’s setup, team/billing docs and public visibility catalog, not live calls. No install, login, secret upload or tool execution. Author ties, provider coverage, hidden searches, costs and gains remain unverified."
+  collection_batch: 2026-10-26-hold-recheck-approved
+  published: 2026-10-13
+  author_url: https://x.com/shawnbuilds
+  tags:
+    - geo
+    - multi-bot
+    - commercial-dependency
+    - approval-gate
+  platform: x
 - source: x
   status: alive
   evidence: author-reported
@@ -302,6 +370,40 @@
   title_en: Open Bot voice with an iPhone Vocal Shortcut
   author_en: Texas_Twins_Dad
   platform: x
+- id: youtube-the-casual-leader-bot-team-setup
+  url: https://youtube.com/watch?v=OySufbwToSw
+  title: 从首个 Bot 到内容团队：岗位设定、晨报与交叉核查
+  title_en: From a first Bot to a content team with routines and cross-checks
+  author: The Casual Leader
+  author_en: The Casual Leader
+  source: video
+  lang: en
+  categories:
+    - start
+    - recipes
+    - bots
+  apps:
+    - YouTube
+    - X
+    - Higgsfield
+  summary_zh: 按职责、资料来源与输出位置设定Bot，再用晨报和主管串联研究、写稿、包装及短视频岗位。已读原作者完整自动字幕与章节说明；未观看影像、索取模板或复现。
+  summary_en: Define roles, inputs and output locations, then use briefings and a chief of staff to coordinate research, scripts, packaging and Shorts. Full auto-captions and description read; no visual review or reproduction.
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 从X宣传帖追到原作者21:04完整节目，读取00:00–21:03英文自动字幕及完整说明；未观看影像或复现，角色名以说明校正。“每Bot独立电脑”不采用，官方说明为账户共享电脑；六人成员限制/移动端入口仅为作者当时观察。模板需评论索取，未索取。
+  verification_note_en: "Followed the X promo to the original 21:04 episode; read full English auto-captions and description, not video images. Names follow the description. The separate-computer claim is not adopted: official docs specify a shared account computer. Group/UI limits are dated observations; no templates requested."
+  collection_batch: 2026-10-26-hold-recheck-approved
+  published: 2026-10-25
+  author_url: https://www.youtube.com/@TheCasualLeader
+  tags:
+    - tutorial
+    - multi-bot
+    - routine
+    - content-team
+    - auto-captions-reviewed
+  platform: youtube
 - id: github-aipmer-codex-grok-task-bridge
   url: https://github.com/aipmer/codex-grok-task-bridge/blob/main/README.zh-CN.md
   title: MCP 任务桥设计：领取租约、幂等与证据回传
