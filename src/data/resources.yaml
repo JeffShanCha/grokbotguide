@@ -1,4 +1,307 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-quabug-grok-bot-mcp
+  url: https://github.com/quabug/grok-bot-mcp
+  title: MCP 工作站桥接：本地 stdio、远程 OAuth 与消息队列
+  title_en: A workstation MCP bridge with stdio, OAuth and agent mailboxes
+  author: quabug
+  author_en: quabug
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - resources
+  apps:
+    - ChatGPT
+    - Claude Desktop
+    - Cursor
+    - GitHub
+    - Cloudflare
+  summary_zh: 作者提供工作目录工具，可供外部编码助手通过本地 stdio 或远程 OAuth 接入；可选消息桥只负责排队，仍需 Grok Bot 父级例程转交任务和写回结果。
+  summary_en: An MCP bridge exposes workspace tools via local stdio or remote OAuth. Its optional agent mailbox only queues messages; a Grok Bot parent routine must deliver work and record replies.
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  status: alive
+  evidence: author-reported
+  verification_note_zh: Codex读取README用途、工具面、传输、作者所述会话、消息桥和已知限制。未安装、运行doctor、建立隧道、授予目录权限或审计OAuth实现；所链PR未独立展开，不把示例叙述当本站实测。消息桥不等于MCP可直接唤醒Bot。
+  verification_note_en: Codex read README use cases, tools, transports, the reported session, mailbox behavior and known limits. No install, doctor, tunnel, workspace grant or OAuth audit. Linked PR not independently inspected. Queuing does not itself wake a Bot.
+  collection_batch: 2026-10-26-daily-0900-approved
+  platform: github
+- id: github-yuehzhan-grokbot-usage-checkin
+  url: https://github.com/yuehzhan/grokbot-usage-checkin
+  title: 本地用量与工作记录面板：手动记账和节奏估计
+  title_en: A local usage and check-in dashboard with manual logging
+  author: yuehzhan
+  author_en: yuehzhan
+  source: github
+  lang: en
+  categories:
+    - advanced
+    - resources
+  apps:
+    - Grok Build
+  summary_zh: 手动记录每周用量百分比与工作短记，查看历史、搜索和消耗节奏估计；可选从 Grok Build 的用量界面采样。预测结果及其与 Bot 账户配额的对应关系未实测。
+  summary_en: A local dashboard logs weekly usage percentages and work check-ins, with history, search and pace estimates. Optional sampling reads Grok Build’s usage screen; forecasts and Bot quota mapping are untested.
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  status: alive
+  evidence: author-reported
+  verification_note_zh: Codex读取README相关功能、平台限制、更新机制及记录器/用量读取器的有关函数，合并Reddit作者宣传与仓库译版。未完整审计、安装或运行。README称Linux优先、macOS未测、Windows自动读取实验性；可选GitHub更新检查会联网。不保证零消耗、隐私实现或账户共享配额。
+  verification_note_en: Codex read relevant README sections and recorder/reader functions, merging the Reddit announcement and repository translation. No full audit or execution. Linux preferred; macOS untested, Windows auto-read experimental. Optional GitHub update checks use the network; quota mapping unverified.
+  collection_batch: 2026-10-26-daily-0900-approved
+  platform: github
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-0xfuckpoverty-one-person-company-7-day
+  url: https://x.com/0xfuckpoverty/status/2111743649826456019
+  title: 一人公司搭建计划：六个 Bot 与业务手册
+  author: 0xfuckpoverty
+  author_url: https://x.com/0xfuckpoverty
+  lang: en
+  published: 2026-10-18
+  categories:
+    - advanced
+    - recipes
+    - templates
+  summary_zh: 先整理公司、口吻、禁区等六份业务文件，再逐日安排晨报、客服、审稿、内容、调研和财务 Bot；用最小权限、人工确认及每周例程约束执行。
+  summary_en: A six-file business handbook supports six Bots for briefings, support, review, content, research and finance, with limited access, human approval and weekly routines.
+  verification_note_zh: 铁柱记录已读X长文全文与一个代码块；Codex仅复核附件及归属。配图未看，未创建Bot或复现七天计划；订阅价格、额度和成效说法均未采用。引用推广帖并入原作。
+  verification_note_en: Tiezhu reports reading the full article and one code block; Codex reviewed the handoff and attribution. Images unseen; no Bots created or plan reproduced. Price, quota and outcome claims omitted.
+  tags:
+    - one-person-company
+    - multi-bot
+    - handbook
+    - approval-gate
+    - routine
+  apps: []
+  title_en: A six-Bot company plan with a shared handbook
+  author_en: 0xfuckpoverty
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-its-ramo-tech-cbse-tutor-bots
+  url: https://x.com/its_ramo_tech/status/2114430962390208707
+  title: 备考辅导案例：学科 Bot、题库与 Notion 练习记录
+  author: its_ramo_tech
+  author_url: https://x.com/its_ramo_tech
+  lang: en
+  published: 2026-10-25
+  categories:
+    - recipes
+    - bots
+  summary_zh: 家长自述用四个学科 Bot 和总管组织真题练习，优先读取本地 SQLite 题库，并在 Notion 记录答题与薄弱点。适合作为分工案例参考，题库接入步骤未公开。
+  summary_en: A parent reports four subject Bots and a coordinator using a local SQLite question bank and Notion practice logs. A role-design case; the connection to the local bank is not documented.
+  verification_note_zh: 铁柱记录已读全部6条线程；Codex复核附件。图片/GIF未看，题库程序未公开，云端Bot如何访问Mac本地库未说明。仅建议作为作者自述案例收录，不能当完整复现教程或学习效果证据。
+  verification_note_en: Tiezhu reports reading all six posts; Codex reviewed the handoff. Media unseen, question-bank code unavailable and cloud-to-Mac access unexplained. Proposed only as an author-reported case, not a reproducible tutorial or outcome proof.
+  tags:
+    - education
+    - tutor
+    - notion
+    - case-study
+    - multi-bot
+  apps:
+    - Notion
+    - SQLite
+    - Claude
+  title_en: A tutoring case with subject Bots, a question bank and Notion logs
+  author_en: its_ramo_tech
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-kanikabk-24-7-dm-assistant
+  url: https://x.com/KanikaBK/status/2111516185825268054
+  title: Gmail 与 Slack 消息分拣：定时起草、人工发送
+  author: KanikaBK
+  author_url: https://x.com/KanikaBK
+  lang: en
+  published: 2026-10-17
+  categories:
+    - recipes
+    - templates
+  summary_zh: 以紧急、待回复、忽略三类整理消息，设置白天定时检查、晨报及 Slack 关键词起草，修订偏好写入记忆。核心规则是先给草稿，发送需本人批准。
+  summary_en: A one-job Bot triages messages, checks during the day, prepares a morning brief and drafts Slack-triggered replies. Corrections inform memory; sending requires human approval.
+  verification_note_zh: 铁柱周一重试记录已读长文和5段提示词；Codex复核交接，未读取任何邮箱或私信。正文有未删编辑占位语，案例配图未看；Telegram经第三方Composio，权限及兼容性未核。未连接应用或实测例程。
+  verification_note_en: Tiezhu’s Monday retry reports reading the article and five prompts; Codex checked the handoff, not inboxes or DMs. An editing placeholder remains, examples are unseen images, and Composio/Telegram permissions are unverified. No routines tested.
+  tags:
+    - inbox
+    - dm
+    - triage
+    - routine
+    - approval-gate
+  apps:
+    - Gmail
+    - Slack
+    - Telegram
+    - Composio
+  title_en: Scheduled Gmail and Slack triage with human-approved replies
+  author_en: KanikaBK
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-manbaout678-official-templates-mainland-guide
+  url: https://x.com/manbaout678/status/2113867458201153804
+  title: 中文模板挑选指南：连接器依赖与首次试任务
+  author: manbaout678
+  author_url: https://x.com/manbaout678
+  lang: zh
+  published: 2026-10-24
+  categories:
+    - templates
+    - start
+  summary_zh: 中文整理官方市场与 Use Cases 两套入口，建议先检查模板的连接器和准备条件，再选依赖较少的方案，用小任务核对是否符合需求。
+  summary_en: A Chinese guide compares Marketplace and Use Cases, then recommends checking connector dependencies and setup needs before choosing a simpler template and trying a small task.
+  verification_note_zh: 铁柱记录已读中文长文；Codex未独立重读X正文，另读官方Templates指南核对模板不是完整克隆、需检查集成与补配自定义代码。未逐个打开市场模板；作者统计的数量、地区可用性、价格与时间线均未采用。
+  verification_note_en: Tiezhu reports reading the Chinese article. Codex separately read the official template guide, not the X body. No catalog-wide check or installation. Author counts, regional availability, pricing and timeline claims omitted.
+  tags:
+    - templates
+    - marketplace
+    - connectors
+    - mainland-china
+  apps: []
+  title_en: A Chinese guide to template dependencies and a first trial task
+  author_en: manbaout678
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-marcvance-app-studio-six-bots
+  url: https://x.com/marcvance/status/2114019203879522459
+  title: App 工作室岗位模板：交接证据与上线审批
+  author: marcvance
+  author_url: https://x.com/marcvance
+  lang: en
+  published: 2026-10-24
+  categories:
+    - advanced
+    - recipes
+    - bots
+    - templates
+  summary_zh: 用主管、调研、Builder、QA、增长和发布岗位组织 App 工作室。Builder 负责给编码代理写简报；交接附证据，巡检定时运行，花钱、提审和上线先确认。
+  summary_en: Six studio roles coordinate app work. Builder prepares briefs for a coding agent; handoffs need evidence, checks run on routines, and spending, submission and release require approval.
+  verification_note_zh: 铁柱记录已读长文与21段代码块；Codex复核附件。Sentry和应用商店后台为文中拟接入工具，未授权或实测。Builder并非已验证的自主编码执行器；获客成本来自他人未观看视频，未采用。
+  verification_note_en: Tiezhu reports reading the article and 21 code blocks; Codex checked the handoff. Proposed Sentry/store integrations were not connected. Builder drafts briefs; the unrelated, unwatched video’s cost claims are omitted.
+  tags:
+    - app-studio
+    - multi-bot
+    - handoff
+    - permissions
+    - routine
+  apps:
+    - Sentry
+    - App Store Connect
+    - Google Play Console
+  title_en: App studio Bot roles with handoff evidence and release approval
+  author_en: marcvance
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-ryangrowthh-x-content-team
+  url: https://x.com/ryangrowthh/status/2113276573793267911
+  title: X 内容团队：品牌访谈与十一种 Bot 岗位
+  author: ryangrowthh
+  author_url: https://x.com/ryangrowthh
+  lang: en
+  published: 2026-10-22
+  categories:
+    - recipes
+    - advanced
+    - bots
+    - templates
+  summary_zh: 先让主管 Bot 访谈并整理口吻、受众和内容方向，再按调研、写作、核查与追踪划分岗位；使用 X 和 Notion 保存上下文，发布前由人审核。
+  summary_en: A chief-of-staff interview defines voice, audience and content pillars before narrow research, writing, checking and tracking roles use X and Notion, with human review before posting.
+  verification_note_zh: 铁柱记录已读长文与18段代码块；Codex复核交接与去重。未查看图片或曝光截图，未连接X/Notion、创建团队或验证节省用量；曝光量不写入摘要。
+  verification_note_en: Tiezhu reports reading the article and 18 code blocks; Codex checked the handoff and duplicates. Images and metrics screenshots unseen. No X/Notion connection, team setup or usage benefit tested.
+  tags:
+    - x-growth
+    - content
+    - multi-bot
+    - chief-of-staff
+    - prompts
+  apps:
+    - X
+    - Notion
+  title_en: An X content team with a brand interview and eleven Bot roles
+  author_en: ryangrowthh
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-tanglele0318-multi-bot-harness-rules
+  url: https://x.com/tanglele0318/status/2114499611465236500
+  title: 多 Bot 共享规则库：版本、单写入者与反馈审批
+  author: tanglele0318
+  author_url: https://x.com/tanglele0318
+  lang: zh
+  published: 2026-10-25
+  categories:
+    - advanced
+    - templates
+  summary_zh: 把共享规则放入带版本号的目录，以入口文件分流细则；共享库只保留一个写入者，用 TODO 记录进度和证据，各 Bot 提交反馈后经每周审核再改规则。
+  summary_en: A versioned shared folder routes detailed rules, uses a single writer, records progress and evidence in TODO files, and reviews Bot feedback weekly before changing policy.
+  verification_note_zh: 铁柱记录已读长文与4段目录/模板代码块；Codex仅复核交接。四个检查脚本只有用途描述，未读到实现或运行；配图和前一篇架构文未看。外部AGENTS/规则仅作资料，不改变本站工作指令。
+  verification_note_en: Tiezhu reports reading the article and four structure/template blocks; Codex reviewed the handoff. Four scripts are only described, not inspected or run. Media and the earlier article unread; external rules are source data.
+  tags:
+    - multi-bot
+    - rules
+    - agents-md
+    - governance
+  apps: []
+  title_en: Versioned shared Bot rules with one writer and reviewed feedback
+  author_en: tanglele0318
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-26
+  checked_at: 2026-10-26
+  collection_batch: 2026-10-26-daily-0900-approved
+  id: x-texas-twins-dad-hey-grok-vocal-shortcut
+  url: https://x.com/Texas_Twins_Dad/status/2114217410823688573
+  title: iPhone 语音快捷指令：用自定义短语打开 Bot 语音
+  author: Texas_Twins_Dad
+  author_url: https://x.com/Texas_Twins_Dad
+  lang: en
+  published: 2026-10-25
+  categories:
+    - start
+  summary_zh: 作者将快捷指令的 Bot 语音动作绑定到辅助功能中的自定义短语，用声音唤起指定 Bot，并说明锁屏时仍可能需要点击确认。
+  summary_en: The author binds a Bot voice action in Shortcuts to a custom Vocal Shortcut, with a possible extra tap when the phone is locked.
+  verification_note_zh: 铁柱记录已读完整原帖；Codex接收交接并去重，另读Apple官方语音快捷指令设置说明，仅确认通用功能。未在iPhone上验证Bot动作名、锁屏表现或设备/iOS支持；视频与配图未看。与已收录轻点背面教程为不同触发入口。
+  verification_note_en: Tiezhu reports reading the post; Codex checked the handoff and Apple’s general Vocal Shortcuts instructions. No phone test of Bot actions, locking or device/iOS support; media unseen. Distinct from Back Tap.
+  tags:
+    - ios
+    - voice
+    - shortcuts
+  apps:
+    - Shortcuts
+  title_en: Open Bot voice with an iPhone Vocal Shortcut
+  author_en: Texas_Twins_Dad
+  platform: x
 - id: github-aipmer-codex-grok-task-bridge
   url: https://github.com/aipmer/codex-grok-task-bridge/blob/main/README.zh-CN.md
   title: MCP 任务桥设计：领取租约、幂等与证据回传
