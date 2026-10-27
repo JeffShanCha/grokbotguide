@@ -1,4 +1,34 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- source: blog
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  id: website-grokguide-si
+  url: https://grokguide.si
+  title: grokguide.si：Grok Bot 中文实测教程站
+  title_en: grokguide.si Chinese hands-on Grok Bot tutorials
+  author: siuser小伟 / Dato
+  author_en: siuser小伟 / Dato
+  author_url: https://github.com/siuserxiaowei
+  lang: zh
+  categories:
+    - start
+    - resources
+  summary_zh: 非官方中文实测教程站，覆盖 Linux/rpm 安装纠错、多 Bot 规则底座、Routine 只提案对照、云电脑自愈等；每篇附自截图与实跑结果，并标明来源帖。
+  summary_en: Unofficial Chinese hands-on tutorials covering Linux/rpm install fixes, multi-Bot harnesses, changelog-only Routine proposals, and box self-heal; each page includes original screenshots and run results with source credits.
+  verification_note_zh: 2026-10-27 公开只读打开首页与 /topics/fedora-rpm、/tutorials/bot-harness，确认 200 与标题；未在真实 Grok Bot 端到端复现全部流程。站方自荐（作者相关）；提交时设 ugc。
+  verification_note_en: On 2026-10-27 opened the homepage and /topics/fedora-rpm, /tutorials/bot-harness read-only (HTTP 200). Full end-to-end Bot runs were not reproduced here. Author-submitted (related); marked ugc.
+  tags:
+    - chinese
+    - tutorials
+    - linux
+    - multi-bot
+    - routines
+  apps: []
+  platform: website
+  submitted_by: siuserxiaowei
+  ugc: true
 - source: github
   status: alive
   evidence: author-reported
