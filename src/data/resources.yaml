@@ -1,4 +1,188 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- source: github
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: github-gamedesigner-grokdeck
+  url: https://github.com/gamedesigner/grokdeck
+  title: GrokDeck：分组、搜索与 iPhone 局域网配对
+  title_en: GrokDeck groups, search and local iPhone pairing
+  author: Ron Millar
+  author_en: Ron Millar
+  author_url: https://github.com/Gamedesigner
+  lang: en
+  categories:
+    - advanced
+    - resources
+  summary_zh: 独立客户端把 Bot 分组、置顶、会话搜索和电脑查看集中到一个工作区，并说明桌面助手与 iPhone 局域网配对步骤。使用既有登录账户，兼容版本与设备测试仍有限。
+  summary_en: An independent client groups and pins Bots, searches chats and opens computers, with a desktop-helper and local iPhone pairing guide. It uses an existing account; version and device coverage remain limited.
+  verification_note_zh: 独立读完整 README。它自述通过系统安全存储读取已登录账户，需持有解密后的会话凭据；这只是作者说明，未做凭据处理或安全审计。未下载、安装、配对或访问用户缓存。Mac/iPhone 验证及 Windows 未完成端到端测试均为作者自述；不把签名、CI 或版本兼容当本站实测。
+  verification_note_en: Read the full README. The author says its helper reads OS-protected account storage and holds decrypted session credentials; this was not audited. No download, install, pairing or user-cache access. Mac/iPhone checks and incomplete Windows testing are author reports, not our tests.
+  tags:
+    - client
+    - groups
+    - search
+    - ios
+    - local-network
+  apps:
+    - GrokDeck
+  platform: github
+- source: github
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: github-greedfi-me-layouts
+  url: https://github.com/greedfi/me-layouts
+  title: .me Bot 页面模板：九种布局与字段填充
+  title_en: Nine .me Bot page layouts with structured fill fields
+  author: greedfi
+  author_en: greedfi
+  author_url: https://github.com/greedfi
+  lang: en
+  categories:
+    - templates
+  summary_zh: 为 .me 链接聚合 Bot 提供九种页面布局，按头像、简介、Bot 卡片和链接数组填充，保留原有布局结构；Billboard 另有 Vercel 静态导出路径。作为一个模板集合收录。
+  summary_en: Nine .me Bot page layouts use structured profile, Bot-card and link fields while preserving layout code. Billboard also has a Vercel static export. Reviewed as one template collection.
+  verification_note_zh: 独立读完整 README，并静态核对 Stack 模板的 grok/canvas 导入、LAYOUT 标识和占位字段。未运行、渲染、安装 .me Bot 或部署 Vercel；没有检验其余八个模板实现、统计接口或完整安全性。缺少首发日期，不用仓库推送时间代替。
+  verification_note_en: Read the full README and checked the Stack source for its grok/canvas import, layout identifier and placeholders. No rendering, Bot install or Vercel deploy. Other layouts, analytics and security were not audited. Publication date is unknown.
+  tags:
+    - canvas
+    - templates
+    - profile
+    - links
+  apps:
+    - Vercel
+  platform: github
+- source: github
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: github-skyiimaple-agent-daily
+  url: https://github.com/skyiimaple/agent-daily
+  title: Bot 消息归档到 VitePress：分类日刊与 GitHub Pages
+  title_en: Archive Bot digests with VitePress and GitHub Pages
+  author: skyiimaple
+  author_en: skyiimaple
+  author_url: https://github.com/skyiimaple
+  lang: zh
+  categories:
+    - recipes
+  summary_zh: 将 Bot 早晚报、招聘和技术摘要按日期写入 Markdown，以固定字段归档，再用 VitePress 分类展示、GitHub Actions 构建并发布到 GitHub Pages。文档给出目录、文件名和部署约定。
+  summary_en: Archive Bot digests as dated Markdown with fixed metadata, render category pages in VitePress, and deploy through GitHub Actions to GitHub Pages. The docs specify paths and deployment settings.
+  verification_note_zh: 独立读完整根 README、content/README.md 和 web/README.md，确认源目录、frontmatter、URL 转换及部署约定。未执行仓库命令、部署站点或验证 Bot 自动提交、运行权限及生产结果；文中直推 main 是作者方案，不是本站采集授权。仓库首建/推送时间不作为教程首发日期。
+  verification_note_en: Read the root, content and web READMEs in full. Paths, metadata, URL mapping and deployment are documented. No code, Bot submission, access or production deployment was tested. The author’s direct-main policy is not authority for this site; publication date is unknown.
+  tags:
+    - archive
+    - markdown
+    - automation
+    - publishing
+  apps:
+    - GitHub
+    - VitePress
+    - GitHub Actions
+    - GitHub Pages
+    - Vercel
+  platform: github
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: x-eng-khairallah1-six-routines
+  url: https://x.com/eng_khairallah1/status/2114647320834810139
+  title: 六种 Routine 与 Skill：研发、来源包、收件箱和周复盘
+  author: Khairallah AL-Awady
+  author_url: https://x.com/eng_khairallah1
+  lang: en
+  published: 2026-10-26
+  categories:
+    - templates
+    - advanced
+  summary_zh: 六组提示词覆盖计划推进、发布雷达、来源包 Skill、客户截止跟踪、收件箱分类与周复盘；明确只起草、不代发，缺少来源时标记未核验，无事不通知。
+  summary_en: Six prompts cover build plans, launch radar, source packs, client deadlines, inbox triage and weekly reviews, with draft-only actions, explicit missing-source handling and quiet runs when nothing changes.
+  verification_note_zh: 铁柱已读全文和六个提示词；本轮也独立读完整 X 长文及六个代码块。第三项是按需 Skill，不是定时例程。每 Bot 50 条、额度池、无 dry-run 等转述未查官方，不作为本站事实；封面未看、工作流未复现。与同作者已收录服务交付指南不同。
+  verification_note_en: Tiezhu and Codex both read the full X article and six prompt blocks. The source pack is an on-demand skill. Quota, usage-pool and no-dry-run claims were not verified or adopted. Cover unseen; not reproduced. Distinct from the author’s service-delivery guide.
+  tags:
+    - routines
+    - skills
+    - prompts
+    - inbox
+    - research
+  title_en: Six routines and skills for builds, research, inboxes and reviews
+  author_en: Khairallah AL-Awady
+  apps: []
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: x-talkaboutdesign-mac-mini-t3-tailscale-mcp
+  url: https://x.com/talkaboutdesign/status/2114758152142877065
+  title: Tailscale 与 T3 Code MCP：让 Bot 在自己的 Mac 上编码
+  author: Max (@talkaboutdesign)
+  author_url: https://x.com/talkaboutdesign
+  lang: en
+  published: 2026-10-27
+  categories:
+    - advanced
+    - recipes
+  summary_zh: 作者将 Bot 云电脑加入 Tailscale 私网，经 T3 Code MCP 和 OAuth 连接 Mac 上的编码线程，并在本机不可达时停止。官方文档补充：远程登录需 HTTPS，连接只读权限不能启动线程。
+  summary_en: The author joins a Bot to a tailnet and routes coding to a Mac via T3 Code MCP and OAuth. T3 docs require HTTPS for remote sign-in; read-only connection access cannot start threads. Not reproduced.
+  verification_note_zh: 独立读完整八步 X 原帖，未看视频；另读 T3 维护者的 Outside agents 文档，核对 HTTPS/OAuth、授权范围与撤销。原帖的“只读线程”是任务模式，不等于连接只读授权；后者不能启动线程。未安装 Tailscale/T3、加入私网或授权。原附件日期为10-26，现按页面显示10-27纠正，不推测时区。
+  verification_note_en: Read the full eight-step post, not its video, plus T3’s Outside agents doc. HTTPS, OAuth and connection scope were checked; a read-only task is distinct from read-only connection access. No install or authorization. Date follows the visible Oct 27 label, correcting the collector’s Oct 26 without guessing time zones.
+  tags:
+    - mcp
+    - tailscale
+    - coding
+    - local-machine
+  apps:
+    - T3 Code
+    - Tailscale
+    - Claude Code
+    - Codex
+  title_en: Route Bot coding to a Mac through Tailscale and T3 Code MCP
+  author_en: Max (@talkaboutdesign)
+  platform: x
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  collection_batch: 2026-10-27-daily-0900-approved
+  id: x-thomas-jonesx-money-manager-guide
+  url: https://x.com/Thomas_JonesX/status/2114388207265538535
+  title: Finance 与 Plaid：订阅盘点、周报和账单提醒
+  author: Thomas Jones
+  author_url: https://x.com/Thomas_JonesX
+  lang: en
+  published: 2026-10-26
+  categories:
+    - recipes
+  summary_zh: 作者用 Finance/Plaid 盘点周期扣费，再建立财务页面、每周摘要和手机账单提醒；不自动取消服务。官方市场确认只读访问，也说明会同步并存储关联账户数据；完整流程未复现。
+  summary_en: The guide audits recurring charges with Finance/Plaid, then adds a dashboard, weekly digest and bill reminders without cancelling services. The official listing confirms read-only access and stored account data.
+  verification_note_zh: 铁柱及 Codex 独立读全文；Codex 另在官方市场搜索 Finance，读到完整公开权限说明：经 Plaid 只读接入，关联账户数据会同步/存储，可解除连接。未连接账户、读取财务数据或执行操作；Pages/手机 Reminders 端到端流程、图片及效果未验证。附件日期10-25，按原页显示10-26纠正。
+  verification_note_en: "Tiezhu and Codex read the article. Codex read Finance’s full public marketplace permission text: read-only Plaid access, synced/stored account data and unlinking. No account connection, financial-data access or actions. Pages/phone Reminders, images and results remain untested. Date corrected to the visible Oct 26 label."
+  tags:
+    - finance
+    - routines
+    - pages
+    - reminders
+  apps:
+    - Finance
+    - Plaid
+    - Reminders
+  title_en: Finance and Plaid for recurring-charge reviews and bill reminders
+  author_en: Thomas Jones
+  platform: x
 - id: github-quabug-grok-bot-mcp
   url: https://github.com/quabug/grok-bot-mcp
   title: MCP 工作站桥接：本地 stdio、远程 OAuth 与消息队列
