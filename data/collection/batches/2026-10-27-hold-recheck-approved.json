@@ -1,0 +1,214 @@
+{
+  "id": "2026-10-27-hold-recheck-approved",
+  "collected_at": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-27-hold-recheck-review",
+  "source_review_sha256": "62f4044aa87edaf8e4a16037362e977d1eac7448c80040b13ac17fbbfd40e243",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-27",
+    "approved_ids": [
+      "x-daodao-agent-bridge-route-map",
+      "x-xwirenr-email-preflight-check",
+      "x-niuonai-bot-operating-model"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月27日复核后建议收录的3条，导入并发布。",
+    "scope_zh": "仅本次hold-recheck-review建议的3条：桥接路线对照、邮件检查单集、运行模型图解。其余3条hold、邮件系列其他视频、历史未审批次及未来增量均不在授权范围。"
+  },
+  "baseline": {
+    "head": "ceab3b4491b83f4f526c96caa9b5da5b5e849c55",
+    "catalog_count": 225,
+    "resources_sha256": "41fbc5b08d185ef2b80b2608db6f0eb57222a44f31eb1d23bb01664c5944495a"
+  },
+  "editorial_note_zh": "逐字保留用户已审阅的标题、双语摘要、分类、应用、署名、日期与核验限制。原审核候选与预览保持原样，不随本次提交；不将抽样画面核验或第三方文档核对升级为完整观看、实测或现行安装步骤。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-27-daily-0900-review",
+        "url": "https://x.com/daodao166888/status/2114726024827277639"
+      },
+      "checked_at": "2026-10-27",
+      "verification_actor": "Codex 本轮独立只读核验；未向铁柱发送消息或触发采集",
+      "reason": "补齐原项目归属、工作方向、接入条件及限制，纠正原交接“四种”为8节汇编。按一篇有明确过时提示的中文路线索引送审，不作为官方插件、现行安装教程或8个独立案例。",
+      "resource": {
+        "id": "x-daodao-agent-bridge-route-map",
+        "url": "https://x.com/daodao166888/status/2114726024827277639",
+        "title": "Grok Bot 桥接路线对照：Webhook、桌面桥与共享消息板",
+        "title_en": "Grok Bot handoff routes: webhooks, desktop bridges and shared boards",
+        "author": "刀刀 (@daodao166888)",
+        "source": "x",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "apps": [
+          "ChatGPT",
+          "Claude Code",
+          "Cursor",
+          "Codex",
+          "Crosswalk"
+        ],
+        "summary_zh": "按任务方向比较Webhook模板、桌面CLI、反向调用和共享消息板，并链接原项目。作为路线索引收录；原文部分BDK命令已过时，不能当作当前安装步骤。",
+        "summary_en": "A route map compares webhook templates, desktop CLIs, reverse handoffs and shared boards, linking their source projects. Some BDK commands are outdated; this is a reference, not a current installation guide.",
+        "verification_note_zh": "已读8节原文，核对两个桥接仓库README、Grok Bridge alpha和Crosswalk公开说明。官方已将@cursor/bdk更名为@grok/agent-sdk；未确认原文grokbot-agents模板和attachMCP命令仍可用。仅收比较索引，未安装、审计或验证兼容性。",
+        "verification_note_en": "Read all eight sections, two bridge READMEs, Grok Bridge alpha and Crosswalk docs. Official docs renamed @cursor/bdk to @grok/agent-sdk; grokbot-agents and attachMCP claims remain unverified. Reference only: no install, audit or compatibility test.",
+        "evidence": "editorial",
+        "status": "alive",
+        "added": "2026-10-27",
+        "checked_at": "2026-10-27",
+        "published": "2026-10-26",
+        "author_en": "Daodao (@daodao166888)"
+      },
+      "source_checks": [
+        {
+          "url": "https://x.com/daodao166888/status/2114726024827277639",
+          "scope_zh": "完整8节长文；核对作者、2026-10-26日期和所引项目链接。"
+        },
+        {
+          "url": "https://github.com/TheSethRose/grokbot-bridge",
+          "scope_zh": "完整README：本地桌面CLI/MCP，Node22、已登录桌面，依赖内部状态和本地调试端口；非官方，非安全审计。"
+        },
+        {
+          "url": "https://github.com/anup-a/grok-bot-bridge",
+          "scope_zh": "完整README：Bridge Bot、Bearer Webhook、gbb ask/run、local execution、allowedRoots与权限边界；只读，未执行。"
+        },
+        {
+          "url": "https://niharnm.github.io/grok-bridge/",
+          "scope_zh": "维护者alpha说明：8个配置方向只有3个声称有实测记录，依赖实验性社区CLI；未把维护者自测视作本站验证。"
+        },
+        {
+          "url": "https://crosswalk.to/",
+          "scope_zh": "维护者共享消息板/MCP公开说明；未注册、连接或拿密钥。"
+        },
+        {
+          "url": "https://crosswalk.to/agents/grok-bot-and-claude-code",
+          "scope_zh": "公开双助手说明页，用于核对共享记录路径。"
+        },
+        {
+          "url": "https://cursor.com/docs/agent-sdk",
+          "scope_zh": "官方当前包名为@grok/agent-sdk，说明此前叫@cursor/bdk；未证实汇编中的grokbot-agents和attachMCP接口。"
+        }
+      ],
+      "verified_via": "page",
+      "relevance": "Grok Bot与外部编码助手的任务交接路线比较。",
+      "overlap_note_zh": "Bridge模板部分归于Moritz原作，Crosswalk部分与10月24日待审批次的crosswalk-grok-bot-shared-handoff重合，仅作为此比较文章的引用；二者不另增条目。比较文章本身与单项目设置教程不同。",
+      "limitations_zh": "Lark和通用Agent框架仅核对到汇编提及，未核验其Grok Bot具体接入；不据此标注已兼容或可用。第三方仓库的安装、放宽权限和技能指令没有执行。"
+    },
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-27-daily-0900-review",
+        "url": "https://x.com/XWireNR/status/2114424013493768630"
+      },
+      "checked_at": "2026-10-27",
+      "verification_actor": "Codex 本轮独立只读核验；未向铁柱发送消息或触发采集",
+      "reason": "原帖原有标题之外，现已核对视频中完整可见的发送前检查项。限定为这一单集的作者经验案例，不宣称系统层面保证阻断，也不把同系列其余视频批量转为通过。",
+      "resource": {
+        "id": "x-xwirenr-email-preflight-check",
+        "url": "https://x.com/XWireNR/status/2114424013493768630",
+        "title": "邮件发送前检查：收件人、正文与附件齐全才继续",
+        "title_en": "An email preflight checklist for recipients, content and attachments",
+        "author": "Dean Stuart (@XWireNR)",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "apps": [],
+        "summary_zh": "作者用单集视频展示发送前核对收件人、主题、正文和附件，出现占位符或缺项就停下。只收这集检查思路；未验证其硬性拦截机制，也不代表整套系列已核验。",
+        "summary_en": "One episode checks recipients, subject, body and attachments before sending, stopping for placeholders or missing items. This is the author’s checklist, not a verified technical guarantee or review of the whole series.",
+        "verification_note_zh": "已读原帖并抽查1:11视频约0:23、0:33、0:47和结尾画面，检查清单可读。无可读取字幕轨道，未逐秒观看或核听完整音频；作者说明为本人AI克隆配音。站点链接返回404；未测试发送、审计拦截实现或验证其他集。",
+        "verification_note_en": "Read the post and sampled the 1:11 clip at about 0:23, 0:33, 0:47 and its ending. No text-track captions or full audiovisual review. The author labels the voice as their AI clone. Linked site returned 404; no send test, guard audit or other-episode review.",
+        "evidence": "author-reported",
+        "status": "alive",
+        "added": "2026-10-27",
+        "checked_at": "2026-10-27",
+        "published": "2026-10-26"
+      },
+      "source_checks": [
+        {
+          "url": "https://x.com/XWireNR/status/2114424013493768630",
+          "scope_zh": "读取署名、正文、2026-10-26日期与公开视频画面：收件人/主题/正文、所有附件、占位符或缺项即停止。"
+        },
+        {
+          "url": "https://boardmarker.net/grokbot.html",
+          "scope_zh": "原帖和视频结尾均引用此作者页；正常浏览器打开短链落到404，Web抓取也不可用，不作为已读正文。"
+        }
+      ],
+      "verified_via": "page",
+      "relevance": "Grok Bot邮件任务的发送前校验与停止条件。",
+      "verification_method": "public-post-and-selected-video-frames",
+      "residual_scope_zh": "原hold以本帖代表一个视频系列；本轮建议仅适用于此链接的邮件检查单集。其余同系列合并链接仍未取得充分方法证据，继续待核验，未拆分计入本轮6个目标或新增推荐。"
+    },
+    {
+      "decision": "publish",
+      "recheck_of": {
+        "batch_id": "2026-10-27-daily-0900-review",
+        "url": "https://x.com/NiuOnAI/status/2114560315203715297"
+      },
+      "checked_at": "2026-10-27",
+      "verification_actor": "Codex 本轮独立只读核验；未向铁柱发送消息或触发采集",
+      "reason": "原hold缺少视频内的方法；本轮已直接核对多个章节的可读图示，并用官方资料交叉验证共享电脑/本地权限、审批、技能例程与单一负责人交接。按概念图解送审，保留抽样观看限制。",
+      "resource": {
+        "id": "x-niuonai-bot-operating-model",
+        "url": "https://x.com/NiuOnAI/status/2114560315203715297",
+        "title": "Grok Bot 运行模型图解：共享电脑、审批与例程交接",
+        "title_en": "Grok Bot operating model: shared computers, approvals and routine handoffs",
+        "author": "Jason Niu · Agent Field Notes (@NiuOnAI)",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "apps": [
+          "Slack",
+          "GitHub"
+        ],
+        "summary_zh": "用图示区分共享云电脑与本地执行权限，解释记忆、审批、先出草稿、Skill与Routine，以及分阶段交接。已抽查关键画面并对照官方说明；未完整核听或实测。",
+        "summary_en": "Diagrams cover shared cloud computers, local access, memory, approvals, drafts, skills, routines and staged handoffs. Key frames were checked against official docs; no full audio review or hands-on test.",
+        "verification_note_zh": "已读原帖并抽查6:53视频的本地权限、记忆、审批、草稿、Skill、Routine、事件和交接图示；逐项对照相关官方文档。未取得字幕轨道或下载媒体，未逐秒观看、完整核听或实测；图示额度数字、所有集成兼容性不作承诺。",
+        "verification_note_en": "Read the post and sampled key frames from the 6:53 explainer, cross-checking the cited official docs. No text-track captions, successful media download, frame-by-frame/full audio review or reproduction. Usage illustrations and integration coverage are not guarantees.",
+        "evidence": "author-reported",
+        "status": "alive",
+        "added": "2026-10-27",
+        "checked_at": "2026-10-27",
+        "published": "2026-10-26"
+      },
+      "source_checks": [
+        {
+          "url": "https://x.com/NiuOnAI/status/2114560315203715297",
+          "scope_zh": "原帖、作者、2026-10-26；抽查约0:45本地权限、1:30/1:44记忆、2:15审批、3:00草稿、3:45技能、4:30例程、5:15事件、6:00交接、6:35产物图示。非完整观看或音轨转录。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+          "scope_zh": "账户级共享电脑、文件与登录；与单独本地执行能力区分。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+          "scope_zh": "本地执行设置、Ask first优先及后台审批过期规则；未修改用户设置。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "技能内容结构、共享技能库、例程负责人/时区/输入/输出/缺源规则与窄事件触发。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/team-bots",
+          "scope_zh": "核对团队记忆与每人私有会话范围；不当成个人Bot各自隔离电脑。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+          "scope_zh": "发送前草稿、明确分工和单一阶段负责人；未发送任何消息。"
+        }
+      ],
+      "verified_via": "page",
+      "relevance": "Grok Bot入门与进阶使用中的权限、技能例程和协作模型。",
+      "verification_method": "public-post-and-selected-video-frames-with-official-crosscheck"
+    }
+  ]
+}

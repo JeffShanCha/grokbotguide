@@ -1,0 +1,13 @@
+{
+  "batch_id": "2026-10-27-hold-recheck-approved",
+  "date": "2026-10-27",
+  "added": [
+    "x-daodao-agent-bridge-route-map",
+    "x-xwirenr-email-preflight-check",
+    "x-niuonai-bot-operating-model"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}

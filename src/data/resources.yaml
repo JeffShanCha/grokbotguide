@@ -89,6 +89,34 @@
     - GitHub Pages
     - Vercel
   platform: github
+- id: x-daodao-agent-bridge-route-map
+  url: https://x.com/daodao166888/status/2114726024827277639
+  title: Grok Bot 桥接路线对照：Webhook、桌面桥与共享消息板
+  title_en: "Grok Bot handoff routes: webhooks, desktop bridges and shared boards"
+  author: 刀刀 (@daodao166888)
+  source: x
+  lang: zh
+  categories:
+    - advanced
+    - resources
+  apps:
+    - ChatGPT
+    - Claude Code
+    - Cursor
+    - Codex
+    - Crosswalk
+  summary_zh: 按任务方向比较Webhook模板、桌面CLI、反向调用和共享消息板，并链接原项目。作为路线索引收录；原文部分BDK命令已过时，不能当作当前安装步骤。
+  summary_en: A route map compares webhook templates, desktop CLIs, reverse handoffs and shared boards, linking their source projects. Some BDK commands are outdated; this is a reference, not a current installation guide.
+  verification_note_zh: 已读8节原文，核对两个桥接仓库README、Grok Bridge alpha和Crosswalk公开说明。官方已将@cursor/bdk更名为@grok/agent-sdk；未确认原文grokbot-agents模板和attachMCP命令仍可用。仅收比较索引，未安装、审计或验证兼容性。
+  verification_note_en: "Read all eight sections, two bridge READMEs, Grok Bridge alpha and Crosswalk docs. Official docs renamed @cursor/bdk to @grok/agent-sdk; grokbot-agents and attachMCP claims remain unverified. Reference only: no install, audit or compatibility test."
+  evidence: editorial
+  status: alive
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  published: 2026-10-26
+  author_en: Daodao (@daodao166888)
+  platform: x
+  collection_batch: 2026-10-27-hold-recheck-approved
 - source: x
   status: alive
   evidence: author-reported
@@ -119,6 +147,30 @@
   author_en: Khairallah AL-Awady
   apps: []
   platform: x
+- id: x-niuonai-bot-operating-model
+  url: https://x.com/NiuOnAI/status/2114560315203715297
+  title: Grok Bot 运行模型图解：共享电脑、审批与例程交接
+  title_en: "Grok Bot operating model: shared computers, approvals and routine handoffs"
+  author: Jason Niu · Agent Field Notes (@NiuOnAI)
+  source: x
+  lang: en
+  categories:
+    - start
+    - advanced
+  apps:
+    - Slack
+    - GitHub
+  summary_zh: 用图示区分共享云电脑与本地执行权限，解释记忆、审批、先出草稿、Skill与Routine，以及分阶段交接。已抽查关键画面并对照官方说明；未完整核听或实测。
+  summary_en: Diagrams cover shared cloud computers, local access, memory, approvals, drafts, skills, routines and staged handoffs. Key frames were checked against official docs; no full audio review or hands-on test.
+  verification_note_zh: 已读原帖并抽查6:53视频的本地权限、记忆、审批、草稿、Skill、Routine、事件和交接图示；逐项对照相关官方文档。未取得字幕轨道或下载媒体，未逐秒观看、完整核听或实测；图示额度数字、所有集成兼容性不作承诺。
+  verification_note_en: Read the post and sampled key frames from the 6:53 explainer, cross-checking the cited official docs. No text-track captions, successful media download, frame-by-frame/full audio review or reproduction. Usage illustrations and integration coverage are not guarantees.
+  evidence: author-reported
+  status: alive
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  published: 2026-10-26
+  platform: x
+  collection_batch: 2026-10-27-hold-recheck-approved
 - source: x
   status: alive
   evidence: author-reported
@@ -183,6 +235,28 @@
   title_en: Finance and Plaid for recurring-charge reviews and bill reminders
   author_en: Thomas Jones
   platform: x
+- id: x-xwirenr-email-preflight-check
+  url: https://x.com/XWireNR/status/2114424013493768630
+  title: 邮件发送前检查：收件人、正文与附件齐全才继续
+  title_en: An email preflight checklist for recipients, content and attachments
+  author: Dean Stuart (@XWireNR)
+  source: x
+  lang: en
+  categories:
+    - recipes
+    - advanced
+  apps: []
+  summary_zh: 作者用单集视频展示发送前核对收件人、主题、正文和附件，出现占位符或缺项就停下。只收这集检查思路；未验证其硬性拦截机制，也不代表整套系列已核验。
+  summary_en: One episode checks recipients, subject, body and attachments before sending, stopping for placeholders or missing items. This is the author’s checklist, not a verified technical guarantee or review of the whole series.
+  verification_note_zh: 已读原帖并抽查1:11视频约0:23、0:33、0:47和结尾画面，检查清单可读。无可读取字幕轨道，未逐秒观看或核听完整音频；作者说明为本人AI克隆配音。站点链接返回404；未测试发送、审计拦截实现或验证其他集。
+  verification_note_en: Read the post and sampled the 1:11 clip at about 0:23, 0:33, 0:47 and its ending. No text-track captions or full audiovisual review. The author labels the voice as their AI clone. Linked site returned 404; no send test, guard audit or other-episode review.
+  evidence: author-reported
+  status: alive
+  added: 2026-10-27
+  checked_at: 2026-10-27
+  published: 2026-10-26
+  platform: x
+  collection_batch: 2026-10-27-hold-recheck-approved
 - id: github-quabug-grok-bot-mcp
   url: https://github.com/quabug/grok-bot-mcp
   title: MCP 工作站桥接：本地 stdio、远程 OAuth 与消息队列
