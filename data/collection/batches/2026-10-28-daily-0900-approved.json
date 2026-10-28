@@ -1,0 +1,448 @@
+{
+  "id": "2026-10-28-daily-0900-approved",
+  "collected_at": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-28-daily-0900-review",
+  "source_review_sha256": "5bcc350c361ed2f44bdca3efabb29a75e1414078af9761b97b1b65ff04a41ee0",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-28",
+    "approved_ids": [
+      "github-bostonaholic-unattended-routines-triggers",
+      "github-fal3-grokbot-jev-skills",
+      "github-wchengyen-feishu-grokbot-bridge",
+      "linuxdo-coneyisland-herdr-pi-handoff",
+      "reddit-harnessingattention-tiktok-slideshows",
+      "x-ryangrowthh-x-money-six-paths",
+      "x-kocer-eth-reusable-workflow-harness",
+      "x-nicholasdulait-seo-bot-team",
+      "x-achievedinc-shared-doc-assistant-handoff",
+      "x-arch-l33t-small-team-morning-paper"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月28日复核后建议收录的，导入并发布。",
+    "scope_zh": "仅上一轮送审的2026-10-28-daily-0900-review中10条建议收录内容。另3条hold、64条收集器初筛排除、其他历史待审批次及未来增量均不在授权范围。"
+  },
+  "baseline": {
+    "head": "9d3e69cb56bf5fd615c3cf805b44409e4821b956",
+    "catalog_count": 228,
+    "resources_sha256": "e779b6ec36cd83bfdd38ce19d680c69e8e476aa93c43ddda1fec8b2d9b9a2849"
+  },
+  "editorial_note_zh": "保留已审阅标题、双语摘要、分类、应用、署名、日期与核验限制；更新内部collection_batch，并为ConeyIsland补充author_en以避免英文页出现中文别名。原审核批次和预览保持原样、不随本次提交；未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "可定位到具体 Skill 文件，包含输入缺失、幂等和人工审批交付规则。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://github.com/bostonaholic/grokbot-skills",
+          "scope_zh": "根 README 全文。"
+        },
+        {
+          "url": "https://github.com/bostonaholic/grokbot-skills/blob/main/skills/running-unattended-routines-and-triggers/SKILL.md",
+          "scope_zh": "完整技能文本；仅静态阅读。"
+        }
+      ],
+      "resource": {
+        "id": "github-bostonaholic-unattended-routines-triggers",
+        "url": "https://github.com/bostonaholic/grokbot-skills/blob/main/skills/running-unattended-routines-and-triggers/SKILL.md",
+        "title": "无人值守 Routine Skill：缺失输入、幂等与待审交付",
+        "title_en": "Unattended routines: missing inputs, idempotency and review handoffs",
+        "author": "bostonaholic",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "templates",
+          "advanced"
+        ],
+        "apps": [],
+        "summary_zh": "提供无人值守任务的设计清单：写明时区和交付位置，缺输入时停止相关步骤，以幂等检查减少重复，并把需审批的动作保留为待审草稿；触发器限定来源和去重窗口。",
+        "summary_en": "A Skill checklist for unattended jobs: specify timezone and outputs, handle missing inputs, avoid duplicate actions, and leave approval-dependent work as drafts. Triggers use narrow sources and deduplication.",
+        "verification_note_zh": "独立读根 README 和本条 SKILL.md 全文。未安装技能、执行脚本或测试例程；文中的审批过期时长和安装入口未独立验证，不作为产品保证。每周触发次数建议是作者经验。此条关注任务创建与交付设计，不重复既有例程健康检查/周期审计。",
+        "verification_note_en": "Read the root README and this full Skill. No installation, code execution or routine testing. Approval expiry and UI details remain unverified; frequency thresholds are heuristics, not product limits.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "有可定位实现和明确失败路径，区别于既有 Jev 分类思路介绍。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://github.com/fal3/grokbot-jev-skills",
+          "scope_zh": "完整 README，含上游署名、外部依赖和回退说明。"
+        },
+        {
+          "url": "https://github.com/fal3/grokbot-jev-skills/blob/main/skills/jev-routine-wake/SKILL.md",
+          "scope_zh": "完整 Routine wake Skill；没有执行。"
+        }
+      ],
+      "resource": {
+        "id": "github-fal3-grokbot-jev-skills",
+        "url": "https://github.com/fal3/grokbot-jev-skills",
+        "title": "Jev 决策 Skill 集：例程通知、分类与本地失败处理",
+        "title_en": "Jev decision Skills for routine notifications and local failure handling",
+        "author": "Alex Fallah（fal3）",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Jev",
+          "TypeSafe"
+        ],
+        "summary_zh": "把搜索、消息分流和例程通知等十类任务整理成 Grok Bot Skill。例程通知样例先比较本地状态，再为模糊情况请求外部判断，明确本地强制提醒和失败处理的优先级。",
+        "summary_en": "Ten Grok Bot Skills cover triage and routine decisions. The routine-wake example compares local state first, requests external advice for ambiguous cases, and retains mandatory local alerts and failure rules.",
+        "verification_note_zh": "读完整 README 与 jev-routine-wake/SKILL.md，其余九项只核目录说明。仓库注明改编自 kerpopule/hermes-jev-skills、署名 Steve Darlow。涉及外部 API 和可选回退提供商；未安装、调用或验证成本、分类质量、脱敏与隐私隔离。技能文字不等于强制权限控制。",
+        "verification_note_en": "Read the README and full routine-wake Skill; only catalog descriptions for the other nine. The repo credits Steve Darlow and hermes-jev-skills. No external calls, install, cost, quality or privacy tests; instructions are not enforced controls.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文原作给出具体桥接协议与故障边界，可作为需自行审计的集成资料。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://github.com/wchengyen/feishu-grokbot-bridge",
+          "scope_zh": "完整 README；中文与英文部分合为同一作品。"
+        },
+        {
+          "url": "https://github.com/wchengyen/feishu-grokbot-bridge/blob/main/docs/security.md",
+          "scope_zh": "完整安全边界说明。"
+        },
+        {
+          "url": "https://github.com/wchengyen/feishu-grokbot-bridge/blob/main/docs/protocol.md",
+          "scope_zh": "完整消息、任务与 outbox 协议。"
+        }
+      ],
+      "resource": {
+        "id": "github-wchengyen-feishu-grokbot-bridge",
+        "url": "https://github.com/wchengyen/feishu-grokbot-bridge",
+        "title": "飞书长连接桥接：白名单、任务编号与结果回传",
+        "title_en": "Feishu bridge with allowlists, task IDs and result delivery",
+        "author": "wchengyen",
+        "source": "github",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Feishu"
+        ],
+        "summary_zh": "通过飞书长连接接收消息，经白名单检查后触发 Grok Bot Routine Webhook，再按任务编号从本地 outbox 回传进度和结果。文档说明单实例运行、重试、健康检查与附件处理。",
+        "summary_en": "A Feishu long-connection bridge checks allowlists, invokes a Grok Bot Routine webhook, and returns outbox progress and results by task ID. The docs cover retries, single-instance operation and attachments.",
+        "verification_note_zh": "读完整 README、security.md 与 protocol.md；未运行或做代码安全审计。2xx 表示接收，不代表执行完成，重试可能重复触发。相同电脑上的环境变量/文件不是 Bot 隔离；outbox 可指定桥接进程有权读取的任意绝对路径附件。群聊 @ 校验受 botOpenID 配置影响。",
+        "verification_note_en": "Read the README, security and protocol docs, without running or auditing code. 2xx means accepted; retries may duplicate runs. Same-machine files are not isolation. Outbox attachments may reference any readable absolute path; mention checks depend on botOpenID.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文原创组合案例，应用和双向职责具体；明确缺少完整部署材料。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://linux.do/t/topic/3080214",
+          "scope_zh": "阅读首帖及整串作者补充，确认 Herdr send prompt、自写 Pi 完成插件、Tailscale 与会话标记。未取得插件源码或完整部署配置，按架构案例收录，未复现；herdsman 兼容性只是作者推测，不采纳为结论。"
+        }
+      ],
+      "resource": {
+        "id": "linuxdo-coneyisland-herdr-pi-handoff",
+        "url": "https://linux.do/t/topic/3080214",
+        "title": "Grok Bot × Herdr × Pi：派发提示词与完成通知分工",
+        "title_en": "Grok Bot, Herdr and Pi: dispatch prompts and return completion notices",
+        "author": "ConeyIsland（科尼岛）",
+        "source": "forum",
+        "lang": "zh",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "apps": [
+          "Herdr",
+          "Pi",
+          "Tailscale"
+        ],
+        "summary_zh": "作者用 Grok Bot 经 Herdr 向 Pi 派发提示词，再由自写插件把完成消息回传。后续说明补充本地与远端 Windows 的连接方式，以及机器名和会话标记，减少多 Agent 消息混淆。",
+        "summary_en": "The author dispatches prompts from Grok Bot through Herdr to Pi, then returns completion webhooks via a custom plugin. Follow-ups describe remote Windows access and machine/session labels for routing.",
+        "verification_note_zh": "阅读首帖及整串作者补充，确认 Herdr send prompt、自写 Pi 完成插件、Tailscale 与会话标记。未取得插件源码或完整部署配置，按架构案例收录，未复现；herdsman 兼容性只是作者推测，不采纳为结论。",
+        "verification_note_en": "Read the original post and author follow-ups. Herdr dispatch, a custom Pi completion plugin, Tailscale and session labels are described. Plugin source and full setup are unavailable; no reproduction or herdsman compatibility verification.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-27",
+        "author_en": "ConeyIsland"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者说明示范式教学与具体图文产物，与其他带货视频案例不是同一作品。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://www.reddit.com/r/GrokBot/comments/1xgikbm/how_i_automated_distribution_with_grok_bot/",
+          "scope_zh": "读完整原帖正文，未观看附图或复现。仅确认作者描述资料整理与图文生成，不据此声称自动上传 TikTok。耗时、播放量和费用均为作者自述，未核实；图片使用权未核验。页面相对日期与搜索时间不一致，首发日期留空。"
+        }
+      ],
+      "resource": {
+        "id": "reddit-harnessingattention-tiktok-slideshows",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1xgikbm/how_i_automated_distribution_with_grok_bot/",
+        "title": "示范式教学案例：餐厅资料整理与 TikTok 图文制作",
+        "title_en": "Teaching a restaurant-research and TikTok slideshow workflow",
+        "author": "u/harnessingattention",
+        "source": "forum",
+        "lang": "en",
+        "categories": [
+          "recipes"
+        ],
+        "apps": [
+          "TikTok",
+          "Google Search",
+          "Pinterest"
+        ],
+        "summary_zh": "作者先示范自己的图文制作流程，再让 Grok Bot 整理城市餐厅的位置、照片和页面素材，按固定结构制作 TikTok 幻灯片。案例强调视觉偏好需要通过示范传达。",
+        "summary_en": "The author demonstrates a repeatable restaurant slideshow workflow, then uses Grok Bot to gather location and image material and assemble TikTok slides. Visual preferences are taught through examples.",
+        "verification_note_zh": "读完整原帖正文，未观看附图或复现。仅确认作者描述资料整理与图文生成，不据此声称自动上传 TikTok。耗时、播放量和费用均为作者自述，未核实；图片使用权未核验。页面相对日期与搜索时间不一致，首发日期留空。",
+        "verification_note_en": "Read the full original post, without viewing images or reproducing it. It supports research and slideshow creation, not verified automatic uploading. Time, views, costs and image rights are unverified; exact publication date is unknown.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原作给出多类具体提示词，并与作者其他内容团队作品区分。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/ryangrowthh/status/2114730076197798214",
+          "scope_zh": "通过正常浏览器读文章全文及十四段提示词；Web 抓取曾返回403。未看配图、验证模板或实测收益。求职段的共享记忆假设未当作通用能力；主要记录可复用方法。与同作者既有 X 内容团队文章不同；转述合并依据铁柱交接，未逐帖复核。"
+        }
+      ],
+      "resource": {
+        "id": "x-ryangrowthh-x-money-six-paths",
+        "url": "https://x.com/ryangrowthh/status/2114730076197798214",
+        "title": "X 内容与服务交付：六类工作流和十四段提示词",
+        "title_en": "Six X content and service workflows with fourteen prompts",
+        "author": "Ryan（@ryangrowthh）",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "X"
+        ],
+        "summary_zh": "围绕内容获客、潜客筛选、赞助商研究、服务模板、技能访谈和求职准备给出六类流程与十四段提示词。部分任务先生成候选或草稿，把联系他人和提交申请留待人工确认。",
+        "summary_en": "Six workflows and fourteen prompts cover content funnels, leads, sponsors, reusable service setups, skill interviews and job preparation. Several stop at drafts before outreach or application submission.",
+        "verification_note_zh": "通过正常浏览器读文章全文及十四段提示词；Web 抓取曾返回403。未看配图、验证模板或实测收益。求职段的共享记忆假设未当作通用能力；主要记录可复用方法。与同作者既有 X 内容团队文章不同；转述合并依据铁柱交接，未逐帖复核。",
+        "verification_note_en": "Read the full article and fourteen prompts in the normal browser after a web-fetch 403. No image, template, earnings or runtime verification. Shared-memory assumptions are not treated as universal facts. Merged promotional posts rely on Tiezhu’s handoff.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-26"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_reason": "X 长文全文已读（plain_text 与 article.entities.code 中 14 段提示词），给出 6 条变现路径的分步做法与可复制提示词（漏斗配比、主页审计、Lead Scout、模板化转售、技能访谈、求职 Agent），属具体可操作方法。",
+      "handoff_original_published": "2026-10-26"
+    },
+    {
+      "decision": "publish",
+      "reason": "有输入分层、复测和分享检查的完整方法链。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/kocer_eth/status/2114717055467335980",
+          "scope_zh": "正常浏览器阅读全文和六段提示词。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "核对官方按技能名称调用的说明；不把界面差异省略。"
+        }
+      ],
+      "resource": {
+        "id": "x-kocer-eth-reusable-workflow-harness",
+        "url": "https://x.com/kocer_eth/status/2114717055467335980",
+        "title": "把成功任务保存为 Skill：复测、例程与模板分享",
+        "title_en": "Save a successful workflow as a Skill, retest and share it",
+        "author": "kocer（@kocer_eth）",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [],
+        "summary_zh": "从一次成功的产品比较任务提炼 Skill，将长期偏好与本次输入分开保存，再用换产品、缺预算和中断续跑等情况复测。确认方法可复用后，再考虑例程与去除私人信息的模板分享。",
+        "summary_en": "Extract a Skill from a successful comparison task, separate lasting preferences from run inputs, and retest with new products, missing budgets and interrupted runs before proposing routines or shared templates.",
+        "verification_note_zh": "读全文十节与六段提示词，并核对今日官方技能文档。作者提到的斜杠菜单与官方当前按名称调用的说明不同，界面以当前版本为准。未执行、观看配图/引用视频或验证分享模板；与作者月度审计和其他作者保存 Skill 文章不是同一作品。",
+        "verification_note_en": "Read all ten sections and six prompts, plus official Skill docs. The article’s slash-menu instruction differs from current name-based invocation. No execution, images, quoted video or template verification; this is distinct from monthly audits.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-26"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_reason": "X 长文全文已读（plain_text 与 article.entities.code 中 6 段提示词），以三款产品对比为例给出把成功任务沉淀为 Skill、换输入复测、按需加 Routine、打包模板分享的完整步骤和提示词，属具体可操作方法。",
+      "handoff_original_published": "2026-10-26"
+    },
+    {
+      "decision": "publish",
+      "reason": "岗位、输入、调度和审批分工具体，商业依赖与效果限制已标明。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/NicholasDulait/status/2114974490694242771",
+          "scope_zh": "读完整文章与三段提示词；ChatSEO 为作者关联商业服务，套餐和 MCP 权限未向供应商另核。配图未观看，作者说明截图来自 ChatSEO 客户而非这套 Bot 的效果证明。未连接 Google Search Console/WordPress、授权或实测；审批超时说法未独立核实。"
+        }
+      ],
+      "resource": {
+        "id": "x-nicholasdulait-seo-bot-team",
+        "url": "https://x.com/NicholasDulait/status/2114974490694242771",
+        "title": "四岗位 SEO 团队：数据看板、定时草稿与发布审批",
+        "title_en": "A four-role SEO team for dashboards, scheduled drafts and approvals",
+        "author": "Nicholas Dulait（@NicholasDulait）",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "recipes"
+        ],
+        "apps": [
+          "ChatSEO",
+          "Google Search Console",
+          "WordPress"
+        ],
+        "summary_zh": "把 SEO 工作拆成协调、数据分析、写作和旧文更新四个岗位，经 ChatSEO MCP 取数并维护状态看板。任务按日或周运行，发布、改站点与重定向等动作留给人工审批。",
+        "summary_en": "Split SEO work into coordinator, analyst, writer and refresher roles, using ChatSEO MCP data and a status board. Schedule daily or weekly work, with human approval for publishing, site changes and redirects.",
+        "verification_note_zh": "读完整文章与三段提示词；ChatSEO 为作者关联商业服务，套餐和 MCP 权限未向供应商另核。配图未观看，作者说明截图来自 ChatSEO 客户而非这套 Bot 的效果证明。未连接 Google Search Console/WordPress、授权或实测；审批超时说法未独立核实。",
+        "verification_note_en": "Read the article and three prompts. ChatSEO is the author’s commercial service; plans and MCP access were not independently verified. Images were not viewed and are not proof of this Bot setup. No account connections, authorization or runtime tests.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-27"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_reason": "X 长文全文已读（plain_text 与 article.entities.code 中 3 段提示词），给出 SEO 多 Bot 团队的分工、Routine 节奏、人工审批边界和五天搭建顺序，属具体可操作方法；作者推广自家 ChatSEO MCP（需付费 Pro 套餐），已在核验说明中披露利益相关。",
+      "handoff_original_published": "2026-10-27"
+    },
+    {
+      "decision": "publish",
+      "reason": "交接格式与状态约定清楚，是跨应用协作的具体案例。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/AchievedInc/status/2115234333589905665",
+          "scope_zh": "正常浏览器读取完整五步原帖；两侧访问 Drive 是作者前提，不代表本站已授权或验证。未读取私人文档、配置权限或复现实验，作者对效率的自述未验证；与资料库中的 Google Docs 索引案例用途不同。"
+        }
+      ],
+      "resource": {
+        "id": "x-achievedinc-shared-doc-assistant-handoff",
+        "url": "https://x.com/AchievedInc/status/2115234333589905665",
+        "title": "Grok Bot 与 Muse 交接：共享文档、负责人和完成标记",
+        "title_en": "Grok Bot and Muse handoffs through a shared document",
+        "author": "AchievedOps（@AchievedInc）",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "apps": [
+          "Muse",
+          "Google Docs",
+          "Google Drive"
+        ],
+        "summary_zh": "把 Grok Bot 与 Muse 的交接写入同一份 Google 文档，逐条标注时间、作者、待答对象和完成状态。双方读取未关闭事项并追加更新，减少往返转述；原作要求避免把秘密写进日志。",
+        "summary_en": "Use a shared Google document for Grok Bot and Muse handoffs, labeling time, author, open questions and completion. Each assistant reads outstanding items and appends updates; the author excludes secrets.",
+        "verification_note_zh": "正常浏览器读取完整五步原帖；两侧访问 Drive 是作者前提，不代表本站已授权或验证。未读取私人文档、配置权限或复现实验，作者对效率的自述未验证；与资料库中的 Google Docs 索引案例用途不同。",
+        "verification_note_en": "Read all five steps. Shared Drive access is the author’s prerequisite, not access granted or tested here. No private documents, permission changes or reproduction; reported efficiency is unverified. Distinct from a document-indexing workflow.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-28"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_reason": "帖子正文已读，给出用一份共享 Google Doc 让 Grok Bot 与另一个助手交接的 5 步做法和文档规则，属具体可操作方法。",
+      "handoff_original_published": "2026-10-28"
+    },
+    {
+      "decision": "publish",
+      "reason": "负责人、汇总与安静规则明确，按案例而非完整模板送审。",
+      "relevance": "原作明确涉及 Grok Bot 的技能、例程、团队或应用工作流。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/arch_l33t/status/2114873767121801514",
+          "scope_zh": "读完整原帖。作者尚未放出精确提示词或模板链接，仅作为团队配置案例，不能标为可直接安装模板。未运行团队或验证晨报效果；转述合并仅依据铁柱交接。"
+        }
+      ],
+      "resource": {
+        "id": "x-arch-l33t-small-team-morning-paper",
+        "url": "https://x.com/arch_l33t/status/2114873767121801514",
+        "title": "小团队晨报案例：每类事务一名负责人，统一汇总提醒",
+        "title_en": "A small-team morning paper with one owner per area",
+        "author": "Gaming Dad NEOH（@arch_l33t）",
+        "source": "x",
+        "lang": "en",
+        "categories": [
+          "bots"
+        ],
+        "apps": [],
+        "summary_zh": "按邮件、家庭、求职、隐私、财务和新闻划分负责人，由总协调 Bot 统一接收结果，没变化时保持安静。工作日晨报再由编辑汇总各栏目；作者优先复用模板并限制团队规模。",
+        "summary_en": "Assign one owner to each area and route outputs through a chief-of-staff Bot, staying quiet when nothing changes. An editor compiles weekday columns; the author favors reusable templates and a small team.",
+        "verification_note_zh": "读完整原帖。作者尚未放出精确提示词或模板链接，仅作为团队配置案例，不能标为可直接安装模板。未运行团队或验证晨报效果；转述合并仅依据铁柱交接。",
+        "verification_note_en": "Read the original post. Exact prompts and template links are not released, so this is a configuration case, not an installable template. No team or digest testing; merged retellings are based on the handoff.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-28",
+        "checked_at": "2026-10-28",
+        "collection_batch": "2026-10-28-daily-0900-approved",
+        "published": "2026-10-27"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_reason": "帖子正文已读，给出真实的少 Bot 团队结构（每条事务一个负责 Bot、Chief of Staff 作为唯一提醒入口、无变化不打扰、工作日早报汇总各 Bot 栏目），属真实案例细节。",
+      "handoff_original_published": "2026-10-27"
+    }
+  ]
+}
