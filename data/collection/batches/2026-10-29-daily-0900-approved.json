@@ -1,0 +1,298 @@
+{
+  "id": "2026-10-29-daily-0900-approved",
+  "collected_at": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-29-daily-0900-review",
+  "source_review_sha256": "9e46c58abece41a0fea4e520e865007ef9ed95fe64210e3cc96dbeb6b75ac570",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-29",
+    "approved_ids": [
+      "darrelltw-grok-bot-trigger-line-guide",
+      "github-matthew-rutledge-grokbot-vehicle-fleet",
+      "github-expeditedprojects-grokbot-streamdeck-voice",
+      "github-phillipholland-grokbot-shelf",
+      "reddit-department-wonderful-monday-bills-watch",
+      "reddit-onlyweekend-integrator-setup-sync"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月29日复核后建议收录的，导入并发布。",
+    "scope_zh": "仅2026-10-29-daily-0900-review中6条建议收录内容。今日未接收的X增量、其他历史待审批次及未来增量均不在授权范围。"
+  },
+  "baseline": {
+    "head": "134263db4d38910b41d59bdbb99a44594440ee7a",
+    "catalog_count": 238,
+    "prior_candidate_records": 469,
+    "resources_sha256": "3e458856164c6d47b944eeb2cc41c407949082b7f7a07a28158abbdf07025aae"
+  },
+  "editorial_note_zh": "保留已审阅标题、双语摘要、分类、应用、署名、日期与核验限制；仅将内部collection_batch改为批准批次，并为Darrell补充英文署名。原审核批次和预览保持原样、不随本次提交；未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "繁体中文原作把七类触发方式、实际限制和 LINE 转发代码放在同一篇完整教程中。",
+      "relevance": "直接讲解 Grok Bot Routine、Webhook、GitHub、Slack、邮件与 LINE 组合用法。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://www.darrelltw.com/grok-bot-triggers/",
+          "scope_zh": "阅读全文、Cloudflare Worker 验签转发代码、GitHub/Slack/LINE 实测说明与限制。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "对照 2026-10-28 官方文档中的事件触发、Webhook 200、测试和审批边界。"
+        }
+      ],
+      "resource": {
+        "id": "darrelltw-grok-bot-trigger-line-guide",
+        "url": "https://www.darrelltw.com/grok-bot-triggers/",
+        "title": "七种唤醒方式与 LINE 转发：Webhook、GitHub、Slack 和专属邮箱",
+        "title_en": "Seven wake-up paths and a LINE relay with webhooks, GitHub, Slack and email",
+        "author": "Darrell × Grok Bot（共笔）",
+        "source": "blog",
+        "lang": "zh",
+        "published": "2026-10-23",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "LINE",
+          "Cloudflare Workers",
+          "GitHub",
+          "Slack"
+        ],
+        "summary_zh": "按 App、排程、Webhook、GitHub、Slack、LINE 与专属邮箱梳理唤醒方式，并给出 Cloudflare Worker 验签转发 LINE 的流程。作者实测了部分触发，强调 200 只表示接收。",
+        "summary_en": "A seven-path guide to waking Grok Bot, including a Cloudflare Worker that verifies and relays LINE events. It separates accepted webhooks from completed work and documents author-tested limits.",
+        "verification_note_zh": "逐段阅读全文、代码片段和作者测试记录，并对照官方 Routine/Webhook 文档。未部署 Worker、创建触发器、连接 LINE/GitHub/Slack 或检查配图；PR、LINE Reply API 和故障表现仍是作者报告。文中有作者自动化服务入口，未把商业主张当作证据。",
+        "verification_note_en": "Read the full article and code excerpts, cross-checked against official routine/webhook docs. No bridge deployment or account connections. GitHub, LINE Reply API and failure behavior remain author-reported; the article links the author's automation services.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved",
+        "author_en": "Darrell × Grok Bot"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "六个 Skill 和 MCP 插件把车辆读取、命令确认、计费与禁用无人值守控制写成可检查的边界。",
+      "relevance": "社区项目明确面向 Grok Bot、Grok Build 与 Cursor，属于具体 Skill 和应用集成资料。",
+      "verified_via": "page",
+      "distinct_from": "x-victorzh-tesla-grok-to-bot",
+      "source_checks": [
+        {
+          "url": "https://github.com/matthew-rutledge-dev/grokbot-vehicle-fleet",
+          "scope_zh": "完整 README、仓库元数据和六个 Skill 文件清单。"
+        },
+        {
+          "url": "https://github.com/matthew-rutledge-dev/grokbot-vehicle-fleet/blob/main/skills/vehicle-fleet-boundary/SKILL.md",
+          "scope_zh": "完整安全边界 Skill；仅静态阅读。"
+        },
+        {
+          "url": "https://github.com/matthew-rutledge-dev/grokbot-vehicle-fleet/blob/main/skills/vehicle-fleet-setup/SKILL.md",
+          "scope_zh": "完整安装与 OAuth/代理说明；没有执行。"
+        },
+        {
+          "url": "https://developer.tesla.com/docs/fleet-api/billing-and-limits",
+          "scope_zh": "核对按次计费、账单上限和请求限制。"
+        },
+        {
+          "url": "https://developer.tesla.com/docs/fleet-api/endpoints/vehicle-commands",
+          "scope_zh": "核对官方 Fleet API 命令和虚拟密钥/命令代理。"
+        }
+      ],
+      "resource": {
+        "id": "github-matthew-rutledge-grokbot-vehicle-fleet",
+        "url": "https://github.com/matthew-rutledge-dev/grokbot-vehicle-fleet",
+        "title": "Tesla 车队插件与安全边界：只读默认、单次确认和禁用自动控制",
+        "title_en": "Tesla Fleet plugin boundaries: read-only defaults, per-command confirmation and no unattended control",
+        "author": "Matthew Rutledge",
+        "author_url": "https://github.com/matthew-rutledge-dev",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Tesla Fleet API",
+          "Grok Build",
+          "Cursor"
+        ],
+        "summary_zh": "社区 MCP 插件和六个 Skill 用官方 Tesla Fleet API 读取车辆状态；命令默认隐藏，启用后仍要求预览和逐次确认，并明确禁止 Routine、Webhook 或其他 Agent 自动控制车辆。",
+        "summary_en": "A community MCP plugin and six Skills read Tesla Fleet data. Commands stay hidden by default, require preview and per-call confirmation when enabled, and are forbidden from routines, webhooks or other agents.",
+        "verification_note_zh": "读完整 README、边界 Skill、设置 Skill 和文件清单，并对照 Tesla 官方计费与命令文档。未安装、授权车辆、调用 API、审计代码或阅读其余四个 Skill 全文；实验命令不在核验范围。车辆命令、位置、令牌和付费 API 风险高，文档规则不等于强制安全隔离，不构成使用背书。",
+        "verification_note_en": "Read the README, boundary and setup Skills, file list, and official Tesla billing/command docs. No install, vehicle authorization, API call or code audit; four Skills and experimental commands were not fully reviewed. Policy text is not an enforced security boundary or endorsement.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "发布页完整说明语音按键、兼容条件、辅助功能权限和失败路径，可作为高权限本地插件资料。",
+      "relevance": "直接把 Stream Deck 与 Grok Bot 指定 Bot 的语音通话连接起来。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://github.com/ExpeditedProjects/grokbot-streamdeck-releases",
+          "scope_zh": "完整 README、仓库树和 v0.2.0 发布元数据；未下载二进制。"
+        }
+      ],
+      "resource": {
+        "id": "github-expeditedprojects-grokbot-streamdeck-voice",
+        "url": "https://github.com/ExpeditedProjects/grokbot-streamdeck-releases",
+        "title": "Stream Deck 语音插件：按键唤起指定 Bot 与辅助功能边界",
+        "title_en": "Stream Deck voice keys for specific Bots and the macOS Accessibility boundary",
+        "author": "ExpeditedProjects",
+        "author_url": "https://github.com/ExpeditedProjects",
+        "source": "github",
+        "lang": "en",
+        "published": "2026-10-28",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "apps": [
+          "Stream Deck",
+          "macOS"
+        ],
+        "summary_zh": "为每个 Bot 配置 Stream Deck 按键，由本地辅助程序打开 Grok Bot 并点击语音按钮。作者称插件不联网，但它需要 macOS 辅助功能权限、英文界面和本地 Bot 数据。",
+        "summary_en": "A Stream Deck key opens a selected Bot and uses a local helper to press the voice controls. The author says it makes no network requests, but it needs macOS Accessibility, an English UI and local Bot data.",
+        "verification_note_zh": "读完整 README、仓库树和 v0.2.0 发布元数据。仓库只有文档、图片和许可证，安装包是 Release 二进制；未下载、安装、授予辅助功能权限或审计二进制，也未独立验证无网络请求、签名、公证和兼容性。与头像快捷入口作品用途不同。",
+        "verification_note_en": "Read the README, repository tree and v0.2.0 release metadata. The repository contains docs, images and a license; the plugin is a release binary. No download, install, Accessibility grant, binary audit, network test, signing/notarization or compatibility verification.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "公开目录提供模板来源、作者、分类和搜索接口，规模与索引方式区别于既有少量模板清单。",
+      "relevance": "专门收集 Grok Bot 共享模板，可用于角色卡与模板发现。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://github.com/PhillipHolland/grokbotshelf",
+          "scope_zh": "完整 README、仓库元数据与目录生成/提交说明。"
+        },
+        {
+          "url": "https://github.com/PhillipHolland/grokbotshelf/blob/master/public/bots.json",
+          "scope_zh": "静态统计 652 个唯一模板 URL；467 条含来源帖，625 条含创作者主页。"
+        }
+      ],
+      "resource": {
+        "id": "github-phillipholland-grokbot-shelf",
+        "url": "https://github.com/PhillipHolland/grokbotshelf",
+        "title": "Grok Bot Shelf 模板目录：来源链接、应用标记与公开搜索接口",
+        "title_en": "Grok Bot Shelf directory with source links, app labels and a public search API",
+        "author": "Phillip Holland",
+        "author_url": "https://github.com/PhillipHolland",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "resources",
+          "templates"
+        ],
+        "apps": [],
+        "summary_zh": "社区模板目录按类别和创作者整理公开 Bot，并提供搜索接口、来源帖、可选代码链接，以及由创作者提供的连接器、Routine 和权限标记；字段并非每条都完整。",
+        "summary_en": "A community directory groups shared Bot templates by category and creator, with search, source posts, optional code links and creator-supplied connector, routine and permission metadata. Coverage varies by entry.",
+        "verification_note_zh": "读完整 README 并静态统计 bots.json：652 个唯一模板 URL，467 条有来源帖、625 条有创作者主页。未逐条打开模板、验证作者归属、权限标记、投票或提交审核；Under the hood 字段由创作者提供，目录收录和自动检查不等于安全审计或本站背书。",
+        "verification_note_en": "Read the README and statically counted bots.json: 652 unique template URLs, 467 with source posts and 625 with creator pages. Templates, attribution, permission labels, votes and moderation were not individually verified; creator-supplied metadata is not a security audit.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原帖给出一个范围很窄、结果安静的邮箱 Routine 案例，适合与泛化收件箱分拣区分。",
+      "relevance": "直接展示 Grok Bot 每周检查账单邮件的 Routine 设计。",
+      "verified_via": "page",
+      "distinct_from": "x-thomas-jonesx-money-manager-guide",
+      "source_checks": [
+        {
+          "url": "https://www.reddit.com/r/GrokBot/comments/1xgcrd9/let_grok_bot_watch_your_inbox_so_you_stop/",
+          "scope_zh": "阅读完整首帖及可见评论；没有取得可复制提示词或邮件权限配置。"
+        }
+      ],
+      "resource": {
+        "id": "reddit-department-wonderful-monday-bills-watch",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1xgcrd9/let_grok_bot_watch_your_inbox_so_you_stop/",
+        "title": "每周账单收件箱巡检：只报告到期日与关注费用",
+        "title_en": "A weekly bill-inbox watch that reports only due dates and watched charges",
+        "author": "Department_Wonderful",
+        "author_url": "https://www.reddit.com/user/Department_Wonderful/",
+        "source": "forum",
+        "lang": "en",
+        "categories": [
+          "recipes"
+        ],
+        "apps": [],
+        "summary_zh": "每周一读取过去一周的新账单与收据邮件，只列出未来 14 天到期的金额、日期和指定关注费用；没有事项时保持短报告。作者建议先从一个窄任务建立信任。",
+        "summary_en": "A Monday routine reads the prior week's bill and receipt emails, lists amounts due within 14 days and checks named charges, while keeping the report short when nothing needs attention.",
+        "verification_note_zh": "阅读完整首帖和可见评论。30 封邮件与无近期到期项是作者报告；未取得提示词、邮箱提供商、连接器权限或实际输出，也未访问邮件。作者在评论中推广自己的 newsletter。此条只收窄范围与安静报告的设计，不把结果当作实测。",
+        "verification_note_en": "Read the full post and visible comments. The 30-email result is author-reported; no prompt, mail provider, connector permissions or output was available, and no inbox was accessed. The author promotes a newsletter in a comment. This records the narrow design, not a reproduced result.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原帖和公开模板页共同描述一个集中处理新 Bot 账号、插件与冲突问题的上线角色。",
+      "relevance": "直接涉及 Marketplace Bot、Routine、Skill、Gmail 和 Google Calendar 的配置交接。",
+      "verified_via": "page",
+      "source_date_note_zh": "搜索索引显示 2026-10-26，但原页相对时间在不同读取中不一致，因此不填写 published。",
+      "source_checks": [
+        {
+          "url": "https://www.reddit.com/r/GrokBot/comments/1xg8q6x/i_built_a_grokbot_you_can_use/",
+          "scope_zh": "阅读完整首帖，确认作者声明的集中配置、Routine 暂停和冲突检查。"
+        },
+        {
+          "url": "https://x.ai/bot/Oq7osbm1cpDoS4MYyvuS2",
+          "scope_zh": "只读核对公开模板页 HTTP 状态、标题与说明；未添加模板或读取内部配置。"
+        }
+      ],
+      "resource": {
+        "id": "reddit-onlyweekend-integrator-setup-sync",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1xg8q6x/i_built_a_grokbot_you_can_use/",
+        "original_url": "https://x.ai/bot/Oq7osbm1cpDoS4MYyvuS2",
+        "title": "Marketplace Bot 上线检查：先暂停预设 Routine 再统一配置",
+        "title_en": "Marketplace Bot onboarding with preset routines paused before centralized setup",
+        "author": "OnlyWeekend6936",
+        "author_url": "https://www.reddit.com/user/OnlyWeekend6936/",
+        "source": "forum",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot Marketplace",
+          "Gmail",
+          "Google Calendar"
+        ],
+        "summary_zh": "Integrator 模板把新导入 Bot 的账号、插件和定制问题集中到一张检查卡，并声称先暂停预设 Routine、检查时间表与 Skill 冲突，减少多账号误选和用量浪费。",
+        "summary_en": "The Integrator template centralizes account, plugin and customization questions, and claims to pause preset routines and check schedule or Skill conflicts before a newly imported Bot is put into service.",
+        "verification_note_zh": "读完整 Reddit 原帖，并只读核对公开模板页的标题和说明；页面署名显示为“Your”。未添加模板、查看内部指令、连接 Gmail/Calendar，或验证自动发现、暂停 Routine 和账号选择能力。相关功能都是作者声明，使用前应逐项检查权限与 Routine 状态。",
+        "verification_note_en": "Read the Reddit post and public template title/description; the template page displays the byline “Your.” No template import, hidden-instruction access, Gmail/Calendar connection, or verification of automatic discovery, routine pausing or account selection. All capability claims remain author-reported.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-29",
+        "checked_at": "2026-10-29",
+        "collection_batch": "2026-10-29-daily-0900-approved"
+      }
+    }
+  ]
+}
