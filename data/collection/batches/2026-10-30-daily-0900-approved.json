@@ -1,0 +1,716 @@
+{
+  "id": "2026-10-30-daily-0900-approved",
+  "collected_at": "2026-10-30",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch_id": "2026-10-30-daily-0900-review",
+  "source_review_sha256": "b8192f7f33e3514dd17c189a02ffbd29b08cfab3baf5437e95cee9a6609e3c9e",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-10-30",
+    "approved_ids": [
+      "x-xiaomovps-zero-to-one-guide",
+      "x-thisisdjen-you-need-grok-bot",
+      "x-umerdarazkha-contentstudio-routines",
+      "x-koko668800-on-failure-tell-me-stop",
+      "x-ken-linkwell-routine-refreshed-page",
+      "x-texas-twins-dad-cybertruck-voice-call",
+      "x-grokbotuses-home-insurance-quotes",
+      "x-preda2005-director-leads-morning-package",
+      "zeona-grok-bot-guide-2026",
+      "botcookbook-thirty-routine-examples",
+      "datacamp-learning-scout-skill-routine",
+      "github-lroolle-awesome-grokbot-templates",
+      "gist-orion-grokbot-webhook-handoff-skill",
+      "reddit-business-cheetah-grokbot-zero-to-first-routine"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "10月30日复核后建议收录的，导入并发布。",
+    "scope_zh": "仅2026-10-30-daily-0900-review中14条建议收录内容。该批6条hold、铁柱49条reject、其他历史待审批次及未来增量均不在授权范围。"
+  },
+  "baseline": {
+    "head": "46c12fc223e9bd4521847623acb0cd523f5bc1ac",
+    "catalog_count": 244,
+    "prior_candidate_records": 481,
+    "resources_sha256": "308e755cef3d375a7ab65c90ad62ca18d3a0d8d8868a99d734c85978379182dc"
+  },
+  "editorial_note_zh": "保留已审阅标题、双语摘要、分类、应用、署名、日期与核验限制；仅将内部collection_batch改为批准批次。原审核批次和预览保持原样、不随本次提交；未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "中文长文覆盖从开通、X 只读验收到模板、记忆清理、备份与额度管理的完整入门路径。",
+      "relevance": "直接讲解 Grok Bot 与 X、Notion、GitHub、Cursor 和 Bitwarden 的组合用法。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/xiaomovps/status/2115738442181333337",
+          "scope_zh": "铁柱读取长文全文与四张文字表格；本轮核对附件记录和原帖身份。"
+        }
+      ],
+      "resource": {
+        "id": "x-xiaomovps-zero-to-one-guide",
+        "url": "https://x.com/xiaomovps/status/2115738442181333337",
+        "title": "Grok Bot 从 0 到 1：接 X 只读验收、用现成模板、半月一次记忆大扫除",
+        "title_en": "Grok Bot from zero to one: X read-only checks, templates and fortnightly memory cleanup",
+        "author": "小墨同学",
+        "author_en": "@xiaomovps",
+        "author_url": "https://x.com/xiaomovps",
+        "source": "x",
+        "platform": "x",
+        "lang": "zh",
+        "published": "2026-10-29",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "tags": [
+          "入门",
+          "X 连接器",
+          "记忆清理",
+          "备份",
+          "额度"
+        ],
+        "apps": [
+          "X",
+          "Notion",
+          "GitHub",
+          "Cursor",
+          "Bitwarden"
+        ],
+        "summary_zh": "第一天连接 X 后用只读指令读回三条帖并人工核对；第一周从模板开始并先看权限；每半月先列冲突、重复和过时记忆再修改；每天把 Skill 与记忆备份到 GitHub 私有仓库，并按需设置用量上限。",
+        "summary_en": "Connect X and verify with a read-only prompt, start from templates after checking permissions, clean memory every two weeks, back up skills daily, and cap on-demand usage.",
+        "verification_note_zh": "铁柱已读长文全文与四张表；配图和引用帖视频未查看，未复现。文中含作者邀请返利链接，X 速率数字为作者自述；Bitwarden bw、cursor-grokbot-agents 与 Pi+OpenRouter 均未安装核验。时效按 2026-10-29。",
+        "verification_note_en": "The full article and four text tables were read; images and the quoted video were not viewed, and nothing was reproduced. It contains a referral link and unverified third-party tools.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "英文新手长文把建 Bot、连接器、Routine、群组分工、Skill 和审批串成一条完整路径。",
+      "relevance": "涵盖 Grok Bot 核心入门概念与 Gmail、Calendar、Drive 的安全边界。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/thisisdjen/status/2115864757173440888",
+          "scope_zh": "铁柱读取长文主要章节与结尾；例程中段为快速浏览。"
+        }
+      ],
+      "resource": {
+        "id": "x-thisisdjen-you-need-grok-bot",
+        "url": "https://x.com/thisisdjen/status/2115864757173440888",
+        "title": "You need Grok Bot：从第一个 Bot 到例程、群组分工与 Skill 的新手指南",
+        "title_en": "You need Grok Bot: a beginner guide from the first Bot to routines, teams and skills",
+        "author": "DJ.en",
+        "author_url": "https://x.com/thisisdjen",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-29",
+        "categories": [
+          "start"
+        ],
+        "tags": [
+          "入门",
+          "连接器",
+          "Routine",
+          "多 Bot",
+          "Skill",
+          "审批"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Google Drive"
+        ],
+        "summary_zh": "先从零建 Bot，用“Show me the rules”检查设定；只连接必要应用，登录时接管云电脑；从 Drive/Gmail 简单任务练起，再保存为例程与 Skill；多 Bot 由主 Bot 分派，并在 Auto Review 中保留外发审批。",
+        "summary_en": "Build from scratch, connect only needed apps, practice with Drive and Gmail, make routines with no-send rules, group Bots under an admin Bot, save skills, and keep outbound approval.",
+        "verification_note_zh": "铁柱已读开头至自动化章节及团队、Skill、审批结尾，中段例程细节为快速浏览；截图和嵌入用例帖未查看，未复现。价格为作者撰文时信息，以当前官方方案为准。",
+        "verification_note_en": "Most article text was read; routine details were skimmed, and screenshots and embedded posts were not viewed. Pricing is time-sensitive and was not reproduced.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原作给出 ContentStudio 的两种接法、六条社媒例程和多客户护栏，方法具体。",
+      "relevance": "属于 Grok Bot 与第三方社媒管理应用、MCP、CLI 和 Skill 的组合用法。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/umerdarazkha/status/2115697032086319425",
+          "scope_zh": "铁柱读取长文全文；外部 MCP、CLI、仓库和配图未打开。"
+        }
+      ],
+      "resource": {
+        "id": "x-umerdarazkha-contentstudio-routines",
+        "url": "https://x.com/umerdarazkha/status/2115697032086319425",
+        "title": "接入 ContentStudio 的六条社媒例程：草稿、周报、收件箱与排期检查",
+        "title_en": "Six ContentStudio social routines for drafts, reports, inboxes and schedule gaps",
+        "author": "Umer Daraz Khan",
+        "author_url": "https://x.com/umerdarazkha",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-29",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "tags": [
+          "社媒运营",
+          "Routine",
+          "MCP",
+          "集成",
+          "审批"
+        ],
+        "apps": [
+          "ContentStudio"
+        ],
+        "summary_zh": "可在 Bot 对话中给出 ContentStudio MCP 链接并登录，或在云电脑安装其 CLI 与 Skill。六条例程覆盖草稿排期、周一表现汇总、评论私信回复草稿、待审提醒、排期空档检查和新图片转草稿；多客户时先确认工作区。",
+        "summary_en": "Connect via ContentStudio MCP or CLI plus Skill, then run six draft-only social routines for scheduling, reports, inboxes, approval reminders, gap checks and new media.",
+        "verification_note_zh": "已读长文全文；配图未查看，未复现。ContentStudio MCP、npm CLI 与 Skill 仓库均未安装或审计；作者多次链接 ContentStudio 自家文章，可能存在产品关联和推广色彩。",
+        "verification_note_en": "The full article was read, but images were not viewed and nothing was reproduced. The third-party MCP, CLI and skills were not installed or audited; the article is vendor-adjacent.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "短帖提供一条可直接写进 Routine 的失败停止规则，能减少故障期盲目重试。",
+      "relevance": "直接讨论 Bot、Cursor Cloud Agents 与仓库串联例程的失败处理。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/koko668800/status/2115582005979078711",
+          "scope_zh": "铁柱读取完整正文；附带链接与图片未打开。"
+        }
+      ],
+      "resource": {
+        "id": "x-koko668800-on-failure-tell-me-stop",
+        "url": "https://x.com/koko668800/status/2115582005979078711",
+        "title": "链式例程加“失败时告诉我并停止”，避免故障期盲目重试",
+        "title_en": "Add an “on failure, tell me and stop” rule to chained routines",
+        "author": "koko668800",
+        "author_url": "https://x.com/koko668800",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-28",
+        "categories": [
+          "advanced"
+        ],
+        "tags": [
+          "Routine",
+          "故障处理",
+          "省额度",
+          "Cursor 云代理"
+        ],
+        "apps": [
+          "Cursor"
+        ],
+        "summary_zh": "当 Grok Bot、Cloud Agents 与 Origin 同时降级时，Bot→云代理→仓库的整条链都会失败。作者建议给每条此类例程加入“失败时告诉我并停止”，不要在故障期自动重试。",
+        "summary_en": "When Bot, Cloud Agents and Origin degrade together, the whole bot-to-cloud-agent-to-repo chain fails; add an on-failure stop rule instead of blind retries.",
+        "verification_note_zh": "已读原帖正文；附带链接和配图未打开，未复现。原帖较短，只有规则本身。songsong275452 的推广扩写已并入本条，其五步设置不计为原作者内容。",
+        "verification_note_en": "The short post text was read; linked media was not opened and nothing was reproduced. A promotional expansion is merged but not attributed to the original author.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原帖给出页面看板与 Routine 定时刷新结合的四步做法，并提醒链接分享权限。",
+      "relevance": "属于 Grok Bot Page 与 Routine 的具体组合案例。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/Ken_LinkWell/status/2115965466002805013",
+          "scope_zh": "铁柱读取无图片的完整原帖；未创建页面或 Routine。"
+        }
+      ],
+      "resource": {
+        "id": "x-ken-linkwell-routine-refreshed-page",
+        "url": "https://x.com/Ken_LinkWell/status/2115965466002805013",
+        "title": "十分钟做一个由例程定时刷新的周报看板页面",
+        "title_en": "Build a routine-refreshed weekly dashboard page in ten minutes",
+        "author": "Ken Reiners",
+        "author_url": "https://x.com/Ken_LinkWell",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-30",
+        "categories": [
+          "recipes"
+        ],
+        "tags": [
+          "Page",
+          "Routine",
+          "看板",
+          "周报"
+        ],
+        "apps": [],
+        "summary_zh": "让 Bot 建一个页面放每周一要看的三个数字，逐项说明数据来源，再设置例程在查看前一小时刷新。分享应保持私密，因为“任何有链接的人”意味着任何拿到链接的人都能看到。",
+        "summary_en": "Ask for a page with the three numbers you check each Monday, name each source, set a routine to refresh it an hour before viewing, and keep sharing private.",
+        "verification_note_zh": "已读无图片的完整原帖，未复现。页面能力较新，实际字段和分享选项以当前官方界面为准。",
+        "verification_note_en": "The complete text-only post was read; nothing was reproduced. The Page feature is recent, so use the current official UI as the source of truth.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原帖给出在 Cybertruck 浏览器中直接打开 Bot 并发起语音通话的五步操作。",
+      "relevance": "是 Grok Bot 与 Tesla 车机浏览器、麦克风的具体组合用法。",
+      "verified_via": "page",
+      "distinct_from": "x-texas-twins-dad-hey-grok-vocal-shortcut",
+      "source_checks": [
+        {
+          "url": "https://x.com/Texas_Twins_Dad/status/2115957277567893839",
+          "scope_zh": "铁柱读取完整正文；配图未查看，未在车辆中复现。"
+        }
+      ],
+      "resource": {
+        "id": "x-texas-twins-dad-cybertruck-voice-call",
+        "url": "https://x.com/Texas_Twins_Dad/status/2115957277567893839",
+        "title": "在 Cybertruck 浏览器里直接给 Grok Bot 打语音电话",
+        "title_en": "Call Grok Bot by voice directly from the Cybertruck browser",
+        "author": "Texas Twins Dad",
+        "author_url": "https://x.com/Texas_Twins_Dad",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-30",
+        "categories": [
+          "start"
+        ],
+        "tags": [
+          "语音通话",
+          "车载",
+          "移动端"
+        ],
+        "apps": [
+          "Tesla"
+        ],
+        "summary_zh": "在 Cybertruck 打开车机浏览器，进入 x.com 或 grok.com，找到目标 Bot，点语音通话并允许特斯拉麦克风即可，不需要另装应用。",
+        "summary_en": "Open the Cybertruck browser, visit x.com or grok.com, choose the Bot, tap voice call and allow the Tesla microphone, with no extra app required.",
+        "verification_note_zh": "已读正文；配图未查看，未在车辆中复现。仅是作者在 Cybertruck 上的报告，其他 Tesla 车型和不同地区的浏览器权限未知。",
+        "verification_note_en": "The post text was read; the image was not viewed and nothing was reproduced. This is one author's Cybertruck report; other vehicles and regions are unknown.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者首条回复给出完整房屋保险比价与承包商询价提示词，并保留不发送不购买边界。",
+      "relevance": "是 Grok Bot 在保险比价和本地服务询价中的可复制提示词。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/GrokBotUses/status/2115964614563205342",
+          "scope_zh": "铁柱读取主帖和作者首条回复；配图未查看。"
+        }
+      ],
+      "resource": {
+        "id": "x-grokbotuses-home-insurance-quotes",
+        "url": "https://x.com/GrokBotUses/status/2115964614563205342",
+        "title": "按现有保单比较四家房屋保险，并起草三封承包商询价",
+        "title_en": "Compare four home-insurance quotes and draft three contractor requests",
+        "author": "Grok Bot Uses",
+        "author_url": "https://x.com/GrokBotUses",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-30",
+        "categories": [
+          "recipes"
+        ],
+        "tags": [
+          "提示词",
+          "比价",
+          "保险",
+          "起草"
+        ],
+        "apps": [],
+        "summary_zh": "提示词要求按所附保单，为指定地址向四家主要保险公司获取房屋保险报价并制表；同时为某项目起草给三家本地承包商的询价信；未经本人同意不发送、不购买。",
+        "summary_en": "Prompt: compare four homeowners-insurance quotes against an attached policy, draft requests to three local contractors, and send or buy nothing without approval.",
+        "verification_note_zh": "已读主帖与作者首条回复中的提示词；配图未查看，未复现。主帖没有给具体用户案例，报价可得性和真实性取决于各保险网站。",
+        "verification_note_en": "The post and the author's first reply were read; the image was not viewed and nothing was reproduced. Quote availability depends on insurer websites.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者给出二十多个 Bot 的重组方案：一总监、三主管、夜班批处理和单份早间汇总。",
+      "relevance": "属于多 Bot 组织架构、Routine 与人工审批的具体实践。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://x.com/Preda2005/status/2115957101998825768",
+          "scope_zh": "铁柱读取原帖全文；配图与所引视频未查看。"
+        }
+      ],
+      "resource": {
+        "id": "x-preda2005-director-leads-morning-package",
+        "url": "https://x.com/Preda2005/status/2115957101998825768",
+        "title": "二十多个 Bot 重组为一总监、三主管、夜班与早间汇总包",
+        "title_en": "Reorganize 20+ Bots into one director, three leads, a night shift and one morning package",
+        "author": "Marcio Lima",
+        "author_url": "https://x.com/Preda2005",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "published": "2026-10-30",
+        "categories": [
+          "bots",
+          "advanced"
+        ],
+        "tags": [
+          "多 Bot",
+          "组织架构",
+          "Routine",
+          "审批"
+        ],
+        "apps": [],
+        "summary_zh": "由一个总监 Bot 管总计划并作为唯一对接人，下设内容、社区、收入三个主管；每个工作 Bot 只向一位主管汇报；重活在日本时间凌晨 2–5 点完成，6:30 合成一份早间文件；发帖、发送和付款仍需本人批准。",
+        "summary_en": "One director, three leads, a silent 2–5am night shift and one 6:30 morning package replace direct reports from 20+ Bots, while posts, sends and payments stay behind approval.",
+        "verification_note_zh": "已读全文；配图和引用视频未查看，未复现。作者自述为第十一天实践效果，没有给出具体提示词或 Routine 配置。",
+        "verification_note_en": "The full post was read; the image and quoted video were not viewed and nothing was reproduced. It provides no exact prompts or routine configuration.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "繁体中文教程逐步覆盖方案、安装、首个 Bot、连接器、审批、Routine、Skill 与 Teach a task，并标出资料日期。",
+      "relevance": "满足中文完整入门教程需求，应用和安全边界清晰。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://www.zeona.co/blog/grok-bot-guide-2026",
+          "scope_zh": "阅读全文、步骤、提示词和资料来源；没有打开全部配图。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/get-started",
+          "scope_zh": "对照 2026-10-28 官方入门页的方案、平台、登录和首个 Bot。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "对照 Skill、Routine、测试、时区和事件触发边界。"
+        }
+      ],
+      "resource": {
+        "id": "zeona-grok-bot-guide-2026",
+        "url": "https://www.zeona.co/blog/grok-bot-guide-2026",
+        "title": "繁体中文新手教程：方案、建立 Bot、连接 App、核准规则与 Routines",
+        "title_en": "Traditional Chinese beginner guide to plans, Bots, apps, approvals and routines",
+        "author": "Zeona Studio",
+        "source": "blog",
+        "platform": "web",
+        "lang": "zh",
+        "published": "2026-10-27",
+        "categories": [
+          "start",
+          "advanced"
+        ],
+        "tags": [
+          "繁体中文",
+          "入门",
+          "审批",
+          "Routine",
+          "Skill",
+          "Teach a task"
+        ],
+        "apps": [
+          "Gmail",
+          "Google Calendar",
+          "Google Drive",
+          "Slack",
+          "Notion",
+          "GitHub",
+          "1Password"
+        ],
+        "summary_zh": "按五步完成下载、登录、建 Bot、连接 App 和第一个任务，再配置 Allow once、Auto Review 与本机执行边界；进阶部分说明时区、测试 Routine、保存 Skill 和 Teach a task，并给出收件箱管家提示词。",
+        "summary_en": "A Traditional Chinese walkthrough from plans and the first Bot to app connections, approval rules, routines, skills and Teach a task, with a practical inbox prompt.",
+        "verification_note_zh": "阅读全文并对照 10 月 28 日官方入门、Skill/Routine 和审批文档；未查看全部配图、安装应用或复现。文章资料核对到 2026-10-29，方案和价格会变化；部分截图来自 App Store 与官方教程。",
+        "verification_note_en": "Read the full article and cross-checked current official setup, routine and approval docs. Images were not all inspected and nothing was reproduced. Pricing is time-sensitive as of 2026-10-29.",
+        "status": "alive",
+        "evidence": "editorial",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "页面集中给出三十个不发送、不发布、不付款的 Routine 点子，适合作为场景索引。",
+      "relevance": "覆盖邮箱、Slack、日历、研究、财务、GitHub、旅行与家庭等多类 Grok Bot 例程。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://botcookbook.com/features/routines/",
+          "scope_zh": "读取 30 条例程清单、故障说明、关联配方和时效标记。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "对照五分钟最短间隔、先测试再排程和事件触发。"
+        }
+      ],
+      "resource": {
+        "id": "botcookbook-thirty-routine-examples",
+        "url": "https://botcookbook.com/features/routines/",
+        "title": "三十个可复制的 Routine 点子：从收件箱、日历到 PR 与旅行比价",
+        "title_en": "Thirty Grok Bot routine ideas for inboxes, calendars, pull requests, travel and more",
+        "author": "Bot Cookbook",
+        "source": "blog",
+        "platform": "web",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "resources"
+        ],
+        "tags": [
+          "Routine",
+          "场景清单",
+          "草稿优先",
+          "安全边界"
+        ],
+        "apps": [
+          "Gmail",
+          "Slack",
+          "Google Calendar",
+          "X",
+          "GitHub"
+        ],
+        "summary_zh": "三十个例程覆盖收件箱扫描、Slack 摘要、日历冲突、研究简报、发票检查、会议纪要、广告预算、站点巡检、依赖更新、PR 摘要、旅行比价等；示例统一停在草稿、清单或报告，不自动发送、发布、付款或升级。",
+        "summary_en": "Thirty routine ideas span inboxes, Slack, calendars, research, finance, site checks, dependencies, pull requests and travel, with every example stopping before sending, posting, paying or upgrading.",
+        "verification_note_zh": "已读完整清单和故障问答，并对照官方最短间隔与测试建议；没有逐条运行。页面标注适用于 2026-10-20，部分下游 Prompt 或付费 Pack 未打开。",
+        "verification_note_en": "Read the full list and FAQ and checked official scheduling guidance; none of the routines were run. The page says it works as of 2026-10-20; linked prompts and the paid pack were not reviewed.",
+        "status": "alive",
+        "evidence": "editorial",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "DataCamp 作者完整演示学习资源侦察 Bot，从手工验证、纠错到保存 Skill 与每周 Routine。",
+      "relevance": "是可复用的研究、核验、Skill 和 Routine 实战案例。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://www.datacamp.com/tutorial/grok-bot-tutorial",
+          "scope_zh": "阅读全文关键步骤、作者测试结果、纠错过程和最终限制。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "对照 Skill、Routine、时区、测试和缺源停止规则。"
+        }
+      ],
+      "resource": {
+        "id": "datacamp-learning-scout-skill-routine",
+        "url": "https://www.datacamp.com/tutorial/grok-bot-tutorial",
+        "title": "学习资源侦察 Bot：从来源核验、纠错到 Skill 与每周 Routine",
+        "title_en": "Build a learning scout from source checks and corrections to a skill and weekly routine",
+        "author": "Khalid Abdelaty",
+        "source": "blog",
+        "platform": "web",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "研究",
+          "Skill",
+          "Routine",
+          "验证",
+          "来源核对"
+        ],
+        "apps": [
+          "DataCamp"
+        ],
+        "summary_zh": "把学习目标、时间预算和完成记录放进每周读取的文件；要求 Bot 打开候选原页，核对标题、级别、时长和前置课程；手工纠正后再保存窄范围 Skill，用不同目标复测，最后建立每周 Routine，缺源或无合格结果就停止并报告。",
+        "summary_en": "Store the learner profile in a file, verify each canonical page, correct labels, durations and prerequisites, save a narrow Skill, retest it on a new goal, then schedule a weekly Routine that stops on missing sources.",
+        "verification_note_zh": "已读完整教程的关键步骤、两次纠错和最终 Routine 结果；未查看全部图片或嵌入视频，也未复现。作者实测暴露了级别、时长范围和前置课程三个错误；方案信息早于 10 月订阅更新，当前价格以官方为准。",
+        "verification_note_en": "Read the key steps, two correction rounds and final routine result; images and embedded video were not fully inspected and nothing was reproduced. Plan details predate the October subscription change.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "公开仓库按岗位分类汇总 x.ai/bot 模板，并明确模板复制范围和检查风险。",
+      "relevance": "直接服务于角色卡、模板与多 Bot 岗位发现。",
+      "verified_via": "page",
+      "distinct_from": "github-phillipholland-grokbot-shelf",
+      "source_checks": [
+        {
+          "url": "https://github.com/lroolle/awesome-grokbot-templates",
+          "scope_zh": "读取 README 的快照声明、模板复制边界、分类和代表性条目；未逐个打开模板。"
+        }
+      ],
+      "resource": {
+        "id": "github-lroolle-awesome-grokbot-templates",
+        "url": "https://github.com/lroolle/awesome-grokbot-templates",
+        "title": "Awesome Grok Bot Templates：按岗位分类的公开模板快照",
+        "title_en": "Awesome Grok Bot Templates: a job-grouped snapshot of public share links",
+        "author": "lroolle",
+        "author_url": "https://github.com/lroolle",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "published": "2026-09-03",
+        "categories": [
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "模板目录",
+          "角色卡",
+          "共享 Bot",
+          "安全检查"
+        ],
+        "apps": [],
+        "summary_zh": "按精选、元管理、工程、研究、邮箱日历、销售、内容、财务合规、生活运营和编排等岗位整理公开 x.ai/bot 链接。README 说明添加模板只复制身份、说明、Skill、Routine 与所需工具，不复制聊天、登录和文件，并提醒导入前检查。",
+        "summary_en": "A job-grouped directory of public x.ai/bot links, with clear notes on what a template copies, what it does not copy, and why every third-party template should be inspected before adding.",
+        "verification_note_zh": "已读 README、分类和代表条目；未逐个打开、导入或审计模板。仓库是 2026-09-03 快照，只有一个提交；互动数据用于发现而非质量排名，安装量未公开。",
+        "verification_note_en": "Read the README, categories and representative entries; no template was opened, imported or audited. This is a 2026-09-03 snapshot with one commit, not an official ranking.",
+        "status": "alive",
+        "evidence": "editorial",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体 Skill 提供 coding agent→Webhook Routine→Grok Bot→本地结果文件的闭环，并详细写明安全边界与失败状态。",
+      "relevance": "属于 Grok Bot 的具体 Skill、Webhook Routine 和本地执行组合。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://gist.github.com/OrionArchitekton/2806aa8c2b6c744c9cc25357e955632f",
+          "scope_zh": "阅读全文、设置、用法、退出码和安全姿态；没有下载或执行。"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope_zh": "对照 Webhook 200 只代表开始、密钥和 Routine 触发边界。"
+        }
+      ],
+      "resource": {
+        "id": "gist-orion-grokbot-webhook-handoff-skill",
+        "url": "https://gist.github.com/OrionArchitekton/2806aa8c2b6c744c9cc25357e955632f",
+        "title": "grokbot Skill：用 Webhook 交活、请求号去重并从本地结果目录回收",
+        "title_en": "A grokbot Skill for webhook handoff, request-id deduplication and local result collection",
+        "author": "OrionArchitekton",
+        "author_url": "https://github.com/OrionArchitekton",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "published": "2026-09-28",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "tags": [
+          "Skill",
+          "Webhook",
+          "Routine",
+          "本地执行",
+          "幂等"
+        ],
+        "apps": [
+          "GitHub",
+          "Slack",
+          "Gmail",
+          "Google Calendar",
+          "Google Drive"
+        ],
+        "summary_zh": "Skill 用一次 Webhook POST 把自包含任务交给专用 Bot，按 request_id 等待或稍后回收结果；区分 200 已启动、超时和结果未知，禁止盲重发。结果经桌面应用本地执行写入 outbox，文档要求密钥进密码管理器、外发和付款始终由人决定。",
+        "summary_en": "A Skill sends one idempotency-aware webhook request to a dedicated Bot and collects its outbox result later, with explicit started, timed-out and unknown states plus strict secret and approval rules.",
+        "verification_note_zh": "已读完整 Skill 与安全说明并对照官方 Webhook 文档；未下载、安装、创建触发器、读取密钥或运行脚本。启用 Always allow 本地执行会扩大到所有 Bot，并让持有 Webhook 密钥或网页提示注入者有机会触发本机命令，风险很高。",
+        "verification_note_en": "Read the complete Skill and security notes and checked official webhook semantics; nothing was downloaded or run. Always-allow local execution is account-wide and creates a serious secret and prompt-injection risk.",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "社区回复把零基础用户的第一条自动化拆成逐周、可验证、可停止的最短路径。",
+      "relevance": "直接解释从一次性任务到 Skill、Routine 和审批边界的入门方法。",
+      "verified_via": "page",
+      "source_checks": [
+        {
+          "url": "https://www.reddit.com/r/GrokBot/comments/1x26yld/comment/pf2dh33/",
+          "scope_zh": "读取原帖与该作者完整回复；保留 AI 辅助起草披露。"
+        }
+      ],
+      "resource": {
+        "id": "reddit-business-cheetah-grokbot-zero-to-first-routine",
+        "url": "https://www.reddit.com/r/GrokBot/comments/1x26yld/comment/pf2dh33/",
+        "title": "零基础四周路径：从一个小任务到 Skill、Routine 与安全边界",
+        "title_en": "A four-week beginner path from one small task to a skill, routine and safety boundaries",
+        "author": "Business_Cheetah_689",
+        "author_url": "https://www.reddit.com/user/Business_Cheetah_689/",
+        "source": "forum",
+        "platform": "reddit",
+        "lang": "en",
+        "published": "2026-10-11",
+        "categories": [
+          "start"
+        ],
+        "tags": [
+          "零基础",
+          "Skill",
+          "Routine",
+          "安全边界",
+          "Teach a task"
+        ],
+        "apps": [
+          "Gmail"
+        ],
+        "summary_zh": "先从三个高频琐事中选最简单的一件；陪 Bot 手工跑一次并逐步纠错，必要时用 Teach a task；成功后保存为 Skill、复测再排成 Routine；前几周只做草稿，发送、购买和删除都先问，密码由本人接管输入，每周只增加一个新任务。",
+        "summary_en": "Pick one small recurring task, run and correct it once, save and retest it as a Skill, schedule it as a Routine, keep sends, purchases and deletes behind approval, and add only one new task each week.",
+        "verification_note_zh": "已读原帖和完整回复；作者明确披露由 AI 起草后人工检查编辑，没有给实测记录。回复中关于其他产品未来计划的说法未核且不纳入摘要；日期按 Reddit 相对时间换算。",
+        "verification_note_en": "Read the full thread and comment. The author discloses AI-assisted drafting and human editing but gives no test record. An unrelated product-future claim is excluded and unverified.",
+        "status": "alive",
+        "evidence": "editorial",
+        "added": "2026-10-30",
+        "checked_at": "2026-10-30",
+        "collection_batch": "2026-10-30-daily-0900-approved"
+      }
+    }
+  ]
+}
