@@ -1,4 +1,371 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-bianwuwei-grok-bot-getting-started
+  url: https://github.com/bianwuwei/grok-bot-getting-started
+  title: 从第一个 Bot 到能交作业的小队：中文角色分工、Skill 与 Routine 教程
+  title_en: "From a first Bot to a delivery team: a Chinese guide to roles, skills and routines"
+  author: 無為
+  author_en: Wuwei
+  author_url: https://github.com/bianwuwei
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-09-09
+  categories:
+    - start
+    - advanced
+    - bots
+    - templates
+    - recipes
+  tags:
+    - 中文教程
+    - 多 Bot
+    - Skill
+    - Routine
+    - 审批
+  apps:
+    - GitHub
+    - Slack
+    - Cursor
+    - X
+  summary_zh: 从首个 Bot、总管和岗位分工开始，用目标、输入、输出、边界、验收和失败处理六部分写工作简报，再把成功过程保存为 Skill 与 Routine。三个 Playbook 覆盖研究、内容和工程交付，并把外发、删除、付款等设为人工审批门。
+  summary_en: A Chinese guide builds from one Bot to a managed team, uses a six-part work brief, saves successful workflows as Skills and Routines, and provides research, content and engineering playbooks with approval gates.
+  verification_note_zh: 已读完整 README 和公开示例文件；没有导入模板、创建团队或复现 Playbook。仓库版本 1.0.0、资料日期 2026-09-09；方案、菜单和截图可能已过时，安全与功能边界应以当前官方文档为准。
+  verification_note_en: Read the complete README and public examples. No template, team or playbook was run. Version 1.0.0 dates to 2026-09-09, so plans, UI and screenshots may be stale.
+  status: alive
+  evidence: editorial
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: github-owenservera-grokbot-telemetry
+  url: https://github.com/owenservera/grokbot-telemetry
+  title: grokbot-telemetry：共享电脑的会话、进程与动作追踪参考
+  title_en: "grokbot-telemetry: a reference for session, process and action tracing on the shared computer"
+  author: Owen Servera
+  author_en: Owen Servera
+  author_url: https://github.com/owenservera
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-05
+  categories:
+    - advanced
+    - resources
+  tags:
+    - 可观测性
+    - 会话日志
+    - 动作追踪
+    - 脱敏
+    - 共享电脑
+  apps:
+    - GitHub
+  summary_zh: 仓库用架构、工具目录、流程图、会话日志、动作追踪和 JSON Schema 记录共享电脑状态，并附 shell 收集器与校验脚本；作者要求排除认证文件、脱敏秘密，再定时同步到 GitHub，便于审计异常与漂移。
+  summary_en: The repository documents shared-computer state with architecture, tool catalogs, process maps, session and action traces, JSON schemas, collectors and verification, with explicit secret redaction before Git sync.
+  verification_note_zh: 静态读取 README 与架构文档；没有运行收集器、verify.sh 或五分钟常驻循环，也没有读取共享电脑或提交数据。它是作者环境的做法，不是官方遥测；脱敏完备性、性能开销和隐私风险未审计。
+  verification_note_en: Statically read the README and architecture docs. No collector, verifier, daemon, shared-computer read or Git sync was run. This is an author setup, not official telemetry, and privacy claims are unaudited.
+  status: alive
+  evidence: author-reported
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: github-thecgaigroup-reelsmith
+  url: https://github.com/thecgaigroup/reelsmith
+  title: ReelSmith：带品牌包、分镜、三种画幅与审阅门的视频制作 Skill
+  title_en: "ReelSmith: a video-production Skill with brand kits, storyboards, three formats and review gates"
+  author: The CG AI Group
+  author_en: The CG AI Group
+  author_url: https://github.com/thecgaigroup
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-23
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - 视频制作
+    - Skill
+    - 分镜
+    - 品牌包
+    - 审阅门
+  apps:
+    - YouTube
+    - Remotion
+    - HyperFrames
+  summary_zh: Skill 把脚本、故事板、品牌包、字幕、音乐与模板串成可审阅流程，可输出 16:9、9:16 和 1:1，并准备 YouTube 交付；付费服务、最终发布和不可逆动作前应先给报价或预览并等待批准。
+  summary_en: A reviewable workflow combines scripts, storyboards, brand kits, captions, music and templates for 16:9, 9:16 and 1:1 renders, with approval before paid services, publishing or irreversible actions.
+  verification_note_zh: 静态读取 README 与两个 Skill 入口；没有克隆、安装、运行 ffmpeg/Node、调用可选 API、付费或上传视频。仓库创建于 2026-10-23、互动量很低；输出质量、版权素材和第三方服务费用均未独立核验。
+  verification_note_en: Statically read the README and two Skill entry files. Nothing was cloned, installed, rendered, paid for or uploaded. Output quality, media rights and third-party costs were not independently verified.
+  status: alive
+  evidence: author-reported
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: reddit-terrible-world-callastral-startup
+  url: https://reddit.com/r/grok/comments/1xgmx5c/i_let_grok_bot_build_and_run_my_whole_startup
+  title: CallAstral 创业案例：建站、部署、支付、多语内容与每日巡检
+  title_en: "CallAstral startup case: site, deployment, payments, multilingual content and daily checks"
+  author: Terrible_World121
+  author_en: Terrible_World121
+  author_url: https://www.reddit.com/user/Terrible_World121/
+  source: forum
+  platform: reddit
+  lang: en
+  published: 2026-10-27
+  categories:
+    - recipes
+    - bots
+  tags:
+    - 创业案例
+    - 建站
+    - 每日巡检
+    - 内容分发
+    - 人工审批
+  apps:
+    - Vercel
+    - Stripe
+    - YouTube
+    - TikTok
+    - Instagram
+  summary_zh: 作者让 Bot 通过 PR 搭建并部署语音占星站，接域名、数据库、邮件和 Stripe，生成五种语言的每日短视频；9 点 Routine 检查站点、部署、错误、数据库安全、流量和内容。发布、付款与最终决定仍由本人完成。
+  summary_en: The author reports Bot-driven pull requests for a voice-astrology site, deployment, database, email and Stripe, plus multilingual videos and a 9am operations Routine, with human publishing and payment approval.
+  verification_note_zh: 已读原帖和作者回复；作者称每天投入 15–20 分钟、约 7–9 位访客、14 个账号和 0 销售。没有代码仓库、账单、分析后台或安全审计可核，未复现；占星与商业结果不作背书。
+  verification_note_en: Read the post and author replies. Claims include 15–20 minutes daily, 7–9 visitors, 14 accounts and zero sales, but no code, billing, analytics or security evidence was available. Nothing was reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: swarm-school-grok-bot-computer-files-browser
+  url: https://swarm.school/guides/grok-bot-computer-files-browser
+  title: 共享电脑、文件与浏览器：没有连接器时的接管和回滚指南
+  title_en: "Shared computer, files and browser: takeover and rollback when no connector exists"
+  author: Swarm School
+  author_en: Swarm School
+  source: blog
+  platform: web
+  lang: en
+  categories:
+    - start
+    - advanced
+    - recipes
+  tags:
+    - 共享电脑
+    - 浏览器
+    - 文件
+    - Teach a task
+    - 回滚
+  apps:
+    - Google Drive
+    - Dropbox
+    - Toast
+    - Square
+    - Mindbody
+    - Vagaro
+    - Jobber
+    - HoneyBook
+    - Planning Center
+    - Zendesk
+  summary_zh: 连接器缺失时，可让 Bot 在共享浏览器中打开网站，本人接管登录后再继续；用文件明确输入与交付，用 Teach a task 保存重复操作。涉及删除、发布、付款或批量修改时先 Ask first，并保留备份和可逆步骤。
+  summary_en: When no connector exists, use the shared browser with human login takeover, define file inputs and outputs, capture repeatable steps with Teach a task, and require approval plus backups for risky changes.
+  verification_note_zh: 已读全文；没有打开共享电脑、登录任何站点、上传文件、启用本机执行或录制 Teach a task。列出的第三方应用只是场景示例，其页面结构、条款和自动化许可均未核验。
+  verification_note_en: Read the full guide. No shared computer, sign-in, upload, local execution or Teach a task recording was used. Third-party app compatibility and terms were not verified.
+  status: alive
+  evidence: editorial
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: swarm-school-grok-bot-routines
+  url: https://swarm.school/guides/grok-bot-routines-that-dont-go-wrong
+  title: 不容易出错的 Routine：七段式简报、安全测试与三条起步例程
+  title_en: "Routines that do not go wrong: a seven-part brief, safe tests and three starters"
+  author: Swarm School
+  author_en: Swarm School
+  source: blog
+  platform: web
+  lang: en
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - Routine
+    - 事件触发
+    - 定时任务
+    - 安全测试
+    - 故障排查
+  apps:
+    - Slack
+    - GitHub
+    - Gmail
+    - Google Calendar
+    - Notion
+    - Google Docs
+  summary_zh: 按名称、触发器、来源、步骤、输出、边界和失败处理写 Routine；先手工跑通再用窄范围测试。三条起步例程覆盖早间简报、PR 风险摘要和收件箱分拣，统一停在报告或草稿，不自动发送或合并。
+  summary_en: Define a Routine by name, trigger, sources, steps, output, boundaries and failure handling; test narrowly first, then start with briefings, pull-request risk summaries or draft-only inbox triage.
+  verification_note_zh: 已读全文及引用来源；没有创建或触发 Routine，也未连接示例应用。页面按 2026-10-26、版本 0.75.8 检查；菜单、间隔和数量限制等数字以当前官方文档为准。
+  verification_note_en: Read the full guide and sources. No Routine or connector was created. The page reflects 2026-10-26 and app 0.75.8; UI and numeric limits are time-sensitive.
+  status: alive
+  evidence: editorial
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: swarm-school-grok-bot-skills
+  url: https://swarm.school/guides/grok-bot-skills
+  title: 六段式 Grok Bot Skill：何时保存、Teach a task、拆小与版本管理
+  title_en: A six-part Grok Bot Skill guide to saving, teaching, splitting and versioning
+  author: Swarm School
+  author_en: Swarm School
+  source: blog
+  platform: web
+  lang: en
+  categories:
+    - advanced
+    - templates
+  tags:
+    - Skill
+    - Teach a task
+    - 版本管理
+    - 团队库
+    - 清理
+  apps:
+    - X
+  summary_zh: 用目的、输入、步骤、输出、边界和示例六部分写 Skill；先手工成功一次再保存，复杂流程拆成小 Skill，用 Teach a task 捕获操作，定期版本化、合并与清理；团队共享前应检查权限和敏感信息。
+  summary_en: Write Skills with purpose, inputs, steps, outputs, boundaries and examples; save only after a successful run, split large workflows, use Teach a task, version and prune, and review before team sharing.
+  verification_note_zh: 已读全文及其官方来源列表；没有创建、测试或发布 Skill。页面标注检查于 2026-10-26、应用版本 0.75.8；数量、菜单路径和界面会变化，站内关于 Skill 上限的说法未独立复现。
+  verification_note_en: Read the full guide and source list. No Skill was created, tested or published. UI paths, app version 0.75.8 and quantity claims are time-sensitive and were not reproduced.
+  status: alive
+  evidence: editorial
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: xai-grok-bot-tag-on-x
+  url: https://docs.x.ai/grok-bot/tag-on-x
+  title: 官方 @bot on X 指南：把公开帖子交给主 Bot 处理
+  title_en: Official @bot on X guide for handing a public post to your primary Bot
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  platform: official
+  lang: en
+  categories:
+    - start
+    - recipes
+  tags:
+    - X
+    - "@bot"
+    - 任务入口
+    - 媒体限制
+    - 地区限制
+  apps:
+    - X
+    - Slack
+  summary_zh: 在支持地区的 X 帖下标签 @bot 并写清任务，系统会把帖子和指令交给主 Bot；公开回复只是已接收确认，不是完成证明。引用帖媒体可能有限，X 插件为可选；示例可把帖子整理成摘要后交到 Slack。
+  summary_en: Tag @bot with a clear task on X to hand the post to your primary Bot. The public reply only confirms receipt; quoted media and regional availability may be limited, and the X plugin is optional.
+  verification_note_zh: 已读官方完整页面；没有在 X 发帖或标签 @bot，也没有连接 X 或 Slack。页面列出的地区、媒体支持和界面行为可能变化，应以当前官方产品为准。
+  verification_note_en: Read the full official page. No X post, @bot tag, X connector or Slack action was used. Regional and media support are time-sensitive.
+  status: alive
+  evidence: official
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: xai-grok-bot-teams-enterprises
+  url: https://docs.x.ai/grok-bot/teams-and-enterprises
+  title: 官方团队与企业指南：Shared Bots、Pages、Slack 与密钥治理
+  title_en: Official teams and enterprises guide to Shared Bots, Pages, Slack and secret governance
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  platform: official
+  lang: en
+  categories:
+    - advanced
+    - bots
+  tags:
+    - 团队管理
+    - Shared Bots
+    - Pages
+    - 密钥治理
+    - 分析
+  apps:
+    - Slack
+    - 1Password
+    - Gmail
+    - Outlook
+  summary_zh: 团队可控制共享 Bot 的访问与自动加入，按需要分享 Pages，在 Slack 中部署专用应用，并用 Vault 或 1Password 管理密钥；Agent Email 应先停在草稿，管理员可用分析了解采用情况而不把协作边界交给 Bot 自行决定。
+  summary_en: Govern Shared Bot access and auto-add, share Pages deliberately, deploy Slack apps, manage secrets through Vault or 1Password, keep Agent Email draft-first, and use admin analytics for adoption.
+  verification_note_zh: 已读官方完整页面，显示 2026-10-28 更新；没有创建团队、共享 Bot、Slack 应用、Agent Email 或分析报表，也没有更改权限。具体功能取决于团队方案和管理员设置。
+  verification_note_en: Read the complete official page, updated 2026-10-28. No team, Shared Bot, Slack app, Agent Email, analytics report or permission change was created.
+  status: alive
+  evidence: official
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: xai-grok-bot-use-cases
+  url: https://docs.x.ai/grok-bot/use-cases
+  title: 官方 Use cases：从岗位简报、安全试跑到 Skill 与 Routine
+  title_en: "Official use cases: from role briefs and safe trials to skills and routines"
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  platform: official
+  lang: en
+  categories:
+    - start
+    - bots
+    - templates
+  tags:
+    - 岗位提示
+    - Skill
+    - Routine
+    - 审批
+    - 角色卡
+  apps:
+    - GitHub
+    - Slack
+    - Gmail
+  summary_zh: 用职责、来源、输出和边界四部分定义工程排错、客户健康或幕僚 Bot；先让它完成一个可安全核验的小任务，确认结果后保存为 Skill，再按固定时间创建 Routine；外发、删除和付款仍留在审批之后。
+  summary_en: Define a role by job, sources, outputs and boundaries; validate one safe task, save the successful workflow as a Skill, schedule it as a Routine, and keep external actions behind approval.
+  verification_note_zh: 已读官方完整正文，页面显示 2026-10-28 更新；没有创建 Bot、Skill 或 Routine，也未连接任何示例应用。示例是官方建议，不代表所有连接器在每个地区和方案均可用。
+  verification_note_en: Read the complete official page, updated 2026-10-28. No Bot, Skill, Routine or connector was created; availability can vary by plan and region.
+  status: alive
+  evidence: official
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
+- id: xai-grok-bot-vault
+  url: https://docs.x.ai/grok-bot/vault
+  title: 官方 Vault 指南：登录、验证码、密钥与支付信息的安全边界
+  title_en: Official Vault guide to logins, one-time codes, secrets and payment details
+  author: xAI / Cursor
+  author_en: xAI / Cursor
+  source: official
+  platform: official
+  lang: en
+  categories:
+    - start
+    - advanced
+  tags:
+    - Vault
+    - 安全登录
+    - API 密钥
+    - 验证码
+    - 支付审批
+  apps:
+    - 1Password
+    - Gmail
+    - Outlook
+    - Link
+    - X Money
+  summary_zh: Vault 可保存登录、卡片和联系人并在安全表单中使用；密钥应通过 Vault 或 1Password 注入，不要贴进聊天。Bot 可读取 Gmail/Outlook 验证码完成登录；使用已保存卡片或支付账户前仍应保留明确审批。
+  summary_en: Use Vault for logins, cards, contacts and secure forms; inject secrets through Vault or 1Password instead of chat, allow OTP retrieval when intended, and keep payment use behind approval.
+  verification_note_zh: 已读官方完整页面；没有保存登录、卡片、联系人或密钥，没有连接邮件或支付账户，也没有完成任何付款。支付方式、地区与方案可用性以当前界面和官方条款为准。
+  verification_note_en: Read the full official page. No credentials, cards, contacts, email or payment accounts were added, and no payment was attempted. Availability is time-sensitive.
+  status: alive
+  evidence: official
+  added: 2026-10-31
+  checked_at: 2026-10-31
+  collection_batch: 2026-10-31-daily-0900-approved
 - id: botcookbook-thirty-routine-examples
   url: https://botcookbook.com/features/routines
   title: 三十个可复制的 Routine 点子：从收件箱、日历到 PR 与旅行比价
@@ -2083,8 +2450,8 @@
   collection_batch: 2026-10-22-daily-0900-approved
 - id: xai-grok-bot-files-results
   url: https://docs.x.ai/grok-bot/files-and-results
-  title: 官方文件交付指南：附件说明、验收条件与证据保留
-  title_en: Official file delivery with acceptance criteria and evidence
+  title: 官方文件与 Pages 指南：交付、Library、仪表盘与分享
+  title_en: Official files and Pages guide to delivery, Library, dashboards and sharing
   author: xAI / Cursor
   author_en: xAI / Cursor
   source: official
@@ -2092,17 +2459,28 @@
   categories:
     - start
     - advanced
-  apps: []
-  summary_zh: 为附件说明用途，指定文档、表格或草稿的交付格式与验收条件，并在结果中区分事实、推断、已完成动作和待批准事项。
-  summary_en: Describe each attachment, specify reviewable documents, spreadsheets or drafts, and separate source facts, inferences, completed actions and pending approvals in the result.
+    - resources
+  apps:
+    - Google Docs
+    - Google Sheets
+    - Google Slides
+    - Google Drawings
+  summary_zh: 官方说明附件输入、文件输出与格式转换，并新增 Pages：Bot 可制作报告、仪表盘和追踪器，存入 Library，再由 Routine 定期更新。公开链接可能无需登录即可访问，分享前必须移除敏感内容并核对权限。
+  summary_en: Official guidance covers attachments, file outputs and conversion plus Pages for reports, dashboards and trackers stored in Library and updated by Routines; public links require careful privacy review.
   added: 2026-10-22
-  checked_at: 2026-10-22
+  checked_at: 2026-10-31
   status: alive
   evidence: official
-  verification_note_zh: 独立读取官方正文，10月3日为页面更新日。仅核对文件与结果指南；未上传用户文件、调用Cloud Agent或实测格式兼容、大小上限和文件持久性。
-  verification_note_en: Read the official page, updated October 3. No user files uploaded or Cloud Agent invoked; format compatibility, size limits and persistence were not tested.
+  verification_note_zh: 已读当前官方页面，包括 Pages、Library、分享与 Routine 更新；没有上传文件、创建页面、设 Routine 或打开分享。页面能力较新，格式、访问控制和方案要求以当前官方界面为准。
+  verification_note_en: Read the current official page, including Pages, Library, sharing and Routine updates. No file, Page, Routine or share link was created; feature requirements are time-sensitive.
   platform: official
-  collection_batch: 2026-10-22-daily-0900-approved
+  collection_batch: 2026-10-31-daily-0900-approved
+  tags:
+    - 文件交付
+    - Pages
+    - Library
+    - 仪表盘
+    - 分享
 - id: youtube-matt-palmer-getting-started
   url: https://youtube.com/watch?v=jwogmXNt7o4
   title: 入门视频简介：权限、例程与跨应用交接
