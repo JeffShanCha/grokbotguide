@@ -1,4 +1,376 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-agent-analytics-awesome-grok-bot-pages
+  url: https://github.com/agent-analytics/awesome-grok-bot-pages
+  title: Awesome Grok Bot Pages：带截图、作者与构建提示词的公开页面目录
+  title_en: "Awesome Grok Bot Pages: a public directory with screenshots, attribution and build prompts"
+  author: Agent Analytics
+  author_en: Agent Analytics
+  author_url: https://github.com/Agent-Analytics
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-30
+  categories:
+    - resources
+    - templates
+    - recipes
+  tags:
+    - Pages
+    - 模板目录
+    - 仪表盘
+    - 提示词
+    - 公开示例
+  apps: []
+  summary_zh: 目录按生产力、数据、基础设施、编排、销售等类别收录无需登录即可访问的 Grok Bot Pages；每项给截图、作者、来源和构建提示词，并要求真实数据或可用控件、无占位文字和隐私信息。
+  summary_en: A categorized directory of publicly accessible Grok Bot Pages with screenshots, creators, source links and copyable prompts, requiring real data or working controls and no private details.
+  verification_note_zh: 已读 README、规则和代表条目；没有逐页打开、执行提示词或验证所有控件、数据和作者归属。多个展示页明确使用示例数据；目录筛选不等于安全、隐私或质量审计。
+  verification_note_en: Read the README, rules and representative entries. Pages, controls, data and attribution were not individually verified, several examples use sample data, and listing is not a security or privacy audit.
+  status: alive
+  evidence: editorial
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: github-beatapi-grokbot-growth
+  url: https://github.com/beatapi/grokbot-growth
+  title: 出海增长开工 Skill：六问生成岗位 Bot、审核表与 Routine 清单
+  title_en: A growth-fleet starter Skill that generates role Bots, review sheets and Routine plans from six questions
+  author: BeatAPI
+  author_en: BeatAPI
+  author_url: https://github.com/BeatAPI
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-10-31
+  categories:
+    - bots
+    - templates
+    - recipes
+  tags:
+    - 出海增长
+    - Skill
+    - 角色卡
+    - 审核表
+    - 多 Bot
+  apps:
+    - X
+    - BeatAPI
+    - BeatBrowser
+  summary_zh: 回答产品、市场、渠道等六类问题后，Skill 生成总管与增长岗位说明、共用规则、审核表、Routine 清单和 SETUP；建议第一周只跑一条线，写稿与审稿分离，发布、付费和不可逆动作均由人批准。
+  summary_en: Six question groups generate a manager, growth roles, shared rules, a review sheet, Routine plan and setup checklist, starting with one channel and human approval for publishing and spending.
+  verification_note_zh: 已读 README 与边界；没有让 Bot 安装 Skill、运行 npx、创建岗位、连接账号或调用 BeatAPI/BeatBrowser。仓库由 BeatAPI 出品并推广自家可选服务，存在利益相关；实际执行取决于所用智能体和工具。
+  verification_note_en: Read the README and boundaries. No Skill, role, account or BeatAPI/BeatBrowser integration was installed or used. The vendor promotes optional services, and actual execution depends on the agent and tools.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: github-doubledipcode-grokbot-t3-bridge
+  url: https://github.com/doubledipcode/grokbot-t3-bridge
+  title: T3 Code 回调桥：编码线程结束时用 Stop hook 唤醒对应 Bot
+  title_en: A T3 Code callback bridge that wakes the right Bot from a Stop hook
+  author: DoubleDipCode
+  author_en: DoubleDipCode
+  author_url: https://github.com/DoubleDipCode
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-31
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - T3 Code
+    - Stop hook
+    - Webhook
+    - 工作树
+    - 回调
+  apps:
+    - T3 Code
+    - Codex
+    - Claude Code
+  summary_zh: Bot 通过 T3 Code MCP 发起工作树线程；编码工具结束一轮时，Stop hook 读取仅对该工作树启用的标记与状态，经对应 Routine Webhook 唤醒 Bot。方案对重复状态去重、失败不记成功，并把 URL 与密钥留在本机权限文件。
+  summary_en: A Bot launches a T3 worktree, then a Stop hook reads opt-in marker and status files and calls that Bot's Routine webhook, with duplicate suppression, retryable failures and local secret files.
+  verification_note_zh: 已读 README、状态与限制说明；没有克隆、安装 hook、修改 Codex/Claude 配置、授权 MCP、保存 Webhook 密钥或发送回调。作者建议 Bot 使用 full-access 线程会扩大权限，需由用户单独评估；脚本和 T3 接口未审计。
+  verification_note_en: Read the README, state model and limits. No hook, config, MCP authorization, webhook secret or callback was used. The full-access recommendation expands permissions; scripts and T3 compatibility were not audited.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: github-gipppp121-grok-bot-relay
+  url: https://github.com/gipppp121/grok-bot-relay
+  title: grok-bot-relay：只保留一个时钟，用 DONE 串起 7 个 Bot
+  title_en: "grok-bot-relay: one clock and DONE-driven handoffs across seven Bots"
+  author: gipp
+  author_en: gipp
+  author_url: https://github.com/Gipppp121
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-31
+  categories:
+    - advanced
+    - bots
+    - templates
+  tags:
+    - 多 Bot
+    - 事件驱动
+    - ledger
+    - 配额
+    - 人工审批
+  apps:
+    - X
+    - GitHub
+  summary_zh: Python 参考实现只让 Scout 在周一 9 点定时，其余六个 Bot 按 ledger 中的 DONE 依次启动；读数超限写 STOP，Builder 不合并、Pitch 只写草稿、Buyer 每笔需人工同意且有金额上限，Chief 仅在账本变化时汇报。
+  summary_en: A Python reference uses one Monday clock and ledger DONE events for seven Bots, stops at read caps, keeps merge and posting disabled, requires approval for every purchase, and briefs only on changes.
+  verification_note_zh: 已读 README、架构和安全边界；没有克隆、运行演示、启动网页墙、连接 X/GitHub 或批准购买。固定周演示使用脚本数据，网页墙为示意；真实适配器、配额数字和并发安全未独立审计。
+  verification_note_en: Read the README, architecture and safety boundaries. Nothing was cloned or run, and no account or purchase was used. The fixed-week demo is scripted; adapters, quota figures and concurrency were not independently audited.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: github-maimuzamilhu-awesome-grok-bot-templates
+  url: https://github.com/maimuzamilhu/awesome-grok-bot-templates
+  title: Awesome Grok Bot Templates：7,826 个模板的岗位、排程与访问等级目录
+  title_en: "Awesome Grok Bot Templates: 7,826 templates indexed by job, schedule and access level"
+  author: Maimuzamilhu
+  author_en: Maimuzamilhu
+  author_url: https://github.com/Maimuzamilhu
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-01
+  categories:
+    - resources
+    - templates
+  tags:
+    - 模板目录
+    - 角色卡
+    - 排程
+    - 访问等级
+    - 官方市场
+  apps: []
+  summary_zh: 截至 10 月 31 日，README 列出 7,826 个公开模板和 3,801 位创作者，按岗位分类，并标注按需或定时运行、所用应用、官方市场，以及无需账号、连接账号、可付款发布删除三档访问风险。
+  summary_en: As of October 31, the directory lists 7,826 public templates from 3,801 creators, organized by job with schedules, apps, marketplace status and three access-risk levels.
+  verification_note_zh: 已读 README、图例和代表条目；未逐个打开、导入或安全审计 7,826 个模板，也未核验全部作者、数量与访问等级。与 lroolle 单次快照和 652 条 Grok Bot Shelf 不同，它是持续更新的大规模索引；数字会快速变化。
+  verification_note_en: Read the README, legend and representative entries. The 7,826 templates, creators and access ratings were not individually verified or audited. This evolving index differs from the smaller snapshot and Shelf; counts change quickly.
+  status: alive
+  evidence: editorial
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: github-yunjian-ai-yunjian-dianshang
+  url: https://github.com/yunjian-ai/yunjian-dianshang
+  title: 云间电商角色包：算盘、货郎、经纪与掌柜四套 Grok Bot Skill
+  title_en: "Cloudmere e-commerce role pack: Abacus, Hawker, Broker and Keeper Skills for Grok Bot"
+  author: 云间工作室
+  author_en: Cloudmere
+  author_url: https://github.com/yunjian-ai
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-10-29
+  categories:
+    - bots
+    - templates
+    - recipes
+  tags:
+    - 电商
+    - Skill
+    - 角色卡
+    - 抖店
+    - 多 Bot
+  apps:
+    - 抖店
+    - 飞书
+    - 淘宝
+    - 拼多多
+  summary_zh: 四套角色分别处理逐单利润与对账、选品上架草稿、达人推广和多店老板日报；共享店铺文件与经营规则，数字需带出处，验证码和身份确认由本人完成，改价、发品、佣金、付款等动作均停在人工批准前。
+  summary_en: Four role packs cover profit reconciliation, product drafts, creator outreach and multi-store reporting, with identity checks, publishing, pricing, commissions and payments behind human approval.
+  verification_note_zh: 已读 README 各角色、安装和数据边界；没有打开分享 Bot、执行 curl|bash、安装 Skill、登录抖店或处理订单数据。脚本、平台规则数字和后台兼容性未审计；仓库为作者自家角色产品，需自行检查代码与许可。
+  verification_note_en: Read the role, installation and data-boundary sections. No shared Bot, shell installer, Skill, Douyin login or order data was used. Scripts, platform rules and backend compatibility were not audited.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-elevencreative-niche-researcher-bot
+  url: https://x.com/ElevenCreative/status/2116530352869224754
+  title: 每天让 Grok Bot 找赛道前 10 帖、拆解原因并给 10 个选题（附提示词）
+  title_en: A daily niche-research Bot for the top ten X posts, why they worked and ten new ideas
+  author: ElevenCreative
+  author_en: ElevenCreative
+  author_url: https://x.com/ElevenCreative
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-31
+  categories:
+    - recipes
+  tags:
+    - X 运营
+    - 赛道研究
+    - Routine
+    - 内容生产
+  apps:
+    - X
+    - ElevenCreative
+    - Claude
+  summary_zh: 每天定时找赛道近 24 小时前 10 帖，按超出账号常态的互动排序，标出 3 倍以上异常值，给出链接、数据、原钩子、成因、评论情绪与可借鉴点，再总结趋势和 10 个选题，只用可见数据。
+  summary_en: A daily Bot ranks ten niche posts by outperformance, flags 3x outliers, records links, metrics, hooks, reasons, sentiment and takeaways, then proposes trends and ten ideas using visible data only.
+  verification_note_zh: 铁柱已读 X 长文与三段提示词；Codex只复核交接与去重，未独立读取 X。媒体未查看，未复现。作者是 ElevenCreative 官方账号；后半推广自家产品和 Claude 流程，本条只收 Grok Bot 研究部分。
+  verification_note_en: Tie Zhu read the article and prompts; Codex reviewed the handoff and deduplication without independently reading X. Media not viewed; not reproduced. The vendor's later product and Claude workflow are excluded.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-ganfanren-ai-four-bot-x-workflow
+  url: https://x.com/ganfanren_ai/status/2116532398309744868
+  title: 给 4 个 Bot 拉群：X 选题斥候、六字段选题库到长文进草稿箱
+  title_en: A four-Bot X workflow from a topic scout and six-field log to long-form drafts
+  author: ganfanren_ai
+  author_en: ganfanren_ai
+  author_url: https://x.com/ganfanren_ai
+  source: x
+  platform: x
+  lang: zh
+  published: 2026-10-31
+  categories:
+    - recipes
+    - bots
+  tags:
+    - X 运营
+    - 多 Bot 协作
+    - 选题库
+    - Routine
+    - 长文
+  apps:
+    - X
+    - Notion
+    - 飞书
+  summary_zh: 建选题斥候按关注列表定时抓热点，记录永久链接、时间、四项数据、作者层级、来源层级和动机推断；工头再协调研究、写作、设计和发布 Bot，把图文放入 X 草稿箱，人工检查后发布。
+  summary_en: A scheduled scout builds a six-field topic log; a lead coordinates research, writing, design and publishing Bots that place long posts into X drafts for human review.
+  verification_note_zh: 铁柱已读 X 长文全文；Codex只复核交接、摘要和去重，未独立读取 X。配图未查看、流程未复现；额度和价格是作者发文时说法，第三方 x-viral-monitor Skill 未核验，推广帖已合并。
+  verification_note_en: Tie Zhu read the full X article; Codex reviewed the handoff and deduplication without independently reading X. Images not viewed and workflow not reproduced. Quota, pricing and the third-party Skill remain unchecked.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-grokbotuses-product-idea-stress-test
+  url: https://x.com/GrokBotUses/status/2116598730061140097
+  title: 让 Bot 压力测试一个产品想法：前提、正反证据与最省钱的验证法
+  title_en: Stress-test a product idea with assumptions, evidence for and against, and the cheapest validation
+  author: GrokBotUses
+  author_en: GrokBotUses
+  author_url: https://x.com/GrokBotUses
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-31
+  categories:
+    - recipes
+  tags:
+    - 产品验证
+    - 调研
+    - 提示词
+  apps: []
+  summary_zh: 作者在首条回复给出一句提示词：让 Bot 针对一个产品想法列出必须成立的前提、带来源的正反证据，以及最便宜的验证方式。
+  summary_en: A one-line prompt asks the Bot to list what must be true for a product idea, sourced evidence for and against it, and the cheapest test.
+  verification_note_zh: 铁柱已读主帖与作者首条回复中的提示词；Codex只复核交接与去重，未独立读取 X。配图未查看，未复现作者结果。
+  verification_note_en: Tie Zhu read the post and the prompt in the author's first reply; Codex reviewed the handoff and deduplication without independently reading X. Image not viewed; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-grokbotuses-vehicle-maintenance-tracker
+  url: https://x.com/GrokBotUses/status/2116689270228263252
+  title: 让 Bot 跟踪车辆保养计划、到期提醒并给出配件清单或修理店
+  title_en: Track vehicle maintenance, due reminders, parts lists and repair shops with a Bot
+  author: GrokBotUses
+  author_en: GrokBotUses
+  author_url: https://x.com/GrokBotUses
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - recipes
+  tags:
+    - 车辆保养
+    - 提醒
+    - 个人事务
+  apps: []
+  summary_zh: 提示词让 Bot 按 VIN 或年款型号与里程跟踪保养计划、到期提醒，并为每项保养给 DIY 配件清单或推荐修理店；明确不下单、不预约、不付款。
+  summary_en: Provide a VIN or year, make, model and mileage; the Bot tracks service, reminds when due, and lists DIY parts or a shop, without ordering, booking or paying.
+  verification_note_zh: 铁柱已读主帖与作者首条回复中的提示词；Codex只复核交接与去重，未独立读取 X。配图未查看，未复现；保养周期仍需对照厂家手册。
+  verification_note_en: Tie Zhu read the post and prompt reply; Codex reviewed the handoff and deduplication without independently reading X. Image not viewed; not reproduced. Check schedules against the manufacturer manual.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-mahaximus-plugin-scout-prompt
+  url: https://x.com/Mahaximus_/status/2116197354650935410
+  title: 一段提示词让 Bot 遍历插件目录，按契合度与风险选出最该装的 6 个
+  title_en: A plugin-scout prompt that ranks the six best fits by usefulness, overlap and risk
+  author: Mahaximus_
+  author_en: Mahaximus_
+  author_url: https://x.com/Mahaximus_
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-30
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - 插件
+    - 连接器
+    - 权限最小化
+    - 提示词
+  apps: []
+  summary_zh: 提示词先盘点现有 Bot、Routine、应用和手工任务，再读插件目录，检查功能重叠及发送、付款、删除等权限，按契合度、省时和风险选前 6 个，列出闲置插件，并为接通后的每项安排一个真实测试。
+  summary_en: The prompt inventories Bots and apps, checks the plugin directory for overlap and sensitive access, scores fit, time and risk, keeps the top six, flags idle plugins and plans a real test for each.
+  verification_note_zh: 铁柱已读含完整提示词的原帖；Codex只复核交接与去重，未独立读取 X。作者提到的团队长文未读，未复现；提示词中的免提问和连接卡片不能替代逐项授权。
+  verification_note_en: Tie Zhu read the full prompt; Codex reviewed the handoff and deduplication without independently reading X. The linked breakdown was not read and nothing was reproduced. Each authorization still needs review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
+- id: x-outworkventures-day8-schedule-routine
+  url: https://x.com/OutworkVentures/status/2116539346270744752
+  title: 新手第 8 天：把测过的 Skill 排成每周 Routine 并先做安全测试
+  title_en: "Beginner day 8: schedule a tested Skill as a weekly Routine and run a safe test first"
+  author: OutworkVentures
+  author_en: OutworkVentures
+  author_url: https://x.com/OutworkVentures
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-31
+  categories:
+    - start
+  tags:
+    - Routine
+    - Skill
+    - 新手系列
+    - 时区
+  apps: []
+  summary_zh: 选一个已验证的 Skill，设成每周一 9 点运行、只回报要点与来源、不改不分享；检查指令、运行时间和时区，并先用安全输入试跑。新建 Routine 会等到下一次计划时间。
+  summary_en: Turn a tested Skill into a Monday 9am Routine, report only key points and sources, change or share nothing, verify the schedule and time zone, and test with safe inputs first.
+  verification_note_zh: 铁柱已读 X 长文全文；Codex只复核交接与去重，未独立读取 X。配图未查看，未复现；时区等界面路径未核对当前版本。系列第 7 天已收录。
+  verification_note_en: Tie Zhu read the full X article; Codex reviewed the handoff and deduplication without independently reading X. Image not viewed, not reproduced, and current UI paths were not checked.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-01
+  checked_at: 2026-11-01
+  collection_batch: 2026-11-01-daily-0900-approved
 - id: github-bianwuwei-grok-bot-getting-started
   url: https://github.com/bianwuwei/grok-bot-getting-started
   title: 从第一个 Bot 到能交作业的小队：中文角色分工、Skill 与 Routine 教程
