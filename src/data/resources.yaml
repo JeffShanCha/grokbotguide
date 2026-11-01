@@ -183,10 +183,10 @@
     - 抖店
     - 多 Bot
   apps:
-    - 抖店
-    - 飞书
-    - 淘宝
-    - 拼多多
+    - Douyin
+    - Feishu
+    - Taobao
+    - Pinduoduo
   summary_zh: 四套角色分别处理逐单利润与对账、选品上架草稿、达人推广和多店老板日报；共享店铺文件与经营规则，数字需带出处，验证码和身份确认由本人完成，改价、发品、佣金、付款等动作均停在人工批准前。
   summary_en: Four role packs cover profit reconciliation, product drafts, creator outreach and multi-store reporting, with identity checks, publishing, pricing, commissions and payments behind human approval.
   verification_note_zh: 已读 README 各角色、安装和数据边界；没有打开分享 Bot、执行 curl|bash、安装 Skill、登录抖店或处理订单数据。脚本、平台规则数字和后台兼容性未审计；仓库为作者自家角色产品，需自行检查代码与许可。
@@ -250,7 +250,7 @@
   apps:
     - X
     - Notion
-    - 飞书
+    - Feishu
   summary_zh: 建选题斥候按关注列表定时抓热点，记录永久链接、时间、四项数据、作者层级、来源层级和动机推断；工头再协调研究、写作、设计和发布 Bot，把图文放入 X 草稿箱，人工检查后发布。
   summary_en: A scheduled scout builds a six-field topic log; a lead coordinates research, writing, design and publishing Bots that place long posts into X drafts for human review.
   verification_note_zh: 铁柱已读 X 长文全文；Codex只复核交接、摘要和去重，未独立读取 X。配图未查看、流程未复现；额度和价格是作者发文时说法，第三方 x-viral-monitor Skill 未核验，推广帖已合并。
