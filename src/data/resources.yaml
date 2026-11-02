@@ -1,4 +1,523 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: bilibili-hi-grokbot-quota-two-improvements
+  url: https://bilibili.com/video/BV1Menj62E4q
+  title: Grok Bot 额度两天就用完？用私聊入口与手机 HTML 汇报减少浪费
+  title_en: Grok Bot allowance gone in two days? Reduce waste with a private entry point and mobile HTML reports
+  author: hi超纯
+  author_en: hi Chaochun
+  source: video
+  platform: bilibili
+  lang: zh
+  published: 2026-10-19
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - 额度
+    - 多 Bot
+    - 汇报格式
+  apps: []
+  summary_zh: 作者认为经理群里一句话会唤醒多个 Bot 造成无关读取，给经理 Bot 增加私聊入口以省掉 3–4 轮无关往返；交付不再堆长文字，改成手机可读的 HTML，需要动效时附录屏，并在末尾列清要用户决定的事项。
+  summary_en: Add a private entry point to the manager Bot so a group message does not wake every Bot, and replace long reports with mobile-friendly HTML, optional screen recordings and a final list of decisions needed from the user.
+  verification_note_zh: 只读取 B 站公开视频说明，未观看视频、未核对画面或复现额度变化；用量数字是作者个人账户和当时套餐的自述，不能推广为普遍结果。
+  verification_note_en: Reviewed the public Bilibili description only; the video was not watched and usage savings were not reproduced. Allowance figures are account- and plan-specific author reports, not general results.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: blog-jonathan-montoya-affiliate-marketing
+  url: https://jonathanmontoya.com/post/grok-bot-for-affiliate-marketing
+  title: 联盟营销工作流：产品研究 Bot、价格检查 Routine 与发布前人工把关
+  title_en: "Grok Bot for affiliate marketing: product research, price checks and human approval before publishing"
+  author: Jonathan Montoya
+  author_en: Jonathan Montoya
+  author_url: https://jonathanmontoya.com/
+  source: blog
+  platform: web
+  lang: en
+  published: 2026-10-28
+  categories:
+    - recipes
+    - bots
+    - templates
+  tags:
+    - 联盟营销
+    - 产品研究
+    - 价格监控
+    - 审批
+  apps:
+    - Firecrawl
+  summary_zh: 把联盟内容拆成产品研究、条款检查、内容起草、链接跟踪和价格监控岗位；研究提示词要求官方页面、定价、帮助文档与真实评论都附来源，未确认项标出。Bot 只交事实表和草稿，作者本人核事实、加体验与披露并决定发布。
+  summary_en: Split affiliate work into research, program checks, drafting, link tracking and price monitoring; require sourced facts while a human verifies prices, adds disclosures and approves publishing.
+  verification_note_zh: 已读全文及两段提示词；未运行。作者 10 月 28 日核对官方文档并明确收入不保证，但文章反复推广其 AIM Agent、课程与联盟链接，存在直接商业利益。
+  verification_note_en: Read the full article and prompts; not run. The author checked official docs Oct 28 and rejects income guarantees, but repeatedly promotes AIM Agent, courses and affiliate links, creating a direct commercial interest.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: blog-jonathan-montoya-content-creators
+  url: https://jonathanmontoya.com/post/grok-bot-for-content-creators
+  title: 内容创作者工作流：选题侦察、声音 Skill、Pages 看板与长内容再利用
+  title_en: "Grok Bot for content creators: idea scouting, a voice Skill, Pages dashboards and repurposing"
+  author: Jonathan Montoya
+  author_en: Jonathan Montoya
+  author_url: https://jonathanmontoya.com/
+  source: blog
+  platform: web
+  lang: en
+  published: 2026-10-28
+  categories:
+    - recipes
+    - bots
+    - templates
+  tags:
+    - 内容创作
+    - 选题
+    - Pages
+    - 声音 Skill
+  apps:
+    - YouTube
+    - Reddit
+    - X
+    - Higgsfield
+  summary_zh: 建议用选题 Bot 每周从 YouTube、Reddit、X 找带链接的问题，归成三组视频题目；用写作样例生成声音 Skill；让研究、起草和长视频再利用分岗，并用 Pages 做内容日历、表现看板和赞助商单页，所有发布仍需人工批准。
+  summary_en: Use an idea Bot to group sourced questions, build a voice Skill from writing samples, split research, drafting and repurposing across roles, and keep publishing behind human approval.
+  verification_note_zh: 已读全文和提示词；未运行。Pages、媒体长度和手机能力取自作者对 10 月 28 日官方页面的转述，未逐项实测；文章推广 AIM Agent、课程和联盟链接，存在商业利益。
+  verification_note_en: Read the full article and prompt; not run. Pages, media limits and mobile capabilities are the author's Oct 28 reading of official docs, not independently tested. The article promotes AIM Agent, courses and affiliate links.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: github-hanbo-onenod-flow-demo
+  url: https://github.com/hanbo-onenod/flow-demo
+  title: flow-demo：Slack 收需求、GitHub Actions 走状态机、Cursor Cloud Agents 写代码
+  title_en: "flow-demo: Slack intake, a GitHub Actions state machine and Cursor Cloud Agents for implementation"
+  author: hanbo-onenod
+  author_en: hanbo-onenod
+  author_url: https://github.com/hanbo-onenod
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-01
+  categories:
+    - advanced
+    - recipes
+    - bots
+    - templates
+  tags:
+    - 多 Bot
+    - 状态机
+    - 人工审批
+    - 软件团队
+  apps:
+    - Slack
+    - GitHub
+    - GitHub Actions
+    - Cursor Cloud Agents
+  summary_zh: 七个 Bot 读取版本化规则书：Team Chief 从 Slack 建候选，Product 写任务包，Dev Lead 委派 Cursor 云端 Agent，Acceptance 复测，Outer Loop 和 Process Bot 处理反馈与改进；GitHub Actions 按固定规则推进，确认、合并、验收与异常仍由人决定。
+  summary_en: Seven Bots read versioned rulebooks while GitHub Actions advances a fixed state machine from Slack intake through Cursor agents, independent acceptance and review, with human confirmation at key gates.
+  verification_note_zh: 已读 README、设置说明、规则书和状态机；未运行。仓库明确全为虚构演示。实际部署需 Slack/GitHub 权限、Webhook Key 和经典 public_repo token；权限设计与路由器代码未做安全审计。
+  verification_note_en: Read the README, setup, rulebooks and state machine; not run. All data is fictional. Deployment needs Slack/GitHub permissions, webhook keys and a classic public_repo token; permissions and router code were not security-audited.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: github-poisenloaf-ultimate-rv-trip-planner
+  url: https://github.com/poisenloaf/ultimate-rv-trip-planner
+  title: Ultimate RV Trip Planner：四个 Skill 管行程、看板与独立 Go/No-Go 核验
+  title_en: "Ultimate RV Trip Planner: four Skills for planning, trip boards and an independent Go/No-Go check"
+  author: poisenloaf
+  author_en: poisenloaf
+  author_url: https://github.com/poisenloaf
+  source: github
+  platform: github
+  lang: en
+  published: 2026-10-31
+  categories:
+    - bots
+    - templates
+    - recipes
+    - advanced
+  tags:
+    - 房车旅行
+    - Skill
+    - Go/No-Go
+    - 行程看板
+  apps:
+    - GitHub
+    - OpenStreetMap
+    - Twilio
+  summary_zh: 四个 Skill 分别收集车辆与偏好、规划分段路线和营地、生成带地图的单页看板、用独立检查核对路线/车况/燃油/住宿/天气/预算/预订；提交、预订、付款和私密主机通话均停在人工批准前。
+  summary_en: Four Skills collect rig settings, plan paced routes and stays, build a map board, and independently check route, fit, fuel, stays, weather, budget and bookings while stopping before sending, booking or paying.
+  verification_note_zh: 已读 README、四个 Skill、版本与更新记录；未导入模板、安装 Skill、运行路线或核验营地。月度更新会从 main 拉取新 Skill，存在供应链变化风险；Twilio 呼叫为可选高级方案。
+  verification_note_en: Read the README, four Skills, version and changelog. Nothing was imported or run. The monthly updater fetches Skills from main, so upstream changes are a supply-chain risk; the Twilio caller is optional and advanced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: reddit-grokbot-regular-people-use-cases
+  url: https://reddit.com/r/GrokBot/comments/1xbyspq/what_are_regular_people_actually_using_grokbot_for
+  title: “普通人”怎样用 Grok Bot：家庭中枢、求职、健身、账单与智能家居案例串
+  title_en: "How regular people use Grok Bot: family hubs, job search, fitness, bills and smart-home case thread"
+  author: r/GrokBot 社区
+  author_en: r/GrokBot community
+  source: forum
+  platform: reddit
+  lang: en
+  published: 2026-10-21
+  categories:
+    - recipes
+    - resources
+  tags:
+    - 社区案例
+    - 家庭管理
+    - 个人助理
+    - 多应用
+  apps:
+    - Apple Health
+    - Google Drive
+    - Google Calendar
+    - Gmail
+    - YNAB
+    - Actual Budget
+    - Sleeper
+    - Home Assistant
+    - Ecobee
+    - Garmin
+    - Todoist
+  summary_zh: 多位用户分享家庭邮件与日历汇总、求职检索、健身记录、账单与预算、学校通知、家庭页面、智能家居和体育研究团队；较具体案例包含 Apple Health 经带密钥 Webhook 分三类传指标、健身 Bot 把组数与 PB 写入表格、家庭财务 Bot 交叉核对账单。
+  summary_en: A community thread covers family hubs, job search, workouts, bills, school notices, smart homes and sports research, including an authenticated Apple Health webhook and workout logging to a sheet.
+  verification_note_zh: 已读原帖和代表性详细评论，未穷尽全部评论、联系作者或复现结果。健康、财务、儿童和家庭数据均属敏感信息；收录案例不等于建议授予同等权限，成效与安全性未核。
+  verification_note_en: Read the post and representative detailed comments, not every reply; no outcomes were reproduced. Health, financial, child and family data are sensitive. Inclusion does not recommend granting the same access, and security claims were not verified.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: web-oreogong2-grok-bot-guide
+  url: https://oreogong2.github.io/bot-guide
+  title: Grok Bot 新手使用手册：从第一天上手到多 Bot、Webhook、安全与排错
+  title_en: A Chinese Grok Bot handbook from first-day setup to multi-Bot workflows, webhooks, safety and troubleshooting
+  author: oreogong2
+  author_en: oreogong2
+  author_url: https://github.com/oreogong2
+  source: blog
+  platform: web
+  lang: zh
+  published: 2026-10-15
+  categories:
+    - start
+    - advanced
+    - recipes
+    - resources
+  tags:
+    - 中文手册
+    - 入门
+    - 排错
+    - 安全边界
+  apps:
+    - Gmail
+    - Slack
+    - Feishu
+    - WeChat
+    - GitHub
+  summary_zh: 可搜索单页手册按入门、进阶、高阶组织：岗位说明、首个只读任务、云电脑、Routine、Skill 与记忆、省额度、真实场景、多 Bot、Webhook、iOS 快捷指令、CLI/MCP、安全分级和 15 类排错；每章含提示词、验收和常见坑。
+  summary_en: A searchable Chinese handbook covering first tasks, cloud computer, Routines, Skills, usage, real cases, multi-Bot teams, webhooks, iOS shortcuts, CLI/MCP, safety tiers and troubleshooting, with prompts and checks.
+  verification_note_zh: 已读页面结构、代表内容、来源和更新记录；未逐条重开全部外链或复现流程。作者将社区经验标为未验证，并于 2026-11-02 对照官方价格、安全和更新日志；仓库无明确许可证。
+  verification_note_en: Read the structure, representative content, sources and changelog; not every external link was reopened and workflows were not reproduced. Community claims are labeled unverified; official material was rechecked Nov 2. No explicit repository license.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-contenttocommas-leader-playbook-bot
+  url: https://x.com/contenttocommas/status/2117049017175539861
+  title: 用公开视频整理一位企业家的 playbook，做成“首席业务官”Bot
+  title_en: Turn an entrepreneur's public videos into a sourced Chief Business Officer playbook Bot
+  author: contenttocommas
+  author_en: contenttocommas
+  author_url: https://x.com/contenttocommas
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-02
+  categories:
+    - recipes
+    - bots
+  tags:
+    - 业务策略
+    - playbook
+    - 长文
+  apps:
+    - YouTube
+  summary_zh: 先确定缺的岗位，再选公开视频多的企业家，从转写稿提炼带出处的核心信念、框架、诊断八问、语气和精简提示词；写明非本人背书与不负责事项，接入真实业务数据后再给建议，只设一到两个每周检查。
+  summary_en: Choose a missing role and a leader with many public videos, distill transcripts into a sourced playbook, add a non-endorsement caveat and ownership limits, connect real data first, and keep one or two weekly checks.
+  verification_note_zh: 铁柱已读帖子与长文全文；Codex 复核交接，未独立读取 X。配图未看、未复现；文中有未编辑占位文字和通讯推广，基于公开内容模仿不等于本人背书。
+  verification_note_en: Tie Zhu read the full post and article; Codex reviewed the handoff without independently reading X. Images not viewed; not reproduced. Contains an unedited placeholder and promotion; imitation is not endorsement.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-jackywxsz-follow-expert-routine
+  url: https://x.com/Jackywxsz/status/2116767795958751400
+  title: 每天让 Bot 追踪一位专家的新帖，只报可借鉴的 Skill/Routine 改动
+  title_en: Have a Bot follow one expert daily and report only useful Skill or Routine changes
+  author: Jackywxsz
+  author_en: Jackywxsz
+  author_url: https://x.com/Jackywxsz
+  source: x
+  platform: x
+  lang: zh
+  published: 2026-11-01
+  categories:
+    - recipes
+  tags:
+    - Routine
+    - 信息追踪
+    - 提示词
+  apps:
+    - X
+  summary_zh: 每日查看 @poteto 自上次检查以来的新帖与回复，对照现有 Bot/Skill/Routine 只报值得借鉴的变化，每条附链接、适用场景和可粘贴修改建议；先建议、确认后再改，不代发帖，抓取失败说明原因，无更新则安静。
+  summary_en: "Daily prompt: check @poteto's new posts, compare them with current Bots, Skills and Routines, report only useful changes with links and paste-ready edits, change nothing until confirmed, and stay quiet otherwise."
+  verification_note_zh: 铁柱已读帖子正文中的完整提示词；Codex 复核交接与去重，未独立读取 X。被引用的 poteto 原帖另行送审；未复现。
+  verification_note_en: Tie Zhu read the full prompt; Codex reviewed the handoff and deduplication without independently reading X. The quoted poteto post is reviewed separately; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-jordanrafealov-beginner-to-pro
+  url: https://x.com/JordanRafealov/status/2115047159997538421
+  title: 从入门到进阶：Claude Code 配置迁移、总管 Bot 委派与 7 天上手计划
+  title_en: "Beginner to advanced: Claude Code migration, chief-of-staff delegation and a 7-day Grok Bot plan"
+  author: JordanRafealov
+  author_en: JordanRafealov
+  author_url: https://x.com/JordanRafealov
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-27
+  categories:
+    - start
+    - advanced
+  tags:
+    - 迁移
+    - 多 Bot 协作
+    - Routine
+    - 长文
+  apps:
+    - Claude Code
+  summary_zh: 包含总管向专职 Bot 委派的示例、清晰岗位描述和对外动作草稿模式、一句提示词把本机 CLAUDE.md 与 Skills 转成 Grok Bot Skill、首日连接器分组、早 7 点选题 Routine 与 7 天上手计划。
+  summary_en: Covers chief-of-staff delegation, clear roles with drafts for outbound actions, a prompt to migrate local CLAUDE.md and Skills, first-day connector groups, a 7am research Routine and a 7-day plan.
+  verification_note_zh: 铁柱已读帖子与长文全文；Codex 复核状态变化，未独立读取 X。未复现；Dr. Egg Bot 用途与 poteto 说法不一致，迁移要求本机始终允许执行，存在安全风险；末尾推广作者社群。
+  verification_note_en: Tie Zhu read the full post and article; Codex reviewed the status change without independently reading X. Not reproduced. Dr. Egg Bot's role conflicts with poteto's description, migration asks for always-allow local execution, and the article promotes a community.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-max-xuy-record-skill-replay
+  url: https://x.com/Max_XuY/status/2117034164960780541
+  title: 录一次浏览器流程生成 Skill，再回放上周数据找出猜测步骤
+  title_en: Record a browser workflow into a Skill, then replay last week's data to find guessed steps
+  author: Max_XuY
+  author_en: Max_XuY
+  author_url: https://x.com/Max_XuY
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - advanced
+  tags:
+    - Skill
+    - 录制
+    - 提示词
+  apps: []
+  summary_zh: 把每周浏览器杂务演示录制一次，让 Bot 起草 Skill；随后在上周数据上回放这个 Skill，列出每个靠猜的步骤并逐一向用户提问，以此补全决策规则。
+  summary_en: Record a weekly browser chore once, let the Bot draft a Skill, then replay it on last week's data, list every step where it guessed and ask about each one to fill missing decision rules.
+  verification_note_zh: 铁柱已读帖子正文；Codex 复核交接，未独立读取 X。附带媒体未看，录制时长上限为作者自述，未复现。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff without independently reading X. Attached media not viewed, the recording limit is author-reported, and the workflow was not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-max-xuy-routine-troubleshooting
+  url: https://x.com/Max_XuY/status/2117034480099856646
+  title: Routine 没跑？先查四项，再让 Bot 只诊断不修改
+  title_en: Routine did not run? Check four items, then ask the Bot to diagnose without changing anything
+  author: Max_XuY
+  author_en: Max_XuY
+  author_url: https://x.com/Max_XuY
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - advanced
+  tags:
+    - Routine
+    - 排错
+    - 提示词
+  apps: []
+  summary_zh: Routine 未运行时先别重建：检查是否启用、计划时间和实际时区、触发条件是否过窄或频道过吵，再点 Test 看结果；也可让 Bot 按四项检查指定 Routine，只指出失败项、不做修改。
+  summary_en: Before rebuilding a Routine, check that it is enabled, its schedule and time zone, whether its trigger is too narrow or noisy, and the Test result; or ask the Bot to diagnose these and change nothing.
+  verification_note_zh: 铁柱已读帖子正文；Codex 复核交接，未独立读取 X；未复现。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff without independently reading X; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-noahvisualsx-bot-team-system
+  url: https://x.com/noahvisualsx/status/2116831256197689533
+  title: 把 poteto 指南扩展成可落地的 Bot 团队系统：角色卡、权限分级、Routine 字段与 7 天计划
+  title_en: "Turn poteto's guide into an operational Bot team system: role cards, permissions, Routine fields and a 7-day plan"
+  author: noahvisualsx
+  author_en: noahvisualsx
+  author_url: https://x.com/noahvisualsx
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - Bot 设计
+    - 权限
+    - Routine
+    - 长文
+  apps: []
+  summary_zh: 在 poteto 两帖基础上补充七问角色卡、只读/准备/审批执行权限分级、按频率/耗时/规则清晰度/风险打分的摩擦日志、Routine 必备字段、研究-编辑-增长三 Bot 案例与 7 天计划，并附可粘贴提示词。
+  summary_en: Extends poteto's guide with a seven-question role card, permission tiers, a scored friction log, required Routine fields, a research-editor-growth team case, a 7-day plan and paste-ready prompts.
+  verification_note_zh: 铁柱已读帖子与长文全文；Codex 复核交接与重叠，未独立读取 X。配图未看，产品细节未逐条对照官方文档，未复现；大量扩展由作者自行补充。
+  verification_note_en: Tie Zhu read the full post and article; Codex reviewed the handoff and overlap without independently reading X. Images not viewed, product details not checked line by line, and the workflow was not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-nursexxl-polymarket-radar
+  url: https://x.com/nursexxl/status/2116908232849654127
+  title: Polymarket Radar：让 Bot 盯预测市场赔率异动并只做研究提醒
+  title_en: "Polymarket Radar: monitor prediction-market odds and send research-only alerts"
+  author: nursexxl
+  author_en: nursexxl
+  author_url: https://x.com/nursexxl
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - recipes
+  tags:
+    - 监控
+    - 预测市场
+    - 提示词
+  apps:
+    - Polymarket
+  summary_zh: 建一个只负责盯盘的 Bot，发送关注市场并每 15 分钟检查；赔率变动超过 5% 时报告时间、价格、一句原因与规则说明，绝不代为交易，并提醒价格跳动不等于结算，用户早上自己读规则再决定。
+  summary_en: A single-job Bot checks selected Polymarket markets every 15 minutes and reports time, price, a short reason and rules after a 5% move; it never trades, and price movement is not resolution.
+  verification_note_zh: 铁柱已读帖子和提示词；Codex 复核交接，未独立读取 X。演示视频未看、未复现。涉及金融风险；15 分钟频率高于每小时建议，可能消耗更多额度。
+  verification_note_en: Tie Zhu read the post and prompt; Codex reviewed the handoff without independently reading X. Demo video not watched; not reproduced. Financial risk applies, and the 15-minute cadence may use more allowance.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-poteto-bot-team-guide
+  url: https://x.com/poteto/status/2116576229319233596
+  title: Lauren Tan 的 Grok Bot 组队指南：少而精的 Bot、边教边存 Skill、Routine 与脚本
+  title_en: "Lauren Tan's Grok Bot team guide: fewer Bots, teach into Skills, Routines and scripts"
+  author: poteto（Lauren Tan）
+  author_en: poteto (Lauren Tan)
+  author_url: https://x.com/poteto
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-31
+  categories:
+    - start
+    - advanced
+  tags:
+    - Bot 设计
+    - Skill
+    - Routine
+    - 团队管理
+  apps:
+    - Slack
+    - GitHub
+  summary_zh: 少而精地组队，边教边让 Bot 存 Skill，可备份到私有 GitHub；补充回复建议 Routine 最多每小时、先过滤事件、把重复步骤写成脚本、团队版在 Slack 共享 Bot，并用语音倾倒后复述来校准理解。
+  summary_en: Keep a small Bot roster, save Skills while teaching, back them up to private GitHub, filter events before hourly Routines, script repeated steps, share Bots in Slack, and use voice-dump restatement.
+  verification_note_zh: 铁柱已读原帖与同作者补充回复；Codex 复核交接与去重，未独立读取 X。dr eggbot 模板页和配图未打开，未复现；作者为 Grok Bot 团队成员，属作者自述。
+  verification_note_en: Tie Zhu read the post and the author's follow-up; Codex reviewed the handoff and deduplication without independently reading X. Template and media not opened; not reproduced; author-reported by a Grok Bot team member.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-siedgegeek-morning-check-routine
+  url: https://x.com/SiEdgeGeek/status/2117029321613135929
+  title: 晨间检查 Routine：先手动跑通、存 Skill，再定时并写明失败怎么办
+  title_en: "Morning-check Routine: run it manually, save a Skill, schedule it and define failure handling"
+  author: SiEdgeGeek
+  author_en: SiEdgeGeek
+  author_url: https://x.com/SiEdgeGeek
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-01
+  categories:
+    - start
+    - recipes
+  tags:
+    - Routine
+    - Skill
+    - 晨间简报
+  apps: []
+  summary_zh: 先让 Bot 把晨间检查当普通任务跑通并修正，结果可靠后存成 Skill；再设工作日 7:30 运行并贴摘要，要求不发送不购买、网站打不开时说明而非猜测；最后打开 Routine 点 Test 核对输出。
+  summary_en: Run the morning check once and fix it, save it as a Skill, schedule weekdays at 7:30 with no sending or buying and explicit failed-site reporting, then use Test and review the output.
+  verification_note_zh: 铁柱已读帖子正文；Codex 复核交接，未独立读取 X；未复现。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff without independently reading X; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
+- id: x-uknowhowai-routine-report-footer
+  url: https://x.com/uknowhowai/status/2117044236440731993
+  title: 给每个 Routine 报告加三栏：未完成 / 出错 / 不确定
+  title_en: "End every Routine report with three columns: Incomplete, Errors and Uncertain"
+  author: uknowhowai
+  author_en: uknowhowai
+  author_url: https://x.com/uknowhowai
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-02
+  categories:
+    - advanced
+  tags:
+    - Routine
+    - 报告格式
+  apps: []
+  summary_zh: 在每个 Routine 末尾加一句要求：报告最后用“未完成 / 出错 / 不确定”三栏收尾，让过去需要几轮追问才暴露的问题一眼可见。
+  summary_en: "Add one line to every Routine: end each report with Incomplete, Errors and Uncertain columns, making issues that once needed follow-up questions visible immediately."
+  verification_note_zh: 铁柱已读帖子正文；Codex 复核交接，未独立读取 X。帖内复制外链与配图未打开，未复现。
+  verification_note_en: Tie Zhu read the post; Codex reviewed the handoff without independently reading X. The copy link and image were not opened; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-02
+  checked_at: 2026-11-02
+  collection_batch: 2026-11-02-daily-0900-approved
 - id: github-agent-analytics-awesome-grok-bot-pages
   url: https://github.com/agent-analytics/awesome-grok-bot-pages
   title: Awesome Grok Bot Pages：带截图、作者与构建提示词的公开页面目录
