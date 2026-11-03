@@ -1,4 +1,377 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: blog-company-notes-grok-bot-browser-recording
+  url: https://company-notes.com/blog/grok-bot-browser-recording
+  title: 给 Grok Bot 浏览器操作留录屏：Agent Recorder Skill、回放链接与自动清理
+  title_en: Record Grok Bot browser work with Agent Recorder, replay links and cleanup
+  author: Company Notes（u/nuwa2502）
+  author_en: Company Notes (u/nuwa2502)
+  author_url: https://github.com/company-notes
+  source: blog
+  platform: web
+  lang: zh
+  published: 2026-11-02
+  categories:
+    - advanced
+    - templates
+  tags:
+    - 录屏
+    - MCP
+    - Skill
+    - 审计
+  apps:
+    - GitHub
+    - FastFileLink
+    - Google Drive
+    - FFmpeg
+  summary_zh: Agent Recorder Skill 在浏览器操作前录制 Grok Bot 自己的 Linux X11 桌面，完成后返回 MP4 回放链接和操作摘要；FastFileLink 下载成功后可删本地文件，也可转存 Google Drive。仓库固定到 v0.2.2。
+  summary_en: Agent Recorder captures Grok Bot's own Linux X11 display before browser work, then returns an MP4 and action summary. FastFileLink can delete after download, or upload can use Google Drive; the Skill pins v0.2.2.
+  verification_note_zh: 已读文章、仓库 README 与固定版本 Skill；未安装、录屏或测试传输。它不录用户 Mac/Windows，不是防篡改审计；录屏可能含个人资料、后台和密钥画面，分享与保留需谨慎。
+  verification_note_en: Article, README and pinned Skill were read; installation, capture and transfer were not tested. It does not record the user's Mac/Windows and is not tamper-proof. Recordings may expose personal, admin or key material.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-bigibyte-awesome-grok-bot
+  url: https://github.com/bigibyte/awesome-grok-bot
+  title: Awesome Grok Bot：CC0 英文学习路径、能力地图、角色模板与安全参考库
+  title_en: "Awesome Grok Bot: a CC0 learning path, feature map, templates and safety reference"
+  author: Bigibyte
+  author_en: Bigibyte
+  author_url: https://github.com/Bigibyte
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-02
+  categories:
+    - start
+    - resources
+  tags:
+    - 学习路径
+    - 资料库
+    - 提示词
+    - 安全
+  apps:
+    - GitHub
+  summary_zh: CC0 英文资料库把入门、学习路径、能力图、硬限制、Bot、Skill、Routine、连接器、Pages、共享电脑、角色模板、提示库、安全与排错拆成独立文档，并为主要产品事实附官方来源。
+  summary_en: A CC0 English library splits getting started, learning path, capabilities, limits, Bots, Skills, Routines, connectors, Pages, shared computer, starter roles, prompts, safety and troubleshooting into source-linked docs.
+  verification_note_zh: 已读 README、目录树与文档索引，抽查主要官方链接；未逐页审计全部 20 多篇文档。与现有中文综合指南主题相近，但语言、CC0 授权和模块化清单不同。
+  verification_note_en: README, tree and document index were read, with spot checks of major official links; 20-plus docs were not audited line by line. It overlaps Chinese guides but differs in language, CC0 licensing and modular checklists.
+  status: alive
+  evidence: editorial
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-densitysystems-grokbot-agency-kit
+  url: https://github.com/densitysystems/grokbot-agency-kit
+  title: Grok Bot Agency Kit：审批、交接、省额度、岗位卡与安静 Routine 模板
+  title_en: Grok Bot Agency Kit for approvals, handoffs, credit saving, seats and quiet Routines
+  author: DensitySystems
+  author_en: DensitySystems
+  author_url: https://github.com/DensitySystems
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-02
+  categories:
+    - templates
+    - advanced
+  tags:
+    - 团队治理
+    - 角色卡
+    - 交接
+    - Routine
+  apps:
+    - GitHub
+  summary_zh: 一套 MIT 许可的纯文本团队模板：组织结构、单一职责岗位卡、外发/花钱/删除/部署审批、可追溯交接、少回合省额度，以及仅在变化时通知的 watcher、keep-alive 和 webhook 去重 Routine。
+  summary_en: An MIT text kit with org structure, seat cards, approval gates for sends, spending, deletion and deploys, traceable handoffs, low-turn coordination, plus change-only watcher, keep-alive and webhook-dedupe Routines.
+  verification_note_zh: 已读核心规则、交接与省额度文档并核对模板树；未创建 Bot、Routine 或真实组织。部分规则较强，应按实际风险调整，不能把模板中的审批继承视为平台权限机制。
+  verification_note_en: Core rules, handoff and credit-saving docs plus the template tree were reviewed. No Bots or Routines were created. Strong rules need local adaptation, and template approval inheritance is not a platform permission mechanism.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-ekastle-stl-price-manager-skill
+  url: https://github.com/ekastle/stl-price-manager-skill
+  title: AirROI 短租定价 Skill：1Password 密钥、竞品加权、历史快照与预算上限
+  title_en: AirROI short-term rental pricing Skill with 1Password, weighted comps and budget limits
+  author: ekastle
+  author_en: ekastle
+  author_url: https://github.com/ekastle
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-02
+  categories:
+    - recipes
+    - templates
+  tags:
+    - 短租
+    - 定价
+    - Skill
+    - 竞品分析
+  apps:
+    - AirROI
+    - 1Password
+    - GitHub
+    - Airbnb
+    - VRBO
+  summary_zh: Skill 从私有配置读取自有房源与竞品，用 1Password 取 AirROI 密钥，保存逐日快照，计算未来 30/60/90 天加权均价与入住差距，再输出调价建议；要求保留历史、遵守最低入住规则，并按调用量核算成本。
+  summary_en: The Skill loads self and comp listings, reads an AirROI key from 1Password, saves snapshots, compares weighted rates and occupancy, then proposes pricing actions within history, legal-stay and call-budget rules.
+  verification_note_zh: 已读 README、目录树和 Skill；未购买或调用 AirROI、读取密钥、访问真实房源或验证收益。作者标注约每个房源每次拉取 0.20 美元，任何真实调价都应人工审核。
+  verification_note_en: README, tree and Skill were read. AirROI was not purchased or called, secrets and real listings were not accessed, and results were not validated. The author lists about $0.20 per listing pull; real price changes need human review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-piyaster11-thai-credit-brief
+  url: https://github.com/piyaster11/thaicreditbrief
+  title: 泰国企业信用简报：4 个 Grok Bot Routine、公开数据与 GitHub Pages 看板
+  title_en: Thai Credit Brief with four Grok Bot Routines, public data and a GitHub Pages dashboard
+  author: piyaster11
+  author_en: piyaster11
+  author_url: https://github.com/piyaster11
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-01
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - 信用分析
+    - Routine
+    - 公开数据
+    - 看板
+  apps:
+    - GitHub Pages
+    - Python
+  summary_zh: 培训案例用 4 个 Grok Bot Routine 为 12 家泰国上市公司生成工作日晨报、每日评级观察、压力脉冲和按需情绪检查；JSON 数据与 Python 脚本发布到 GitHub Pages，并明确只用公开信息、不是放贷决定。
+  summary_en: A workshop case uses four Grok Bot Routines for briefing, rating watch, stress pulse and on-demand sentiment across 12 Thai listed firms, publishing JSON/Python outputs to GitHub Pages with a public-data-only disclaimer.
+  verification_note_zh: 已读 README 与仓库结构；未运行 Routine 或脚本，未核对 12 家公司数据，也未参加 11 月 4 日工作坊。仅作训练与流程示例，不是投资、授信或客户建议。
+  verification_note_en: README and repository structure were reviewed. Routines/scripts and company data were not tested, and the Nov 4 workshop was not attended. This is a training workflow, not investment, credit or client advice.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-snazzygaz-photo-to-cnc-svg
+  url: https://github.com/snazzygaz/photo-to-cnc-svg
+  title: 照片转 CNC SVG：图像生成、黑白追踪、切割预览与 CAM 交付的三层 Skill
+  title_en: Photo-to-CNC SVG Skills for generation, tracing, cut preview and CAM handoff
+  author: SnazzyGaz
+  author_en: SnazzyGaz
+  author_url: https://github.com/SnazzyGaz
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-01
+  categories:
+    - recipes
+    - templates
+  tags:
+    - CNC
+    - SVG
+    - 图像生成
+    - Skill
+  apps:
+    - GitHub
+    - Python
+    - CAM
+  summary_zh: 三个 Skill 把照片转为两种黑白雕刻方案，用户选稿后由 Python 追踪成 CNC-ready SVG，再渲染真实切割预览，并交付尺寸、路径数、粗略时间和 CAM 导入提示。仓库附多组示例、统计与 MIT 许可。
+  summary_en: Three Skills create two art options from a photo, trace the chosen one into a CNC-ready SVG, render a cut preview, and return dimensions, path count, rough timing and CAM notes. Examples and MIT license are included.
+  verification_note_zh: 已读 README、目录树与端到端 Skill；未审计全部 Python 实现、安装依赖、生成图像、运行脚本或加工。时间和刀具参数只是作者估算，CAM 仿真与实际机床安全优先。
+  verification_note_en: README, tree and the end-to-end Skill were read. Python code, dependencies, image generation, scripts and machining were not tested. Timing and tooling are author estimates; CAM simulation and machine safety take priority.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: github-zhaobenxiang-grok-bot-orange-book
+  url: https://github.com/zhaobenxiang5-coder/grok-bot-orange-book
+  title: Grok Bot 橙皮书：区分“已核实”与“作者声称”的中文使用指南
+  title_en: "Grok Bot Orange Book: a Chinese guide separating verified facts from author claims"
+  author: 本象（zhaobenxiang5-coder / @JiaoWoDaDiao69）
+  author_en: Benxiang (zhaobenxiang5-coder / @JiaoWoDaDiao69)
+  author_url: https://github.com/zhaobenxiang5-coder
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-11-02
+  categories:
+    - start
+    - resources
+  tags:
+    - 中文指南
+    - 证据分级
+    - 安全
+    - 资源索引
+  apps:
+    - GitHub
+  summary_zh: 中文长篇指南覆盖第一天配置、连接器、Routine、Skill、多 Bot、云电脑、模板、案例、省额度、安全与常见坑；逐段标“已核实”或“作者声称”，并附官方文档和社区原帖，README 声明 CC BY-NC 4.0。
+  summary_en: A Chinese guide covers setup, connectors, Routines, Skills, multi-Bot work, cloud computer, templates, cases, quota, safety and pitfalls, labeling sections as verified or author-claimed and linking primary sources.
+  verification_note_zh: 已读完整 README 并核对标记与链接结构；未逐个复现社区案例。GitHub License API 显示 NOASSERTION，但 README 明确声明 CC BY-NC 4.0；与现有中文手册主题相近，证据标注方式不同。
+  verification_note_en: The full README and its claim labels/source structure were read; community cases were not reproduced. GitHub reports NOASSERTION while the README declares CC BY-NC 4.0. It overlaps Chinese guides but uses a distinct evidence-labeling scheme.
+  status: alive
+  evidence: editorial
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: reddit-grokbot-pages-dashboard-focus-templates
+  url: https://reddit.com/r/GrokBot/comments/1xm25ms/what_are_you_using_the_new_pages_feature_for
+  title: Pages 的两套活页模板：Bot 活动看板与 Focus for Today 每日焦点
+  title_en: "Two living Pages templates: Bot Activity Dashboard and Focus for Today"
+  author: u/CorewareOfficial 与 u/murfeous
+  author_en: u/CorewareOfficial and u/murfeous
+  author_url: https://www.reddit.com/user/CorewareOfficial/
+  source: forum
+  platform: reddit
+  lang: en
+  published: 2026-11-03
+  categories:
+    - templates
+    - advanced
+  tags:
+    - Pages
+    - 活动看板
+    - 任务排序
+    - Routine
+  apps:
+    - Pages
+    - Google Calendar
+    - Email
+  summary_zh: 活动看板为每个 Bot 显示当前工作、最后更新、状态和链接，并按紧急度列“等你处理”；今日焦点页把邮箱、日历、Bot 更新和口头任务排成滚动清单。两者都更新同一活页，工作日晨间刷新，无变化保持安静。
+  summary_en: The dashboard shows each Bot's work, status and link plus a ranked “Waiting on you” list. Focus for Today ranks tasks from email, calendar, Bot updates and chat. Both update one Page and stay quiet on no change.
+  verification_note_zh: 已读完整主题帖与两段评论模板；未创建 Page、连接邮箱/日历或运行 Routine。模板要求不猜测、不给页面放秘密，但真实邮箱与日历接入仍需最小权限和人工抽查。
+  verification_note_en: The full thread and both comment templates were read. No Page, inbox/calendar connection or Routine was created. The templates prohibit guessing and secrets, but real connections still need least privilege and human review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: reddit-natehohohoho-esim-bot-team
+  url: https://reddit.com/r/GrokBot/comments/1xlribr/im_starting_a_travel_esim_business_with_a_team_of
+  title: 旅行 eSIM 创业的 7 Bot 分工：老板、供应商、Shopify、设计、营销、客服与会计
+  title_en: A seven-Bot role split for a travel eSIM business
+  author: u/natehohohoho
+  author_en: u/natehohoho
+  author_url: https://www.reddit.com/user/natehohohoho/
+  source: forum
+  platform: reddit
+  lang: en
+  published: 2026-11-03
+  categories:
+    - recipes
+    - bots
+  tags:
+    - 创业
+    - Bot 团队
+    - eSIM
+    - 人工审核
+  apps:
+    - Shopify
+    - Email
+  summary_zh: 作者把旅行 eSIM 业务拆给老板、供应商、Shopify 建站、设计、营销、客服和会计七个 Bot，各自保留上下文并互相交接；供应商 Bot 起草英文邮件，但所有外发都由人检查。案例仍在第一周，店铺未开放、收入和订单均为零。
+  summary_en: A travel eSIM project uses Boss, Supplier, Shopify, Design, Marketing, Service and Accounting Bots. They retain role context and hand off, while a human reviews every send. It is week one, with no launch or sales.
+  verification_note_zh: 已读公开原帖；图片只读替代文本，未核实 Shopify 店铺、供应商或交接效果。作者明确报告 Bot 会自信犯错，所有邮件和发布都由人确认，且当前没有商业结果。
+  verification_note_en: The public post was read; only image alt text was available. Store, suppliers and handoffs were not verified. The author says Bots can be confidently wrong, every send is human-reviewed, and there are no business results yet.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: reddit-shiba-gazette-writer-dispatch
+  url: https://reddit.com/r/GrokBot/comments/1xlojgb/built_a_daily_newspaper_with_grok_bot_writer
+  title: Shiba Gazette 日报：Writer 排版、Dispatch 按口令发链接，公开版与私人版分离
+  title_en: Shiba Gazette daily paper with Writer, Dispatch, and separate public/private editions
+  author: u/Additional_Option166
+  author_en: u/Additional_Option166
+  author_url: https://www.reddit.com/user/Additional_Option166/
+  source: forum
+  platform: reddit
+  lang: en
+  published: 2026-11-03
+  categories:
+    - recipes
+    - bots
+  tags:
+    - 日报
+    - Pages
+    - 邮件
+    - 隐私分层
+  apps:
+    - Pages
+    - Email
+  summary_zh: Writer Bot 每天采集并排版 Expanded Canvas 公开版；Dispatch Bot 只有在作者说“send it”时才邮件发送分享链接；另保留只给自己的 Classic 私人版。核心做法是把布局与分发拆开，并避免把私人数据混入公开版本。
+  summary_en: A Writer Bot lays out a public Canvas edition; Dispatch emails its link only after “send it”; a Classic edition stays private. The pattern separates layout from distribution and personal data from the public copy.
+  verification_note_zh: 已读公开原帖；未打开样刊、检查来源质量或测试发送。帖子是简短案例而非逐步教程，隐私分层是作者做法，不能替代发布前人工检查。
+  verification_note_en: The public post was read; the sample, source quality and email delivery were not tested. This is a short case rather than a step-by-step tutorial, and its privacy split does not replace a human pre-publication review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: x-biao2212-five-bot-team
+  url: https://x.com/BiaO2212/status/2117054266808660453
+  title: 搭一个夜间干活的 5 Bot 团队：每个 Bot 一个 Skill、一个 Routine，加群聊分工
+  title_en: Build a five-Bot overnight team with one Skill and Routine per Bot
+  author: BiaO2212
+  author_en: BiaO2212
+  author_url: https://x.com/BiaO2212
+  source: x
+  platform: x
+  lang: en
+  published: 2026-11-02
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - Bot 团队
+    - Skill
+    - Routine
+    - 群聊
+  apps: []
+  summary_zh: 五个单一职责 Bot 分别负责研究、写作、审稿、收件箱和日终摘要。每个 Bot 先手动跑一次，存成 Skill，再加 Routine；另附群聊分工开场词，并提醒控制用量、先保留草稿审批、理解共享电脑边界。
+  summary_en: Five Bots cover research, writing, review, inbox and daily digest. Run each job once, save it as a Skill, then add a Routine; the guide also covers group-chat kickoff, quota, draft approval and shared-computer limits.
+  verification_note_zh: 铁柱已读长文全文并取得 6 段代码块；Codex 复核交接与去重，未独立读取 X。配图未查看，文中限制未逐条对照官方文档，未复现。
+  verification_note_en: Tie Zhu read the full article and obtained six code blocks; Codex checked the handoff and deduplication without independently reading X. Images and each product-limit claim were not checked; not reproduced.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
+- id: x-michael-fenech-pages-project-management
+  url: https://x.com/Michael_Fenech_/status/2115774649598705774
+  title: 用 Pages 管多项目：每项目一页、总索引与每日心跳 Routine
+  title_en: Manage multiple projects with Pages, a master index and daily heartbeat Routines
+  author: Michael_Fenech_
+  author_en: Michael_Fenech_
+  author_url: https://x.com/Michael_Fenech_
+  source: x
+  platform: x
+  lang: en
+  published: 2026-10-29
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - Pages
+    - 项目管理
+    - Routine
+    - 提示词
+  apps:
+    - Pages
+  summary_zh: 每个项目建一页，记录目标、状态、下一步、负责人、截止、决策、阻塞和日志，再用总索引汇总。Bot 开工前先读页、完成后更新；任务用短对话，每项目设工作日心跳，只在阻塞或需决策时提醒，结项后归档。
+  summary_en: Use one Page per project plus a master index. Bots read before work and update afterward, tasks use short chats, each project gets a weekday heartbeat, notifications are exception-only, and closed projects are archived.
+  verification_note_zh: 铁柱已读原帖全文和提示词；Codex 复核转述与去重，未独立读取 X。未复现；心跳 Routine 会消耗用量，作者建议先试一个项目七天。
+  verification_note_en: Tie Zhu read the full post and prompt; Codex checked the handoff and deduplication without independently reading X. Not reproduced; heartbeat Routines consume quota and the author suggests a seven-day single-project trial.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-03
+  checked_at: 2026-11-03
+  collection_batch: 2026-11-03-daily-0900-approved
 - id: bilibili-hi-grokbot-quota-two-improvements
   url: https://bilibili.com/video/BV1Menj62E4q
   title: Grok Bot 额度两天就用完？用私聊入口与手机 HTML 汇报减少浪费
