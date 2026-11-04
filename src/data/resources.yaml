@@ -1,4 +1,546 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: blog-ssgoo-grok-bot-pi-handbook
+  url: https://ssgoo.net/grok-bot-guide
+  title: 中文实战手册：从第一份可追溯简报到 Pi 外部模型分流
+  title_en: "Chinese practical handbook: from a traceable first brief to Pi model offloading"
+  author: 莱因哈特 · 小声工作室
+  author_en: Reinhardt, Whisper Studio
+  author_url: https://www.ssgoo.net
+  source: blog
+  platform: web
+  lang: zh
+  published: 2026-10-19
+  categories:
+    - start
+    - advanced
+    - recipes
+  tags:
+    - 中文教程
+    - Pi
+    - MiniMax
+    - DeepSeek
+    - Routine
+  apps:
+    - Pi
+    - MiniMax
+    - DeepSeek
+  summary_zh: 20 章、21 组提示词的中文手册：先做可追溯科技简报，再把获准材料经 Pi 分流到 MiniMax 或 DeepSeek，随后沉淀 Skill、安排 Routine、设计双 Bot 交接，并用虚构电商数据做晨报。
+  summary_en: "A 20-chapter Chinese guide with 21 prompts: build a traceable brief, offload approved material through Pi to MiniMax or DeepSeek, then save a Skill, schedule a Routine, hand off between Bots and build an ecommerce brief."
+  verification_note_zh: 已读网页与版本说明，未安装 Pi、填 Key 或端到端复现。作者明确说未在读者账户实测接入；外部模型另计费，界面、模型、价格和权限会变，安装与密钥步骤须回查官方。
+  verification_note_en: The page and version notes were read; Pi, keys and end-to-end flow were not tested. The author states the integration was not tested in readers' accounts. Models, prices, permissions and UI can change.
+  status: alive
+  evidence: editorial
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-afffpupu-dotme
+  url: https://github.com/afffpupu/dotme
+  title: dotme：让 Grok Bot、Codex 与 Claude 共用一套经人工批准的偏好
+  title_en: "dotme: shared, human-approved preferences for Grok Bot, Codex and Claude"
+  author: AFFFPupu
+  author_en: AFFFPupu
+  author_url: https://github.com/AFFFPupu
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-02
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - MCP
+    - 偏好
+    - OAuth
+    - 人工批准
+    - 自托管
+  apps:
+    - GitHub
+    - Cloudflare Workers
+    - Claude Code
+    - Codex
+    - ChatGPT
+  summary_zh: 自托管 MCP 把偏好存进用户自己的私有 GitHub Markdown：各助手读取同一份规则，只能提出改动，用户用通行密钥批准后才落成带来源的单次提交；可按连接限制可见类别。
+  summary_en: A self-hosted MCP keeps preferences as Markdown in the user's private GitHub repo. Agents read the same rules and only propose edits; passkey approval creates one evidenced commit, with per-connection category scopes.
+  verification_note_zh: 已读 README、目录与安全说明入口；未部署或连接。Grok Bot 支持、测试状态和安全性质来自作者说明；需要 Cloudflare、细粒度 GitHub token、OAuth 与私有仓库配置。
+  verification_note_en: README, tree and security entry points were read; not deployed or connected. Grok Bot support and testing status are author-reported. Setup needs Cloudflare, a fine-grained GitHub token, OAuth and a private repo.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-anaguidev-context-bot
+  url: https://github.com/anaguidev/context-bot
+  title: Context Bot：用红黄绿灯、STATUS 与交接文件管理长会话
+  title_en: "Context Bot: manage long chats with a traffic light, STATUS and handoff files"
+  author: Ana Gui
+  author_en: Ana Gui
+  author_url: https://github.com/AnaGuiDev
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - templates
+    - advanced
+  tags:
+    - Skill
+    - 上下文
+    - 交接文件
+    - 用量
+    - 看板
+  apps:
+    - BotDuplicator
+  summary_zh: MIT 开源 Skill 按消息量、长文档和压缩次数估算绿/黄/红状态，维护 STATUS.md 与 TRASPASO.md，并在红灯时建议换新 Bot；另有本地浏览器看板和可选 BotDuplicator 交接。
+  summary_en: An MIT Skill estimates green, yellow or red from chat length and compaction, keeps STATUS.md and a handoff file, and suggests a fresh Bot on red; it also includes a local dashboard and optional BotDuplicator flow.
+  verification_note_zh: 已读 README 与英文 Skill；未安装或运行。颜色阈值只是粗略估算，不是精确 token 计数；可选 Live Status 连接器尚未部署，交接文件必须先检查隐私。
+  verification_note_en: README and English Skill were read; not installed or run. Thresholds are rough estimates, not token counts. The optional Live Status connector is not deployed, and handoff files need privacy review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-aqua-voice-grok-bot-plugin
+  url: https://github.com/aqua-voice/aqua-cursor-plugin
+  title: Grok Bot × Aqua Voice：检索语音转写并管理词典、替换与偏好
+  title_en: "Grok Bot and Aqua Voice: search transcripts and manage dictionary, replacements and preferences"
+  author: Aqua Voice
+  author_en: Aqua Voice
+  author_url: https://github.com/aqua-voice
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - MCP
+    - 语音转写
+    - OAuth
+    - 词典
+    - 插件
+  apps:
+    - Aqua Voice
+    - Cursor
+  summary_zh: Aqua Voice 的 MIT 客户端配置把 Grok Bot 接到远程 MCP：可搜索已保存口述、读取转写，读写词典、文本替换、自定义指令和语言设置，并在明确请求时提交反馈或纠错。
+  summary_en: Aqua Voice's MIT client config connects Grok Bot to its remote MCP to search saved dictations, read transcripts, manage dictionary, replacements, instructions and language, and submit requested feedback.
+  verification_note_zh: 已读 README、清单和许可证，未连接账号。仓库只含客户端配置与上架资料，不含托管后端源码；历史可用性取决于隐私设置，授权可能同时申请读写，变更前需审查。
+  verification_note_en: README, manifests and license were read; no account connected. The repo contains client config, not hosted backend source. History depends on privacy settings, and OAuth may request read and write scopes together.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-ericpw-grok-bot-revops-wireframe
+  url: https://github.com/ericpw-coder/grok-bot-buildout-wireframe
+  title: 43 Bot RevOps 蓝图：四层管理、55 条 Routine、连接器与全局护栏
+  title_en: A 43-Bot RevOps blueprint with four managers, 55 Routines, connectors and guardrails
+  author: Eric Welsh
+  author_en: Eric Welsh
+  author_url: https://github.com/ericpw-coder
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - bots
+    - templates
+    - recipes
+  tags:
+    - RevOps
+    - 多 Bot
+    - Routine
+    - 护栏
+    - 角色模板
+  apps:
+    - Salesforce
+    - Slack
+    - Gmail
+    - Google Drive
+    - Notion
+    - GitHub
+    - Cloudflare
+  summary_zh: 脱敏仓库提供 43 个 Bot 角色文件、4 个管理 Bot、55 条 Routine、连接器与共享目录说明；默认只读或只起草，写入须本人逐项批准，并用知识库、经理汇报链和“无变化静默”减少重复。
+  summary_en: A sanitized blueprint with 43 Bot profiles, four managers, 55 Routines, connectors and shared files. Work is read- or draft-only by default, writes need owner approval, and a manager chain reduces duplication.
+  verification_note_zh: 已读 README、护栏与 Routine 表，未连接 Salesforce 等系统。作者明确说 Routine 来自角色描述和共享记忆，并非系统导出；仓库无已声明许可证，现场效果和组织数据未独立验证。
+  verification_note_en: README, guardrails and Routine table were read; no systems connected. The author says schedules came from profiles and shared memory, not automation records. No license is declared; live results were not verified.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-hudsonwa-botport
+  url: https://github.com/hudsonwa/botport
+  title: Botport：Grok Bot 与 Hermes Agent 双向迁移、同步和消息桥
+  title_en: "Botport: two-way migration, sync and messaging between Grok Bot and Hermes Agent"
+  author: Josh Hudson
+  author_en: Josh Hudson
+  author_url: https://github.com/hudsonwa
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - Hermes
+    - 迁移
+    - 同步
+    - 漂移检测
+    - 消息桥
+  apps:
+    - Hermes Agent
+  summary_zh: MIT 工具把 Bot 的角色、Skill、记忆与 Routine 描述导入 Hermes，并做双向同步、冲突检测和写前恢复点；可选 g2h 让两个自有 Bot 互发消息，外部文本按不可信数据封装。
+  summary_en: An MIT tool imports role, Skills, memory and Routine descriptions into Hermes, with two-way sync, conflict detection and restore points. Optional g2h messaging frames peer text as untrusted data.
+  verification_note_zh: 已读 README、目录和安全说明入口，未运行。v0.1 早期版由单一维护者开发；10/10 对话与真实导入为作者自测。桥不是安全边界，导出包含个人数据，当前仅 macOS/Linux。
+  verification_note_en: README, tree and security entry points were read; not run. This is an early v0.1 with one maintainer; live import and 10/10 exchanges are author tests. The bridge is not a security boundary and bundles contain personal data.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-licoy-study-grokbot
+  url: https://github.com/licoy/study-grokbot
+  title: Study GrokBot：每天一期的中英双语 Grok Bot 学习专栏
+  title_en: "Study GrokBot: a daily bilingual Grok Bot learning column"
+  author: Licoy（憧憬Licoy）
+  author_en: Licoy
+  author_url: https://github.com/Licoy
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-11-01
+  categories:
+    - resources
+    - start
+    - advanced
+  tags:
+    - 中文教程
+    - 双语
+    - Skill
+    - Routine
+    - 云电脑
+  apps: []
+  summary_zh: 开源中英双语学习专栏，目前四期分别讲 Bot 管理、Routine、Skill、云电脑与连接应用；每期含可复制提示词、虚构团队案例、15 分钟练习和原始延伸链接，并提供归档、RSS 与 llms.txt。
+  summary_en: An open bilingual daily column with four issues on Bot management, Routines, Skills, cloud computers and connected apps, each with copyable prompts, a worked example, a 15-minute exercise and source links.
+  verification_note_zh: 已读 README、MIT 许可证、仓库树和 11 月 4 日中文源文；未运行网站或构建。内容主要整理官方文档并明确为非官方项目，具体按钮和限制仍应回查官方。
+  verification_note_en: Read the README, MIT license, repository tree and Nov 4 Chinese source. Site and build were not run. It is an unofficial editorial project largely based on official docs; recheck changing UI and limits.
+  status: alive
+  evidence: editorial
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-liujoe-grokbot-family-office
+  url: https://github.com/liujoe456-glitch/grokbot-family-office
+  title: Grok Bot 私人助理团队：14 个中英双语角色卡与 Routine 模板
+  title_en: A Grok Bot personal-assistant team with 14 bilingual roles and Routine templates
+  author: liujoe456-glitch
+  author_en: liujoe456-glitch
+  author_url: https://github.com/liujoe456-glitch
+  source: github
+  platform: github
+  lang: zh
+  published: 2026-11-03
+  categories:
+    - bots
+    - templates
+  tags:
+    - 角色卡
+    - Routine
+    - 双语
+    - 家庭助理
+    - 群聊
+  apps:
+    - Gmail
+    - WhatsApp
+    - Facebook
+    - X
+  summary_zh: 14 个个人助理角色加群聊分工文件，覆盖秘书、总管、财务、法律、健康、英语、翻译与内容团队；每份含中英提示词、占位符、输出格式和部分 cron Routine，并统一要求草稿优先与本人确认。
+  summary_en: Fourteen bilingual personal-assistant roles and group-chat patterns cover secretary, finance, legal, health, tutoring, translation and content, with prompts, placeholders, output rules and some cron Routines.
+  verification_note_zh: 已读 README、总管与健康模板，未逐项实测或安装依赖 Skill。仓库未声明许可证；法律、健康、税务和投资角色不能替代专业人士，且敏感资料不应进入共享记忆。
+  verification_note_en: README, manager and health templates were read; dependencies were not installed or tested. No license is declared. Legal, health, tax and investment roles cannot replace professionals, and sensitive data should stay out of shared memory.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- id: github-workinsiders-recruiting-skills
+  url: https://github.com/workinsiders/claude-skills
+  title: 50 个招聘 Skill：职位需求、搜寻、外联、面试、Offer 与 AI 招聘政策
+  title_en: Fifty recruiting Skills for intake, sourcing, outreach, interviews, offers and AI policy
+  author: Work Insiders
+  author_en: Work Insiders
+  author_url: https://github.com/workinsiders
+  source: github
+  platform: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - templates
+    - recipes
+  tags:
+    - Skill
+    - 招聘
+    - HR
+    - 外联
+    - AI 政策
+  apps:
+    - LinkedIn
+    - Email
+  summary_zh: 五个 MIT 招聘 Skill 包共 50 份 SKILL.md，覆盖机构招聘、内部招聘、外联与客户增长；先填机构或公司资料表，Skill 负责草稿和清单，不筛除、排名或代替人作录用决定。
+  summary_en: Five MIT recruiting packs contain 50 SKILL.md files for agencies, in-house teams, outreach and growth. A shared profile grounds facts; the Skills draft and check, but do not screen, rank or make hiring decisions.
+  verification_note_zh: 已读 README、文件树和两份代表性 Skill；未上传、安装或实测。仓库最初面向 Claude，作者称可把 SKILL.md 放入 Grok Bot 指令；此兼容性与各地招聘合规需自行验证。
+  verification_note_en: README, tree and two sample Skills were read; not uploaded or tested. The repo targets Claude first and says SKILL.md can be pasted into Grok Bot; compatibility and local hiring compliance need verification.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/0xlangeai/status/2117582319473102854
+  author: 0xlangeai
+  author_url: https://x.com/0xlangeai
+  id: x-0xlangeai-workbuddy-feishu-bridge
+  title: Grok Bot 与 WorkBuddy 双向打通：飞书文档交接 + Webhook Routine
+  lang: zh
+  published: 2026-11-03
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - integration
+    - webhook
+    - routine
+    - feishu
+    - workbuddy
+  apps:
+    - WorkBuddy
+    - Feishu
+  summary_zh: 用一篇飞书文档做中转、Webhook Routine 做触发，让桌面端 WorkBuddy 与 Grok Bot 双向派活：结果按编号追加写入同一文档、不覆盖全文，另一端按编号读回；附微信聊天记录整理案例与 3 段提示词。
+  summary_en: Two-way handoff between desktop WorkBuddy and Grok Bot via a shared Feishu doc and a webhook Routine; results are appended by number, never overwritten, and read back by number. WeChat-log case and three prompts.
+  verification_note_zh: 已读取 X Article 正文约 3,100 字纯文本，结尾两端命令区在纯文本中缺失，本轮未获取；配图未查看。涉及第三方 CLI 授权与 Webhook 密钥，需自行评估。
+  verification_note_en: About 3,100 characters of article text read; the command section at the end was missing from plain text and not obtained this round; images not viewed. Involves third-party CLI auth and webhook keys.
+  title_en: Bridge Grok Bot and WorkBuddy with a Feishu handoff document and Webhook Routine
+  author_en: 0xlangeai
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/AbhijitVerekar/status/2117758330156253649
+  author: AbhijitVerekar
+  author_url: https://x.com/AbhijitVerekar
+  id: x-abhijitverekar-30-agent-org-chart
+  title: 用 30+ 个 Bot 运营公司：幕僚长、组织架构、Routine 与护栏规则
+  lang: en
+  published: 2026-11-03
+  categories:
+    - bots
+    - recipes
+  tags:
+    - chief-of-staff
+    - multi-bot
+    - routine
+    - guardrails
+    - case-study
+  apps:
+    - HubSpot
+    - Twilio
+    - Slack
+    - Gmail
+  summary_zh: 作者的 30+ Bot 公司架构：只与幕僚长 Bot 对话，Bot 层层汇报、在分组群聊协作；连接邮箱、日历、CRM 等工具，用晨报、午间跟进、每周自审等 Routine；六条护栏如“以我名义发出必须经我确认”。
+  summary_en: "A 30+ bot company: talk only to a chief-of-staff bot, bots report up and work in group chats, connected to mail, calendar and CRM, run daily and weekly Routines, and follow six guardrails like approve-before-send."
+  verification_note_zh: 已读取 X Article 全文纯文本（约 6,200 字符），配图未查看。电话外呼、自动交易等效果为作者自述；文末含咨询服务导流。
+  verification_note_en: Full article plain text read (about 6,200 characters); images not viewed. Phone-calling and trading results are self-reported; ends with a consulting promo.
+  title_en: "Run a company with 30+ Bots: chief of staff, org chart, Routines and guardrails"
+  author_en: AbhijitVerekar
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/ai_goge/status/2117440264117928224
+  author: ai_goge
+  author_url: https://x.com/ai_goge
+  id: x-ai-goge-platform-style-guide-skill
+  title: 每个平台一份风格指南：让 Grok Bot 写得像你
+  lang: zh
+  published: 2026-11-03
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - skill
+    - writing
+    - marketing
+    - style-guide
+  apps: []
+  summary_zh: 为每个发布平台建一份风格指南 Skill：先整理约 7 项写作要素和自己的范文，让 Bot 试写，再把每次修改意见回写进 Skill，逐步让输出贴近本人语气。
+  summary_en: "Build one style-guide Skill per platform: list about seven writing traits plus your own sample posts, let the Bot draft, then write every correction back into the Skill so output converges on your voice."
+  verification_note_zh: 已读取 X Article 正文文本；文中配图未查看，「示范指令」部分在纯文本里为空（疑为图片），本轮未获取具体提示词原文。
+  verification_note_en: Article text read; images not viewed. The example-prompt section is empty in plain text (likely images), so the exact prompts were not obtained this round.
+  title_en: "One style guide per platform: make Grok Bot write in your voice"
+  author_en: ai_goge
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/AleiahLock/status/2117264989014618503
+  author: AleiahLock
+  author_url: https://x.com/AleiahLock
+  id: x-aleiahlock-make-life-easier
+  title: "Grok Bot: make your life easier（setup、生活、业务、变现与提示词包）"
+  lang: en
+  published: 2026-11-02
+  categories:
+    - start
+    - recipes
+  tags:
+    - setup
+    - routine
+    - vault
+    - pages
+    - prompts
+  apps: []
+  summary_zh: 长文第 2 部分：10 步初始设置（手机 App 授权、Vault、Action Button、Primary Bot），生活事务 Routine（早报 Page、只起草不发送的收件箱整理、账单订阅清理），业务与创作用法，约 30 条隐藏功能和一份提示词包。
+  summary_en: "Part 2 of a long guide: 10-step setup (phone apps, Vault, Action Button, Primary Bot), life-admin Routines (morning Page, draft-only inbox triage, subscription cleanup), about 30 hidden features and a prompt pack."
+  verification_note_zh: 已读取 X Article 全文纯文本（约 1.75 万字符），配图未查看。文中“即将推出”的 1.0、短信等内容属作者转述的传闻，未核实；第 1 部分“Grok Bot A-Z”本轮未获取。
+  verification_note_en: Full article plain text read (about 17.5k characters); images not viewed. Upcoming-feature claims (1.0, texting) are the author's reports of rumors and unverified; part 1 was not obtained this round.
+  title_en: "Grok Bot: make your life easier with setup, life admin, business and prompts"
+  author_en: AleiahLock
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/B_Renat/status/2117772608209048010
+  author: B_Renat
+  author_url: https://x.com/B_Renat
+  id: x-b-renat-doc-compress-skill
+  title: 把长文档压缩成一屏的评审摘要 Skill
+  lang: en
+  published: 2026-11-04
+  categories:
+    - recipes
+    - templates
+  tags:
+    - skill
+    - summarization
+    - review
+    - documents
+  apps: []
+  summary_zh: 阅读侧 Skill：目标为原文 10%–15%，先抽取不改写（决策、被否方案、可核对的现状说法、新增与已有、作者待确认项、数字与负责人），作者待办与自己的疑虑分节，标识符原样保留并沿用原文章节顺序。
+  summary_en: "A Skill that compresses docs to 10–15%: extract, don't paraphrase (decision, rejected options, checkable claims, open items, numbers, owners), keep the author's items apart from your concerns, keep identifiers verbatim."
+  verification_note_zh: 已读取作者同一线程 7 条帖子；Skill 文件本身未在帖中公开，本轮未获取。
+  verification_note_en: Read the author's 7-post thread; the Skill file itself was not posted and was not obtained this round.
+  title_en: A Skill that compresses long documents into a one-screen review brief
+  author_en: B_Renat
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/dannylivshits/status/2117769356977533093
+  author: dannylivshits
+  author_url: https://x.com/dannylivshits
+  id: x-dannylivshits-handover-file-reset
+  title: 用交接文件重建 Bot，清掉长上下文以省用量
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - handover
+    - context
+    - routine
+    - migration
+    - prompts
+  apps: []
+  summary_zh: 给长期运行的 Bot 换新：旧 Bot 写交接文件（身份、逐字 Routine、未结事项、带来源的长期规则、路径指针），新 Bot 只存长期规则并原样重建 Routine，回复 DONE 后旧 Bot 删 Routine，最后由人删除；附两段提示词与 ID 映射表做法。
+  summary_en: "Refresh a long-running bot: the old one writes a handover file, a fresh copy saves only lasting rules and recreates Routines verbatim, replies DONE, old Routines are removed, a human deletes the old bot. Two prompts."
+  verification_note_zh: 已读取 X Article 全文纯文本，配图未查看。30%–50% 的省用量比例为作者估计，未提供测量方法。
+  verification_note_en: Full article plain text read; images not viewed. The 30–50% saving is the author's estimate without a stated measurement.
+  title_en: Rebuild a Bot from a handoff file to clear long context
+  author_en: dannylivshits
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/miguelrodrov/status/2117285718477128105
+  author: miguelrodrov
+  author_url: https://x.com/miguelrodrov
+  id: x-miguelrodrov-grok-bot-a-z
+  title: Grok Bot A-Z：功能、设置、用例、Routine 成本与 7 天计划
+  lang: en
+  published: 2026-11-02
+  categories:
+    - start
+    - advanced
+  tags:
+    - overview
+    - routine
+    - cost
+    - safety-gate
+    - first-week
+  apps:
+    - Cursor
+  summary_zh: 从功能到上手的速览：发送/发布/付款/删除/签署/交易一律回到人工确认；Routine 每次唤醒都计费，优先事件触发、最慢可接受频率并“无变化不出声”；四个进阶层级与第一周 7 步计划。
+  summary_en: "Features-to-onboarding tour: send, pay, delete or trade always come back to you; every Routine wake costs, so prefer events, slow schedules and silence when unchanged; four levels and a 7-step first week."
+  verification_note_zh: 已读取 X Article 正文（约 2,800 字符）；线程中 38 页幻灯片为图片，未查看。帖末含线下活动宣传。同作者线程回复已并入本条。
+  verification_note_en: Article text (about 2,800 characters) read; the 38 slides in the thread are images and were not viewed. Ends with a meetup promo. Same-author thread replies merged here.
+  title_en: "Grok Bot A-Z: features, setup, use cases, Routine cost and a seven-day plan"
+  author_en: miguelrodrov
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-04
+  checked_at: 2026-11-04
+  collection_batch: 2026-11-04-daily-0900-approved
+  platform: x
+  url: https://x.com/SIAxiom/status/2117777959222116429
+  author: SIAxiom
+  author_url: https://x.com/SIAxiom
+  id: x-siaxiom-x-content-system
+  title: 用 Grok Bot 运营中英双语 X 账号：5 步内容系统
+  lang: zh
+  published: 2026-11-04
+  categories:
+    - recipes
+  tags:
+    - x
+    - content
+    - writing
+    - metrics
+  apps:
+    - X
+  summary_zh: 作者用 Grok Bot 运营中英两个 X 账号的 5 步流程：先找用户急需解决的问题，再按“钩子—证据—步骤—注意点—收尾”结构写作，并用收藏、转发等数据回看调整。
+  summary_en: "The author's five-step loop for running Chinese and English X accounts with Grok Bot: find the problem users urgently need solved, write as hook, proof, steps, catch and close, then review saves and reposts to adjust."
+  verification_note_zh: 已读取帖子长文全文，配图未查看；效果为作者自述。
+  verification_note_en: Full long post read; images not viewed; results are self-reported.
+  title_en: A five-step system for running Chinese and English X accounts with Grok Bot
+  author_en: SIAxiom
 - id: blog-company-notes-grok-bot-browser-recording
   url: https://company-notes.com/blog/grok-bot-browser-recording
   title: 给 Grok Bot 浏览器操作留录屏：Agent Recorder Skill、回放链接与自动清理
