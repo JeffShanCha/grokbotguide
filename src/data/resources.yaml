@@ -1,4 +1,566 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: blog-flavio-scheduled-agent-tasks
+  url: https://flaviocopes.com/ai-glossary/scheduled-agent-tasks
+  title: Claude Code、Codex、Cursor 与 Grok 的定时任务对照
+  title_en: Scheduled agent tasks compared across Claude Code, Codex, Cursor and Grok
+  author: Flavio Copes
+  author_en: Flavio Copes
+  author_url: https://flaviocopes.com/
+  source: blog
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - resources
+  tags:
+    - schedule
+    - Routine
+    - event trigger
+    - comparison
+    - approval
+  apps:
+    - Claude Code
+    - Codex
+    - Cursor
+    - GitHub
+    - Slack
+    - Linear
+    - Sentry
+    - PagerDuty
+  summary_zh: 比较四款工具的云端定时、桌面任务和会话内 loop，说明时钟与事件触发、机器是否需在线、执行权限和预先批准边界，并给出监控仓库更新的实例。
+  summary_en: Compares cloud schedules, desktop tasks and in-session loops across four tools, including clock vs event triggers, machine availability, permissions, approval boundaries and a repository-monitoring example.
+  verification_note_zh: 已读全文与引用，未创建任务。文章会随产品变化；触发器、最短间隔、套餐和界面应回查各家官方文档，测试按钮也可能执行真实动作。
+  verification_note_en: Full article and citations read; no task created. Products change, so triggers, intervals, plans and UI should be rechecked in official docs; test buttons may perform real actions.
+  status: alive
+  evidence: editorial
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: web
+- id: blog-majento-claude-grokbot-webhook
+  url: https://majento.ai/blog/claude-code-grok-bot-webhook
+  title: Claude Code Skill ↔ Grok Bot webhook：读取 X 信息流并返回摘要
+  title_en: Claude Code Skill to Grok Bot webhook for X-feed digests
+  author: Majento
+  author_en: Majento
+  author_url: https://majento.ai/
+  source: blog
+  lang: en
+  published: 2026-10-12
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - Claude Code
+    - webhook
+    - Routine
+    - X
+    - Skill
+  apps:
+    - Claude Code
+    - X
+  summary_zh: 在 Grok Bot 建 webhook Routine，本机 Claude Code Skill 用标准库脚本发送请求并轮询回复文件；案例让 Bot 读取 Following feed，再由 Claude Code 过滤成带链接摘要。
+  summary_en: Create a Grok Bot webhook Routine, then let a local Claude Code Skill send requests and poll reply files with a standard-library script; the example reads the Following feed and filters it into a linked digest.
+  verification_note_zh: 已读全文，未复现。作者报告 pong 约 7–8 秒，但 Skill/脚本未公开；194 帖只覆盖约 2.5 小时，费用为推算而非账单，X 能力和价格应重新核对。
+  verification_note_en: Full article read; not reproduced. The author reports a 7–8s pong, but the Skill/script is private. 194 posts covered about 2.5 hours, costs were estimates rather than bills, and X capabilities/pricing need rechecking.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: web
+- id: blog-reasonmachines-grokbot-claude-code
+  url: https://reasonmachines.com/grokbot/with-claude-code
+  title: Reason Network：让 Grok Bot 向本机 Claude Code 发送任务
+  title_en: "Reason Network: let Grok Bot send work to a local Claude Code session"
+  author: Reason Machines team
+  author_en: Reason Machines team
+  author_url: https://reasonmachines.com/
+  source: blog
+  lang: en
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - MCP
+    - Claude Code
+    - handoff
+    - commercial
+    - Routine
+  apps:
+    - Claude Code
+    - Reason Network
+  summary_zh: 在 Grok Bot 添加 Reason 自定义 MCP 并登录，同一账户让本机 Claude Code 加入 Network；Bot 可列出在线会话、派发任务并接收回报，也可由 Routine 在回复时唤醒。
+  summary_en: Add Reason's custom MCP to Grok Bot, sign in, and join a local Claude Code session to the same network. The Bot can list sessions, dispatch work, receive replies, and use a Routine to wake on a response.
+  verification_note_zh: 已读完整指南，未连接。页面只标“2026 年 11 月更新”，未给具体日；Reason 是闭源商业服务，本机需在线，云会话需套餐，Grok Bot 交接消息仍计入周额度。
+  verification_note_en: Full guide read; not connected. It says updated Nov 2026 without a day. Reason is a closed commercial service; local machines must stay online, cloud sessions need a plan, and Bot handoff messages use the weekly pool.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: web
+- id: github-antonvnukov-grok-bot-ops-team
+  url: https://github.com/antonvnukov/grok-bot-ops-team
+  title: Grok Bot Ops Team：六类停顿、审阅门、日志与淘汰规则
+  title_en: Grok Bot Ops Team with six stop classes, review gates, logs and kill rules
+  author: antonvnukov
+  author_en: antonvnukov
+  author_url: https://github.com/antonvnukov
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - bots
+    - templates
+    - advanced
+  tags:
+    - team
+    - approval
+    - run log
+    - kill rule
+    - cost
+  apps:
+    - GitHub
+    - Notion
+    - Linear
+    - Trello
+  summary_zh: 八 Bot 运维模板规定一 Bot 一职，只在发送、付款、删除、凭据、品牌和事实六类问题上停下询问；另含审阅 Bot、状态日志校验、路由、低成本预检和四周无产出的淘汰规则。
+  summary_en: An eight-Bot ops template enforces one job per Bot and stops only for send, money, delete, credential, brand or fact decisions, with a reviewer, validated run logs, routing, low-cost prechecks and retirement rules.
+  verification_note_zh: 已读 README、目录与许可证，未安装。模板要求公开仓库或读连接器，使用前要替换占位符并检查隐私；安全和节省效果均是设计目标，不是本站实测。
+  verification_note_en: README, tree and license read; not installed. The template needs a public repo or read connector, placeholders and privacy review. Safety and savings are design goals, not independently tested outcomes.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-artisbisers-codex-remote
+  url: https://github.com/artisbisers/codex-remote
+  title: codex-remote：让 Grok Bot 远程查看和调度本机 Codex CLI
+  title_en: "codex-remote: let Grok Bot inspect and dispatch local Codex CLI sessions"
+  author: artisbisers
+  author_en: artisbisers
+  author_url: https://github.com/artisbisers
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - Codex
+    - MCP
+    - Cloudflare Tunnel
+    - bearer token
+    - remote
+  apps:
+    - Codex
+    - Cloudflare Tunnel
+    - macOS
+  summary_zh: 本机 HTTP helper 只监听 loopback，经带 bearer token 的 Cloudflare quick tunnel 暴露 MCP；默认只列会话，启用旗标后可启动、续接、查询和停止 Codex 任务，并可限制允许根目录。
+  summary_en: A loopback helper exposes MCP through a bearer-protected Cloudflare tunnel. It lists sessions by default; opt-in flags enable starting, following up, reading or stopping Codex tasks, with optional root limits.
+  verification_note_zh: 已读安全与卸载说明，未安装或运行。URL+token 持有者可读会话，开启旗标后可运行任务；quick tunnel 会变更，日志可能含敏感内容，源码未做完整安全审计。
+  verification_note_en: Safety and uninstall docs read; not installed or run. Anyone with URL and token can read sessions and, with flags, run tasks. Tunnel URLs change, logs may be sensitive, and the code was not fully audited.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-az9713-grokbot-claude-demo
+  url: https://github.com/az9713/grokbot-using-claude-demo
+  title: Grok Bot 指挥 Claude Code 改造 PDF 阅读器的开发案例
+  title_en: A demo of Grok Bot directing Claude Code to extend a PDF reader
+  author: az9713
+  author_en: az9713
+  author_url: https://github.com/az9713
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - Claude Code
+    - coding
+    - review
+    - PDF
+    - case study
+  apps:
+    - Claude Code
+    - GitHub
+  summary_zh: 作者让 Grok Bot 在云电脑中调度 Claude Code，为 Folio PDF 阅读器增加页面历史、笔记筛选和阅读进度，并记录了类型检查、构建、逻辑测试与冒烟测试结果。
+  summary_en: The author had Grok Bot direct Claude Code on its cloud computer to add page history, note filtering and reading progress to Folio, recording typecheck, build, logic-test and smoke-test results.
+  verification_note_zh: 已读仓库与说明，未运行。测试结果和协作过程为作者记录；作者明确称 UI 未做视觉核验，OAuth 配置与实际会话未独立检查。
+  verification_note_en: Repository and notes were read; not run. Tests and collaboration are author-reported, the UI was not visually verified, and OAuth setup or live sessions were not independently checked.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-blicae8917-wake-grokbot
+  url: https://github.com/blicae8917/wake-grokbot
+  title: wake-grokbot：本地代理用票据与回执唤醒 Grok Bot
+  title_en: "wake-grokbot: wake Grok Bot from local agents with tickets and receipts"
+  author: Blicae8917
+  author_en: Blicae8917
+  author_url: https://github.com/Blicae8917
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - webhook
+    - handoff
+    - receipt
+    - idempotency
+    - Skill
+  apps:
+    - Claude Code
+  summary_zh: 无依赖 Node CLI 把本地代理任务写成 JSON 票据，经 webhook 唤醒 Grok Bot Routine，并用幂等键、回执、回复文件、限速和 kill switch 管理重复与失败。
+  summary_en: A dependency-free Node CLI turns local-agent work into JSON tickets, wakes a Grok Bot Routine by webhook, and manages duplicates and failures with idempotency, receipts, reply files, rate caps and a kill switch.
+  verification_note_zh: 已读 README、Skill、示例与许可证；未安装、运行或发 webhook。兼容性、安全性与端到端回执来自作者设计，尚未独立复现。
+  verification_note_en: README, Skill, examples and license were read; nothing was installed, run or posted. Compatibility, security and end-to-end receipts remain author-reported.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-clawdoglabs-slack-grok-bridge
+  url: https://github.com/clawdoglabs/slack-grok-bridge
+  title: Slack→Grok Bot 桥：Socket Mode、本地/Cloudflare relay 与线程回传
+  title_en: Slack to Grok Bot bridge with Socket Mode, relays and threaded replies
+  author: ClawDogLabs
+  author_en: ClawDogLabs
+  author_url: https://github.com/ClawDogLabs
+  source: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - Slack
+    - webhook
+    - Socket Mode
+    - relay
+    - Routine
+  apps:
+    - Slack
+    - Cloudflare Workers
+    - ntfy
+  summary_zh: 模板把 Slack 私信或频道线程经 Socket Mode、本地 Node 或 Cloudflare relay 转给 Grok Bot webhook Routine，再把回答、附件和语音结果回传原线程；含 owner 分享白名单和看门狗。
+  summary_en: Routes Slack DMs or threads through Socket Mode or a local/Cloudflare relay into a Grok Bot webhook Routine, then returns answers, attachments and voice output to the source thread with sharing controls.
+  verification_note_zh: 已读 README 与目录，未部署或连接 Slack。仓库是单次公开发布且未声明许可证；真实可靠性、权限和附件处理未独立测试。
+  verification_note_en: README and tree were read; Slack was not connected or deployed. This is a one-commit public release with no declared license; reliability, permissions and attachment handling were not independently tested.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-echris6-screen-ask
+  url: https://github.com/echris6/screen-ask
+  title: Screen Ask：按键语音询问当前屏幕，再由 Grok Bot 回答
+  title_en: "Screen Ask: ask about your Mac screen by voice and get a Grok Bot answer"
+  author: echris6
+  author_en: echris6
+  author_url: https://github.com/echris6
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - macOS
+    - voice
+    - screenshot
+    - webhook
+    - notification
+  apps:
+    - macOS
+    - imgbb
+    - ntfy
+  summary_zh: macOS 工具在按住快捷键时录音和截取屏幕，把问题与临时图片链接交给 Grok Bot webhook，再通过 ntfy 返回答案，适合不切换窗口的屏幕问答。
+  summary_en: A macOS tool records a held-key voice question and screenshot, sends the prompt plus a temporary image link to a Grok Bot webhook, and returns the answer through ntfy for screen Q&A without changing windows.
+  verification_note_zh: 已读源码说明，未安装或运行。应用未公证且作者未在第二台 Mac 测试；截图会以公开 imgbb 链接保留约 10 分钟，ntfy topic 也必须视作秘密。
+  verification_note_en: Source docs were read; not installed or run. The app is not notarized or tested on a second Mac. Screenshots use a public imgbb link for about ten minutes, and the ntfy topic must be treated as a secret.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-ev-llh-skillful-grok
+  url: https://github.com/ev-llh/skillful-grok
+  title: Skillful-Grok：用主简历校验工作经历完整性的 Skill
+  title_en: "Skillful-Grok: a Skill that checks CV employment completeness against a master resume"
+  author: ev-llh
+  author_en: ev-llh
+  author_url: https://github.com/ev-llh
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - templates
+    - recipes
+  tags:
+    - Skill
+    - CV
+    - resume
+    - fact checking
+    - fail closed
+  apps:
+    - Claude Code
+    - Codex
+  summary_zh: "`cv_employment_completeness` Skill 以 Master Resume 为唯一事实源，在生成岗位版简历前检查任职时间线是否完整，缺事实时停止输出，并附五问内的首次配置和贡献模板。"
+  summary_en: A CV Skill uses a Master Resume as the sole fact source, checks employment completeness before output, fails closed on missing facts, and includes a short setup and contribution template.
+  verification_note_zh: 已读 Skill、模板与许可证，未安装或用真实简历测试。它能约束流程但不能证明简历事实真实，也不替代人工核对或招聘建议。
+  verification_note_en: Skill, templates and license were read; not installed or tested on a real CV. It constrains the workflow but cannot establish that facts are true or replace human review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-krisrmgua-tokenpulse
+  url: https://github.com/krisrmgua/tokenpulse
+  title: TokenPulse：集中查看 Grok Bot、Cursor、ChatGPT 与 Claude 用量
+  title_en: "TokenPulse: one usage monitor for Grok Bot, Cursor, ChatGPT and Claude"
+  author: krisrmgua
+  author_en: krisrmgua
+  author_url: https://github.com/krisrmgua
+  source: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - resources
+  tags:
+    - usage
+    - monitoring
+    - credentials
+    - macOS
+    - Windows
+  apps:
+    - Cursor
+    - ChatGPT
+    - Claude
+    - OpenAI API
+  summary_zh: Electron 桌面工具统一显示多家产品的配额和重置时间：Grok Bot/Cursor 通过 Cursor 会话，ChatGPT 通过 Codex app-server，Claude 读本地记录，OpenAI 可用 Admin key。
+  summary_en: "An Electron desktop app unifies quota and reset views: Grok Bot/Cursor through a Cursor session, ChatGPT through Codex app-server, Claude from local records, and OpenAI through an optional Admin key."
+  verification_note_zh: 已补读安全文档和代表性源码，未安装或完整审计。它会只读打开 Cursor 数据库并调用系统密钥存储，也可保存 OpenAI Admin key；应用未签名，授权前应自行审查。
+  verification_note_en: Security docs and representative source were reviewed; not installed or fully audited. It opens Cursor's database read-only, calls the OS secret store and can save an OpenAI Admin key. The app is unsigned.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-manhquydev-agent-trust-skills
+  url: https://github.com/manhquydev/agent-trust-skills
+  title: Agent Trust Skills：验证优先、硬约束与自治运行的八份 Skill
+  title_en: "Agent Trust Skills: eight Skills for verification, hard constraints and autonomous runs"
+  author: manhquydev
+  author_en: manhquydev
+  author_url: https://github.com/manhquydev
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - templates
+    - advanced
+  tags:
+    - Skill
+    - verification
+    - eval
+    - hard constraints
+    - ROI
+  apps:
+    - Claude Code
+    - Codex
+    - Muse
+  summary_zh: 八份 Agent Skills 覆盖信任阶梯、真实产品验证、Skill eval、把提醒变成 CI/架构硬约束、五段式任务简报、隔离 worktree 自治运行、团队外环和人工返修率度量。
+  summary_en: Eight Skills cover trust ladders, product verification, Skill evals, CI or architecture constraints, five-part briefs, isolated autonomous runs, team loops and manual-fix-rate measurement.
+  verification_note_zh: 已读仓库、来源和许可证，未安装。内容是作者基于 Lauren Tan 公开分享的独立整理，并非官方或本人背书；公开产出数字未审计，方法效果未独立复现。
+  verification_note_en: Repository, sources and license read; not installed. It is an independent synthesis of Lauren Tan's public work, not official or endorsed; cited output figures are unaudited and methods were not independently reproduced.
+  status: alive
+  evidence: editorial
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-medicfsd-mission-control-kit
+  url: https://github.com/medicfsd/mission-control-kit
+  title: Mission Control Kit：Grok Bot 团队日志、审批和用量看板
+  title_en: "Mission Control Kit: logs, approvals and usage dashboards for Grok Bot teams"
+  author: medicfsd
+  author_en: medicfsd
+  author_url: https://github.com/medicfsd
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - templates
+    - resources
+  tags:
+    - dashboard
+    - passkey
+    - team log
+    - approval
+    - self-hosted
+  apps:
+    - Oracle Cloud
+    - GitHub
+  summary_zh: 自托管看板从追加式 JSON 团队日志生成晨间简报、待审批、进行中、截止日期、用量和 Bot 卡片，支持通行密钥登录、Oracle Cloud VM 部署与配套设置 Skill。
+  summary_en: A self-hosted dashboard turns an append-only JSON team log into briefings, approvals, work-in-progress, deadlines, usage and Bot cards, with passkey sign-in, Oracle Cloud VM deployment and a setup Skill.
+  verification_note_zh: 已读 README、格式、部署与测试说明，未运行。安全性、免费额度、在线可用性和团队效果均未独立验证；部署会创建外部云资源。
+  verification_note_en: README, schema, deployment and test notes were read; not run. Security, free-tier availability, uptime and team outcomes were not independently verified, and deployment creates external cloud resources.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-priosweep-priosweep-plugin
+  url: https://github.com/priosweep/priosweep-plugin
+  title: Priosweep 插件：只读排序依赖风险并生成安全简报
+  title_en: "Priosweep plugin: read-only dependency-risk prioritization and security briefings"
+  author: Priosweep
+  author_en: Priosweep
+  author_url: https://github.com/priosweep
+  source: github
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - templates
+  tags:
+    - plugin
+    - MCP
+    - OAuth
+    - dependencies
+    - security
+  apps:
+    - Cursor
+    - Claude Code
+    - Codex
+    - ChatGPT
+  summary_zh: 插件通过远程 MCP 只读访问 Priosweep，三份 Skill 分别按证据排依赖更新优先级、解释某项更新和生成当前安全简报；同一包可供 Grok Bot、Cursor、Claude Code 与 Codex 使用。
+  summary_en: A remote-MCP plugin gives read-only access to Priosweep, with three Skills to prioritize dependency updates, explain a finding and produce a current security briefing across Grok Bot, Cursor, Claude Code and Codex.
+  verification_note_zh: 已读仓库和 MIT 许可，未连接服务。插件尚未上架目录；Priosweep 隐私与条款页本轮无法读取，远程服务、OAuth 数据范围和结果准确性需用户另审。
+  verification_note_en: Repository and MIT license read; service not connected. It is not yet listed publicly. Priosweep privacy and terms pages were inaccessible this round, so remote-service scope, OAuth data and accuracy need separate review.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: github-sayandipbagchi-agent-evaluator
+  url: https://github.com/sayandipbagchi/agent-evaluator
+  title: Agent Evaluator：评测 Grok Bot Skill、插件与 MCP 的 19 个 Skill
+  title_en: "Agent Evaluator: 19 Skills for evaluating Grok Bot Skills, plugins and MCP servers"
+  author: Sayandip Bagchi
+  author_en: Sayandip Bagchi
+  author_url: https://github.com/SayandipBagchi
+  source: github
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - templates
+    - resources
+  tags:
+    - Skill
+    - MCP
+    - security
+    - evaluation
+    - sandbox
+  apps:
+    - Claude Code
+    - Codex
+    - GitHub
+  summary_zh: Python 引擎按 12 个维度检查 Agent Skill、插件和 MCP，生成 JSON/Markdown/HTML 报告；19 个 Grok Bot Skill 负责编排、三评审、触发准确率、静态安全、沙箱渗透和 GitHub 草稿。
+  summary_en: A Python engine evaluates Agent Skills, plugins and MCP servers across 12 dimensions and emits JSON/Markdown/HTML reports; 19 Grok Bot Skills orchestrate judging, routing, security, sandbox pentests and GitHub drafts.
+  verification_note_zh: 已读 README 和限制，未运行。作者自测 42/42 是同规则设计的种子样例，不能代表真实召回率；Docker CI、远程 MCP/OAuth、跨模型一致性等仍未完整实现。
+  verification_note_en: README and limitations read; not run. The 42/42 self-test uses co-designed seeded flaws and is not real-world recall. Docker CI, remote MCP/OAuth and cross-model consistency remain incomplete.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: github
+- id: reddit-flammable-donut-work-status-markers
+  url: https://reddit.com/r/GrokBot/comments/1xndigi/a_tweak_i_found_useful_for_software_development
+  title: 四条状态标记规则：区分工作完成与仍在进行
+  title_en: Four status-marker rules to separate completed work from work still running
+  author: flammable_donut
+  author_en: flammable_donut
+  author_url: https://www.reddit.com/user/flammable_donut/
+  source: forum
+  lang: en
+  published: 2026-11-04
+  categories:
+    - templates
+    - start
+  tags:
+    - status
+    - prompt
+    - coding
+    - completion
+    - guardrail
+  apps:
+    - Cursor
+  summary_zh: 四条规则要求完成交付时最后一行固定写“✅ Work is completed”，若仍有排队或运行任务则先列“⏳ Work in progress”；纯进度消息只保留进行中标记。
+  summary_en: Four rules require completed deliveries to end with “Work is completed,” add a “Work in progress” note when anything is still queued or running, and reserve progress-only messages for the in-progress marker.
+  verification_note_zh: 已读原帖和作者回复；规则文本可见，但效果仅为作者经验，未运行软件项目或比较错误率。评论也提醒最终质量仍需人工检查。
+  verification_note_en: The post and author replies were read. The rules are visible, but effectiveness is anecdotal; no project or error-rate comparison was run, and comments still stress human quality control.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: reddit
+- id: reddit-neomatrix1217-grokbot-usage-breakdown
+  url: https://reddit.com/r/GrokBot/comments/1xmiacl/what_actually_cut_my_grok_bot_usage_my_numbers
+  title: 一周用量拆解：长会话、小时 Routine 与 Bot 交接如何消耗额度
+  title_en: A one-week usage breakdown of long chats, hourly Routines and Bot handoffs
+  author: NeoMatrix1217
+  author_en: NeoMatrix1217
+  author_url: https://www.reddit.com/user/NeoMatrix1217/
+  source: forum
+  lang: en
+  published: 2026-11-04
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - usage
+    - Routine
+    - handoff
+    - dashboard
+    - cost
+  apps: []
+  summary_zh: 作者称一周用量约四分之三来自长会话；建议合并提问、缩短回答、收紧浏览器/研究范围、降低小时 Routine 频率，并提醒 Bot 间交接会在两端计费。
+  summary_en: The author says long chats caused about three quarters of one week's usage, recommending batched asks, short answers, narrower browser/research scopes and less frequent Routines; Bot handoffs charge both sides.
+  verification_note_zh: 已读帖子与评论，未核账单或分享 Bot。数字只代表作者账户；“每主题新建聊天”被评论指出当前无常规入口，更准确做法是分配独立 Bot 或在受阻时 Reset。
+  verification_note_en: Post and comments were read; billing and the shared Bot were not checked. Numbers are account-specific. A comment notes there is no normal new-chat button, so separate Bots or blocked-message Reset are more accurate.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-05
+  checked_at: 2026-11-05
+  collection_batch: 2026-11-05-daily-0900-approved
+  platform: reddit
 - id: blog-ssgoo-grok-bot-pi-handbook
   url: https://ssgoo.net/grok-bot-guide
   title: 中文实战手册：从第一份可追溯简报到 Pi 外部模型分流

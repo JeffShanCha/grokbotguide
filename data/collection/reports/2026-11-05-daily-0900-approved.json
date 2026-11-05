@@ -1,0 +1,27 @@
+{
+  "batch_id": "2026-11-05-daily-0900-approved",
+  "date": "2026-11-05",
+  "added": [
+    "github-blicae8917-wake-grokbot",
+    "github-clawdoglabs-slack-grok-bridge",
+    "github-echris6-screen-ask",
+    "github-az9713-grokbot-claude-demo",
+    "github-medicfsd-mission-control-kit",
+    "github-ev-llh-skillful-grok",
+    "github-krisrmgua-tokenpulse",
+    "reddit-flammable-donut-work-status-markers",
+    "reddit-neomatrix1217-grokbot-usage-breakdown",
+    "blog-reasonmachines-grokbot-claude-code",
+    "blog-flavio-scheduled-agent-tasks",
+    "blog-majento-claude-grokbot-webhook",
+    "github-antonvnukov-grok-bot-ops-team",
+    "github-priosweep-priosweep-plugin",
+    "github-artisbisers-codex-remote",
+    "github-sayandipbagchi-agent-evaluator",
+    "github-manhquydev-agent-trust-skills"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}
