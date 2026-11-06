@@ -1,0 +1,28 @@
+{
+  "batch_id": "2026-11-06-daily-0900-approved",
+  "date": "2026-11-06",
+  "added": [
+    "x-ai-edisonz-anti-drift-bot-memory-template",
+    "x-engineer-num1-ep2-getting-started",
+    "x-engineer-num1-ep3-how-to-ask",
+    "x-engineer-num1-ep4-shared-computer",
+    "x-engineer-num1-ep5-connectors",
+    "x-engineer-num1-ep6-teach-a-task",
+    "x-0xmorlex-lauren-tan-dr-eggbot-team",
+    "x-mspd4100-publish-bot-as-template",
+    "x-xiaomovps-five-monetization-cases",
+    "x-xiaomovps-social-ops-risk-tips",
+    "x-cathrynlavery-airbnb-bot-handoff",
+    "x-dhruv-rajkotia-family-job-hunt-bot",
+    "x-natebuildshq-template-rewards-pilot",
+    "x-twood-trust-marketplace-first-steps",
+    "x-eljefemeta-fantasy-start-sit-routine",
+    "reddit-ogmanga-grokbot-weekly-survival-manual",
+    "blog-ai-coexistence-grokbot-routine-timezone",
+    "github-simplevox-grok-plugin"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}

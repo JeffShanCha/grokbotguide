@@ -1,4 +1,558 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: blog-ai-coexistence-grokbot-routine-timezone
+  url: https://163264.com/19259
+  title: Grok Bot 每日任务：Routine 时区、测试运行与暂停排查
+  title_en: "Daily Grok Bot tasks: Routine timezone, test runs and pause troubleshooting"
+  author: AI 共存派
+  author_en: AI Coexistence
+  author_url: https://www.163264.com/profile/163264
+  source: blog
+  lang: zh
+  published: 2026-11-05
+  categories:
+    - start
+    - advanced
+  tags:
+    - Routine
+    - timezone
+    - testing
+    - troubleshooting
+  apps:
+    - Grok Bot
+  summary_zh: 先让 Bot 只读检查公开更新页，再明确拥有者、时区和 When to run；用 Test 或手动同任务验证首轮，按 Paused、计划、时区、首个运行点与失败记录排查，不用重复新建来“修复”。
+  summary_en: Prove a read-only check first, then confirm owner, timezone and When to run. Validate with Test or the same manual task; troubleshoot Paused, schedule, timezone, first run and failures instead of recreating Routines.
+  verification_note_zh: 已读取公开正文与作者元数据；教程引用官方说明但未逐条回放操作，未创建 Routine、连接账号或消耗用量。
+  verification_note_en: The public article and author metadata were read. Its official-document references were not replayed step by step; no Routine or account connection was created and no usage was spent.
+  status: alive
+  evidence: editorial
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  collection_batch: 2026-11-06-daily-0900-approved
+  platform: web
+- id: github-simplevox-grok-plugin
+  url: https://github.com/simplevox/simplevox-grok
+  title: SimpleVox for Grok：电话、短信与语音信箱插件
+  title_en: "SimpleVox for Grok: calls, texts and voicemail plugin"
+  author: SimpleVox
+  author_en: SimpleVox
+  author_url: https://github.com/simplevox
+  source: github
+  lang: en
+  published: 2026-11-05
+  categories:
+    - advanced
+    - recipes
+    - resources
+  tags:
+    - plugin
+    - MCP
+    - OAuth
+    - phone
+    - SMS
+    - voicemail
+    - approval
+  apps:
+    - Grok Bot
+    - SimpleVox
+  summary_zh: 把 SimpleVox 商务号码接入 Grok Bot，提供未接来电追踪、通话检索、短信草稿/发送、辅助拨号、联系人和活动报表技能；写操作要求先展示对象与内容并等待确认，重试带幂等键。
+  summary_en: Connects SimpleVox business numbers to Grok Bot for missed-call follow-up, transcript search, drafted/approved texts, assisted calls, contacts and reports, with explicit confirmation and idempotent retries.
+  verification_note_zh: 已读 README、权限表、安全说明和许可证；未安装、连接 OAuth、读取客户数据、发送短信或拨号。服务可用性、隐私实现与端到端审批仍为厂商自述。
+  verification_note_en: README, permissions, safety notes and license were read. Nothing was installed or connected; no customer data, text or call was touched. Service, privacy and approval behavior remain vendor-reported.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  collection_batch: 2026-11-06-daily-0900-approved
+  platform: github
+- id: reddit-ogmanga-grokbot-weekly-survival-manual
+  url: https://reddit.com/r/GrokBot/comments/1xov6nk/the_grok_bot_weekly_survival_manual_part_1
+  title: Grok Bot 每周生存手册：从会话、Routine 到连接器的降耗清单
+  title_en: "The Grok Bot Weekly Survival Manual: chats, routines and connectors"
+  author: u/OGmanga
+  author_en: u/OGmanga
+  author_url: https://www.reddit.com/user/OGmanga/
+  source: forum
+  lang: en
+  published: 2026-11-06
+  categories:
+    - advanced
+    - recipes
+    - resources
+  tags:
+    - usage
+    - Routine
+    - handoff
+    - connectors
+    - guardrails
+  apps:
+    - Grok Bot
+    - Slack
+    - Gmail
+    - Google Calendar
+    - Cloudflare Workers
+  summary_zh: 两篇手册把降耗拆成每日习惯与结构改造：新任务开新会话、批量汇报、调低空跑 Routine、窄化触发器、短交接文件、专用 Routine Bot、优先连接器和脚本，并附审计提示词。
+  summary_en: "Two-part checklist: fresh task chats, batched updates, slower idle Routines, narrow triggers, short handoff files, a dedicated Routine Bot, connectors before browsing, scripts after validation, and audit prompts."
+  verification_note_zh: 已读两篇 Reddit 正文；未查看配图、引用视频或外部站点，未核验作者转述的 35%–75% 节省数字，也未执行安装、迁移或自动化建议。
+  verification_note_en: Both Reddit posts were read. Images, cited videos and external sites were not checked; claimed 35–75% savings were not verified, and no installs, migrations or automations were run.
+  status: alive
+  evidence: editorial
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  collection_batch: 2026-11-06-daily-0900-approved
+  platform: reddit
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/0xMorlex/status/2117693929449529680
+  author: 0xMorlex
+  author_url: https://x.com/0xMorlex
+  id: x-0xmorlex-lauren-tan-dr-eggbot-team
+  title: 照着 Lauren Tan 用 Dr. Eggbot 搭一支只干一件事的 Grok Bot 队
+  lang: en
+  published: 2026-11-03
+  categories:
+    - advanced
+    - bots
+    - recipes
+  tags:
+    - dr-eggbot
+    - anti-jobs
+    - team
+    - lauren-tan
+  apps:
+    - Grok Bot
+  summary_zh: 用 Marketplace 的 Dr. Eggbot 访谈后建队：每 Bot 一职一嗓、只给所需工具并写 Anti-jobs；顶层 Lead 只分活；每周审计转录并记修复日志。回复给出可粘贴开场提示。
+  summary_en: Import Dr. Eggbot, let it interview you, give each bot one job/voice/tools plus anti-jobs, put a lead that only routes, weekly transcript audits, and a fix log. Reply has a pasteable starter prompt.
+  verification_note_zh: 已读取主帖 note_tweet 与作者回复长文；配图未看。引用其旧 Article，未读该旧文全文。未复现。
+  verification_note_en: Main note_tweet and author reply read; images not viewed. Quoted older article not fully re-read. Not reproduced.
+  title_en: Build a single-purpose Grok Bot team with Dr. Eggbot
+  author_en: 0xMorlex
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/ai_edisonZ/status/2117876738751369587
+  author: ai_edisonZ
+  author_url: https://x.com/ai_edisonZ
+  id: x-ai-edisonz-anti-drift-bot-memory-template
+  title: 为什么你的 Grok Bot 总走偏？教你写一个真正好用的 Bot 模板
+  lang: zh
+  published: 2026-11-04
+  categories:
+    - advanced
+    - templates
+    - bots
+  tags:
+    - memory
+    - skill
+    - anti-jobs
+    - template
+    - dr-eggbot
+  apps:
+    - Grok Bot
+  summary_zh: 拆解 Memory（首轮全量注入）与 Skill（按需加载）差异；核心 URL/Anti-jobs 必须进记忆。附可复制防漂移记忆骨架，并提醒分享前清理自动沉淀的脏记忆。
+  summary_en: "Explains Memory vs Skill timing: put Job, Anti-jobs and fixed URLs in Memory; keep SOPs in Skills. Includes a pasteable anti-drift Memory skeleton and a clean-before-share warning."
+  verification_note_zh: 已读取 X Article 全文文本；配图与后台结构截图未查看。对照 dr eggbot 为作者归纳，未复现。
+  verification_note_en: Full X Article text read; screenshots not viewed. dr eggbot comparison is author-reported; not reproduced.
+  title_en: An anti-drift Memory template for Grok Bot
+  author_en: ai_edisonZ
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/cathrynlavery/status/2118063604037513536
+  author: cathrynlavery
+  author_url: https://x.com/cathrynlavery
+  id: x-cathrynlavery-airbnb-bot-handoff
+  title: 两个 Grok Bot 自己交接家务：民宿缺货通知改超市配送单
+  lang: en
+  published: 2026-11-04
+  categories:
+    - recipes
+    - bots
+  tags:
+    - multi-bot
+    - handoff
+    - airbnb
+    - ops
+  apps:
+    - Grok Bot
+  summary_zh: 民宿 Bot 收到保洁缺厕纸消息后转告管家 Bot；管家发现 20 分钟前已下 HEB 配送单，直接改单加货，主人未介入。
+  summary_en: Airbnb bot passed a cleaner’s toilet-paper shortage to a house-manager bot, which edited an existing HEB delivery order—no owner involvement.
+  verification_note_zh: 已读取全文；未查看对话日志或集成配置。作者单次案例，未复现。
+  verification_note_en: Full text read; chat logs and connector setup not inspected. Single author case; not reproduced.
+  title_en: Two Grok Bots hand off an Airbnb restocking task
+  author_en: cathrynlavery
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/dhruv_rajkotia/status/2117511287836151994
+  author: dhruv_rajkotia
+  author_url: https://x.com/dhruv_rajkotia
+  id: x-dhruv-rajkotia-family-job-hunt-bot
+  title: 给家人搭求职 Grok Bot：每日筛岗、投递并汇总到表格
+  lang: en
+  published: 2026-11-03
+  categories:
+    - recipes
+  tags:
+    - job-search
+    - routine
+    - sheets
+  apps:
+    - Grok Bot
+    - Google Sheets
+  summary_zh: 每日按画像找岗、规则筛选并申请匹配岗位，结果写入 Google Sheet；7 天约 45 份申请。作者提醒关注 token 用量上升。
+  summary_en: "Daily job agent: review profile, find openings, filter by rules, apply matches, log to Google Sheets (~45 in 7 days). Author flags rising token use."
+  verification_note_zh: 已读取全文；未核验表格或申请站点自动化细节。作者自述，未复现。
+  verification_note_en: Full text read; sheet and apply-site automation not verified. Author-reported; not reproduced.
+  title_en: Build a daily job-hunt Grok Bot for a family member
+  author_en: dhruv_rajkotia
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/ElJefeMeta/status/2118499359020962081
+  author: ElJefeMeta
+  author_url: https://x.com/ElJefeMeta
+  id: x-eljefemeta-fantasy-start-sit-routine
+  title: Fantasy 开赛三步：贴阵容、拉伤病、设出局提醒 Routine
+  lang: en
+  published: 2026-11-06
+  categories:
+    - recipes
+  tags:
+    - fantasy-football
+    - routine
+    - sports
+  apps:
+    - Grok Bot
+  summary_zh: 贴阵容问首发 → 赛前拉伤病新闻 → 设 Routine 在有人出局时提醒。针对 TNF 三线 QB 开场情境。
+  summary_en: Paste roster for start/sit, pull injury news before kickoff, set a Routine to ping if anyone is ruled out—TNF third-string QB context.
+  verification_note_zh: 已读取全文；伤病来源为引用帖，未独立核验伤情。未复现 Routine。
+  verification_note_en: Full text read; injury source is a quoted post, not independently verified. Routine not reproduced.
+  title_en: Three-step fantasy lineup check with an injury Routine
+  author_en: ElJefeMeta
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/engineer_num1/status/2118164490156150789
+  author: engineer_num1
+  author_url: https://x.com/engineer_num1
+  id: x-engineer-num1-ep2-getting-started
+  title: 日文新手连载 2：安装登录，并让第一个 Bot 记住工作与规则
+  lang: en
+  published: 2026-11-05
+  categories:
+    - start
+  tags:
+    - tutorial
+    - japanese
+    - series
+    - docs
+    - source-language-ja
+  apps:
+    - Grok Bot
+  summary_zh: 从套餐识别、安装登录到首条消息，让 Bot 记住职责和规则；区分六个设置页中哪些只影响当前 Bot、哪些会作用到全部 Bot。
+  summary_en: Plan choice, install/sign-in, and first-message “remember” for job+rules. Distinguishes which Settings panes affect all Bots.
+  verification_note_zh: 原文为日语；目录字段当前仅支持 zh/en，暂按 en 归档并用 source-language-ja 标注。已读取 X Article 全文文本；确认日作者写 2026-11-04，Windows 桌面 0.78.x；配图未查看，未复现。
+  verification_note_en: Original language is Japanese; the catalog currently supports zh/en only, so this is filed under en and tagged source-language-ja. Full X Article text read; author verified on 2026-11-04 Windows desktop 0.78.x; images not viewed; not reproduced.
+  title_en: "Japanese beginner series 2: install, sign in and define the first Bot"
+  author_en: engineer_num1
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/engineer_num1/status/2118208528066420955
+  author: engineer_num1
+  author_url: https://x.com/engineer_num1
+  id: x-engineer-num1-ep3-how-to-ask
+  title: 日文新手连载 3：用五要素下任务，读懂审批卡
+  lang: en
+  published: 2026-11-05
+  categories:
+    - start
+  tags:
+    - tutorial
+    - japanese
+    - series
+    - docs
+    - source-language-ja
+  apps:
+    - Grok Bot
+  summary_zh: 用成果、信息源、禁止项、返回格式、暂停点五要素写任务；解释审批卡各按钮的授权范围，并在权限设置中保留“始终确认”。
+  summary_en: Five-part task asks (outcome, sources, bans, deliverable, checkpoint). Explains approval-card buttons and always-ask rules in Permissions.
+  verification_note_zh: 原文为日语；目录字段当前仅支持 zh/en，暂按 en 归档并用 source-language-ja 标注。已读取 X Article 全文文本；确认日作者写 2026-11-04，Windows 桌面 0.78.x；配图未查看，未复现。
+  verification_note_en: Original language is Japanese; the catalog currently supports zh/en only, so this is filed under en and tagged source-language-ja. Full X Article text read; author verified on 2026-11-04 Windows desktop 0.78.x; images not viewed; not reproduced.
+  title_en: "Japanese beginner series 3: five-part requests and approval cards"
+  author_en: engineer_num1
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/engineer_num1/status/2118275338568409382
+  author: engineer_num1
+  author_url: https://x.com/engineer_num1
+  id: x-engineer-num1-ep4-shared-computer
+  title: 日文新手连载 4：共享云电脑、保管库与安全收尾
+  lang: en
+  published: 2026-11-05
+  categories:
+    - start
+    - advanced
+  tags:
+    - tutorial
+    - japanese
+    - series
+    - docs
+    - source-language-ja
+  apps:
+    - Grok Bot
+  summary_zh: 从会话打开共享云电脑、接管或停止；说明多 Bot 共用电脑、用保管库交凭据，以及出错时按低风险顺序恢复和收尾。
+  summary_en: Open the shared cloud PC, take over/stop, vault for secrets, and safe recovery order. Stresses one PC shared by all Bots.
+  verification_note_zh: 原文为日语；目录字段当前仅支持 zh/en，暂按 en 归档并用 source-language-ja 标注。已读取 X Article 全文文本；确认日作者写 2026-11-04，Windows 桌面 0.78.x；配图未查看，未复现。
+  verification_note_en: Original language is Japanese; the catalog currently supports zh/en only, so this is filed under en and tagged source-language-ja. Full X Article text read; author verified on 2026-11-04 Windows desktop 0.78.x; images not viewed; not reproduced.
+  title_en: "Japanese beginner series 4: shared computer, Vault and safe cleanup"
+  author_en: engineer_num1
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/engineer_num1/status/2118322870166471038
+  author: engineer_num1
+  author_url: https://x.com/engineer_num1
+  id: x-engineer-num1-ep5-connectors
+  title: 日文新手连载 5：连接应用，区分三种 X 接入方式
+  lang: en
+  published: 2026-11-05
+  categories:
+    - start
+    - advanced
+  tags:
+    - tutorial
+    - japanese
+    - series
+    - docs
+    - source-language-ja
+  apps:
+    - Grok Bot
+  summary_zh: 区分“已安装”和“已连接”，权限不超过账号本身；比较公开 X 读取、X 插件和 @bot 三种路径，并给出断开连接的清理顺序。
+  summary_en: Installed vs connected, scope equals account rights. Three X paths (public reads, X plugin, @bot) and disconnect cleanup order.
+  verification_note_zh: 原文为日语；目录字段当前仅支持 zh/en，暂按 en 归档并用 source-language-ja 标注。已读取 X Article 全文文本；确认日作者写 2026-11-04，Windows 桌面 0.78.x；配图未查看，未复现。
+  verification_note_en: Original language is Japanese; the catalog currently supports zh/en only, so this is filed under en and tagged source-language-ja. Full X Article text read; author verified on 2026-11-04 Windows desktop 0.78.x; images not viewed; not reproduced.
+  title_en: "Japanese beginner series 5: app connections and three X access paths"
+  author_en: engineer_num1
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/engineer_num1/status/2118500207659041014
+  author: engineer_num1
+  author_url: https://x.com/engineer_num1
+  id: x-engineer-num1-ep6-teach-a-task
+  title: 日文新手连载 6：演示一次任务，生成并校对 Skill
+  lang: en
+  published: 2026-11-06
+  categories:
+    - start
+    - advanced
+    - recipes
+  tags:
+    - tutorial
+    - japanese
+    - series
+    - docs
+    - source-language-ja
+  apps:
+    - Grok Bot
+  summary_zh: 用“教一个任务”录制一次操作，回答目标并保存 Skill；按六项检查草稿、补失败处理，同时提醒录制时不输入秘密、手机端暂不可用。
+  summary_en: "Teach a task: record once, answer the goal prompt, save skill. Review the 6-point draft, add failure handling; no secrets while recording."
+  verification_note_zh: 原文为日语；目录字段当前仅支持 zh/en，暂按 en 归档并用 source-language-ja 标注。已读取 X Article 全文文本；确认日作者写 2026-11-04，Windows 桌面 0.78.x；配图未查看，未复现。
+  verification_note_en: Original language is Japanese; the catalog currently supports zh/en only, so this is filed under en and tagged source-language-ja. Full X Article text read; author verified on 2026-11-04 Windows desktop 0.78.x; images not viewed; not reproduced.
+  title_en: "Japanese beginner series 6: demonstrate a task and review the Skill"
+  author_en: engineer_num1
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/mspd4100/status/2118029479268540489
+  author: mspd4100
+  author_url: https://x.com/mspd4100
+  id: x-mspd4100-publish-bot-as-template
+  title: 做个 Grok Bot，发布成模板大家用：以 X Pulse 走通七步
+  lang: zh
+  published: 2026-11-04
+  categories:
+    - templates
+    - bots
+    - start
+  tags:
+    - template
+    - dr-eggbot
+    - publish
+    - marketplace
+  apps:
+    - Grok Bot
+  summary_zh: 导入 dr eggbot → 说清要分享 → 一 Bot 一事写指令/记忆/技能 → 去个人数据并放 GitHub 页面代码 →「做成模板」再点发布 → 改完重新打包同一链接。附两条经验清单。
+  summary_en: Import dr eggbot, state you want to share, one-job bot, strip PII and host UI on GitHub, say “make a template” then Publish, re-pack on updates. Lists practical publish tips.
+  verification_note_zh: 已读取 X Article 全文；配图与模板页未点开验证。作者自述 X Pulse 流程，未复现发布。
+  verification_note_en: Full article text read; screenshots and live template pages not opened. Author-reported X Pulse flow; publish not reproduced.
+  title_en: Publish a Grok Bot as a reusable template in seven steps
+  author_en: mspd4100
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/natebuildsHQ/status/2118104534262403305
+  author: natebuildsHQ
+  author_url: https://x.com/natebuildsHQ
+  id: x-natebuildshq-template-rewards-pilot
+  title: Grok Bot Template Rewards 试点：没有公开申请表，先看资格清单
+  lang: en
+  published: 2026-11-04
+  categories:
+    - news
+    - resources
+  tags:
+    - rewards
+    - templates
+    - x-money
+  apps:
+    - Grok Bot
+  summary_zh: 官方为邀请制、无公开申请。资格含 18+、支持 X Money 的美国州、账号良好、已验证邮箱、符合条件的 Premium，并需 X Money 收款。引用帮助中心与创作者经历。
+  summary_en: "Invite-only; no public form. Eligibility: 18+, X Money U.S. state, good standing, verified email, eligible Premium, X Money for payouts. Links help center + one creator story."
+  verification_note_zh: 已读取全文；帮助中心链接未整页复读。资格以作者转述官方说明为主，未代申。
+  verification_note_en: Full post read; help-center page not re-fetched in full. Eligibility paraphrases official copy; no application attempted.
+  title_en: "Grok Bot Template Rewards pilot: eligibility before application"
+  author_en: natebuildsHQ
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/twood_trust/status/2118004880476631462
+  author: twood_trust
+  author_url: https://x.com/twood_trust
+  id: x-twood-trust-marketplace-first-steps
+  title: 从零开始：去 Market 加模板，一件事一个 Bot
+  lang: zh
+  published: 2026-11-04
+  categories:
+    - start
+    - templates
+  tags:
+    - marketplace
+    - template
+    - onboarding
+  apps:
+    - Grok Bot
+  summary_zh: 模板是食谱不是整机：看描述后 Add to Grok Bot、App 预览再加入，得到自己的副本。三步：一事一 Bot、先有边界的任务并过目、放心后再开自动排程。
+  summary_en: "Templates are recipes not clones: Add to Grok Bot, preview, then join. Three steps: one job per bot, bounded first task with review, automate only after trust."
+  verification_note_zh: 已读取正文；附带视频未观看。未复现加模板流程。
+  verification_note_en: Post text read; attached video not watched. Add-template flow not reproduced.
+  title_en: Start with Marketplace templates and one job per Bot
+  author_en: twood_trust
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/xiaomovps/status/2118220105620562129
+  author: xiaomovps
+  author_url: https://x.com/xiaomovps
+  id: x-xiaomovps-five-monetization-cases
+  title: Grok Bot 赚钱？社区 5 个可参考案例（闲鱼到广告获客）
+  lang: zh
+  published: 2026-11-05
+  categories:
+    - recipes
+    - news
+  tags:
+    - monetization
+    - templates
+    - rewards
+    - case
+  apps:
+    - Grok Bot
+  summary_zh: 整理五案：多店闲鱼协助、模板奖励试点、商务询盘筛选、售前自动回复、Meta/SEO 投放辅助；并提示奖励为邀请制、广告收益多为短期估算。
+  summary_en: "Five community cases: multi-shop Xianyu ops, template rewards pilot, inbound ad sales triage, pre-sales replies, Meta/SEO assist—with caveats on invite-only rewards and estimated ad ROI."
+  verification_note_zh: 已读取主帖全文；配图与所引 Reddit/原帖未逐条核验成交数字。作者转述社区说法，未复现。
+  verification_note_en: Main post text read; images and cited Reddit/source posts not verified for revenue claims. Author-reported roundup; not reproduced.
+  title_en: Five community monetization cases for Grok Bot
+  author_en: xiaomovps
+  collection_batch: 2026-11-06-daily-0900-approved
+- source: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-06
+  checked_at: 2026-11-06
+  platform: x
+  url: https://x.com/xiaomovps/status/2118197111972057485
+  author: xiaomovps
+  author_url: https://x.com/xiaomovps
+  id: x-xiaomovps-social-ops-risk-tips
+  title: 自媒体运营降低风控：网络转发、少脚本、先小号测 Skill
+  lang: zh
+  published: 2026-11-05
+  categories:
+    - recipes
+    - advanced
+  tags:
+    - risk
+    - browser
+    - skill
+    - egress
+  apps:
+    - Grok Bot
+  summary_zh: 三点：开网络转发走本机出口；用浏览器模拟真人、发布尽量人工；先在小号测 Skill/MCP 再切大号。
+  summary_en: "Three tips: egress via your device network, prefer browser over brittle scripts with human publish, and test Skills/MCP on a small account first."
+  verification_note_zh: 已读取全文；未验证各平台风控效果。作者经验分享，未复现。
+  verification_note_en: Full text read; platform risk outcomes not verified. Author tips; not reproduced.
+  title_en: Operational risk tips for social-media Grok Bot workflows
+  author_en: xiaomovps
+  collection_batch: 2026-11-06-daily-0900-approved
 - id: blog-flavio-scheduled-agent-tasks
   url: https://flaviocopes.com/ai-glossary/scheduled-agent-tasks
   title: Claude Code、Codex、Cursor 与 Grok 的定时任务对照
