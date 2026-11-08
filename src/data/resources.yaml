@@ -1,4 +1,326 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-anorthernman-framevr-grokbot-journey
+  url: https://github.com/anorthernman-developer/framevr-grokbot-journey
+  author: anorthernman-developer
+  author_url: https://github.com/anorthernman-developer
+  title: Frame VR × Grok Bot：空间构建、API 方法与回滚记录
+  title_en: "Frame VR and Grok Bot: a build journey with API methods and rollback notes"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - Frame VR
+    - REST API
+    - OpenAPI
+    - rollback
+    - case study
+  apps:
+    - Grok Bot
+    - Frame VR
+  lang: en
+  summary_zh: 公开记录作者与 Grok Bot 使用 Frame REST API 建空间、改环境和接集成的过程，附方法日志、能力/限制、角色矩阵、欢迎展示回滚计划、OpenAPI 规格和只读示例。
+  summary_en: A public log of one author and Grok Bot building Frame spaces, shaping environments and wiring integrations, with methods, limits, roles, an undo plan, OpenAPI spec and a read-only example.
+  verification_note_zh: 已读 README 与公开索引，未连接 Frame 或调用 API。仓库把文档/测试支持的结论标为 Confirmed、未测设想标为 Proposed；具体运行结果仍为作者记录。
+  verification_note_en: README and public index read; Frame was not connected and no API called. The repo labels documented/tested claims Confirmed and untested ideas Proposed; execution results remain author-reported.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-aritosi-grokbot-cloudstandby
+  url: https://github.com/aritosi/grokbot-cloudstandby
+  author: aritosi
+  author_url: https://github.com/aritosi
+  title: GrokBot Cloudstandby：有截止时间的云电脑保活 Skill
+  title_en: "GrokBot Cloudstandby: a bounded cloud-computer keep-alive skill"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - Skill
+    - keep-alive
+    - cloud computer
+    - process watcher
+    - quota
+  apps:
+    - Grok Bot
+  lang: zh
+  summary_zh: 让 Grok Bot 云电脑按小时或截止时间保持活跃，可登记现有进程或启动指定命令，任务结束后报告，并让多个登记共用一个看守；作者称一次 5 小时测试消耗约 2%–3% 额度。
+  summary_en: Keeps a Grok Bot cloud computer active until a bounded deadline, watches existing or requested processes, reports completion, and shares one watcher. The author reports roughly 2–3% usage for one five-hour test.
+  verification_note_zh: 已读中英日 README、能力与免责声明；未安装或运行。保活效果、最长 24 小时与额度数字来自作者单次测试，平台仍可能暂停或限流。
+  verification_note_en: The trilingual README, capabilities and disclaimer were read; not installed or run. Keep-alive behavior, the 24-hour ceiling and usage figure are author-reported and remain platform-dependent.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-farmountain-aao
+  url: https://github.com/farmountain/aao
+  author: farmountain
+  author_url: https://github.com/farmountain
+  title: AAO：Grok Bot 多代理的交接契约、独立审阅与哈希日志
+  title_en: "AAO: handoff contracts, independent review and hash-chained logs for Grok Bot agents"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - bots
+    - templates
+  tags:
+    - multi-agent
+    - handoff
+    - review
+    - rubric
+    - audit log
+  apps:
+    - Grok Bot
+    - Notion
+    - GitHub
+  lang: en
+  summary_zh: 把 Builder、主审、独立 QA 与最终裁决者分开，用 JSON Schema 交接契约、冻结评分表、SHA-256 链式事件日志和工具/轮次/时长上限，避免执行者自审并记录争议升级。
+  summary_en: Separates builder, primary reviewer, independent QA and final decider, using JSON-Schema handoffs, frozen rubrics, a SHA-256 chained event log and tool/round/time limits to prevent self-approval and log escalations.
+  verification_note_zh: 已读 README、目录与示例命令，未运行脚本或接入 Notion。哈希链可显示日志被改动，但不能证明事件事实真实；角色名和 Notion 页面需按使用者环境改造。
+  verification_note_en: README, layout and examples read; scripts and Notion were not used. A hash chain can reveal log changes but cannot prove event truth; named roles and the Notion page require adaptation.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-imans-ai-imans-grok-plugin
+  url: https://github.com/imans-ai/imans-grok-plugin
+  author: Imans
+  author_url: https://github.com/imans-ai
+  title: Imans for Grok Bot：商业数据查询、任务与审批工作流插件
+  title_en: "Imans for Grok Bot: business queries, tasks and approval workflows"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+    - resources
+  tags:
+    - plugin
+    - MCP
+    - OAuth
+    - business
+    - approval
+    - pricing
+  apps:
+    - Grok Bot
+    - Imans
+  lang: en
+  summary_zh: 用 Imans OAuth/MCP 查询获授权的销售、库存、财务、营销和流程数据，也可建任务、准备流程草稿或走价格发布审批；工具范围随工作区权限、连接模式和服务端发现结果变化。
+  summary_en: Uses Imans OAuth/MCP for authorized sales, stock, finance, marketing and process data, plus tasks, process drafts and approved price publication; tools vary with workspace roles, connection mode and server discovery.
+  verification_note_zh: 已读 README、权限与发布状态，未连接账户或调用工具。直接 MCP 由厂商称在 Grok Bot 可用，插件商店接纳仍待审核；未来工具会被自动发现，部分操作耗 Usage Credits，安装不等于只读。
+  verification_note_en: README, permissions and release status read; no account or tool used. Direct MCP is vendor-reported working, while packaged listing acceptance remains pending. Future tools are discovered and some operations consume credits.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-jdkabattles-muse-grok-monitor
+  url: https://github.com/jdkabattles/muse-grok-collaboration-monitor
+  author: jdkabattles
+  author_url: https://github.com/jdkabattles
+  title: Muse × Grok Bot 协作监控：只读邮箱快照看板
+  title_en: "Muse and Grok Bot collaboration monitor: a read-only mailbox snapshot dashboard"
+  published: 2026-11-07
+  categories:
+    - recipes
+    - resources
+  tags:
+    - Muse
+    - dashboard
+    - mailbox
+    - status
+    - privacy
+  apps:
+    - Grok Bot
+    - Meta Muse
+  lang: en
+  summary_zh: 浏览器每 30 秒读取同源 mailbox-snapshot.json，展示真实路由记录和回执状态；失效、失败或超过 20 分钟的快照会清空，公开导出只保留已审阅元数据，不含消息正文或凭据。
+  summary_en: Polls a same-origin mailbox snapshot every 30 seconds for routing and receipt states. Invalid, failed or stale snapshots clear; public export keeps reviewed metadata without bodies or credentials.
+  verification_note_zh: 已读 README 与边界说明，未接入私有邮箱或运行生产者。看板本身不会刷新私有源、执行任务、发送 ACK 或唤醒代理；十分钟生产计划仍需操作者另行配置。
+  verification_note_en: README and boundary notes read; no private mailbox or producer used. The dashboard cannot refresh the private source, execute tasks, send ACKs or wake agents; the ten-minute producer schedule is separate setup.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-leoresendedop-grokbot-staff
+  url: https://github.com/leoresendedop-sys/grokbot-staff
+  author: leoresendedop-sys
+  author_url: https://github.com/leoresendedop-sys
+  title: grokbot-staff：Hermes 专家团队反向委派长任务给 Grok Bot
+  title_en: "grokbot-staff: a Hermes team that delegates long jobs to Grok Bot"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+    - bots
+  tags:
+    - Hermes
+    - plugin
+    - webhook
+    - handoff
+    - specialist team
+  apps:
+    - Grok Bot
+    - Hermes
+  lang: en
+  summary_zh: 给 Hermes 加 chief 和可替换专家组，并用 grokbot_delegate 经 HTTPS webhook 或共享 inbox 把长任务交给自己的 Grok Bot，再用 grokbot_collect 收回结果；不是迁移或 Grok Bot API。
+  summary_en: Adds a chief and replaceable specialists to Hermes, delegates long work to the user's Grok Bot via HTTPS webhook or shared inbox, and collects results. It is neither migration nor a Grok Bot API.
+  verification_note_zh: 已读 README、工具表和安全说明，未安装或发 webhook。作者声明 HTTPS、拒绝重定向/用户信息、限制结果文件与无后台进程；源码和端到端 Routine 未做完整审计。
+  verification_note_en: README, tools and security notes read; not installed and no webhook sent. HTTPS, redirect/userinfo rejection, file limits and no background work are author claims; source and end-to-end Routine were not fully audited.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-lionatzion-stitch-your-pitch
+  url: https://github.com/lionatzion/stitch-your-pitch-public
+  author: RelativelySmart
+  author_url: https://github.com/lionatzion
+  title: Stitch Your Pitch：事实优先的简历与求职信 Grok Bot 模板
+  title_en: "Stitch Your Pitch: a fact-first resume and cover-letter Grok Bot template"
+  published: 2026-11-07
+  categories:
+    - recipes
+    - bots
+    - templates
+  tags:
+    - resume
+    - cover letter
+    - job search
+    - Skill
+    - MCP
+    - approval
+  apps:
+    - Grok Bot
+    - Stitch Your Pitch MCP
+  lang: en
+  summary_zh: 公开 Beta 模板用七个 Skill 对照岗位、履历证据和缺口，生成简历/求职信初稿并保留日期与任职范围；可选 MCP 给出证据关联的启发式匹配分，提交申请需逐项批准。
+  summary_en: A seven-Skill beta compares jobs with resume evidence and gaps, drafts factual resumes and cover letters, and offers optional heuristic scoring. Each application action needs exact approval.
+  verification_note_zh: 已读 README、版本与可用性说明，未添加模板、上传简历、登录评分服务或提交申请。后端不开源；新用户隔离检查仍未完成，评分不是 ATS 结果或录用预测。
+  verification_note_en: README, version and availability notes read; template not added and no resume, sign-in or application used. The backend is closed, new-user isolation checks remain open, and scores are not ATS or hiring predictions.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-mlzero-idea-to-product
+  url: https://github.com/mlzerotoheroyoutube/idea-to-product
+  author: mlzerotoheroyoutube
+  author_url: https://github.com/mlzerotoheroyoutube
+  title: Idea → Product：Grok Bot+Cursor 从灵感生成原型与 MVP PR
+  title_en: "Idea to Product: Grok Bot and Cursor from thought to prototype and MVP PR"
+  published: 2026-11-08
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - product
+    - prototype
+    - MCP
+    - Cursor
+    - GitHub
+    - Skill
+  apps:
+    - Grok Bot
+    - Cursor
+    - GitHub
+    - xAI API
+  lang: en
+  summary_zh: 把文字、语音、草图或照片转成可交互原型，再生成 SPEC、私有 GitHub 仓库、研究/文档和 MVP PR；Grok Bot 可通过本地 MCP 调用构建、发布、提醒与记忆工具。
+  summary_en: Turns text, voice, sketches or photos into a live prototype, SPEC, private GitHub repo, research/docs and an MVP PR, with Grok Bot driving local MCP tools for builds, shipping, reminders and memory.
+  verification_note_zh: 已读 README 与 GROKBOT.md，未运行。需要 xAI API 密钥、GitHub repo 权限，Cursor 构建可要求其 GitHub App 访问全部仓库；本地服务、源码和数据处理未做完整审计。
+  verification_note_en: README and GROKBOT.md read; not run. It needs an xAI key and GitHub repo access; Cursor builds may request all-repository app access. The local service, source and data handling were not fully audited.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-nisaral-grokbot-conductor
+  url: https://github.com/nisaral/grokbot-conductor
+  author: nisaral
+  author_url: https://github.com/nisaral
+  title: Conductor：用 Windows 文件夹、时钟和唤醒词叫起现有 Grok Bot
+  title_en: "Conductor: wake existing Grok Bots from Windows folders, clocks and voice"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - Windows
+    - local trigger
+    - wake word
+    - clipboard
+    - handoff
+  apps:
+    - Grok Bot
+    - Windows
+  lang: en
+  summary_zh: 本地服务监控文件投递、时间、剪贴板或离线语音唤醒词，通过 grokbot:// 打开指定 Bot 并把简报放入剪贴板；用户粘贴并发送前不消耗 Grok Bot 额度。
+  summary_en: A local Windows service watches folders, clocks, clipboard or on-device wake phrases, opens a named Bot through grokbot:// and puts a brief on the clipboard; no Grok Bot usage occurs until the user sends it.
+  verification_note_zh: 已读 README、依赖和测试说明，未在 Windows 安装或运行。它不会自动发送消息；本地文件监控、麦克风权限和协议链接兼容性未独立复现。
+  verification_note_en: README, requirements and test notes read; not installed on Windows. It does not auto-send. Local file watching, microphone permissions and protocol-link compatibility were not independently reproduced.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
+- id: github-onehumanbeing-grok-spaces
+  url: https://github.com/onehumanbeing/grok-spaces
+  author: onehumanbeing
+  author_url: https://github.com/onehumanbeing
+  title: Grok Spaces：给 Grok Bot 增加持久 HTML 工作区与本地动作桥
+  title_en: "Grok Spaces: persistent HTML workspaces and local actions for Grok Bot"
+  published: 2026-11-07
+  categories:
+    - advanced
+    - recipes
+    - resources
+  tags:
+    - macOS
+    - HTML workspace
+    - local action
+    - state
+    - revision
+  apps:
+    - Grok Bot
+    - macOS
+  lang: en
+  summary_zh: macOS 伴侣应用保存 Grok Bot 编写的 HTML 和状态，提供 doctor/open/read/publish/action CLI、原子发布与修订冲突检查；页面无网络且沙箱化，本地 handler 可处理允许的动作。
+  summary_en: A macOS companion saves Grok-authored HTML and state, with five CLI families, atomic publishing and revision checks. Pages are network-free and sandboxed; local handlers run allowed actions.
+  verification_note_zh: 已读 README、原生路线与安全边界，未构建或运行。作者称在 Grok Bot 0.79.2 测过一份私有原生 Page，但没有持久 Page→Bot 桥；handler 以当前用户身份、无 OS 沙箱运行且可产生外部副作用。
+  verification_note_en: README, native route and security boundary read; not built or run. A private native Page was author-tested on 0.79.2, but no persistent Page-to-Bot bridge exists. Handlers run as the current user without an OS sandbox.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-08
+  checked_at: 2026-11-08
+  collection_batch: 2026-11-08-daily-0900-approved
 - id: blog-ai-coexistence-grokbot-routine-timezone
   url: https://163264.com/19259
   title: Grok Bot 每日任务：Routine 时区、测试运行与暂停排查
