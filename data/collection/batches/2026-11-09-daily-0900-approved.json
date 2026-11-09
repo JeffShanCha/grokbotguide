@@ -1,0 +1,426 @@
+{
+  "id": "2026-11-09-daily-0900-approved",
+  "collected_at": "2026-11-09",
+  "timezone": "Asia/Shanghai",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-11-09",
+    "approved_ids": [
+      "github-saphid-grok-bots-raycast",
+      "github-devfirmino-grok-bot-names-icons",
+      "github-riyabakhtiani-bay-area-event-kit",
+      "github-540709984-earth-online-agentdna",
+      "github-15266-portable-agent-orchestrator",
+      "github-sash-ua-reliaguard",
+      "github-techwarely-callbox-plugin",
+      "github-yagomp-statsproven-plugin",
+      "youtube-aisuperdomain-grok-bot-advanced-2026-11-07"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入，发布",
+    "scope_zh": "仅2026-11-09-daily-0900-review中9条建议收录内容。该批3条hold、6条重复、92条排除内容、未读取的X附件、其他历史待审批次及未来增量均不在授权范围。"
+  },
+  "editorial_note_zh": "保留已审阅中文标题、双语摘要、分类、应用、署名、日期与核验限制；只将内部collection_batch改为批准批次。原审核批次和预览保持原样、不随本次提交；未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "从 Raycast 向既有 Bot 发 webhook 消息，明确区分草稿、发送和回执，并设计了不自动重试的未知状态。",
+      "relevance": "仓库直接提供 Grok Bot webhook Routine 的 Raycast 扩展与本地发送器。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-saphid-grok-bots-raycast",
+        "url": "https://github.com/saphid/grok-bots-raycast",
+        "author": "saphid",
+        "author_url": "https://github.com/saphid",
+        "title": "Grok Bots for Raycast：键盘发送、显式确认与投递回执",
+        "title_en": "Grok Bots for Raycast: keyboard sends with explicit review and receipts",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "recipes",
+          "resources"
+        ],
+        "tags": [
+          "Raycast",
+          "webhook",
+          "Routine",
+          "delivery receipt",
+          "macOS"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Raycast"
+        ],
+        "lang": "en",
+        "summary_zh": "在 Raycast 里选择现有 Bot、先审草稿再按快捷键发送 webhook；本地保存请求 ID 和投递状态但不存消息正文，未知结果不会盲目重试，回复仍回 Grok Bot 查看。",
+        "summary_en": "Select an existing Bot in Raycast, review a draft, then explicitly send its webhook. The local tool keeps request IDs and delivery states, not message text, avoids blind retries, and leaves replies in Grok Bot.",
+        "verification_note_zh": "已读 README、安装边界和回执说明，未安装扩展或发送 webhook。需要 macOS、Raycast、Node 24.11+ 和已配置的 Bot webhook Routine；凭据本地保存与测试结论为作者说明。",
+        "verification_note_en": "README, setup boundary and receipt semantics read; not installed and no webhook sent. It requires macOS, Raycast, Node 24.11+ and a Bot webhook Routine. Local credential handling and tests are author-reported.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "35 枚图标、命名规则、提示词和验收清单组成完整 Bot 整理模板，且把用户确认与可见验证写清楚。",
+      "relevance": "仓库直接针对 Grok Bot 现有 Bot 的命名、头像与角色清理。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-devfirmino-grok-bot-names-icons",
+        "url": "https://github.com/DeVFirmino/grok-bot-names-and-icons",
+        "author": "DeVFirmino",
+        "author_url": "https://github.com/DeVFirmino",
+        "title": "Agent Makeover：按职责给 Grok Bot 命名并配 35 枚图标",
+        "title_en": "Agent Makeover: organize Grok Bots by job with 35 matching icons",
+        "published": "2026-11-08",
+        "categories": [
+          "bots",
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "Bot naming",
+          "icons",
+          "Skill",
+          "prompt kit",
+          "fleet audit"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "用职责而非“助手 2”给现有 Bot 起短名，从 35 枚 SVG/PNG 图标中配套选择，再在各 Bot 对话内确认并检查侧栏；另含重复职责审计和不迁移历史的合并说明。",
+        "summary_en": "Rename existing Bots by job, pair them with 35 SVG/PNG icons, confirm changes in each Bot chat, and verify the sidebar. Optional guides audit overlapping roles and explain that consolidation does not migrate history.",
+        "verification_note_zh": "已读 README、目录、提示词和确认规则，未让 Bot 改名或换头像。项目是文档与素材包，无应用安装；可用动作和菜单会随版本变化，只有用户确认与侧栏可见结果才算完成。",
+        "verification_note_en": "README, catalog, prompts and confirmation rules read; no Bot was renamed or re-identified. This is a documentation/asset kit. Supported actions may change, and only user confirmation plus visible sidebar results count.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "把事件推荐团队、数据 Schema、共享写入、Page、Routine 与隐私扫描打包，边界是推荐而不代订。",
+      "relevance": "仓库提供可重建的 Grok Bot 多 Bot 本地活动推荐案例。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-riyabakhtiani-bay-area-event-kit",
+        "url": "https://github.com/riyabakhtiani/bay-area-event-kit",
+        "author": "riyabakhtiani",
+        "author_url": "https://github.com/riyabakhtiani",
+        "title": "Bay Area Event Kit：三位专职 Bot 与五栏活动追踪 Page",
+        "title_en": "Bay Area Event Kit: three specialist Bots and a five-tab event Page",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "recipes",
+          "bots",
+          "templates"
+        ],
+        "tags": [
+          "event recommender",
+          "multi-Bot",
+          "Page",
+          "Routine",
+          "JSON Schema"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Calendar",
+          "Pages"
+        ],
+        "lang": "en",
+        "summary_zh": "用 Scout、Curator、Bargain 和主 Bot 分阶段发现、评分、查价，每晚给 0–3 个活动建议，并把 Picks、Calendar、稍后、历史和预算写入 Page；日历只读，不代订或付款。",
+        "summary_en": "Scout, Curator, Bargain and a main Bot discover, score and price events in stages, send zero to three nightly picks, and update a five-tab Page. Calendar access is read-only, with no booking or payment.",
+        "verification_note_zh": "已读 README、目录、数据与权限边界，未导入模板、运行 Routine 或连接日历。作者提供锁、备份、Schema、原子写入和隐私扫描；公开活动示例价格要求使用前重新核对。",
+        "verification_note_en": "README, structure, data and permission boundaries read; template not imported, routines not run and calendar not connected. Locks, backups, schemas, atomic writes and privacy scan are author-provided; example prices need rechecking.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文五个 Skill 用任务契约、证据转录、独立核验和变更提案约束多 Bot 协作，强调最终决定仍由人做。",
+      "relevance": "仓库含 Grok Bot 部署说明和可复用的 AgentDNA 协作协议。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-540709984-earth-online-agentdna",
+        "url": "https://github.com/540709984-dotcom/earth-online-agentdna",
+        "author": "540709984-dotcom",
+        "author_url": "https://github.com/540709984-dotcom",
+        "title": "AgentDNA：人主导的多 Bot 任务契约、证据与变更协议",
+        "title_en": "AgentDNA: a human-led multi-Bot contract, evidence and change protocol",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "bots",
+          "templates"
+        ],
+        "tags": [
+          "AgentDNA",
+          "multi-Bot",
+          "Skill",
+          "evidence",
+          "change control"
+        ],
+        "apps": [
+          "Grok Bot",
+          "WorkBuddy",
+          "CodeBuddy"
+        ],
+        "lang": "zh",
+        "summary_zh": "五个 Skill 分别定义基因规格、证据转录、校验门、遗产提案和研究流程；每轮先写任务契约，再保留原始证据、独立核验和变更建议，由人决定目标、外部写入与最终验收。",
+        "summary_en": "Five skills cover gene specs, evidence transcription, proof gates, legacy proposals and research. Each round starts with a task contract and independent checks; humans decide goals, external writes and acceptance.",
+        "verification_note_zh": "已读中文 README、Skill 列表和验证说明，未安装或运行。仓库说明本地校验可执行，但 WorkBuddy/Grok Bot 的真实多代理协作未完成端到端实测；成果和安全性不可据此推定。",
+        "verification_note_en": "Chinese README, skill list and validation notes read; not installed or run. Local validation is described, but real multi-agent WorkBuddy/Grok Bot operation was not tested end to end; outcomes and safety are not implied.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "用 Host/Progress/Improve/Execute 四类职责、单一所有者和证据通道组织跨宿主代理，且明确只是编排层。",
+      "relevance": "仓库提供 Grok Bot、Codex 与 WorkBuddy 可共用的 MCP 和 Skill 编排框架。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-15266-portable-agent-orchestrator",
+        "url": "https://github.com/15266/portable-agent-orchestrator",
+        "author": "15266",
+        "author_url": "https://github.com/15266",
+        "title": "Portable Agent Orchestrator：跨 Grok Bot/Codex 的四角色编排框架",
+        "title_en": "Portable Agent Orchestrator: a four-role framework across Grok Bot and Codex",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "bots",
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "MCP",
+          "orchestration",
+          "multi-agent",
+          "handoff",
+          "quota failover"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Codex",
+          "WorkBuddy"
+        ],
+        "lang": "zh",
+        "summary_zh": "把代理分为 Host、Progress、Improve、Execute，用一个所有者、五段式 brief、证据通道、项目 profile 和额度故障转移来分派任务；MCP/Skill 可移植，但不会替代宿主的审批与执行工具。",
+        "summary_en": "Assigns Host, Progress, Improve and Execute roles through one owner, five-part briefs, evidence lanes, project profiles and quota failover. Its MCP/skill layer is portable but does not replace host approvals or tools.",
+        "verification_note_zh": "已读 README、框架和版本说明，未安装 MCP 或在任一宿主运行。作者明确它只是编排层；历史示例路径需替换，具体宿主工具、权限和配额切换仍要按环境配置。",
+        "verification_note_en": "README, framework and version notes read; MCP not installed or run in any host. It is explicitly only an orchestration layer. Historical example paths, host tools, permissions and quota failover require local adaptation.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "把需求覆盖、证据时效、未知项和独立审阅写成确定性门禁，并明确通过不授权现实操作。",
+      "relevance": "仓库给出可在 Grok Bot 云电脑上以自定义 MCP 命令连接的 Skill 与工具。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-sash-ua-reliaguard",
+        "url": "https://github.com/sash-ua/reliaguard",
+        "author": "sash-ua",
+        "author_url": "https://github.com/sash-ua",
+        "title": "Reliaguard：为 Grok Bot 任务包增加需求、证据与独立审阅门禁",
+        "title_en": "Reliaguard: requirement, evidence and independent-review gates for Grok Bot",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "reliability gate",
+          "MCP",
+          "Skill",
+          "evidence",
+          "review"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Cursor",
+          "xAI API"
+        ],
+        "lang": "en",
+        "summary_zh": "CLI/MCP 检查结构化任务包的需求覆盖、范围、当前轮证据、未知项与计算，可选调用独立模型审阅；旧批准不复用，pass 也始终不授权现实写入或调用其他工具。",
+        "summary_en": "A CLI/MCP checks requirements, scope, current evidence, unknowns and calculations, with optional independent review. Prior approvals are never reused, and pass never authorizes real-world actions.",
+        "verification_note_zh": "已读 README、状态表、配置和限制，未安装或注册 MCP，也未调用外部审阅。离线测试和服务器冒烟为作者结果；尚未在 Grok Bot 内实测，且只能检查提交给自己的任务包。",
+        "verification_note_en": "README, states, configuration and limits read; MCP not installed or registered and no external review called. Offline tests and smoke checks are author-reported. It was not tested inside Grok Bot and only gates packets sent to it.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "把会议录音、转写、会后摘要、收件箱整理与周报做成 OAuth MCP 和 Skill，权限边界具体。",
+      "relevance": "仓库明确提供 Grok Bot 插件用法并列出会议平台和 Google Drive 数据路径。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-techwarely-callbox-plugin",
+        "url": "https://github.com/Techwarely/callbox-plugin",
+        "author": "Techwarely",
+        "author_url": "https://github.com/Techwarely",
+        "title": "Callbox 插件：让 Grok Bot 整理会议录音、转写与周报",
+        "title_en": "Callbox plugin: let Grok Bot organize call recordings, transcripts and digests",
+        "published": "2026-11-08",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "MCP",
+          "OAuth",
+          "meeting transcript",
+          "weekly digest",
+          "Google Drive"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Callbox",
+          "Google Drive",
+          "Google Meet",
+          "Zoom",
+          "Microsoft Teams"
+        ],
+        "lang": "en",
+        "summary_zh": "通过 OAuth MCP 搜索保存在用户 Google Drive 的会议录音与转写，生成会后摘要/行动项、整理 Inbox，并按项目做周报；读取和整理默认开启，删除、设置与 webhook 需另行授权。",
+        "summary_en": "An OAuth MCP searches call recordings and transcripts stored in the user's Google Drive, creates after-call notes, triages an inbox and builds project digests. Delete, settings and webhooks require extra permission.",
+        "verification_note_zh": "已读 README、目录、权限和能力限制，未连接 Callbox 或 Google 账户。厂商称助手不能开始录音、永久删除、改 Google 连接或删账户；服务端、OAuth 实现和转写数据处理未独立审计。",
+        "verification_note_en": "README, package structure, permissions and limits read; no Callbox or Google account connected. The vendor says assistants cannot start recordings, permanently delete, change Google connections or delete accounts; server and data handling were not audited.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "垂直考试插件展示了 Grok Bot+远程 OAuth MCP 的资料引用、逐题练习、进度读取和模拟考试组合。",
+      "relevance": "仓库直接提供 Statsprøven 在 Grok Bot 中的连接步骤与专用 Skill。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-yagomp-statsproven-plugin",
+        "url": "https://github.com/yagomp/statsproven-cursor-plugin",
+        "author": "yagomp",
+        "author_url": "https://github.com/yagomp",
+        "title": "Statsprøven：Grok Bot 的挪威入籍考试辅导插件",
+        "title_en": "Statsprøven: a Grok Bot study plugin for Norwegian citizenship tests",
+        "published": "2026-11-08",
+        "categories": [
+          "recipes",
+          "templates",
+          "resources"
+        ],
+        "tags": [
+          "MCP",
+          "OAuth",
+          "study coach",
+          "quiz",
+          "mock exam"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Statsprøven"
+        ],
+        "lang": "en",
+        "summary_zh": "把 statsprove-coach Skill 与远程 OAuth MCP 接到 Grok Bot，按学习资料引用回答、逐题测验、读取本人进度并生成模拟考试；需要 Statsprøven 账户，服务并非官方考试机构。",
+        "summary_en": "Connects a study skill and OAuth MCP to Grok Bot for cited syllabus answers, one-question quizzes, progress and graded mock exams. It needs a Statsprøven account and is not an official exam service.",
+        "verification_note_zh": "已读 README、连接方式和产品边界，未登录或参加模拟考试。免费/付费次数、服务器评分与不泄露答案均为服务方说明；Cursor 桌面不受支持，考试信息仍应以 HK-dir 为准。",
+        "verification_note_en": "README, connection steps and product limits read; not signed in and no mock exam run. Quotas, server grading and answer handling are vendor claims. Cursor desktop is unsupported; official exam information remains with HK-dir.",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "中文视频把 Bot 专属邮箱、定时简报、技能沉淀到 GitHub、Pages 检索和视频导演 Skill 串成一条进阶流程。",
+      "relevance": "原作者直接演示 Grok Bot 与 GitHub、Pages 及视频生成的组合用法。",
+      "verified_via": "video-description",
+      "resource": {
+        "id": "youtube-aisuperdomain-grok-bot-advanced-2026-11-07",
+        "url": "https://youtube.com/watch?v=aRY7YrXOmKo",
+        "author": "AI超元域",
+        "author_url": "https://youtube.com/@AIsuperdomain",
+        "title": "Grok Bot 进阶：专属邮箱、技能沉淀、Pages 与视频生成",
+        "title_en": "Advanced Grok Bot: inboxes, skill distillation, Pages and video generation",
+        "published": "2026-11-07",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "bot inbox",
+          "Routine",
+          "Skill",
+          "GitHub",
+          "Pages",
+          "video generation"
+        ],
+        "apps": [
+          "Grok Bot",
+          "GitHub",
+          "Pages"
+        ],
+        "lang": "zh",
+        "summary_zh": "先给 Bot 申请专属邮箱并设 20:00 简报 Routine，再让专职 Bot 回顾聊天和文件、把可复用 Skill 同步到私有 GitHub；Pages 保存周报和趋势板，检索 Bot 按名称找回，视频导演 Skill 生成短片。",
+        "summary_en": "Claims a Bot inbox and schedules an 8 p.m. brief, then distills chats and files into skills synced to private GitHub. Pages hold reports and boards; finder and video-director Bots handle retrieval and clips.",
+        "verification_note_zh": "已用 YouTube 原视频 ID 核对标题、作者、发布日期和 486 秒时长，并对照作者公开说明与索引；页面无可用字幕，未完整观看、复制 Skill、连接邮箱/GitHub 或复现视频生成。",
+        "verification_note_en": "The original YouTube ID confirmed title, author, publish date and 486-second length, cross-checked with the creator's public description and index. No usable captions were available; the workflow was not reproduced.",
+        "source": "video",
+        "platform": "youtube",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-09",
+        "checked_at": "2026-11-09",
+        "collection_batch": "2026-11-09-daily-0900-approved"
+      }
+    }
+  ]
+}
