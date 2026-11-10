@@ -1,0 +1,444 @@
+{
+  "id": "2026-11-10-daily-0900-approved",
+  "collected_at": "2026-11-10",
+  "timezone": "Asia/Shanghai",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-11-10",
+    "approved_ids": [
+      "x-michael-fenech-imessage-webhook-routine",
+      "x-michael-fenech-iphone-alarm-webhook",
+      "x-maestrooth-12-ways-reduce-token-bill",
+      "x-biao2212-7-ways-stretch-usage",
+      "x-kidousproatlife-cold-email-12-prompts",
+      "x-huntkyle-one-person-company-guide",
+      "x-aymanalabdul-one-person-company-org-chart",
+      "x-mioneeeelia-student-life-bot-team",
+      "x-realmikeweisman-15-bot-real-estate-team",
+      "x-legaldadhacks-usage-csv-audit"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布",
+    "scope_zh": "仅2026-11-10-daily-0900-review中10条建议收录内容。该批2条hold、12条重复合并、6条排除内容、其他历史待审批次及未来增量均不在授权范围。"
+  },
+  "editorial_note_zh": "保留已审阅中文标题、英文原标题、双语摘要、分类、实际涉及的应用、署名、日期与核验限制；只将内部collection_batch改为批准批次。原审核批次和预览保持本地原样、不随本次提交；未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "可复制的 iPhone 快捷指令 + webhook Routine 步骤，作者自述实测。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-imessage-webhook-routine",
+        "url": "https://x.com/Michael_Fenech_/status/2119885990437200101",
+        "author": "Michael_Fenech_",
+        "title": "用 iMessage 关键词通过 iPhone 快捷指令触发 Grok Bot Routine",
+        "published": "2026-11-09",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "webhook",
+          "routine",
+          "ios",
+          "shortcuts",
+          "imessage"
+        ],
+        "apps": [
+          "Grok Bot",
+          "iPhone Shortcuts",
+          "iMessage"
+        ],
+        "lang": "en",
+        "summary_zh": "作者实测：建 webhook 触发的 Routine，复制 URL 与授权头；iPhone 快捷指令按指定发件人+关键词触发，用“获取 URL 内容”POST JSON（source、message 用收到的消息变量）。附 GROK BRIEF/RESEARCH/PREP 等指令示例（作者注明示例未测）。",
+        "summary_en": "Tested setup: webhook-triggered routine plus an iPhone Shortcuts message automation (sender + keyword) that POSTs the message text as JSON. Lists example GROK commands, which the author says were not tested.",
+        "verification_note_zh": "已读取帖子全文（note_tweet）；配图未看。作者称只实测了 iMessage 触发并传递正文，示例指令未测。需妥善保管 webhook 授权头并限定发件人。未复现。",
+        "verification_note_en": "Full post text read; images not viewed. Author tested only the iMessage trigger; example commands untested. Keep the auth header private and restrict the sender. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "Trigger a Grok Bot routine from an iMessage keyword via iPhone Shortcuts"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "原作：iPhone 闹钟事件触发 webhook Routine 的分步设置，此前未收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-iphone-alarm-webhook",
+        "url": "https://x.com/Michael_Fenech_/status/2118383590446624846",
+        "author": "Michael_Fenech_",
+        "title": "关掉 iPhone 闹钟后自动启动 Grok Bot 每日简报",
+        "published": "2026-11-05",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "tags": [
+          "webhook",
+          "routine",
+          "ios",
+          "shortcuts",
+          "briefing"
+        ],
+        "apps": [
+          "Grok Bot",
+          "iPhone Shortcuts",
+          "iPhone Clock"
+        ],
+        "lang": "en",
+        "summary_zh": "让 Bot 建一个 webhook 触发（而非定时）的每日简报 Routine；iPhone 快捷指令自动化选“闹钟停止”，POST 到 webhook，加 Authorization 头，JSON 带 source=iphone-alarm，关掉运行前询问。另列下班、连 CarPlay、到家、NFC 等触发思路。",
+        "summary_en": "Webhook-triggered daily briefing routine fired by an iPhone Shortcuts 'alarm stopped' automation POSTing JSON with an Authorization header; suggests other triggers like CarPlay, arriving home or NFC tags.",
+        "verification_note_zh": "已读取帖子全文；配图未看。作者称当天实测闹钟触发可用，其他触发为设想。11-08 作者的引用导读帖已并入本条。未复现。",
+        "verification_note_en": "Full post text read; images not viewed. Author reports testing the alarm trigger; other triggers are ideas. The author's Nov 8 quote post is merged here. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "Start a Grok Bot daily briefing when you stop your iPhone alarm"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体可复制的省用量设置清单，含规则与简报模板。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-maestrooth-12-ways-reduce-token-bill",
+        "url": "https://x.com/maestrooth/status/2118061328405561352",
+        "author": "maestrooth",
+        "title": "12 项 Grok Bot 省用量设置与可复制任务简报",
+        "published": "2026-11-04",
+        "categories": [
+          "advanced"
+        ],
+        "tags": [
+          "usage",
+          "routine",
+          "triggers",
+          "custom-rules",
+          "cost"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "省用量 12 项设置：一任务一对话、放宽 Routine 频率、事件触发限定频道与短语、暂停不用的、专用 Routine Bot、小样本测试、关掉不需要的应用工具、昂贵操作先询问的自定义规则、重编码交给云端代理、自设上限、大任务前看用量、带停止条件的任务简报。",
+        "summary_en": "Twelve usage-saving settings: one chat per task, wider schedules, narrow triggers, pausing, a routines bot, small tests, fewer tools, ask-first rules, offloading coding, a cap, meter checks, tight briefs.",
+        "verification_note_zh": "已读取 X Article 全文（含可复制规则与简报模板）；配图未看。作者自述 Ultra 用量数据，文中推广其 Substack。套餐与计费说明按 11 月 4 日所写，可能已变。11-09 作者引用此文的 GitHub 清单帖另作 reject。未复现。",
+        "verification_note_en": "Full X Article read incl. copyable rules and brief template; images not viewed. Usage figures are the author's own; promotes his Substack. Billing details as of Nov 4. Not reproduced.",
+        "author_url": "https://x.com/maestrooth",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "12 Ways to Reduce Your Grok Bot Token Bill (Copy & Paste Settings)"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "有结构的省用量指南，含前后对比示例，此前未收录。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-biao2212-7-ways-stretch-usage",
+        "url": "https://x.com/BiaO2212/status/2117251082665529392",
+        "author": "BiaO2212",
+        "title": "延长 Grok Bot 周额度的 7 种设置方法",
+        "published": "2026-11-02",
+        "categories": [
+          "advanced"
+        ],
+        "tags": [
+          "usage",
+          "routine",
+          "triggers",
+          "group-chat"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "以周用量池为前提的 7 招：暂停哪些 Routine、频率怎么定、收窄触发器、群聊放几个 Bot、Bot 间是否互发消息、任务从小做起（前后对比示例）、何时看用量；另有恢复用量的补充与何时不该省（别砍有用提醒）。",
+        "summary_en": "Seven ways to stretch the weekly pool: which routines to pause, cadence, narrower triggers, group-chat size, bot-to-bot messaging, starting small with before/after examples, and meter checks; plus when not to cut.",
+        "verification_note_zh": "已读取 X Article 全文；配图未看。文中引用 xAI 文档与 11 月 1 日 Elon 帖，套餐价格与倍数按 11 月 2 日所写，可能已变。作者 11-09 的引用推广帖已并入。未复现。",
+        "verification_note_en": "Full X Article read; images not viewed. Cites xAI docs; plan prices and multipliers as of Nov 2 may have changed. The author's Nov 9 promo quote is merged. Not reproduced.",
+        "author_url": "https://x.com/BiaO2212",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "7 Ways to Stretch Your Grok Bot Usage: The Complete Guide"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "完整的冷邮件流程提示词，附审批边界；作者利益相关已注明。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-kidousproatlife-cold-email-12-prompts",
+        "url": "https://x.com/KidousProAtLife/status/2118089720357863681",
+        "author": "KidousProAtLife",
+        "title": "用 Grok Bot 做冷邮件外联的 12 个提示词",
+        "published": "2026-11-04",
+        "categories": [
+          "recipes"
+        ],
+        "tags": [
+          "cold-email",
+          "sales",
+          "prompts",
+          "approval"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Inframail"
+        ],
+        "lang": "en",
+        "summary_zh": "冷邮件外联 12 个提示词：发送前测报价、建单一语言名单、算收件箱容量、写 7-10 个角度、垃圾词审计、改写变体；发送后每晨查收件箱健康、5 分钟内起草回复、分拣回复、轮换模板、1 万封时决定去留、把修改沉淀成规则。坚持 Bot 不直接发送。",
+        "summary_en": "Twelve cold-email prompts: before sending (offer test, list, inbox math, angles, spam audit) and after (inbox health, fast reply drafts, sorting, rotation, 10k-email call, rules). The bot never sends.",
+        "verification_note_zh": "已读取 X Article 全文（含 12 个提示词）；配图未看。作者为 Inframail 联合创始人兼 CEO，文中营收与发信量为自述，涉及自家产品，属利益相关。冷邮件需遵守当地法规。作者 11-08 引用帖已并入。未复现。",
+        "verification_note_en": "Full X Article read incl. 12 prompts; images not viewed. Author is Inframail's co-founder/CEO; revenue and volume claims are self-reported and involve his product. Follow local email laws. Not reproduced.",
+        "author_url": "https://x.com/KidousProAtLife",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "How to Use Grok Bot for Cold Email So Well It Feels Illegal"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "有可复制章程与审阅分级方法的实战长文。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-huntkyle-one-person-company-guide",
+        "url": "https://x.com/huntkyle/status/2118086670918750341",
+        "author": "huntkyle",
+        "title": "一人公司 Grok Bot 团队：五类岗位与分级 QA 审阅",
+        "published": "2026-11-04",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "tags": [
+          "one-person-company",
+          "charter",
+          "qa",
+          "routine"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "一人公司分步：先给首个 Bot 一个职责并试跑简报、只连必要登录（三条规则）、教一次任务、上 Routine、加一个审阅其他 Bot 的 Bot；先建审计、通话纪要、写作、跟进、月结 5 个 Bot；QA 成熟度：新 Bot 全审，10 次过 9 次降到 50%，20 次过 18 次降到 10% 抽查。",
+        "summary_en": "Step-by-step one-person-company guide: one job per first bot, minimal logins, teach once, schedule, a reviewer bot; five starter bots; and a QA maturity arc from 100% review to 50% and 10% spot checks.",
+        "verification_note_zh": "已读取 X Article 全文（含章程与提示词）；配图未看。作者为代理公司运营顾问，营收与利润率为自述，简介含自家服务链接。作者 11-08 引用帖已并入。未复现。",
+        "verification_note_en": "Full X Article read incl. charter and prompts; images not viewed. Author is an agency operations advisor; revenue and margins self-reported; bio links to his services. Not reproduced.",
+        "author_url": "https://x.com/huntkyle",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "How to build a $1M company with Grok Bot (full guide)"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "详细的多 Bot 组织搭建方法与模板，作者身份与简介一致。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-aymanalabdul-one-person-company-org-chart",
+        "url": "https://x.com/aymanalabdul/status/2119811377199981012",
+        "author": "aymanalabdul",
+        "title": "以总管 Bot 为核心的一人公司组织图与 30 天搭建法",
+        "published": "2026-11-09",
+        "categories": [
+          "bots",
+          "recipes",
+          "advanced"
+        ],
+        "tags": [
+          "chief-of-staff",
+          "org-chart",
+          "notion",
+          "sop",
+          "approvals"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Notion"
+        ],
+        "lang": "en",
+        "summary_zh": "以总管（Chief of Staff）为中心的 Bot 组织：先锁定发布/外发/花钱/删除/改权限需批准，用 Notion 做共享大脑（Start Here 规则页、上下文库），首条消息定职责，每晨简报；三层组织与雇佣负责人提示词、10 条规则、SOP 六段式、统一汇报格式、三问变 Routine、30 天推进。",
+        "summary_en": "Chief-of-Staff-led bot org: approvals locked first, Notion as shared brain (Start Here page, context database), morning brief, three-layer org chart, hiring prompt, top-10 rules, six-part SOPs, 30-day rollout.",
+        "verification_note_zh": "已读取 X Article 全文结构与前半主要内容（约 3.8 万字符，后半安全与 30 天章节仅读标题级）；配图未看。作者简介为 AppSumo 前 CEO，营收与 140 个 Bot 为自述。与已收录 maestrooth 一人公司长文标题相近但作者与内容不同。作者 11-10 引用帖已并入。未复现。",
+        "verification_note_en": "Read the article structure and main first-half content (~38k chars; later safety and rollout sections at heading level only); images not viewed. Author bio: former AppSumo CEO; figures self-reported. Distinct from a similarly titled maestrooth guide. Not reproduced.",
+        "author_url": "https://x.com/aymanalabdul",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "How to Build a One-Person Company with Grok Bot (Chief of Staff org chart)"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体的个人生活多 Bot 分工与审批边界案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-mioneeeelia-student-life-bot-team",
+        "url": "https://x.com/MioneeeeLia/status/2119943697190035573",
+        "author": "MioneeeeLia",
+        "title": "剑桥学生的生活规划 Bot 团队：晨间计划与审批边界",
+        "published": "2026-11-10",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "tags": [
+          "chief-of-staff",
+          "personal",
+          "planning",
+          "approvals"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "学生+创业者的生活规划 Bot 团队：创业、学习、健康、生活、反思各一个 Bot，总管唯一可写每日任务清单并把冲突交给本人；8 点读日历/任务/邮件/昨晚笔记给出固定安排和 30-90 分钟空档建议，晚间复盘、周日周回顾；发邮件、改日历、花钱、发帖须明确同意。",
+        "summary_en": "Student-founder life team: startup, study, health, life and reflection bots under a Chief of Staff that alone writes the daily list; 8am plan, evening and Sunday reviews; sends, spending and posts need a yes.",
+        "verification_note_zh": "已读取帖子全文；文末链接与配图未打开。账号很新、粉丝少，内容为个人自述案例。未复现。",
+        "verification_note_en": "Full post text read; the closing link and images not opened. New, small account; self-reported personal case. Not reproduced.",
+        "author_url": "https://x.com/MioneeeeLia",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "A Cambridge student's life-planning Grok Bot team"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "真实业务的多 Bot 分工与 webhook 交接细节。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-realmikeweisman-15-bot-real-estate-team",
+        "url": "https://x.com/realmikeweisman/status/2119418282096677299",
+        "author": "realmikeweisman",
+        "title": "房产业务的 15 Bot 团队：通话纪要、Webhook 与总管交接",
+        "published": "2026-11-08",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "tags": [
+          "real-estate",
+          "chief-of-staff",
+          "webhook",
+          "skills",
+          "approvals"
+        ],
+        "apps": [
+          "Grok Bot",
+          "HighLevel",
+          "Skool",
+          "Meta Ads",
+          "YouTube",
+          "Granola",
+          "Claude",
+          "Hermes"
+        ],
+        "lang": "en",
+        "summary_zh": "房产业务 15 个 Bot：一 Bot 一职责（收件箱、交易、社媒经 HighLevel、Skool、Meta 广告、YouTube 等），总管统一对接；Granola 通话结束发 webhook，总管读纪要分派；Claude 里的 Skill 可直接用；外发、广告预算、发帖须本人批准；另保留自托管 Hermes 作备份。",
+        "summary_en": "Real estate owner's 15-bot setup: one job per bot, a Chief of Staff hub, Granola webhook handoffs of call transcripts, skills ported from Claude, approvals for sends, ad budgets and posts, a backup harness.",
+        "verification_note_zh": "已读取帖子全文；文末链接与配图未打开。个人自述案例，涉及第三方工具 HighLevel、Granola、Hermes 未核。未复现。",
+        "verification_note_en": "Full post text read; closing link and images not opened. Self-reported case; third-party tools not reviewed. Not reproduced.",
+        "author_url": "https://x.com/realmikeweisman",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "A 15-bot Grok Bot team for a real estate business"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体的用量排查流程与结果案例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-legaldadhacks-usage-csv-audit",
+        "url": "https://x.com/LegalDadHacks/status/2118887159373627665",
+        "author": "LegalDadHacks",
+        "title": "从导出 CSV 审计 16 Bot 团队的用量消耗",
+        "published": "2026-11-07",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "usage",
+          "routine",
+          "audit"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Claude"
+        ],
+        "lang": "en",
+        "summary_zh": "16 个 Bot 4.5 天用完周额度后：导出用量 CSV 交给另一个 AI 分析，发现 91% 为缓存上下文重载、一个 Bot 的 4 个 Routine 占 70%；按清点、一次改一处、暂停不删、确认再继续排查；结果暂停 7 个 Routine，主 Bot 每晨看用量，有余量才跑可选任务。",
+        "summary_en": "After a 16-bot roster burned the weekly limit in 4.5 days, the author analyzed the usage CSV, found cached context reloads and four routines drove most burn, paused seven routines, and added a morning meter check.",
+        "verification_note_zh": "已读取帖子全文。分析数据为作者自述（借助 Claude 解读），未见 CSV；套餐选择按 11 月 7 日情况。未复现。",
+        "verification_note_en": "Full post text read. Figures are the author's own (analyzed with Claude); CSV not seen; plan choices as of Nov 7. Not reproduced.",
+        "author_url": "https://x.com/LegalDadHacks",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-10",
+        "checked_at": "2026-11-10",
+        "collection_batch": "2026-11-10-daily-0900-approved",
+        "title_en": "Auditing a 16-bot roster's usage from the exported CSV"
+      }
+    }
+  ]
+}
