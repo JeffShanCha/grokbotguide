@@ -1,4 +1,547 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-0xkaize-grok-bot-handbook
+  url: https://github.com/0xkaize/grok-bot-handbook
+  author: 0xkaize
+  author_url: https://github.com/0xkaize
+  title: Grok Bot Handbook：从安装、Routine 到安全与内部机制的 A–Z 手册
+  title_en: "Grok Bot Handbook: a practical A-to-Z guide"
+  published: 2026-11-09
+  categories:
+    - start
+    - advanced
+    - resources
+  tags:
+    - handbook
+    - setup
+    - routines
+    - security
+    - cursor
+  apps:
+    - Grok Bot
+    - Cursor
+  lang: en
+  summary_zh: 按 A–Z 汇总安装与套餐、首个 Bot、Cursor 编码协作、多 Bot 组织、Skill/Routine、插件、X 接入、用量、安全和技术机制，并附官方来源与 2026-11-09 核对日期。
+  summary_en: An A-to-Z handbook covering setup, plans, first bot, Cursor coding, multi-bot teams, skills, routines, plugins, X, usage, security and technical internals, with dated sources.
+  verification_note_zh: 已读 README 全文；未逐项复现。套餐、版本和产品机制变化快，应以链接的当前官方文档为准；仓库未声明许可证。
+  verification_note_en: Full README read; steps were not reproduced. Plans, versions and internals can change and should be checked against current official docs. No repository license is declared.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-agentasy-grokbot-lab
+  url: https://github.com/agentasy-ai/grokbot-lab
+  author: Agentasy-AI
+  author_url: https://github.com/Agentasy-AI
+  title: grokbot-lab：Claude Code 与 Grok Bot 的双向任务交接 Skill
+  title_en: "grokbot-lab: Agent Skills for Claude Code and Grok Bot collaboration"
+  published: 2026-11-10
+  categories:
+    - advanced
+    - templates
+  tags:
+    - claude-code
+    - handoff
+    - webhook
+    - evidence
+    - approval
+  apps:
+    - Grok Bot
+    - Claude Code
+  lang: en
+  summary_zh: 两套 Skill 让 Claude Code 发起请求、Grok Bot 执行并用结构化回执返回；限制正文大小，把外部数据视作资料，要求证据、幂等键和高风险操作审批。
+  summary_en: Two skills let Claude Code request work and Grok Bot return structured evidence. They cap payloads, treat received text as data, use idempotency keys and gate risky actions.
+  verification_note_zh: 已读 README 与作者给出的 7 场景结果说明；未安装 Skill、发送 webhook 或复现测试。仓库仍标为 draft，端到端结论为作者自报。
+  verification_note_en: README and the author's seven-scenario report read. Skills were not installed and no webhook or test was run. The repository is marked draft; results are author-reported.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-brett-grokbot-local-forms
+  url: https://github.com/brett-technical/grokbot-local-forms
+  author: brett-technical
+  author_url: https://github.com/brett-technical
+  title: grokbot-local-forms：本机表单收集回答并通知请求 Bot
+  title_en: Local HTML forms for Grok Bot
+  published: 2026-11-09
+  categories:
+    - advanced
+    - templates
+  tags:
+    - local-form
+    - webhook
+    - python
+    - structured-input
+    - privacy
+  apps:
+    - Grok Bot
+  lang: en
+  summary_zh: 本机 Python 标准库服务生成 HTML 表单，把回答保存为带时间戳的 Markdown/JSON；提交后可选通知 Grok Bot webhook。默认只监听本机、不覆盖旧文件，并提供 dry-run。
+  summary_en: A standard-library local server renders forms, stores timestamped Markdown/JSON answers and can notify a Grok Bot webhook. It binds locally, avoids overwrites and supports dry-run.
+  verification_note_zh: 已读 README；未启动服务、提交表单或发送 webhook。安全与不覆盖行为来自作者说明，源码未逐行审计。
+  verification_note_en: README read. The server was not started and no form or webhook was submitted. Local-only and no-overwrite behavior are author-described; code was not fully audited.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-coop-enginebox-plugin
+  url: https://github.com/coop-collective/enginebox-plugin
+  author: Coop Collective
+  author_url: https://github.com/coop-collective
+  title: Engine Box 插件：把编码任务交给隔离分支与预览环境
+  title_en: Engine Box plugin for Grok Bot and coding agents
+  published: 2026-11-09
+  categories:
+    - advanced
+    - resources
+  tags:
+    - plugin
+    - mcp
+    - oauth
+    - coding-agent
+    - preview
+  apps:
+    - Grok Bot
+    - Engine Box
+    - Codex
+    - Claude Code
+    - Cursor
+  lang: en
+  summary_zh: 通过 OAuth MCP 在 Engine Box 池中运行 Codex、Claude 或 Grok Build，产出隔离分支和预览；README 称不会自动合并，也不授予集群管理权。
+  summary_en: An OAuth MCP runs Codex, Claude or Grok Build in Engine Box pools, returning isolated branches and previews. The README says it does not auto-merge or grant fleet administration.
+  verification_note_zh: 已读 README；未连接 Engine Box、启动代理或生成分支。隔离、权限和不自动合并均为厂商说明，需核对实际 OAuth 范围与计费。
+  verification_note_en: README read. Engine Box was not connected and no agent or branch ran. Isolation, scopes and no-auto-merge behavior are vendor-described; actual OAuth scopes and billing need review.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-halksun-tesla-china-grokbot-playbook
+  url: https://github.com/halksun/tesla-china-grokbot-playbook
+  author: halksun
+  author_url: https://github.com/halksun
+  title: Tesla 中国区只读车况监控：Fleet API、OAuth 与最小权限
+  title_en: Tesla China read-only Fleet monitoring playbook for Grok Bot
+  published: 2026-11-09
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - tesla
+    - fleet-api
+    - oauth
+    - read-only
+    - monitoring
+  apps:
+    - Grok Bot
+    - Tesla Fleet API
+    - GitHub Pages
+  lang: en
+  summary_zh: 分步配置中国区 Tesla Fleet API、域名验证、OAuth 与 MCP，只授予只读车辆数据，默认不开放车控命令；同时提醒 API 费用、付款和密钥管理。
+  summary_en: A step-by-step China-region Tesla Fleet setup covering domain verification, OAuth and MCP with read-only vehicle data, no vehicle commands by default, plus billing and secret cautions.
+  verification_note_zh: 已读 README；未注册 Tesla 应用、配置域名、授权车辆或调用 API。车辆数据敏感，费用、地区可用性与权限以 Tesla 当前文档为准。
+  verification_note_en: README read. No Tesla app, domain, vehicle authorization or API call was used. Vehicle data is sensitive; billing, regional availability and scopes depend on current Tesla docs.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-hhhhhh1140-agent-center
+  url: https://github.com/hhhhhh1140/agent-center
+  author: hhhhhh1140
+  author_url: https://github.com/hhhhhh1140
+  title: Agent 调度中心：Claude 统筹多 CLI 与 Grok Bot 交付
+  title_en: "Agent Center: Claude-led orchestration with Grok Bot and coding CLIs"
+  published: 2026-11-10
+  categories:
+    - advanced
+    - resources
+  tags:
+    - orchestration
+    - multi-agent
+    - patch
+    - webhook
+    - local-tool
+  apps:
+    - Claude Code
+    - Codex
+    - Muse Code
+    - DeepSeek Harness
+    - WorkBuddy
+    - Grok Bot
+  lang: zh
+  summary_zh: 本地面板由 Claude Code 拆任务，并行调度 Codex、Muse、DeepSeek、WorkBuddy 与 Grok Bot；代码任务在 Git 副本运行，补丁只合到预览副本，外部助手可 webhook 或手动回填。
+  summary_en: A local panel has Claude Code split work across Codex, Muse, DeepSeek, WorkBuddy and Grok Bot. Code runs in Git copies, patches merge only into a preview, and external agents can hand back results.
+  verification_note_zh: 已读中文 README；未启动面板或连接任何 CLI/webhook。作者称模拟流程和模拟 CLI 已验证，真实供应商账号仍需各自配置；仓库未声明许可证。
+  verification_note_en: Chinese README read. The panel and integrations were not run. The author reports simulated-flow and mock-CLI tests; real provider accounts still require setup. No license is declared.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-julienlieben-grokbot-gtm-setup
+  url: https://github.com/julienlieben/grokbot-gtm-setup
+  author: Julien Lieben
+  author_url: https://github.com/julienlieben
+  title: ColdIQ 的 Grok Bot GTM 团队：岗位、Skill、Routine 与外发护栏
+  title_en: The Grok Bot GTM setup used at ColdIQ
+  published: 2026-11-10
+  categories:
+    - recipes
+    - bots
+    - templates
+  tags:
+    - gtm
+    - outbound
+    - chief-of-staff
+    - routines
+    - guardrails
+  apps:
+    - Grok Bot
+    - GitHub
+  lang: en
+  summary_zh: 公开 ColdIQ 的 GTM 编排：总管协调客户运营、GTM 工程、回复、报告和内容岗位，配 7 个 Skill、Routine、GitHub 知识库与“所有发送先起草再批准”的护栏。
+  summary_en: ColdIQ's setup coordinates client ops, GTM engineering, replies, reporting and content through a chief of staff, seven skills, routines, a GitHub brain and draft-before-send gates.
+  verification_note_zh: 已读 README；未导入配置、连接客户数据或运行外联。案例与成效为作者/公司自述，且作者与 ColdIQ 存在利益关系。
+  verification_note_en: README read. Configuration was not imported and no client data or outreach was used. The case is vendor-authored and results are not independently reproduced.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-markjamesc-grok-chatgpt-review-workflow
+  url: https://github.com/markjamesc/grok-chatgpt-review-analyst-workflow
+  author: Mark James
+  author_url: https://github.com/markjamesc
+  title: Grok Bot 分析团队 + ChatGPT 外部审阅的双关卡工作流
+  title_en: Grok Bot analyst workflow with ChatGPT as an outside reviewer
+  published: 2026-11-10
+  categories:
+    - advanced
+    - templates
+  tags:
+    - analysis
+    - review
+    - chatgpt
+    - sql
+    - quality-gate
+  apps:
+    - Grok Bot
+    - ChatGPT
+  lang: en
+  summary_zh: 父 Bot 与六个子角色完成问题设计、R/SQL 分析和建议；ChatGPT 只在问题锁定与最终建议两处做无投票的独立审阅，Python 门禁阻止跳步并记录状态。
+  summary_en: A parent and six child roles handle design, R/SQL analysis and recommendations, while ChatGPT independently reviews the locked question and final recommendation; Python gates enforce order.
+  verification_note_zh: 已读 README；作者明确方法尚未完成真实分析运行，但门禁脚本称已测试。本站未运行脚本；仓库未声明许可证。
+  verification_note_en: README read. The author says the method has not yet completed a real analysis run, though gate scripts are reported tested. Nothing was run here; no license is declared.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-moeghashim-seo-growth-playbook
+  url: https://github.com/moeghashim/seo-growth-playbook
+  author: Moe Ghashim
+  author_url: https://github.com/moeghashim
+  title: SEO Growth Playbook：站点审计、AI 搜索与可衡量增长计划
+  title_en: SEO Growth Playbook for Grok Bot and Cursor
+  published: 2026-11-10
+  categories:
+    - templates
+    - recipes
+  tags:
+    - seo
+    - search-console
+    - analytics
+    - ai-search
+    - skill
+  apps:
+    - Grok Bot
+    - Cursor
+    - Google Search Console
+    - Google Analytics
+  lang: en
+  summary_zh: 可复用 Skill 先做技术与内容审计，再结合 Search Console、Analytics 和抓取数据制定 SEO、AI 搜索与购物可见性计划；默认只读，站点改动和支出需批准。
+  summary_en: A reusable skill for technical/content audits and measurable SEO, AI-search and shopping plans using Search Console, Analytics and crawl data, read-only by default with approval gates.
+  verification_note_zh: 已读 README；未连接站点、Search Console/Analytics 或运行抓取。工具覆盖和增长效果未复现，修改与预算边界来自作者模板。
+  verification_note_en: README read. No site, Search Console or Analytics account was connected and no crawl ran. Tool coverage and growth outcomes were not reproduced; gates come from the template.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-octane-grok-plugin
+  url: https://github.com/get-octane/octane-grok-plugin
+  author: Octane
+  author_url: https://github.com/get-octane
+  title: Octane 只读插件：门店业绩、库存与发票核查
+  title_en: Octane plugin for Grok Bot and Cursor
+  published: 2026-11-10
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - plugin
+    - mcp
+    - oauth
+    - retail
+    - read-only
+  apps:
+    - Grok Bot
+    - Octane
+    - Cursor
+  lang: en
+  summary_zh: 用 OAuth MCP 查询获授权便利店的销售表现、库存、发票与异常，并把结论链接回 Octane 证据；README 明确为只读，不执行库存、价格或付款修改。
+  summary_en: An OAuth MCP for read-only reviews of store performance, inventory, invoices and anomalies, with links back to Octane evidence and no stock, price or payment changes.
+  verification_note_zh: 已读 README；未连接 Octane 或调用工具。只读范围、证据链接和数据覆盖均为厂商说明，需以实际工作区权限为准。
+  verification_note_en: README read. Octane was not connected and no tool was called. Read-only scope, evidence links and coverage are vendor-described and depend on workspace permissions.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-perron-grok-astryx-skill
+  url: https://github.com/perron/grok-astryx-skill
+  author: perron
+  author_url: https://github.com/perron
+  title: grok-astryx-skill：用 Meta Astryx CLI 构建界面的非官方 Skill
+  title_en: Unofficial Grok Bot skill for Meta Astryx
+  published: 2026-11-09
+  categories:
+    - templates
+    - advanced
+  tags:
+    - astryx
+    - ui
+    - skill
+    - cli
+    - mcp
+  apps:
+    - Grok Bot
+    - Meta Astryx
+  lang: en
+  summary_zh: 非官方 Skill 教 Bot 按 Astryx 官方 CLI 的 build→template→component 流程搭 UI，小型 Python 工具输出推荐命令并检查误用的无作用域 npx 包；可打印远程 MCP 地址。
+  summary_en: An unofficial skill teaches Astryx's build-to-template-to-component workflow. A small Python helper recommends commands, flags unsafe unscoped npx usage and prints the official MCP URL.
+  verification_note_zh: 已读 README；未安装包、运行 CLI、连接 MCP 或生成 UI。作者在 11 月 9 日核对官方 Astryx 文档，并明确官方 --agent 列表不含 Grok，Grok Bot 私有 Skill 路径未能统一验证。
+  verification_note_en: README read. The package, CLI and MCP were not run. The author checked official Astryx docs on Nov 9 and notes Grok is not an official --agent target; Bot skill paths remain product-specific.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-sendblue-grok-plugin
+  url: https://github.com/sendblue-api/sendblue-grok-plugin
+  author: Sendblue
+  author_url: https://github.com/sendblue-api
+  title: Sendblue 插件：让 Grok Bot 经 OAuth MCP 处理短信与 iMessage
+  title_en: Sendblue plugin for Grok Bot and Cursor
+  published: 2026-11-10
+  categories:
+    - advanced
+    - recipes
+  tags:
+    - plugin
+    - mcp
+    - oauth
+    - sms
+    - imessage
+  apps:
+    - Grok Bot
+    - Sendblue
+    - Cursor
+  lang: en
+  summary_zh: 通过远程 OAuth MCP 读取会话、发送短信/iMessage、查看投递状态与账户健康；README 说明账户级授权、发送权限和幂等处理，适合需人工批准外发的客服流程。
+  summary_en: A remote OAuth MCP for reading conversations, sending SMS/iMessage, checking delivery and account health. The README documents account scope, send permissions and idempotency.
+  verification_note_zh: 已读 README；未连接 Sendblue、授权账户或发送消息。工具权限与幂等行为为厂商说明，仓库未声明许可证。
+  verification_note_en: README read. No Sendblue account was connected or authorized and no message was sent. Permissions and idempotency are vendor-described; no repository license is declared.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-simo255-jobfather
+  url: https://github.com/simo255/jobfather
+  author: simo255
+  author_url: https://github.com/simo255
+  title: Jobfather：带逐岗审批的职位搜索与申请 Bot 模板
+  title_en: "Jobfather: approval-gated job search and applications"
+  published: 2026-11-09
+  categories:
+    - bots
+    - templates
+    - recipes
+  tags:
+    - job-search
+    - applications
+    - linkedin
+    - approval
+    - browser
+  apps:
+    - Grok Bot
+    - LinkedIn
+  lang: en
+  summary_zh: 把求职拆成只读 LinkedIn 搜索、职位匹配、简历与求职信草稿、每个岗位审批和最后浏览器提交；模板要求先确认角色清单和每次申请，不自动海投。
+  summary_en: A job-search template that separates read-only LinkedIn discovery, fit review, resume/cover-letter drafts, per-role approval and final browser submission, without automatic mass applying.
+  verification_note_zh: 已读 README；未连接 LinkedIn、上传简历或提交申请。与既有 Stitch Your Pitch 的文书模板不同，本条聚焦搜索到提交的审批编排。
+  verification_note_en: README read. LinkedIn was not connected and no resume or application was submitted. Unlike the existing writing template, this entry covers approval-gated search-to-submit orchestration.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-thiago-conductor
+  url: https://github.com/thiago-desa/conductor
+  author: Thiago de Sá
+  author_url: https://github.com/thiago-desa
+  title: Conductor：把任务路由给专门 Bot 的总管模板
+  title_en: "Conductor: a primary Grok Bot that routes work to specialists"
+  published: 2026-11-09
+  categories:
+    - bots
+    - templates
+    - advanced
+  tags:
+    - router
+    - multi-agent
+    - handoff
+    - evaluation
+    - proof-of-work
+  apps:
+    - Grok Bot
+  lang: en
+  summary_zh: 主 Bot 先判断任务类型，再选专门 Bot，交付含目标、输入、限制、验收和证据的 brief；仓库附职责、交接、失败模式与评测。与既有同名 Windows 唤醒工具不同。
+  summary_en: A primary bot classifies work, selects a specialist and hands off a brief with goals, inputs, limits, acceptance and evidence. Includes roles, failure modes and evaluations.
+  verification_note_zh: 已读 README 与模板说明；未导入模板或运行评测。和已收录 nisaral/grokbot-conductor 仅同名，后者是 Windows 本地触发器。
+  verification_note_en: README and template notes read; the template and evals were not run. It only shares a name with the existing Windows local-trigger project, which serves a different purpose.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-thiago-repo-operational-head
+  url: https://github.com/thiago-desa/repo-operational-head
+  author: Thiago de Sá
+  author_url: https://github.com/thiago-desa
+  title: Repo Operational Head：公开 Grok Bot 图谱与 Skill 前的脱敏发布模板
+  title_en: "Repo Operational Head: sanitize and stage Grok Bot assets for public repos"
+  published: 2026-11-09
+  categories:
+    - bots
+    - templates
+  tags:
+    - github
+    - sanitization
+    - publishing
+    - approval
+    - portfolio
+  apps:
+    - Grok Bot
+    - GitHub
+  lang: en
+  summary_zh: 角色模板先清理 Bot 图谱、Skill 和案例中的密钥、个人信息与客户材料，再在预览分支整理 MIT 作品集；建公开仓库、推送、强推、删除和改可见性均需批准。
+  summary_en: A role template sanitizes bot graphs, skills and cases, stages an MIT portfolio on a preview branch, and gates public repo creation, pushes, force-pushes, deletion and visibility changes.
+  verification_note_zh: 已读 README；未让 Bot 读取仓库、脱敏文件或推送 GitHub。模板不能替代人工审查，是否清除所有秘密与授权材料未验证。
+  verification_note_en: README read. No repository was read, sanitized or pushed by a bot. The template does not replace human review; complete secret and rights clearance was not verified.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-tomanocy-grokbot-linkedin-playbook
+  url: https://github.com/tomanocy/grokbot-linkedin-playbook
+  author: Tomanocy
+  author_url: https://github.com/Tomanocy
+  title: LinkedIn 个人品牌 Playbook：六张图卡、审批发布与增长周报
+  title_en: Portable Grok Bot LinkedIn personal-brand playbook
+  published: 2026-11-09
+  categories:
+    - recipes
+    - templates
+  tags:
+    - linkedin
+    - personal-brand
+    - content
+    - approval
+    - weekly-digest
+  apps:
+    - Grok Bot
+    - LinkedIn
+  lang: en
+  summary_zh: 把个人品牌流程拆成六张图卡草稿、本人批准后发布、90 分钟互动数据记录、工作日拓展名单和周一增长简报；公开发布与联系动作都保留人工确认。
+  summary_en: A portable LinkedIn workflow for six-card drafts, owner-approved publishing, 90-minute engagement logging, weekday networking lists and a Monday growth digest.
+  verification_note_zh: 已读 README；未连接 LinkedIn、生成图卡或发帖。仓库未给许可证；平台规则、账号权限和成效均未独立核验。
+  verification_note_en: README read. LinkedIn was not connected and no cards or posts were produced. No repository license is declared; platform rules, permissions and results were not verified.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
+- id: github-ycaistudio-grokbot-token-saver
+  url: https://github.com/ycaistudio/grokbot-token-saver
+  author: YCAI Studio
+  author_url: https://github.com/ycaistudio
+  title: Grok Bot 慳用量：22 条多 Bot 团队节流 Skill
+  title_en: "Grok Bot Token Saver: a 22-rule multi-bot usage skill"
+  published: 2026-11-10
+  categories:
+    - advanced
+    - templates
+  tags:
+    - usage
+    - skill
+    - routines
+    - multi-bot
+    - cost
+  apps:
+    - Grok Bot
+    - Claude Code
+    - Cursor
+  lang: zh
+  summary_zh: 三语 Skill 汇总 10 条署名省用量方法与作者团队的 12 条补充：降频/事件触发、限制群聊、停止条件、少轮询、合并报告和长对话交接；修改或暂停 Routine 均先批准。
+  summary_en: "A trilingual skill combines ten credited usage tips with twelve team practices: event triggers, fewer group replies, stop rules, less polling, merged reports and long-chat handoffs, with approval gates."
+  verification_note_zh: 已读繁中 README；未安装或执行 Skill。前 10 条来自 @vartekxx，后 12 条为作者约 20 Bot 团队经验；与既有省用量文章重叠，但本条聚焦可安装 Skill 与新增规则。
+  verification_note_en: Traditional Chinese README read; the skill was not installed or run. Ten tips credit @vartekxx and twelve are the author's team practices. It overlaps existing guides but adds a packaged skill and rules.
+  source: github
+  platform: github
+  status: alive
+  evidence: author-reported
+  added: 2026-11-11
+  checked_at: 2026-11-11
+  collection_batch: 2026-11-11-daily-0900-approved
 - id: x-aymanalabdul-one-person-company-org-chart
   url: https://x.com/aymanalabdul/status/2119811377199981012
   author: aymanalabdul
