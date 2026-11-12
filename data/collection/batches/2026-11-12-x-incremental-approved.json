@@ -1,0 +1,602 @@
+{
+  "id": "2026-11-12-x-incremental-approved",
+  "collected_at": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-11-12",
+    "source_review_batch": "2026-11-12-x-incremental-review",
+    "approved_ids": [
+      "x-michael-fenech-business-adoption-five-steps",
+      "x-michael-fenech-chief-of-staff-five-upgrades",
+      "x-michael-fenech-demo-to-skill-token-test",
+      "x-michael-fenech-bill-saving-prompt",
+      "x-michael-fenech-subscription-replacement-audit",
+      "x-michael-fenech-insurance-renewal-audit",
+      "x-michael-fenech-notion-shared-brain",
+      "x-michael-fenech-nine-part-instruction-framework",
+      "x-michael-fenech-bot-retirement-audit",
+      "x-iiiichigo-chan-phone-call-rules",
+      "x-eastgocc-grok-bot-newbie-faq-001",
+      "x-aitoolsonx-tailscale-private-mcp",
+      "x-lingxi-team-bot-meeting-use-cases",
+      "x-vtrivedy10-24-7-research-factory"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布",
+    "scope_zh": "用户在已展示今日两批共34条建议后批准导入发布。本文件仅含本批14条建议收录；全部待核验、重复、排除、其他历史批次及未来增量均不在本次范围。"
+  },
+  "editorial_note_zh": "保留已审阅中文标题、双语摘要、实际应用、原作署名与核验限制，改collection_batch并将FAQ误填的中文title_en补为英文翻译。原审核文件与预览保持原样，不随本次提交；来源方法未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "给出企业引入 Grok Bot 的五步框架：找重复的胶水型工作、选首个流程、10 例小试点、算净收益、扩展到相邻流程。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-business-adoption-five-steps",
+        "url": "https://x.com/Michael_Fenech_/status/2120610011177009534",
+        "author": "Michael_Fenech_",
+        "title": "企业引入 Grok Bot：五步选择首个流程与小规模试点",
+        "published": "2026-11-11",
+        "categories": [
+          "start",
+          "recipes"
+        ],
+        "tags": [
+          "business",
+          "workflow",
+          "pilot",
+          "adoption"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "先盘点重复的信息搬运工作，再选高频、可核对且错误成本可控的一项，用 10 个代表案例试点；把审核与运行成本计入净收益，保留客户消息审批，再扩到相邻流程。",
+        "summary_en": "Map repeated glue work, choose one frequent and checkable workflow, pilot ten cases, include review/run costs in the benefit estimate, keep approval gates, then expand.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 时间节省示例为作者举例，不是实测数据。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Time-saving figures are illustrative; not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Introducing Grok Bot into a business: a five-step first-workflow framework"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "五条可直接复制给 Chief of Staff 的指令：事件触发、沉淀 Skill、管理 Bot 团队、每周健康检查、选择更省的执行方式。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-chief-of-staff-five-upgrades",
+        "url": "https://x.com/Michael_Fenech_/status/2120544832254837202",
+        "author": "Michael_Fenech_",
+        "title": "Chief of Staff 的五条升级指令：触发、Skill、团队与健康检查",
+        "published": "2026-11-11",
+        "categories": [
+          "advanced",
+          "templates",
+          "bots"
+        ],
+        "tags": [
+          "chief-of-staff",
+          "skill",
+          "routine",
+          "trigger",
+          "health-check"
+        ],
+        "apps": [
+          "Grok Bot",
+          "iPhone Shortcuts"
+        ],
+        "lang": "en",
+        "summary_zh": "五个可复制提示词覆盖事件触发、把成功流程存为 Skill、专职 Bot 分工、每周健康审查和选择连接器/API/脚本等执行方式；先提交方案，修改前获得批准。",
+        "summary_en": "Five prompts cover event triggers, saving proven skills, specialist roles, weekly health reviews and comparing connectors/APIs/scripts with browser use, with approval before changes.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full post text read; image not viewed. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Five Chief of Staff instructions to take Grok Bot from beginner to power user"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者对比实验：录屏示范后让 Bot 生成 Skill，同任务用量从 131.6 万降到 78.2 万 token，并给出可复做的五步。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-demo-to-skill-token-test",
+        "url": "https://x.com/Michael_Fenech_/status/2120484434323374366",
+        "author": "Michael_Fenech_",
+        "title": "录屏示范转 Skill：一次任务的用量对照实验",
+        "published": "2026-11-11",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "skill",
+          "usage",
+          "computer-use",
+          "token"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "作者对同一配送查询做一次前后比较：普通指令约 132 万 token，录屏教学转 Skill 后约 78 万；另给五步自测法。创建 Skill 的成本未计入，不能当作普遍节流比例。",
+        "summary_en": "One author-reported delivery-query test fell from about 1.32M to 0.78M tokens after a recorded demo became a skill. Includes a self-test; skill creation cost was excluded.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 用量数字为作者单次自报，未复现；Skill 创建成本未计入对比。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Token figures are a single self-reported test; skill-creation cost excluded; not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Teach, don't tell: a recorded demo turned into a skill cut token use 40.6% in one test"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "给出账单、保险续保与订阅降费的六段式提示词，要求区分估算与确认节省、对外动作先审批。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-bill-saving-prompt",
+        "url": "https://x.com/Michael_Fenech_/status/2120177662291542350",
+        "author": "Michael_Fenech_",
+        "title": "账单降费提示词：核对条款、真实成本与续约日期",
+        "published": "2026-11-10",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "finance",
+          "bills",
+          "insurance",
+          "prompt"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "六段提示词把现有账单、权益、报价、手续费和优惠到期成本整理成对比表，分开估算与已确认节省，并记录续约时间；联系商家、披露信息或更改服务前需批准。",
+        "summary_en": "A six-part prompt organizes current bills, benefits, quotes, fees and post-promo costs, separates estimates from confirmed savings and tracks renewals, with approval before external actions.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 开头称省下 1,021.08 美元为作者自报结果，未核实。与同作者 11 月 7 日的保险续保审计（本批另收）角度不同：本条为通用账单版。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. The $1,021.08 saving is self-reported; not verified or reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "A six-part money-saving prompt for bills, insurance renewals and subscriptions"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "五步订阅替代审计与完整提示词：查 13 个月账单邮件，按保留/取消/降级/替代分类，先小测再取消。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-subscription-replacement-audit",
+        "url": "https://x.com/Michael_Fenech_/status/2119160208282759264",
+        "author": "Michael_Fenech_",
+        "title": "订阅替代审计：保留、取消、降级或交给 Bot",
+        "published": "2026-11-07",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "subscriptions",
+          "audit",
+          "finance",
+          "prompt"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "把 13 个月账单邮件与用户提供的流水交叉核对，列用途、年费和续约日；评估替代后会失去的功能及团队权限，先测试质量与额外用量，再决定是否取消。",
+        "summary_en": "Cross-check thirteen months of billing email with supplied statements, list purposes/costs/renewals, assess lost features and access, then test replacements before deciding to cancel.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 需连接邮箱，涉及财务数据隐私。KimFull 2120428552721961198 的中文转述并入本条。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Needs mailbox access (financial privacy). Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "A 5-step subscription replacement audit: which paid tools could Grok Bot replace?"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "六步保险续保审计与提示词：抽取现保单条件、用一致条件取 3 份报价、比较真实年成本与保障差异。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-insurance-renewal-audit",
+        "url": "https://x.com/Michael_Fenech_/status/2119100816799699403",
+        "author": "Michael_Fenech_",
+        "title": "保险续保资料审计：相同条件下整理三份报价",
+        "published": "2026-11-07",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "insurance",
+          "finance",
+          "prompt",
+          "renewal"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "提取保单的保费、免赔额、保额与除外项，由本人核对投保信息；按相同条件整理三份报价，比较年度成本和保障差异。提交资料、联系公司或购买前须获批准。",
+        "summary_en": "Extract premium, deductible, cover and exclusions; have the owner check the input set, then organize three comparable quotes and trade-offs. Data submission, contact and purchase need approval.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 与库中 x-grokbotuses-home-insurance-quotes（比较 4 份已有报价）场景相近但流程不同。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Similar to an existing four-quote entry but a different renewal workflow. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "A 6-step insurance renewal audit prompt before you pay the premium"
+      },
+      "distinct_from": "x-grokbotuses-home-insurance-quotes"
+    },
+    {
+      "decision": "publish",
+      "reason": "讲清用 Notion 官方共享记忆给多 Bot 共用上下文的 7 种用法与省用量的配置原则。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-notion-shared-brain",
+        "url": "https://x.com/Michael_Fenech_/status/2118443988646523365",
+        "author": "Michael_Fenech_",
+        "title": "Notion 共享大脑：多 Bot 的规则、交接与按需检索",
+        "published": "2026-11-05",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "notion",
+          "memory",
+          "multi-bot",
+          "usage"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Notion"
+        ],
+        "lang": "en",
+        "summary_zh": "作者把共享规则、交接、纠错和项目进度放入 Notion，Bot 记忆只留角色、审批边界与指针，实时数据仍从原系统按需读取；先测一次交接，共享知识库不保证省用量。",
+        "summary_en": "Store shared rules, handoffs, corrections and project status in Notion; keep Bot memory lean with roles, boundaries and pointers. Retrieve live data on demand and test one handoff; savings are not guaranteed.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 未打开 Notion 官方设置指南（developers.notion.com），未配置。由作者 11 月 11 日自引帖 2120388802996801601 回溯到原作。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; Notion's setup guide not opened. Traced from the author's Nov 11 self-quote. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Use Notion's shared brain for your Grok Bot team without raising token usage"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "给出九段式任务指令模板（目标、可用资源、时间、可自主、需批准、禁止、完成标准、受阻处理、交付）及前后对比示例。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-nine-part-instruction-framework",
+        "url": "https://x.com/Michael_Fenech_/status/2119029345645920445",
+        "author": "Michael_Fenech_",
+        "title": "九段式任务指令：目标、权限、完成标准与受阻处理",
+        "published": "2026-11-07",
+        "categories": [
+          "start",
+          "templates"
+        ],
+        "tags": [
+          "prompt",
+          "framework",
+          "approvals",
+          "routine"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "模板依次写清目标、来源、时间、可自主动作、需批准动作、禁止事项、完成标准、受阻处理和交付位置；附模糊/清晰指令对照，适用于 Routine 与多 Bot 交接。",
+        "summary_en": "A nine-field brief defines goals, sources, timing, allowed actions, approvals, prohibitions, done criteria, blockers and delivery, with before/after examples for routines and team handoffs.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 作者称框架由 Grok Bot 生成。由作者 11 月 11 日自引帖 2120305512256246165 回溯到原作。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Author says Grok Bot proposed the framework. Traced from a Nov 11 self-quote. Not reproduced.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "A 9-part instruction framework: tell Grok Bot what to achieve, not how"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "Bot 退役审计提示词：盘点每个 Bot、找重叠、按 KEEP/ABSORB/RETIRE/HUMAN 决策并列安全退役清单。 本条新增全团队盘点与四类决策提示词，区别于既有停用提醒。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-michael-fenech-bot-retirement-audit",
+        "url": "https://x.com/Michael_Fenech_/status/2117278811297317165",
+        "author": "Michael_Fenech_",
+        "title": "Bot 退役审计：保留、吸收、退役或转回人工",
+        "published": "2026-11-02",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "multi-bot",
+          "audit",
+          "chief-of-staff",
+          "cleanup"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "总管先盘点岗位、Routine、Skill、集成与近期活动，找重复产出，再提出保留/吸收/退役/人工处理建议；退役清单包含职责交接、记忆、文件和登录，所有改动先审核。",
+        "summary_en": "Inventory roles, routines, skills, integrations and activity; propose keep/absorb/retire/human, then plan handoff, memory, file and sign-in cleanup, with review before changes.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取帖子全文（note_tweet）；配图未查看。作者为活跃 Grok Bot 内容作者，方法未复现。 “隐藏仍运行、删除不清共享电脑文件”为作者说法，未核实。由作者 11 月 10 日自引帖 2120031951746711798 回溯到原作。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read; image not viewed. Claims about hiding/deleting bots are the author's; not verified. Traced from a Nov 10 self-quote.",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Bot retirement audit: keep, absorb, retire or take the task back"
+      },
+      "distinct_from": "x-grokbotradar-retire-a-bot"
+    },
+    {
+      "decision": "publish",
+      "reason": "对比实验与可复制提示词：给通话立规则（等待超 5 分钟挂断、先用在线客服、跳过寒暄、改合同先问），降低电话任务用量。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-iiiichigo-chan-phone-call-rules",
+        "url": "https://x.com/iiiichigo_chan/status/2120600685896941928",
+        "author": "iiiichigo_chan",
+        "title": "电话任务规则：限制等待、优先在线客服与书面报价",
+        "published": "2026-11-11",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "phone-call",
+          "usage",
+          "skill",
+          "prompt"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "作者在回复中给出七条通话规则：先查在线渠道、超时等待就回拨或挂断、直达负责部门、简明说明目标、索取书面报价、合约变更先问，并汇报时间与用量；对照数字仅为自报。",
+        "summary_en": "Seven call rules prioritize online channels, cap hold time, reach the right desk, state a concise goal, seek written quotes, gate contract changes and report usage. Comparison figures are self-reported.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读主帖与作者回复中的完整提示词；视频与引用帖、文末提到的 Research Desk 指南未读。额度数字为作者自报，未复现。BotDirectoryAI 2120670857114657218 的精简版（注明规则来自本作者）并入本条。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Main post and the full prompt in the author's reply read; video, quoted post and the mentioned guide not read. Usage figures self-reported; not reproduced.",
+        "author_url": "https://x.com/iiiichigo_chan",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Phone-call rules so Grok Bot stops burning your limit on hold music"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "X 长文 26 问答，覆盖入门、套餐与额度、模板、云电脑限制、国内使用与常见故障。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-eastgocc-grok-bot-newbie-faq-001",
+        "url": "https://x.com/EastgoCC/status/2120364355409916096",
+        "author": "EastgoCC",
+        "title": "中文新手 FAQ：模板入门、用量盘点与云端文件备份",
+        "published": "2026-11-11",
+        "categories": [
+          "start"
+        ],
+        "tags": [
+          "faq",
+          "usage",
+          "templates",
+          "cloud-computer"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "zh",
+        "summary_zh": "26 问讨论模板入门、任务范围、Routine 频率、用量查看和云端文件备份，并列国内访问与常见故障体验。套餐、额外重置与模型路由说法未核，本条不采纳为当前产品结论。",
+        "summary_en": "A 26-question FAQ covers templates, task scope, routine cadence, usage review, cloud-file backups and troubleshooting experiences. Unverified plan, reset and model-routing claims are not adopted.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读取 X 长文全文（article 正文）。套餐档位、11 月 10 日额外重置、“重新路由回 Opus 5.5”等为作者在 2026-11-11 的说法，具时效性，未核实；未复现。 摘要已去除未经核验的具体套餐、模型与重置结论。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full X Article read. Plan, reset and model-routing claims are the author's as of 2026-11-11 and time-sensitive; not verified.",
+        "author_url": "https://x.com/EastgoCC",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Grok Bot beginner FAQ: templates, usage review and cloud-file backups"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "三步接入 Tailscale 让 Bot 访问私有网络中的 MCP 服务，并提示 Bot 以你的设备身份入网、应隔离权限。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-aitoolsonx-tailscale-private-mcp",
+        "url": "https://x.com/aitoolsonx/status/2120407994269946296",
+        "author": "aitoolsonx",
+        "title": "Tailscale 私网 MCP 接入：连接步骤与访问范围核对",
+        "published": "2026-11-11",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "tags": [
+          "tailscale",
+          "mcp",
+          "plugin",
+          "security"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Tailscale"
+        ],
+        "lang": "en",
+        "summary_zh": "作者描述从 Connect apps 添加 Tailscale、认证 tailnet，再按私网地址添加 MCP；提醒检查 Bot 的可达范围并限制权限。界面路径、posture 名称与免费版方案尚未独立核实。",
+        "summary_en": "The author describes adding Tailscale, authenticating a tailnet and adding a private-address MCP, with an access-scope warning. Menu paths, posture names and plan-specific options remain unverified.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读主帖全文；作者称首条回复中的“检查 Bot 能访问什么”提示词本轮未读到；官方公告 2120279511707386263 为纯功能公告未单列。路径与 posture 名称未核实；涉及私有网络访问，风险需自行评估；未复现。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Main post read; the reply prompt not obtained this round. Menu path and posture name not verified; private-network access risk; not reproduced.",
+        "author_url": "https://x.com/aitoolsonx",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Connect Grok Bot to your tailnet to reach private MCP servers, and fence it in"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "团队 Bot 参会的三个用例：会后把待办发到 Slack、缺席时每隔几分钟汇报、会中让 Bot 改文档。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-lingxi-team-bot-meeting-use-cases",
+        "url": "https://x.com/lingxi/status/2120619657728266244",
+        "author": "lingxi",
+        "title": "团队 Bot 参会的三个用例：Slack 待办、缺席汇报与文档更新",
+        "published": "2026-11-11",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "tags": [
+          "meetings",
+          "team-bot",
+          "slack",
+          "1.0"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Slack"
+        ],
+        "lang": "en",
+        "summary_zh": "作者提出三种会议工作方式：会后把待办交到 Slack、本人无法参会时由 Bot 定期汇报、会议讨论中更新文档。属于简短用例分享，未提供完整配置，也未验证作者官方身份。",
+        "summary_en": "Three short use cases: Slack action items after a meeting, updates while the owner cannot attend, and document edits during discussion. Setup is incomplete and author affiliation is unverified.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读帖子全文（较短）；附带官方视频未看。作者身份（是否为官方员工）本轮未核实。会议与 Team Bot 需相应方案（据 trise981 转述引用官方页面，本轮未直接打开官方文档）。trise981 2120676518489960714 的中文解读并入本条。 本聊天今日已读官方会议文档，但只确认一般接入与套餐边界，未验证该作者用例。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Short post read; video not watched. Author affiliation not verified; plan requirements not checked directly. Not reproduced. Official meeting docs were read earlier today, confirming general setup only, not this author's case.",
+        "author_url": "https://x.com/lingxi",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Three ways to use a team bot in meetings (Grok Bot 1.0)"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "作者描述以 Bot 作常驻 Chief of Staff、按工作流配专职 Bot、结合 Modal 与 GitHub 的“24/7 研究工厂”原则。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-vtrivedy10-24-7-research-factory",
+        "url": "https://x.com/Vtrivedy10/status/2120667696945574241",
+        "author": "Vtrivedy10",
+        "title": "常驻研究团队：Modal 算力、GitHub 上下文与手机审阅",
+        "published": "2026-11-11",
+        "categories": [
+          "advanced",
+          "bots"
+        ],
+        "tags": [
+          "multi-bot",
+          "chief-of-staff",
+          "github",
+          "memory"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Modal",
+          "GitHub"
+        ],
+        "lang": "en",
+        "summary_zh": "作者以总管和按工作流划分的 Bot 组织研究，把算力放在 Modal、上下文放在 GitHub，定期对齐、整理仓库并用手机审阅；按任务沉淀 Skill 与记忆，未公开完整部署步骤。",
+        "summary_en": "A self-reported research team uses a chief of staff, workstream Bots, Modal compute, GitHub context, periodic alignment and phone review, with evolving skills/memory but no full deployment guide.",
+        "verification_note_zh": "铁柱报告已读取原文；本轮接收并核验附件、摘要与去重，未独立打开 X。已读帖子全文。偏原则与经验，无可直接复制的提示词；涉及第三方算力与仓库，费用与权限需自评；未复现。",
+        "verification_note_en": "Tie Zhu read the source; this pass reviewed the attachment and deduplication, without independently opening X. Full text read. Principles rather than copyable prompts; third-party compute costs and permissions apply; not reproduced.",
+        "author_url": "https://x.com/Vtrivedy10",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-x-incremental-approved",
+        "title_en": "Principles from running a 24/7 research factory with persistent Grok Bot agents"
+      }
+    }
+  ]
+}

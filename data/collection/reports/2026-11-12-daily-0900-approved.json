@@ -1,0 +1,30 @@
+{
+  "batch_id": "2026-11-12-daily-0900-approved",
+  "date": "2026-11-12",
+  "added": [
+    "official-grok-bot-1-0",
+    "official-grok-bot-meetings",
+    "official-grok-bot-microsoft-teams",
+    "official-grok-bot-initiative",
+    "github-chasen-grokbot-and-pi",
+    "github-jbell-tmec-grokbot",
+    "github-toolsai-herdr-grok-bot",
+    "github-ramyrae-file-shepherd",
+    "github-simo255-shopper",
+    "github-michael-chatgpt-grokbot-codex-workflow",
+    "github-facturadirecta-plugin",
+    "github-hubpost-plugin",
+    "github-morphix-plugin",
+    "github-0xgeegee-youtrack-connector",
+    "github-alizay-fullstack-vibe-coder",
+    "github-alizay-social-media-skills",
+    "github-macro-harder-grokbot-rag",
+    "github-iamraven-grok-hermes-backup",
+    "github-bashcrandicoot-pilotlight",
+    "youtube-gregisenberg-rasmic-full-course-20261111"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}

@@ -1,0 +1,814 @@
+{
+  "id": "2026-11-12-daily-0900-approved",
+  "collected_at": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "approval": {
+    "status": "approved",
+    "approved_at": "2026-11-12",
+    "source_review_batch": "2026-11-12-daily-0900-review",
+    "approved_ids": [
+      "official-grok-bot-1-0",
+      "official-grok-bot-meetings",
+      "official-grok-bot-microsoft-teams",
+      "official-grok-bot-initiative",
+      "github-chasen-grokbot-and-pi",
+      "github-jbell-tmec-grokbot",
+      "github-toolsai-herdr-grok-bot",
+      "github-ramyrae-file-shepherd",
+      "github-simo255-shopper",
+      "github-michael-chatgpt-grokbot-codex-workflow",
+      "github-facturadirecta-plugin",
+      "github-hubpost-plugin",
+      "github-morphix-plugin",
+      "github-0xgeegee-youtrack-connector",
+      "github-alizay-fullstack-vibe-coder",
+      "github-alizay-social-media-skills",
+      "github-macro-harder-grokbot-rag",
+      "github-iamraven-grok-hermes-backup",
+      "github-bashcrandicoot-pilotlight",
+      "youtube-gregisenberg-rasmic-full-course-20261111"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布",
+    "scope_zh": "用户在已展示今日两批共34条建议后批准导入发布。本文件仅含本批20条建议收录；全部待核验、重复、排除、其他历史批次及未来增量均不在本次范围。"
+  },
+  "editorial_note_zh": "保留已审阅中文标题、双语摘要、实际应用、原作署名与核验限制，改collection_batch并补齐访谈的author_en英文显示。原审核文件与预览保持原样，不随本次提交；来源方法未升级为本站实测。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "独立官方公告，新增共享、主动提议与协作能力的完整说明。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "official-grok-bot-1-0",
+        "url": "https://x.ai/news/grok-bot-1-0",
+        "author": "SpaceXSI",
+        "title": "Grok Bot 1.0：共享队友、主动提议与跨应用协作",
+        "title_en": "Introducing Grok Bot 1.0",
+        "source": "official",
+        "published": "2026-11-02",
+        "categories": [
+          "news",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Slack",
+          "Microsoft Teams",
+          "Gmail",
+          "Google Calendar",
+          "GitHub"
+        ],
+        "summary_zh": "官方介绍 1.0 的共享 Team Bot、Slack/Teams 与会议协作、主动发现任务、交互 Pages 及应用连接改进；敏感操作仍需审批。",
+        "summary_en": "The 1.0 announcement covers shared Team Bots, Slack/Teams and meetings, proactive task offers, interactive Pages and improved app connections, with approval for sensitive actions.",
+        "verification_note_zh": "已读官方正文。页面显示 11 月 2 日，与近期外部传播日期不同；本条保留页面原始日期，不声称今日发布。视频未观看，功能未实测。",
+        "verification_note_en": "Official body read. The page shows Nov 2, unlike recent external coverage; that displayed date is retained. Video not watched and features not tested.",
+        "author_url": "https://x.ai",
+        "platform": "official",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "official",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "新官方分步教程，覆盖入会、交互、会后产物与管理边界。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "official-grok-bot-meetings",
+        "url": "https://docs.x.ai/grok-bot/meetings",
+        "author": "SpaceXSI",
+        "title": "把 Grok Bot 加入 Google Meet、Zoom 与 Teams 会议",
+        "title_en": "Add a Bot to Your Meetings",
+        "source": "official",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Google Meet",
+          "Zoom",
+          "Microsoft Teams",
+          "Pages"
+        ],
+        "summary_zh": "粘贴会议链接并批准加入，主持人接纳后，Bot 可记笔记、在会议聊天回答问题，结束后返回摘要和行动项；文档说明静默旁听、退出及团队管理员开关。",
+        "summary_en": "Paste a meeting link, approve entry and have the host admit the Bot. It takes notes, answers in chat and returns a summary; the guide covers listen-only mode, exit and team controls.",
+        "verification_note_zh": "已读官方全文，页面更新于 11 月 11 日。可用套餐、主持人接纳和企业开关以当前文档为准；未入会或读取任何会议。原始发布日期未提供。",
+        "verification_note_en": "Full official page read, updated Nov 11. Availability, host admission and enterprise controls follow current docs. No meeting was joined or read. Original publication date unavailable.",
+        "author_url": "https://x.ai",
+        "platform": "official",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "official",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "source_dates": {
+        "updated": "2026-11-11",
+        "published": "not-provided"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "完整官方接入流程，明确双侧管理员、账号绑定与文件权限。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "official-grok-bot-microsoft-teams",
+        "url": "https://docs.x.ai/grok-bot/microsoft-teams",
+        "author": "SpaceXSI",
+        "title": "Microsoft Teams 接入教程：管理员启用、Bot 审批与账号绑定",
+        "title_en": "Use Grok Bot in Microsoft Teams",
+        "source": "official",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Microsoft Teams",
+          "OneDrive",
+          "Cursor"
+        ],
+        "summary_zh": "先由团队管理员启用 Teams，再由已发布 Team Bot 的所有者或 Manager 连接，Teams 管理员审批应用；成员绑定账号后可在频道、私聊和群聊中使用，文件经 OneDrive 交付。",
+        "summary_en": "A team admin enables Teams, a published Bot's owner/Manager connects it, and a Teams admin approves it. Members link accounts for channels and chats; files use OneDrive.",
+        "verification_note_zh": "已读官方全文，更新于 11 月 11 日；核对管理员、所有者和成员三个角色的步骤与错误表。未授权 Microsoft、安装应用或连接团队。",
+        "verification_note_en": "Full official page read, updated Nov 11, including admin, owner and member steps plus troubleshooting. No Microsoft authorization, app install or team connection occurred.",
+        "author_url": "https://x.ai",
+        "platform": "official",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "official",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "source_dates": {
+        "updated": "2026-11-11",
+        "published": "not-provided"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "明确主动提议与通知开关的区别，补充现有 Routine 内容。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "official-grok-bot-initiative",
+        "url": "https://docs.x.ai/grok-bot/initiative",
+        "author": "SpaceXSI",
+        "title": "Bot 主动提议如何工作：主 Bot、应用掉线提醒与通知开关",
+        "title_en": "When Your Bot Takes Initiative",
+        "source": "official",
+        "categories": [
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Gmail",
+          "X Chat",
+          "Slack"
+        ],
+        "summary_zh": "主 Bot 可主动提议任务、提示应用掉线，并在 X Chat 跟进对话；先提议、获同意后执行。关闭通知只减少提醒，不关闭主动问候，关闭后者需联系支持。",
+        "summary_en": "The primary Bot can offer tasks, flag app sign-outs and follow up in X Chat. It offers first. Notification controls silence alerts, while disabling check-ins requires support.",
+        "verification_note_zh": "已读官方全文，更新于 11 月 11 日。未修改任何 Bot、通知或连接设置；Team Bot 不能设为主 Bot，文档里的检查机制未实测。",
+        "verification_note_en": "Full official page read, updated Nov 11. No Bot, notification or connection setting changed. Team Bots cannot be primary; check-in behavior was not tested.",
+        "author_url": "https://x.ai",
+        "platform": "official",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "official",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "source_dates": {
+        "updated": "2026-11-11",
+        "published": "not-provided"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "在已收录上游任务编号/回执设计上增加危险命令 guard、连接预检和超时流程，保留独立衍生实现并署名上游。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-chasen-grokbot-and-pi",
+        "title": "GAP：Grok Bot 把重任务交给 Pi，再检查产物与回执",
+        "title_en": "GAP — Grokbot And Pi",
+        "categories": [
+          "advanced",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Pi"
+        ],
+        "summary_zh": "用 pi-task 管理任务归属、RPC、落盘结果和 pending/ack；Bot 在当前回合等待并验收，webhook 作唤醒后备，附空闲超时、连接预检和危险命令审批 guard。",
+        "summary_en": "pi-task manages owners, RPC, persisted results and pending/ack. The Bot waits and verifies outputs; webhook wakeups are fallback, with idle timeouts, preflight checks and a command guard.",
+        "verification_note_zh": "已读 README；未安装 Pi、执行命令或发 webhook。基于 robbin/grokbot-local-agent，新增 guard、预检与等待流程；省额度和保活效果为作者说明。",
+        "verification_note_en": "README read; no Pi install, commands or webhook. Built on robbin/grokbot-local-agent with added guards, preflight and waiting. Quota and keep-awake claims remain author-reported.",
+        "url": "https://github.com/Chasen-Liao/grokbot-and-pi",
+        "author": "Chasen-Liao",
+        "author_url": "https://github.com/Chasen-Liao",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "distinct_from": "x-fankaishuoai-local-agent-webhook",
+      "attribution": {
+        "upstream": "https://github.com/robbin/grokbot-local-agent",
+        "relationship": "MIT 衍生实现"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "公开具体行业岗位与暂停默认值，按未安装的角色模板收录，不当真实案例效果。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-jbell-tmec-grokbot",
+        "title": "TMEC 服务团队模板：一个总管协调十个岗位与逐条外发审批",
+        "title_en": "TMEC's AI team on Grok Bot",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Claude Code",
+          "HubSpot",
+          "Slack"
+        ],
+        "summary_zh": "面向太阳能、电池和电气服务商的十一 Bot 组织，含线索、伙伴、CRM、内容、SEO 和运营岗位，附 18 个暂停 Routine、28 个 Skill、精确文本/收件人审批与全局停止。",
+        "summary_en": "An eleven-Bot service-business team for leads, partners, CRM, content, SEO and ops, with 18 paused routines, 28 skills, exact-message/recipient approval and a global stop.",
+        "verification_note_zh": "已读 README，作者明确尚未安装到 Grok 账号；两轮审阅不等于真实运行。客户专用姓名、线索种子和合规说明未逐项核验；未下载发布包或外发。",
+        "verification_note_en": "README read; the author says it is not yet installed on a Grok account. Two reviews do not prove live operation. Client-specific seeds and compliance claims unverified; no install or sends.",
+        "url": "https://github.com/jbellsolutions/tmec-grokbot",
+        "author": "jbellsolutions",
+        "author_url": "https://github.com/jbellsolutions",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "公开具体可复用 Skill，区别于现有只读桥或 Herdr/Pi 架构帖子。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-toolsai-herdr-grok-bot",
+        "lang": "zh",
+        "title": "Herdr Skill：集中查看并接管 Grok Bot 启动的本机 CLI Agent",
+        "title_en": "Herdr community skill for Grok Bot",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Herdr",
+          "Codex",
+          "Cursor",
+          "Claude Code",
+          "Pi",
+          "Antigravity"
+        ],
+        "summary_zh": "轻量 Skill 在 Bot 启动互动 CLI Agent 时改走 Herdr，让人看到状态、工作区和会话并介入；安装与使用说明按需读取，普通 Shell 和云编码路径保持各自流程。",
+        "summary_en": "A lightweight skill starts interactive CLI agents through Herdr so people can see status, workspace and sessions and intervene. Setup/use notes load as needed; normal shell and cloud jobs keep their paths.",
+        "verification_note_zh": "已读中英 README 和 SKILL.md，合并为一项；未安装或启动 Herdr。它是软约定而非强制拦截器，所列 CLI 类型须以本机版本为准。",
+        "verification_note_en": "Chinese/English README and SKILL.md read and merged as one work. Herdr was not installed or started. It is a convention, not enforcement; supported CLI kinds depend on the installed version.",
+        "url": "https://github.com/Toolsai/herdr-grok-bot",
+        "author": "Toolsai",
+        "author_url": "https://github.com/Toolsai",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "distinct_from": "linuxdo-coneyisland-herdr-pi-handoff"
+    },
+    {
+      "decision": "publish",
+      "reason": "公开两套 Skill 和五类文件工作流，精确去重与确认边界清晰。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-ramyrae-file-shepherd",
+        "author": "Ram",
+        "published": "2026-10-27",
+        "title": "File Shepherd：精确文件去重、Live Photo 配对与备份差异检查",
+        "title_en": "File Shepherd · File & Media Curator",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Google Drive",
+          "OneDrive"
+        ],
+        "summary_zh": "文件整理 Bot 先只读扫描，以大小加 SHA-256 找精确重复，保留 Live Photo 图片/视频配对；还可检查大文件、提出重命名表和比较外置盘备份，改动前先展示计划。",
+        "summary_en": "A file-curation Bot scans read-only, finds exact duplicates by size and SHA-256, preserves Live Photo pairs, audits large files, proposes rename tables and compares backups before approval.",
+        "verification_note_zh": "已读 README；作者称模板 10 月 27 日发布，仓库 11 月 11 日建立。未查看市场条目、安装模板、扫描或改动文件；不保证去重或备份正确。",
+        "verification_note_en": "README read. Author dates the template to Oct 27; repository created Nov 11. Marketplace listing, scans and file changes were not tested; duplicate and backup correctness not guaranteed.",
+        "url": "https://github.com/Ramyrae/file-shepherd",
+        "author_url": "https://github.com/Ramyrae",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "可复制的购物观察角色，明确价格核对、重复提醒与不购买边界。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-simo255-shopper",
+        "title": "加拿大折扣观察 Bot：核对历史价格、去重提醒且不下单",
+        "title_en": "Shopper: Canadian deal watcher for Grok Bot",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "RedFlagDeals",
+          "Slickdeals",
+          "Reddit",
+          "Amazon.ca",
+          "Keepa",
+          "CamelCamelCamel"
+        ],
+        "summary_zh": "按偏好观察加拿大折扣源，比较约 90 天价格历史并查论坛失效/库存信号，同价同商品不重复提醒；仅在获准后创建 Routine，发现不了好价就保持安静，不购买。",
+        "summary_en": "A Canadian deal watcher compares recent price history, checks expiry/stock signals and avoids repeat alerts at the same price. Routines require confirmation; it stays quiet and never buys.",
+        "verification_note_zh": "已读 README；未读取商店、建立 Routine 或核验任何折扣。第三方历史覆盖不均，30–60 分钟频率为作者默认值，不能当省额度或价格保证。",
+        "verification_note_en": "README read. No stores, routines or discounts were checked. Third-party history is uneven and the author's 30–60 minute cadence is not a quota or price guarantee.",
+        "url": "https://github.com/simo255/shopper",
+        "author": "simo255",
+        "author_url": "https://github.com/simo255",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "完整中文教程与模板，强调原任务书、实际文件、断线去重和主动读回。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-michael-chatgpt-grokbot-codex-workflow",
+        "lang": "zh",
+        "title": "中文多轮文件送审：ChatGPT 定任务，Grok Bot 中转，Codex 交付",
+        "title_en": "ChatGPT, Grok Bot, dots and Codex review handoff workflow",
+        "categories": [
+          "advanced",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "ChatGPT",
+          "Grok Bot",
+          "dots",
+          "Codex"
+        ],
+        "summary_zh": "用项目卡绑定原 ChatGPT、秘书 Bot、dots 和 Codex 工作区，把完整任务书与实际文件多轮送审；区分发送回执与任务完成，未知发送先查接收记录，完成后停检。",
+        "summary_en": "A project card binds ChatGPT, a secretary Bot, dots and a Codex workspace for repeated file reviews. It separates send receipts from completion, checks unknown deliveries and stops on closure.",
+        "verification_note_zh": "已读中文 README；未安装 Skill、读取聊天或派单。验证器只测本地示例与交接模拟，不能证明真实调度或端到端成功；文档 CC BY 4.0，脚本 MIT。",
+        "verification_note_en": "Chinese README read. No skill, chats or dispatch used. Validation covers local examples/simulations, not real scheduling or end-to-end operation. Docs CC BY 4.0; scripts MIT.",
+        "url": "https://github.com/michael20050413-bot/chatgpt-grokbot-codex-workflow",
+        "author": "michael20050413-bot",
+        "author_url": "https://github.com/michael20050413-bot",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "厂商原始接入资料，清楚区分查询、草稿、发行和不涉及资金转移。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-facturadirecta-plugin",
+        "author": "FacturaDirecta",
+        "title": "FacturaDirecta 插件：按公司与读写权限查询账务、准备发票草稿",
+        "title_en": "FacturaDirecta plugin for Cursor and Grok Bot",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Cursor",
+          "FacturaDirecta"
+        ],
+        "summary_zh": "厂商 MCP 插件按公司和模块授予只读或读写权限，可查逾期发票、费用及文档链接，建立发票/报价草稿，也包含记账和银行对账；发行发票与草稿区分，不转账或报税。",
+        "summary_en": "A vendor MCP scopes company/module access for invoice and expense queries, linked records, draft invoices/estimates and bookkeeping/reconciliation. Issuing is distinct from drafts; no transfers or tax filing.",
+        "verification_note_zh": "已读厂商 README；未连接财务账号、创建文档或记账。OAuth 可含读写及敏感工资/银行数据，实际工具与权限未验证；不作为税务或会计建议。",
+        "verification_note_en": "Vendor README read; no financial account, document or bookkeeping action used. OAuth may allow writes and payroll/bank data; tool behavior and scopes untested. Not tax/accounting advice.",
+        "url": "https://github.com/facturadirecta/facturadirecta-plugin",
+        "author_url": "https://github.com/facturadirecta",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "已确认 Grok 专用清单与确认规则，不仅依赖仓库描述推测兼容。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-hubpost-plugin",
+        "author": "HubPost",
+        "title": "HubPost 插件：审核后排期、多平台发布与效果查询",
+        "title_en": "HubPost plugin for Grok Bot and Cursor",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Cursor",
+          "HubPost",
+          "Instagram",
+          "TikTok",
+          "YouTube",
+          "Facebook",
+          "LinkedIn",
+          "X",
+          "Threads",
+          "Pinterest",
+          "Bluesky"
+        ],
+        "summary_zh": "OAuth MCP 与 Skill 先确认已连接账号和素材，再起草、排期或发布多平台内容，并读取效果；发布或排期前核对账号、文字、媒体和时间，已到期的排期会立即发布。",
+        "summary_en": "OAuth MCP plus a skill lists accounts/media, drafts, schedules or publishes posts and reads metrics. It confirms account, text, media and time; a due scheduled time publishes immediately.",
+        "verification_note_zh": "已读 README、Grok 插件清单与完整 Skill；未登录或发帖。市场上架和端到端未核；厂商说明已发布内容不能通过插件修改或删除，上传会送到 HubPost。",
+        "verification_note_en": "README, Grok manifest and full skill read. No sign-in or posts. Marketplace listing and end-to-end behavior unverified; vendor says published posts cannot be edited/deleted; uploads go to HubPost.",
+        "url": "https://github.com/hubpost-co/hubpost-plugin",
+        "author_url": "https://github.com/hubpost-co",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体 Grok 插件包与完整生成工作流，有额度与素材上传边界。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-morphix-plugin",
+        "author": "Morphix",
+        "title": "Morphix 插件：模型选择、参考素材、异步生成与放大",
+        "title_en": "Morphix plugin for Grok Bot and Cursor",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Cursor",
+          "Morphix"
+        ],
+        "summary_zh": "通过 OAuth MCP 选择模型，用素材库里的参考图生成图像、视频或语音，并查询异步任务和放大结果；Skill 要求先读剩余额度，每次生成消耗 Morphix 积分。",
+        "summary_en": "An OAuth MCP selects models, uses library references for images/video/speech, tracks async jobs and upscales outputs. The skill checks remaining credits; each generation spends Morphix credits.",
+        "verification_note_zh": "已读 README、Grok 插件清单和完整 Skill；未连接账号、上传参考文件或生成内容。市场上架、模型效果、费用和兼容性未实测，不采纳免费套餐承诺。",
+        "verification_note_en": "README, Grok manifest and full skill read. No account, uploads or generations used. Listing, quality, cost and compatibility untested; free-plan claims are not adopted.",
+        "url": "https://github.com/morphix-pro/morphix-plugin",
+        "author_url": "https://github.com/morphix-pro",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具体接入教程，含默认只读、双令牌、多用户范围及原生 MCP 对照。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-0xgeegee-youtrack-connector",
+        "title": "YouTrack 连接器：默认只读、逐工具限权与批量修改预览",
+        "title_en": "Grok Bot × YouTrack",
+        "categories": [
+          "advanced",
+          "recipes",
+          "resources"
+        ],
+        "apps": [
+          "Grok Bot",
+          "YouTrack"
+        ],
+        "summary_zh": "用 Node MCP 把 YouTrack Cloud/Server 接入 Bot，默认 read，write/full 分层并可列工具白名单；批量编辑先预览再用令牌执行，支持远程 HTTPS 或 Bot 电脑本地命令。",
+        "summary_en": "A Node MCP connects YouTrack Cloud/Server with read by default, write/full tiers and tool allowlists. Bulk edits use preview tokens; it supports authenticated HTTPS or local command transport.",
+        "verification_note_zh": "已读 README 的安装、权限和多用户说明；未建令牌、公开端口或操作工单。REST 权限不同于原生 MCP 的可见性过滤，部署前需限制账号项目范围；源码未完整审计。",
+        "verification_note_en": "Setup, permissions and multi-user README sections read. No tokens, ports or issues used. REST access differs from native MCP visibility filters; project scope needs care. Code not fully audited.",
+        "url": "https://github.com/0xGeeGee/jetbrains-grok-connector",
+        "author": "0xGeeGee",
+        "author_url": "https://github.com/0xGeeGee",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "链接到精确原创 Skill，避免把通用目录中的上游项目再包装为新条目。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-alizay-fullstack-vibe-coder",
+        "url": "https://github.com/AlizayAyesha/awesome-grok-bot-skills/blob/main/skills/fullstack-vibe-coder/SKILL.md",
+        "title": "Full-Stack Vibe Coder：面向 AI 编码的 14 层上线核对 Skill",
+        "title_en": "Full-Stack Vibe Coder production-readiness skill",
+        "categories": [
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "summary_zh": "原创 Skill 把上线审查拆成前端、API、数据库、身份权限、部署、安全、限流、缓存、监控与恢复等 14 层，按需读参考文件，并在发布前逐项核对证据和相邻依赖。",
+        "summary_en": "An original skill reviews 14 production layers, from UI/API/data/auth to deployment, security, limits, caching, monitoring and recovery, with references and evidence-based launch gates.",
+        "verification_note_zh": "已读 README 与本条完整 SKILL.md；未逐份读取 14 个参考文件或运行命令。只收本条原创 Skill，不把上游 115 条索引拆分入库，不声称检查即保证上线安全。",
+        "verification_note_en": "README and this full SKILL.md read. The 14 reference files and commands were not checked. Only the original skill is proposed, not 115 upstream index entries; passing a checklist is not a safety guarantee.",
+        "author": "AlizayAyesha",
+        "author_url": "https://github.com/AlizayAyesha",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "Grok 工具适配的七个平台集合，保留原作者署名，未将每个平台拆分凑数。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-alizay-social-media-skills",
+        "title": "七平台社媒 Skill：计划、写作、改写与逐项发布审批",
+        "title_en": "Grok Social Media Skills",
+        "categories": [
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "X",
+          "LinkedIn",
+          "Threads",
+          "Instagram",
+          "TikTok",
+          "Facebook",
+          "Reddit"
+        ],
+        "summary_zh": "七个 Skill 为 X、LinkedIn、Threads、Instagram、TikTok、Facebook 和 Reddit 起草计划、帖子与回复；按 Grok 工具改写，外发均留待批准，资料和指标不得编造。",
+        "summary_en": "Seven Grok-adapted skills plan and draft posts/replies for X, LinkedIn, Threads, Instagram, TikTok, Facebook and Reddit. Outgoing work needs approval and metrics/stories must be sourced.",
+        "verification_note_zh": "已读 README 并完整抽查 LinkedIn Skill；其余六份未逐一审阅。改编自 Sergey Bulaev 与 Qingyuan Yang 的 MIT 作品；触达倍数、发帖频率等为启发式，未验证。",
+        "verification_note_en": "README and full LinkedIn skill sampled; six other skills not individually reviewed. Adapted from MIT works by Sergey Bulaev and Qingyuan Yang. Reach multipliers and cadence heuristics unverified.",
+        "url": "https://github.com/AlizayAyesha/grok-social-media-skills",
+        "author": "AlizayAyesha",
+        "author_url": "https://github.com/AlizayAyesha",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "attribution": {
+        "authors": [
+          "Sergey Bulaev",
+          "Qingyuan Yang"
+        ],
+        "upstreams": [
+          "https://github.com/sergebulaev/linkedin-skills",
+          "https://github.com/1146345502/reddit-skills"
+        ]
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "具有真实 Bot 连接步骤和数据/权限边界的检索工具，非普通模型 API 包装。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-macro-harder-grokbot-rag",
+        "title": "grokbot-rag：带来源封装、身份检查与评测门禁的本地检索",
+        "title_en": "grokbot-rag: local hybrid retrieval with provenance and eval gates",
+        "categories": [
+          "advanced",
+          "templates",
+          "resources"
+        ],
+        "apps": [
+          "Grok Bot",
+          "SQLite",
+          "OpenRouter"
+        ],
+        "summary_zh": "用 SQLite 统一 BM25 与向量检索，把桥接协议文档作为带来源的数据返回；配置身份检查、引用规则、评测门禁和增长/删除开关，优先本机 MCP，远程路径需单独鉴权。",
+        "summary_en": "SQLite hybrid BM25/vector retrieval returns bridge-protocol docs as provenance-tagged data, with identity checks, citation rules, eval gates and growth/deletion guards; local MCP is preferred.",
+        "verification_note_zh": "已读 README 与 adapter/SETUP.md；未建索引、发送嵌入请求或接 MCP。默认 api 嵌入可能把语料送外部；发布包只对已公开 agenc-bridge 语料给出分类说明，私有语料不可照搬。",
+        "verification_note_en": "README and adapter setup read. No index, embeddings or MCP connection used. API embeddings may export corpus text; the documented classification covers only public agenc-bridge, not private data.",
+        "url": "https://github.com/Macro-Harder/grokbot-rag",
+        "author": "Macro-Harder",
+        "author_url": "https://github.com/Macro-Harder",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "专注按需快照与暂停备援的中文 Skill，区别于既有双向迁移同步项目。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-iamraven-grok-hermes-backup",
+        "lang": "zh",
+        "title": "Grok 主力、Hermes 备援：按角色快照同步与暂停备用 Routine",
+        "title_en": "Grok primary, Hermes backup: role snapshots and paused fallback routines",
+        "categories": [
+          "advanced",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Hermes Agent",
+          "Discord",
+          "Telegram"
+        ],
+        "summary_zh": "给每个 Grok Bot 建 Hermes 备援角色，按周导出状态，按日把导出更新为按需读取的快照 Skill；重要 Routine 复制后先暂停，另提供进度页、冲突检测和密钥样式遮蔽。",
+        "summary_en": "Per-Bot Hermes backup profiles use weekly exports and daily snapshot-skill refreshes. Important fallback routines start paused, with status pages, conflict checks and secret-pattern redaction.",
+        "verification_note_zh": "已读繁中 README 与完整 Skill；未安装、导出记忆、创建角色或排程。密钥遮蔽不保证覆盖所有敏感信息，快照仍含个人上下文；与现有 Botport 双向同步工具不同。",
+        "verification_note_en": "Traditional Chinese README and full skill read. No install, memory export, roles or schedules. Pattern redaction is not complete privacy protection; snapshots hold personal context. Distinct from Botport.",
+        "url": "https://github.com/iamraven-tw/grok-hermes-backup",
+        "author": "iamraven-tw",
+        "author_url": "https://github.com/iamraven-tw",
+        "source": "github",
+        "platform": "github",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "distinct_from": "github-hudsonwa-botport"
+    },
+    {
+      "decision": "publish",
+      "reason": "作者帖链接到可核对原仓库，采用标记文件而非内部调试端口，区别于昨日菜单栏 hold。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-bashcrandicoot-pilotlight",
+        "author": "Sebastian Phillips（bashframes）",
+        "title": "PilotLight：用可点击穿透的屏幕光框显示 Bot 正在操作 Mac",
+        "title_en": "PilotLight: see when your Mac is busy with a bot",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "apps": [
+          "Grok Bot",
+          "macOS"
+        ],
+        "summary_zh": "菜单栏应用由 on/off/ping 命令控制屏幕光框，点击和键盘操作可穿透；用标记文件传递状态，20 分钟未更新即隐藏。显示依赖 Bot 主动标记，并非检测全部操作。",
+        "summary_en": "A menu-bar overlay uses on/off/ping commands and a flag file to show Bot activity without blocking clicks or typing. It hides stale flags after 20 minutes; it is not automatic activity detection.",
+        "verification_note_zh": "已读 Reddit 作者帖和 GitHub README，合并为同一作品；未下载、安装或构建。当前未签名，安装器可加登录项与 CLI；未绕过 macOS 安全提示。",
+        "verification_note_en": "Reddit author post and GitHub README read and merged. Nothing downloaded, installed or built. It is unsigned and may add a login item/CLI; no macOS warning was bypassed.",
+        "url": "https://github.com/bashcrandicoot/PilotLight",
+        "author_url": "https://github.com/bashcrandicoot",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      },
+      "related_sources": [
+        "https://www.reddit.com/r/GrokBot/comments/1xt2mip/i_made_a_free_menu_bar_app_that_shows_when_grok/"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "取得作者完整公开说明，按 description-only 采集并明确媒体与结果未验证。",
+      "relevance": "原始资料明确涉及 xAI/Cursor Grok Bot 的功能、应用连接、Skill、Routine 或角色模板。",
+      "verified_via": "video-description",
+      "resource": {
+        "id": "youtube-gregisenberg-rasmic-full-course-20261111",
+        "url": "https://youtube.com/watch?v=1cWZ7Ekff6E",
+        "author": "Greg Isenberg；嘉宾 Ras Mic",
+        "author_en": "Greg Isenberg; guest Ras Mic",
+        "author_url": "https://www.youtube.com/@GregIsenberg",
+        "source": "video",
+        "platform": "youtube",
+        "published": "2026-11-11",
+        "title": "Greg Isenberg × Ras Mic：Grok Bot 编码、设计、内容与生活协作",
+        "title_en": "Use Grok Bot Better Than 99% of People (Full Course)",
+        "categories": [
+          "recipes",
+          "bots",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Claude Code",
+          "Paper",
+          "Shopify",
+          "GitHub",
+          "Plaid",
+          "YouTube"
+        ],
+        "summary_zh": "作者完整说明介绍按项目分 Bot、先审计划再交 Claude Code、用 Paper MCP 固定设计、内容选题和购物协助；含五类岗位的章节与案例，金融与收益数据仅为嘉宾自述。",
+        "summary_en": "The author's full description covers project-specific Bots, plan review before Claude Code, Paper MCP design, content scouting and shopping, with five role chapters and self-reported cases.",
+        "verification_note_zh": "直接读取 YouTube 作者完整公开说明及发布日期；标题已不同于二手索引的旧标题。未观看视频、获取字幕或复现案例；不采纳订阅折算、收入、金融与医疗效果结论。",
+        "verification_note_en": "Full author description and date read directly from YouTube; current title differs from secondary indexes. Video/transcript not viewed and cases not reproduced. Credit, income, finance and health claims not adopted.",
+        "lang": "en",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-12",
+        "checked_at": "2026-11-12",
+        "collection_batch": "2026-11-12-daily-0900-approved"
+      }
+    }
+  ]
+}
