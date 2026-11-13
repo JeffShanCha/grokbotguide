@@ -1,0 +1,364 @@
+{
+  "id": "2026-11-13-daily-0900-approved",
+  "collected_at": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch": "2026-11-13-daily-0900-review",
+  "source_review_sha256": "6644cf0881bfb55c252dc58dfbf62e4830bb99f904068e2c937e48a76c300ff8",
+  "approval": {
+    "status": "approved",
+    "date": "2026-11-13",
+    "approved_ids": [
+      "x-ariex-00-quiet-mode-block",
+      "x-gippp69-content-routine-five-desks",
+      "x-0xlangeai-deepseek-harness-grok-comment-pitch",
+      "x-thecameronteich-local-government-briefing",
+      "x-stanskoya-stuck-posting-lock",
+      "github-jbell-grokbot-usage-mastery",
+      "github-jbell-revenue-os-max",
+      "vendor-databricks-genie-grokbot-plugin"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布、",
+    "scope_zh": "仅批准2026-11-13本批已展示的8条建议；17条hold、4条重复合并、1条排除及其他历史或未来批次均不在本次范围。"
+  },
+  "editorial_note_zh": "保留已审阅标题、双语摘要、分类、应用及核验限制；仅更改collection_batch。原审核JSON和HTML保留本地，不随发布提交。",
+  "source_handoff": {
+    "provider": "Grok Bot 铁柱",
+    "attachment_filename": "x-incremental-2026-11-13.json",
+    "sha256": "06a78517b12c53a904a397606105fc0c66311da2bee6e8aa91724db0e51edb59",
+    "received_at": "2026-11-13",
+    "included_x_entries": 5
+  },
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "交接含具体方法与完整原帖链接；按作者自述送审，阅读证据和未独立核验范围明确标注。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-ariex-00-quiet-mode-block",
+        "url": "https://x.com/Ariex_00/status/2121022359846994197",
+        "author": "Ariex_00",
+        "title": "静默模式指令：无变化不发消息，交接改用共享文件",
+        "published": "2026-11-12",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "instructions",
+          "quiet-mode",
+          "handoff",
+          "prompt"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "先让 Bot 起草静默规则块：省略确认和无变化通知，用共享文件交接，创作任务失败两次即停并记录原因；保留原有审批要求，确认后再保存。",
+        "summary_en": "Draft a quiet-mode block that skips acknowledgements and unchanged updates, uses file handoffs and stops creative work after two failures; keep approval rules and review before saving.",
+        "verification_note_zh": "铁柱称已读原帖全文；本站本轮仅核对下载的交接JSON、原帖链接与去重，未独立打开X、未查看配图/视频或复现。",
+        "verification_note_en": "Iron Column reports reading the original post. This pass checked its downloaded JSON, attribution and duplicates only; X/media were not independently opened and nothing was reproduced.",
+        "author_url": "https://x.com/Ariex_00",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "title_en": "Quiet-mode instructions: fewer status messages and file-based handoffs"
+      },
+      "verified_by": "Grok Bot 铁柱（原帖）；本站（交接与去重）"
+    },
+    {
+      "decision": "publish",
+      "reason": "交接含具体方法与完整原帖链接；按作者自述送审，阅读证据和未独立核验范围明确标注。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-gippp69-content-routine-five-desks",
+        "url": "https://x.com/gippp69/status/2120089001524601302",
+        "author": "gippp69",
+        "title": "创作者五工位：素材、脚本、制作、分发与运营",
+        "published": "2026-11-10",
+        "categories": [
+          "bots",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "creator",
+          "content",
+          "multi-bot",
+          "skills",
+          "routines",
+          "approvals"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "把创作者事务分成素材、脚本、制作、分发和运营五个工位，逐个写清职责、来源、审批线与记忆要求；先审核制作和分发计划，任务稳定后存为 Skill，再设置 Routine。",
+        "summary_en": "Split creator work into research, scripting, production, distribution and operations. Define sources and approval lines, review plans, then save proven workflows as skills before scheduling routines.",
+        "verification_note_zh": "铁柱称已读原帖及X长文全文；本站本轮仅核对下载的交接JSON、原帖链接与去重，未独立打开X、未查看配图/视频或复现。第三方统计和产品限额不作本站承诺。",
+        "verification_note_en": "Iron Column reports reading the original X Article. This pass checked its downloaded JSON, attribution and duplicates only; X/media were not independently opened and nothing was reproduced.",
+        "author_url": "https://x.com/gippp69",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "title_en": "Five creator desks with approval lines, skills and routines"
+      },
+      "verified_by": "Grok Bot 铁柱（原帖）；本站（交接与去重）"
+    },
+    {
+      "decision": "publish",
+      "reason": "交接含具体方法与完整原帖链接；按作者自述送审，阅读证据和未独立核验范围明确标注。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-0xlangeai-deepseek-harness-grok-comment-pitch",
+        "url": "https://x.com/0xlangeai/status/2120769549679386878",
+        "author": "0xlangeai",
+        "title": "Grok Bot 筛选 X 评论，交给 DeepSeek Harness 生成选题卡",
+        "published": "2026-11-12",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "integration",
+          "content",
+          "x",
+          "comments",
+          "deepseek-harness"
+        ],
+        "apps": [
+          "Grok Bot",
+          "X",
+          "DeepSeek Harness"
+        ],
+        "lang": "zh",
+        "summary_zh": "Grok Bot 按提示词筛选最多 30 条能核对父帖的公开直接回复，剔除自动回复和复述、单列存疑项并导出 comments.json；随后由 DeepSeek Harness 的自建插件整理读者问题与选题卡。",
+        "summary_en": "Grok Bot screens up to 30 verifiable direct X replies into comments.json, separating uncertain items; a custom DeepSeek Harness plugin turns reader questions into topic cards.",
+        "verification_note_zh": "铁柱称已读原帖及X长文全文；本站本轮仅核对下载的交接JSON、原帖链接与去重，未独立打开X、未查看配图/视频或复现。",
+        "verification_note_en": "Iron Column reports reading the original X Article. This pass checked its downloaded JSON, attribution and duplicates only; X/media were not independently opened and nothing was reproduced.",
+        "author_url": "https://x.com/0xlangeai",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "title_en": "Screen X replies with Grok Bot and build topic cards in DeepSeek Harness"
+      },
+      "verified_by": "Grok Bot 铁柱（原帖）；本站（交接与去重）"
+    },
+    {
+      "decision": "publish",
+      "reason": "交接含具体方法与完整原帖链接；按作者自述送审，阅读证据和未独立核验范围明确标注。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-thecameronteich-local-government-briefing",
+        "url": "https://x.com/TheCameronTeich/status/2121029690609770828",
+        "author": "TheCameronTeich",
+        "title": "地方公共会议简报：按日期、议程与官方链接整理",
+        "published": "2026-11-12",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "routine",
+          "briefing",
+          "civic",
+          "local-government",
+          "prompt"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "lang": "en",
+        "summary_zh": "作者给出每日简报提示词，检索未来 14 天附近的政府会议与公民活动，按类和日期列出时间、地点、议程及官方链接。原作带党派立场与亚利桑那州设定，摘要仅描述其结构，未改写原文。",
+        "summary_en": "A daily prompt lists nearby government meetings and civic events for the next 14 days with dates, agendas and official links. The original is partisan and Arizona-specific; this summary describes its structure.",
+        "verification_note_zh": "铁柱称已读原帖全文；本站本轮仅核对下载的交接JSON、原帖链接与去重，未独立打开X、未查看配图/视频或复现。原作党派/地区设定保留说明；不收集用户住址。",
+        "verification_note_en": "Iron Column reports reading the original post. This pass checked its downloaded JSON, attribution and duplicates only; X/media were not independently opened and nothing was reproduced.",
+        "author_url": "https://x.com/TheCameronTeich",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "title_en": "A routine briefing for local public meetings and civic events"
+      },
+      "verified_by": "Grok Bot 铁柱（原帖）；本站（交接与去重）"
+    },
+    {
+      "decision": "publish",
+      "reason": "交接含具体方法与完整原帖链接；按作者自述送审，阅读证据和未独立核验范围明确标注。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "id": "x-stanskoya-stuck-posting-lock",
+        "url": "https://x.com/stansKoya/status/2121030544410411500",
+        "author": "stansKoya",
+        "title": "共享 X 账号发帖锁卡住：只存草稿、报告并等待人工解锁",
+        "published": "2026-11-13",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "multi-bot",
+          "routine",
+          "lock",
+          "x",
+          "safety"
+        ],
+        "apps": [
+          "Grok Bot",
+          "X"
+        ],
+        "lang": "zh",
+        "summary_zh": "多个 Bot 共用 X 账号时，一次异常留下隔离锁。作者规定后续 Routine 仍可读资料并保存草稿，但须报告卡点，不抢锁、不等待过期后自行接管，只接受人工确认解锁。",
+        "summary_en": "After a shared X posting lock stuck, the author's routines kept reading and saving drafts, reported the blocked step and never seized or expired the lock; only human confirmation could unlock it.",
+        "verification_note_zh": "铁柱称已读原帖全文；本站本轮仅核对下载的交接JSON、原帖链接与去重，未独立打开X、未查看配图/视频或复现。",
+        "verification_note_en": "Iron Column reports reading the original post. This pass checked its downloaded JSON, attribution and duplicates only; X/media were not independently opened and nothing was reproduced.",
+        "author_url": "https://x.com/stansKoya",
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "title_en": "A stuck posting lock: draft, report and wait for a human unlock"
+      },
+      "verified_by": "Grok Bot 铁柱（原帖）；本站（交接与去重）"
+    },
+    {
+      "decision": "publish",
+      "reason": "README与APPLY给出具体可审核流程；与已收录TMEC业务模板不同，聚焦可移植用量套件。",
+      "relevance": "原作者或厂商明确说明Grok Bot的具体Skill、模板或连接工作流。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-jbell-grokbot-usage-mastery",
+        "url": "https://github.com/jbellsolutions/grokbot-usage-mastery",
+        "author": "jbellsolutions",
+        "author_url": "https://github.com/jbellsolutions",
+        "title": "Usage Mastery：先预览、备份，再按批准计划应用用量优化",
+        "title_en": "Usage Mastery: preview, back up and apply approved usage optimizations",
+        "published": "2026-11-12",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Claude Code"
+        ],
+        "summary_zh": "把用量规则、按需读取脚本、周审计和用量台账打成套件。默认先出 dry run 计划，获确认后修改自身文件并备份、核对结果；节省比例和界面操作仍属作者或转引材料的说法。",
+        "summary_en": "Packages usage rules, read-less scripts, weekly audits and a ledger. It previews a plan before approved edits, backups and verification; savings figures and UI steps remain author or cited-source claims.",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "evidence": "author-reported",
+        "status": "alive",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "verification_note_zh": "已读README、APPLY全文及MASTERY前16000字符。未运行Python/安装脚本、未核全部引文与源码；不采信节省比例为本站实测，文中产品界面与计费说法待官方另核。",
+        "verification_note_en": "Author documentation read only. Dependencies, runtime behavior and claimed results were not independently tested; nothing installed or connected."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "独立业务模板含岗位、触发图、审批门与首日验证流程；不同于行业专用TMEC模板。",
+      "relevance": "原作者或厂商明确说明Grok Bot的具体Skill、模板或连接工作流。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-jbell-revenue-os-max",
+        "url": "https://github.com/jbellsolutions/revenue-os-max-grokbot",
+        "author": "jbellsolutions",
+        "author_url": "https://github.com/jbellsolutions",
+        "title": "Revenue OS：十类营收岗位、46 个 Routine 与分阶段启用门槛",
+        "title_en": "Revenue OS: ten revenue roles, 46 routines and staged activation gates",
+        "published": "2026-11-12",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Slack",
+          "Notion",
+          "GoHighLevel",
+          "YouTube",
+          "X",
+          "LinkedIn",
+          "Medium",
+          "Skool"
+        ],
+        "summary_zh": "把获客、合作、内容、渠道和 CRM 等十类岗位放进一个 Bot，配 46 个 Routine。先做草稿和首日测试，再逐类启用外发与 CRM 写入；作者专属的常设审批、付费预算和账号配置不能直接继承。",
+        "summary_en": "A ten-role, 46-routine revenue pack starts with drafts and a first-day test, then enables sending and CRM writes in stages. The author's standing approvals, spend budget and accounts cannot be inherited.",
+        "source": "github",
+        "platform": "github",
+        "lang": "en",
+        "evidence": "author-reported",
+        "status": "alive",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "verification_note_zh": "已读README、GATES全文与HANDOFF前16000字符。源码、46个Routine及外部服务未运行/审计；作者$5/日抓取预算只属作者授权，本站未付费、连接账户或发消息。",
+        "verification_note_en": "Author documentation read only. Dependencies, runtime behavior and claimed results were not independently tested; nothing installed or connected."
+      }
+    },
+    {
+      "decision": "publish",
+      "reason": "厂商原始文档含Grok Bot明确步骤与权限限制，不是泛MCP兼容推断。",
+      "relevance": "原作者或厂商明确说明Grok Bot的具体Skill、模板或连接工作流。",
+      "verified_via": "page",
+      "resource": {
+        "id": "vendor-databricks-genie-grokbot-plugin",
+        "url": "https://docs.databricks.com/gcp/en/agents/mcp-tools/genie-mcp",
+        "author": "Databricks",
+        "author_url": "https://www.databricks.com",
+        "title": "Databricks Genie 接入：管理员发布插件，用户逐个授权查询",
+        "title_en": "Connect Databricks Genie: admin publication and per-user authorization",
+        "source": "blog",
+        "platform": "web",
+        "published": "2026-11-11",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Cursor",
+          "Databricks Genie",
+          "Unity Catalog"
+        ],
+        "summary_zh": "厂商教程说明由 Cursor 团队管理员发布 Databricks Genie 插件，再由每位用户在 Grok Bot 的 Connect apps 授权自己的 Databricks 账户；经 MCP 异步查询企业数据，权限受 Unity Catalog 控制。",
+        "summary_en": "A Cursor team admin publishes Databricks Genie, then each Grok Bot user authorizes their Databricks account. The MCP queries enterprise data asynchronously under Unity Catalog permissions.",
+        "verification_note_en": "Read the vendor setup documentation and Nov 11 release note. No admin changes, OAuth sign-in or data query; access and availability depend on the user's Databricks workspace.",
+        "lang": "en",
+        "evidence": "author-reported",
+        "status": "alive",
+        "added": "2026-11-13",
+        "checked_at": "2026-11-13",
+        "collection_batch": "2026-11-13-daily-0900-approved",
+        "verification_note_zh": "已读厂商文档的Grok Bot/Cursor配置、工具及限制，并核对11月11日发布说明。归为厂商文档（非xAI官方）；未登录、发布插件或查询数据。"
+      }
+    }
+  ]
+}
