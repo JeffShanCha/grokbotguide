@@ -1,4 +1,128 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: blog-guru-real-file-type
+  url: https://grokbot.guru/check-real-file-type
+  title: 附件检查方法：核对真实格式，先列 ZIP 内容再决定打开
+  title_en: "Attachment checks: identify actual types and list ZIP contents first"
+  author: Chariton Media / grokbot.guru
+  author_url: https://grokbot.guru/
+  source: blog
+  platform: web
+  lang: en
+  published: 2026-11-09
+  added: 2026-11-16
+  checked_at: 2026-11-16
+  categories:
+    - recipes
+    - templates
+  apps:
+    - Grok Bot
+  summary_zh: 先在 Bot 电脑上比较文件名与文件头判断格式，再列出 ZIP 内的名称和大小而不解压；可把固定检查流程保存为 Skill。格式一致不能证明文件无害，这只是打开前的初步核对。
+  summary_en: Compare filename and file signatures on the Bot computer, then list ZIP names/sizes without extraction. Save a repeatable check as a skill; matching types do not prove a file harmless.
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 已读完整原文；站点披露由Grok Bot团队运营。作者提供方法建议，未附本站实测；未上传或分析用户附件/表格、运行来源命令或保存原文。检查不能替代完整安全或数据审计。
+  verification_note_en: "Read the full original tip; the site discloses Bot operation. Method reference only: no user files inspected or commands run. This is not a full security or data audit."
+  collection_batch: 2026-11-16-daily-0900-approved
+- id: blog-guru-spreadsheet-second-check
+  url: https://grokbot.guru/check-the-total
+  title: 表格总数复核：查跳过的行、数值异常和日期歧义
+  title_en: "Spreadsheet total checks: skipped rows, numeric errors and ambiguous dates"
+  author: Chariton Media / grokbot.guru
+  author_url: https://grokbot.guru/
+  source: blog
+  platform: web
+  lang: en
+  published: 2026-11-04
+  added: 2026-11-16
+  checked_at: 2026-11-16
+  categories:
+    - recipes
+    - templates
+  apps:
+    - Grok Bot
+  summary_zh: 在对外使用表格总数前，核对计入与跳过的行、无法解析的金额单元格，以及月日可能互换的日期；在文件副本中用 SUM 重新计算，与首次结果比较，不覆盖原文件。
+  summary_en: Check counted/skipped rows, unparsed numeric cells and ambiguous dates. Recalculate SUM in a copy and compare it with the first result before sharing; preserve the original file.
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 已读完整原文；站点披露由Grok Bot团队运营。作者提供方法建议，未附本站实测；未上传或分析用户附件/表格、运行来源命令或保存原文。检查不能替代完整安全或数据审计。
+  verification_note_en: "Read the full original tip; the site discloses Bot operation. Method reference only: no user files inspected or commands run. This is not a full security or data audit."
+  collection_batch: 2026-11-16-daily-0900-approved
+- id: github-50pac-digest-output-template
+  url: https://github.com/50pac/daily-info-digest-bot/blob/main/templates/05-%E6%B1%87%E6%80%BB%E6%A0%BC%E5%BC%8F.md
+  title: 双附件日报模板：精选与完整候选共用编号，确认后交接日历
+  title_en: "Two-file digest template: shared IDs and approved calendar handoff"
+  author: 50pac
+  author_url: https://github.com/50pac
+  source: github
+  platform: github
+  lang: zh
+  added: 2026-11-16
+  checked_at: 2026-11-16
+  categories:
+    - templates
+    - recipes
+  apps:
+    - Grok Bot
+  summary_zh: 把精选和完整候选分成两份附件，沿用一致编号；旧条目引用原编号，顶部列出来源缺口，明确入选和排除理由。用户点选后才准备日历交接草案，不自行报名、联系或改日历。
+  summary_en: Separate selected and full digests with matching IDs, preserve earlier references and disclose source gaps. Prepare calendar handoff drafts only after the user selects items; no automatic applications or edits.
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 已读英文README、身份原则、每日流程主要段落和完整05汇总格式。只建议收录输出/交接模板，未核完整采集器、WeRead/RSS、全文归档或X实现；示例日程为虚构。未安装、扫码、采集正文或创建Routine。
+  verification_note_en: Read README, principles, main routine sections and the full output template. Recommend output/handoff only, excluding collectors, WeRead and full-text archiving. No install or routine run.
+  collection_batch: 2026-11-16-daily-0900-approved
+- id: github-brian-photon-grok-relay
+  url: https://github.com/brianseong99/photon-grok-relay
+  title: Photon iMessage 接入：Webhook 发任务，MCP 按请求回传
+  title_en: "Photon iMessage relay: webhook tasks and request-matched MCP replies"
+  author: BrianSeong99
+  author_url: https://github.com/BrianSeong99
+  source: github
+  platform: github
+  lang: en
+  added: 2026-11-16
+  checked_at: 2026-11-16
+  categories:
+    - advanced
+    - recipes
+  apps:
+    - Grok Bot
+    - Photon Spectrum Cloud
+    - iMessage
+    - Cloudflare Tunnel
+  summary_zh: 用 Photon 托管号码把单个测试发送者的消息交给 Bot Routine，MCP 按请求 ID 回到原会话。保留最近四轮上下文，重复事件不重送；未知送达需人工检查。教程限定 legacy Spectrum，非 Photon 2.0。
+  summary_en: Routes one test sender through Photon to a Bot routine, then replies by request ID to the original chat. Keeps four recent turns and marks uncertain delivery. Requires legacy Spectrum, not Photon 2.0.
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 已读完整README及relay.ts/mcp.ts/main.ts，核到发送者过滤、回传路由、令牌检查和状态逻辑；对照官方Webhook的200仅表示启动。演示视频、SDK依赖和端到端测试未运行/观看，作者双轮成功不算本站实测；未建账户、隧道或发消息。
+  verification_note_en: Read README and all three source files; checked sender filtering, reply routing and state logic against official webhook semantics. SDK, videos and live delivery were not tested; no tunnel or messages.
+  collection_batch: 2026-11-16-daily-0900-approved
+- id: github-mirwox-artifact-approval-design
+  url: https://github.com/mirwox/agent-human-collab
+  title: 内容流水线参考设计：审批绑定产物版本，发布后回读
+  title_en: "Content pipeline reference: version-bound approvals and publication read-back"
+  author: mirwox
+  author_url: https://github.com/mirwox
+  source: github
+  platform: github
+  lang: en
+  added: 2026-11-16
+  checked_at: 2026-11-16
+  categories:
+    - advanced
+    - templates
+    - resources
+  apps:
+    - Grok Bot
+    - Inngest
+    - Cloudflare Workflows
+    - Temporal
+  summary_zh: 把角色设定、脚本、美术和发布拆成有记录的审批关卡，批准绑定具体产物哈希；返工产生新版本并标记下游过期。设计还要求发布幂等、结果回读与人工停止开关，属于参考架构。
+  summary_en: Designs durable gates for scripts, art and publication, binding approval to artifact hashes. Rework creates versions and stale downstream assets; publication needs idempotency, read-back and a stop switch.
+  status: alive
+  evidence: author-reported
+  verification_note_zh: 已读README、完整pipeline.md和landscape的Grok Bot部分。只推荐作者原创审批/版本设计，不采纳跨产品优劣、凭据可见性及限额断言；引用引擎API示例未逐项另核，仓库明确无全流程实测。未搭建或运行。
+  verification_note_en: Read README, full pipeline design and the Grok Bot comparison section. Recommend the gate/version design only; product rankings and engine API snippets were not independently validated. No pipeline run.
+  collection_batch: 2026-11-16-daily-0900-approved
 - id: github-jbell-grokbot-usage-mastery
   url: https://github.com/jbellsolutions/grokbot-usage-mastery
   author: jbellsolutions
