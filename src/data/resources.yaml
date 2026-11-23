@@ -1,4 +1,29 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-ambitious-audit-review
+  url: https://github.com/ambitiousbots/ambitious-audit
+  title: Ambitious 审计模块：可见数据快照、基线比较与证据建议
+  title_en: "Ambitious audit: visible-data snapshots, baseline diffs and evidence-linked advice"
+  author: AmbitiousBots
+  lang: en
+  source: github
+  platform: github
+  categories:
+    - advanced
+    - resources
+    - templates
+  apps:
+    - Grok Bot
+    - Ambitious
+  added: 2026-11-23
+  checked_at: 2026-11-23
+  summary_zh: 将可见工具提供的 JSON 保存为本地 SQLite 快照，与基线比较后给出至多三条带证据建议。未观测值保持未知；账户采集和外发审批由 Bot 与平台另行负责。
+  summary_en: Stores visible-tool JSON as local SQLite snapshots, diffs a baseline and returns up to three evidence-linked recommendations. Unknowns stay unknown; collection and send approval remain external.
+  evidence: author-reported
+  verification_note_zh: 静态补读0.4.1当前完整README、audit-collector/snapshot-routine与CLI、rules、report、store、delivery核心代码（ed033081）。CLI接受JSON并区分读/写命令；规则与报告会保留可见性缺口，建议需证据，未知角色会抑制依赖角色的建议。reviewRequired只约束本地交付状态，不等于平台发送授权；模块本身不负责取得账号工具或实施外发审批。未安装/运行、未采集账号数据、未连接服务或发送报告；未完成全部依赖审计或验证作者no-network承诺。
+  verification_note_en: Statically read the complete 0.4.1 README, collector/snapshot skills and CLI, rules, report, store and delivery code at ed033081. Recommendations require evidence and honor role/visibility gaps. reviewRequired controls local state, not platform send authorization; account tools and sending remain external. No install, execution, account collection or delivery. Dependencies and the no-network claim were not fully audited.
+  collection_batch: 2026-11-23-hold-recheck-approved
+  author_url: https://github.com/AmbitiousBots
+  status: alive
 - id: github-botkits-source-check
   url: https://github.com/botkitsdev/botkits/blob/main/skills/writing/botkits-source-check/SKILL.md
   title: 发布前逐项核事实与原始出处的 Skill
@@ -75,6 +100,40 @@
   status: alive
   published: 2026-11-17
   author_url: https://newcore.com/blog/grok-bot-unattended-agent-access
+- source: x
+  platform: x
+  status: alive
+  evidence: author-reported
+  added: 2026-11-23
+  checked_at: 2026-11-23
+  collection_batch: 2026-11-23-hold-recheck-approved
+  apps:
+    - Grok Bot
+    - T3 Code
+    - Claude Code
+    - Codex
+  id: x-0xcodez-t3-code-agent-teams
+  url: https://x.com/0xCodez/status/2124586834072330269
+  title: T3 Code 多模型协作：角色章程、任务简报与 Bot 调度
+  author: Codez
+  author_url: https://x.com/0xCodez
+  lang: en
+  published: 2026-11-22
+  categories:
+    - advanced
+    - recipes
+    - templates
+  tags:
+    - t3-code
+    - mcp
+    - multi-agent
+    - dispatcher
+    - workflow
+  summary_zh: 以 T3 Code 组织 Claude Code、Codex 的角色章程、任务简报和跨模型评审，再让 Grok Bot 经远程 MCP 调度。云端接入需可公网访问的地址、OAuth 与可操作线程的授权。
+  summary_en: Uses T3 Code for Claude Code/Codex roles, task briefs and cross-model review, with Grok Bot dispatch over remote MCP. Hosted access needs a public endpoint, OAuth and permission to operate threads.
+  verification_note_zh: 铁柱报告读完原长文与10段代码；本站未独立打开X，另静态读T3维护者安装、Outside agents、权限文档及OAuth代码（2808e878）。官方文档要求云端客户端用T3 Connect等可达地址与OAuth；只读连接不能启动线程，Supervised限制其启动/引导线程的权限上限，外部客户端须用t3_thread_launch/wait而非内部delegate_task。可在Sharing & access撤销。未安装、授权、调用MCP或复现；旧issue关闭不当作本站连通证明。Theo原帖未独立核验，不另立条目。
+  verification_note_en: Iron Column reports reading the article and 10 code blocks; X was not independently opened. Read T3 maintainer install, outside-agent and permission docs plus OAuth code at 2808e878. Hosted clients need a reachable OAuth endpoint; read-only access cannot launch threads. Outside clients use t3_thread_launch/wait, with the approved mode as a ceiling and revocation in Sharing & access. No install, authorization, MCP call or reproduction; Theo’s post was not independently checked.
+  title_en: "T3 Code: build AI agent teams with all frontier models, and dispatch them from Grok Bot"
 - source: x
   platform: x
   status: alive
@@ -606,6 +665,42 @@
   verification_note_zh: 铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。新增的是作者的只读体检提示；poteto原文已在库，本轮未重读或把它另列新资源，未执行体检。
   verification_note_en: Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official routines documentation; no account, permission, bot or routine changes.
   title_en: A read-only prompt to audit an existing bot
+- id: youtube-parker-first-agent-review
+  url: https://youtube.com/watch?v=xHYp3LvPCTA
+  title: Grok Bot 新手实操：收据协作、Goodreads 与定时读书助手
+  author: Parker Prompts
+  source: video
+  platform: youtube
+  lang: en
+  added: 2026-11-23
+  checked_at: 2026-11-23
+  categories:
+    - start
+    - recipes
+    - templates
+  apps:
+    - Grok Bot
+    - Gmail
+    - Google Drive
+    - Google Sheets
+    - Goodreads
+  summary_zh: 用 Gmail、Drive 和 Sheets 分工整理收据、排除重复并起草邮件，再用 Goodreads 演示人工登录、书单维护、月度 Routine 和书评 Skill。
+  summary_en: Uses Gmail, Drive and Sheets for receipt handoffs, deduplication and email drafts, then Goodreads for manual sign-in, book lists, a monthly routine and a review skill.
+  verification_note_zh: 通过正常公开浏览器核对原作者、原题、11月8日日期和完整说明，并读完12:06视频的公开自动转写；未播放或亲测。转写中3:21—6:32明确涉及Gmail、Google Drive、Google Sheets，7:02起为Goodreads；其他应用仅举例，未列为已演示。价格、配额及共享电脑等泛化说法未采纳。作者推广其付费社区，未进入或购买。
+  verification_note_en: Read the original author page, complete description and public auto-generated transcript of the 12:06 video; did not watch or reproduce it. Apps are limited to the receipt and Goodreads workflows. Pricing, quota and broad compatibility claims are not adopted. The author promotes a paid community; it was not joined.
+  collection_batch: 2026-11-23-hold-recheck-approved
+  title_en: "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent"
+  author_url: https://www.youtube.com/@parkerprompts
+  published: 2026-11-08
+  status: alive
+  evidence: author-reported
+  tags:
+    - beginner
+    - receipts
+    - multi-bot
+    - routines
+    - skills
+    - goodreads
 - id: blog-guru-real-file-type
   url: https://grokbot.guru/check-real-file-type
   title: 附件检查方法：核对真实格式，先列 ZIP 内容再决定打开

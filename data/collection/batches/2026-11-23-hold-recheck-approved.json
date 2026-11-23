@@ -1,0 +1,241 @@
+{
+  "id": "2026-11-23-hold-recheck-approved",
+  "collected_at": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch": "2026-11-23-hold-recheck-review",
+  "source_review_sha256": "aeda050ef3d0dda01258e12b1f93c2985c93af6f4c142675888b726622884c73",
+  "approval": {
+    "status": "approved",
+    "date": "2026-11-23",
+    "approved_ids": [
+      "x-0xcodez-t3-code-agent-teams",
+      "github-ambitious-audit-review",
+      "youtube-parker-first-agent-review"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "把11月23日剩下的7条待核验内容再核验一下，能收录发布的就直接发布",
+    "scope_zh": "用户明确授权这7条hold复核后合格者直接发布；本次仅收录3条达到标准的内容，另外4条hold、其他日期及未来内容均不在此发布范围。"
+  },
+  "editorial_note_zh": "固定原作链接与署名，保留具体核验范围；未实测不标tested。YouTube按完整作者说明及公开自动转写收录，T3按铁柱原作交接+维护者文档补核，Ambitious按本地JSON快照模块静态核查收录，不声称账号采集或外发审批已接通。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "保留铁柱对原长文与10段代码的读取交接；补核T3维护者的安装来源、Outside agents权限/可达性文档和OAuth核心代码。收录角色章程、任务简报与跨模型评审工作流，不宣称已接通或全天候运行。与已入库回调桥/私网接入教程用途不同。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-hold-recheck-approved",
+        "apps": [
+          "Grok Bot",
+          "T3 Code",
+          "Claude Code",
+          "Codex"
+        ],
+        "id": "x-0xcodez-t3-code-agent-teams",
+        "url": "https://x.com/0xCodez/status/2124586834072330269",
+        "title": "T3 Code 多模型协作：角色章程、任务简报与 Bot 调度",
+        "author": "Codez",
+        "author_url": "https://x.com/0xCodez",
+        "lang": "en",
+        "published": "2026-11-22",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "t3-code",
+          "mcp",
+          "multi-agent",
+          "dispatcher",
+          "workflow"
+        ],
+        "summary_zh": "以 T3 Code 组织 Claude Code、Codex 的角色章程、任务简报和跨模型评审，再让 Grok Bot 经远程 MCP 调度。云端接入需可公网访问的地址、OAuth 与可操作线程的授权。",
+        "summary_en": "Uses T3 Code for Claude Code/Codex roles, task briefs and cross-model review, with Grok Bot dispatch over remote MCP. Hosted access needs a public endpoint, OAuth and permission to operate threads.",
+        "verification_note_zh": "铁柱报告读完原长文与10段代码；本站未独立打开X，另静态读T3维护者安装、Outside agents、权限文档及OAuth代码（2808e878）。官方文档要求云端客户端用T3 Connect等可达地址与OAuth；只读连接不能启动线程，Supervised限制其启动/引导线程的权限上限，外部客户端须用t3_thread_launch/wait而非内部delegate_task。可在Sharing & access撤销。未安装、授权、调用MCP或复现；旧issue关闭不当作本站连通证明。Theo原帖未独立核验，不另立条目。",
+        "verification_note_en": "Iron Column reports reading the article and 10 code blocks; X was not independently opened. Read T3 maintainer install, outside-agent and permission docs plus OAuth code at 2808e878. Hosted clients need a reachable OAuth endpoint; read-only access cannot launch threads. Outside clients use t3_thread_launch/wait, with the approved mode as a ceiling and revocation in Sharing & access. No install, authorization, MCP call or reproduction; Theo’s post was not independently checked.",
+        "title_en": "T3 Code: build AI agent teams with all frontier models, and dispatch them from Grok Bot"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取 X 长文 plain_text 与 10 段代码块。方法依赖第三方 T3 Code 及多模型账号，作者同时推广其 Substack；Theo 原帖未作为独立条目打开核对。本轮未安装 T3、未连接 MCP、未复现。",
+      "verified_by": "铁柱读取原长文；本站静态补核 T3 维护者文档与 OAuth 代码，未独立读取 X 或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/0xCodez/status/2124586834072330269",
+          "scope": "铁柱今日附件报告读完原长文及10段代码；本站不再扫描X"
+        },
+        {
+          "url": "https://github.com/pingdotgg/t3code/blob/2808e878de91aacc7fb82887f18414976be7ae34/docs/user/install.md",
+          "scope": "维护者安装来源、已认证模型提供方前提；完整静态读取"
+        },
+        {
+          "url": "https://github.com/pingdotgg/t3code/blob/2808e878de91aacc7fb82887f18414976be7ae34/docs/user/outside-agents.md",
+          "scope": "完整读取远程可达性、OAuth、权限、外部工具区别与撤销说明"
+        },
+        {
+          "url": "https://github.com/pingdotgg/t3code/blob/2808e878de91aacc7fb82887f18414976be7ae34/docs/user/permission-modes.md",
+          "scope": "完整读取Supervised等模式及提供方限制"
+        },
+        {
+          "url": "https://github.com/pingdotgg/t3code/blob/2808e878de91aacc7fb82887f18414976be7ae34/apps/server/src/auth/McpOAuth.ts",
+          "scope": "静态读取授权scope校验、token范围与外部调用上下文相关代码；未运行"
+        },
+        {
+          "url": "https://github.com/pingdotgg/t3code/issues/17036",
+          "scope": "旧夜版OAuth故障原始报告已关闭；不从关闭状态推断当前兼容或实测成功"
+        }
+      ],
+      "recheck_of_batch": "2026-11-23-daily-0900-review",
+      "recheck_of_id": "x-0xcodez-t3-code-agent-teams",
+      "previous_decision": "hold",
+      "reviewed_revision": "2808e878de91aacc7fb82887f18414976be7ae34",
+      "semantic_dedup_zh": "不同于 github-doubledipcode-grokbot-t3-bridge 的Stop hook回调实现，以及 x-talkaboutdesign-mac-mini-t3-tailscale-mcp 的私网接入；本条新增角色章程、brief和跨模型评审组织法。"
+    },
+    {
+      "decision": "publish",
+      "reason": "补读当前完整README、collector与snapshot Skill及CLI、规则、报告、SQLite存储和交付状态核心代码。确认模块入口是外部提供的JSON，采集器只按可见工具形成输入；收录本地快照/差异/建议机制，明确平台采集与发送审批仍由外部承担，未实测且不保证全账户可见性。",
+      "relevance": "Grok Bot的具体Skill、运行检查或原始研究参考。",
+      "verified_via": "page",
+      "verified_by": "本站完整静态读取README与采集/快照Skill，并审阅注明核心代码；未安装或执行",
+      "resource": {
+        "id": "github-ambitious-audit-review",
+        "url": "https://github.com/AmbitiousBots/ambitious-audit",
+        "title": "Ambitious 审计模块：可见数据快照、基线比较与证据建议",
+        "title_en": "Ambitious audit: visible-data snapshots, baseline diffs and evidence-linked advice",
+        "author": "AmbitiousBots",
+        "lang": "en",
+        "source": "github",
+        "platform": "github",
+        "categories": [
+          "advanced",
+          "resources",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Ambitious"
+        ],
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "summary_zh": "将可见工具提供的 JSON 保存为本地 SQLite 快照，与基线比较后给出至多三条带证据建议。未观测值保持未知；账户采集和外发审批由 Bot 与平台另行负责。",
+        "summary_en": "Stores visible-tool JSON as local SQLite snapshots, diffs a baseline and returns up to three evidence-linked recommendations. Unknowns stay unknown; collection and send approval remain external.",
+        "evidence": "author-reported",
+        "verification_note_zh": "静态补读0.4.1当前完整README、audit-collector/snapshot-routine与CLI、rules、report、store、delivery核心代码（ed033081）。CLI接受JSON并区分读/写命令；规则与报告会保留可见性缺口，建议需证据，未知角色会抑制依赖角色的建议。reviewRequired只约束本地交付状态，不等于平台发送授权；模块本身不负责取得账号工具或实施外发审批。未安装/运行、未采集账号数据、未连接服务或发送报告；未完成全部依赖审计或验证作者no-network承诺。",
+        "verification_note_en": "Statically read the complete 0.4.1 README, collector/snapshot skills and CLI, rules, report, store and delivery code at ed033081. Recommendations require evidence and honor role/visibility gaps. reviewRequired controls local state, not platform send authorization; account tools and sending remain external. No install, execution, account collection or delivery. Dependencies and the no-network claim were not fully audited.",
+        "collection_batch": "2026-11-23-hold-recheck-approved",
+        "author_url": "https://github.com/AmbitiousBots",
+        "status": "alive"
+      },
+      "reviewed_revision": "ed033081b5b38f3e567c6e057064a2ff72f20eec",
+      "evidence_refs": [
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/README.md",
+          "scope": "完整静态读取当前README（27434字符）"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/skills/audit-collector/SKILL.md",
+          "scope": "完整静态读取；仅可见工具、缺失数据与输入范围"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/skills/snapshot-routine/SKILL.md",
+          "scope": "完整静态读取；本地报告审核与平台发送授权分离"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/src/cli/main.ts",
+          "scope": "完整静态读取JSON命令入口，不执行"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/src/domain/rules.ts",
+          "scope": "完整静态读取规则、角色未知处理与证据绑定"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/src/domain/report.ts",
+          "scope": "审阅证据筛选、建议上限、可见性说明相关代码"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/src/db/store.ts",
+          "scope": "完整静态读取快照/基线/报告保存和状态更新"
+        },
+        {
+          "url": "https://github.com/AmbitiousBots/ambitious-audit/blob/ed033081b5b38f3e567c6e057064a2ff72f20eec/src/domain/delivery.ts",
+          "scope": "完整静态读取审核要求、发送状态与重试上限；不是平台授权实现"
+        }
+      ],
+      "recheck_of_batch": "2026-11-23-daily-0900-review",
+      "recheck_of_id": "github-ambitious-audit-review",
+      "previous_decision": "hold",
+      "previous_revision": "e1c855b5cd41951410c6d8273f3014e9e74c6b35"
+    },
+    {
+      "decision": "publish",
+      "reason": "正常浏览器取得原作者页面、完整说明、日期与公开自动转写，关闭此前作者与步骤未核缺口；不采用视频中的价格、配额或泛化兼容性承诺。",
+      "relevance": "原作者以 Grok Bot 展示收据分工、应用连接、Goodreads、Routine 与 Skill 的具体入门流程。",
+      "verified_via": "video-description",
+      "resource": {
+        "id": "youtube-parker-first-agent-review",
+        "url": "https://www.youtube.com/watch?v=xHYp3LvPCTA",
+        "title": "Grok Bot 新手实操：收据协作、Goodreads 与定时读书助手",
+        "author": "Parker Prompts",
+        "source": "video",
+        "platform": "youtube",
+        "lang": "en",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "categories": [
+          "start",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Gmail",
+          "Google Drive",
+          "Google Sheets",
+          "Goodreads"
+        ],
+        "summary_zh": "用 Gmail、Drive 和 Sheets 分工整理收据、排除重复并起草邮件，再用 Goodreads 演示人工登录、书单维护、月度 Routine 和书评 Skill。",
+        "summary_en": "Uses Gmail, Drive and Sheets for receipt handoffs, deduplication and email drafts, then Goodreads for manual sign-in, book lists, a monthly routine and a review skill.",
+        "verification_note_zh": "通过正常公开浏览器核对原作者、原题、11月8日日期和完整说明，并读完12:06视频的公开自动转写；未播放或亲测。转写中3:21—6:32明确涉及Gmail、Google Drive、Google Sheets，7:02起为Goodreads；其他应用仅举例，未列为已演示。价格、配额及共享电脑等泛化说法未采纳。作者推广其付费社区，未进入或购买。",
+        "verification_note_en": "Read the original author page, complete description and public auto-generated transcript of the 12:06 video; did not watch or reproduce it. Apps are limited to the receipt and Goodreads workflows. Pricing, quota and broad compatibility claims are not adopted. The author promotes a paid community; it was not joined.",
+        "collection_batch": "2026-11-23-hold-recheck-approved",
+        "title_en": "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent",
+        "author_url": "https://www.youtube.com/@parkerprompts",
+        "published": "2026-11-08",
+        "status": "alive",
+        "evidence": "author-reported",
+        "tags": [
+          "beginner",
+          "receipts",
+          "multi-bot",
+          "routines",
+          "skills",
+          "goodreads"
+        ]
+      },
+      "recheck_of_batch": "2026-11-23-daily-0900-review",
+      "recheck_of_id": "youtube-parker-first-agent-review",
+      "previous_decision": "hold",
+      "verified_by": "本站通过公开原作页面核对作者、完整说明和自动转写；未观看或复现",
+      "evidence_refs": [
+        {
+          "url": "https://www.youtube.com/watch?v=xHYp3LvPCTA",
+          "scope": "正常浏览器原页、展开的完整作者说明、公开自动转写；未播放"
+        },
+        {
+          "url": "https://www.youtube.com/@parkerprompts",
+          "scope": "原页显示的频道署名与频道链接；未扫描频道其他内容"
+        }
+      ],
+      "transcript_segments_reviewed": [
+        "00:00-12:06（公开自动转写，末段约11:50结束）"
+      ]
+    }
+  ]
+}
