@@ -1,0 +1,1121 @@
+{
+  "id": "2026-11-23-daily-0900-approved",
+  "collected_at": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch": "2026-11-23-daily-0900-review",
+  "source_review_sha256": "cd698b67bcc489cf2d51f3e639c1f7378d9fdcd992fce581ee8ceb5d1968d73d",
+  "approval": {
+    "status": "approved",
+    "date": "2026-11-23",
+    "approved_ids": [
+      "x-carolina-dill-per-tool-connector-permissions",
+      "x-petrichor-lesson-07-memory",
+      "x-petrichor-lesson-08-files",
+      "x-petrichor-lesson-09-mobile",
+      "x-petrichor-lesson-10-usage",
+      "x-petrichor-lesson-11-dedicated-bot",
+      "x-petrichor-lesson-12-skills",
+      "x-petrichor-lesson-13-routines",
+      "x-everyday-eddie-edit-routine-desktop",
+      "x-xiangxiang103-poteto-article-audit-prompt",
+      "x-choopyplug1-20-bot-less-cost",
+      "x-mklapperen-first-week-7-setups",
+      "x-jerry-987-lighten-tasks-before-upgrade",
+      "x-oreillnw-intel-content-pipeline",
+      "x-michael-fenech-five-meeting-prompts",
+      "x-0xteddet-claude-build-grok-run-studio",
+      "x-khaliq-hussain-team-architect-prompt",
+      "github-botkits-source-check",
+      "github-smooth-video-delivery-rules",
+      "research-newcore-unattended-read-attempts"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布",
+    "scope_zh": "仅本聊天刚送审的2026-11-23批次20条建议收录。7条hold、原X附件未逐项复核的11条、其他历史待审批次及未来增量均不在本次批准范围。"
+  },
+  "editorial_note_zh": "保持已审阅标题、双语摘要、作者、原文语言、分类、应用和核验限制；仅更改collection_batch。原审核JSON与HTML保留本地，不随发布提交。 英文页检查发现两位中文昵称缺少author_en，已用各自原帖author_url中的公开账号名jerry_987、xiangxiang103补齐英文署名；保留中文author和全部已审正文。",
+  "source_handoff": {
+    "provider": "Grok Bot 铁柱",
+    "attachment_filename": "x-incremental-2026-11-23.json",
+    "sha256": "9a0ed4f1766108d292700d0ec50adc22ab448ed16e0a9ceb32b5ed2b8d53b178",
+    "received_at": "2026-11-23",
+    "source_candidates": 30,
+    "selected_for_this_review": 19,
+    "remaining_not_editorially_assessed": 11
+  },
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "Gmail",
+          "Google Calendar"
+        ],
+        "id": "x-carolina-dill-per-tool-connector-permissions",
+        "url": "https://x.com/CarolinaDill/status/2124581566743716277",
+        "title": "按工具设置连接器权限，并保留逐项确认",
+        "author": "Carolina Dill",
+        "author_url": "https://x.com/CarolinaDill",
+        "lang": "en",
+        "published": "2026-11-22",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "connectors",
+          "permissions",
+          "auto-review",
+          "email",
+          "safety"
+        ],
+        "summary_zh": "把连接器的读取、发送和删除等工具分别设为允许、自动审查、需批准或封锁；文字规则补充任务边界，实际设置仍需检查。",
+        "summary_en": "Assign separate permissions to connector tools for reads, sends and deletions. Written rules add task boundaries; actual settings still need checking.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。本站补读官方1.2.3的四档工具权限说明；未观看作者演示或改任何权限。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official permissions documentation; no account, permission, bot or routine changes.",
+        "title_en": "Set each connector tool separately: allow, auto-review, approve or block"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）及作者随后一条说明（Custom Rules 与按工具权限的分工）。14 秒演示视频未观看。未打开官方文档页，未复现设置。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/CarolinaDill/status/2124581566743716277",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://x.ai/changelog/bot",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-07-memory",
+        "url": "https://x.com/Petrichor12666/status/2123392260574196089",
+        "title": "新手课 07：保存、查询和纠正 Bot 记忆",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-19",
+        "categories": [
+          "start",
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "memory",
+          "preferences",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "区分长期偏好与单次要求，用明确指令查询、纠正或忘记记忆；提醒敏感信息和发布授权应另行处理，并提供核对提示。",
+        "summary_en": "Separates lasting preferences from one-off requests and gives prompts to inspect, correct or forget memory. Sensitive information and publishing approval need separate handling.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方记忆范围和跨Bot共享少量个人事实的说明；未查询或写入任何用户记忆。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official bots documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 07: inspect and correct bot memory"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。文中引用的官方文档链接本轮未打开。未复现记忆写入与更正。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2123392260574196089",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/bots",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-08-files",
+        "url": "https://x.com/Petrichor12666/status/2123698488110174290",
+        "title": "新手课 08：约定文件交付，并只读核验结果",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-20",
+        "categories": [
+          "start",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "files",
+          "computer",
+          "delivery",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "区分聊天附件、云端文件和网盘文件，约定可打开的交付格式；检查行列、金额与来源，不修改原件或擅自上传分享。",
+        "summary_en": "Distinguishes chat attachments, cloud files and connected storage. Specify an openable deliverable and verify rows, totals and sources without changing originals or sharing files.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补读官方文件输入、可审阅交付和文件流转说明；未使用作者练习表或验证实际金额。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official files documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 08: agree file deliveries and review results"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。官方文档链接本轮未打开。未用练习表复现交付与核验。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2123698488110174290",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/files-and-results",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-09-mobile",
+        "url": "https://x.com/Petrichor12666/status/2123768857605054658",
+        "title": "新手课 09：从手机接续同一项云端工作",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-20",
+        "categories": [
+          "start",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "mobile",
+          "handoff",
+          "notifications",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "离开电脑前明确交付物和确认点；手机使用同一账号接续原对话，先查进度，再决定是否继续，避免重复启动任务。",
+        "summary_en": "Specify deliverables and approval points before leaving the desktop. Continue the same chat from the same account on mobile, checking status before restarting work.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方手机与桌面共用Bot、对话和云端电脑的说明；未在手机上操作或测试。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official mobile documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 09: continue cloud work from mobile"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。官方文档与应用商店页本轮未打开，系统版本要求以商店页面为准。未在手机端复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2123768857605054658",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/mobile",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-10-usage",
+        "url": "https://x.com/Petrichor12666/status/2123932593427017895",
+        "title": "新手课 10：只查询用量，再分析任务消耗",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-21",
+        "categories": [
+          "start",
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "usage",
+          "billing",
+          "routines",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "先查看本账号的已用量、重置时间和按需计费状态；用只读提示分析范围、样本大小和排程频率，确认前不改套餐或设置。",
+        "summary_en": "Check the account’s usage, reset time and on-demand status, then use read-only prompts to examine scope, sample size and routine frequency before changing settings or plans.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱本次补读到此前缺失的完整提示；本站未查用户账单或独立验证用量节省，摘要不提供价格或配额承诺。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "Lesson 10: inspect usage before changing settings"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "周一重试：已读取长帖全文（note_tweet）。此前 hold 是因为只读到开场。官方文档与账单页本轮未打开，未查询真实账户用量，未复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2123932593427017895",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-11-dedicated-bot",
+        "url": "https://x.com/Petrichor12666/status/2124056071782211880",
+        "title": "新手课 11：给专用 Bot 明确职责与验收标准",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-21",
+        "categories": [
+          "start",
+          "bots",
+          "templates"
+        ],
+        "tags": [
+          "bots",
+          "instructions",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "为反复出现的工作创建专用 Bot，交代职责、来源、产物和必须先问的操作，再用小任务验收；职责分工不代表文件或登录隔离。",
+        "summary_en": "Define a dedicated bot’s job, sources, deliverables and approval points, then validate with a small task. Separate roles do not imply isolated files or logins.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核当前创建Bot入口和第一条任务要交代的内容；未新建Bot，也不把职责分工当安全隔离。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official bots documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 11: define a dedicated bot and acceptance criteria"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。官方文档链接本轮未打开。界面文案可能随版本变化。未新建 Bot 复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2124056071782211880",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/bots",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-petrichor-lesson-12-skills",
+        "url": "https://x.com/Petrichor12666/status/2124393664336003163",
+        "title": "新手课 12：把跑通的流程保存为 Skill",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-22",
+        "categories": [
+          "start",
+          "templates"
+        ],
+        "tags": [
+          "skills",
+          "memory",
+          "routines",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "先整理来源、筛选规则和验收标准，再保存并按名称调用 Skill；时间范围留作每次输入，有技能仍需对应的资料和登录权限。",
+        "summary_en": "Document sources, selection rules and acceptance checks before saving and naming a skill. Keep time windows as inputs; a skill does not supply account access.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方Skill内容、共享与所需应用权限；未保存、启用或调用任何Skill。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official routines documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 12: save a proven workflow as a skill"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。官方文档链接本轮未打开。未实际保存或调用 Skill。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2124393664336003163",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "Slack",
+          "GitHub"
+        ],
+        "id": "x-petrichor-lesson-13-routines",
+        "url": "https://x.com/Petrichor12666/status/2124505826098315451",
+        "title": "新手课 13：先预览 Routine 安排，再确认启用",
+        "author": "Petrichor",
+        "author_url": "https://x.com/Petrichor12666",
+        "lang": "zh",
+        "published": "2026-11-22",
+        "categories": [
+          "start",
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "routines",
+          "timezone",
+          "webhooks",
+          "tutorial",
+          "beginner"
+        ],
+        "summary_zh": "写清负责 Bot、时区、频率、来源、产物与审批边界，核对保存后的运行条件；创建排程不等于已执行，Test 会实际做事。",
+        "summary_en": "Specify the owning bot, time zone, cadence, inputs, outputs and approval boundaries. Check saved conditions: creating a routine does not run it, while Test performs real work.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方排程、事件触发与Test语义；未创建或测试Routine，各连接器接入未逐项实测。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official routines documentation; no account, permission, bot or routine changes.",
+        "title_en": "Lesson 13: preview routine conditions before enabling"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。官方文档链接本轮未打开。事件触发的实际支持范围未逐项核验。未创建或测试例行任务。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Petrichor12666/status/2124505826098315451",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-everyday-eddie-edit-routine-desktop",
+        "url": "https://x.com/EverydayEddie_/status/2124319236826808465",
+        "title": "桌面端修改 Routine：编辑入口与团队运行范围",
+        "author": "Everyday Eddie",
+        "author_url": "https://x.com/EverydayEddie_",
+        "lang": "en",
+        "published": "2026-11-22",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "tags": [
+          "routines",
+          "desktop",
+          "ui",
+          "teams"
+        ],
+        "summary_zh": "从 Bot 详情打开 Routine，用 Edit 起草修改消息；团队 Bot 的运行范围可另选。保留作者对 gambrill 提供操作细节的致谢。",
+        "summary_en": "Open a routine from bot details and use Edit to draft a change request; team bots have separate run-access choices. Preserve the author’s credit to gambrill.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方管理Routine段落，保留gambrill归属；视频未看，未在桌面端更改任何排程。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official routines documentation; no account, permission, bot or routine changes.",
+        "title_en": "How to edit a Grok Bot routine on desktop, including team sharing"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。同作者约 5 分钟后的重发帖去掉了 @gambrill 署名并带 14 秒视频，已并入本条，视频未观看。未在桌面端复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/EverydayEddie_/status/2124319236826808465",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "新增的是xiangxiang103编写的只读体检提示；poteto原文章已入库，不重复收其原文。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-xiangxiang103-poteto-article-audit-prompt",
+        "url": "https://x.com/xiangxiang103/status/2124661486832476235",
+        "title": "用只读体检提示检查现有 Bot 的工作流",
+        "author": "雨哥向前冲",
+        "author_url": "https://x.com/xiangxiang103",
+        "lang": "zh",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "prompt",
+          "audit",
+          "skills",
+          "routines",
+          "poteto"
+        ],
+        "original_url": "https://x.com/poteto/status/2123159537016533493",
+        "summary_zh": "基于 poteto 的自动化文章，盘点现有技能和排程，列出差距与真实例外，只建议先跑稳一个小任务；确认前不改设置或发送内容。",
+        "summary_en": "An audit prompt builds on poteto’s automation article to inventory skills/routines, identify gaps and propose one small pilot. No settings or external sends change before approval.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。新增的是作者的只读体检提示；poteto原文已在库，本轮未重读或把它另列新资源，未执行体检。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official routines documentation; no account, permission, bot or routine changes.",
+        "title_en": "A read-only prompt to audit an existing bot",
+        "author_en": "xiangxiang103"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。引用的 @poteto 长文此前已按原作处理，本轮核对了原帖 ID，但未再次通读全文。官方说明页和 Dr Eggbot 模板页本轮未打开。配图未查看。未复现体检。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/xiangxiang103/status/2124661486832476235",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+          "scope": "本站读取上述相关段落；未执行操作"
+        },
+        {
+          "url": "https://x.com/poteto/status/2116576229319233596",
+          "scope": "已入库的被引原作；本轮未重读或扫描X"
+        }
+      ],
+      "distinct_from": "x-poteto-bot-team-guide",
+      "related_resource_ids": [
+        "x-poteto-bot-team-guide"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-choopyplug1-20-bot-less-cost",
+        "url": "https://x.com/choopyplug1/status/2124533429123322065",
+        "title": "20 个 Bot 的分层角色与文件交接方案",
+        "author": "chuplung",
+        "author_url": "https://x.com/choopyplug1",
+        "lang": "en",
+        "published": "2026-11-22",
+        "categories": [
+          "bots",
+          "templates",
+          "advanced"
+        ],
+        "tags": [
+          "usage",
+          "multi-bot",
+          "files",
+          "routines",
+          "prompts"
+        ],
+        "summary_zh": "用 Router、执行与审阅等角色分层，交接文件位置并保存账本，把重复工作整理为脚本；可先搭少量角色，节省用量的效果未验证。",
+        "summary_en": "Layers routing, execution and review roles around file pointers and a shared ledger, with scripts for repeat work. Start small; claimed usage savings are unverified.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱报告读到全文和角色代码块；本站只收角色与交接设计，不采用“空闲免费”或省额度的普遍保证，未建立20个Bot或运行脚本。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "More Bots, less cost: a 20-Bot Grok Bot system with three wiring laws"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取 X 长文 plain_text 与 15 段代码块中的角色提示和目录结构。作者同日另有一条引流短帖，已并入本条。未搭建该 20 Bot 系统，也未核验所称省用量效果。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/choopyplug1/status/2124533429123322065",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-mklapperen-first-week-7-setups",
+        "url": "https://x.com/mKLAPPEREN_/status/2124601316714381349",
+        "title": "第一周设置清单：职责、连接器与人工确认",
+        "author": "Magnus | Grok Bots",
+        "author_url": "https://x.com/mKLAPPEREN_",
+        "lang": "en",
+        "published": "2026-11-22",
+        "categories": [
+          "start",
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "setup",
+          "custom-rules",
+          "connectors",
+          "routines",
+          "usage",
+          "v1.2.3"
+        ],
+        "summary_zh": "按单一职责、连接器优先、需先询问的操作和例行频率整理第一周清单，并给出文字规则；这是作者的社区清单，需按版本检查。",
+        "summary_en": "An author’s first-week checklist covers one job per bot, connector-first work, ask-first boundaries and routine cadence, with written rules that need version checks.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核官方1.2.3工具权限和连接器优先行为；保留作者对poteto、Michael Fenech等来源的致谢，未按清单逐项复现。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official permissions documentation; no account, permission, bot or routine changes.",
+        "title_en": "Your first week with Grok Bot: the 7 things I wish I'd set up on day one"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取 X 长文 plain_text 与 8 段代码块。官方文档页本轮未打开。所述版本为作者标注的 v1.2.3（2026 年 11 月）。未按清单逐项复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/mKLAPPEREN_/status/2124601316714381349",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://x.ai/changelog/bot",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-jerry-987-lighten-tasks-before-upgrade",
+        "url": "https://x.com/jerry_987/status/2124473221995024501",
+        "title": "用量紧张时，用四格检查给任务减负",
+        "author": "AI践行者",
+        "author_url": "https://x.com/jerry_987",
+        "lang": "zh",
+        "published": "2026-11-22",
+        "categories": [
+          "start",
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "usage",
+          "task-design",
+          "skills",
+          "memory"
+        ],
+        "summary_zh": "检查读写范围、任务目标与验收标准、私聊或群聊入口，以及长期规则的存放位置；先缩小无效工作，再决定后续安排。",
+        "summary_en": "Checks read/write scope, goals and acceptance criteria, private versus group entry, and where durable rules live. Reduce unnecessary work before deciding next steps.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱报告文字已覆盖四格要点；图片和引用帖未独立核，未测省用量结果，不提供套餐购买建议。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "A four-part check to reduce unnecessary work",
+        "author_en": "jerry_987"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。配图中的四格对照表未查看，文字已覆盖四格内容。引用帖未作为原作打开。未按对照表复现减负效果。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/jerry_987/status/2124473221995024501",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "X"
+        ],
+        "id": "x-oreillnw-intel-content-pipeline",
+        "url": "https://x.com/oreillnw/status/2123831119892361499",
+        "title": "情报捕获、归档与内容草稿的四段工作流",
+        "author": "SeanOreilly",
+        "author_url": "https://x.com/oreillnw",
+        "lang": "zh",
+        "published": "2026-11-20",
+        "categories": [
+          "recipes",
+          "templates",
+          "advanced"
+        ],
+        "tags": [
+          "routines",
+          "x-lists",
+          "content",
+          "workflow",
+          "prompts"
+        ],
+        "summary_zh": "把信源捕获、降噪、归档与再创作拆开，先学习风格样本再产出多种草稿，发布前人工审核；文件分区仍需清晰的访问边界。",
+        "summary_en": "Separates capture, filtering, storage and repurposing, using style samples before multi-format drafts and human review before posting. Folder organization still needs clear access boundaries.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱本次补读到指令链；本站未复现知识库/日历接入，不将文中的工作区分区当作Bot文件或登录安全隔离。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "A four-stage intelligence and content-drafting workflow"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "周一重试：已读取长帖全文（note_tweet）。此前 hold 是因为只读到引子、作者会话未找到后续。文中知识库和日历提醒的具体连接步骤未展开。未复现整条流水线。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/oreillnw/status/2123831119892361499",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "Zoom",
+          "Google Meet",
+          "Microsoft Teams"
+        ],
+        "id": "x-michael-fenech-five-meeting-prompts",
+        "url": "https://x.com/Michael_Fenech_/status/2123811355828383878",
+        "title": "会议前后可复用的五组 Grok Bot 提示",
+        "author": "Michael | AI + Agents",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "lang": "en",
+        "published": "2026-11-20",
+        "categories": [
+          "recipes",
+          "templates",
+          "start"
+        ],
+        "tags": [
+          "meetings",
+          "prompts",
+          "zoom",
+          "notion",
+          "crm"
+        ],
+        "summary_zh": "覆盖会前追问、会后缺口、Zoom 私聊核对、客户研究笔记和行动项；按会议工具确认回复可见范围，加入会议仍需批准。",
+        "summary_en": "Five prompt sets cover preparation, post-call gaps, Zoom private checks, research notes and action items. Confirm chat visibility and approve the bot’s meeting join.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。补核当前官方入会、适用套餐及Zoom私聊回复范围；未进真实会议、看配图或整理实际客户资料。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Also read the relevant current official meetings documentation; no account, permission, bot or routine changes.",
+        "title_en": "5 ways to get more value from Grok Bot in meetings, with paste-in prompts"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "周一重试：已读取长帖全文（note_tweet），5 条提示与入会步骤均在正文中。此前 hold 是因为只读到第 1 条标题，其余疑在配图。配图仍未查看。作者同日稍后的引用推广帖已并入本条。套餐范围以官方说明为准，本轮未核实。未加入真实会议复现。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Michael_Fenech_/status/2123811355828383878",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/meetings",
+          "scope": "本站读取上述相关段落；未执行操作"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "Claude"
+        ],
+        "id": "x-0xteddet-claude-build-grok-run-studio",
+        "url": "https://x.com/0xTeddet/status/2124077097295515706",
+        "title": "Claude 开发与 Grok Bot 运营的一人工作室模板",
+        "author": "Teddet",
+        "author_url": "https://x.com/0xTeddet",
+        "lang": "en",
+        "published": "2026-11-21",
+        "categories": [
+          "bots",
+          "templates",
+          "recipes"
+        ],
+        "tags": [
+          "prompts",
+          "claude",
+          "multi-bot",
+          "routines",
+          "support"
+        ],
+        "summary_zh": "以产品开发和业务运营分工组织工作室，提供任务简报、模型路由、产品评审、发布前检查和邮件分拣提示，关键决策留给人。",
+        "summary_en": "Splits product building and business operations into a studio workflow, with briefs, model routing, product reviews, pre-release checks and mail triage under human decisions.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱报告补读到正文与14段提示；本站仅核交接与分类，不采信收入/效果自述，未执行代码、仓库、发布或邮箱流程。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "Claude Builds It, Grok Bot Runs It: The One-Person App Studio (Full Guide)"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "周一重试：已读取 X 长文 plain_text 与 14 段代码块中的提示词。此前 hold 是因为可粘贴提示未出现在 plain_text。作者为 19 岁个人开发者，方法与收益未复现。未执行文中的仓库或邮件工作流。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/0xTeddet/status/2124077097295515706",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原作者具体方法由铁柱报告完整读取，本站完成交接、分类与去重并限定核验范围；仅建议收录，等待本批审核。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-khaliq-hussain-team-architect-prompt",
+        "url": "https://x.com/KhaliqHussainnn/status/2123267523084763455",
+        "title": "先问清目标，再设计 3–5 个 Bot 的团队提示",
+        "author": "Syed Khaliq Hussain",
+        "author_url": "https://x.com/KhaliqHussainnn",
+        "lang": "en",
+        "published": "2026-11-19",
+        "categories": [
+          "start",
+          "bots",
+          "templates"
+        ],
+        "tags": [
+          "prompt",
+          "multi-bot",
+          "marketplace",
+          "onboarding"
+        ],
+        "summary_zh": "先用最多五个问题澄清需求，再比较首个用例、检查可复用模板，给出角色提示、交接、应用需求和七天启动安排。",
+        "summary_en": "Starts with up to five questions, compares initial use cases and reusable templates, then proposes roles, handoffs, app needs and a seven-day rollout.",
+        "verification_note_zh": "铁柱报告已读原帖、长文或代码块；本站接收今日JSON并核对格式、归属链接及去重，未独立打开X或实测。铁柱报告完整架构师提示可读；本站未生成团队、导入市场模板或验证推荐质量。",
+        "verification_note_en": "Iron Column reports reading the original post/article/prompt. This pass verified the downloaded handoff, attribution links and duplicates; X/media were not independently opened and nothing was reproduced. Unverified implementation, access, performance or quota claims are not adopted as product guarantees.",
+        "title_en": "A paste-in Grok Bot prompt that designs your first 3–5 bot team"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读取长帖全文（note_tweet）。提示完整可读。未让 Bot 实际生成团队方案，也未核验其对官方模板市场的引用是否准确。此条来自周一 14 天补查窗口。",
+      "verified_by": "铁柱（原帖/长文读取报告）；本站（交接、去重与注明的官方补核）",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/KhaliqHussainnn/status/2123267523084763455",
+          "scope": "铁柱报告读取原帖；本站只核交接，不扫描X"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体原始方法并明确未验证范围；仅为本批收录建议，不代表用户批准。",
+      "relevance": "Grok Bot的具体Skill、运行检查或原始研究参考。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读原始材料；未安装或实测",
+      "resource": {
+        "id": "github-botkits-source-check",
+        "url": "https://github.com/botkitsdev/botkits/blob/main/skills/writing/botkits-source-check/SKILL.md",
+        "title": "发布前逐项核事实与原始出处的 Skill",
+        "title_en": "Check factual claims and original sources before publishing",
+        "author": "Dani Acosta / BotKits",
+        "lang": "en",
+        "source": "github",
+        "platform": "github",
+        "categories": [
+          "templates",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "summary_zh": "列出草稿中的数字、日期与引述，逐条追溯原始出处并区分已证实、夸大、待查和错误；维护带核对日期的来源表，只报告待修项。",
+        "summary_en": "Lists checkable claims, traces numbers and quotes to original sources, flags unsupported or overstated statements and maintains dated references without rewriting the prose.",
+        "evidence": "author-reported",
+        "verification_note_zh": "完整读取该Skill和旧名称迁移说明，并读README的作者、Grok Bot接入与使用范围段落。保留Nadiem Mahmoud/SIFT等灵感归属；未安装、检查实际稿件或复核全部上游资料，作者日常使用自述不当本站测试。",
+        "verification_note_en": "Read the full skill and rename note, plus README author/Grok Bot setup sections. Preserve credited inspirations, including Nadiem Mahmoud and SIFT. No installation, real draft review or upstream-source audit.",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "status": "alive",
+        "author_url": "https://github.com/botkitsdev"
+      },
+      "reviewed_revision": "c282a38316ea4d31b8c2525e5ea4ab4f620cac61",
+      "evidence_refs": [
+        {
+          "url": "https://github.com/botkitsdev/botkits/blob/c282a38316ea4d31b8c2525e5ea4ab4f620cac61/README.md",
+          "scope": "读取README的简介/接入相关段落"
+        },
+        {
+          "url": "https://github.com/botkitsdev/botkits/blob/c282a38316ea4d31b8c2525e5ea4ab4f620cac61/skills/writing/botkits-source-check/SKILL.md",
+          "scope": "完整静态读取；未执行来源指令或代码"
+        },
+        {
+          "url": "https://github.com/botkitsdev/botkits/blob/c282a38316ea4d31b8c2525e5ea4ab4f620cac61/skills/writing/source-check/README.md",
+          "scope": "完整静态读取；未执行来源指令或代码"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体原始方法并明确未验证范围；仅为本批收录建议，不代表用户批准。",
+      "relevance": "Grok Bot的具体Skill、运行检查或原始研究参考。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读原始材料；未安装或实测",
+      "resource": {
+        "id": "github-smooth-video-delivery-rules",
+        "url": "https://github.com/AmericanSI/smooth-video-rules/blob/main/skills/smooth-video-rules/SKILL.md",
+        "title": "视频转场、字幕与音频的交付检查 Skill",
+        "title_en": "A delivery checklist for video cuts, captions and audio",
+        "author": "AmericanSI",
+        "lang": "en",
+        "source": "github",
+        "platform": "github",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "summary_zh": "把转场、字幕可读性、旁白节奏、音乐和结尾整理成逐项交付检查，要求检查整片再交付；具体时长与音量建议属于作者偏好。",
+        "summary_en": "A delivery checklist covers cuts, readable captions, narration, music and endings, with a full-video review before handoff. Timing and audio values are the author’s preferences.",
+        "evidence": "author-reported",
+        "verification_note_zh": "完整读取README与Skill，内容是制作/验收文字规则，不是已验证剪辑工具。未安装、生成或观看示例视频，未测任何编辑器适配和质量效果，不把参数当行业强制标准。",
+        "verification_note_en": "Read the full README and skill. These are editorial production/review instructions, not a verified editing tool. No installation, video creation/viewing, editor compatibility or quality tests.",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "status": "alive",
+        "author_url": "https://github.com/AmericanSI"
+      },
+      "reviewed_revision": "8ea11ae76278f40322d6df82e1d11c0da9e97f31",
+      "evidence_refs": [
+        {
+          "url": "https://github.com/AmericanSI/smooth-video-rules/blob/8ea11ae76278f40322d6df82e1d11c0da9e97f31/README.md",
+          "scope": "完整静态读取；未执行来源指令或代码"
+        },
+        {
+          "url": "https://github.com/AmericanSI/smooth-video-rules/blob/8ea11ae76278f40322d6df82e1d11c0da9e97f31/skills/smooth-video-rules/SKILL.md",
+          "scope": "完整静态读取；未执行来源指令或代码"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已读取具体原始方法并明确未验证范围；仅为本批收录建议，不代表用户批准。",
+      "relevance": "Grok Bot的具体Skill、运行检查或原始研究参考。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读原始材料；未安装或实测",
+      "resource": {
+        "id": "research-newcore-unattended-read-attempts",
+        "url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
+        "title": "NewCore 调查：两个 Bot 账号的后台读取尝试与审计缺口",
+        "title_en": "NewCore investigation of unattended read attempts on two bot accounts",
+        "author": "Ido Hoorvitch / NewCore",
+        "lang": "en",
+        "source": "blog",
+        "platform": "web",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "apps": [
+          "Grok Bot",
+          "NewCore MCP Gateway",
+          "Google Calendar",
+          "Gmail",
+          "Slack",
+          "GitHub",
+          "Notion"
+        ],
+        "added": "2026-11-23",
+        "checked_at": "2026-11-23",
+        "summary_zh": "NewCore报告两个员工账号五天内出现31次无人值守读取请求，均被其网关拦下且未取得数据；研究强调检查调用记录，样本和结论仅限作者调查。",
+        "summary_en": "NewCore reports 31 unattended read requests on two employee bot accounts over five days, all held without data access. The report highlights audit visibility within that limited investigation.",
+        "evidence": "research",
+        "verification_note_zh": "读取原始调查的方法、时间线、脱敏事件示例及披露段落，并读同源公告PDF，合并同一作品。作者销售文中网关，非独立同行评审；未取得完整原始日志、看配图或复现，不外推全部账号。31次是被拦截的读取尝试，不是成功泄露；官方现行changelog已列团队管理员可关闭Proactive messages，不把旧“无开关”写成当前事实。",
+        "verification_note_en": "Read the original investigation, methods, redacted event examples and disclosure timeline, plus its press-release PDF as one work. Vendor-authored, not independent peer review. No raw-log audit or reproduction; 31 held attempts are not successful exfiltration. Current official team controls are noted.",
+        "collection_batch": "2026-11-23-daily-0900-approved",
+        "status": "alive",
+        "published": "2026-11-17",
+        "author_url": "https://newcore.com/blog/grok-bot-unattended-agent-access"
+      },
+      "evidence_refs": [
+        {
+          "url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
+          "scope": "原始调查正文、方法、示例和披露时间线；未审完整原始日志/配图"
+        },
+        {
+          "url": "https://newcore.com/api/newsroom/newcore-research-grok-bot-agents-reached-for-corporate-data-unprompted/pdf",
+          "scope": "同源四页公告，只合并归属，不单列资源"
+        },
+        {
+          "url": "https://x.ai/changelog/bot",
+          "scope": "1.2.0明确团队管理员可关闭Proactive messages；不沿用旧无开关描述"
+        }
+      ]
+    }
+  ]
+}

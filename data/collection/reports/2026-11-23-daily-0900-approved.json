@@ -1,0 +1,30 @@
+{
+  "batch_id": "2026-11-23-daily-0900-approved",
+  "date": "2026-11-23",
+  "added": [
+    "x-carolina-dill-per-tool-connector-permissions",
+    "x-petrichor-lesson-07-memory",
+    "x-petrichor-lesson-08-files",
+    "x-petrichor-lesson-09-mobile",
+    "x-petrichor-lesson-10-usage",
+    "x-petrichor-lesson-11-dedicated-bot",
+    "x-petrichor-lesson-12-skills",
+    "x-petrichor-lesson-13-routines",
+    "x-everyday-eddie-edit-routine-desktop",
+    "x-xiangxiang103-poteto-article-audit-prompt",
+    "x-choopyplug1-20-bot-less-cost",
+    "x-mklapperen-first-week-7-setups",
+    "x-jerry-987-lighten-tasks-before-upgrade",
+    "x-oreillnw-intel-content-pipeline",
+    "x-michael-fenech-five-meeting-prompts",
+    "x-0xteddet-claude-build-grok-run-studio",
+    "x-khaliq-hussain-team-architect-prompt",
+    "github-botkits-source-check",
+    "github-smooth-video-delivery-rules",
+    "research-newcore-unattended-read-attempts"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [],
+  "rejected": []
+}
