@@ -1,0 +1,565 @@
+{
+  "id": "2026-11-24-daily-0900-approved",
+  "collected_at": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch": "2026-11-24-daily-0900-review",
+  "source_review_sha256": "8406a2797bd27d4d5ba08871e2adbcd7d888cdf993163b3b9ed0b8eece749434",
+  "approval": {
+    "status": "approved",
+    "date": "2026-11-24",
+    "approved_ids": [
+      "x-thecyberseckyle-usage-limit-fixes",
+      "x-kosino-dont-preload-every-tool",
+      "marketplace-overheard-weekday-mention-digest",
+      "x-firefox-metzger-improving-goal-attributes",
+      "x-max-mirador-tiktok-marketing-team",
+      "x-lwytch-army-of-grok-bots",
+      "x-thedeepailab-13-intermediate-techniques",
+      "github-grokbot-splunk-o11y",
+      "github-agents-done-right-bank-reconciliation",
+      "vendor-composio-cross-agent-connection-reuse"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "导入发布",
+    "scope_zh": "仅本聊天刚送审的11月24日10条建议收录；14条hold、3条重复、2条排除和其他历史/未来批次均不在本次授权范围。"
+  },
+  "editorial_note_zh": "保持已审核标题、双语摘要、作者、原文语言、分类、实际应用与核验限制；仅更改collection_batch。原审核JSON及预览保留本地，不随发布提交。",
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "亲身额度账单拆解和九条可执行对策（降低频率、静默、暂停阻塞任务等）已在长文正文中读到。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-thecyberseckyle-usage-limit-fixes",
+        "url": "https://x.com/thecyberseckyle/status/2124977373515047122",
+        "title": "两次用尽周额度后的账单复盘与九条调整办法",
+        "author": "Kyle R",
+        "author_url": "https://x.com/thecyberseckyle",
+        "lang": "en",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced"
+        ],
+        "tags": [
+          "usage",
+          "routines",
+          "audit",
+          "limits"
+        ],
+        "summary_zh": "作者复盘两次用尽周额度的账单，提出降低例程频率、无变化静默、暂停阻塞任务、合并同源工作和周中查用量等九条办法。文末可复制提示词未取得，不承诺通用节省比例。",
+        "summary_en": "A personal usage audit leads to nine changes: slower routines, quiet no-change runs, paused blocked work, batched tasks and midweek checks. Paste-in prompts are missing; savings are not universal.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读 X 长文全文（约 6765 字）中的用量拆解与九条书面对策。文末标明有可复制提示词，但 article.plain_text 里对应代码块几乎是空的，本轮未取得粘贴用原文。未复现审计结果。主题上与仍在 hold 的 leovancex《7 leaks》相近，但是另一作者的亲身账单拆解，不合并。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full article (~6,765 characters) was read, including the usage split and nine written fixes. Labeled paste-in prompt blocks were missing from article.plain_text and were not obtained. Results were not reproduced. Related to the still-held leovancex “7 leaks” post, but this is a different author's first-person audit and is not merged.",
+        "title_en": "I Hit My Grok Bot Limit Twice. Here's What Fixed It"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读 X 长文全文（约 6765 字）中的用量拆解与九条书面对策。文末标明有可复制提示词，但 article.plain_text 里对应代码块几乎是空的，本轮未取得粘贴用原文。未复现审计结果。主题上与仍在 hold 的 leovancex《7 leaks》相近，但是另一作者的亲身账单拆解，不合并。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/thecyberseckyle/status/2124977373515047122",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 1,
+      "handoff_original_title": "I Hit My Grok Bot Limit Twice. Here's What Fixed It"
+    },
+    {
+      "decision": "publish",
+      "reason": "正文给出少预装工具、精简一次性任务、隔离工具输出、换任务新开会话四条可执行做法，全文已读。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-kosino-dont-preload-every-tool",
+        "url": "https://x.com/Kosino/status/2124955280295526550",
+        "title": "给 Bot 减负：按岗位配工具，换任务重开会话",
+        "author": "Kosino",
+        "author_url": "https://x.com/Kosino",
+        "lang": "en",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced"
+        ],
+        "tags": [
+          "usage",
+          "tools",
+          "skills",
+          "sessions"
+        ],
+        "summary_zh": "作者按岗位只保留所需工具，一次性任务进一步精简，减少把原始工具输出带入后续提示，并在换任务时新开会话。作为个人工作流检查表收录，不保证节省额度。",
+        "summary_en": "The author limits tools by role, trims one-off tasks, avoids carrying raw tool output into later prompts and starts a new session when the job changes. Personal workflow advice; savings are untested.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读 X 长文全文（约 4025 字）。作者说明这是个人做法，未给出可复现的用量数字。未复现。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full X article (~4,025 characters) was read. The author presents this as personal practice and does not claim reproducible savings figures. Not reproduced.",
+        "title_en": "Don't preload every tool: why agents get cheaper without a bigger model"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读 X 长文全文（约 4025 字）。作者说明这是个人做法，未给出可复现的用量数字。未复现。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Kosino/status/2124955280295526550",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 2,
+      "handoff_original_title": "Don't preload every tool: why agents get cheaper without a bigger model"
+    },
+    {
+      "decision": "publish",
+      "reason": "补读原作者市场模板，工作日范围、真实链接、去重、静默和启用边界可核；按原模板署名收录，中文转述合并。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "official",
+        "platform": "official",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "Reddit",
+          "Hacker News",
+          "X"
+        ],
+        "id": "marketplace-overheard-weekday-mention-digest",
+        "url": "https://x.ai/bot/marketplace/bots/overheard",
+        "title": "Overheard 舆情模板：工作日简报、去重与静默规则",
+        "author": "Lenny Rachitsky",
+        "author_url": "https://x.ai/bot/marketplace/bots/overheard",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "recipes",
+          "templates"
+        ],
+        "tags": [
+          "overheard",
+          "mentions",
+          "routine",
+          "official-template"
+        ],
+        "summary_zh": "Lenny 的市场模板监测姓名、品牌与网址的第三方提及，工作日汇总真实链接，排除自帖和重复转载；无结果静默，不代发帖，建例程后须确认启用。",
+        "summary_en": "Lenny’s marketplace template monitors third-party mentions, sends weekday linked digests and excludes own posts and duplicate syndication. Quiet on empty days; no posting; routines await enable approval.",
+        "verification_note_zh": "铁柱提供Lyson中文用法帖，本站打开并读完官方市场展示的作者、说明和可见记忆/例程规则；改以Lenny原模板为收录主链接，中文转述合并。未点击Import、安装、授权连接器、查看隐藏技能或运行监控。市场托管不等于本站实测。",
+        "verification_note_en": "Read the marketplace author, description and visible memory/routine rules, using Lenny’s original template as the canonical link and merging Lyson’s Chinese retelling. No import, connector authorization, hidden-skill inspection or monitor run.",
+        "title_en": "Overheard: weekday mention digests with deduplication and quiet-day rules"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读帖文全文（约 196 字），行为说明完整。官方模板页与文中链接本轮未打开，未导入也未复现。这是对官方模板的用法说明，不是作者自建流程。",
+      "verified_by": "铁柱读取中文用法帖；本站直接只读原作者市场模板",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/Lyson998/status/2124839083675439110",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        },
+        {
+          "url": "https://x.ai/bot/marketplace/bots/overheard",
+          "scope": "完整读取公开作者、说明与可见模板规则；未导入或执行"
+        }
+      ],
+      "source_handoff_index": 8,
+      "merged_from": [
+        "https://x.com/Lyson998/status/2124839083675439110"
+      ],
+      "handoff_original_title": "Grok Bot 实操案例 16：用官方 Overheard 模板做工作日舆情简报"
+    },
+    {
+      "decision": "publish",
+      "reason": "长文给出可粘贴的 Improving Goal Attributes 技能及从反馈中学习的步骤，全文已读。须注明并非 Grok Bot 专属教程。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-firefox-metzger-improving-goal-attributes",
+        "url": "https://x.com/FirefoxMetzger/status/2124873111614918740",
+        "title": "从反馈中完善目标的 Skill：先提议，批准后更新",
+        "author": "Sebastian Wallkötter, PhD",
+        "author_url": "https://x.com/FirefoxMetzger",
+        "lang": "en",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "tags": [
+          "skills",
+          "memory",
+          "feedback",
+          "goals"
+        ],
+        "summary_zh": "从历史结果与反馈中寻找目标未写明的共同要求，先提议一个属性，经用户批准后才更新目标或记忆。附 Improving Goal Attributes 技能；非 Grok Bot 专属，未实测。",
+        "summary_en": "A reusable skill proposes one missing goal attribute from past outcomes and feedback, then waits for approval before updating goals or memory. Grok Bot is one of several hosts mentioned; untested.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读 X 长文全文（约 13734 字），文末技能正文可读。这是作者 newsletter 首期，Grok Bot 仅与 Muse、Claude Cowork、ChatGPT Work、Hermes 等并列出现一次。作者有接咨询意向。技能未在 Grok Bot 上复现。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full X article (~13,734 characters) was read, including the skill text. This is the first issue of the author’s newsletter; Grok Bot is named once among several personal agents. The author mentions possible consulting work. The skill was not reproduced on Grok Bot.",
+        "title_en": "The trick that makes your agents learn over time"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读 X 长文全文（约 13734 字），文末技能正文可读。这是作者 newsletter 首期，Grok Bot 仅与 Muse、Claude Cowork、ChatGPT Work、Hermes 等并列出现一次。作者有接咨询意向。技能未在 Grok Bot 上复现。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/FirefoxMetzger/status/2124873111614918740",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 9,
+      "handoff_original_title": "The trick that makes your agents learn over time"
+    },
+    {
+      "decision": "publish",
+      "reason": "长文给出用 Grok Bot 做应用 TikTok 营销的目标/流程拆分、三个岗位和可粘贴提示词，全文已读。须注明作者同时推广 Rocketclip。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot",
+          "TikTok",
+          "X",
+          "Rocketclip"
+        ],
+        "id": "x-max-mirador-tiktok-marketing-team",
+        "url": "https://x.com/MaxMirador/status/2124916757374673165",
+        "title": "TikTok 内容团队设计：侦察、撰稿与分析三岗协作",
+        "author": "Max Mira",
+        "author_url": "https://x.com/MaxMirador",
+        "lang": "en",
+        "published": "2026-11-23",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "tags": [
+          "tiktok",
+          "marketing",
+          "prompts",
+          "routines",
+          "approvals"
+        ],
+        "summary_zh": "按目标和流程拆成侦察、撰稿、分析三个岗位，提供内容简报与交接提示，发布和新增连接需批准。面向 TikTok 的团队设计；作者实际例子涉及 X，Rocketclip 推广和效果数字未核。",
+        "summary_en": "A TikTok team design splits scouting, writing and analysis, with prompts and approval before publishing or new connections. The author’s own example uses X; Rocketclip and performance claims are unverified.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读 X 长文全文（约 11864 字），文中多段 prompt 可读。作者称自己用侦察/撰稿/分析 Bot 做 X 内容，并推广 Rocketclip（“Hinge for marketing”），存在利益相关。Rocketclip 与 7M 播放等效果未核验，也未复现。长文 article id 为 2123760672177532928，此前未收入。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full X article (~11,864 characters) was read, including paste-in prompts. The author describes a personal Grok Bot team and also pitches Rocketclip, a product they built. Rocketclip and the 7M-views claim were not verified, and the workflow was not reproduced. The article id 2123760672177532928 was not already in the library.",
+        "title_en": "Automate Your App's TikTok Marketing with Grok Bot"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读 X 长文全文（约 11864 字），文中多段 prompt 可读。作者称自己用侦察/撰稿/分析 Bot 做 X 内容，并推广 Rocketclip（“Hinge for marketing”），存在利益相关。Rocketclip 与 7M 播放等效果未核验，也未复现。长文 article id 为 2123760672177532928，此前未收入。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/MaxMirador/status/2124916757374673165",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 10,
+      "handoff_original_title": "Automate Your App's TikTok Marketing with Grok Bot"
+    },
+    {
+      "decision": "publish",
+      "reason": "长文写清从单 Bot 扩成团队的任务清单、车道、规则、例程和 Skill 复用，全文已读。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-lwytch-army-of-grok-bots",
+        "url": "https://x.com/lwytch/status/2124968591342657764",
+        "title": "从单 Bot 扩成团队：统一任务清单、车道与 Skill 复用",
+        "author": "Liam J. Wytcherley",
+        "author_url": "https://x.com/lwytch",
+        "lang": "en",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced",
+          "bots"
+        ],
+        "tags": [
+          "team",
+          "lanes",
+          "skills",
+          "routines",
+          "task-list"
+        ],
+        "summary_zh": "以统一任务清单和明确负责人车道组织团队，用规则固定常态行为、Routine 安排重复工作，并将修正过的流程保存为共享 Skill。任务数量等效果数字和推荐模板未核。",
+        "summary_en": "Organizes bots around one task list and owner lanes, using rules for standing behavior, routines for repeated work and shared skills for corrected processes. Task-count claims and the linked template are unverified.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读 X 长文全文（约 11663 字）。650 项任务等效果数字未核验，也未复现。文末推荐的官方 Projects Manager 模板页本轮未打开。作者表示可在评论区协助配置。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full X article (~11,663 characters) was read. Figures such as 650 completed tasks were not verified, and the setup was not reproduced. The official Projects Manager template page was not opened. The author offers to help in comments.",
+        "title_en": "Started from the one Grok Bot, now I'm here: how I run an army of Grok Bots"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读 X 长文全文（约 11663 字）。650 项任务等效果数字未核验，也未复现。文末推荐的官方 Projects Manager 模板页本轮未打开。作者表示可在评论区协助配置。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/lwytch/status/2124968591342657764",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 11,
+      "handoff_original_title": "Started from the one Grok Bot, now I'm here: how I run an army of Grok Bots"
+    },
+    {
+      "decision": "publish",
+      "reason": "系列第 2 篇在正文中写清 13 个中阶设置步骤，全文已读。订阅制提示词包和第 1 篇本轮未取得。",
+      "relevance": "原帖正文明确讨论 xAI/Cursor 的 Grok Bot（Bot、Routine、Skill、插件或集成）。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "apps": [
+          "Grok Bot"
+        ],
+        "id": "x-thedeepailab-13-intermediate-techniques",
+        "url": "https://x.com/thedeepailab/status/2124806783986516130",
+        "title": "13 个中阶技巧：Routine、手机接续与团队交接",
+        "author": "深度AI研究所",
+        "author_url": "https://x.com/thedeepailab",
+        "lang": "zh",
+        "published": "2026-11-23",
+        "categories": [
+          "advanced",
+          "start"
+        ],
+        "tags": [
+          "routines",
+          "skills",
+          "mobile",
+          "handoff",
+          "usage"
+        ],
+        "summary_zh": "正文介绍手机操作、例程静默、接管示范后保存 Skill、事件触发和 Bot 交接等 13 个步骤。部分功能限 iPhone；订阅提示词包及系列首篇未读，脚本节省效果未核。",
+        "summary_en": "Thirteen written setups cover mobile work, quiet routines, teaching skills, event triggers and bot handoffs. Some steps are iPhone-only. The subscription prompt pack and part 1 were not read; savings are untested.",
+        "verification_note_zh": "铁柱报告读取原帖/长文；本站下载今日原附件，核对归属、去重和注明的补充来源，未独立打开X或复现。已读本篇 X 长文全文（约 3473 字），13 个技巧的步骤说明在正文中。文末《提示词与 Routine 懒人包》指向需订阅的 Substack，本轮未打开，故未取得那份复制包。系列第 1 篇初阶技巧本轮未读。未复现。部分功能作者写明仅支持 iPhone。",
+        "verification_note_en": "Iron Column reports reading the original post/article. This pass checked today’s downloaded handoff, attribution, duplicates and noted supplements; X was not independently opened and nothing was reproduced. The full article (~3,473 characters) was read, including the 13 technique write-ups. The copy-paste pack is behind a Substack subscribe page that was not opened. Part 1 of the series was not read. Not reproduced. Some mobile steps are described as iPhone-only.",
+        "title_en": "13 intermediate Grok Bot techniques: routines, mobile work and bot handoffs",
+        "author_en": "thedeepailab"
+      },
+      "handoff_original_decision": "publish",
+      "handoff_original_verification_note_zh": "已读本篇 X 长文全文（约 3473 字），13 个技巧的步骤说明在正文中。文末《提示词与 Routine 懒人包》指向需订阅的 Substack，本轮未打开，故未取得那份复制包。系列第 1 篇初阶技巧本轮未读。未复现。部分功能作者写明仅支持 iPhone。",
+      "verified_by": "铁柱原帖/长文读取报告；本站核验今日附件、来源归属、去重和注明的补充资料，未扫描X或实测",
+      "evidence_refs": [
+        {
+          "url": "https://x.com/thedeepailab/status/2124806783986516130",
+          "scope": "铁柱报告读取原作；本站仅接收并核交接，不重新扫描X"
+        }
+      ],
+      "source_handoff_index": 12,
+      "handoff_original_title": "Grok Bot 只當聊天框用？做到這 13 個中階技巧，讓它在你睡覺時繼續做事"
+    },
+    {
+      "decision": "publish",
+      "reason": "直接读取作者原始材料，具体流程与前提足够，按注明的静态核验范围建议收录。",
+      "relevance": "Grok Bot具体组合教程、Skill、Routine或模板；不推测未涉及应用兼容性。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读注明原始材料，未安装或实测",
+      "resource": {
+        "id": "github-grokbot-splunk-o11y",
+        "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y",
+        "title": "Splunk 监控教程：电脑指标、例程心跳与静默告警",
+        "title_en": "Grok Bot and Splunk: machine metrics, routine heartbeats and quiet alerts",
+        "author": "pfrederiksen",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Splunk Observability Cloud"
+        ],
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "summary_zh": "用 Python 发射磁盘、内存和负载指标到 Splunk，配五分钟 Routine、状态文件、看板与失联检测。采集和看板使用不同令牌；脚本退出码不代表成功，应核对摘要及心跳。",
+        "summary_en": "Sends disk, memory and load gauges to Splunk with a five-minute routine, state file, dashboard and silence detector. Ingest and dashboard tokens differ; exit 0 alone does not prove success.",
+        "evidence": "author-reported",
+        "verification_note_zh": "完整读README、Setup与wrapper，另读emitter采集/外发/状态及看板相关段落。只静态核对，未运行dry-run/测试、安装、申请令牌、外发指标或部署看板。emitter将结果写入状态；wrapper缺令牌时直接返回alert=no，不能将所有错误概括为两次必告警。指标不是官方Bot内部用量遥测；套餐、免费额度和成本未核。",
+        "verification_note_en": "Read README, setup, emitter, wrapper and dashboard notes statically. No execution, token, metric upload or dashboard deployment. The wrapper’s missing-token path returns alert=no, so the two-failure claim does not cover every error. These are host metrics, not official Bot usage telemetry; pricing was not checked.",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "status": "alive",
+        "author_url": "https://github.com/pfrederiksen"
+      },
+      "evidence_refs": [
+        {
+          "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y/blob/25a6ac556c12a3582d6cff595f6fa292d5787eba/README.md",
+          "scope": "注明材料只读；未执行脚本、测试、授权或发送数据"
+        },
+        {
+          "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y/blob/25a6ac556c12a3582d6cff595f6fa292d5787eba/docs/setup.md",
+          "scope": "注明材料只读；未执行脚本、测试、授权或发送数据"
+        },
+        {
+          "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y/blob/25a6ac556c12a3582d6cff595f6fa292d5787eba/bin/emit.py",
+          "scope": "注明材料只读；未执行脚本、测试、授权或发送数据"
+        },
+        {
+          "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y/blob/25a6ac556c12a3582d6cff595f6fa292d5787eba/bin/run_emit.sh",
+          "scope": "注明材料只读；未执行脚本、测试、授权或发送数据"
+        },
+        {
+          "url": "https://github.com/pfrederiksen/grokbot-splunk-o11y/blob/25a6ac556c12a3582d6cff595f6fa292d5787eba/docs/dashboards-and-detectors.md",
+          "scope": "注明材料只读；未执行脚本、测试、授权或发送数据"
+        }
+      ],
+      "reviewed_revision": "25a6ac556c12a3582d6cff595f6fa292d5787eba"
+    },
+    {
+      "decision": "publish",
+      "reason": "直接读取作者原始材料，具体流程与前提足够，按注明的静态核验范围建议收录。",
+      "relevance": "Grok Bot具体组合教程、Skill、Routine或模板；不推测未涉及应用兼容性。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读注明原始材料，未安装或实测",
+      "resource": {
+        "id": "github-agents-done-right-bank-reconciliation",
+        "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/main/docs/reconciliation-tutorial.mdx",
+        "title": "Google 账目核对教程：导入流水、分类与匹配发票",
+        "title_en": "Google bookkeeping workflow: import statements, categorize and match invoices",
+        "author": "Agents Done Right",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "recipes",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Google Drive",
+          "Google Sheets",
+          "Gmail"
+        ],
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "summary_zh": "把月度核对拆为导入 CSV、分类和匹配发票三项 Skill，先查 Drive，再查邮件或人工补件，保留来源及缺票清单。提供测试样例；上线前需确认建目录、写表和日志等副作用。",
+        "summary_en": "Three skills import a bank CSV, categorize transactions and match invoices from Drive, mail or manual uploads, retaining provenance and missing-document lists. Fixtures are provided; setup has write/logging side effects.",
+        "evidence": "author-reported",
+        "verification_note_zh": "完整读README、外部AGENTS与16412字符教程，另读导入/分类Skill及发票Skill的相关段落。AGENTS仅作为待审资料，未执行其指令。未克隆、写profile、探测Google、处理真实银行数据或运行样例；XLSX布局、匹配准确性和财税结果未验证。分类中的猜测需人工复核；首启要求明确批准，日志默认可写Drive Sheet。",
+        "verification_note_en": "Read README, external AGENTS and the complete tutorial, plus import/category skills and invoice sections. Source instructions were not executed. No clone, profile, Google probe, live statement or fixture run. Workbook layout, matching accuracy and tax outcomes are untested; guessed categories require review and setup/logging has side effects.",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "status": "alive",
+        "author_url": "https://github.com/agentsdoneright"
+      },
+      "evidence_refs": [
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/README.md",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        },
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/AGENTS.md",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        },
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/docs/reconciliation-tutorial.mdx",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        },
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/skills/bank-reconciliation/import-bank-csv.md",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        },
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/skills/bank-reconciliation/categorise-bank.md",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        },
+        {
+          "url": "https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/3966523a7c838cbf663e830fbbc88681fee28c4e/skills/bank-reconciliation/match-invoices.md",
+          "scope": "README/AGENTS/教程完整静态阅读；发票Skill为相关段落，未执行"
+        }
+      ],
+      "reviewed_revision": "3966523a7c838cbf663e830fbbc88681fee28c4e"
+    },
+    {
+      "decision": "publish",
+      "reason": "直接读取作者原始材料，具体流程与前提足够，按注明的静态核验范围建议收录。",
+      "relevance": "Grok Bot具体组合教程、Skill、Routine或模板；不推测未涉及应用兼容性。",
+      "verified_via": "page",
+      "verified_by": "本站直接只读注明原始材料，未安装或实测",
+      "resource": {
+        "id": "vendor-composio-cross-agent-connection-reuse",
+        "url": "https://composio.dev/content/avoid-reconnecting-connectors-across-agent",
+        "title": "Composio 连接复用：从 Claude 切到 Grok Bot，保留同一日历授权",
+        "title_en": "Reuse Composio app connections from Claude in Grok Bot",
+        "author": "Varshisth / Composio",
+        "source": "blog",
+        "lang": "en",
+        "categories": [
+          "advanced",
+          "recipes"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Claude",
+          "Composio",
+          "Google Calendar"
+        ],
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "summary_zh": "先在 Claude 通过 Composio 连接 Google Calendar，再在 Grok Bot 用同一 Composio 账号授权以复用连接。各代理仍需分别授权；撤销底层应用连接会影响全部使用者，过期后仍可能重连。",
+        "summary_en": "Connects Google Calendar via Composio in Claude, then reuses it in Grok Bot through the same account. Each agent still needs authorization; revoking the app connection affects all users, and expiry can require sign-in.",
+        "evidence": "author-reported",
+        "verification_note_zh": "初次原页读取失败，随后通过原页引用成功读完整六步、权限区别与排错段，确认作者及11月23日日期。厂商推广自家连接服务；套餐资格、全部兼容应用和性能未采用。未查看教程图片、登录、安装连接器、输入密钥、授权或读日历，未复现。",
+        "verification_note_en": "After an initial fetch error, read the full six-step original guide, access distinctions and troubleshooting, with author/date confirmed. Vendor-authored promotion; plan and broad compatibility claims are not adopted. Images were not viewed. No sign-in, connector install, key entry, authorization or calendar access.",
+        "collection_batch": "2026-11-24-daily-0900-approved",
+        "status": "alive",
+        "published": "2026-11-23"
+      },
+      "evidence_refs": [
+        {
+          "url": "https://composio.dev/content/avoid-reconnecting-connectors-across-agent",
+          "scope": "初次原页读取失败，随后通过原页引用成功读完整六步、权限区别与排错段，确认作者及11月23日日期。厂商推广自家连接服务；套餐资格、全部兼容应用和性能未采用。未查看教程图片、登录、安装连接器、输入密钥、授权或读日历，未复现。"
+        }
+      ]
+    }
+  ]
+}
