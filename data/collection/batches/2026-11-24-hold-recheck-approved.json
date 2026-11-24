@@ -1,0 +1,523 @@
+{
+  "id": "2026-11-24-hold-recheck-approved",
+  "collected_at": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "source_review_batch": "2026-11-24-hold-recheck-review",
+  "source_review_sha256": "6b633569c604ada4a92387a325d7bea5edf9dc3a4100b710a91a9e2e75cd114a",
+  "approval": {
+    "status": "approved",
+    "date": "2026-11-24",
+    "approved_ids": [
+      "x-honglong0420-tailscale-two-methods",
+      "x-texas-twins-dad-cursor-coding-defaults",
+      "x-ducksays-2124989588364038352",
+      "x-luisbarragan-2125005942744092873",
+      "x-ericson4smith-2124388132888203319",
+      "x-michael-fenech-plan-test-before-team",
+      "x-michael-fenech-custom-brief-shortcut",
+      "x-michlieben-2124915013093867707",
+      "github-revenue-partnerships-pack-review"
+    ],
+    "import_authorized": true,
+    "publish_authorized": true,
+    "user_instruction_zh": "把11月24日剩下的14条待核验内容再核验一下，能收录发布的就直接发布。",
+    "scope_zh": "用户明确授权对11月24日剩余14条复核并直接收录发布合格项；本版本仅9条合格条目，其余5条hold不导入。"
+  },
+  "candidates": [
+    {
+      "decision": "publish",
+      "reason": "已读原帖所链中文教程全文，并用 Tailscale 官方 OAuth apps GA 文章补齐插件、用户身份、posture 及方案依据；与 xAI Team Setup 路线分别核对。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "source": "blog",
+        "platform": "web",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "apps": [
+          "Grok Bot",
+          "Tailscale",
+          "MCP"
+        ],
+        "id": "x-honglong0420-tailscale-two-methods",
+        "url": "https://tailscale.tw/ai/grok-bot/",
+        "title": "Grok Bot 接入 Tailscale：OAuth app 与企业 Team Setup 两条路线",
+        "author": "tailscale.tw 社群笔记",
+        "author_url": "https://tailscale.tw/",
+        "lang": "zh",
+        "categories": [
+          "advanced",
+          "resources"
+        ],
+        "tags": [
+          "tailscale",
+          "private-network",
+          "oauth",
+          "least-privilege"
+        ],
+        "summary_zh": "中文教程区分以用户身份加入的 Tailscale 插件与 Enterprise 自管安装，解释 posture、tag 和最小权限规则。已核对两家官方资料；作者与本站均未实机复现。",
+        "summary_en": "A Chinese guide separates user-identity OAuth apps from enterprise-managed Team Setup, with posture and tag policies. Vendor docs were checked; neither the author nor this site tested the setup.",
+        "verification_note_zh": "2026-11-24 独立读原帖、其链接的 tailscale.tw 中文教程全文、Tailscale OAuth apps GA 博文和 xAI Private networks。插件以用户关联设备加入；自定义 posture 需 Premium/Enterprise，其他方案的 tag 行为仍需试点验证；Team Setup 需 Enterprise。原站仅标最后更新日，未将其冒充发布日期。未安装、授权或测试连通性；普通桌面出口路由不等于私网接入。",
+        "verification_note_en": "Read the original post, linked Chinese guide, Tailscale OAuth apps GA article and xAI private-network docs. Custom posture needs Premium/Enterprise; tags need pilot validation. Team Setup is Enterprise-only. The guide exposes an update date, not an original publication date. No installation, authorization or connectivity test; desktop egress routing alone is not private-network access.",
+        "title_en": "Connect Grok Bot to Tailscale: OAuth apps and enterprise Team Setup",
+        "author_en": "tailscale.tw community notes"
+      },
+      "recheck_of_id": "x-honglong0420-tailscale-two-methods",
+      "previous_hold_reason": "已补读当前官方Private networks：桌面路由并不等于加入私网，Team Setup是Enterprise自管模式。未找到原帖所述桌面OAuth插件/身份与posture细节的充分当前官方依据；不将两条路线写成可直接复现。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "merged_from": [
+        "https://x.com/honglong0420/status/2124734544192688637"
+      ],
+      "evidence_refs": [
+        {
+          "url": "https://tailscale.tw/ai/grok-bot/",
+          "scope": "中文原站全文；非官方，最后更新2026-11-23"
+        },
+        {
+          "url": "https://tailscale.com/blog/oauth-apps-ga",
+          "scope": "插件、身份、posture及方案说明"
+        },
+        {
+          "url": "https://docs.x.ai/grok-bot/private-networks",
+          "scope": "企业Team Setup、自管责任与桌面路由限制"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "独立读到原帖完整正文和实际日期；Cursor 官方模型页核实模型及300K上下文，个人Medium偏好不升级为通用最佳设置。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "source": "x",
+        "platform": "x",
+        "status": "alive",
+        "evidence": "author-reported",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "apps": [
+          "Grok Bot",
+          "Cursor"
+        ],
+        "id": "x-texas-twins-dad-cursor-coding-defaults",
+        "url": "https://x.com/Texas_Twins_Dad/status/2124962486319243463",
+        "title": "Grok Bot 写任务简报，Cursor 负责编码：一组个人默认配置",
+        "author": "Texas Twins Dad",
+        "author_url": "https://x.com/Texas_Twins_Dad",
+        "lang": "en",
+        "published": "2026-11-24",
+        "categories": [
+          "recipes",
+          "advanced"
+        ],
+        "tags": [
+          "coding",
+          "cursor",
+          "handoff",
+          "configuration"
+        ],
+        "summary_zh": "作者让 Grok Bot 编写简短任务简报，再交给 Cursor 编码，个人默认 Opus 5.5、Medium 和 300K。官方文档支持该模型与上下文；Medium 的耗用与效果仅为作者体验。",
+        "summary_en": "Grok Bot writes a short brief and Cursor handles coding, using the author’s Opus 5.5, Medium and 300K defaults. Model and context are documented; effort and usage claims remain personal observations.",
+        "verification_note_zh": "已独立读取原帖完整文字及2026-11-24日期，并核对 Cursor Opus 5.5 模型页的300K默认上下文。官方推荐高思考强度以求最佳结果，原作者的Medium只是个人选择。配图未查看，未实测交接、速度、耗用或成本。",
+        "verification_note_en": "Read the complete post and its Nov 24 date; checked Cursor’s model page for the 300K default context. Cursor recommends high thinking for best results; Medium is the author’s preference. Image not viewed; handoff, speed, usage and costs not tested.",
+        "title_en": "Grok Bot briefs, Cursor codes: one author’s default configuration"
+      },
+      "recheck_of_id": "x-texas-twins-dad-cursor-coding-defaults",
+      "previous_hold_reason": "只读到截断正文，配图未看；模型/300K上下文可用性及Medium相对耗用未核，不把个人默认值当通用最佳设置。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "evidence_refs": [
+        {
+          "url": "https://cursor.com/docs/models/claude-opus-5-5",
+          "scope": "模型与上下文依据；不证明个人Medium性能比较"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "正常公开页面的专注模式展示了先前交接缺失的全部八处提示词；已逐块读取岗位、共享记录、草稿和审批规则。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/ducksays/status/2124989588364038352",
+        "title": "八 Bot 团队角色提示词：Notion 共享记录与人工审批",
+        "title_en": "Eight Bot role prompts: shared Notion records and human approvals",
+        "id": "x-ducksays-2124989588364038352",
+        "author": "duck says",
+        "author_url": "https://x.com/ducksays",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "bots",
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Notion",
+          "Walmart",
+          "Claude Code",
+          "Cursor",
+          "Monarch Money",
+          "X"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "完整给出幕僚长、家务、健康记录、工程、营销、情报、财务巡查和审计八种角色提示词，以 Notion 共享记录并限制发布、购物和变更。作为角色配置范例收录，未验证第三方权限或效果。",
+        "summary_en": "Eight complete prompts cover coordination, home, wellness logs, engineering, marketing, scouting, finance checks and audits, with shared Notion records and approvals. Permissions and outcomes were not tested.",
+        "verification_note_zh": "独立读取长文及八个完整代码块，日期为2026-11-24。本轮按八角色集合保留为单条，未拆分凑数。财务段一处称只读，后文又描述分类更新，不能据此认定实际只读权限。未安装所引Dr Eggbot模板、接入应用、购物、发布或验证健康/财务结果。",
+        "verification_note_en": "Read the full article and all eight prompt blocks, dated Nov 24. This eight-role collection remains one entry rather than being split into separate items. Finance prose mentions updates despite a read-only role; actual permissions are unverified. No linked template installed, apps connected, purchases, posts or health/financial results tested.",
+        "status": "alive",
+        "published": "2026-11-24",
+        "tags": [
+          "roles",
+          "team",
+          "notion",
+          "approval"
+        ]
+      },
+      "recheck_of_id": "x-ducksays-2124989588364038352",
+      "previous_hold_reason": "长文写了八 Bot 团队分工、先设幕僚长、草稿需人工确认、以及用 Notion 做共享记忆等框架，全文约 8989 字已读；但标题所称“Every Prompt Included”在 article.plain_text 里 8 处 “Paste this:” 之后均为空白，提示词块本轮未取得，故不能按可复制提示词收录。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。"
+    },
+    {
+      "decision": "publish",
+      "reason": "原文及十个精确分享链接均已打开，名称、作者与公开用途能够逐一对应；按作者模板目录收录，不作为安全审计或可直接运行教程。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/luisbarragan/status/2125005942744092873",
+        "title": "Luis 的十个自建 Bot 目录：从游戏主持到发布巡查",
+        "title_en": "Luis’s ten-Bot catalog: game hosting, personal tools and release checks",
+        "id": "x-luisbarragan-2125005942744092873",
+        "author": "Luis Barragan",
+        "author_url": "https://x.com/luisbarragan",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "bots",
+          "templates",
+          "resources"
+        ],
+        "apps": [
+          "Grok Bot",
+          "X",
+          "Discogs",
+          "App Store Connect",
+          "TestFlight"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者汇总十个公开 Bot，覆盖游戏主持、片单、黑胶目录、发帖提醒、绘画步骤、Bot 审计、趣味问答、用量和版本巡查等。已逐一核对公开分享页，未审计模板内部指令或导入运行。",
+        "summary_en": "A ten-Bot catalog covers games, watchlists, vinyl records, posting reminders, painting, audits, trivia, usage and release checks. All public share pages were checked; private instructions and behavior were not audited.",
+        "verification_note_zh": "独立读完整原文，并逐一读取十个x.ai/bot公开分享页的名称、作者与介绍，均署名Luis；原帖日期2026-11-24并有付费合作标识。分享页不公开完整内部指令，UsageWatch暂停/恢复权限及各模板真实性能未审计。未点击添加、接受条款或运行；十个模板合为一个目录条目。",
+        "verification_note_en": "Read the full post and all ten x.ai/bot public share pages, matching names, Luis attribution and descriptions. The Nov 24 post carries a paid-partnership label. Full internal instructions are not public; UsageWatch permissions and performance are unaudited. Nothing added, accepted or run; kept as one catalog.",
+        "status": "alive",
+        "published": "2026-11-24",
+        "tags": [
+          "catalog",
+          "roles",
+          "templates"
+        ]
+      },
+      "recheck_of_id": "x-luisbarragan-2125005942744092873",
+      "previous_hold_reason": "长文列出作者自建的 10 个免费 Bot（规则主持、片单、黑胶目录、发帖提醒、绘画步骤、Bot 审计等），各有试用提示和 x.ai/bot/ 添加链接。模板页本轮未打开，这 10 个 Bot 的实际指令、权限与安全性未核验。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "evidence_refs": [
+        {
+          "url": "https://x.ai/bot/UFZc7kTf9hDzVwEdbUwBz",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/0d66UV_yw0odZ40lqhSoa",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/sitVtgzNMm_WzDrXOb7m6",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/IlnxsWFtsXxh_c1pzBZYJ",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/8ET3b2Tey1eSCsV-W8rYh",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/CZmV0y1xhpdRPhYZBxsF7",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/HuOMWRR5_-Y0Qra8kuZoC",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/QX2m5sMygh0vvhSytAQOA",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/wQ2nRsIjO6ByfzZvGy5St",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        },
+        {
+          "url": "https://x.ai/bot/ywPVDeM782GnBOYmsl_h0",
+          "scope": "仅公开名称、作者与用途介绍；未导入或审计内部指令"
+        }
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "原帖完整文字已补齐截断部分，读到区域招募、Meta广告、第二Bot访谈及团队终审，属于具体作者案例。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/ericson4smith/status/2124388132888203319",
+        "title": "养老服务 CRM 到区域招聘：广告与面试 Bot 的案例",
+        "title_en": "From elder-care CRM gaps to regional recruiting: an author-reported Bot case",
+        "id": "x-ericson4smith-2124388132888203319",
+        "author": "Ericson Smith",
+        "author_url": "https://x.com/ericson4smith",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "recipes",
+          "bots"
+        ],
+        "apps": [
+          "Grok Bot",
+          "CRM",
+          "Facebook",
+          "Instagram",
+          "Meta Ads"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者每天从养老服务 CRM 找出尚未覆盖的地区，让 Bot 起草 Facebook、Instagram 招聘帖和当地广告，另一 Bot 处理咨询与初访，再交团队终审。未公开完整配置，招聘与投放成效未经本站验证。",
+        "summary_en": "A daily CRM check finds uncovered regions, drafts Facebook/Instagram recruitment and ads, then routes inquiries through another Bot before human review. Configuration and hiring or ad outcomes remain untested.",
+        "verification_note_zh": "独立读完原帖，实际日期2026-11-22；此前缺失的广告及访谈后续在正文可见。CRM品牌、Meta权限范围、预算审批与完整提示词未公开；配图未查看，不将示意图当运行证据。案例为作者自述，未接入CRM、投广告或参与招聘决定。",
+        "verification_note_en": "Read the complete Nov 22 post, including previously missing ad and interview stages. CRM vendor, Meta scopes, budget approvals and full prompts are not disclosed. Image not viewed or treated as runtime proof. Author-reported case only; no CRM access, ad spend or hiring decisions performed.",
+        "status": "alive",
+        "published": "2026-11-22",
+        "tags": [
+          "crm",
+          "recruiting",
+          "meta-ads",
+          "human-review"
+        ]
+      },
+      "recheck_of_id": "x-ericson4smith-2124388132888203319",
+      "previous_hold_reason": "作者提到用 Grok Bot 每天读养老服务 CRM，查看客户在哪些尚未覆盖的地区找护理员，但正文在举例处被截断，后续步骤可能在配图里。图片本轮未查看，完整方法未读到。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。"
+    },
+    {
+      "decision": "publish",
+      "reason": "已沿引用链读取2026-11-22原作中的完整提示词与说明，原作未入库；后发引用合并，不把图片占位当提示词。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/Michael_Fenech_/status/2124229359720358041",
+        "title": "搭建 Bot 团队前：明确目标、小规模试跑与审批提示词",
+        "title_en": "Before building a Bot team: clarify, pilot, evaluate and approve",
+        "id": "x-michael-fenech-plan-test-before-team",
+        "author": "Michael | AI + Agents",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "一段完整提示词要求先澄清成功标准与岗位职责，再小规模试跑、核对目标并反复改进；未经用户批准，不创建额外 Bot 或启动例行任务。引用帖已归并到作者更早的原作。",
+        "summary_en": "A complete prompt clarifies goals and roles, pilots the workflow, checks outputs and iterates. Extra Bots and recurring work require approval. The later quote post is merged into the author’s earlier original.",
+        "verification_note_zh": "独立读取引用帖及所引2026-11-22原作全文，完整提示词在原作文字中可见；原作日期3:52，非11-24引用日。对照资源库及待审批次未见该原作重复。仅核验文本，不创建Bot或试跑作者工作流。",
+        "verification_note_en": "Read the quote post and full Nov 22 original, whose prompt is available as text. Used the original’s date, not the Nov 24 quote date; checked existing resources and pending batches. Text verification only; no Bots created or workflow run.",
+        "status": "alive",
+        "published": "2026-11-22",
+        "tags": [
+          "planning",
+          "team",
+          "pilot",
+          "approval"
+        ]
+      },
+      "recheck_of_id": "x-michael-fenech--2125008999649358198",
+      "previous_hold_reason": "正文建议先把流程想清楚再搭团队，并称下面有用于规划、测试和打磨 Bot 团队的提示词，但提示词在配图中，本轮未查看图片，无法按可执行提示词收录。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "merged_from": [
+        "https://x.com/Michael_Fenech_/status/2125008999649358198"
+      ]
+    },
+    {
+      "decision": "publish",
+      "reason": "已独立读取完整设置提示词及示例流程，补齐先前缺失内容；原作明确为个人自定义快捷规则。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/Michael_Fenech_/status/2124896506503209380",
+        "title": "自定义 /brief：仅本条消息用三句内回答",
+        "title_en": "A custom /brief shortcut for replies of up to three sentences",
+        "id": "x-michael-fenech-custom-brief-shortcut",
+        "author": "Michael | AI + Agents",
+        "author_url": "https://x.com/Michael_Fenech_",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "advanced",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "作者给出自定义规则：消息以 /brief 结尾时，最多三句、不用列表，保留关键警告与不确定性；只影响当前消息。先展示规则并获批再保存，最后用例子检查；这不是内置命令。",
+        "summary_en": "A custom rule makes messages ending in /brief get at most three sentences, no lists, and essential caveats. Show and approve the rule before saving, then test an example. This is not a built-in command.",
+        "verification_note_zh": "已读2026-11-24原帖全文：触发条件、三句与列表限制、关键警告、仅当前消息、展示规则待批后写入及示例检查均在文字中。配图未查看，未把/brief当产品原生命令，未修改任何Bot。",
+        "verification_note_en": "Read the full Nov 24 post: trigger, sentence/list constraints, essential caveats, one-message scope, approval before saving and an example check. Image not viewed. /brief is an author-defined rule, not a native command; no Bot settings changed.",
+        "status": "alive",
+        "published": "2026-11-24",
+        "tags": [
+          "brief",
+          "custom-rule",
+          "approval"
+        ]
+      },
+      "recheck_of_id": "x-michael-fenech--2124896506503209380",
+      "previous_hold_reason": "正文提到用 /brief 快捷方式让 Bot 用不超过三句回答，以加快日常处理，但设置方法和其余说明在配图或截断后的部分，本轮未查看图片，完整做法未读到。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。"
+    },
+    {
+      "decision": "publish",
+      "reason": "专注模式已读全文及提示词，原作归属为ColdIQ作者的机构访谈，与Inframail作者12提示词作品的工具、结构及来源不同。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "url": "https://x.com/MichLieben/status/2124915013093867707",
+        "title": "五 Bot 冷邮件团队：客户画像、草稿审批与 CRM 交接",
+        "title_en": "A five-Bot outbound team: client profiles, draft approvals and CRM handoffs",
+        "id": "x-michlieben-2124915013093867707",
+        "author": "Michel Lieben",
+        "author_url": "https://x.com/MichLieben",
+        "source": "x",
+        "platform": "x",
+        "lang": "en",
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "categories": [
+          "recipes",
+          "bots",
+          "templates"
+        ],
+        "apps": [
+          "Grok Bot",
+          "ColdIQ",
+          "Instantly",
+          "LinkedIn",
+          "Apollo",
+          "Prospeo",
+          "Google Sheets",
+          "CRM",
+          "Valley"
+        ],
+        "evidence": "author-reported",
+        "summary_zh": "ColdIQ 作者采访案例，用一名主管和四个执行 Bot 串联客户画像、名单核对、Instantly 草稿、回复与 CRM，提供完整提示词并人工检查前 20 条名单。7 万封等效果为作者转述，未独立验证。",
+        "summary_en": "A ColdIQ interview maps one lead and four workers across client profiles, list checks, Instantly drafts, replies and CRM, with full prompts and a first-20 review. Volume and deal claims are not independently verified.",
+        "verification_note_zh": "独立读2026-11-24长文全文与完整提示词。作者为ColdIQ CEO并推广自家额度，案例机构未具名，7万封/成交/速度均为转述，不作为实测。与已收录KidousProAtLife的Inframail十二提示词是不同作品；未发送邮件、连接MCP、运行外联或核验送达/合规效果。",
+        "verification_note_en": "Read the full Nov 24 article and prompt blocks. The author is ColdIQ’s CEO and promotes its credits; the agency is unnamed. Volume, deals and timing are reported claims, not tested results. Distinct from KidousProAtLife’s Inframail twelve-prompt work. No email, MCP connection, outreach or deliverability/compliance test performed.",
+        "status": "alive",
+        "published": "2026-11-24",
+        "tags": [
+          "cold-email",
+          "gtm",
+          "crm",
+          "approval"
+        ]
+      },
+      "recheck_of_id": "x-michlieben-2124915013093867707",
+      "previous_hold_reason": "长文称给出 5 Bot 冷邮件团队（1 个主管加 4 个执行）和提示词，并转述一家机构 60 天 25 场活动、7 万封邮件的案例，但 article.plain_text 仅约 2507 字，提示词块未读到。效果数字与第三方工具未核。且库中已有 kidousproatlife 冷邮件原作，需对照是否为转述。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "distinct_from": "x-kidousproatlife-cold-email-12-prompts"
+    },
+    {
+      "decision": "publish",
+      "reason": "在固定提交静态读取TEAM、CHARTER、GATES、ADAPTATION、lead与guards Skill及Routine清单，确认多代理文件交接和41项配置；与既有单Bot十角色46项包区分。",
+      "relevance": "原作者资料明确涉及 xAI/Cursor Grok Bot 的具体工作流、岗位配置或模板。",
+      "verified_via": "page",
+      "resource": {
+        "id": "github-revenue-partnerships-pack-review",
+        "url": "https://github.com/jbellsolutions/revenue-partnerships-grokbot",
+        "title": "Revenue Partnerships：十代理的文件交接与分阶段启用模板",
+        "title_en": "Revenue Partnerships: a ten-agent scaffold with file handoffs and staged activation",
+        "author": "jbellsolutions",
+        "source": "github",
+        "lang": "en",
+        "categories": [
+          "bots",
+          "templates",
+          "advanced"
+        ],
+        "apps": [
+          "Grok Bot",
+          "Slack",
+          "Notion",
+          "GoHighLevel",
+          "Obsidian",
+          "Cal.com",
+          "X",
+          "LinkedIn"
+        ],
+        "added": "2026-11-24",
+        "checked_at": "2026-11-24",
+        "summary_zh": "十个代理按岗位共享文件队列、审批箱和单一 CRM 写入者，配 41 个 Routine；小档位为七代理、31 个。区别于同作者单 Bot 模板，属于未运行的架构包，专属预算和常设批准不能继承。",
+        "summary_en": "A ten-agent scaffold uses file queues, one approval inbox and one CRM writer, with 41 routines; a smaller tier has seven agents and 31. It differs from the single-Bot pack, is unrun and has owner-specific approvals.",
+        "evidence": "author-reported",
+        "verification_note_zh": "静态核对提交0a015ead03152e10fab2d79b6bb8a089fc9c4286的README、TEAM、CHARTER、GATES、ADAPTATION、team/lead、guards/SKILL和routines.json。作者明示未在Grok Bot运行；未审计全部源码/权限实现。GATES仍留有部分批准规则与脚本同步待确认项，作者$5/日预算及常设授权不可继承。未运行脚本、测试、例程、安装或外联。",
+        "verification_note_en": "Statically read README, TEAM, CHARTER, GATES, ADAPTATION, team/lead, guards/SKILL and routines.json at 0a015ead03152e10fab2d79b6bb8a089fc9c4286. The author says it has not run on Grok Bot. Full code and enforcement were not audited; GATES leaves script/approval synchronization unresolved. The author’s $5/day budget and standing approvals do not transfer. No scripts, tests, routines, installation or outreach run.",
+        "collection_batch": "2026-11-24-hold-recheck-approved",
+        "author_url": "https://github.com/jbellsolutions",
+        "status": "alive",
+        "tags": [
+          "multi-agent",
+          "roles",
+          "file-handoff",
+          "approval"
+        ]
+      },
+      "recheck_of_id": "github-revenue-partnerships-pack-review",
+      "previous_hold_reason": "适配和权限实现未核完，与同作者已有Revenue OS模板重叠；保留hold。",
+      "verified_by": "本站只读打开指定原帖、原作及注明的补充来源；未安装、执行或连接账户。",
+      "distinct_from": "github-jbell-revenue-os-max",
+      "evidence_refs": [
+        {
+          "url": "https://github.com/jbellsolutions/revenue-partnerships-grokbot/tree/0a015ead03152e10fab2d79b6bb8a089fc9c4286",
+          "scope": "固定版本静态阅读；未运行源码或作者测试"
+        }
+      ]
+    }
+  ]
+}
