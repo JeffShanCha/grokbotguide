@@ -1,4 +1,170 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: github-elves-grok-bot-unattended-kernel
+  url: https://github.com/aigorahub/elves/blob/main/skills/elves-grok-bot/SKILL.md
+  title: Elves 非编码 Skill：四份进度文件、串行续跑与防重复写入
+  title_en: "Elves for non-coding work: run files, serial recovery and duplicate-write checks"
+  author: John Ennis
+  source: github
+  lang: en
+  categories:
+    - templates
+    - advanced
+  apps:
+    - Grok Bot
+  summary_zh: 用计划、生存说明、会话状态和台账四份文件保存长任务，逐批续跑；外发前记操作键，中断后先查远端结果，结果未知就停。作者的一分钟 watchdog 是方案设定，未验证平台支持或耗用。
+  summary_en: Four run files preserve long tasks across wakes. Record operation keys before side effects, reconcile remote results after interruption and stop on unknown outcomes. The one-minute watchdog is untested.
+  verification_note_zh: 固定提交5ddcce2e8468218eac1e4c0bd00bd881900aa0d1，完整读取3654字符的Grok Bot专用Skill。它明确区别于根目录面向Grok Build/编码的Elves；不涉及Git/PR。只读README主机说明和此Skill，不把内部一分钟提醒、重试窗口或跨平台可用性当官方承诺。未安装Skill、创建提醒、发信或写CRM。
+  verification_note_en: At 5ddcce2e8468218eac1e4c0bd00bd881900aa0d1, read the complete 3,654-character Bot-specific skill and README host context. It explicitly differs from the root coding/Grok Build workflow and has no Git/PR model. Minute reminders, retry windows and host behavior are author-defined and untested. No skill installed, reminders created, mail sent or CRM written.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  author_url: https://github.com/aigorahub
+  platform: github
+- id: github-essay-bot-research-word-workflow
+  url: https://github.com/4zhmv6zvj2-afk/grokbot-essay-writer
+  title: Essay Bot MCP：从研究资料、阶段审阅到 Word 交付
+  title_en: "Essay Bot MCP: research, staged review and Word delivery"
+  author: 4zhmv6zvj2-afk
+  source: github
+  lang: en
+  categories:
+    - recipes
+    - templates
+    - advanced
+  apps:
+    - Grok Bot
+    - MCP
+    - Cursor
+    - Grok Build
+    - Microsoft Word
+    - Consensus
+    - OpenAlex
+    - Unpaywall
+  summary_zh: 把题目分析、研究、提纲、草稿、反馈与引用核对串成 Word 工作流，并设独立审阅席。Confirm 绑定参数与文件，不证明真人批准；草稿调用也会写文件，第五阶段直接保存。
+  summary_en: An MCP workflow joins research, planning, drafts, feedback, citations and Word output with a separate reviewer. Confirm binds inputs and files, not human identity; drafts write files and stage five saves directly.
+  verification_note_zh: 提交fffe826074c91f0b4b1bb2568684db7f9cc98a49：完整读README，读workflow前8500字符和SECURITY威胁模型/范围前7300字符。未读完全部实现或执行源码测试。Confirm无法证明真人点击；草稿账本/状态指针会写入，第五阶段无卡直接保存。安装、密钥、文献准确性、独立审阅与Word输出均未验证；不替学生提交，需遵守课程规则。
+  verification_note_en: At fffe826074c91f0b4b1bb2568684db7f9cc98a49, read the full README, first 8,500 characters of workflow and first 7,300 of SECURITY including its threat model. Full code and tests were not audited/run. Confirm cannot prove a human click; drafts change ledgers/state and stage five saves without a card. Installation, keys, citations, review and Word output are untested. No submission performed; course rules apply.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  author_url: https://github.com/4zhmv6zvj2-afk
+  platform: github
+- id: github-pasta-slack-presence
+  url: https://github.com/pastapastapasta/grokbot-slack-presence
+  title: 给 Bot 独立 Slack 身份：事件中继、归档与线程回复
+  title_en: "A separate Slack identity for a Bot: relay, archive and threaded replies"
+  author: PastaPastaPasta
+  source: github
+  lang: en
+  categories:
+    - recipes
+    - advanced
+  apps:
+    - Grok Bot
+    - Slack
+    - Tailscale
+    - MCP
+    - SQLite
+  summary_zh: 用自建 Slack 应用、Socket Mode 中继和 MCP，让白名单提及或私聊触发 Bot 并在线程回复。归档范围更广；示例服务默认启用 42 工具的 coworker 模式，需先检查权限与存储范围。
+  summary_en: A Slack app, Socket Mode relay and MCP route allowlisted pings to a Bot for threaded replies. Archiving is broader; sample services enable the 42-tool coworker profile, so review scopes and stored data.
+  verification_note_zh: 固定提交b46e12d9df502c7a1544b12814842a441e673d8c。已读README的架构、安装前提、权限/密钥、归档、两档工具、例程/连接器和检查清单，以及routine-prompt全文；仅检索了MCP源码的profile/工具注册片段，未完整审计。白名单只限制触发，不限制归档。作者所称“没有自定义连接器界面”与现行官方文档不符；不沿用该断言或其额度数字。未安装、连接Slack、采集消息或测试。
+  verification_note_en: Pinned b46e12d9df502c7a1544b12814842a441e673d8c. Read README sections on architecture, setup, scopes, secrets, archives, profiles, routines/connectors and checks, plus the full routine prompt; only inspected profile/tool-registration snippets in code. Ping allowlists do not restrict archiving. The no-custom-connector-UI claim conflicts with current official docs; quota claims were not adopted. No install, Slack connection, message collection or test.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  author_url: https://github.com/PastaPastaPasta
+  platform: github
+- id: github-slingshot-grok-bot-bridge
+  url: https://github.com/slingshot-swag/grok-bot-bridge
+  title: Claude 与 Grok Bot 的实验性双向中继：任务号、回信令牌与限流
+  title_en: An experimental Claude–Grok Bot bridge with reply tokens and loop caps
+  author: Use Slingshot LLC
+  source: github
+  lang: en
+  categories:
+    - templates
+    - advanced
+    - recipes
+  apps:
+    - Grok Bot
+    - Claude
+    - Claude Code
+    - Cloudflare Workers
+  summary_zh: 用 Cloudflare Worker 中继 Claude 的 MCP 请求和 Bot Webhook，并以单次回信令牌、消息编号和限流收取结果。作者只做过模拟 Webhook 测试，真实 Bot 回信路径尚未跑通验证。
+  summary_en: A Cloudflare relay connects Claude MCP requests with Bot webhooks, collecting replies with message IDs, one-use tokens and caps. The author tested a mock webhook only; the live Bot reply path is unverified.
+  verification_note_zh: 固定提交56edfa43e82e038b80c7cb1bb5beac9c00acc639。读README、架构、SECURITY、Bot端完整Skill和Routine设置；源码只检索限流、散列与清理片段，未完整审计。作者v0.1未在真实Grok Bot运行，HTTP回信/浏览器回退仍为待验证设计。URL携带连接器或回信令牌可能进入日志，默认保留消息七天；这些是作者设计，不是安全保证。未部署、调用Webhook、安装插件或执行测试。
+  verification_note_en: Pinned 56edfa43e82e038b80c7cb1bb5beac9c00acc639. Read README, architecture, SECURITY, full Bot skill and routine setup; only searched selected source snippets. Author v0.1 has not run on a live Bot, so HTTP replies/browser fallback remain design proposals. URL-carried tokens can enter logs; seven-day retention is an author default, not a security guarantee. No deployment, webhook, plugin or test run.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  author_url: https://github.com/Slingshot-Swag
+  platform: github
+- id: marketplace-tinkabot-api-plugin
+  url: https://x.ai/bot/marketplace/bots/tinkabot
+  title: tinkabot 角色模板：把 API 包成 MCP 插件，确认后再发布
+  title_en: "tinkabot: an API-to-MCP plugin role with an explicit publishing gate"
+  author: Lauren Tan
+  source: official
+  lang: en
+  categories:
+    - bots
+    - templates
+  apps:
+    - Grok Bot
+    - Cursor
+    - MCP
+  summary_zh: 公开角色记忆要求先定义数据形状、搭最小 MCP/Skill 插件并局部验证，获明确同意后再发布。市场页提示 Grok Bot 不加载本地插件，Cursor 本地验证不能代替 Bot 端验证。
+  summary_en: Public role memories call for a small API-backed MCP/skill plugin, local checks and explicit approval before publishing. Bot does not load local plugins, so Cursor-local checks cannot establish Bot compatibility.
+  verification_note_zh: 已读市场页署名Lauren Tan、简介及全部公开memories；未取得skills标签内完整Playbook，未导入。官方how-grok-bot-works也链接此模板。明确保留本地Cursor插件验证不等于Grok Bot兼容的限制；发布路由是作者角色规则，平台展示不代表本站实测或对第三方代码安全背书。
+  verification_note_en: Read Lauren Tan attribution, description and all public memories, not complete playbooks behind the skills tab; nothing imported. Official how-it-works docs link this template. Cursor-local checks do not prove Bot compatibility. Publishing routes are author rules; a marketplace listing is not this site’s runtime or security endorsement.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  platform: official
+- id: study-grokbot-issue-22-custom-mcp
+  url: https://github.com/licoy/study-grokbot/blob/main/website/issues/zh/2026-11-22.md
+  title: 中文 MCP 接入教程：先查应用，再连服务器，最后封装插件
+  title_en: A Chinese guide to apps, custom MCP servers and API-backed plugins
+  author: Licoy / Study GrokBot
+  source: github
+  lang: zh
+  categories:
+    - advanced
+    - templates
+  apps:
+    - Grok Bot
+    - MCP
+    - tinkabot
+    - Cursor
+  summary_zh: 用五组提示词讲清应用目录、Remote HTTPS/Command、自建插件、密钥和写入审批，并列出连接失败状态。案例为虚构；发布插件仍需明确确认，中文版与英文镜像合并为一条。
+  summary_en: Five prompts cover app lookup, HTTPS/command MCP connections, API-backed plugins, secrets, approval rules and failed connection states. The case is fictional; publishing needs approval. Language mirrors are merged.
+  verification_note_zh: 在acf11b2241ee011f08acae96fe48351edc2ac0a3读中文源文全文及英文镜像标题、日期与摘要；英文全文未读。日期2026-11-22来自源文frontmatter。核对现行官方computer-and-apps及tinkabot公开记忆；它是基于官方文档的AI编写专栏，不是实机记录。与已收录专栏目录用途不同：这里是具体接入练习。未接入MCP、传密钥、导入或发布插件。
+  verification_note_en: At acf11b2241ee011f08acae96fe48351edc2ac0a3, read the full Chinese source plus English mirror title, date and summary, not the full English text. Nov 22 is its stated date. Checked current official app docs and tinkabot memories. This AI-written editorial lesson uses fictional examples, not runtime evidence; it differs from the existing column directory. No MCP, secrets, import or publishing actions.
+  status: alive
+  evidence: editorial
+  added: 2026-11-25
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
+  tags: []
+  published: 2026-11-22
+  author_url: https://github.com/Licoy
+  author_en: Licoy / Study GrokBot
+  platform: github
 - id: github-agents-done-right-bank-reconciliation
   url: https://github.com/agentsdoneright/grokbot-agents-done-right-skills/blob/main/docs/reconciliation-tutorial.mdx
   title: Google 账目核对教程：导入流水、分类与匹配发票
@@ -5400,7 +5566,7 @@
   author_url: https://github.com/Licoy
   source: github
   platform: github
-  lang: zh
+  lang: en
   published: 2026-11-01
   categories:
     - resources
@@ -5412,16 +5578,17 @@
     - Skill
     - Routine
     - 云电脑
-  apps: []
-  summary_zh: 开源中英双语学习专栏，目前四期分别讲 Bot 管理、Routine、Skill、云电脑与连接应用；每期含可复制提示词、虚构团队案例、15 分钟练习和原始延伸链接，并提供归档、RSS 与 llms.txt。
-  summary_en: An open bilingual daily column with four issues on Bot management, Routines, Skills, cloud computers and connected apps, each with copyable prompts, a worked example, a 15-minute exercise and source links.
-  verification_note_zh: 已读 README、MIT 许可证、仓库树和 11 月 4 日中文源文；未运行网站或构建。内容主要整理官方文档并明确为非官方项目，具体按钮和限制仍应回查官方。
-  verification_note_en: Read the README, MIT license, repository tree and Nov 4 Chinese source. Site and build were not run. It is an unofficial editorial project largely based on official docs; recheck changing UI and limits.
+  apps:
+    - Grok Bot
+  summary_zh: 专栏目录现列到第25期，覆盖自定义MCP、团队接入、审批、记忆、会议、手机和工作流程，提供中英文镜像。本轮完整核对第22、24期中文及当前目录，未逐期审阅全部内容。
+  summary_en: The bilingual directory now lists 25 issues on MCP, teams, approvals, memory, meetings, mobile and workflows. This pass checked the index and Chinese issues 22 and 24, not every issue.
+  verification_note_zh: 2026-11-25读取acf11b2241ee011f08acae96fe48351edc2ac0a3的当前README全文、中文22/24期全文，英文对应页仅核标题/日期/摘要。旧摘要“四期”已过时，建议更新为目录列25期；原added/published保留。默认README当前为英文，因此lang改en；中文版并入同一目录，不重复新增。未读完25期、运行网站或复现练习。
+  verification_note_en: Read the current README and full Chinese issues 22/24 at acf11b2241ee011f08acae96fe48351edc2ac0a3; English mirrors were checked only for titles, dates and summaries. Replace the outdated four-issue count with the listed 25, keeping original added/published dates. Default README is English, so lang becomes en; Chinese mirror stays merged. Not all issues read; site and exercises not run.
   status: alive
   evidence: editorial
   added: 2026-11-04
-  checked_at: 2026-11-04
-  collection_batch: 2026-11-04-daily-0900-approved
+  checked_at: 2026-11-25
+  collection_batch: 2026-11-25-daily-0900-approved
 - id: github-liujoe-grokbot-family-office
   url: https://github.com/liujoe456-glitch/grokbot-family-office
   title: Grok Bot 私人助理团队：14 个中英双语角色卡与 Routine 模板
