@@ -1,0 +1,23 @@
+{
+  "batch_id": "2026-11-26-daily-0900-review",
+  "date": "2026-11-26",
+  "added": [
+    "reddit-grokbot-claude-code-handoff"
+  ],
+  "updated": [],
+  "duplicates": [],
+  "held": [
+    {
+      "url": "https://www.reddit.com/r/GrokBot/comments/1y3tfvk/make_me_knowledgeable/",
+      "title": "用 Grok Bot 做每日 AI 微课与小测：细节待核",
+      "reason": "单条评论只简述每日微课与是非测验，没有足够细节说明Skill/Routine、学习记录或复习规则。"
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://www.reddit.com/r/GrokBot/comments/1xxmy9h/what_are_you_using_grokbot_for/",
+      "title": "Grok Bot 用途讨论：缺少可复用的操作细节",
+      "reason": "用途征集帖及可见回复主要是泛化清单，未提供可复用步骤、来源或工作流细节。"
+    }
+  ]
+}

@@ -1,4 +1,39 @@
 # 外部收录：仅存原创摘要、链接、署名与核验记录，不存原文。
+- id: reddit-grokbot-claude-code-handoff
+  url: https://reddit.com/r/GrokBot/comments/1y3gnda/grok_bot_claude_code_handoff
+  title: 用 GitHub Issues 或 Slack/Drive 交接 Grok Bot 与 Claude Code 的工作
+  title_en: Handing off work between Grok Bot and Claude Code through GitHub Issues or Slack/Drive
+  author: ayoutism (thread; workflow details by Possible-Low-952 and sergiu-biris)
+  author_url: https://www.reddit.com/user/ayoutism/
+  source: forum
+  lang: en
+  published: 2026-11-23
+  categories:
+    - recipes
+    - advanced
+    - templates
+  apps:
+    - Grok Bot
+    - Claude Code
+    - GitHub Issues
+    - Slack
+    - Google Drive
+  summary_zh: 讨论用共享任务记录减少 Grok Bot 与 Claude Code 之间的复制粘贴：回复给出 GitHub Issues QA/DEV 标签和证据模板，也有人用 Slack 频道与 Drive 文档交接。均为社区报告，未端到端验证。
+  summary_en: Replies suggest GitHub Issues labels and evidence templates, or a Slack channel plus Drive notes, to coordinate work between Grok Bot and Claude Code. These are community reports; no end-to-end workflow was verified.
+  verification_note_zh: 2026-11-26读取公开Reddit原帖及可见回复。核对原帖作者ayoutism；摘要中的QA/DEV标签与测试证据格式来自u/Possible-Low-952的回复，Slack频道与Google Drive共享上下文来自u/sergiu-biris。社区成员对本地CLI、凭据和运行环境的说法互有疑问，本条不纳入这些安装/登录建议，也未验证平台条款、触发机制、代码交接或工具可用性。
+  verification_note_en: Read the public Reddit post and visible replies on 2026-11-26. The QA/DEV labels and evidence format come from u/Possible-Low-952; the Slack channel and Google Drive shared-context example comes from u/sergiu-biris. Replies disagree about local CLI setup and credentials, so those setup claims are excluded. Terms, triggers, code handoff and tool availability were not tested.
+  status: alive
+  evidence: author-reported
+  added: 2026-11-26
+  checked_at: 2026-11-26
+  collection_batch: 2026-11-26-daily-0900-review
+  tags:
+    - handoff
+    - qa
+    - github-issues
+    - slack
+    - google-drive
+  platform: reddit
 - id: github-elves-grok-bot-unattended-kernel
   url: https://github.com/aigorahub/elves/blob/main/skills/elves-grok-bot/SKILL.md
   title: Elves 非编码 Skill：四份进度文件、串行续跑与防重复写入
